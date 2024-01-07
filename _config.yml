@@ -1,3 +1,5 @@
-remote_theme: pages-themes/jekyll-theme-minimal@v0.2.0
+remote_theme: broccolini/swiss
 plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
+
+theme_color: black
