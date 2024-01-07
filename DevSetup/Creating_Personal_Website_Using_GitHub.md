@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 # 使用GitHub建立個人網站
 ## 步驟
 

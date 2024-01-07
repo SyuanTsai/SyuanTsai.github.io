@@ -1,5 +1,7 @@
 /*dark*/
-
+body {
+  background-color: #0d1117;
+}
 .markdown-body {
   color-scheme: dark;
   -ms-text-size-adjust: 100%;
