@@ -1,10 +1,6 @@
 # 使用GitHub建立個人網站
 ## 步驟
 
-<link
-  rel="stylesheet"
-  href="https://sindresorhus.com/github-markdown-css/github-markdown.css"
-/>
 1. 註冊[Github](https://github.com/join)帳號。
 2. 建立[新的Repository](https://github.com/new)。
     - Repository Name 請使用「`你的GitHub帳號`.github.io」。
