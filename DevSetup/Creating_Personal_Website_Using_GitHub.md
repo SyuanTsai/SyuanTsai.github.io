@@ -1,6 +1,5 @@
-<link rel="stylesheet" type="text/css" href="/StyleSheets/github-markdown.css">
+<link rel="stylesheet" type="text/css" href="/styles/css/style.scss">
 # 使用GitHub建立個人網站
-
 ## 步驟
 
 
