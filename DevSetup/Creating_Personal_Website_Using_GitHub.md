@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/StyleSheets/dark-dark_dimmed.css">
+<link rel="stylesheet" type="text/css" href="/StyleSheets/github-markdown.css">
 # 使用GitHub建立個人網站
 
 ## 步驟
