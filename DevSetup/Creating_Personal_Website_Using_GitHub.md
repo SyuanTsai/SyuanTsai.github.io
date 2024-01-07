@@ -3,7 +3,7 @@
 
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css"
+  href="https://sindresorhus.com/github-markdown-css/github-markdown.css"
 />
 1. 註冊[Github](https://github.com/join)帳號。
 2. 建立[新的Repository](https://github.com/new)。
