@@ -9,7 +9,7 @@
     - Repository Name 請使用「`你的GitHub帳號`.github.io」。
     - 建議使用英文會比較好。
     
-    ![Creating new repository](images/Creating a Personal Website Using GitHub - 001.png)
+    ![Creating new repository](Images/Creating_Personal_Website_Using_GitHub_001.png)
     
 3. 本地建立新的Git。
     
@@ -23,7 +23,7 @@
     
     ```html
     <!DOCTYPE html>
-    <html>
+    <html lang="zh-Hant">
       <head>
         <meta charset="utf-8">
         <title>你好，GitHub</title>
