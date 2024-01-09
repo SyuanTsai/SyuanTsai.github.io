@@ -1,5 +1,5 @@
 # 使用GitHub建立個人網站
-## 步驟
+### 步驟
 
 1. 註冊[Github](https://github.com/join)帳號。
 2. 建立[新的Repository](https://github.com/new)。
