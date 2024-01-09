@@ -1,4 +1,8 @@
-# 使用GitHub建立個人網站
+---
+lang: zh-tw
+title: "使用GitHub建立個人網站"
+---
+
 ### 步驟
 
 1. 註冊[Github](https://github.com/join)帳號。
@@ -68,3 +72,6 @@
 
 - **[使用 GitHub 免費製作個人網站](https://gitbook.tw/chapters/github/using-github-pages)**
 - ChatGPT
+
+
+###### tags: `Github pages` 
