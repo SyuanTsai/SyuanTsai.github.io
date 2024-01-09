@@ -1,4 +1,5 @@
 <header class="site-header">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- TODO : 消除上方的空白-->
     <div class="wrapper">
         {%- assign default_paths = site.pages | map: "path" -%}
@@ -6,6 +7,7 @@
         {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
         <a class="site-title" rel="author" href="{{ "/" | relative_url }}">Syuan Tsai 的網路筆記</a>
         <!-- TODO : 設計index的頁面-->
+        <!-- TODO : 新增歸於我的畫面-->
 
         {%- if titles_size > 0 -%}
         <nav class="site-nav">
@@ -17,7 +19,8 @@
             </svg>
           </span>
             </label>
-            <!-- TODO : 新增 Github, Linkedin 的 Icon-->
+            <a href="https://github.com/SyuanTsai" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tw-syuan//" target="_blank"><i class="fab fa-linkedin"></i></a>
         </nav>
         {%- endif -%}
     </div>
