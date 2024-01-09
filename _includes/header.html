@@ -1,10 +1,11 @@
 <header class="site-header">
-
+    <!-- TODO : 消除上方的空白-->
     <div class="wrapper">
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
         {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
         <a class="site-title" rel="author" href="{{ "/" | relative_url }}">Syuan Tsai 的網路筆記</a>
+        <!-- TODO : 設計index的頁面-->
 
         {%- if titles_size > 0 -%}
         <nav class="site-nav">
@@ -16,21 +17,7 @@
             </svg>
           </span>
             </label>
-            <ul class="primary-menu reset-list-style">
-                <li id="menu-item-77" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a
-                        href="#">Test A</a></li>
-                <li id="menu-item-513"
-                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-513"><a
-                        href="#">Test</a></li>
-                <li id="menu-item-543" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-543"><a
-                        href="#">Test</a></li>
-                <li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a
-                        href="#">Test</a></li>
-                <li id="menu-item-472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-472"><a
-                        href="#">Test</a></li>
-                <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a
-                        href="#">Test</a></li>
-            </ul>
+            <!-- TODO : 新增 Github, Linkedin 的 Icon-->
         </nav>
         {%- endif -%}
     </div>
