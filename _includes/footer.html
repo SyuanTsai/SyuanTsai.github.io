@@ -4,10 +4,9 @@
     <div class="wrapper">
         <div class="footer-col-wrapper">
             <!-- 再_config.yml開啟license的設定-->
-            {% if site.copyright %}
-            <div class="powered-by">
-                {{ __.footer.powered | replace: '%s', '<a class="theme-link" href="https://jekyllrb.com">Jekyll</a>') }}
-            </div>
+
+            {% if page.copyright != false %}
+            {% include _macro/post-copyright.html %}
             {% endif %}
 
             <div class="footer-col">
