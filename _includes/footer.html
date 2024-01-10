@@ -13,6 +13,8 @@
                     <p>
                         <b>{{site.lang}}</b>>
                         <b>{{page.lang}}</b>>
+                        <b>{{ site.data.ccLicense[page.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
+                        <b>{{ site.data.ccLicense[site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
                         <b>{{ site.data.ccLicense[(page.lang ?? site.lang) | default: site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
                         <b>{{ site.data.ccLicense[page.lang | default: site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
                         <b>{{ site.data.ccLicense[page.lang | default: site.lang].link | append: __.symbol.colon }}</b>
