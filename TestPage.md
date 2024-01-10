@@ -1,5 +1,5 @@
 ---
-lang: en-us
+
 title: "Test Page"
 ---
 
