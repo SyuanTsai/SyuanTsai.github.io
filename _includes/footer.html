@@ -6,15 +6,14 @@
             <div class="footer-col">
                 <!--TODO : 說明資料來源於網路，有錯誤請寄信到XXXX@mial-->
             </div>
-            <div class="footer-col">
-                <!--TODO : 還不確定-->
-            </div>
             <!-- 再_config.yml開啟license的設定-->
             {% if site.license.enable %}
             <div class="footer-col">
                 <blockquote class="CC-license">
                     <p>
-                        <b>{{ site.data.ccLicense[page.lang].author | append: __.symbol.colon }}</b>&ensp; {{site.author}} <br>
+                        <b>{{ site.data.ccLicense[page.lang | default: 'default'].author | append: __.symbol.colon }}</b> {{site.author}} <br>
+                        <b>{{ _site.data.ccLicense[page.lang | default: 'default'].link | append: __.symbol.colon }}</b> 
+                        <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.url | absolute_url }}</a><br>
                     </p>
                 </blockquote>
             </div>
