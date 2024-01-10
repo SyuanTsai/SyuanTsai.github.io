@@ -13,11 +13,12 @@
                     <p>
                         <b>{{site.lang}}</b>>
                         <b>{{page.lang}}</b>>
-                        <b>{{ site.data.ccLicense[page.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
-                        <b>{{ site.data.ccLicense[site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
-                        <b>{{ site.data.ccLicense[(page.lang ?? site.lang) | default: site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
-                        <b>{{ site.data.ccLicense[page.lang | default: site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
-                        <b>{{ site.data.ccLicense[page.lang | default: site.lang].link | append: __.symbol.colon }}</b>
+
+                        <b>1{{ site.data.ccLicense[page.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
+                        <b>2{{ site.data.ccLicense[site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
+                        <b>3{{ site.data.ccLicense[(page.lang ?? site.lang) | default: site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
+                        <b>4{{ site.data.ccLicense[page.lang | default: site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
+                        <b>5{{ site.data.ccLicense[page.lang | default: site.lang].link | append: __.symbol.colon }}</b>
                         <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.url | absolute_url }}</a><br>
                     </p>
                 </blockquote>
