@@ -10,7 +10,19 @@
                 <!--TODO : 還不確定-->
             </div>
             <div class="footer-col">
-                <!--TODO : 還不確定-->
+                <blockquote class="post-copyright">
+                    <p>
+                        <b>{{ __.post.copyright.author | append: __.symbol.colon }}</b>&ensp;
+                        {{site.author}} <br>
+                        <b>{{ __.post.copyright.link | append: __.symbol.colon }}</b>&ensp;
+                        <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.url | absolute_url
+                            }}</a><br>
+
+                        <b>{{ __.post.copyright.license_title | append: __.symbol.colon }} </b>&ensp;
+                        {{ __.post.copyright.license_content | replace_first: '%s', site.post_copyright.license_url |
+                        replace_first: '%s', site.post_copyright.license }}
+                    </p>
+                </blockquote>
             </div>
         </div>
         <div class="social-links">
