@@ -9,6 +9,8 @@
             <div class="footer-col">
                 <!--TODO : 還不確定-->
             </div>
+            <!-- 再_config.yml開啟license的設定-->
+            {% if site.license.enable %}
             <div class="footer-col">
                 <blockquote class="post-copyright">
                     <p>
@@ -24,6 +26,7 @@
                     </p>
                 </blockquote>
             </div>
+            {% endif %}
         </div>
         <div class="social-links">
             {%- include social.html -%}
