@@ -1,13 +1,13 @@
 {% if site.post_copyright.enable %}
 <blockquote class="post-copyright">
     <p>
+        <!--作者-->
         <b>{{ site.data.lang.post_copyright[site.lang].author | append: __.symbol.colon }}</b>&ensp;
         {{site.author}} <br>
 
         <!--連結-->
         <b>{{ site.data.lang.post_copyright[site.lang].link | append: __.symbol.colon }}</b>&ensp;
         <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.url | absolute_url }}</a><br>
-
         <!--聲明-->
         <b>{{ site.data.lang.post_copyright[site.lang].license_title | append: __.symbol.colon }} </b>&ensp;
         {{ site.data.lang.post_copyright[site.lang].license_content | replace_first: '%s',
