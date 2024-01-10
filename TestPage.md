@@ -1,5 +1,5 @@
 ---
-
+lang: zh-tw
 title: "Test Page"
 ---
 
