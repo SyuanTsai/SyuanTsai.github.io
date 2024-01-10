@@ -14,15 +14,7 @@
             <div class="footer-col">
                 <blockquote class="CC-license">
                     <p>
-                        <b>{{ __.post.copyright.author | append: __.symbol.colon }}</b>&ensp;
-                        {{site.author}} <br>
-                        <b>{{ __.post.copyright.link | append: __.symbol.colon }}</b>&ensp;
-                        <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.url | absolute_url
-                            }}</a><br>
-
-                        <b>{{ __.post.copyright.license_title | append: __.symbol.colon }} </b>&ensp;
-                        {{ __.post.copyright.license_content | replace_first: '%s', site.post_copyright.license_url |
-                        replace_first: '%s', site.post_copyright.license }}
+                        <b>{{ site.license.author | append: __.symbol.colon }}</b>&ensp; {{site.author}} <br>
                     </p>
                 </blockquote>
             </div>
