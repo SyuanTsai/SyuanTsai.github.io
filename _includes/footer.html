@@ -11,18 +11,25 @@
             <div class="footer-col">
                 <blockquote class="CC-license">
                     <p>
+                        <!-- 本文作者 -->
                         <b>{{ site.data.ccLicense[site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
-                        <a href="{{ page.url | absolute_url }}" title="{{ page.title }}">{{ page.url | absolute_url }}</a><br>
 
+                        <!-- 本文連結 -->
+                        <b>{{ site.data.ccLicense[site.lang].link | append: __.symbol.colon }}</b> <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.url | absolute_url }}</a><br>
+
+                        <!-- 版權聲明 -->
+                        <b>{{ site.data.ccLicense[site.lang].license_title | append: __.symbol.colon }}</b>
+                        {{ site.data.ccLicense[site.lang].license_content | replace_first: '%s', site.post_copyright.license_url | replace_first: '%s', site.post_copyright.license }}
                     </p>
-                    <div class="trigger">
-                        {%- for path in page_paths -%}
-                        {%- assign my_page = site.pages | where: "path", path | first -%}
-                        {%- if my_page.title -%}
-                        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                        {%- endif -%}
-                        {%- endfor -%}
-                    </div>
+                </blockquote>
+                {% endif %}
+
+
+                =========================================
+                本文作者:辛西亞．Cynthia
+                本文連結:https://cynthiachuang.github.io/Add-Post-Copyright/
+                版權聲明:除非另有標注，部落格中所有文章，均採用 CC BY-NC-SA 4.0 許可協議。 轉載請標明作者、連結與出處！
+                    </p>
                 </blockquote>
             </div>
             {% endif %}
