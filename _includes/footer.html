@@ -3,28 +3,27 @@
     /" | relative_url }}"></data>
     <div class="wrapper">
         <div class="footer-col-wrapper">
+            <!-- 再_config.yml開啟license的設定-->
+            {% if site.license.enable %}
+            <blockquote class="CC-license">
+                <p>
+                    <!-- 本文作者 -->
+                    <b>{{ site.data.ccLicense[site.lang].author | append: __.symbol.colon }}</b>: {{site.author}} <br>
+
+                    <!-- 本文連結 -->
+                    <b>{{ site.data.ccLicense[site.lang].link | append: __.symbol.colon }}</b>:
+                    <a href="{{ page.url | absolute_url }}" title="{{ page.title }}">{{ page.url | absolute_url }}</a><br>
+
+                    <!-- 版權聲明 -->
+                    <b>{{ site.data.ccLicense[site.lang].license_title | append: __.symbol.colon }}</b>:
+                    {{ site.data.ccLicense[site.lang].license_content | replace_first: '%s', site.post_copyright.license_url | replace_first: '%s', site.post_copyright.license }}
+                </p>
+            </blockquote>
+            {% endif %}
+
             <div class="footer-col">
                 <!--TODO : 說明資料來源於網路，有錯誤請寄信到XXXX@mial-->
             </div>
-            <!-- 再_config.yml開啟license的設定-->
-            {% if site.license.enable %}
-            <div class="footer-col">
-                <blockquote class="CC-license">
-                    <p>
-                        <!-- 本文作者 -->
-                        <b>{{ site.data.ccLicense[site.lang].author | append: __.symbol.colon }}</b> {{site.author}} <br>
-
-                        <!-- 本文連結 -->
-                        <b>{{ site.data.ccLicense[site.lang].link | append: __.symbol.colon }}</b>
-                        <a href="{{ page.url | absolute_url }}" title="{{ page.title }}">{{ page.url | absolute_url }}</a><br>
-
-                        <!-- 版權聲明 -->
-                        <b>{{ site.data.ccLicense[site.lang].license_title | append: __.symbol.colon }}</b>
-                        {{ site.data.ccLicense[site.lang].license_content | replace_first: '%s', site.post_copyright.license_url | replace_first: '%s', site.post_copyright.license }}
-                    </p>
-                </blockquote>
-            </div>
-            {% endif %}
         </div>
         <div class="social-links">
             {%- include social.html -%}
