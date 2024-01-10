@@ -1,6 +1,8 @@
 {% if site.post_copyright.enable %}
 <blockquote class="post-copyright">
     <p>
+        <b>{{ site.lang }}</b>&ensp;
+        <b>{{ site.data.lang.post_copyright.zh-tw.author }}</b>&ensp;
         <b>{{ __.post.copyright[site.lang].author | append: __.symbol.colon }}</b>&ensp;
         {{site.author}} <br>
         <b>{{ __.post.copyright[site.lang].link | append: __.symbol.colon }}</b>&ensp;
