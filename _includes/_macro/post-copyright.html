@@ -1,14 +1,20 @@
 {% if site.post_copyright.enable %}
 <blockquote class="post-copyright">
     <p>
-        <b>{{ site.data.lang.post_copyright.zh-tw.author }}</b>&ensp;
+        <!--作者-->
+        <b>'{{ append: __.symbol.colon }}'</b>&ensp;
         <b>{{ site.data.lang.post_copyright[site.lang].author | append: __.symbol.colon }}</b>&ensp;
         {{site.author}} <br>
+
+        <!--連結-->
         <b>{{ site.data.lang.post_copyright[site.lang].link | append: __.symbol.colon }}</b>&ensp;
         <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.url | absolute_url }}</a><br>
 
+        <!--聲明-->
         <b>{{ site.data.lang.post_copyright[site.lang].license_title | append: __.symbol.colon }} </b>&ensp;
-        {{ site.data.lang.post_copyright[site.lang].license_content | replace_first: '%s', site.data.lang.post_copyright[site.lang].license_url | replace_first: '%s', site.data.lang.post_copyright[site.lang].license }}
+        {{ site.data.lang.post_copyright[site.lang].license_content | replace_first: '%s',
+        site.data.lang.post_copyright[site.lang].license_url | replace_first: '%s',
+        site.data.lang.post_copyright[site.lang].license }}
     </p>
 </blockquote>
 {% endif %}
