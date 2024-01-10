@@ -1,13 +1,13 @@
 {% if site.post_copyright.enable %}
 <blockquote class="post-copyright">
     <p>
-        <b>{{ __.post.copyright.author | append: __.symbol.colon }}</b>&ensp;
+        <b>{{ __.post.copyright[site.lang].author | append: __.symbol.colon }}</b>&ensp;
         {{site.author}} <br>
-        <b>{{ __.post.copyright.link | append: __.symbol.colon }}</b>&ensp;
+        <b>{{ __.post.copyright[site.lang].link | append: __.symbol.colon }}</b>&ensp;
         <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.url | absolute_url }}</a><br>
 
-        <b>{{ __.post.copyright.license_title | append: __.symbol.colon }} </b>&ensp;
-        {{ __.post.copyright.license_content | replace_first: '%s', site.post_copyright.license_url | replace_first: '%s', site.post_copyright.license }}
+        <b>{{ __.post.copyright[site.lang].license_title | append: __.symbol.colon }} </b>&ensp;
+        {{ __.post.copyright[site.lang].license_content | replace_first: '%s', site.post_copyright[site.lang].license_url | replace_first: '%s', site.post_copyright[site.lang].license }}
     </p>
 </blockquote>
 {% endif %}
