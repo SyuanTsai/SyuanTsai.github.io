@@ -1,5 +1,6 @@
 ---
 lang: zh-tw
+layout: post
 title: "Test Page"
 ---
 
