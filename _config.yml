@@ -9,13 +9,7 @@ remote_theme: jekyll/minima
 ## Docs: https://jekyllrb.com/docs/configuration/#front-matter-defaults
 defaults:
   - { { site.data.config.creativeCommonsLicenses.yml } }
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true
+
 
 # Page Language setting
 lang: "zh-tw"
