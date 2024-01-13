@@ -4,12 +4,12 @@ minima:
   date_format: "%Y/%m/%d"
 remote_theme: jekyll/minima
 
-# CC-BY-SA 4.0 license
-post_copyright:
-  enable: true
-  license: "CC BY-SA 4.0"
-  license_url: "http://creativecommons.org/licenses/by-sa/4.0/"
 
-# Language setting
+# Default Attributes
+## Docs: https://jekyllrb.com/docs/configuration/#front-matter-defaults
+defaults:
+  - { { site.data.config.creativeCommonsLicenses.yml } }
+
+# Page Language setting
 lang: "zh-tw"
 author: "SyuanTsai"
