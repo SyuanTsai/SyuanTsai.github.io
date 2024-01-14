@@ -9,7 +9,6 @@ remote_theme: jekyll/minima
 ## Docs: https://jekyllrb.com/docs/configuration/#front-matter-defaults
 defaults:
   - { { site.data.config.creativeCommonsLicenses.yml } }
-  - { { site.data.config.social_links.yml } }
 
 
 # Page Language setting
