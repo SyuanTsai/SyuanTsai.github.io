@@ -18,9 +18,9 @@ author: "SyuanTsai"
 # Page Parameter Debugging Dedicated
 # name rules => directoryPath/directoryPath/fileName: true/false
 debug_tags:
-  _layouts-layout: true
+  _layouts-layout: false
 
 
 # Page Parameter Comments Dedicated
 show_comments:
-    _layout: true
+    _layout: false
