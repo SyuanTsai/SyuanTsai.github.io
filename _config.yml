@@ -23,4 +23,4 @@ debug_tags:
 
 # Page Parameter Comments Dedicated
 show_comments:
-    _layout: false
+    _layout: true

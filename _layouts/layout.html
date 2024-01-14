@@ -5,7 +5,7 @@
 {% include _layout.html %}
 
 {% if site.show_comments._layout %}
-<!-- 模組化設計 -->
+<!-- 模組化設計(_layouts.layout.html) -->
 <!-- 此頁面的職責掌管整個網頁內容的「層次」 -->
 <!-- 「層次」指的是網頁的結構，例如：header, body, footer, sidebar...等等-->
 
@@ -14,7 +14,7 @@
 <!--'layout' refers to the structure of the webpage, e.g. header, body, footer, sidebar... etc-->
 {% endif %}
 
-{% if site.debug_tags["_layouts/layout"] %}
+{% if site.debug_tags._layouts/layout %}
 <!-- Debug Data -->
 <div> Debug site.lang: {{ site.lang | inspect }}</div>
 <div> Debug site.data.lang: {{ site.data.lang | inspect }}</div>
