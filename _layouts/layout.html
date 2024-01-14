@@ -3,21 +3,19 @@
 <!-- 「層次」指的是網頁的結構，例如：header, body, footer, sidebar...等等-->
 
 <!--Modular Design-->
-<!--This page is responsible for managing the 'levels' of the whole web content.-->
-<!--'Levels' refers to the structure of the webpage, e.g. header, body, footer, sidebar... etc-->
+<!--This page is responsible for managing the 'layout' of the whole web content.-->
+<!--'layout' refers to the structure of the webpage, e.g. header, body, footer, sidebar... etc-->
 
-
-<!--指定頁面的使用的語系檔案-->
+<!--Specifies the language file used by the page-->
 {% assign __ = site.data.lang[site.lang] %}
 
 <!-- Debugging -->
 
-<div> {{page.layout}}</div>
-<div> {{page.layout}}</div>
-<div> {{site.debug_tags}}</div>
-<div> {{site.debug_tags[_layouts/layout]}}</div>
+<div>1. {{page.layout}}</div>
+<div>2. {{site.debug_tags}}</div>
+<div>3. {{site.debug_tags["_layouts/layout"]}}</div>
 
-{% if site.debug_tags[_layouts/layout] == true %}
+{% if site.debug_tags["_layouts/layout"] %}
 <div> Debug site.lang: {{ site.lang | inspect }}</div>
 <div> Debug site.data.lang: {{ site.data.lang | inspect }}</div>
 {% endif %}
