@@ -10,7 +10,7 @@
         <!-- TODO : 新增歸於我的畫面-->
 
         <ul class="social-media-list">
-            {%- for entry in site.data.social_links -%}
+            {%- for entry in site.minima.social_links -%}
             {%- include social-item.html item = entry -%}
             {%- endfor -%}
         </ul>
