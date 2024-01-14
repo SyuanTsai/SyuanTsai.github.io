@@ -1,6 +1,7 @@
 <!-- 模組化設計 -->
 <!-- 此頁面的職責掌管整個網頁內容的「層次」 -->
 <!-- 「層次」指的是網頁的結構，例如：header, body, footer, sidebar...等等-->
+
 <!--Modular Design-->
 <!--This page is responsible for managing the 'levels' of the whole web content.-->
 <!--'Levels' refers to the structure of the webpage, e.g. header, body, footer, sidebar... etc-->
@@ -15,7 +16,7 @@
 <div> {{site.config.debug_tags}}</div>
 <div> {{site.config.debug_tags[page.layout]}}</div>
 
-{% if site.config.debug_tags[page.layout] %}
+{% if site.config.debug_tags[page.layout] == true %}
 <div> Debug site.lang: {{ site.lang | inspect }}</div>
 <div> Debug site.data.lang: {{ site.data.lang | inspect }}</div>
 {% endif %}
