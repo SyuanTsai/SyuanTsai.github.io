@@ -2,7 +2,9 @@
 minima:
   skin: dark
   date_format: "%Y/%m/%d"
-  social_links: { { site.data.config.social_links.yml } }
+  social_links:
+    - { platform: github,  user_url: "https://github.com/SyuanTsai" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/tw-syuan" }
 remote_theme: jekyll/minima
 
 
