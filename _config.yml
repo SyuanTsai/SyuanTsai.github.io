@@ -9,17 +9,22 @@ remote_theme: jekyll/minima
 ## Docs: https://jekyllrb.com/docs/configuration/#front-matter-defaults
 defaults:
   - { { site.data.config.creativeCommonsLicenses.yml } }
+  - { { site.data.config.social_links.yml } }
 
 
 # Page Language setting
 lang: "zh-tw"
 author: "SyuanTsai"
 
+
+
+
+
+# Debug Settings
 # Page Parameter Debugging Dedicated
 # name rules => directoryPath/directoryPath/fileName: true/false
 debug_tags:
   _layouts-layout: false
-
 
 # Page Parameter Comments Dedicated
 show_comments:
