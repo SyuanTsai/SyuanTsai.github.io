@@ -13,10 +13,11 @@
 <!-- Debugging -->
 
 <div> {{page.layout}}</div>
-<div> {{site.config.debug_tags}}</div>
-<div> {{site.config.debug_tags[page.layout]}}</div>
+<div> {{page.layout}}</div>
+<div> {{site.debug_tags}}</div>
+<div> {{site.debug_tags[_layouts/layout]}}</div>
 
-{% if site.config.debug_tags[page.layout] == true %}
+{% if site.debug_tags[_layouts/layout] == true %}
 <div> Debug site.lang: {{ site.lang | inspect }}</div>
 <div> Debug site.data.lang: {{ site.data.lang | inspect }}</div>
 {% endif %}
