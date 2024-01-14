@@ -19,3 +19,8 @@ author: "SyuanTsai"
 # name rules => directoryPath/directoryPath/fileName: true/false
 debug_tags:
   _layouts/layout: false
+
+
+# Page Parameter Comments Dedicated
+show_comments:
+    _includes/_layouts: true
