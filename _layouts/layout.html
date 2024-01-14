@@ -1,8 +1,8 @@
 <!--Specifies the language file used by the page-->
 {% assign __ = site.data.lang[site.lang] %}
 
-<!-- Debug Data -->
 {% if site.debug_tags["_layouts/layout"] %}
+<!-- Debug Data -->
 <div> Debug site.lang: {{ site.lang | inspect }}</div>
 <div> Debug site.data.lang: {{ site.data.lang | inspect }}</div>
 {% endif %}
