@@ -1,0 +1,20 @@
+---
+---
+
+<!-- 此頁面設計採用模組化的方式 -->
+<!-- 因此各個子頁面應該拆到更小的_include裡面同時也符合SRP -->
+
+
+{% assign __ = site.data.languages[site.lang] %}
+
+
+
+<div>
+    Current Language: {{ site.lang }}
+</div>
+
+<div>
+    Current Language: {{ __ }}
+</div>
+
+{% include _layout.html %}
