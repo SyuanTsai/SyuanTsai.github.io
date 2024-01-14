@@ -11,9 +11,7 @@
 
         <ul class="social-media-list">
             {%- for entry in site.data.social_links -%}
-            <li>
-                <a href="{{ entry.user_url }}">{{ entry.platform }}</a>
-            </li>
+            {%- include social-item.html item = entry -%}
             {%- endfor -%}
         </ul>
     </div>

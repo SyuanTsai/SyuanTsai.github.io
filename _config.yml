@@ -2,6 +2,7 @@
 minima:
   skin: dark
   date_format: "%Y/%m/%d"
+  social_links: { { site.data.config.social_links.yml } }
 remote_theme: jekyll/minima
 
 
