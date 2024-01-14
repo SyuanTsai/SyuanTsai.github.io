@@ -8,13 +8,5 @@
                 <a href="{{ page.url | absolute_url }}" title="{{ page.title }}">{{ page.url | absolute_url }}</a><br>
             </div>
         </div>
-        <div class="social-links">
-            {%- include social.html -%}
-        </div>
-        {% if site.layouts.post %}
-        <p>已成功獲取到 _layouts/post.html 文件中的設定。</p>
-        {% else %}
-        <p>未能獲取到 _layouts/post.html 文件中的設定。</p>
-        {% endif %}
     </div>
 </footer>
