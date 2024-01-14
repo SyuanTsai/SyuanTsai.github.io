@@ -14,3 +14,7 @@ defaults:
 # Page Language setting
 lang: "zh-tw"
 author: "SyuanTsai"
+
+# Page Parameter Debugging Dedicated"
+debug_tags:
+  _layouts/layout: true
