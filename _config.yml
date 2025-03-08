@@ -29,6 +29,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  SyuanTsai
 
+# Theme settings
+minima:
+  skin: dark
+  date_format: "%Y/%m/%d"
+  social_links:
+    - title: SyuanTsai Github
+      icon: github
+      url: "https://github.com/SyuanTsai"
+    - title: SyuanTsai Linkedin
+      icon: linkedin
+      url: "https://www.linkedin.com/in/tw-syuan"
+
 # Build settings
 remote_theme: jekyll/minima
 plugins:
