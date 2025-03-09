@@ -20,9 +20,11 @@
 
 # Page setting
 lang: "zh-tw"
-author: "SyuanTsai"
+author:
+  name: SyuanTsai
+  email: Syaun@taiwantxg.onmicrosoft.com
 title: SyuanTsai's Blog
-email: Syaun@taiwantxg.onmicrosoft.com
+
 description: >- # this means to ignore newlines until "baseurl:"
   Syuan Tsai's GitHub.io personal webpage, documenting work notes.
 baseurl: "" # the subpath of your site, e.g. /blog
