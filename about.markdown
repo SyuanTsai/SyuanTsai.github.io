@@ -1,8 +1,12 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
+
+# About page
+
+TODO : 當Layouts完成時需要實現，下面是原始內容。
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
