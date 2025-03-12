@@ -50,6 +50,7 @@ plugins:
   - jekyll-remote-theme 
 
 # Warning: @import is deprecated, but this is an official issue, so the warning is disabled.
+# Documentation: https://github.com/jekyll/jekyll-sass-converter#usage
 sass:
   quiet_deps: true
 
