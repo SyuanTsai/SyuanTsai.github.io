@@ -10,6 +10,17 @@
   --syuan-accent: #79b8ff;
   --syuan-accent-surface: #10253d;
   --syuan-code: #151f2b;
+  --syuan-syntax-comment: #9aa7b4;
+  --syuan-syntax-keyword: #f078a1;
+  --syuan-syntax-name: #e8eef5;
+  --syuan-syntax-type: #ffd166;
+  --syuan-syntax-symbol: #7dd3fc;
+  --syuan-syntax-function: #86efac;
+  --syuan-syntax-variable: #c4b5fd;
+  --syuan-syntax-operator: #d9f99d;
+  --syuan-syntax-number: #c4b5fd;
+  --syuan-syntax-string: #fde68a;
+  --syuan-syntax-error: #fca5a5;
   --syuan-shadow: rgba(0, 0, 0, 0.18);
   --syuan-header: rgba(11, 17, 24, 0.92);
   --syuan-layout-gutter: clamp(20px, 4vw, 72px);
@@ -27,6 +38,17 @@
   --syuan-accent: #075fca;
   --syuan-accent-surface: #e7f1ff;
   --syuan-code: #eef3f8;
+  --syuan-syntax-comment: #4f5f70;
+  --syuan-syntax-keyword: #9f1239;
+  --syuan-syntax-name: #17202a;
+  --syuan-syntax-type: #854d0e;
+  --syuan-syntax-symbol: #075fca;
+  --syuan-syntax-function: #166534;
+  --syuan-syntax-variable: #6b21a8;
+  --syuan-syntax-operator: #3f6212;
+  --syuan-syntax-number: #5b21b6;
+  --syuan-syntax-string: #6b5200;
+  --syuan-syntax-error: #991b1b;
   --syuan-shadow: rgba(31, 47, 65, 0.11);
   --syuan-header: rgba(247, 249, 252, 0.92);
 }
@@ -1073,6 +1095,123 @@ pre,
   border-color: var(--syuan-border);
   color: var(--syuan-text);
   background: var(--syuan-code);
+}
+
+// Minima emits a fixed syntax palette for its configured skin. Keep Rouge
+// tokens tied to the resolved site theme so switching to light mode does not
+// leave low-contrast colors intended for a dark code background.
+.highlight code {
+  color: var(--syuan-syntax-name);
+}
+
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
+.highlight .cs,
+.highlight .gh,
+.highlight .go,
+.highlight .gp,
+.highlight .gu,
+.highlight .bp,
+.highlight .lineno,
+.highlight .gl {
+  color: var(--syuan-syntax-comment);
+}
+
+.highlight .err,
+.highlight .gd,
+.highlight .gd .x,
+.highlight .gr,
+.highlight .gt,
+.highlight .ne {
+  color: var(--syuan-syntax-error);
+}
+
+.highlight .err {
+  background: transparent;
+}
+
+.highlight .gi,
+.highlight .gi .x,
+.highlight .nf,
+.highlight .fm,
+.highlight .sr {
+  color: var(--syuan-syntax-function);
+}
+
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kp,
+.highlight .kr,
+.highlight .nb,
+.highlight .nt {
+  color: var(--syuan-syntax-keyword);
+}
+
+.highlight .kt {
+  color: var(--syuan-syntax-type);
+}
+
+.highlight .n,
+.highlight .nx,
+.highlight .p,
+.highlight .w {
+  color: var(--syuan-syntax-name);
+}
+
+.highlight .na,
+.highlight .nc,
+.highlight .nd,
+.highlight .ni,
+.highlight .nl,
+.highlight .nn,
+.highlight .no,
+.highlight .py,
+.highlight .ss {
+  color: var(--syuan-syntax-symbol);
+}
+
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+  color: var(--syuan-syntax-variable);
+}
+
+.highlight .o,
+.highlight .ow {
+  color: var(--syuan-syntax-operator);
+}
+
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo {
+  color: var(--syuan-syntax-number);
+}
+
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .ld,
+.highlight .dl {
+  color: var(--syuan-syntax-string);
+}
+
+.highlight .hll {
+  background: var(--syuan-accent-surface);
 }
 
 .site-footer {
