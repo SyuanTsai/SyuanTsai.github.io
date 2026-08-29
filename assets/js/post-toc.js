@@ -16,7 +16,7 @@
   function createHeadingId(text) {
     var baseId = text
       .trim()
-      .toLocaleLowerCase()
+      .toLowerCase()
       .normalize("NFKD")
       .replace(/[\u0300-\u036f]/g, "")
       .replace(/[^\p{Letter}\p{Number}]+/gu, "-")
