@@ -13,9 +13,28 @@
     return;
   }
 
-  headings.forEach(function (heading, index) {
+  function createHeadingId(text) {
+    var baseId = text
+      .trim()
+      .toLocaleLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^\p{Letter}\p{Number}]+/gu, "-")
+      .replace(/^-+|-+$/g, "") || "section";
+    var candidateId = baseId;
+    var suffix = 2;
+
+    while (document.getElementById(candidateId)) {
+      candidateId = baseId + "-" + suffix;
+      suffix += 1;
+    }
+
+    return candidateId;
+  }
+
+  headings.forEach(function (heading) {
     if (!heading.id) {
-      heading.id = "section-" + (index + 1);
+      heading.id = createHeadingId(heading.textContent);
     }
 
     var item = document.createElement("li");

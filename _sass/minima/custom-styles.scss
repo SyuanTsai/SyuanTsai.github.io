@@ -215,7 +215,6 @@ select {
 .recent-posts-panel__all:focus-visible,
 .post-toc a:focus-visible,
 .post-navigation a:focus-visible,
-.error-page__actions a:focus-visible,
 .site-footer a:focus-visible {
   outline: 3px solid var(--syuan-accent);
   outline: 3px solid color-mix(in srgb, var(--syuan-accent) 42%, transparent);
