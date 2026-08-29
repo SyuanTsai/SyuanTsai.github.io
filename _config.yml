@@ -28,7 +28,7 @@ title: SyuanTsai's Blog
 description: >- # this means to ignore newlines until "baseurl:"
   Syuan Tsai's GitHub.io personal webpage, documenting work notes.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://notes.tw-syuan.com" # the canonical base hostname and protocol
 github_username:  SyuanTsai
 
 # Theme settings
