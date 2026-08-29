@@ -2,13 +2,50 @@
 layout: default
 ---
 
+{%- assign latest_post = site.posts | first -%}
+{%- assign recent_posts = site.posts | slice: 1, 4 -%}
+{%- assign post_count = site.posts | size -%}
+{%- assign sorted_categories = site.categories | sort -%}
+
 <div class="home-page">
-  <section class="home-intro" aria-labelledby="home-title">
-    <p class="home-intro__eyebrow">Syuan Tsai · Software Engineer</p>
-    <h1 id="home-title">隨手筆記</h1>
-    {%- if page.description -%}
-      <p class="home-intro__description">{{ page.description | escape }}</p>
-    {%- endif -%}
+  <section class="home-hero" aria-labelledby="home-title">
+    <div class="home-intro">
+      <p class="home-intro__eyebrow">Syuan Tsai · Software Engineer</p>
+      <h1 id="home-title">隨手筆記</h1>
+      {%- if page.description -%}
+        <p class="home-intro__description">{{ page.description | escape }}</p>
+      {%- endif -%}
+    </div>
+
+    <aside class="home-overview" aria-label="筆記概況">
+      <p class="home-overview__eyebrow">Notebook overview</p>
+
+      <div class="home-overview__metrics">
+        <div class="home-overview__metric">
+          <strong>{{ post_count }}</strong>
+          <span>篇公開筆記</span>
+        </div>
+        <div class="home-overview__metric">
+          {%- if latest_post -%}
+            <time datetime="{{ latest_post.date | date_to_xmlschema }}">{{ latest_post.date | date: '%Y.%m.%d' }}</time>
+          {%- else -%}
+            <strong>—</strong>
+          {%- endif -%}
+          <span>最近更新</span>
+        </div>
+      </div>
+
+      {%- if sorted_categories != empty -%}
+        <div class="home-overview__topics">
+          <span class="home-overview__topics-label">主要主題</span>
+          <div class="home-overview__topic-list">
+            {%- for category in sorted_categories limit: 5 -%}
+              <span>{{ category[0] | escape }}</span>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </aside>
   </section>
 
   <section class="latest-posts" id="latest-articles" aria-labelledby="latest-posts-title">
@@ -17,7 +54,61 @@ layout: default
       <a class="section-heading__link" href="{{ '/articles/' | relative_url }}">查看全部文章 <span aria-hidden="true">→</span></a>
     </div>
 
-    {%- assign latest_posts = site.posts | slice: 0, 5 -%}
-    {%- include post-list.html posts=latest_posts heading_level=3 -%}
+    {%- if latest_post -%}
+      <div class="home-posts-grid">
+        <article class="featured-post">
+          <a class="featured-post__link" href="{{ latest_post.url | relative_url }}" aria-label="閱讀最新文章：{{ latest_post.title | escape }}">
+            <div class="featured-post__meta">
+              <span>Latest note</span>
+              <time datetime="{{ latest_post.date | date_to_xmlschema }}">{{ latest_post.date | date: '%Y.%m.%d' }}</time>
+            </div>
+
+            {%- if latest_post.categories and latest_post.categories != empty -%}
+              <span class="featured-post__category">{{ latest_post.categories | join: ' · ' | escape }}</span>
+            {%- endif -%}
+
+            <h3>{{ latest_post.title | escape }}</h3>
+            <p>
+              {%- if latest_post.description -%}
+                {{ latest_post.description | strip_html | normalize_whitespace | escape }}
+              {%- else -%}
+                {{ latest_post.excerpt | strip_html | normalize_whitespace | truncate: 190 | escape }}
+              {%- endif -%}
+            </p>
+            <span class="featured-post__action">閱讀最新文章 <span aria-hidden="true">→</span></span>
+          </a>
+        </article>
+
+        <div class="recent-posts-panel">
+          <div class="recent-posts-panel__heading">
+            <p>近期文章</p>
+            <span>Recent notes</span>
+          </div>
+
+          <div class="recent-post-list">
+            {%- for post in recent_posts -%}
+              <article class="recent-post">
+                <a class="recent-post__link" href="{{ post.url | relative_url }}" aria-label="閱讀文章：{{ post.title | escape }}">
+                  <div class="recent-post__meta">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+                    {%- if post.categories and post.categories != empty -%}
+                      <span>{{ post.categories | join: ' · ' | escape }}</span>
+                    {%- endif -%}
+                  </div>
+                  <h3>{{ post.title | escape }}</h3>
+                  <span class="recent-post__arrow" aria-hidden="true">→</span>
+                </a>
+              </article>
+            {%- else -%}
+              <p class="recent-post-list__empty">新的筆記會顯示在這裡。</p>
+            {%- endfor -%}
+          </div>
+
+          <a class="recent-posts-panel__all" href="{{ '/articles/' | relative_url }}">瀏覽文章列表 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    {%- else -%}
+      <p class="post-list__empty">目前還沒有文章。</p>
+    {%- endif -%}
   </section>
 </div>
