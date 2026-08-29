@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Code Review 與 長期的維護討論"
-date:   2025-12-14
-categories: Code Review
+title: "Code Review 與 長期的維護討論"
+date: 2025-12-14
+description: "說明 Code Review 如何兼顧交付速度、程式碼品質與長期維護成本。"
+categories: [Code, Review]
+permalink: /code/review/2025/12/14/Code-Review-Alignment-for-Long-Term-Maintenance.html
 ---
 
 ## Code Review 如果兼顧 Code Quality 能為團隊帶來甚麼
