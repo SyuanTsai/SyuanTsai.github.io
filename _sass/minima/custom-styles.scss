@@ -12,6 +12,8 @@
   --syuan-code: #151f2b;
   --syuan-shadow: rgba(0, 0, 0, 0.18);
   --syuan-header: rgba(11, 17, 24, 0.92);
+  --syuan-layout-gutter: clamp(20px, 4vw, 72px);
+  --syuan-reading-width: 960px;
 }
 
 :root[data-resolved-theme="light"] {
@@ -76,8 +78,10 @@ select {
 
 .site-shell {
   box-sizing: border-box;
-  width: min(1120px, calc(100% - 40px));
-  margin-inline: auto;
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: var(--syuan-layout-gutter);
 }
 
 .skip-link {
@@ -131,15 +135,18 @@ select {
 }
 
 .site-brand__mark {
-  display: grid;
+  display: inline-flex;
+  flex: 0 0 30px;
   width: 30px;
   height: 30px;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 9px;
   color: var(--syuan-background);
   background: var(--syuan-accent);
   font-size: 0.875rem;
   font-weight: 800;
+  line-height: 1;
   box-shadow: 0 5px 18px color-mix(in srgb, var(--syuan-accent) 20%, transparent);
 }
 
@@ -215,11 +222,11 @@ select {
 }
 
 .page-content > .reading-shell {
-  box-sizing: border-box;
-  width: min(780px, calc(100% - 40px));
   max-width: none;
-  margin-inline: auto;
-  padding: 0;
+}
+
+.page-content > .reading-shell > * {
+  max-width: var(--syuan-reading-width);
 }
 
 .home-intro,
@@ -443,9 +450,8 @@ pre,
 }
 
 @media (max-width: 760px) {
-  .site-shell,
-  .page-content > .reading-shell {
-    width: min(calc(100% - 28px), 1120px);
+  .site-shell {
+    padding-inline: 14px;
   }
 
   .site-header__inner {
