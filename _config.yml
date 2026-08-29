@@ -44,8 +44,16 @@ minima:
 
 # Build settings
 remote_theme: jekyll/minima@4de322363fca5927e6f4012cb94f6dad69ab5e6c
+permalink: /:categories/:year/:month/:day/:title:output_ext
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
 
 # Warning: @import is deprecated, but this is an official issue, so the warning is disabled.
 # Documentation: https://github.com/jekyll/jekyll-sass-converter#usage
@@ -55,3 +63,6 @@ sass:
 # Keep internal reference notes out of the published site.
 exclude:
   - ReferenceDocument/
+  - docs/
+  - scripts/
+  - tests/

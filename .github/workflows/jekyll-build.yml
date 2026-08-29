@@ -13,11 +13,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
 
+      - name: Test article validation
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Validate article sources
+        run: python3 scripts/validate_posts.py
+
       - name: Setup Pages
         uses: actions/configure-pages@v6.0.0
 
       - name: Build with GitHub Pages
         uses: actions/jekyll-build-pages@v1.0.13
 
-      - name: Verify internal references are not published
-        run: test ! -d _site/ReferenceDocument
+      - name: Verify generated article SEO
+        run: python3 scripts/verify_generated_seo.py _site
+
+      - name: Verify repository-only files are not published
+        run: |
+          test ! -d _site/ReferenceDocument
+          test ! -d _site/docs
+          test ! -d _site/scripts
+          test ! -d _site/tests
+          test ! -d _site/_drafts
+          test ! -d _site/_templates

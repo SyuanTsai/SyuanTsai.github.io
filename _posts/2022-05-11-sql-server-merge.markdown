@@ -2,7 +2,7 @@
 layout: post
 title: "SQL Server MERGE 語法筆記"
 date: 2022-05-11
-categories: MSSQL
+categories: [MSSQL]
 description: "使用 MERGE，依來源與目標資料的比對結果執行新增、更新或刪除。"
 ---
 
