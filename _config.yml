@@ -46,7 +46,6 @@ minima:
 # Build settings
 remote_theme: jekyll/minima
 plugins:
-  - jekyll-feed
   - jekyll-remote-theme 
 
 # Warning: @import is deprecated, but this is an official issue, so the warning is disabled.
