@@ -229,6 +229,11 @@ select {
 
 .page-content > .reading-shell > * {
   max-width: var(--syuan-reading-width);
+  margin-inline: auto;
+}
+
+.page-content > .reading-shell > .about-page-wrapper {
+  max-width: 1440px;
 }
 
 .home-page {
@@ -1105,7 +1110,7 @@ pre,
 
 .about-profile {
   display: grid;
-  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  grid-template-columns: minmax(260px, 0.58fr) minmax(0, 1.42fr);
   gap: clamp(28px, 5vw, 58px);
   box-sizing: border-box;
   padding: clamp(28px, 4vw, 46px);
@@ -1174,6 +1179,7 @@ pre,
 }
 
 .about-profile__statement p {
+  max-width: 840px;
   margin: 18px 0 0;
   color: var(--syuan-muted);
   line-height: 1.8;
@@ -1363,6 +1369,12 @@ pre,
   outline: 3px solid var(--syuan-accent);
   outline: 3px solid color-mix(in srgb, var(--syuan-accent) 42%, transparent);
   outline-offset: 2px;
+}
+
+@media (min-width: 1120px) {
+  .about-topic-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 980px) {
