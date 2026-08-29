@@ -1,6 +1,49 @@
-{% comment %}
-使用這個來在關閉body標籤之前插入標記。
-例如，需要在文件加載完成後執行的腳本。
+<script>
+  (function () {
+    var root = document.documentElement;
+    var storageKey = "syuan-theme";
+    var themeButtons = document.querySelectorAll("[data-theme-option]");
+    var systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-Note: 在comment標籤中的內容不會被處理
-{% endcomment %}
+    function resolveTheme(theme) {
+      return theme === "system" ? (systemTheme.matches ? "dark" : "light") : theme;
+    }
+
+    function applyTheme(theme, persist) {
+      root.dataset.theme = theme;
+      root.dataset.resolvedTheme = resolveTheme(theme);
+
+      themeButtons.forEach(function (button) {
+        button.setAttribute("aria-pressed", String(button.dataset.themeOption === theme));
+      });
+
+      if (persist) {
+        try {
+          window.localStorage.setItem(storageKey, theme);
+        } catch (error) {
+          // The selected theme still applies for the current page.
+        }
+      }
+    }
+
+    themeButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        applyTheme(button.dataset.themeOption, true);
+      });
+    });
+
+    function handleSystemThemeChange() {
+      if (root.dataset.theme === "system") {
+        applyTheme("system", false);
+      }
+    }
+
+    if (systemTheme.addEventListener) {
+      systemTheme.addEventListener("change", handleSystemThemeChange);
+    } else if (systemTheme.addListener) {
+      systemTheme.addListener(handleSystemThemeChange);
+    }
+
+    applyTheme(root.dataset.theme || "system", false);
+  }());
+</script>

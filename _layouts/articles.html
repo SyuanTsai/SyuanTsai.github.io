@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<section class="article-index" aria-labelledby="article-index-title">
+  <header class="page-intro">
+    <p class="page-intro__eyebrow">Notes</p>
+    <h1 id="article-index-title">{{ page.title | escape }}</h1>
+    {%- if page.description -%}
+      <p>{{ page.description | escape }}</p>
+    {%- endif -%}
+  </header>
+
+  {%- include post-list.html posts=site.posts -%}
+</section>

@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-
-{%- include head.html -%}
-
-<body>
-
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'zh-tw' }}">
+  {%- include head.html -%}
+  <body>
+    <a class="skip-link" href="#main-content">跳至主要內容</a>
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-        <div class="wrapper">
-            {{ content }}
-        </div>
+    <main id="main-content" class="page-content" aria-label="主要內容">
+      <div class="site-shell">
+        {{ content }}
+      </div>
     </main>
 
     {%- include footer.html -%}
-
-    {% comment %}
-        如果未來有需要其他執行的功能，在sub-footer.html中實現
-    {% endcomment %}
     {%- include sub-footer.html -%}
-</body>
-
+  </body>
 </html>

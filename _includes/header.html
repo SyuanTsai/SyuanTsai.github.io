@@ -1,32 +1,22 @@
 <header class="site-header">
+  <div class="site-shell site-header__inner">
+    <a class="site-brand" rel="author" href="{{ '/' | relative_url }}" aria-label="Syuan Notes 首頁">
+      <span class="site-brand__mark" aria-hidden="true">S</span>
+      <span>Syuan Notes</span>
+    </a>
 
-  <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
-    {%- assign page_titles = site.pages | map: 'title' | compact %}
-    <!-- <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a> -->
-
-    {% comment %}
-        畫面右上角的Navigation Items
-    {% endcomment %}
-    {%- unless page_titles == empty %}
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger" id="nav-trigger-label" aria-label="Navigation Trigger">
-            <span class="menu-icon fas fa-bars fa-lg"></span>
-        </label>
-
-        {% comment %}
-            側邊選單
-        {% endcomment %}
-        
-        {% comment %}
-            上方選單
-        {% endcomment %}
-        <div class="slab">
-            {%- include nav-items.html paths = page_paths %}
-        </div>
+    <div class="site-header__actions">
+      <nav class="site-navigation" aria-label="主要導覽">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>首頁</a>
+        <a href="{{ '/articles/' | relative_url }}"{% if page.url == '/articles/' or page.layout == 'post' %} aria-current="page"{% endif %}>文章</a>
+        <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>關於</a>
       </nav>
-    {%- endunless %}
+
+      <div class="theme-switch" role="group" aria-label="色彩模式">
+        <button type="button" data-theme-option="system" aria-label="跟隨系統" aria-pressed="false" title="跟隨系統">◐</button>
+        <button type="button" data-theme-option="light" aria-label="淺色模式" aria-pressed="false" title="淺色模式">☀</button>
+        <button type="button" data-theme-option="dark" aria-label="深色模式" aria-pressed="false" title="深色模式">☾</button>
+      </div>
+    </div>
   </div>
 </header>
