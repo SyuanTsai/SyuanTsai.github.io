@@ -213,7 +213,8 @@ select {
   background: var(--syuan-background);
 }
 
-.page-content > .wrapper {
+.page-content > .wrapper,
+.page-content > .reading-shell {
   box-sizing: border-box;
   width: min(780px, calc(100% - 40px));
   max-width: none;
@@ -443,7 +444,8 @@ pre,
 
 @media (max-width: 760px) {
   .site-shell,
-  .page-content > .wrapper {
+  .page-content > .wrapper,
+  .page-content > .reading-shell {
     width: min(100% - 28px, 1120px);
   }
 

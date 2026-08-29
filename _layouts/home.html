@@ -6,7 +6,9 @@ layout: default
   <section class="home-intro" aria-labelledby="home-title">
     <p class="home-intro__eyebrow">Syuan Tsai · Software Engineer</p>
     <h1 id="home-title">隨手筆記</h1>
-    <p class="home-intro__description">記錄開發實務、架構決策、課程學習、講座與問題排查。</p>
+    {%- if page.description -%}
+      <p class="home-intro__description">{{ page.description | escape }}</p>
+    {%- endif -%}
   </section>
 
   <section class="latest-posts" id="latest-articles" aria-labelledby="latest-posts-title">

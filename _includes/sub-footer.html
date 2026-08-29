@@ -3,7 +3,13 @@
     var root = document.documentElement;
     var storageKey = "syuan-theme";
     var themeButtons = document.querySelectorAll("[data-theme-option]");
-    var systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    var systemTheme = typeof window.matchMedia === "function"
+      ? window.matchMedia("(prefers-color-scheme: dark)")
+      : {
+          matches: false,
+          addEventListener: null,
+          addListener: null
+        };
 
     function resolveTheme(theme) {
       return theme === "system" ? (systemTheme.matches ? "dark" : "light") : theme;

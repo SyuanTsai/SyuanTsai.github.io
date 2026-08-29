@@ -6,7 +6,7 @@
     {%- include header.html -%}
 
     <main id="main-content" class="page-content" aria-label="主要內容">
-      <div class="site-shell">
+      <div class="site-shell{% unless page.layout == 'home' or page.layout == 'articles' %} reading-shell{% endunless %}">
         {{ content }}
       </div>
     </main>
