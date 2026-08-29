@@ -1,8 +1,9 @@
 source "https://rubygems.org"
 
-# Match the Jekyll runtime used by GitHub Pages in production.
-gem "github-pages", "~> 232", group: :jekyll_plugins
-gem "jekyll-remote-theme", "~> 0.4.3"
+# Match the GitHub Pages v232 production runtime exactly.
+ruby "3.3.4"
+gem "github-pages", "= 232", group: :jekyll_plugins
+gem "jekyll-remote-theme", "= 0.4.3"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
