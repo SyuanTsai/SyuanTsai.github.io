@@ -1354,6 +1354,10 @@ pre,
   white-space: nowrap;
 }
 
+.about-link:visited {
+  color: var(--syuan-text);
+}
+
 .about-link:hover {
   color: var(--syuan-accent);
   text-decoration: none;
@@ -1366,7 +1370,8 @@ pre,
   background: var(--syuan-accent);
 }
 
-.about-link--primary:hover {
+.about-link--primary:hover,
+.about-link--primary:visited {
   color: var(--syuan-background);
   text-decoration: none;
 }
