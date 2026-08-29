@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'zh-tw' }}">
+  {%- include head.html -%}
+  <body>
+    <a class="skip-link" href="#main-content">跳至主要內容</a>
+    {%- include header.html -%}
+
+    <main id="main-content" class="page-content" aria-label="主要內容">
+      <div class="site-shell{% unless page.layout == 'home' or page.layout == 'articles' %} reading-shell{% endunless %}">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+    {%- include sub-footer.html -%}
+  </body>
+</html>

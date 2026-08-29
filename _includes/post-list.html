@@ -1,0 +1,33 @@
+<div class="post-list">
+  {%- for post in include.posts -%}
+    <article class="post-card">
+      <div class="post-card__meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+        {%- if post.categories and post.categories != empty -%}
+          <span class="post-card__category">{{ post.categories | join: ' · ' | escape }}</span>
+        {%- endif -%}
+      </div>
+
+      <div class="post-card__body">
+        {%- if include.heading_level == 2 -%}
+          <h2 class="post-card__title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        {%- else -%}
+          <h3 class="post-card__title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        {%- endif -%}
+        <p>
+          {%- if post.description -%}
+            {{ post.description | strip_html | normalize_whitespace | escape }}
+          {%- else -%}
+            {{ post.excerpt | strip_html | normalize_whitespace | truncate: 150 | escape }}
+          {%- endif -%}
+        </p>
+      </div>
+
+      <a class="post-card__read" href="{{ post.url | relative_url }}" aria-label="閱讀文章：{{ post.title | escape }}">
+        閱讀文章 <span aria-hidden="true">→</span>
+      </a>
+    </article>
+  {%- else -%}
+    <p class="post-list__empty">目前還沒有文章。</p>
+  {%- endfor -%}
+</div>

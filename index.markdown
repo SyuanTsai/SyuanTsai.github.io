@@ -1,10 +1,5 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
-title: Home
+title: 首頁
+description: 記錄開發實務、架構決策、課程學習、講座與問題排查。
 ---
-
-這邊是你的首頁畫面，
-下方會有許多的Post
