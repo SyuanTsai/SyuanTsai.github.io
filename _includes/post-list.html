@@ -9,7 +9,11 @@
       </div>
 
       <div class="post-card__body">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        {%- if include.heading_level == 2 -%}
+          <h2 class="post-card__title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        {%- else -%}
+          <h3 class="post-card__title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        {%- endif -%}
         <p>
           {%- if post.description -%}
             {{ post.description | strip_html | normalize_whitespace | escape }}

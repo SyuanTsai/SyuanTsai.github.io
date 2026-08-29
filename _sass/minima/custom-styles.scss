@@ -164,7 +164,7 @@ select {
 }
 
 .site-navigation a:hover,
-.site-navigation a[aria-current="page"] {
+.site-navigation a[aria-current] {
   color: var(--syuan-accent);
   background: var(--syuan-accent-surface);
   text-decoration: none;
@@ -204,6 +204,7 @@ select {
 .theme-switch button:focus-visible,
 .post-card a:focus-visible,
 .site-footer a:focus-visible {
+  outline: 3px solid var(--syuan-accent);
   outline: 3px solid color-mix(in srgb, var(--syuan-accent) 42%, transparent);
   outline-offset: 2px;
 }
@@ -213,7 +214,6 @@ select {
   background: var(--syuan-background);
 }
 
-.page-content > .wrapper,
 .page-content > .reading-shell {
   box-sizing: border-box;
   width: min(780px, calc(100% - 40px));
@@ -258,7 +258,7 @@ select {
 
 .section-heading {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 18px;
@@ -327,7 +327,7 @@ select {
   font-weight: 700;
 }
 
-.post-card__body h3 {
+.post-card__title {
   margin: 0;
   color: var(--syuan-text);
   font-size: clamp(1.1875rem, 2.4vw, 1.5rem);
@@ -335,11 +335,11 @@ select {
   letter-spacing: -0.025em;
 }
 
-.post-card__body h3 a {
+.post-card__title a {
   color: var(--syuan-text);
 }
 
-.post-card__body h3 a:hover {
+.post-card__title a:hover {
   color: var(--syuan-accent);
   text-decoration: none;
 }
@@ -444,9 +444,8 @@ pre,
 
 @media (max-width: 760px) {
   .site-shell,
-  .page-content > .wrapper,
   .page-content > .reading-shell {
-    width: min(100% - 28px, 1120px);
+    width: min(calc(100% - 28px), 1120px);
   }
 
   .site-header__inner {
@@ -537,5 +536,9 @@ pre,
   body,
   .post-card {
     transition: none;
+  }
+
+  .post-card:hover {
+    transform: none;
   }
 }
