@@ -1,8 +1,10 @@
 ---
-layout: default
+layout: page
 title: 關於
 description: 關於 Syuan Tsai，以及這個用來整理開發實務、架構決策與學習紀錄的技術筆記網站。
 permalink: /about/
+hide_page_header: true
+page_class: about-page-wrapper
 ---
 
 <section class="about-page" aria-labelledby="about-title">

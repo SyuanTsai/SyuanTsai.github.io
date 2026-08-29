@@ -1,0 +1,17 @@
+{%- if page.previous or page.next -%}
+  <nav class="post-navigation" aria-label="文章分頁">
+    {%- if page.previous -%}
+      <a class="post-navigation__link post-navigation__link--previous" href="{{ page.previous.url | relative_url }}">
+        <span>上一篇</span>
+        <strong>{{ page.previous.title | escape }}</strong>
+      </a>
+    {%- endif -%}
+
+    {%- if page.next -%}
+      <a class="post-navigation__link post-navigation__link--next" href="{{ page.next.url | relative_url }}">
+        <span>下一篇</span>
+        <strong>{{ page.next.title | escape }}</strong>
+      </a>
+    {%- endif -%}
+  </nav>
+{%- endif -%}

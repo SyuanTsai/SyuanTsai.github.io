@@ -1,25 +1,16 @@
 ---
 permalink: /404.html
 layout: page
+title: 找不到頁面
+description: 找不到你要瀏覽的頁面，連結可能已變更或內容已移除。
+eyebrow: "404"
+page_class: error-page
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="error-page__body">
+  <p>你可以回到首頁查看最新內容，或從文章列表重新尋找需要的筆記。</p>
+  <nav class="error-page__actions" aria-label="找不到頁面的導覽">
+    <a class="about-link about-link--primary" href="{{ '/' | relative_url }}">回到首頁</a>
+    <a class="about-link" href="{{ '/articles/' | relative_url }}">瀏覽全部文章</a>
+  </nav>
 </div>

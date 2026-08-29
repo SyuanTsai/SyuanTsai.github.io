@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+{%- assign date_format = site.minima.date_format | default: "%Y/%m/%d" -%}
+
+<article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    {%- if page.categories and page.categories != empty -%}
+      <p class="post-header__eyebrow">{{ page.categories | join: " · " | escape }}</p>
+    {%- endif -%}
+
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+
+    {%- if page.description -%}
+      <p class="post-header__description" itemprop="description">{{ page.description | escape }}</p>
+    {%- endif -%}
+
+    <div class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        發布於 {{ page.date | date: date_format }}
+      </time>
+      {%- if page.last_modified_at -%}
+        <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">
+          更新於 {{ page.last_modified_at | date: date_format }}
+        </time>
+      {%- endif -%}
+    </div>
+  </header>
+
+  <div class="post-body">
+    {%- include post-toc.html -%}
+
+    <div class="post-content e-content" itemprop="articleBody" data-post-content>
+      {{ content }}
+    </div>
+  </div>
+
+  {%- if page.tags and page.tags != empty or page.previous or page.next -%}
+    <footer class="post-footer">
+      {%- if page.tags and page.tags != empty -%}
+        <div class="post-tags" aria-label="文章標籤">
+          <span>標籤</span>
+          <ul>
+            {%- for tag in page.tags -%}
+              <li>{{ tag | escape }}</li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+
+      {%- include post-navigation.html -%}
+    </footer>
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+
+<script src="{{ '/assets/js/post-toc.js' | relative_url }}" defer></script>
