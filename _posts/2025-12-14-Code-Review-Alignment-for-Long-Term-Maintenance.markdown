@@ -5,7 +5,7 @@ date:   2025-12-14
 categories: Code Review
 ---
 
-# Code Review 如果兼顧 Code Quality 能為團隊帶來甚麼
+## Code Review 如果兼顧 Code Quality 能為團隊帶來甚麼
 
 Code Review 的目的不只是在當下「功能能不能跑」，而是要在不顯著拖慢交付的前提下，降低 Bug 風險、降低 未來變更成本，並讓程式碼能被「非原作者」安全維護。
 
