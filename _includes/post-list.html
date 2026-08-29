@@ -23,9 +23,7 @@
         </p>
       </div>
 
-      <a class="post-card__read" href="{{ post.url | relative_url }}" aria-label="閱讀文章：{{ post.title | escape }}">
-        閱讀文章 <span aria-hidden="true">→</span>
-      </a>
+      <span class="post-card__read" aria-hidden="true">→</span>
     </article>
   {%- else -%}
     <p class="post-list__empty">目前還沒有文章。</p>
