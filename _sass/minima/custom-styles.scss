@@ -726,9 +726,7 @@ select {
   color: var(--syuan-muted);
 }
 
-.post-content a,
-.page-content .page a,
-.page__content a {
+:where(.post-content, .page-content .page, .page__content) a {
   color: var(--syuan-accent);
 }
 
