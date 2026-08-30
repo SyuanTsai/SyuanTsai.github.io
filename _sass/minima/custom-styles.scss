@@ -866,6 +866,15 @@ select {
   line-height: 1.82;
 }
 
+.post-content p {
+  text-wrap: pretty;
+}
+
+// Keep prose at a comfortable reading width without narrowing media-only paragraphs.
+.post-content > p:not(:has(img)) {
+  max-width: 52em;
+}
+
 .post-toc[hidden] + .post-content {
   grid-column: 1 / -1;
 }

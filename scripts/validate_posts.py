@@ -196,6 +196,28 @@ def _validate_body(document: Document, errors: list[str]) -> None:
         errors.append("本文有未關閉的 fenced code block")
 
     prose_body = "\n".join(prose_lines)
+    prose_body = re.sub(
+        r"<!--.*?-->",
+        lambda match: "\n" * match.group(0).count("\n"),
+        prose_body,
+        flags=re.DOTALL,
+    )
+    prose_without_inline_code = re.sub(r"`[^`\n]*`", "", prose_body)
+
+    for line_number, line in enumerate(prose_without_inline_code.splitlines(), start=1):
+        if re.search(r"<br\s*/?>", line, flags=re.IGNORECASE):
+            errors.append(
+                f"本文第 {line_number} 行不可使用 HTML `<br>` 控制換行；請用空白行分段"
+            )
+        if re.search(r" {2,}$", line):
+            errors.append(
+                f"本文第 {line_number} 行不可使用行尾雙空白強制換行；請用空白行分段"
+            )
+        if re.search(r"(?<!\\)\\\s*$", line):
+            errors.append(
+                f"本文第 {line_number} 行不可使用行尾反斜線強制換行；請用空白行分段"
+            )
+
     for image in MARKDOWN_IMAGE_RE.finditer(prose_body):
         if not image.group("alt").strip():
             errors.append("Markdown 圖片必須提供非空的替代文字")
@@ -498,6 +520,9 @@ def validate_repository(root: Path) -> tuple[list[str], int, int]:
                     errors.append(f"{template_path.relative_to(root)}: 範本缺少 `{field}`")
             if re.search(r"^\s*#\s+", template.body, flags=re.MULTILINE):
                 errors.append(f"{template_path.relative_to(root)}: 範本本文不可包含 H1")
+            template_body_errors: list[str] = []
+            _validate_body(template, template_body_errors)
+            errors.extend(_format_errors(template_path, root, template_body_errors))
             errors.extend(
                 _format_errors(
                     template_path,

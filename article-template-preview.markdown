@@ -18,7 +18,9 @@ image:
 **未列出預覽：** 此頁只供文章範本 Review，不會出現在首頁、文章列表或導覽，也要求搜尋引擎不要建立索引。知道網址的人仍可直接開啟。
 </aside>
 
-這是一篇使用正式文章版型產生的範本預覽。起頭不顯示固定標題，而是直接交代問題情境、背景或撰寫動機，以及讀者能從本文取得什麼。Jekyll 會把具有 Front Matter 的 Markdown 文章轉換成正式頁面。[^jekyll-posts]
+這是一篇使用正式文章版型產生的範本預覽。起頭不顯示固定標題，而是直接交代問題情境、背景或撰寫動機，以及讀者能從本文取得什麼。
+
+Jekyll 會把具有 Front Matter 的 Markdown 文章轉換成正式頁面。[^jekyll-posts]
 
 需要外部資料支持的敘述，可以在句尾直接放入一個或多個引用；Kramdown 會依來源第一次出現的順序自動編號。[^kramdown-footnotes][^kramdown-converter]
 
