@@ -209,6 +209,14 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertIn("replace: '</table>', '</table></div>'", base_layout)
         self.assertIn("所有表格都會自動填滿內容欄", guide)
 
+    def test_css_asset_is_versioned_per_build(self) -> None:
+        head = (ROOT / "_includes/head.html").read_text(encoding="utf-8")
+
+        self.assertIn(
+            "style.css' | relative_url }}?v={{ site.time | date: '%s' }}",
+            head,
+        )
+
     def test_toc_script_reveals_preallocated_sidebar(self) -> None:
         include = (ROOT / "_includes/post-toc.html").read_text(encoding="utf-8")
         script = (ROOT / "_includes/post-toc-script.html").read_text(encoding="utf-8")
