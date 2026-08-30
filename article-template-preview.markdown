@@ -3,7 +3,7 @@ layout: post
 title: "初版文章範本預覽"
 date: 2026-08-30
 last_modified_at: 2026-08-30
-description: "以實際文章版型預覽起頭、自由內容章節、句尾引用、參考資料與更新紀錄。"
+description: "以實際文章版型預覽起頭、自由內容章節、圖片資產、句尾引用、參考資料與更新紀錄。"
 categories: [Template, Preview]
 tags: [markdown, jekyll, citation]
 permalink: /preview/article-template/
@@ -56,8 +56,17 @@ using var response = await httpClient.SendAsync(request, cancellationToken);
 | 桌面版面 | 引用徽章不影響文字行高 |
 | 手機版面 | 引用徽章可點擊並跳至參考資料 |
 | 未列出狀態 | 不出現在首頁、文章列表或導覽 |
+| 外部圖片 | GitHub Issue 附件依原始比例自動縮放 |
 
-![HTTP 請求處理流程](/assets/images/posts/article-format-example/request-flow.svg){: width="960" height="360" }
+### 圖片與媒體資產
+
+一篇文章或一個使用單位對應 `Media-Assets` 的一個公開 Issue，標題固定使用 `YYYY-MM-DD | 專案 | 內容識別碼 | 資產集合類型`。同篇文章有多張圖片時，使用穩定且可辨識的 Asset ID 建立索引；第一筆資產可記在 Issue 本文，後續每張邏輯圖片或同圖尺寸版本各用一則 comment 管理。
+
+圖片引用必須使用 GitHub 產生的完整附件網址、能表達圖片資訊的替代文字，以及原始像素寬高。非首屏關鍵圖片加入 lazy loading；網站 CSS 會在窄螢幕依比例縮小，不需要手動建立換行。
+
+![紫色火箭向右上方升空，尾部帶有橘色火焰](https://github.com/user-attachments/assets/becf7d8d-5487-4f6c-b55e-23b80312e508){: width="120" height="120" loading="lazy" }
+
+此範例的 Asset ID 為 `article-template/rocket-example`，來源、雜湊與公開附件網址記錄於 [Media-Assets Issue #1](https://github.com/SyuanTsai/Media-Assets/issues/1) 及本站資產 manifest。
 
 > 只有需要保留來源原句、規則或觀點時才使用引用區塊；一般來源標示使用句尾引用。
 
@@ -75,4 +84,5 @@ using var response = await httpClient.SendAsync(request, cancellationToken);
 | 日期 | 更新內容 |
 | --- | --- |
 | 2026-08-30 | 初版發布 |
+| 2026-08-30 | 加入 GitHub Issue 圖片資產規範與實際附件範例 |
 {: .update-history}
