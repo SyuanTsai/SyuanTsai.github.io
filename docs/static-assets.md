@@ -27,9 +27,9 @@
 
 採用「公開 GitHub Issue 附件負責文章內文圖片傳遞，Repository 保存可重新發布的來源與 manifest」：
 
-1. 主帳號 `SyuanTsai` 建立並持有公開 `SyuanTsai/notes-assets` Repository，開啟 Issues。
-2. 另建專用 GitHub machine user，只在雲端瀏覽器登入；不加入 `SyuanTsai.github.io`，也不成為 `notes-assets` collaborator。
-3. 專用帳號以一般公開使用者身分建立靜態資源登錄 Issue；每篇文章以一則 comment 記錄文章 slug、語意化檔名、SHA-256 與附件。
+1. 主帳號 `SyuanTsai` 建立並持有公開 `SyuanTsai/Media-Assets` Repository，開啟 Issues。
+2. 另建專用 GitHub machine user，只在雲端瀏覽器登入；不加入 `SyuanTsai.github.io`，也不成為 `Media-Assets` collaborator。
+3. 專用帳號以一般公開使用者身分建立資產 Issue；一篇文章或一個使用單位對應一個 Issue，本文保存共用資訊與 Asset index。
 4. 上傳後只使用 GitHub 產生的完整匿名化網址，不自行拼接網址。
 5. `docs/static-assets-manifest.yml` 記錄來源檔案與 GitHub 附件網址的對應。
 6. 圖片內容更新時重新上傳並取得新網址，不覆寫或重複利用舊網址。
@@ -41,10 +41,21 @@
 | 身分／介面 | 可操作範圍 | 明確禁止 |
 | --- | --- | --- |
 | `@GitHub` 連接器（主帳號） | `SyuanTsai.github.io` 的程式碼、PR 與 Jira 對應工作 | 不保存或使用專用帳號密碼 |
-| 雲端瀏覽器（專用帳號） | `notes-assets` 的公開 Issue、comment 與附件 | 不授予 `SyuanTsai.github.io` 存取權，不授予任何 Repository collaborator 權限 |
+| 雲端瀏覽器（專用帳號） | `Media-Assets` 的公開 Issue、comment 與附件 | 不授予 `SyuanTsai.github.io` 存取權，不授予任何 Repository collaborator 權限 |
 | `SyuanTsai` 主帳號 | 持有及管理兩個 Repository，必要時進行復原與撤銷 | 不在雲端瀏覽器保存主帳號 session |
 
 專用帳號必須使用獨立信箱、唯一密碼與 2FA；密碼、TOTP secret 與恢復碼只由擁有者保管，不寫入對話、Repository、Jira 或 manifest。
+
+### Issue 組織規則
+
+- 一篇文章或一個使用單位對應一個 Issue；同篇文章有多張圖片時不另外拆 Issue。
+- 標題固定使用 `YYYY-MM-DD | 專案 | 內容識別碼 | 資產集合類型`，例如 `2026-08-30 | notes.tw-syuan.com | article-template | article-assets`。
+- 標題日期是 Issue 首次建立日。補圖、換圖或新增尺寸版本時保留原日期，實際異動時間由 comment 與 manifest 記錄。
+- Issue 本文至少包含 Target project、Content identifier、Asset index、檔案 metadata 與公開性確認。
+- 第一張資產可直接記在 Issue 本文；後續每張邏輯圖片或同一圖片的尺寸／格式版本各使用一則 comment，並在 Asset index 使用穩定的 Asset ID 連結。
+- Asset ID 描述用途與內容，例如 `article-template/rocket-example`；不可使用會隨排序改變的 `image-01` 或無法辨識版本的 `final`、`new`。
+- 跨文章共用的 Logo、頭像或圖示另建 `shared-assets` Issue，不歸屬任一文章。
+- 編輯期間維持 Open；文章發布並完成附件驗證後可 Close。日後新增或替換資產時 Reopen，完成後再 Close。
 
 ## 公開網址與檔名
 
@@ -102,7 +113,7 @@ GitHub Issue 附件的回應標頭與 Cache 行為由 GitHub 控制，本站無�
 
 ## 權限與公開性
 
-- 只在公開 `SyuanTsai/notes-assets` 的 Issue 上傳正式文章附件，確保讀者不需登入。
+- 只在公開 `SyuanTsai/Media-Assets` 的 Issue 上傳正式文章附件，確保讀者不需登入。
 - 附件網址是公開資訊；上傳前必須移除工作信箱、Token、Cookie、個人資料、內部網址與不需要的 metadata。
 - 專用帳號只以一般公開使用者身分新增 Issue／comment，不授予 collaborator、Token 或程式碼寫入權限。
 - 本站無法設定 GitHub 附件的 CORS；一般 `<img>` 顯示可直接使用，需要 JavaScript 讀取內容或 Canvas 操作時必須逐案驗證。
@@ -112,18 +123,19 @@ GitHub Issue 附件的回應標頭與 Cache 行為由 GitHub 控制，本站無�
 
 1. 將來源檔案最佳化並計算 SHA-256。
 2. 使用語意化檔名保存來源，執行格式、大小、重複 hash 與敏感資料檢查。
-3. 以專用帳號在 `notes-assets` 靜態資源登錄 Issue 新增一則包含文章 slug、檔名與 SHA-256 的 comment。
-4. 將檔案貼上或拖曳至 comment，等待 GitHub 完成上傳並取得完整匿名化網址。
-5. 更新 `docs/static-assets-manifest.yml`，再把相同網址加入文章。
-6. 驗證未登入可存取、HTTPS、Content-Type、桌機／手機、深色模式、替代文字與版面。
-7. Issue comment 與 manifest 一起提交 Review；不得只保存匿名化網址而沒有來源對應。
+3. 尋找該內容既有的 Issue；沒有時依標準標題建立，並在本文加入 Target project、Content identifier 與 Asset index。
+4. 第一筆資產可記在 Issue 本文；後續資產在各自的 comment 記錄 Asset ID、語意化檔名、SHA-256、尺寸與替代文字，再貼上或拖曳檔案。
+5. 等待 GitHub 完成上傳並取得完整匿名化網址，將 Asset ID 與紀錄位置補回 Issue 的 Asset index。
+6. 更新 `docs/static-assets-manifest.yml`，再把相同網址加入文章。
+7. 驗證未登入可存取、HTTPS、Content-Type、下載內容 SHA-256、桌機／手機、深色模式、替代文字與版面。
+8. Issue、manifest 與文章一起提交 Review；不得只保存匿名化網址而沒有來源對應。發布驗證完成後可關閉 Issue。
 
 ## 備份、故障與遷移
 
 ### 備份
 
 - Git Repository 保存所有已發布來源及 manifest，GitHub Issue 附件只視為傳遞副本。
-- manifest 至少記錄文章 slug、語意化名稱、GitHub URL、SHA-256、大小、Content-Type、來源檔路徑與登錄 Issue comment。
+- manifest 至少記錄內容識別碼、Asset ID、語意化名稱、GitHub URL、SHA-256、大小、Content-Type、原始寬高、替代文字，以及所屬 Issue 與本文／comment 位置。
 - 每月抽查附件 URL 是否仍可匿名存取，並比對下載內容的 SHA-256。
 - 大型原始素材若不適合進入 Git，必須先保存於另一個受控備份位置，才可發布最佳化版本。
 
@@ -143,14 +155,14 @@ GitHub Issue 附件的回應標頭與 Cache 行為由 GitHub 控制，本站無�
 
 ## 最小可行驗證
 
-1. 主帳號建立公開 `SyuanTsai/notes-assets` 並開啟 Issues。
+1. 主帳號建立公開 `SyuanTsai/Media-Assets` 並開啟 Issues。
 2. 擁有者手動建立專用 GitHub machine user、啟用 2FA，並在雲端瀏覽器登入一次。
-3. 專用帳號在 `notes-assets` 建立靜態資源登錄 Issue，不接受 collaborator 邀請。
-4. 將既有 `request-flow.svg` 上傳為 Issue 附件並取得匿名化網址。
+3. 專用帳號在 `Media-Assets` 建立 `article-template` 資產 Issue，不接受 collaborator 邀請。
+4. 將火箭 PNG 以 `article-template/rocket-example` 登錄並取得匿名化網址。
 5. 建立第一筆 `docs/static-assets-manifest.yml` 紀錄。
-6. 只在未列出文章範本替換這張測試圖片，不修改兩篇正式文章。
+6. 只在未列出文章範本加入這張測試圖片，不修改兩篇正式文章。
 7. 驗證未登入存取、HTTPS、Content-Type、桌機／手機顯示、深色模式、替代文字與版面。
-8. 從 Repository 來源重新計算 SHA-256，確認與 manifest 及下載附件一致。
+8. 從原始來源重新計算 SHA-256，確認與 manifest 及下載附件一致。
 9. MVP 通過後，再決定新文章開始採用的日期；既有 `/assets/` 網址不強制搬遷。
 
 ## 官方資料
