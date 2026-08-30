@@ -173,13 +173,14 @@ class ArticleValidationTests(unittest.TestCase):
         guide = (ROOT / "docs/article-authoring.md").read_text(encoding="utf-8")
         post_layout = (ROOT / "_layouts/post.html").read_text(encoding="utf-8")
 
-        self.assertIn(".post-content > p:not(:has(img))", styles)
-        self.assertIn("max-width: 52em", styles)
-        self.assertIn("text-wrap: pretty", styles)
+        self.assertNotIn(".post-content > p:not(:has(img))", styles)
+        self.assertNotIn("max-width: 52em", styles)
+        self.assertNotIn("text-wrap: pretty", styles)
         self.assertRegex(styles, r"\.post-content a\.footnote\s*\{[^}]*display: inline;")
         self.assertRegex(config, r"kramdown:\s+hard_wrap: false")
         self.assertIn("不要依固定字數斷行", template)
         self.assertIn("### 分段與自然換行", guide)
+        self.assertIn("依文章內容欄寬度自然換行", guide)
         self.assertIn("&nbsp;<sup id=\"fnref", post_layout)
 
     def test_toc_script_reveals_preallocated_sidebar(self) -> None:
