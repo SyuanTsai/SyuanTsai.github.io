@@ -73,3 +73,4 @@ using var response = await httpClient.SendAsync(request, cancellationToken);
 | 日期 | 更新內容 |
 | --- | --- |
 | 2026-08-30 | 初版發布 |
+{: .update-history}

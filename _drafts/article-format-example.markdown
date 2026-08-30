@@ -67,3 +67,4 @@ var elapsed = Stopwatch.GetElapsedTime(startedAt);
 | --- | --- |
 | 2026-08-29 | 初版建立 |
 | 2026-08-30 | 加入句尾引用、參考資料定位與更新紀錄 |
+{: .update-history}

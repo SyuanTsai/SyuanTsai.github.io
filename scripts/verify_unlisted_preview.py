@@ -19,6 +19,7 @@ class PreviewHtmlParser(HTMLParser):
         self.footnote_links = 0
         self.reverse_footnote_links = 0
         self.has_footnote_list = False
+        self.has_update_history_table = False
         self._in_h1 = False
         self.h1_parts: list[str] = []
 
@@ -33,6 +34,8 @@ class PreviewHtmlParser(HTMLParser):
             self.reverse_footnote_links += 1
         if "footnotes" in classes or attributes.get("role") == "doc-endnotes":
             self.has_footnote_list = True
+        if tag == "table" and "update-history" in classes:
+            self.has_update_history_table = True
         if tag == "h1":
             self._in_h1 = True
 
@@ -79,6 +82,8 @@ def verify(site: Path) -> list[str]:
         errors.append("預覽頁缺少產生後的參考資料清單")
     if parser.reverse_footnote_links < 3:
         errors.append("預覽頁參考資料缺少返回原文連結")
+    if not parser.has_update_history_table:
+        errors.append("預覽頁更新紀錄表格必須具有 `update-history` class")
 
     footnotes = re.search(
         r"<(?:div|ol)\b[^>]*(?:class=[\"'][^\"']*\bfootnotes\b|role=[\"']doc-endnotes[\"'])",
