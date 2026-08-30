@@ -179,7 +179,7 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertRegex(config, r"kramdown:\s+hard_wrap: false")
         self.assertIn("不要依固定字數斷行", template)
         self.assertIn("### 分段與自然換行", guide)
-        self.assertIn("&#8288;<sup id=\"fnref", post_layout)
+        self.assertIn("&nbsp;<sup id=\"fnref", post_layout)
 
     def test_toc_script_reveals_preallocated_sidebar(self) -> None:
         include = (ROOT / "_includes/post-toc.html").read_text(encoding="utf-8")
@@ -450,9 +450,9 @@ class ArticleValidationTests(unittest.TestCase):
                   </nav>
                   <script>toc.classList.remove("post-toc--pending");</script>
                   <p>
-                    Claim&#8288;<sup id="fnref:a"><a class="footnote" href="#fn:a">1</a></sup>
-                    &#8288;<sup id="fnref:b"><a class="footnote" href="#fn:b">2</a></sup>
-                    &#8288;<sup id="fnref:c"><a class="footnote" href="#fn:c">3</a></sup>
+                    Claim&nbsp;<sup id="fnref:a"><a class="footnote" href="#fn:a">1</a></sup>
+                    &nbsp;<sup id="fnref:b"><a class="footnote" href="#fn:b">2</a></sup>
+                    &nbsp;<sup id="fnref:c"><a class="footnote" href="#fn:c">3</a></sup>
                   </p>
                   <h2>參考資料</h2>
                   <div class="footnotes" role="doc-endnotes">
