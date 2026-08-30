@@ -1022,14 +1022,11 @@ select {
 }
 
 .post-content a.footnote {
-  display: inline-flex;
-  min-width: 1.25rem;
-  height: 1.25rem;
-  align-items: center;
-  justify-content: center;
+  display: inline;
   box-sizing: border-box;
+  box-decoration-break: clone;
   margin-inline-start: 0;
-  padding: 0 0.28rem;
+  padding: 0.36em 0.62em;
   border-radius: 999px;
   color: var(--syuan-text);
   background: var(--syuan-border-strong);
@@ -1038,6 +1035,8 @@ select {
   line-height: 1;
   text-decoration: none;
   vertical-align: super;
+  white-space: nowrap;
+  -webkit-box-decoration-break: clone;
 }
 
 .post-content a.footnote:visited {
