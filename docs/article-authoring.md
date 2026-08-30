@@ -173,13 +173,18 @@ using var response = await httpClient.SendAsync(request);
 
 ### 圖片
 
-圖片放在 `assets/images/posts/<slug>/`，必須提供能說明資訊的替代文字，並填入圖片的原始像素寬高。瀏覽器會在圖片下載前依這組尺寸預留空間，避免內容載入時發生版面位移；CSS 仍會讓圖片在窄螢幕等比例縮小：
+文章內文圖片優先上傳至公開 GitHub 靜態資源登錄 Issue，使用 GitHub 產生的完整匿名化附件網址。上傳前先以語意化檔名保存來源並計算 SHA-256，再依 `docs/static-assets.md` 更新 manifest。既有文章與文章代表圖片仍可使用 `/assets/images/posts/<slug>/`，不需要為了新規則搬移。
 
-圖片、PDF 與附件的長期儲存、檔名、格式、Cache、備份及遷移評估記錄於 `docs/static-assets.md`。在 SYP-122 選定方案並完成外部資源 MVP 前，正式文章仍使用既有站內 `/assets/` 路徑，不提前切換網址。
+圖片必須提供能說明資訊的替代文字，並填入原始像素寬高。瀏覽器會在下載前依這組尺寸預留空間，避免內容載入時發生版面位移；CSS 仍會讓圖片在窄螢幕等比例縮小。將下列網址替換成 GitHub 上傳完成後產生的實際網址：
 
 ```markdown
-![HTTP 請求處理流程](/assets/images/posts/debugging-http-timeouts/request-flow.svg){: width="960" height="360" }
+![HTTP 請求處理流程](https://github.com/user-attachments/assets/<github-generated-uuid>){: width="960" height="360" }
 ```
+
+- 公開 Repository 的附件不需登入即可讀取；因此禁止上傳任何敏感或內部資料。
+- GitHub 的圖片與 GIF 單檔上限為 10 MB；本站仍以最佳化後 500 KB 內為原則。
+- GitHub 附件沒有自訂檔名、Cache 或 CORS 控制；圖片內容改變時必須重新上傳並更換網址。
+- 不自行拼接附件網址，也不可只在文章保存網址而漏掉 manifest 紀錄。
 
 ### 連結、句尾引用與引用區塊
 
