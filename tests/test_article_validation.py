@@ -498,8 +498,9 @@ class ArticleValidationTests(unittest.TestCase):
                   </div>
                   <h2>更新紀錄</h2>
                   <table class="update-history"><tbody><tr><td>2026-08-30</td><td>初版發布</td></tr></tbody></table>
-                  <img src="/assets/images/posts/article-format-example/request-flow.svg"
-                       alt="HTTP 請求處理流程" width="960" height="360">
+                  <img src="https://github.com/user-attachments/assets/becf7d8d-5487-4f6c-b55e-23b80312e508"
+                       alt="紫色火箭向右上方升空，尾部帶有橘色火焰"
+                       width="120" height="120" loading="lazy">
                 </body></html>
                 """,
                 encoding="utf-8",
