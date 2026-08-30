@@ -173,18 +173,29 @@ using var response = await httpClient.SendAsync(request);
 
 ### 圖片
 
-文章內文圖片優先上傳至公開 GitHub 靜態資源登錄 Issue，使用 GitHub 產生的完整匿名化附件網址。上傳前先以語意化檔名保存來源並計算 SHA-256，再依 `docs/static-assets.md` 更新 manifest。既有文章與文章代表圖片仍可使用 `/assets/images/posts/<slug>/`，不需要為了新規則搬移。
+文章內文圖片優先上傳至公開 `SyuanTsai/Media-Assets` Issue，使用 GitHub 產生的完整匿名化附件網址。上傳前先以語意化檔名保存來源並計算 SHA-256，再依 `docs/static-assets.md` 更新 manifest。既有文章與文章代表圖片仍可使用 `/assets/images/posts/<slug>/`，不需要為了新規則搬移。
+
+#### Issue 與多圖管理
+
+- 一篇文章或一個使用單位只建立一個 Issue，不因圖片數量增加而拆成多個 Issue。
+- Issue 標題使用 `YYYY-MM-DD | 專案 | 內容識別碼 | article-assets`；日期代表首次建立日，後續補圖或換圖不更改標題日期。
+- Issue 本文保存 Target project、Content identifier、Asset index 與公開性確認。第一筆資產可直接記在本文；後續每張邏輯圖片或同圖的尺寸／格式版本各使用一則 comment。
+- 每張圖使用穩定且可辨識的 Asset ID，例如 `article-template/rocket-example`，不可使用 `image-01`、`new` 或 `final`。
+- 共用 Logo、作者頭像或跨文章圖示不掛在個別文章 Issue，另建 `shared-assets` Issue。
+- 文章發布並驗證完成後可關閉 Issue；後續補圖時重新開啟，完成後再關閉。
+
+目前的實際範例為 [Media-Assets Issue #1](https://github.com/SyuanTsai/Media-Assets/issues/1)，標題是 `2026-08-30 | notes.tw-syuan.com | article-template | article-assets`。
 
 圖片必須提供能說明資訊的替代文字，並填入原始像素寬高。瀏覽器會在下載前依這組尺寸預留空間，避免內容載入時發生版面位移；CSS 仍會讓圖片在窄螢幕等比例縮小。將下列網址替換成 GitHub 上傳完成後產生的實際網址：
 
 ```markdown
-![HTTP 請求處理流程](https://github.com/user-attachments/assets/<github-generated-uuid>){: width="960" height="360" }
+![紫色火箭向右上方升空，尾部帶有橘色火焰](https://github.com/user-attachments/assets/<github-generated-uuid>){: width="120" height="120" loading="lazy" }
 ```
 
 - 公開 Repository 的附件不需登入即可讀取；因此禁止上傳任何敏感或內部資料。
 - GitHub 的圖片與 GIF 單檔上限為 10 MB；本站仍以最佳化後 500 KB 內為原則。
 - GitHub 附件沒有自訂檔名、Cache 或 CORS 控制；圖片內容改變時必須重新上傳並更換網址。
-- 不自行拼接附件網址，也不可只在文章保存網址而漏掉 manifest 紀錄。
+- 不自行拼接附件網址，也不可只在文章保存網址而漏掉 Issue 索引與 manifest 紀錄。
 
 ### 連結、句尾引用與引用區塊
 
