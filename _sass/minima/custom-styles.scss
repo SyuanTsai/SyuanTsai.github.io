@@ -899,7 +899,7 @@ select {
 .post-content ul,
 .post-content ol,
 .post-content blockquote,
-.page-content table,
+.page-content .table-scroll,
 .post-content pre {
   margin-top: 1.15em;
   margin-bottom: 1.15em;
@@ -952,11 +952,19 @@ select {
   overflow-wrap: anywhere;
 }
 
-.page-content table {
-  display: block;
+.page-content .table-scroll {
+  box-sizing: border-box;
   width: 100%;
   max-width: 100%;
   overflow-x: auto;
+}
+
+.page-content table {
+  display: table;
+  width: 100%;
+  min-width: max-content;
+  max-width: none;
+  margin: 0;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -964,6 +972,7 @@ select {
 .page-content table.update-history {
   display: table;
   width: 100%;
+  min-width: 100%;
   table-layout: fixed;
 }
 

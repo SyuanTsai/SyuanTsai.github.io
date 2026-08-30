@@ -186,16 +186,27 @@ class ArticleValidationTests(unittest.TestCase):
     def test_all_content_tables_fill_the_content_column(self) -> None:
         styles = (ROOT / "_sass/minima/custom-styles.scss").read_text(encoding="utf-8")
         guide = (ROOT / "docs/article-authoring.md").read_text(encoding="utf-8")
+        base_layout = (ROOT / "_layouts/base.html").read_text(encoding="utf-8")
 
         self.assertRegex(
             styles,
-            r"\.page-content table\s*\{[^}]*display: block;[^}]*width: 100%;"
+            r"\.page-content \.table-scroll\s*\{[^}]*width: 100%;"
             r"[^}]*max-width: 100%;[^}]*overflow-x: auto;",
+        )
+        self.assertRegex(
+            styles,
+            r"\.page-content table\s*\{[^}]*display: table;[^}]*width: 100%;"
+            r"[^}]*min-width: max-content;[^}]*max-width: none;",
         )
         self.assertNotRegex(
             styles,
-            r"\.page-content table\s*\{[^}]*width: max-content;",
+            r"(?m)^  width: max-content;$",
         )
+        self.assertIn(
+            "replace: '<table', '<div class=\"table-scroll\"><table'",
+            base_layout,
+        )
+        self.assertIn("replace: '</table>', '</table></div>'", base_layout)
         self.assertIn("所有表格都會自動填滿內容欄", guide)
 
     def test_toc_script_reveals_preallocated_sidebar(self) -> None:
