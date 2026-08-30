@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "出版文章範本預覽"
+title: "初版文章範本預覽"
 date: 2026-08-30
 last_modified_at: 2026-08-30
 description: "以實際文章版型預覽起頭、自由內容章節、句尾引用、參考資料與更新紀錄。"

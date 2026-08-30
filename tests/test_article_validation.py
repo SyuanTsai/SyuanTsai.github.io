@@ -480,7 +480,7 @@ class ArticleValidationTests(unittest.TestCase):
                 <html><head>
                   <meta name="robots" content="noindex, nofollow, noarchive">
                 </head><body>
-                  <h1>出版文章範本預覽</h1>
+                  <h1>初版文章範本預覽</h1>
                   <nav class="post-toc post-toc--pending" data-post-toc>
                     <h2>本文目錄</h2><ol></ol>
                   </nav>
