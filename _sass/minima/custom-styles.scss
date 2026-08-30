@@ -261,6 +261,10 @@ select {
   max-width: 1440px;
 }
 
+.page-content > .reading-shell > .post {
+  max-width: none;
+}
+
 .home-page {
   width: 100%;
 }
@@ -800,7 +804,7 @@ select {
 
 .post-body {
   display: grid;
-  grid-template-columns: minmax(160px, 200px) minmax(0, 1fr);
+  grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr);
   align-items: start;
   gap: clamp(28px, 5vw, 58px);
   margin-top: 34px;
