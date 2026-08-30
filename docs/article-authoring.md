@@ -175,6 +175,8 @@ using var response = await httpClient.SendAsync(request);
 
 圖片放在 `assets/images/posts/<slug>/`，必須提供能說明資訊的替代文字，並填入圖片的原始像素寬高。瀏覽器會在圖片下載前依這組尺寸預留空間，避免內容載入時發生版面位移；CSS 仍會讓圖片在窄螢幕等比例縮小：
 
+圖片、PDF 與附件的長期儲存、檔名、格式、Cache、備份及遷移規則記錄於 `docs/static-assets.md`。在 SYP-122 的外部資源 MVP 驗證完成前，正式文章仍使用既有站內 `/assets/` 路徑，不提前切換網址。
+
 ```markdown
 ![HTTP 請求處理流程](/assets/images/posts/debugging-http-timeouts/request-flow.svg){: width="960" height="360" }
 ```
