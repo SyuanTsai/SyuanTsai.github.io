@@ -60,7 +60,9 @@ using var response = await httpClient.SendAsync(request, cancellationToken);
 
 ### 圖片與媒體資產
 
-一篇文章或一個使用單位對應 `Media-Assets` 的一個公開 Issue，標題固定使用 `YYYY-MM-DD | 專案 | 內容識別碼 | 資產集合類型`。同篇文章有多張圖片時，使用穩定且可辨識的 Asset ID 建立索引；第一筆資產可記在 Issue 本文，後續每張邏輯圖片或同圖尺寸版本各用一則 comment 管理。
+一篇文章或一個使用單位對應 `Media-Assets` 的一個公開 Issue。Issue 標題固定使用 `YYYY-MM-DD | 專案 | 內容識別碼 | 資產集合類型`。
+
+同篇文章有多張圖片時，使用穩定且可辨識的 Asset ID，並<span class="keep-phrase">建立資產索引</span>。第一筆資產可記在 Issue 本文，後續每張邏輯圖片或同圖尺寸版本各用一則 comment 管理。
 
 圖片引用必須使用 GitHub 產生的完整附件網址、能表達圖片資訊的替代文字，以及原始像素寬高。非首屏關鍵圖片加入 lazy loading；網站 CSS 會在窄螢幕依比例縮小，不需要手動建立換行。
 
@@ -85,4 +87,5 @@ using var response = await httpClient.SendAsync(request, cancellationToken);
 | --- | --- |
 | 2026-08-30 | 初版發布 |
 | 2026-08-30 | 加入 GitHub Issue 圖片資產規範與實際附件範例 |
+| 2026-08-30 | 修正繁體中文詞組與標點的自然斷行 |
 {: .update-history}

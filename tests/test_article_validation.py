@@ -176,11 +176,19 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertNotIn(".post-content > p:not(:has(img))", styles)
         self.assertNotIn("max-width: 52em", styles)
         self.assertNotIn("text-wrap: pretty", styles)
+        self.assertRegex(styles, r"\.post-content\s*\{[^}]*line-break: strict;")
+        self.assertIn("@supports (word-break: auto-phrase)", styles)
+        self.assertRegex(
+            styles,
+            r"\.post-content \.keep-phrase\s*\{[^}]*white-space: nowrap;",
+        )
         self.assertRegex(styles, r"\.post-content a\.footnote\s*\{[^}]*display: inline;")
         self.assertRegex(config, r"kramdown:\s+hard_wrap: false")
         self.assertIn("不要依固定字數斷行", template)
+        self.assertIn('class="keep-phrase"', template)
         self.assertIn("### 分段與自然換行", guide)
         self.assertIn("依文章內容欄寬度自然換行", guide)
+        self.assertIn('class="keep-phrase"', guide)
         self.assertIn("&nbsp;<sup id=\"fnref", post_layout)
 
     def test_all_content_tables_fill_the_content_column(self) -> None:
@@ -490,6 +498,7 @@ class ArticleValidationTests(unittest.TestCase):
                     &nbsp;<sup id="fnref:b"><a class="footnote" href="#fn:b">2</a></sup>
                     &nbsp;<sup id="fnref:c"><a class="footnote" href="#fn:c">3</a></sup>
                   </p>
+                  <p>並<span class="keep-phrase">建立資產索引</span>。</p>
                   <h2>參考資料</h2>
                   <div class="footnotes" role="doc-endnotes">
                     <a class="reversefootnote" href="#fnref:a">back</a>

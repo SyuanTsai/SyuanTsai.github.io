@@ -863,7 +863,18 @@ select {
 .post-content {
   min-width: 0;
   font-size: 1rem;
+  line-break: strict;
   line-height: 1.82;
+}
+
+@supports (word-break: auto-phrase) {
+  .post-content :where(p, li, blockquote) {
+    word-break: auto-phrase;
+  }
+}
+
+.post-content .keep-phrase {
+  white-space: nowrap;
 }
 
 .post-toc[hidden] + .post-content {
