@@ -13,6 +13,8 @@
 
 完整元素範例位於 `_drafts/article-format-example.markdown`。使用 `bundle exec jekyll serve --drafts` 可在本機預覽；標準建置與 GitHub Pages 不會發布 `_drafts` 內容。
 
+正式版型的未列出預覽來源是 `article-template-preview.markdown`，固定網址為 `/preview/article-template/`。它不屬於 posts，不會出現在首頁、文章列表或導覽，並輸出 `noindex, nofollow, noarchive`。這只是未列出網址，不是權限保護；任何知道網址的人仍可直接開啟。
+
 ## 檔名、Slug 與 Permalink
 
 ### 已發布文章
@@ -61,6 +63,8 @@ _posts/2026-08-29-debugging-http-timeouts.markdown
 
 `layout` 已由 `_config.yml` 對所有 posts 預設為 `post`，新文章不需要重複設定。
 
+新版文章範本會先讓 `last_modified_at` 與初版日期相同；日後更新時，必須同步修改成「更新紀錄」最新一列的日期。
+
 建議格式：
 
 ```yaml
@@ -76,6 +80,48 @@ image:
   path: /assets/images/posts/debugging-http-timeouts/request-flow.svg
   alt: "HTTP 請求依序通過 Client、API 與下游服務"
 ---
+```
+
+## 文章內文結構
+
+文章固定使用以下四個部分：
+
+1. 起頭：固定需要，但不顯示「起頭」標題。用一到三段文字交代問題情境、背景或撰寫動機，以及讀者能取得什麼。
+2. 主要內容：依主題自由組合，H2 必須描述實際目的，不使用「內容」作為標題。
+3. 參考資料：固定為倒數第二個 H2。需要來源支持的敘述直接在句尾加入引用。
+4. 更新紀錄：固定為最後一個 H2；初版也要保留一列紀錄。
+
+主要內容可以依文章性質選用以下模組，不要求每篇全部具備：
+
+- 適用範圍與前置條件。
+- 核心概念或根因分析。
+- 實作方式與程式碼。
+- 驗證方式與結果。
+- 限制、風險與常見錯誤。
+- 替代方案與選擇理由。
+- 結論。
+
+基本骨架：
+
+```markdown
+用一到三段文字交代文章起頭，需要來源時直接加入引用。[^source-name]
+
+## 依文章主題命名的主要章節
+
+### 需要時才增加的子章節
+
+## 參考資料
+
+[^source-name]: [來源名稱](https://example.com/source) — 發布者
+
+1. 引用資料由系統自動產生
+{:footnotes}
+
+## 更新紀錄
+
+| 日期 | 更新內容 |
+| --- | --- |
+| YYYY-MM-DD | 初版發布 |
 ```
 
 ## Markdown 格式
@@ -115,13 +161,47 @@ using var response = await httpClient.SendAsync(request);
 ![HTTP 請求處理流程](/assets/images/posts/debugging-http-timeouts/request-flow.svg)
 ```
 
-### 連結與引用
+### 連結、句尾引用與引用區塊
 
 - 連結文字需描述目的，例如 `[HttpClient 官方文件](https://learn.microsoft.com/)`，不要只寫「這裡」。
-- 引用來源或需要保留原句語意時使用 `>`；一般重點不要濫用引用格式。
+- 一般來源標示使用 Kramdown footnote：在句尾放 `[^source-name]`，並在「參考資料」定義來源。
+- 同一句可連續使用 `[^source-a][^source-b]`；相同來源代號重複出現時會維持同一筆參考資料。
+- 來源代號使用可辨識的英文 kebab-case，不手動使用顯示編號；畫面編號由第一次引用順序自動產生。
+- 需要保留來源原句、規則或觀點時才使用 `>`；一般重點不要濫用引用區塊。
+
+```markdown
+SQL Server 最多允許兩個 `WHEN MATCHED`。[^microsoft-merge]
+
+## 參考資料
+
+[^microsoft-merge]: [MERGE (Transact-SQL)](https://learn.microsoft.com/sql/t-sql/statements/merge-transact-sql) — Microsoft Learn
+
+1. 引用資料由系統自動產生
+{:footnotes}
+```
+
+`{:footnotes}` 會把引用清單固定在「參考資料」內；若省略，Kramdown 會把引用清單移到整份文件最後，導致它出現在「更新紀錄」後方。
+
+引用區塊範例：
 
 ```markdown
 > Timeout 是結果；必須再確認限制發生在 Client、API 或下游服務。
+```
+
+### 更新紀錄
+
+- 固定放在文章最後一個 H2。
+- 第一列記錄初版發布，日期與 `date` 相同。
+- 後續只記錄對讀者有意義的內容變更，不記錄純排版或拼字修正。
+- `last_modified_at` 必須等於最新一列日期。
+
+```markdown
+## 更新紀錄
+
+| 日期 | 更新內容 |
+| --- | --- |
+| 2026-08-29 | 初版發布 |
+| 2026-08-30 | 補充限制與官方文件引用 |
 ```
 
 ### 提示與警告
@@ -156,6 +236,9 @@ using var response = await httpClient.SendAsync(request);
 - 必要 Front Matter 是否存在且非空。
 - categories、tags、draft、image 與 permalink 格式。
 - 本文是否誤用 H1、程式碼區塊是否缺少語言、圖片是否缺少替代文字。
+- 新範本與完整元素範例是否有起頭，以及「參考資料」與「更新紀錄」是否位於最後兩個 H2。
+- 句尾引用是否都有來源定義，引用清單是否固定在「參考資料」。
+- 更新紀錄是否包含初版日期，且最新日期是否與 `last_modified_at` 相同。
 - 完整元素範例是否涵蓋程式碼、表格、圖片、連結、引用與提示區塊。
 
 檢查失敗時會列出檔名與明確原因並回傳非零結束碼。CI 會在 Jekyll 建置後再執行 `scripts/verify_generated_seo.py`，確認每篇已發布文章的 Title、Description 與 Canonical URL 都存在且符合 Front Matter。

@@ -26,6 +26,13 @@ NESTED_FIELD_RE = re.compile(r"^[ \t]+([A-Za-z_][A-Za-z0-9_-]*):(?:[ \t]*(.*))?$
 FENCE_RE = re.compile(r"^\s*```(?P<language>[^`]*)$")
 MARKDOWN_IMAGE_RE = re.compile(r"!\[(?P<alt>[^\]]*)\]\((?P<target>[^)]+)\)")
 MARKDOWN_LINK_RE = re.compile(r"(?<!!)\[[^\]]+\]\([^)]+\)")
+FOOTNOTE_MARKER_RE = re.compile(r"\[\^(?P<name>[A-Za-z0-9][A-Za-z0-9-]*)\]")
+FOOTNOTE_DEFINITION_RE = re.compile(
+    r"^\s*\[\^(?P<name>[A-Za-z0-9][A-Za-z0-9-]*)\]:\s*(?P<content>.+)$"
+)
+UPDATE_ROW_RE = re.compile(
+    r"^\s*\|\s*(?P<date>\d{4}-\d{2}-\d{2}|YYYY-MM-DD)\s*\|\s*(?P<content>[^|]+?)\s*\|\s*$"
+)
 
 
 class FrontMatterError(ValueError):
@@ -194,6 +201,126 @@ def _validate_body(document: Document, errors: list[str]) -> None:
             errors.append("HTML `<img>` 必須提供非空的 `alt` 屬性")
 
 
+def _h2_sections(body: str) -> list[tuple[str, int]]:
+    sections: list[tuple[str, int]] = []
+    in_fence = False
+    for line_number, line in enumerate(body.splitlines()):
+        if FENCE_RE.match(line):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        match = re.match(r"^\s*##(?!#)\s+(.+?)\s*$", line)
+        if match:
+            sections.append((match.group(1).strip(), line_number))
+    return sections
+
+
+def validate_article_structure(
+    document: Document,
+    *,
+    allow_placeholders: bool = False,
+    require_citation: bool = False,
+) -> list[str]:
+    """Validate the reviewed article body contract for new template artifacts."""
+
+    errors: list[str] = []
+    lines = document.body.splitlines()
+    sections = _h2_sections(document.body)
+
+    if not sections:
+        return ["文章內文至少需要一個 H2"]
+
+    first_heading_line = sections[0][1]
+    opening = "\n".join(lines[:first_heading_line])
+    opening = re.sub(r"<!--.*?-->", "", opening, flags=re.DOTALL)
+    opening = re.sub(r"<[^>]+>", "", opening).strip()
+    if not opening:
+        errors.append("第一個 H2 前必須有不顯示標題的起頭文字")
+
+    names = [name for name, _ in sections]
+    if any(re.sub(r"[`*_]", "", name).strip() == "內容" for name in names):
+        errors.append("主要章節不可使用無法辨識目的的 `內容` 作為標題")
+
+    if names.count("參考資料") != 1:
+        errors.append("文章必須且只能有一個 `## 參考資料`")
+    if names.count("更新紀錄") != 1:
+        errors.append("文章必須且只能有一個 `## 更新紀錄`")
+
+    reference_line = next((line for name, line in sections if name == "參考資料"), None)
+    update_line = next((line for name, line in sections if name == "更新紀錄"), None)
+    if len(names) < 2 or names[-2:] != ["參考資料", "更新紀錄"]:
+        errors.append("`參考資料` 與 `更新紀錄` 必須依序為最後兩個 H2")
+
+    definitions: dict[str, int] = {}
+    markers: set[str] = set()
+    for line_number, line in enumerate(lines):
+        definition = FOOTNOTE_DEFINITION_RE.match(line)
+        if definition:
+            name = definition.group("name")
+            if name in definitions:
+                errors.append(f"引用來源代號 `[^{name}]` 重複定義")
+            definitions[name] = line_number
+            continue
+        markers.update(match.group("name") for match in FOOTNOTE_MARKER_RE.finditer(line))
+
+    if require_citation and not markers:
+        errors.append("文章範例至少需要一個句尾引用")
+
+    for name in sorted(markers - definitions.keys()):
+        errors.append(f"句尾引用 `[^{name}]` 缺少來源定義")
+    for name in sorted(definitions.keys() - markers):
+        errors.append(f"來源定義 `[^{name}]` 沒有被內文引用")
+
+    placeholder_lines = [
+        index
+        for index, line in enumerate(lines)
+        if line.strip() == "{:footnotes}"
+        and index > 0
+        and re.match(r"^\s*(?:\d+\.|[-*+])\s+", lines[index - 1])
+    ]
+    if markers and len(placeholder_lines) != 1:
+        errors.append("使用句尾引用時，參考資料必須包含一個 `{:footnotes}` 引用清單定位")
+
+    if reference_line is not None and update_line is not None and reference_line < update_line:
+        for name, line_number in definitions.items():
+            if not reference_line < line_number < update_line:
+                errors.append(f"來源定義 `[^{name}]` 必須放在 `參考資料` 章節內")
+        for line_number in placeholder_lines:
+            if not reference_line < line_number < update_line:
+                errors.append("`{:footnotes}` 必須放在 `參考資料` 章節內")
+
+    history_rows: list[tuple[str, str]] = []
+    if update_line is not None:
+        for line in lines[update_line + 1 :]:
+            row = UPDATE_ROW_RE.match(line)
+            if row:
+                history_rows.append((row.group("date"), row.group("content").strip()))
+    if not history_rows:
+        errors.append("`更新紀錄` 必須包含日期與更新內容表格，初版也要保留一列")
+
+    if "last_modified_at" not in document.fields or not _is_present(document.fields["last_modified_at"]):
+        errors.append("新版文章結構必須設定 `last_modified_at`")
+
+    if not allow_placeholders and history_rows:
+        parsed_history_dates: list[date] = []
+        for history_date, _ in history_rows:
+            try:
+                parsed_history_dates.append(date.fromisoformat(history_date))
+            except ValueError:
+                errors.append(f"更新紀錄日期不是有效日期：{history_date}")
+
+        publish_date = str(document.fields.get("date", "")).strip()
+        if publish_date and publish_date not in {row_date for row_date, _ in history_rows}:
+            errors.append("更新紀錄必須包含與 Front Matter `date` 相同的初版日期")
+
+        modified_date = str(document.fields.get("last_modified_at", "")).strip()
+        if parsed_history_dates and modified_date != max(parsed_history_dates).isoformat():
+            errors.append("`last_modified_at` 必須與更新紀錄的最新日期相同")
+
+    return errors
+
+
 def validate_document(document: Document, kind: str, root: Path) -> list[str]:
     errors: list[str] = []
     fields = document.fields
@@ -311,6 +438,7 @@ def validate_repository(root: Path) -> tuple[list[str], int, int]:
         root / "docs/article-authoring.md",
         root / "_templates/post.markdown",
         root / "_drafts/article-format-example.markdown",
+        root / "article-template-preview.markdown",
     )
     for required_file in required_files:
         if not required_file.is_file():
@@ -347,6 +475,17 @@ def validate_repository(root: Path) -> tuple[list[str], int, int]:
                     errors.append(f"{template_path.relative_to(root)}: 範本缺少 `{field}`")
             if re.search(r"^\s*#\s+", template.body, flags=re.MULTILINE):
                 errors.append(f"{template_path.relative_to(root)}: 範本本文不可包含 H1")
+            errors.extend(
+                _format_errors(
+                    template_path,
+                    root,
+                    validate_article_structure(
+                        template,
+                        allow_placeholders=True,
+                        require_citation=True,
+                    ),
+                )
+            )
         except FrontMatterError as error:
             errors.append(f"{template_path.relative_to(root)}: {error}")
 
@@ -355,8 +494,31 @@ def validate_repository(root: Path) -> tuple[list[str], int, int]:
         try:
             example = parse_front_matter(example_path)
             errors.extend(_format_errors(example_path, root, validate_example(example)))
+            errors.extend(
+                _format_errors(
+                    example_path,
+                    root,
+                    validate_article_structure(example, require_citation=True),
+                )
+            )
         except FrontMatterError:
             pass
+
+    preview_path = root / "article-template-preview.markdown"
+    if preview_path.is_file():
+        try:
+            preview = parse_front_matter(preview_path)
+            preview_errors = validate_document(preview, "preview", root)
+            preview_errors.extend(validate_article_structure(preview, require_citation=True))
+            if preview.fields.get("permalink") != "/preview/article-template/":
+                preview_errors.append("未列出預覽必須固定使用 `/preview/article-template/`")
+            if preview.fields.get("unlisted") is not True:
+                preview_errors.append("未列出預覽必須設定 `unlisted: true`")
+            if preview.fields.get("sitemap") is not False:
+                preview_errors.append("未列出預覽必須設定 `sitemap: false`")
+            errors.extend(_format_errors(preview_path, root, preview_errors))
+        except FrontMatterError as error:
+            errors.append(f"{preview_path.relative_to(root)}: {error}")
 
     return errors, len(post_paths), len(draft_paths)
 
@@ -394,7 +556,10 @@ def main(argv: list[str] | None = None) -> int:
             print(f"- {error}", file=sys.stderr)
         return 1
 
-    print(f"Validated {post_count} published posts, {draft_count} drafts, the reusable template, and the authoring guide.")
+    print(
+        f"Validated {post_count} published posts, {draft_count} drafts, "
+        "the reusable template, the unlisted preview, and the authoring guide."
+    )
     return 0
 
 
