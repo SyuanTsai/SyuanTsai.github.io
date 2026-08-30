@@ -113,11 +113,14 @@ class ArticleValidationTests(unittest.TestCase):
 
     def test_toc_script_reveals_preallocated_sidebar(self) -> None:
         include = (ROOT / "_includes/post-toc.html").read_text(encoding="utf-8")
-        script = (ROOT / "assets/js/post-toc.js").read_text(encoding="utf-8")
+        script = (ROOT / "_includes/post-toc-script.html").read_text(encoding="utf-8")
+        layout = (ROOT / "_layouts/post.html").read_text(encoding="utf-8")
 
         self.assertIn("post-toc--pending", include)
         self.assertNotRegex(include, r"\bdata-post-toc\b[^>]*\bhidden\b")
         self.assertIn('toc.classList.remove("post-toc--pending")', script)
+        self.assertIn("include post-toc-script.html", layout)
+        self.assertNotIn("assets/js/post-toc.js", layout)
 
     def test_missing_description_returns_actionable_error(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -375,6 +378,7 @@ class ArticleValidationTests(unittest.TestCase):
                   <nav class="post-toc post-toc--pending" data-post-toc>
                     <h2>本文目錄</h2><ol></ol>
                   </nav>
+                  <script>toc.classList.remove("post-toc--pending");</script>
                   <p>
                     Claim<a class="footnote" href="#fn:a">1</a>
                     <a class="footnote" href="#fn:b">2</a>

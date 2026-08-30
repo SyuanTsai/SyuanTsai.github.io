@@ -99,6 +99,10 @@ def verify(site: Path) -> list[str]:
         errors.append("預覽頁必須且只能輸出一個文章目錄")
     elif not parser.toc_reserves_space or parser.toc_starts_hidden:
         errors.append("文章目錄必須在腳本執行前保留欄位，避免內文發生版面位移")
+    if 'classList.remove("post-toc--pending")' not in html:
+        errors.append("文章目錄程式必須內嵌於頁面，在第一次繪製前完成目錄")
+    if "/assets/js/post-toc.js" in html:
+        errors.append("文章目錄不可等待外部腳本下載後才建立")
 
     request_flow_images = [
         image
