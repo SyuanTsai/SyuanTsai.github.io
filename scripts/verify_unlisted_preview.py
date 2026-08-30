@@ -21,11 +21,15 @@ class PreviewHtmlParser(HTMLParser):
         self.has_footnote_list = False
         self.has_update_history_table = False
         self.images: list[dict[str, str]] = []
+        self.toc_count = 0
+        self.toc_reserves_space = False
+        self.toc_starts_hidden = False
         self._in_h1 = False
         self.h1_parts: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = {name: value or "" for name, value in attrs}
+        attribute_names = {name for name, _ in attrs}
         classes = set(attributes.get("class", "").split())
         if tag == "meta" and attributes.get("name", "").lower() == "robots":
             self.robots.append(attributes.get("content", ""))
@@ -39,6 +43,10 @@ class PreviewHtmlParser(HTMLParser):
             self.has_update_history_table = True
         if tag == "img":
             self.images.append(attributes)
+        if tag == "nav" and "data-post-toc" in attribute_names:
+            self.toc_count += 1
+            self.toc_reserves_space = "post-toc--pending" in classes
+            self.toc_starts_hidden = "hidden" in attribute_names
         if tag == "h1":
             self._in_h1 = True
 
@@ -87,6 +95,10 @@ def verify(site: Path) -> list[str]:
         errors.append("預覽頁參考資料缺少返回原文連結")
     if not parser.has_update_history_table:
         errors.append("預覽頁更新紀錄表格必須具有 `update-history` class")
+    if parser.toc_count != 1:
+        errors.append("預覽頁必須且只能輸出一個文章目錄")
+    elif not parser.toc_reserves_space or parser.toc_starts_hidden:
+        errors.append("文章目錄必須在腳本執行前保留欄位，避免內文發生版面位移")
 
     request_flow_images = [
         image
