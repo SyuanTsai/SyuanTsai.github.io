@@ -5,7 +5,6 @@ layout: default
 {%- assign latest_post = site.posts | first -%}
 {%- assign recent_posts = site.posts | slice: 1, 4 -%}
 {%- assign post_count = site.posts | size -%}
-{%- assign sorted_categories = site.categories | sort -%}
 
 <div class="home-page">
   <section class="home-hero" aria-labelledby="home-title">
@@ -35,12 +34,15 @@ layout: default
         </div>
       </div>
 
-      {%- if sorted_categories != empty -%}
+      {%- if site.categories != empty -%}
         <div class="home-overview__topics">
           <span class="home-overview__topics-label">主要主題</span>
           <div class="home-overview__topic-list">
-            {%- for category in sorted_categories limit: 5 -%}
-              <span>{{ category[0] | escape }}</span>
+            {%- for category in site.data.taxonomy.categories limit: 5 -%}
+              {%- assign category_posts = site.categories[category.slug] -%}
+              {%- if category_posts and category_posts != empty -%}
+                <a href="{{ '/categories/' | append: category.slug | append: '/' | relative_url }}">{{ category.name | escape }}</a>
+              {%- endif -%}
             {%- endfor -%}
           </div>
         </div>
@@ -64,7 +66,9 @@ layout: default
             </div>
 
             {%- if latest_post.categories and latest_post.categories != empty -%}
-              <span class="featured-post__category">{{ latest_post.categories | join: ' · ' | escape }}</span>
+              {%- assign latest_category_slug = latest_post.categories | first -%}
+              {%- assign latest_category = site.data.taxonomy.categories | where: "slug", latest_category_slug | first -%}
+              <span class="featured-post__category">{{ latest_category.name | default: latest_category_slug | escape }}</span>
             {%- endif -%}
 
             <h3>{{ latest_post.title | escape }}</h3>
@@ -92,7 +96,9 @@ layout: default
                   <div class="recent-post__meta">
                     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
                     {%- if post.categories and post.categories != empty -%}
-                      <span>{{ post.categories | join: ' · ' | escape }}</span>
+                      {%- assign recent_category_slug = post.categories | first -%}
+                      {%- assign recent_category = site.data.taxonomy.categories | where: "slug", recent_category_slug | first -%}
+                      <span>{{ recent_category.name | default: recent_category_slug | escape }}</span>
                     {%- endif -%}
                   </div>
                   <h3>{{ post.title | escape }}</h3>

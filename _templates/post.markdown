@@ -3,9 +3,11 @@ title: "文章標題"
 date: YYYY-MM-DD
 last_modified_at: YYYY-MM-DD
 description: "用一到兩句話說明文章解決的問題與讀者能取得的結果。"
-categories: [Category]
+categories: [category-slug]
 tags: [tag-one, tag-two]
 draft: false
+# redirect_from:
+#   - /legacy/article/url.html
 # image:
 #   path: /assets/images/posts/article-slug/cover.svg
 #   alt: "描述圖片傳達的資訊"
@@ -15,9 +17,11 @@ draft: false
 分段原則：同一核心概念通常寫成 2–4 句；主題、步驟或論述角度改變時，以空白行另起一段。
 不要依固定字數斷行，也不要用 <br>、行尾雙空白或行尾反斜線控制換行；引用代號必須跟著所支持的句子。
 只有產品名稱、專有名詞或短複合詞被錯誤拆開時，才用 <span class="keep-phrase">不可拆短語</span>；不要包住完整句子。
+categories 固定填一個小寫 kebab-case 主分類；tags 填一至五個小寫 kebab-case 標籤。
+新文章不設定 permalink；redirect_from 只用於已發布文章轉換網址。
 -->
 
-第一段交代問題情境、背景或撰寫動機。起頭固定需要，但不顯示「起頭」標題。
+第一段交代問題情境、背景或撰寫動機。起頭固定需要，但不顯示「起頭」標題，通常使用一至三段。
 
 第二段說明讀者能從本文取得什麼。需要來源支持的敘述，直接在所支持的句尾加入引用。[^source-name]
 

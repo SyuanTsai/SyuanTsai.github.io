@@ -8,9 +8,10 @@ page_class: error-page
 ---
 
 <div class="error-page__body">
-  <p>你可以回到首頁查看最新內容，或從文章列表重新尋找需要的筆記。</p>
+  <p>你可以回到首頁查看最新內容，或改用文章搜尋、分類與標籤重新尋找需要的筆記。</p>
   <nav class="error-page__actions" aria-label="找不到頁面的導覽">
     <a class="about-link about-link--primary" href="{{ '/' | relative_url }}">回到首頁</a>
     <a class="about-link" href="{{ '/articles/' | relative_url }}">瀏覽全部文章</a>
+    <a class="about-link" href="{{ '/search/' | relative_url }}">搜尋文章</a>
   </nav>
 </div>

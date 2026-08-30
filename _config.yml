@@ -44,7 +44,9 @@ minima:
 
 # Build settings
 remote_theme: jekyll/minima@4de322363fca5927e6f4012cb94f6dad69ab5e6c
-permalink: /:categories/:year/:month/:day/:title:output_ext
+# Article URLs are independent from taxonomy so renaming a category or tag does
+# not invalidate published links.
+permalink: /:year/:month/:day/:title:output_ext
 defaults:
   - scope:
       path: ""
@@ -53,6 +55,7 @@ defaults:
       layout: post
 plugins:
   - jekyll-remote-theme
+  - jekyll-redirect-from
   - jekyll-seo-tag
 
 # Treat source line breaks as soft wraps. A blank line is required to start a new paragraph.

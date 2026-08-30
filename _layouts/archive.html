@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<section class="discovery-page" aria-labelledby="archive-title">
+  <header class="page-intro">
+    <p class="page-intro__eyebrow">{{ page.eyebrow | escape }}</p>
+    <h1 id="archive-title">{{ page.title | escape }}</h1>
+    <p>{{ page.description | escape }}</p>
+  </header>
+
+  <nav class="discovery-nav" aria-label="文章探索方式">
+    <a href="{{ '/categories/' | relative_url }}">所有分類</a>
+    <a href="{{ '/tags/' | relative_url }}">所有標籤</a>
+    <a href="{{ '/archives/' | relative_url }}" aria-current="location">月份封存</a>
+    <a href="{{ '/search/' | relative_url }}">搜尋文章</a>
+  </nav>
+
+  {%- assign archive_count = 0 -%}
+  <div class="post-list">
+    {%- for post in site.posts -%}
+      {%- assign post_year = post.date | date: "%Y" -%}
+      {%- assign post_month = post.date | date: "%m" -%}
+      {%- if post_year == page.archive_year and post_month == page.archive_month -%}
+        {%- assign archive_count = archive_count | plus: 1 -%}
+        {%- include post-card.html post=post heading_level=2 -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- if archive_count == 0 -%}
+    <div class="discovery-empty" role="status">
+      <h2>這個月份沒有文章</h2>
+      <p>你可以返回封存總覽，改用其他月份瀏覽。</p>
+      <a href="{{ '/archives/' | relative_url }}">返回月份封存 <span aria-hidden="true">→</span></a>
+    </div>
+  {%- endif -%}
+</section>

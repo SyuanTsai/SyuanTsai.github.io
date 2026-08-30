@@ -2,7 +2,7 @@
 title: "技術文章完整格式範例"
 date: 2026-08-29
 description: "以 HTTP 請求診斷情境示範本站文章的標題、程式碼、表格、圖片、連結、引用與提示區塊。"
-categories: [Documentation]
+categories: [documentation]
 tags: [markdown, jekyll, example]
 last_modified_at: 2026-08-30
 draft: true
