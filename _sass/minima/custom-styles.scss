@@ -899,7 +899,7 @@ select {
 .post-content ul,
 .post-content ol,
 .post-content blockquote,
-.post-content table,
+.page-content table,
 .post-content pre {
   margin-top: 1.15em;
   margin-bottom: 1.15em;
@@ -952,40 +952,40 @@ select {
   overflow-wrap: anywhere;
 }
 
-.post-content table {
+.page-content table {
   display: block;
-  width: max-content;
+  width: 100%;
   max-width: 100%;
   overflow-x: auto;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-.post-content table.update-history {
+.page-content table.update-history {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
 
-.post-content .update-history th,
-.post-content .update-history td {
+.page-content .update-history th,
+.page-content .update-history td {
   box-sizing: border-box;
   min-width: 0;
 }
 
-.post-content .update-history th:first-child,
-.post-content .update-history td:first-child {
+.page-content .update-history th:first-child,
+.page-content .update-history td:first-child {
   width: 25%;
   white-space: nowrap;
 }
 
-.post-content .update-history th:nth-child(2),
-.post-content .update-history td:nth-child(2) {
+.page-content .update-history th:nth-child(2),
+.page-content .update-history td:nth-child(2) {
   width: 75%;
 }
 
-.post-content th,
-.post-content td {
+.page-content th,
+.page-content td {
   min-width: 110px;
   padding: 11px 13px;
   border: 1px solid var(--syuan-border);
@@ -993,7 +993,7 @@ select {
   vertical-align: top;
 }
 
-.post-content th {
+.page-content th {
   color: var(--syuan-text);
   background: var(--syuan-accent-surface);
 }
@@ -1801,16 +1801,16 @@ pre,
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .post-content .update-history th:first-child,
-  .post-content .update-history td:first-child {
+  .page-content .update-history th:first-child,
+  .page-content .update-history td:first-child {
     width: 33.333%;
     padding-right: 8px;
     padding-left: 8px;
     font-size: 0.875rem;
   }
 
-  .post-content .update-history th:nth-child(2),
-  .post-content .update-history td:nth-child(2) {
+  .page-content .update-history th:nth-child(2),
+  .page-content .update-history td:nth-child(2) {
     width: 66.667%;
   }
 

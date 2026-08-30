@@ -183,6 +183,21 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertIn("依文章內容欄寬度自然換行", guide)
         self.assertIn("&nbsp;<sup id=\"fnref", post_layout)
 
+    def test_all_content_tables_fill_the_content_column(self) -> None:
+        styles = (ROOT / "_sass/minima/custom-styles.scss").read_text(encoding="utf-8")
+        guide = (ROOT / "docs/article-authoring.md").read_text(encoding="utf-8")
+
+        self.assertRegex(
+            styles,
+            r"\.page-content table\s*\{[^}]*display: block;[^}]*width: 100%;"
+            r"[^}]*max-width: 100%;[^}]*overflow-x: auto;",
+        )
+        self.assertNotRegex(
+            styles,
+            r"\.page-content table\s*\{[^}]*width: max-content;",
+        )
+        self.assertIn("所有表格都會自動填滿內容欄", guide)
+
     def test_toc_script_reveals_preallocated_sidebar(self) -> None:
         include = (ROOT / "_includes/post-toc.html").read_text(encoding="utf-8")
         script = (ROOT / "_includes/post-toc-script.html").read_text(encoding="utf-8")
