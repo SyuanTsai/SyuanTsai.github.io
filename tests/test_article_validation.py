@@ -111,6 +111,74 @@ class ArticleValidationTests(unittest.TestCase):
 
             self.assertTrue(any("至少需要一個 H2" in error for error in errors))
 
+    def test_body_rejects_manual_hard_line_breaks(self) -> None:
+        cases = (
+            ("First line<br>Second line", "HTML `<br>`"),
+            ("First line  \nSecond line", "行尾雙空白"),
+            ("First line\\\nSecond line", "行尾反斜線"),
+        )
+
+        for body, expected_error in cases:
+            with self.subTest(body=body), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                path = self.write_document(
+                    root,
+                    "_posts/2026-08-29-hard-break.markdown",
+                    "---\n"
+                    'title: "Manual hard break"\n'
+                    "date: 2026-08-29\n"
+                    'description: "The prose uses a manual hard line break."\n'
+                    "---\n\n"
+                    f"{body}\n\n"
+                    "## Result\n",
+                )
+
+                errors = validate_document(parse_front_matter(path), "post", root)
+
+                self.assertTrue(any(expected_error in error for error in errors), errors)
+
+    def test_body_allows_break_syntax_in_code_and_comments(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = self.write_document(
+                root,
+                "_posts/2026-08-29-break-documentation.markdown",
+                """
+                ---
+                title: "Break documentation"
+                date: 2026-08-29
+                description: "The article describes syntax without using it for layout."
+                ---
+
+                Inline `<br>` is documentation, not an HTML element.
+
+                <!-- Do not use <br> or a trailing backslash\\ -->
+
+                ```html
+                <br>
+                ```
+
+                ## Result
+                """,
+            )
+
+            errors = validate_document(parse_front_matter(path), "post", root)
+
+            self.assertEqual([], errors)
+
+    def test_natural_wrapping_contract_is_explicit(self) -> None:
+        styles = (ROOT / "_sass/minima/custom-styles.scss").read_text(encoding="utf-8")
+        config = (ROOT / "_config.yml").read_text(encoding="utf-8")
+        template = (ROOT / "_templates/post.markdown").read_text(encoding="utf-8")
+        guide = (ROOT / "docs/article-authoring.md").read_text(encoding="utf-8")
+
+        self.assertIn(".post-content > p:not(:has(img))", styles)
+        self.assertIn("max-width: 52em", styles)
+        self.assertIn("text-wrap: pretty", styles)
+        self.assertRegex(config, r"kramdown:\s+hard_wrap: false")
+        self.assertIn("不要依固定字數斷行", template)
+        self.assertIn("### 分段與自然換行", guide)
+
     def test_toc_script_reveals_preallocated_sidebar(self) -> None:
         include = (ROOT / "_includes/post-toc.html").read_text(encoding="utf-8")
         script = (ROOT / "_includes/post-toc-script.html").read_text(encoding="utf-8")

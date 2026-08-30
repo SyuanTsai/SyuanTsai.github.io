@@ -55,6 +55,10 @@ plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
 
+# Treat source line breaks as soft wraps. A blank line is required to start a new paragraph.
+kramdown:
+  hard_wrap: false
+
 # Warning: @import is deprecated, but this is an official issue, so the warning is disabled.
 # Documentation: https://github.com/jekyll/jekyll-sass-converter#usage
 sass:
