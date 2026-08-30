@@ -171,14 +171,15 @@ class ArticleValidationTests(unittest.TestCase):
         config = (ROOT / "_config.yml").read_text(encoding="utf-8")
         template = (ROOT / "_templates/post.markdown").read_text(encoding="utf-8")
         guide = (ROOT / "docs/article-authoring.md").read_text(encoding="utf-8")
+        post_layout = (ROOT / "_layouts/post.html").read_text(encoding="utf-8")
 
         self.assertIn(".post-content > p:not(:has(img))", styles)
         self.assertIn("max-width: 52em", styles)
         self.assertIn("text-wrap: pretty", styles)
-        self.assertRegex(styles, r'sup\[id\^="fnref"\]::before\s*\{[^}]*content: "\\2060"')
         self.assertRegex(config, r"kramdown:\s+hard_wrap: false")
         self.assertIn("不要依固定字數斷行", template)
         self.assertIn("### 分段與自然換行", guide)
+        self.assertIn("&#8288;<sup id=\"fnref", post_layout)
 
     def test_toc_script_reveals_preallocated_sidebar(self) -> None:
         include = (ROOT / "_includes/post-toc.html").read_text(encoding="utf-8")
@@ -449,9 +450,9 @@ class ArticleValidationTests(unittest.TestCase):
                   </nav>
                   <script>toc.classList.remove("post-toc--pending");</script>
                   <p>
-                    Claim<a class="footnote" href="#fn:a">1</a>
-                    <a class="footnote" href="#fn:b">2</a>
-                    <a class="footnote" href="#fn:c">3</a>
+                    Claim&#8288;<sup id="fnref:a"><a class="footnote" href="#fn:a">1</a></sup>
+                    &#8288;<sup id="fnref:b"><a class="footnote" href="#fn:b">2</a></sup>
+                    &#8288;<sup id="fnref:c"><a class="footnote" href="#fn:c">3</a></sup>
                   </p>
                   <h2>參考資料</h2>
                   <div class="footnotes" role="doc-endnotes">
