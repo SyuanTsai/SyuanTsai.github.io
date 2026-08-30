@@ -42,7 +42,8 @@ draft: false
 | 回歸 | 通過 |
 
 <!-- 將 width 與 height 改成圖片的原始像素尺寸，避免圖片載入時造成版面位移。 -->
-![替代文字](/assets/images/posts/article-slug/example.svg){: width="960" height="540" }
+<!-- 將下列網址替換成公開 GitHub Issue 上傳完成後產生的實際附件網址。 -->
+![替代文字](https://github.com/user-attachments/assets/REPLACE_WITH_GITHUB_UUID){: width="960" height="540" }
 
 > 只在需要保留來源語意時使用引用區塊。
 
