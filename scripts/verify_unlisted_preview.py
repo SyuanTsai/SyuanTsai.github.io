@@ -89,6 +89,10 @@ def verify(site: Path) -> list[str]:
 
     if parser.footnote_links < 3:
         errors.append("預覽頁至少需要三個句尾引用徽章")
+    footnote_markers = html.count('<sup id="fnref')
+    joined_footnote_markers = html.count('&#8288;<sup id="fnref')
+    if footnote_markers != joined_footnote_markers:
+        errors.append("每個句尾引用前都必須輸出 Word Joiner，避免引用徽章獨立換行")
     if not parser.has_footnote_list:
         errors.append("預覽頁缺少產生後的參考資料清單")
     if parser.reverse_footnote_links < 3:
