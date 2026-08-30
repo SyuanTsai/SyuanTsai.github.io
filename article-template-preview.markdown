@@ -22,7 +22,7 @@ image:
 
 Jekyll 會把具有 Front Matter 的 Markdown 文章轉換成正式頁面。[^jekyll-posts]
 
-需要外部資料支持的敘述，可直接在句尾放入一個或多個引用；Kramdown 會依來源首次出現的順序自動編號。[^kramdown-footnotes][^kramdown-converter]
+需要外部資料支持的敘述，可直接在句尾放入一個或多個引用；Kramdown 會依來源首次出現順序自動編號。[^kramdown-footnotes][^kramdown-converter]
 
 ## 依文章主題命名的主要章節
 
