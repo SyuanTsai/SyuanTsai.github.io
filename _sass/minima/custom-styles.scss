@@ -956,6 +956,24 @@ select {
 .post-content table.update-history {
   display: table;
   width: 100%;
+  table-layout: fixed;
+}
+
+.post-content .update-history th,
+.post-content .update-history td {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.post-content .update-history th:first-child,
+.post-content .update-history td:first-child {
+  width: 25%;
+  white-space: nowrap;
+}
+
+.post-content .update-history th:nth-child(2),
+.post-content .update-history td:nth-child(2) {
+  width: 75%;
 }
 
 .post-content th,
@@ -1774,6 +1792,19 @@ pre,
 
   .home-overview__metrics {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .post-content .update-history th:first-child,
+  .post-content .update-history td:first-child {
+    width: 33.333%;
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 0.875rem;
+  }
+
+  .post-content .update-history th:nth-child(2),
+  .post-content .update-history td:nth-child(2) {
+    width: 66.667%;
   }
 
   .featured-post__link,
