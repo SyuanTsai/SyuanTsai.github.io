@@ -19,6 +19,9 @@ jobs:
       - name: Validate article sources
         run: python3 scripts/validate_posts.py
 
+      - name: Verify generated discovery page sources
+        run: python3 scripts/generate_discovery_pages.py --check
+
       - name: Setup Pages
         uses: actions/configure-pages@v6.0.0
 
@@ -27,6 +30,9 @@ jobs:
 
       - name: Verify generated article SEO
         run: python3 scripts/verify_generated_seo.py _site
+
+      - name: Verify taxonomy, archives, search, and redirects
+        run: python3 scripts/verify_content_discovery.py _site
 
       - name: Verify unlisted article template preview
         run: python3 scripts/verify_unlisted_preview.py _site
@@ -70,6 +76,86 @@ jobs:
             --virtual-time-budget=5000 --window-size=390,3000 \
             --screenshot=visual-review/article-template-mobile.png \
             http://127.0.0.1:4000/preview/article-template/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1440,2600 \
+            --screenshot=visual-review/code-review-article-desktop.png \
+            http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=390,3200 \
+            --screenshot=visual-review/code-review-article-mobile.png \
+            http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1440,3200 \
+            --screenshot=visual-review/sql-merge-article-desktop.png \
+            http://127.0.0.1:4000/2022/05/11/sql-server-merge.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=390,3600 \
+            --screenshot=visual-review/sql-merge-article-mobile.png \
+            http://127.0.0.1:4000/2022/05/11/sql-server-merge.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1440,2200 \
+            --screenshot=visual-review/home-desktop.png \
+            http://127.0.0.1:4000/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=390,2400 \
+            --screenshot=visual-review/home-mobile.png \
+            http://127.0.0.1:4000/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1440,2200 \
+            --screenshot=visual-review/articles-desktop.png \
+            http://127.0.0.1:4000/articles/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=390,2600 \
+            --screenshot=visual-review/articles-mobile.png \
+            http://127.0.0.1:4000/articles/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1440,2200 \
+            --screenshot=visual-review/category-code-desktop.png \
+            http://127.0.0.1:4000/categories/code/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=390,2200 \
+            --screenshot=visual-review/category-code-mobile.png \
+            http://127.0.0.1:4000/categories/code/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1440,2200 \
+            --screenshot=visual-review/discovery-overview-desktop.png \
+            http://127.0.0.1:4000/categories/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=390,2200 \
+            --screenshot=visual-review/discovery-overview-mobile.png \
+            http://127.0.0.1:4000/tags/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1440,2200 \
+            --screenshot=visual-review/archives-desktop.png \
+            http://127.0.0.1:4000/archives/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=390,2200 \
+            --screenshot=visual-review/archives-mobile.png \
+            http://127.0.0.1:4000/archives/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1440,2200 \
+            --screenshot=visual-review/search-review-desktop.png \
+            'http://127.0.0.1:4000/search/?q=review'
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=390,2200 \
+            --screenshot=visual-review/search-review-mobile.png \
+            'http://127.0.0.1:4000/search/?q=review'
+
+      - name: Verify browser search result
+        run: |
+          python3 -m http.server 4000 --directory _site >/tmp/syuan-notes-search.log 2>&1 &
+          search_server_pid=$!
+          trap 'kill "$search_server_pid"' EXIT
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4000/search/ >/dev/null; then
+              break
+            fi
+            sleep 0.25
+          done
+          google-chrome --headless=new --no-sandbox --disable-gpu \
+            --virtual-time-budget=5000 --dump-dom \
+            'http://127.0.0.1:4000/search/?q=review' \
+            | grep --fixed-strings 'Code Review 與 長期的維護討論'
 
       - name: Upload visual review screenshots
         uses: actions/upload-artifact@v7.0.1

@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /search.json
+sitemap: false
+---
+[
+{%- for post in site.posts -%}
+  {%- assign category_slug = post.categories | first -%}
+  {%- assign category_meta = site.data.taxonomy.categories | where: "slug", category_slug | first -%}
+  {
+    "title": {{ post.title | jsonify }},
+    "description": {{ post.description | strip_html | normalize_whitespace | jsonify }},
+    "category": {{ category_meta.name | default: category_slug | jsonify }},
+    "tags": {{ post.tags | jsonify }},
+    "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+    "url": {{ post.url | relative_url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]

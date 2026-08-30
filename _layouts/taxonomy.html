@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+{%- if page.taxonomy_type == "category" -%}
+  {%- assign taxonomy_posts = site.categories[page.taxonomy_slug] -%}
+{%- else -%}
+  {%- assign taxonomy_posts = site.tags[page.taxonomy_slug] -%}
+{%- endif -%}
+
+<section class="discovery-page" aria-labelledby="discovery-title">
+  <header class="page-intro">
+    <p class="page-intro__eyebrow">{{ page.eyebrow | escape }}</p>
+    <h1 id="discovery-title">{{ page.title | escape }}</h1>
+    <p>{{ page.description | escape }}</p>
+  </header>
+
+  <nav class="discovery-nav" aria-label="文章探索方式">
+    <a href="{{ '/categories/' | relative_url }}"{% if page.taxonomy_type == 'category' %} aria-current="location"{% endif %}>所有分類</a>
+    <a href="{{ '/tags/' | relative_url }}"{% if page.taxonomy_type == 'tag' %} aria-current="location"{% endif %}>所有標籤</a>
+    <a href="{{ '/archives/' | relative_url }}">月份封存</a>
+    <a href="{{ '/search/' | relative_url }}">搜尋文章</a>
+  </nav>
+
+  {%- if taxonomy_posts and taxonomy_posts != empty -%}
+    {%- include post-list.html posts=taxonomy_posts heading_level=2 -%}
+  {%- else -%}
+    <div class="discovery-empty" role="status">
+      <h2>目前沒有文章</h2>
+      <p>這個{{ page.taxonomy_type | replace: 'category', '分類' | replace: 'tag', '標籤' }}尚未收錄公開文章。</p>
+      <a href="{{ '/articles/' | relative_url }}">瀏覽全部文章 <span aria-hidden="true">→</span></a>
+    </div>
+  {%- endif -%}
+</section>

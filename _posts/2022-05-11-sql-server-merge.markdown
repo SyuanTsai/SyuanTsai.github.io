@@ -1,12 +1,19 @@
 ---
-layout: post
 title: "SQL Server MERGE 語法筆記"
 date: 2022-05-11
-categories: [MSSQL]
+last_modified_at: 2026-08-30
+categories: [database]
+tags: [sql-server, merge, t-sql]
 description: "使用 MERGE，依來源與目標資料的比對結果執行新增、更新或刪除。"
+redirect_from:
+  - /mssql/2022/05/11/sql-server-merge.html
 ---
 
-`MERGE` 可以根據來源表與目標表的比對結果，在同一個敘述中執行 `INSERT`、`UPDATE` 或 `DELETE`。
+需要將一批來源資料同步至目標表時，分別撰寫新增、更新與刪除敘述，容易讓比對條件散落在不同位置。
+
+SQL Server 的 `MERGE` 可以根據來源表與目標表的比對結果，在同一個敘述中執行 `INSERT`、`UPDATE` 或 `DELETE`。[^microsoft-merge]
+
+本文整理 `MERGE` 的基本語法、多欄位比對、條件更新與刪除限制，並補充哪些情況適合改用個別 DML 敘述。
 
 ## 基本語法
 
@@ -113,6 +120,26 @@ WHEN NOT MATCHED BY TARGET THEN
 - 最多只能有兩個 `WHEN MATCHED`。
 - 使用兩個時，一個必須是 `UPDATE`，另一個必須是 `DELETE`。
 - 第一個 `WHEN MATCHED` 必須包含 `AND` 條件。
-- `MERGE` 必須以分號 `;` 結束。
+- 同一筆目標資料不能被多筆來源資料重複更新。
+- `MERGE` 必須以分號 `;` 結束。[^microsoft-merge]
 
-參考：[Microsoft MERGE 官方文件](https://learn.microsoft.com/en-us/sql/t-sql/statements/merge-transact-sql)
+## 使用前的判斷
+
+`MERGE` 適合來源與目標同時包含多種比對結果，需要在一個敘述中處理新增、更新或刪除的情境。若需求只是依另一張表更新目標資料，Microsoft 建議評估分開使用 `INSERT`、`UPDATE` 與 `DELETE`，可能具有更好的效能與擴充性。[^microsoft-merge]
+
+實際使用前仍應確認來源比對鍵唯一、索引與執行計畫，並以符合正式資料量的案例驗證結果；使用 queued updating replication 時則不應使用 `MERGE`。[^microsoft-merge]
+
+## 參考資料
+
+[^microsoft-merge]: [MERGE (Transact-SQL)](https://learn.microsoft.com/en-us/sql/t-sql/statements/merge-transact-sql?view=sql-server-ver17) — Microsoft Learn
+
+1. 引用資料由系統自動產生
+{:footnotes}
+
+## 更新紀錄
+
+| 日期 | 更新內容 |
+| --- | --- |
+| 2022-05-11 | 初版發布 |
+| 2026-08-30 | 對齊正式文章範本，補充使用限制、適用判斷與官方文件引用 |
+{: .update-history}

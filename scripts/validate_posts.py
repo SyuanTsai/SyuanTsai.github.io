@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import re
 import sys
 from dataclasses import dataclass
@@ -33,6 +34,7 @@ FOOTNOTE_DEFINITION_RE = re.compile(
 UPDATE_ROW_RE = re.compile(
     r"^\s*\|\s*(?P<date>\d{4}-\d{2}-\d{2}|YYYY-MM-DD)\s*\|\s*(?P<content>[^|]+?)\s*\|\s*$"
 )
+TAXONOMY_SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 
 class FrontMatterError(ValueError):
@@ -364,6 +366,60 @@ def validate_article_structure(
     return errors
 
 
+def load_taxonomy_registry(root: Path) -> tuple[set[str], set[str]]:
+    path = root / "_data/taxonomy.json"
+    if not path.is_file():
+        raise ValueError("缺少 `_data/taxonomy.json` 分類與標籤登錄檔")
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as error:
+        raise ValueError(f"無法讀取 `_data/taxonomy.json`：{error}") from error
+
+    def collect(group: str) -> set[str]:
+        entries = data.get(group)
+        if not isinstance(entries, list) or not entries:
+            raise ValueError(f"`_data/taxonomy.json` 的 `{group}` 必須是非空陣列")
+        slugs = [entry.get("slug") for entry in entries if isinstance(entry, dict)]
+        if len(slugs) != len(entries) or any(not isinstance(slug, str) for slug in slugs):
+            raise ValueError(f"`_data/taxonomy.json` 的 `{group}` 每筆都必須包含字串 `slug`")
+        if any(not TAXONOMY_SLUG_RE.fullmatch(slug) for slug in slugs):
+            raise ValueError(f"`_data/taxonomy.json` 的 `{group}` slug 必須使用小寫 kebab-case")
+        if len(slugs) != len(set(slugs)):
+            raise ValueError(f"`_data/taxonomy.json` 的 `{group}` slug 不可重複")
+        return set(slugs)
+
+    return collect("categories"), collect("tags")
+
+
+def validate_post_taxonomy(
+    document: Document,
+    registered_categories: set[str],
+    registered_tags: set[str],
+) -> list[str]:
+    errors: list[str] = []
+    categories = document.fields.get("categories")
+    tags = document.fields.get("tags")
+
+    if not isinstance(categories, list) or len(categories) != 1:
+        errors.append("正式文章的 `categories` 必須且只能包含一個主分類")
+    elif categories[0] not in registered_categories:
+        errors.append(f"主分類 `{categories[0]}` 未登錄於 `_data/taxonomy.json`")
+
+    if not isinstance(tags, list) or not 1 <= len(tags) <= 5:
+        errors.append("正式文章的 `tags` 必須包含一至五個標籤")
+    else:
+        if len(tags) != len(set(tags)):
+            errors.append("正式文章的 `tags` 不可包含重複標籤")
+        for tag in tags:
+            if not TAXONOMY_SLUG_RE.fullmatch(str(tag)):
+                errors.append(f"標籤 `{tag}` 必須使用小寫 kebab-case")
+            elif tag not in registered_tags:
+                errors.append(f"標籤 `{tag}` 未登錄於 `_data/taxonomy.json`")
+
+    return errors
+
+
 def validate_document(document: Document, kind: str, root: Path) -> list[str]:
     errors: list[str] = []
     fields = document.fields
@@ -479,6 +535,12 @@ def validate_repository(root: Path) -> tuple[list[str], int, int]:
     post_paths = discover_markdown(root / "_posts")
     draft_paths = discover_markdown(root / "_drafts")
 
+    try:
+        registered_categories, registered_tags = load_taxonomy_registry(root)
+    except ValueError as error:
+        errors.append(str(error))
+        registered_categories, registered_tags = set(), set()
+
     required_files = (
         root / "docs/article-authoring.md",
         root / "_templates/post.markdown",
@@ -497,7 +559,13 @@ def validate_repository(root: Path) -> tuple[list[str], int, int]:
             except FrontMatterError as error:
                 errors.append(f"{path.relative_to(root)}: {error}")
                 continue
-            errors.extend(_format_errors(path, root, validate_document(document, kind, root)))
+            document_errors = validate_document(document, kind, root)
+            if kind == "post":
+                document_errors.extend(validate_article_structure(document, require_citation=True))
+                document_errors.extend(
+                    validate_post_taxonomy(document, registered_categories, registered_tags)
+                )
+            errors.extend(_format_errors(path, root, document_errors))
             if kind == "post":
                 try:
                     output_url = post_output_url(document)
@@ -580,14 +648,13 @@ def post_output_url(document: Document) -> str:
     if filename is None:
         raise ValueError(f"無法由檔名計算文章網址：{document.path.name}")
 
-    category_parts = []
-    for category in document.fields.get("categories", []):
-        slug = re.sub(r"[^a-z0-9]+", "-", str(category).lower()).strip("-")
-        if slug:
-            category_parts.append(slug)
-
     published = date.fromisoformat(str(document.fields["date"]))
-    parts = [*category_parts, f"{published:%Y}", f"{published:%m}", f"{published:%d}", f"{filename.group('slug')}.html"]
+    parts = [
+        f"{published:%Y}",
+        f"{published:%m}",
+        f"{published:%d}",
+        f"{filename.group('slug')}.html",
+    ]
     return "/" + "/".join(parts)
 
 

@@ -6,10 +6,11 @@
 
 1. 複製 `_templates/post.markdown` 到 `_posts/YYYY-MM-DD-lowercase-kebab-case.markdown`。
 2. 將檔名日期、Front Matter 的 `date` 與文章內容改為實際值。
-3. 執行 `python3 scripts/validate_posts.py`。
-4. 執行 `bundle exec jekyll build --strict_front_matter`。
-5. 執行 `python3 scripts/verify_generated_seo.py _site`。
-6. 在桌機與手機寬度預覽文章，確認圖片、表格與程式碼區塊沒有造成整頁水平捲動。
+3. 執行 `python3 scripts/generate_discovery_pages.py`，同步分類、標籤與月份入口頁。
+4. 執行 `python3 scripts/validate_posts.py`。
+5. 執行 `bundle exec jekyll build --strict_front_matter`。
+6. 執行 `python3 scripts/verify_generated_seo.py _site` 與 `python3 scripts/verify_content_discovery.py _site`。
+7. 在桌機與手機寬度預覽文章，確認圖片、表格與程式碼區塊沒有造成整頁水平捲動。
 
 完整元素範例位於 `_drafts/article-format-example.markdown`。使用 `bundle exec jekyll serve --drafts` 可在本機預覽；標準建置與 GitHub Pages 不會發布 `_drafts` 內容。
 
@@ -23,7 +24,7 @@
 - 格式：`YYYY-MM-DD-lowercase-kebab-case.markdown`
 - 日期必須與 Front Matter 的 `date` 相同。
 - Slug 只使用小寫英文字母、數字與單一連字號，不使用空白、底線或連續連字號。
-- 本站固定的預設 Permalink 為 `/:categories/:year/:month/:day/:title:output_ext`。
+- 本站固定的預設 Permalink 為 `/:year/:month/:day/:title:output_ext`，不把分類或標籤放進文章網址。
 
 例如：
 
@@ -31,13 +32,15 @@
 _posts/2026-08-29-debugging-http-timeouts.markdown
 ```
 
-搭配 `categories: [CSharp, HTTP]` 時，網址會是：
+文章網址會是：
 
 ```text
-/csharp/http/2026/08/29/debugging-http-timeouts.html
+/2026/08/29/debugging-http-timeouts.html
 ```
 
-文章發布後不要任意修改檔名、分類或網址。若為了整理檔名而必須保留既有網址，請在 Front Matter 明確設定 `permalink`。
+主分類、標籤與月份各自使用集合頁，例如 `/categories/code/`、`/tags/http/` 與 `/archives/2026/08/`；這些頁面只列出文章摘要並連回唯一正式網址，不複製文章內容。
+
+文章發布後不要任意修改檔名或網址。既有文章一次轉換網址時，使用 `redirect_from` 保存所有舊入口；新文章不自行設定 `permalink`。
 
 ### 草稿
 
@@ -53,12 +56,13 @@ _posts/2026-08-29-debugging-http-timeouts.markdown
 | `title` | 是 | 非空字串 | 頁面 H1、HTML Title 與 SEO Title。 |
 | `date` | 是 | `YYYY-MM-DD` | 發布日期；已發布文章需與檔名日期一致。 |
 | `description` | 是 | 建議 50–160 字的單行字串 | 首頁／文章列表摘要與 SEO Description。 |
-| `categories` | 否 | YAML 陣列 | 穩定的大分類，也會形成預設網址路徑；每個值只使用英文字母、數字與單一連字號。 |
-| `tags` | 否 | YAML 陣列 | 較細的文章主題標籤。 |
-| `last_modified_at` | 否 | `YYYY-MM-DD` | 內容有實質更新時填寫，不得早於 `date`。 |
+| `categories` | 是 | 一個值的 YAML 陣列 | 唯一主分類；使用小寫 kebab-case，不影響文章網址。 |
+| `tags` | 是 | 一至五個值的 YAML 陣列 | 跨分類的技術或議題標籤；使用小寫 kebab-case。 |
+| `last_modified_at` | 是 | `YYYY-MM-DD` | 必須等於「更新紀錄」最新日期，且不得早於 `date`。 |
 | `draft` | 否 | `true` 或 `false` | 編輯狀態；`true` 只能放在 `_drafts/`。 |
 | `image` | 否 | 含 `path` 與 `alt` 的 mapping | 文章代表圖片；路徑使用 `/assets/images/...`，替代文字不得為空。 |
-| `permalink` | 否 | 以 `/` 開頭的站內路徑 | 只用於保留既有網址或必要的固定網址。 |
+| `permalink` | 否 | 以 `/` 開頭的站內路徑 | 只供未列出預覽等固定頁面使用；新文章不要設定。 |
+| `redirect_from` | 否 | 站內路徑陣列 | 只在既有文章轉換網址時保留舊入口。 |
 | `canonical_url` | 否 | 完整 HTTPS URL | 只有內容原始來源不是本站時才覆寫 Canonical。 |
 
 `layout` 已由 `_config.yml` 對所有 posts 預設為 `post`，新文章不需要重複設定。
@@ -71,16 +75,36 @@ _posts/2026-08-29-debugging-http-timeouts.markdown
 ---
 title: "診斷 HTTP Timeout 的實作紀錄"
 date: 2026-08-29
-description: "整理 HTTP Timeout 的觀察方式、根因定位與修正驗證。"
-categories: [CSharp, HTTP]
-tags: [timeout, diagnostics]
 last_modified_at: 2026-08-30
+description: "整理 HTTP Timeout 的觀察方式、根因定位與修正驗證。"
+categories: [code]
+tags: [http, timeout, diagnostics]
 draft: false
 image:
   path: /assets/images/posts/debugging-http-timeouts/request-flow.svg
   alt: "HTTP 請求依序通過 Client、API 與下游服務"
 ---
 ```
+
+## 分類、標籤與封存
+
+- `categories` 表示文章唯一的主要領域；不可同時把次要主題也放進分類。
+- `tags` 表示可跨分類使用的技術、工具或議題，每篇使用一至五個。
+- slug 一律使用小寫英文字母、數字與單一連字號，例如 `database`、`code-review`、`sql-server`。
+- 可用分類與標籤集中登錄在 `_data/taxonomy.json`，由該檔案提供顯示名稱與描述，避免同義字或大小寫產生重複入口。
+- 新文章只要填寫已登錄的 slug，分類頁、標籤頁、月份封存與搜尋索引都會從 Front Matter 取得內容，不手動維護文章清單。
+- 新增分類或標籤時先更新 `_data/taxonomy.json`，再執行 `python3 scripts/generate_discovery_pages.py`；產生的入口頁不可直接編輯。
+
+文章、分類、標籤與月份封存的網址分工如下：
+
+| 類型 | 網址 | 內容 |
+| --- | --- | --- |
+| 正式文章 | `/2026/08/29/debugging-http-timeouts.html` | 唯一完整文章內容 |
+| 主分類 | `/categories/code/` | 該分類的文章摘要清單 |
+| 標籤 | `/tags/http/` | 該標籤的文章摘要清單 |
+| 月份封存 | `/archives/2026/08/` | 該月份的文章摘要清單 |
+
+同一篇文章不會在分類、標籤或封存路徑產生副本。既有文章轉換至日期型網址時，舊網址只保留轉址頁，Canonical 指向新的唯一正式網址。
 
 ## 文章內文結構
 
@@ -276,7 +300,7 @@ SQL Server 最多允許兩個 `WHEN MATCHED`。[^microsoft-merge]
 
 - 檔名、Slug 與日期格式。
 - 必要 Front Matter 是否存在且非空。
-- categories、tags、draft、image 與 permalink 格式。
+- categories 的單一主分類、tags 的一至五個標籤，以及 draft、image、permalink、redirect_from 格式。
 - 本文是否誤用 H1、程式碼區塊是否缺少語言、圖片是否缺少替代文字。
 - 一般內文是否使用 `<br>`、行尾雙空白或行尾反斜線強制換行。
 - 新範本與完整元素範例是否有起頭，以及「參考資料」與「更新紀錄」是否位於最後兩個 H2。
@@ -285,4 +309,6 @@ SQL Server 最多允許兩個 `WHEN MATCHED`。[^microsoft-merge]
 - 產出的更新紀錄表格是否具有 `update-history` class 並使用完整內容寬度。
 - 完整元素範例是否涵蓋程式碼、表格、圖片、連結、引用與提示區塊。
 
-檢查失敗時會列出檔名與明確原因並回傳非零結束碼。CI 會在 Jekyll 建置後再執行 `scripts/verify_generated_seo.py`，確認每篇已發布文章的 Title、Description 與 Canonical URL 都存在且符合 Front Matter。
+`python3 scripts/generate_discovery_pages.py --check` 會確認分類、標籤與月份入口頁皆由目前資料產生，沒有遺漏或失效檔案。
+
+檢查失敗時會列出檔名與明確原因並回傳非零結束碼。CI 會在 Jekyll 建置後執行 `scripts/verify_generated_seo.py`，確認每篇已發布文章的 Title、Description 與 Canonical URL；再由 `scripts/verify_content_discovery.py` 確認集合頁、搜尋索引與舊網址轉址都指向唯一正式文章。

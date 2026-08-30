@@ -3,9 +3,8 @@ layout: post
 title: "初版文章範本預覽"
 date: 2026-08-30
 last_modified_at: 2026-08-30
-description: "以實際文章版型預覽起頭、自由內容章節、圖片資產、句尾引用、參考資料與更新紀錄。"
-categories: [Template, Preview]
-tags: [markdown, jekyll, citation]
+description: "以實際文章版型預覽文章資訊、起頭、自由內容章節、圖片資產、句尾引用、參考資料與更新紀錄。"
+eyebrow: "Template Preview"
 permalink: /preview/article-template/
 unlisted: true
 sitemap: false
@@ -18,11 +17,35 @@ image:
 **未列出預覽：** 此頁只供文章範本 Review，不會出現在首頁、文章列表或導覽，也要求搜尋引擎不要建立索引。知道網址的人仍可直接開啟。
 </aside>
 
-這是一篇使用正式文章版型產生的範本預覽。起頭不顯示固定標題，而是直接交代問題情境、背景或撰寫動機，以及讀者能從本文取得什麼。
+這是一篇使用正式文章版型產生的範本預覽。起頭不顯示固定標題，而是直接交代問題情境、背景或撰寫動機。
 
-Jekyll 會把具有 Front Matter 的 Markdown 文章轉換成正式頁面。[^jekyll-posts]
+接著說明讀者能從本文取得什麼；同一個核心概念維持在同一段，論述角度改變時才用空白行另起一段，不依固定字數手動斷行。
 
-需要外部資料支持的敘述，可直接在句尾放入一個或多個引用；Kramdown 會依來源首次出現順序自動編號。[^kramdown-footnotes][^kramdown-converter]
+Jekyll 會把具有 Front Matter 的 Markdown 文章轉換成正式頁面。需要外部資料支持的敘述，可直接在所支持的句尾放入一個或多個引用；Kramdown 會依來源首次出現順序自動編號。[^jekyll-posts][^kramdown-footnotes][^kramdown-converter]
+
+## 文章資訊與固定網址
+
+每篇正式文章只有一個內容網址；分類、標籤與年月封存使用各自的集合頁列出文章摘要，不複製文章內容。分類或標籤日後調整時，文章網址仍保持不變。
+
+```yaml
+---
+title: "文章標題"
+date: 2026-08-30
+last_modified_at: 2026-08-30
+description: "用一到兩句話說明文章解決的問題與讀者能取得的結果。"
+categories: [code]
+tags: [code-review, maintainability]
+---
+```
+
+| 資訊類型 | 數量規則 | 網址範例 |
+| --- | --- | --- |
+| 正式文章 | 每篇一個 | `/2026/08/30/article-slug.html` |
+| 主分類 | 每篇一個 | `/categories/code/` |
+| 標籤 | 每篇一至五個 | `/tags/code-review/` |
+| 月份封存 | 由發布日期產生 | `/archives/2026/08/` |
+
+已發布文章若需要一次轉換網址，使用 `redirect_from` 保留舊網址入口；新文章不需要自行設定 `permalink`。
 
 ## 依文章主題命名的主要章節
 
@@ -57,6 +80,7 @@ using var response = await httpClient.SendAsync(request, cancellationToken);
 | 手機版面 | 引用徽章可點擊並跳至參考資料 |
 | 未列出狀態 | 不出現在首頁、文章列表或導覽 |
 | 外部圖片 | GitHub Issue 附件依原始比例自動縮放 |
+| 內容網址 | 分類與標籤頁只連回唯一正式文章 |
 
 ### 圖片與媒體資產
 
@@ -88,4 +112,5 @@ using var response = await httpClient.SendAsync(request, cancellationToken);
 | 2026-08-30 | 初版發布 |
 | 2026-08-30 | 加入 GitHub Issue 圖片資產規範與實際附件範例 |
 | 2026-08-30 | 修正繁體中文詞組與標點的自然斷行 |
+| 2026-08-30 | 補齊單一文章網址、分類、標籤與封存規則 |
 {: .update-history}

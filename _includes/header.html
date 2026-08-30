@@ -8,7 +8,8 @@
     <div class="site-header__actions">
       <nav class="site-navigation" aria-label="主要導覽">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>首頁</a>
-        <a href="{{ '/articles/' | relative_url }}"{% if page.url == '/articles/' %} aria-current="page"{% elsif page.layout == 'post' %} aria-current="location"{% endif %}>文章</a>
+        <a href="{{ '/articles/' | relative_url }}"{% if page.url == '/articles/' %} aria-current="page"{% elsif page.layout == 'post' or page.layout == 'taxonomy' or page.layout == 'archive' or page.url == '/categories/' or page.url == '/tags/' or page.url == '/archives/' %} aria-current="location"{% endif %}>文章</a>
+        <a href="{{ '/search/' | relative_url }}"{% if page.url == '/search/' %} aria-current="page"{% endif %}>搜尋</a>
         <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>關於</a>
       </nav>
 

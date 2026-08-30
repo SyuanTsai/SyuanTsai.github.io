@@ -6,8 +6,14 @@ layout: default
 
 <article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting">
   <header class="post-header">
-    {%- if page.categories and page.categories != empty -%}
-      <p class="post-header__eyebrow">{{ page.categories | join: " · " | escape }}</p>
+    {%- if page.eyebrow -%}
+      <p class="post-header__eyebrow">{{ page.eyebrow | escape }}</p>
+    {%- elsif page.categories and page.categories != empty -%}
+      {%- assign category_slug = page.categories | first -%}
+      {%- assign category_meta = site.data.taxonomy.categories | where: "slug", category_slug | first -%}
+      <p class="post-header__eyebrow">
+        <a href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}">{{ category_meta.name | default: category_slug | escape }}</a>
+      </p>
     {%- endif -%}
 
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
@@ -43,7 +49,8 @@ layout: default
           <span>標籤</span>
           <ul>
             {%- for tag in page.tags -%}
-              <li>{{ tag | escape }}</li>
+              {%- assign tag_meta = site.data.taxonomy.tags | where: "slug", tag | first -%}
+              <li><a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}">{{ tag_meta.name | default: tag | escape }}</a></li>
             {%- endfor -%}
           </ul>
         </div>

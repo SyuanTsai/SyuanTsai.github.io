@@ -1,0 +1,36 @@
+{
+  "categories": [
+    {
+      "slug": "code",
+      "name": "Code",
+      "description": "程式設計、程式碼品質與軟體維護實務。"
+    },
+    {
+      "slug": "database",
+      "name": "Database",
+      "description": "資料庫設計、查詢語法與資料處理實務。"
+    }
+  ],
+  "tags": [
+    {
+      "slug": "code-review",
+      "name": "Code Review"
+    },
+    {
+      "slug": "maintainability",
+      "name": "Maintainability"
+    },
+    {
+      "slug": "merge",
+      "name": "MERGE"
+    },
+    {
+      "slug": "sql-server",
+      "name": "SQL Server"
+    },
+    {
+      "slug": "t-sql",
+      "name": "T-SQL"
+    }
+  ]
+}
