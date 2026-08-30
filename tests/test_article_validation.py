@@ -10,8 +10,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from validate_posts import parse_front_matter, post_output_url, validate_document  # noqa: E402
+from validate_posts import (  # noqa: E402
+    parse_front_matter,
+    post_output_url,
+    validate_article_structure,
+    validate_document,
+)
 from verify_generated_seo import HeadMetadataParser, verify_post  # noqa: E402
+from verify_unlisted_preview import verify as verify_unlisted_preview  # noqa: E402
 
 
 class ArticleValidationTests(unittest.TestCase):
@@ -142,6 +148,115 @@ class ArticleValidationTests(unittest.TestCase):
                 post_output_url(parse_front_matter(path)),
             )
 
+    def test_article_structure_accepts_opening_citations_and_update_history(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = self.write_document(
+                root,
+                "article-template-preview.markdown",
+                """
+                ---
+                title: "Article structure"
+                date: 2026-08-29
+                last_modified_at: 2026-08-30
+                description: "A complete article structure."
+                ---
+
+                Opening context with a source.[^official-source]
+
+                ## Topic-specific section
+
+                Main content.
+
+                ## 參考資料
+
+                [^official-source]: [Official source](https://example.com/official) — Publisher
+
+                1. References are generated here
+                {:footnotes}
+
+                ## 更新紀錄
+
+                | 日期 | 更新內容 |
+                | --- | --- |
+                | 2026-08-29 | 初版發布 |
+                | 2026-08-30 | 補充官方來源 |
+                """,
+            )
+
+            errors = validate_article_structure(
+                parse_front_matter(path),
+                require_citation=True,
+            )
+
+            self.assertEqual([], errors)
+
+    def test_article_structure_requires_opening_and_final_section_order(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = self.write_document(
+                root,
+                "invalid-structure.markdown",
+                """
+                ---
+                title: "Invalid structure"
+                date: 2026-08-29
+                last_modified_at: 2026-08-29
+                description: "The sections are out of order."
+                ---
+
+                ## 參考資料
+
+                ## Topic after references
+
+                ## 更新紀錄
+
+                | 日期 | 更新內容 |
+                | --- | --- |
+                | 2026-08-29 | 初版發布 |
+                """,
+            )
+
+            errors = validate_article_structure(parse_front_matter(path))
+
+            self.assertTrue(any("起頭文字" in error for error in errors))
+            self.assertTrue(any("最後兩個 H2" in error for error in errors))
+
+    def test_article_structure_requires_latest_history_date_to_match_front_matter(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = self.write_document(
+                root,
+                "wrong-modified-date.markdown",
+                """
+                ---
+                title: "Wrong modified date"
+                date: 2026-08-29
+                last_modified_at: 2026-08-29
+                description: "The latest dates do not match."
+                ---
+
+                Opening context.
+
+                ## Topic
+
+                Main content.
+
+                ## 參考資料
+
+                ## 更新紀錄
+
+                | 日期 | 更新內容 |
+                | --- | --- |
+                | 2026-08-29 | 初版發布 |
+                | 2026-08-30 | 補充內容 |
+                """,
+            )
+
+            errors = validate_article_structure(parse_front_matter(path))
+
+            self.assertIn("`last_modified_at` 必須與更新紀錄的最新日期相同", errors)
+
     def test_head_metadata_parser_reads_required_seo_elements(self) -> None:
         parser = HeadMetadataParser()
         parser.feed(
@@ -191,6 +306,37 @@ class ArticleValidationTests(unittest.TestCase):
             errors = verify_post(post, root, root / "_site", "https://example.com")
 
             self.assertEqual([], errors)
+
+    def test_unlisted_preview_verifier_accepts_noindex_and_no_public_links(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            site = Path(directory)
+            preview = site / "preview/article-template/index.html"
+            preview.parent.mkdir(parents=True)
+            preview.write_text(
+                """
+                <html><head>
+                  <meta name="robots" content="noindex, nofollow, noarchive">
+                </head><body>
+                  <h1>出版文章範本預覽</h1>
+                  <p>
+                    Claim<a class="footnote" href="#fn:a">1</a>
+                    <a class="footnote" href="#fn:b">2</a>
+                    <a class="footnote" href="#fn:c">3</a>
+                  </p>
+                  <h2>參考資料</h2>
+                  <div class="footnotes" role="doc-endnotes">
+                    <a class="reversefootnote" href="#fnref:a">back</a>
+                    <a class="reversefootnote" href="#fnref:b">back</a>
+                    <a class="reversefootnote" href="#fnref:c">back</a>
+                  </div>
+                  <h2>更新紀錄</h2>
+                </body></html>
+                """,
+                encoding="utf-8",
+            )
+            (site / "index.html").write_text("<html><body>Home</body></html>", encoding="utf-8")
+
+            self.assertEqual([], verify_unlisted_preview(site))
 
 
 if __name__ == "__main__":

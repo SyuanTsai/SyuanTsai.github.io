@@ -1,23 +1,23 @@
 ---
 title: "文章標題"
 date: YYYY-MM-DD
+last_modified_at: YYYY-MM-DD
 description: "用一到兩句話說明文章解決的問題與讀者能取得的結果。"
 categories: [Category]
 tags: [tag-one, tag-two]
 draft: false
-# last_modified_at: YYYY-MM-DD
 # image:
 #   path: /assets/images/posts/article-slug/cover.svg
 #   alt: "描述圖片傳達的資訊"
 ---
 
-用一小段文字交代問題情境、限制與本文結論。
+用一到三段文字交代問題情境、背景或撰寫動機，以及讀者能從本文取得什麼。起頭固定需要，但不顯示「起頭」標題。
 
-## 問題與目標
+需要來源支持的敘述，可以直接在句尾加入引用。[^source-name]
 
-說明要解決的問題、已知條件與完成標準。
+## 依文章主題命名的主要章節
 
-## 實作方式
+內容章節依文章性質自由組合，不要使用無法辨識目的的「內容」作為標題。可選擇的內容包括適用範圍、前置條件、核心概念、根因分析、實作方式、驗證結果、限制、替代方案與結論。
 
 ### 關鍵步驟
 
@@ -42,4 +42,13 @@ draft: false
 
 ## 參考資料
 
-- [具體且可辨識的連結名稱](https://example.com/)
+[^source-name]: [具體且可辨識的來源名稱](https://example.com/source) — 發布者
+
+1. 引用資料由系統自動產生
+{:footnotes}
+
+## 更新紀錄
+
+| 日期 | 更新內容 |
+| --- | --- |
+| YYYY-MM-DD | 初版發布 |

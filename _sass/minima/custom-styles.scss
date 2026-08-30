@@ -981,6 +981,64 @@ select {
   border-left-color: #d99a32;
 }
 
+.post-content a.footnote {
+  display: inline-flex;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-inline-start: 0.16rem;
+  padding: 0 0.28rem;
+  border-radius: 999px;
+  color: var(--syuan-text);
+  background: var(--syuan-border-strong);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: super;
+}
+
+.post-content a.footnote:visited {
+  color: var(--syuan-text);
+}
+
+.post-content a.footnote:hover,
+.post-content a.footnote:focus-visible {
+  color: var(--syuan-background);
+  background: var(--syuan-accent);
+  text-decoration: none;
+}
+
+.post-content .footnotes {
+  margin-top: 1.2em;
+  font-size: 0.9rem;
+}
+
+.post-content .footnotes::before {
+  display: block;
+  width: 42px;
+  margin-bottom: 1.1em;
+  border-top: 2px solid var(--syuan-border-strong);
+  content: "";
+}
+
+.post-content .footnotes ol {
+  padding-left: 1.4em;
+}
+
+.post-content .footnotes li {
+  scroll-margin-top: var(--syuan-anchor-offset);
+}
+
+.post-content .reversefootnote {
+  display: inline-flex;
+  margin-inline-start: 0.35rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .post-footer {
   margin-top: 54px;
   padding-top: 26px;

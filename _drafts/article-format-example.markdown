@@ -4,14 +4,14 @@ date: 2026-08-29
 description: "以 HTTP 請求診斷情境示範本站文章的標題、程式碼、表格、圖片、連結、引用與提示區塊。"
 categories: [Documentation]
 tags: [markdown, jekyll, example]
-last_modified_at: 2026-08-29
+last_modified_at: 2026-08-30
 draft: true
 image:
   path: /assets/images/posts/article-format-example/request-flow.svg
   alt: "HTTP 請求依序通過 Client、API 與下游服務"
 ---
 
-這篇草稿用一個簡化的 HTTP Timeout 情境，示範新文章可直接採用的所有共用元素。它只用於本機預覽與自動驗證，不會由正式 GitHub Pages 建置發布。
+這篇草稿用一個簡化的 HTTP Timeout 情境，示範新文章可直接採用的起頭、自由內容章節、句尾引用、參考資料與更新紀錄。它只用於本機預覽與自動驗證，不會由正式 GitHub Pages 建置發布。[^jekyll-posts][^kramdown-footnotes]
 
 ## 問題情境
 
@@ -52,5 +52,18 @@ var elapsed = Stopwatch.GetElapsedTime(startedAt);
 
 ## 參考資料
 
-- [Jekyll 文章格式官方文件](https://jekyllrb.com/docs/posts/)
-- [Microsoft HttpClient 指南](https://learn.microsoft.com/en-us/dotnet/fundamentals/networking/http/httpclient-guidelines)
+[^jekyll-posts]: [Posts](https://jekyllrb.com/docs/posts/) — Jekyll
+[^kramdown-footnotes]: [Footnotes](https://kramdown.gettalong.org/syntax.html#footnotes) — Kramdown
+[^httpclient-guidelines]: [HttpClient guidelines for .NET](https://learn.microsoft.com/en-us/dotnet/fundamentals/networking/http/httpclient-guidelines) — Microsoft Learn
+
+上述 `HttpClient` 實作方式可搭配 Microsoft 的連線管理與生命週期建議一起評估。[^httpclient-guidelines]
+
+1. 引用資料由系統自動產生
+{:footnotes}
+
+## 更新紀錄
+
+| 日期 | 更新內容 |
+| --- | --- |
+| 2026-08-29 | 初版建立 |
+| 2026-08-30 | 加入句尾引用、參考資料定位與更新紀錄 |
