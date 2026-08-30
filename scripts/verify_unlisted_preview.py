@@ -73,7 +73,7 @@ def verify(site: Path) -> list[str]:
     parser = PreviewHtmlParser()
     parser.feed(html)
 
-    if parser.h1 != "出版文章範本預覽":
+    if parser.h1 != "初版文章範本預覽":
         errors.append(f"預覽頁 H1 不正確：{parser.h1 or '(空白)'}")
 
     if len(parser.robots) != 1:
