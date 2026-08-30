@@ -10,55 +10,60 @@
 - 尚未依賴免費公共圖床或供應商專屬資源網址。
 - 文章範本目前使用 `/assets/images/posts/<slug>/...` 站內相對網址。
 
-現有規模不需要為容量或流量立即搬遷；本次工作的重點是先建立不綁定供應商、可備份且能長期維護的公開網址與作業方式。
-
-目前階段只進行方案盤點與比較。尚未選定供應商，也不建立 Bucket、不修改 DNS、不切換正式文章網址；下列設計均為評估草案，待選定方案後才執行 MVP。
+現有規模不需要為容量或流量建立物件儲存服務。本站選擇以公開 GitHub Issue 附件作為文章內文圖片的主要發布方式，既有 Repository 檔案作為來源與備份；正式文章目前使用的 `/assets/` 網址維持不變，先以未列出範本完成 MVP。
 
 ## 方案比較
 
 | 方案 | 目前成本與額度 | 優點 | 主要限制 | 維護負擔 | 本階段定位 |
 | --- | --- | --- | --- | --- | --- |
+| GitHub Issue 附件 | 使用獨立 GitHub machine user；圖片與 GIF 單檔上限 10 MB，其他檔案上限 25 MB | 貼上或拖曳後立即取得匿名化網址；不增加 Git 歷史；公開 Repository 的附件不需登入即可讀取 | 附件不是 Git tree 內的檔案；網址、Cache、CORS、目錄與檔名均由 GitHub 控制；沒有自訂網域或服務 SLA；遷移時必須更新文章網址 | 低 | **文章內文圖片主方案** |
 | GitHub Repository／Pages | Pages 發布內容上限 1 GB、每月 100 GB 軟性流量上限 | 現有流程即可使用；Git commit 本身可追蹤版本；不增加帳號與部署服務 | 大型二進位檔會擴大 Git 歷史；Cache 與資源網域控制有限；若要獨立使用 `assets.tw-syuan.com`，需建立另一個 Pages 站點 | 低 | 零變更基準方案 |
 | Cloudflare R2 Standard | 每月 10 GB 儲存、100 萬次 Class A、1,000 萬次 Class B 免費；對外傳輸免費 | 自訂網域可使用 Cloudflare Cache；S3 相容 API 方便上傳與遷移；目前規模預期落在免費額度 | `tw-syuan.com` 目前不由 Cloudflare 管理；Free／Pro 不支援保留既有權威 DNS 的 Partial CNAME setup。另不支援 S3 Bucket Versioning、原生 Bucket Replication 與 Object Lock | 低至中 | 若願意遷移權威 DNS，再列入低成本候選 |
 | Amazon S3＋CloudFront | CloudFront Free 固定方案包含 5 GB S3 儲存抵用、每月 100 GB 傳輸與 100 萬次請求 | S3 Versioning、生命週期與完整 AWS 生態成熟；CloudFront 可搭配私有 S3 Origin Access Control；可沿用現有權威 DNS | Bucket、CloudFront、OAC、憑證與 DNS 設定較多 | 中至高 | 保留現有 DNS 時的成熟候選 |
 | DigitalOcean Spaces＋CDN | 每月 US$5，含 250 GiB 儲存與 1 TiB 對外傳輸 | S3 相容、CDN 內建、費用結構簡單；外部 DNS 可使用自有憑證綁定自訂子網域 | 目前用量遠低於固定方案額度；外部 DNS 情境需自行建立、上傳及維護憑證 | 中 | 保留現有 DNS 時的簡化付費候選 |
 | Azure Blob Storage＋Front Door | Blob、操作與流量另計；Front Door Standard 固定費用為每月 US$35，另計傳輸與請求 | Blob Versioning、冗餘與 Azure 整合完整；Front Door 支援自訂網域與 TLS | 固定費用遠高於目前需求，設定與維護亦較複雜 | 高 | Azure 生態需求出現時再評估 |
 
-### 階段性結論（尚未選定）
+### 選定方案
 
-本階段不指定主方案。依目前資訊，後續決策可分成以下情境：
+採用「公開 GitHub Issue 附件負責文章內文圖片傳遞，Repository 保存可重新發布的來源與 manifest」：
 
-| 決策條件 | 優先保留候選 | 需要再驗證 |
+1. 主帳號 `SyuanTsai` 建立並持有公開 `SyuanTsai/notes-assets` Repository，開啟 Issues。
+2. 另建專用 GitHub machine user，只在雲端瀏覽器登入；不加入 `SyuanTsai.github.io`，也不成為 `notes-assets` collaborator。
+3. 專用帳號以一般公開使用者身分建立靜態資源登錄 Issue；每篇文章以一則 comment 記錄文章 slug、語意化檔名、SHA-256 與附件。
+4. 上傳後只使用 GitHub 產生的完整匿名化網址，不自行拼接網址。
+5. `docs/static-assets-manifest.yml` 記錄來源檔案與 GitHub 附件網址的對應。
+6. 圖片內容更新時重新上傳並取得新網址，不覆寫或重複利用舊網址。
+
+這個方案接受 GitHub 供應商網址與無法自訂 Cache 的限制，以換取目前規模下最低的成本與操作負擔。若未來需要自訂網域、可控 Cache、大量檔案、自動部署或獨立 SLA，再重新評估 R2、S3＋CloudFront、DigitalOcean Spaces 或 Azure。
+
+### 權限邊界
+
+| 身分／介面 | 可操作範圍 | 明確禁止 |
 | --- | --- | --- |
-| 不新增服務、成本與維護最小 | GitHub Repository／Pages | 獨立資源網域與長期 Repository 容量是否必要 |
-| 保留現有權威 DNS，重視成熟的版本與權限能力 | Amazon S3＋CloudFront | 實際設定複雜度、免費方案條款與超額行為 |
-| 保留現有權威 DNS，願意用固定月費換取較簡單操作 | DigitalOcean Spaces＋CDN | 自有憑證更新流程與台灣連線表現 |
-| 願意把權威 DNS 移至 Cloudflare | Cloudflare R2 | DNS 遷移風險、備份與缺少 Bucket Versioning 的補償措施 |
-| 已有 Azure 使用與維運需求 | Azure Blob Storage＋Front Door | 固定成本是否能由其他工作負載共同攤提 |
+| `@GitHub` 連接器（主帳號） | `SyuanTsai.github.io` 的程式碼、PR 與 Jira 對應工作 | 不保存或使用專用帳號密碼 |
+| 雲端瀏覽器（專用帳號） | `notes-assets` 的公開 Issue、comment 與附件 | 不授予 `SyuanTsai.github.io` 存取權，不授予任何 Repository collaborator 權限 |
+| `SyuanTsai` 主帳號 | 持有及管理兩個 Repository，必要時進行復原與撤銷 | 不在雲端瀏覽器保存主帳號 session |
 
-無論最後選哪一個外部方案，都可評估使用「Repository 保存可重新發布的檔案與 manifest，物件儲存／CDN 負責公開傳遞」的混合架構。文章只引用自有網域，不引用 `r2.dev`、S3 endpoint 或其他供應商專屬網址，才能在未來切換服務時保留文章網址。
+專用帳號必須使用獨立信箱、唯一密碼與 2FA；密碼、TOTP secret 與恢復碼只由擁有者保管，不寫入對話、Repository、Jira 或 manifest。
 
-## 公開網址與目錄
+## 公開網址與檔名
 
-若採用獨立資源網域，候選公開網址為：
+正式內文使用 GitHub 上傳後產生的匿名化網址，常見格式如下：
 
 ```text
-https://assets.tw-syuan.com/<object-key>
+https://github.com/user-attachments/assets/<uuid>
 ```
 
-Object key 使用以下結構：
+GitHub 附件網址不保留可讀檔名，也沒有可由本站管理的目錄結構。語意化名稱與來源仍使用以下結構：
 
 ```text
-posts/<yyyy>/<article-slug>/<semantic-name>-<content-hash>.<ext>
-shared/<category>/<semantic-name>-<content-hash>.<ext>
-downloads/<yyyy>/<article-slug>/<semantic-name>-<content-hash>.<ext>
+assets/images/posts/<article-slug>/<semantic-name>-<content-hash>.<ext>
 ```
 
 例如：
 
 ```text
-posts/2026/debugging-http-timeouts/request-flow-a1b2c3d4.svg
-downloads/2026/debugging-http-timeouts/benchmark-result-e5f6a7b8.pdf
+assets/images/posts/debugging-http-timeouts/request-flow-a1b2c3d4.svg
 ```
 
 規則：
@@ -67,8 +72,9 @@ downloads/2026/debugging-http-timeouts/benchmark-result-e5f6a7b8.pdf
 - `article-slug` 與文章檔名使用相同 slug。
 - 檔名描述內容，不使用 `image1`、`final`、`new` 等無法辨識用途的名稱。
 - `content-hash` 使用檔案 SHA-256 的前 8 碼。
-- 已公開物件不得覆寫；內容變更時產生新的 hash 與網址。
-- 已被文章引用的 object key 不得重新指向不同內容。
+- 每個 GitHub 附件網址都必須記錄於 manifest，不可只存在文章內文。
+- 已發布內容不得假設附件可以覆寫；內容變更時產生新的 hash 與 GitHub 網址。
+- 不刪除登錄 Issue，也不把所屬 Repository 改成 Private；這兩種變更都必須先完成附件遷移。
 
 ## 檔案格式與壓縮
 
@@ -87,84 +93,71 @@ downloads/2026/debugging-http-timeouts/benchmark-result-e5f6a7b8.pdf
 
 ## Cache 規則
 
-使用包含 content hash 的不可變網址：
+GitHub Issue 附件的回應標頭與 Cache 行為由 GitHub 控制，本站無法指定 `Cache-Control` 或執行 purge。因此採用下列規則：
 
-```http
-Cache-Control: public, max-age=31536000, immutable
-```
+- 已發布的附件視為不可變內容。
+- 修正圖片時重新上傳，取得新網址並更新 manifest 與文章引用。
+- 不使用 query string 模擬版本，也不假設同一網址會更新內容。
+- 若日後必須自行控制 Cache，即視為重新評估物件儲存／CDN 的觸發條件。
 
-若未來需要公開可變動的 manifest，使用：
+## 權限與公開性
 
-```http
-Cache-Control: public, max-age=300, must-revalidate
-```
-
-- 不以 purge 取代版本化網址。
-- 修正已發布檔案時，上傳新 object key 並更新文章引用。
-- 正式資源透過自訂網域與 CDN Cache 提供；供應商預設公開網址只用於短期驗證，正式啟用前應關閉或限制。
-- HTML、robots、sitemap 與 API 回應不放在本資源 Bucket。
-
-## 權限與 CORS
-
-- 匿名使用者只可透過 `assets.tw-syuan.com` 讀取公開資源。
-- 不允許匿名 `PUT`、`POST` 或 `DELETE`。
-- 上傳 Token 僅能寫入指定 Bucket，不授予帳號層級管理權限。
-- Token 只保存在 GitHub Actions Secrets 或本機安全憑證儲存區，不寫入 Repository、文章或建置輸出。
-- 關閉或限制正式 Bucket 的供應商預設公開網址，避免繞過自訂網域的 Cache 與安全規則。
-- CORS 預設只允許 `GET`、`HEAD`，來源限制為 `https://notes.tw-syuan.com`；若一般 `<img>` 不需要跨來源讀取內容，則不額外放寬 CORS。
-- PDF 預設使用 `Content-Disposition: inline`；強制下載的附件才使用 `attachment`。
+- 只在公開 `SyuanTsai/notes-assets` 的 Issue 上傳正式文章附件，確保讀者不需登入。
+- 附件網址是公開資訊；上傳前必須移除工作信箱、Token、Cookie、個人資料、內部網址與不需要的 metadata。
+- 專用帳號只以一般公開使用者身分新增 Issue／comment，不授予 collaborator、Token 或程式碼寫入權限。
+- 本站無法設定 GitHub 附件的 CORS；一般 `<img>` 顯示可直接使用，需要 JavaScript 讀取內容或 Canvas 操作時必須逐案驗證。
+- 文章代表圖片暫時維持 `/assets/images/` 站內路徑，避免同時變更 SEO／社群分享圖片規則。
 
 ## 發布流程
 
 1. 將來源檔案最佳化並計算 SHA-256。
-2. 依規則建立 object key，更新資源 manifest。
-3. 在本機執行路徑、格式、大小、重複 hash 與敏感資料檢查。
-4. 使用 Bucket-scoped Token 將檔案 copy 至選定服務；自動流程不得以 `sync --delete` 刪除遠端物件。
-5. 設定正確的 `Content-Type`、`Cache-Control` 與必要的 `Content-Disposition`。
-6. 透過 `https://assets.tw-syuan.com/...` 執行 `HEAD` 與實際下載驗證。
-7. 確認桌機、手機、深色模式、替代文字與版面無誤後，再把新網址加入文章。
-8. 未被引用的舊物件至少保留 90 天；刪除必須人工 Review。
+2. 使用語意化檔名保存來源，執行格式、大小、重複 hash 與敏感資料檢查。
+3. 以專用帳號在 `notes-assets` 靜態資源登錄 Issue 新增一則包含文章 slug、檔名與 SHA-256 的 comment。
+4. 將檔案貼上或拖曳至 comment，等待 GitHub 完成上傳並取得完整匿名化網址。
+5. 更新 `docs/static-assets-manifest.yml`，再把相同網址加入文章。
+6. 驗證未登入可存取、HTTPS、Content-Type、桌機／手機、深色模式、替代文字與版面。
+7. Issue comment 與 manifest 一起提交 Review；不得只保存匿名化網址而沒有來源對應。
 
 ## 備份、故障與遷移
 
 ### 備份
 
-- 若採用混合架構，Git Repository 保存所有已發布資源及 manifest，物件儲存／CDN 只視為傳遞副本。
-- manifest 至少記錄 object key、SHA-256、大小、Content-Type 與來源檔路徑。
-- 每月執行一次遠端清單與 SHA-256／ETag 核對。
+- Git Repository 保存所有已發布來源及 manifest，GitHub Issue 附件只視為傳遞副本。
+- manifest 至少記錄文章 slug、語意化名稱、GitHub URL、SHA-256、大小、Content-Type、來源檔路徑與登錄 Issue comment。
+- 每月抽查附件 URL 是否仍可匿名存取，並比對下載內容的 SHA-256。
 - 大型原始素材若不適合進入 Git，必須先保存於另一個受控備份位置，才可發布最佳化版本。
 
 ### 故障
 
-- 單一檔案損毀或誤刪：由 Git 保存版本依相同 object key 還原。
-- 公開傳遞服務異常：文章先維持原網址；若達到需要切換的故障門檻，將 manifest 所列物件複製至備援服務並切換 DNS。
-- 自訂網域憑證或 DNS 異常：先修復 `assets.tw-syuan.com`，不把文章改成供應商臨時網址。
+- 單一附件失效：由 Repository 保存版本重新上傳，更新 manifest 與引用該網址的文章。
+- Repository 被改為 Private 或即將刪除：在變更前依 manifest 完成全部附件遷移。
+- GitHub 服務異常：本站沒有獨立 Origin fallback；若穩定性不符合需求，啟動外部物件儲存遷移。
 
 ### 遷移
 
-1. 以 S3 API 或 `rclone copy` 將 manifest 中的物件複製到新供應商。
-2. 核對 object key、SHA-256、Content-Type、Cache-Control 與 Content-Disposition。
-3. 使用暫時測試 hostname 驗證圖片、PDF、Range request 與 CORS。
-4. 降低 `assets.tw-syuan.com` DNS TTL，切換至新 CDN／Origin。
-5. 觀察錯誤率後再停用舊服務；文章網址全程保持不變。
+1. 依 manifest 從 Repository 來源檔案重新發布到新服務。
+2. 核對新舊檔案的 SHA-256、Content-Type 與顯示結果。
+3. 建立「舊 GitHub URL → 新 URL」對照表，批次更新文章與 manifest。
+4. 完成 Jekyll 建置及桌機／手機視覺驗證後再發布。
+5. GitHub 附件沒有自訂網域抽象層，因此遷移必然需要修改文章；這是本方案已接受的主要代價。
 
-## 最小可行驗證（方案選定後執行）
+## 最小可行驗證
 
-目前不執行 Bucket、DNS 或正式網址變更。選定方案後才進行下列共通 MVP：
-
-1. 建立測試用 Bucket／Origin，名稱不出現在文章的長期公開網址中。
-2. 先以測試 hostname 驗證；確認全部項目後才評估綁定 `assets.tw-syuan.com`。
-3. 將 `request-flow.svg` 以包含 content hash 的 object key 上傳。
-4. 在未列出文章範本加入測試資源網址，不修改正式文章。
-5. 驗證 HTTPS、Content-Type、Cache-Control、ETag、CORS、桌機／手機顯示與不存在物件的回應。
-6. 驗證可由 Repository 保存檔案重新上傳並得到相同 SHA-256。
-7. 驗證 Bucket 權限、供應商預設公開網址及 Token 權限不會繞過預期限制。
-8. MVP 通過後，才決定是否遷移既有站內 `/assets/` 網址；不在驗證階段破壞現有網址。
+1. 主帳號建立公開 `SyuanTsai/notes-assets` 並開啟 Issues。
+2. 擁有者手動建立專用 GitHub machine user、啟用 2FA，並在雲端瀏覽器登入一次。
+3. 專用帳號在 `notes-assets` 建立靜態資源登錄 Issue，不接受 collaborator 邀請。
+4. 將既有 `request-flow.svg` 上傳為 Issue 附件並取得匿名化網址。
+5. 建立第一筆 `docs/static-assets-manifest.yml` 紀錄。
+6. 只在未列出文章範本替換這張測試圖片，不修改兩篇正式文章。
+7. 驗證未登入存取、HTTPS、Content-Type、桌機／手機顯示、深色模式、替代文字與版面。
+8. 從 Repository 來源重新計算 SHA-256，確認與 manifest 及下載附件一致。
+9. MVP 通過後，再決定新文章開始採用的日期；既有 `/assets/` 網址不強制搬遷。
 
 ## 官方資料
 
 - [GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)
 - [GitHub repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits)
+- [GitHub attaching files](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/attaching-files)
 - [Cloudflare R2 pricing](https://developers.cloudflare.com/r2/pricing/)
 - [Cloudflare R2 public buckets and custom domains](https://developers.cloudflare.com/r2/buckets/public-buckets/)
 - [Cloudflare R2 S3 API compatibility](https://developers.cloudflare.com/r2/api/s3/api/)
@@ -178,3 +171,7 @@ Cache-Control: public, max-age=300, must-revalidate
 - [Azure Blob Storage pricing](https://azure.microsoft.com/en-us/pricing/details/storage/blobs/)
 - [Azure Front Door pricing](https://azure.microsoft.com/en-us/pricing/details/frontdoor/)
 - [Reliability in Azure Blob Storage](https://learn.microsoft.com/en-us/azure/reliability/reliability-storage-blob)
+
+## 參考案例
+
+- [Will 保哥：使用 GitHub Issue 上傳部落格圖片](https://www.facebook.com/will.fans/posts/1087965440024211/)
