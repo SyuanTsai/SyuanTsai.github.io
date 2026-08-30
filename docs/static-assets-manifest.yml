@@ -1,0 +1,24 @@
+schema_version: 1
+
+delivery:
+  provider: github-issue-attachments
+  repository: SyuanTsai/Media-Assets
+
+assets:
+  - id: article-template/rocket-example
+    content_id: article-template
+    issue:
+      number: 1
+      url: https://github.com/SyuanTsai/Media-Assets/issues/1
+      record: body
+    source:
+      semantic_filename: article-template-rocket-example-7ff6a962.png
+      sha256: 7ff6a9628352bc30eaef3f4df09cb3b2188cf69795207ee51b6116bd84550bfa
+      bytes: 10370
+      content_type: image/png
+      width: 120
+      height: 120
+    delivery_url: https://github.com/user-attachments/assets/becf7d8d-5487-4f6c-b55e-23b80312e508
+    alt: "紫色火箭向右上方升空，尾部帶有橘色火焰"
+    uploaded_at: 2026-08-30
+    status: in-use
