@@ -953,6 +953,11 @@ select {
   border-spacing: 0;
 }
 
+.post-content table.update-history {
+  display: table;
+  width: 100%;
+}
+
 .post-content th,
 .post-content td {
   min-width: 110px;

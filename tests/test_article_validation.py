@@ -330,6 +330,7 @@ class ArticleValidationTests(unittest.TestCase):
                     <a class="reversefootnote" href="#fnref:c">back</a>
                   </div>
                   <h2>更新紀錄</h2>
+                  <table class="update-history"><tbody><tr><td>2026-08-30</td><td>初版發布</td></tr></tbody></table>
                 </body></html>
                 """,
                 encoding="utf-8",

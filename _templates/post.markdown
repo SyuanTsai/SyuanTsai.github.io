@@ -52,3 +52,4 @@ draft: false
 | 日期 | 更新內容 |
 | --- | --- |
 | YYYY-MM-DD | 初版發布 |
+{: .update-history}

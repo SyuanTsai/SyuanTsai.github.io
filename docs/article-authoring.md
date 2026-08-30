@@ -122,6 +122,7 @@ image:
 | 日期 | 更新內容 |
 | --- | --- |
 | YYYY-MM-DD | 初版發布 |
+{: .update-history}
 ```
 
 ## Markdown 格式
@@ -194,6 +195,7 @@ SQL Server 最多允許兩個 `WHEN MATCHED`。[^microsoft-merge]
 - 第一列記錄初版發布，日期與 `date` 相同。
 - 後續只記錄對讀者有意義的內容變更，不記錄純排版或拼字修正。
 - `last_modified_at` 必須等於最新一列日期。
+- 表格後固定保留 `{: .update-history}`，讓更新紀錄填滿文章內容寬度。
 
 ```markdown
 ## 更新紀錄
@@ -202,6 +204,7 @@ SQL Server 最多允許兩個 `WHEN MATCHED`。[^microsoft-merge]
 | --- | --- |
 | 2026-08-29 | 初版發布 |
 | 2026-08-30 | 補充限制與官方文件引用 |
+{: .update-history}
 ```
 
 ### 提示與警告
@@ -239,6 +242,7 @@ SQL Server 最多允許兩個 `WHEN MATCHED`。[^microsoft-merge]
 - 新範本與完整元素範例是否有起頭，以及「參考資料」與「更新紀錄」是否位於最後兩個 H2。
 - 句尾引用是否都有來源定義，引用清單是否固定在「參考資料」。
 - 更新紀錄是否包含初版日期，且最新日期是否與 `last_modified_at` 相同。
+- 產出的更新紀錄表格是否具有 `update-history` class 並使用完整內容寬度。
 - 完整元素範例是否涵蓋程式碼、表格、圖片、連結、引用與提示區塊。
 
 檢查失敗時會列出檔名與明確原因並回傳非零結束碼。CI 會在 Jekyll 建置後再執行 `scripts/verify_generated_seo.py`，確認每篇已發布文章的 Title、Description 與 Canonical URL 都存在且符合 Front Matter。
