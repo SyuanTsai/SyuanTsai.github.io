@@ -176,6 +176,7 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertIn(".post-content > p:not(:has(img))", styles)
         self.assertIn("max-width: 52em", styles)
         self.assertIn("text-wrap: pretty", styles)
+        self.assertRegex(styles, r"\.post-content a\.footnote\s*\{[^}]*display: inline;")
         self.assertRegex(config, r"kramdown:\s+hard_wrap: false")
         self.assertIn("不要依固定字數斷行", template)
         self.assertIn("### 分段與自然換行", guide)
