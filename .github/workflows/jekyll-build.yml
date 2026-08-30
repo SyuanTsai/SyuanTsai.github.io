@@ -39,3 +39,32 @@ jobs:
           test ! -d _site/tests
           test ! -d _site/_drafts
           test ! -d _site/_templates
+
+      - name: Capture responsive article-template previews
+        run: |
+          python3 -m http.server 4000 --directory _site >/tmp/syuan-notes-preview.log 2>&1 &
+          preview_server_pid=$!
+          trap 'kill "$preview_server_pid"' EXIT
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4000/preview/article-template/ >/dev/null; then
+              break
+            fi
+            sleep 0.25
+          done
+          mkdir -p visual-review
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1440,2400 \
+            --screenshot=visual-review/article-template-desktop.png \
+            http://127.0.0.1:4000/preview/article-template/
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=390,3000 \
+            --screenshot=visual-review/article-template-mobile.png \
+            http://127.0.0.1:4000/preview/article-template/
+
+      - name: Upload visual review screenshots
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: visual-review-${{ github.sha }}
+          path: visual-review
+          if-no-files-found: error
+          retention-days: 1
