@@ -179,24 +179,45 @@ def _validate_date(value: Any, field_name: str, errors: list[str]) -> date | Non
 
 def _validate_body(document: Document, errors: list[str]) -> None:
     in_fence = False
+    prose_lines: list[str] = []
     for line_number, line in enumerate(document.body.splitlines(), start=1):
         fence = FENCE_RE.match(line)
         if fence:
             if not in_fence and not fence.group("language").strip():
                 errors.append(f"本文第 {line_number} 行的程式碼區塊缺少語言名稱")
             in_fence = not in_fence
+            prose_lines.append("")
             continue
         if not in_fence and re.match(r"^\s*#\s+", line):
             errors.append(f"本文第 {line_number} 行使用 H1；文章本文必須從 H2 (`##`) 開始")
+        prose_lines.append("" if in_fence else line)
 
     if in_fence:
         errors.append("本文有未關閉的 fenced code block")
 
-    for image in MARKDOWN_IMAGE_RE.finditer(document.body):
+    prose_body = "\n".join(prose_lines)
+    for image in MARKDOWN_IMAGE_RE.finditer(prose_body):
         if not image.group("alt").strip():
             errors.append("Markdown 圖片必須提供非空的替代文字")
 
-    for image_tag in re.finditer(r"<img\b[^>]*>", document.body, flags=re.IGNORECASE):
+        line_end = prose_body.find("\n", image.end())
+        if line_end == -1:
+            line_end = len(prose_body)
+        suffix = prose_body[image.end() : line_end]
+        attributes = re.match(r"\s*\{:\s*(?P<attributes>[^}\n]*)\}", suffix)
+        width = None
+        height = None
+        if attributes:
+            attribute_text = attributes.group("attributes")
+            width = re.search(r"\bwidth\s*=\s*([\"']?)([1-9]\d*)\1", attribute_text)
+            height = re.search(r"\bheight\s*=\s*([\"']?)([1-9]\d*)\1", attribute_text)
+        if not width or not height:
+            errors.append(
+                "Markdown 圖片後必須緊接原始像素尺寸，例如 "
+                '`{: width="960" height="540" }`'
+            )
+
+    for image_tag in re.finditer(r"<img\b[^>]*>", prose_body, flags=re.IGNORECASE):
         if not re.search(r"\balt\s*=\s*(['\"]).+?\1", image_tag.group(0), flags=re.IGNORECASE):
             errors.append("HTML `<img>` 必須提供非空的 `alt` 屬性")
 

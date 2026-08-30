@@ -156,10 +156,10 @@ using var response = await httpClient.SendAsync(request);
 
 ### 圖片
 
-圖片放在 `assets/images/posts/<slug>/`，必須提供能說明資訊的替代文字：
+圖片放在 `assets/images/posts/<slug>/`，必須提供能說明資訊的替代文字，並填入圖片的原始像素寬高。瀏覽器會在圖片下載前依這組尺寸預留空間，避免內容載入時發生版面位移；CSS 仍會讓圖片在窄螢幕等比例縮小：
 
 ```markdown
-![HTTP 請求處理流程](/assets/images/posts/debugging-http-timeouts/request-flow.svg)
+![HTTP 請求處理流程](/assets/images/posts/debugging-http-timeouts/request-flow.svg){: width="960" height="360" }
 ```
 
 ### 連結、句尾引用與引用區塊

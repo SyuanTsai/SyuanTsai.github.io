@@ -19,7 +19,7 @@ API 偶爾回報 Timeout，但僅看例外訊息無法判斷限制發生在 Clie
 
 > Timeout 是觀察到的結果，不等於已經找到根因。
 
-![HTTP 請求處理流程](/assets/images/posts/article-format-example/request-flow.svg)
+![HTTP 請求處理流程](/assets/images/posts/article-format-example/request-flow.svg){: width="960" height="360" }
 
 ## 診斷程式碼
 

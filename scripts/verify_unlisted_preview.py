@@ -20,6 +20,7 @@ class PreviewHtmlParser(HTMLParser):
         self.reverse_footnote_links = 0
         self.has_footnote_list = False
         self.has_update_history_table = False
+        self.images: list[dict[str, str]] = []
         self._in_h1 = False
         self.h1_parts: list[str] = []
 
@@ -36,6 +37,8 @@ class PreviewHtmlParser(HTMLParser):
             self.has_footnote_list = True
         if tag == "table" and "update-history" in classes:
             self.has_update_history_table = True
+        if tag == "img":
+            self.images.append(attributes)
         if tag == "h1":
             self._in_h1 = True
 
@@ -84,6 +87,19 @@ def verify(site: Path) -> list[str]:
         errors.append("預覽頁參考資料缺少返回原文連結")
     if not parser.has_update_history_table:
         errors.append("預覽頁更新紀錄表格必須具有 `update-history` class")
+
+    request_flow_images = [
+        image
+        for image in parser.images
+        if image.get("src", "").endswith("/assets/images/posts/article-format-example/request-flow.svg")
+    ]
+    if len(request_flow_images) != 1:
+        errors.append("預覽頁必須且只能輸出一張 HTTP 請求處理流程圖片")
+    elif (
+        request_flow_images[0].get("width") != "960"
+        or request_flow_images[0].get("height") != "360"
+    ):
+        errors.append("預覽頁流程圖片必須輸出原始尺寸 width=960、height=360")
 
     footnotes = re.search(
         r"<(?:div|ol)\b[^>]*(?:class=[\"'][^\"']*\bfootnotes\b|role=[\"']doc-endnotes[\"'])",
