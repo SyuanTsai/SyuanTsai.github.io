@@ -41,9 +41,15 @@ draft: false
 | 功能 | 通過 |
 | 回歸 | 通過 |
 
-<!-- 將 width 與 height 改成圖片的原始像素尺寸，避免圖片載入時造成版面位移。 -->
-<!-- 將下列網址替換成公開 GitHub Issue 上傳完成後產生的實際附件網址。 -->
-![替代文字](https://github.com/user-attachments/assets/REPLACE_WITH_GITHUB_UUID){: width="960" height="540" }
+<!--
+圖片資產規則：
+1. 一篇文章或一個使用單位對應 Media-Assets 的一個公開 Issue。
+2. Issue 標題使用「YYYY-MM-DD | 專案 | 內容識別碼 | article-assets」；日期為首次建立日，後續補圖不更改。
+3. 同篇文章有多張圖時，為每張邏輯圖片或同圖尺寸版本建立穩定的 Asset ID，並記在 Issue 索引與個別 comment；第一筆資產可直接記在 Issue 本文。
+4. 將下列網址替換成 GitHub 上傳完成後產生的完整附件網址，並同步更新 docs/static-assets-manifest.yml。
+5. 替代文字必須描述圖片傳達的資訊；width 與 height 使用原始像素尺寸。非首屏關鍵圖片保留 loading="lazy"。
+-->
+![替代文字](https://github.com/user-attachments/assets/REPLACE_WITH_GITHUB_UUID){: width="960" height="540" loading="lazy" }
 
 > 只在需要保留來源語意時使用引用區塊。
 
