@@ -64,7 +64,7 @@ jobs:
       - name: Upload visual review screenshots
         uses: actions/upload-artifact@v7.0.1
         with:
-          name: visual-review-${{ github.sha }}
+          name: visual-review-${{ github.event.pull_request.head.sha }}
           path: visual-review
           if-no-files-found: error
           retention-days: 1
