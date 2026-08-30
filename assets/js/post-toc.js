@@ -10,6 +10,7 @@
   var headings = Array.prototype.slice.call(content.querySelectorAll("h2, h3"));
 
   if (headings.length === 0) {
+    toc.hidden = true;
     return;
   }
 
@@ -50,5 +51,5 @@
     tocList.appendChild(item);
   });
 
-  toc.hidden = false;
+  toc.classList.remove("post-toc--pending");
 }());

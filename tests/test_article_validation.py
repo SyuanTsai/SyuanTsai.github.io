@@ -90,6 +90,35 @@ class ArticleValidationTests(unittest.TestCase):
 
             self.assertTrue(any("原始像素尺寸" in error for error in errors))
 
+    def test_published_post_requires_h2_for_toc_layout(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = self.write_document(
+                root,
+                "_posts/2026-08-29-post-without-section.markdown",
+                """
+                ---
+                title: "Post without section"
+                date: 2026-08-29
+                description: "The post cannot produce a stable table of contents."
+                ---
+
+                Opening text without any section heading.
+                """,
+            )
+
+            errors = validate_document(parse_front_matter(path), "post", root)
+
+            self.assertTrue(any("至少需要一個 H2" in error for error in errors))
+
+    def test_toc_script_reveals_preallocated_sidebar(self) -> None:
+        include = (ROOT / "_includes/post-toc.html").read_text(encoding="utf-8")
+        script = (ROOT / "assets/js/post-toc.js").read_text(encoding="utf-8")
+
+        self.assertIn("post-toc--pending", include)
+        self.assertNotRegex(include, r"\bdata-post-toc\b[^>]*\bhidden\b")
+        self.assertIn('toc.classList.remove("post-toc--pending")', script)
+
     def test_missing_description_returns_actionable_error(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -343,6 +372,9 @@ class ArticleValidationTests(unittest.TestCase):
                   <meta name="robots" content="noindex, nofollow, noarchive">
                 </head><body>
                   <h1>出版文章範本預覽</h1>
+                  <nav class="post-toc post-toc--pending" data-post-toc>
+                    <h2>本文目錄</h2><ol></ol>
+                  </nav>
                   <p>
                     Claim<a class="footnote" href="#fn:a">1</a>
                     <a class="footnote" href="#fn:b">2</a>

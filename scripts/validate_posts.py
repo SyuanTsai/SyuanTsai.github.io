@@ -422,6 +422,8 @@ def validate_document(document: Document, kind: str, root: Path) -> list[str]:
                 errors.append("`image.alt` 不得為空")
 
     _validate_body(document, errors)
+    if kind == "post" and not _h2_sections(document.body):
+        errors.append("已發布文章至少需要一個 H2，才能在初始版面保留目錄欄")
     return errors
 
 
