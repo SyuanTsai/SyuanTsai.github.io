@@ -10,6 +10,11 @@ from pathlib import Path
 
 
 PREVIEW_URL = "/preview/article-template/"
+ROCKET_ASSET_URL = (
+    "https://github.com/user-attachments/assets/"
+    "becf7d8d-5487-4f6c-b55e-23b80312e508"
+)
+ROCKET_ASSET_ALT = "紫色火箭向右上方升空，尾部帶有橘色火焰"
 
 
 class PreviewHtmlParser(HTMLParser):
@@ -108,18 +113,21 @@ def verify(site: Path) -> list[str]:
     if "/assets/js/post-toc.js" in html:
         errors.append("文章目錄不可等待外部腳本下載後才建立")
 
-    request_flow_images = [
+    rocket_images = [
         image
         for image in parser.images
-        if image.get("src", "").endswith("/assets/images/posts/article-format-example/request-flow.svg")
+        if image.get("src") == ROCKET_ASSET_URL
     ]
-    if len(request_flow_images) != 1:
-        errors.append("預覽頁必須且只能輸出一張 HTTP 請求處理流程圖片")
-    elif (
-        request_flow_images[0].get("width") != "960"
-        or request_flow_images[0].get("height") != "360"
-    ):
-        errors.append("預覽頁流程圖片必須輸出原始尺寸 width=960、height=360")
+    if len(rocket_images) != 1:
+        errors.append("預覽頁必須且只能輸出一張 article-template 火箭附件")
+    else:
+        rocket = rocket_images[0]
+        if rocket.get("width") != "120" or rocket.get("height") != "120":
+            errors.append("預覽頁火箭附件必須輸出原始尺寸 width=120、height=120")
+        if rocket.get("alt") != ROCKET_ASSET_ALT:
+            errors.append("預覽頁火箭附件的替代文字與 manifest 不一致")
+        if rocket.get("loading") != "lazy":
+            errors.append("預覽頁非首屏火箭附件必須使用 loading=lazy")
 
     footnotes = re.search(
         r"<(?:div|ol)\b[^>]*(?:class=[\"'][^\"']*\bfootnotes\b|role=[\"']doc-endnotes[\"'])",
