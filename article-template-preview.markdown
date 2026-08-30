@@ -55,7 +55,7 @@ using var response = await httpClient.SendAsync(request, cancellationToken);
 | 手機版面 | 引用徽章可點擊並跳至參考資料 |
 | 未列出狀態 | 不出現在首頁、文章列表或導覽 |
 
-![HTTP 請求處理流程](/assets/images/posts/article-format-example/request-flow.svg)
+![HTTP 請求處理流程](/assets/images/posts/article-format-example/request-flow.svg){: width="960" height="360" }
 
 > 只有需要保留來源原句、規則或觀點時才使用引用區塊；一般來源標示使用句尾引用。
 

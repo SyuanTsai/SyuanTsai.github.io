@@ -36,7 +36,8 @@ draft: false
 | 功能 | 通過 |
 | 回歸 | 通過 |
 
-![替代文字](/assets/images/posts/article-slug/example.svg)
+<!-- 將 width 與 height 改成圖片的原始像素尺寸，避免圖片載入時造成版面位移。 -->
+![替代文字](/assets/images/posts/article-slug/example.svg){: width="960" height="540" }
 
 > 只在需要保留來源語意時使用引用區塊。
 

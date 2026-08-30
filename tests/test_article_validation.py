@@ -52,6 +52,8 @@ class ArticleValidationTests(unittest.TestCase):
 
                 ## Result
 
+                ![Request flow](/assets/images/posts/example/cover.svg){: width="960" height="360" }
+
                 ```text
                 ok
                 ```
@@ -64,6 +66,29 @@ class ArticleValidationTests(unittest.TestCase):
             self.assertEqual(["testing", "jekyll"], document.fields["tags"])
             self.assertEqual("Request flow", document.fields["image"]["alt"])
             self.assertEqual([], validate_document(document, "post", root))
+
+    def test_body_image_requires_intrinsic_dimensions(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = self.write_document(
+                root,
+                "_posts/2026-08-29-image-without-size.markdown",
+                """
+                ---
+                title: "Image without size"
+                date: 2026-08-29
+                description: "The body image does not reserve layout space."
+                ---
+
+                ## Result
+
+                ![Request flow](/assets/images/posts/example/request-flow.svg)
+                """,
+            )
+
+            errors = validate_document(parse_front_matter(path), "post", root)
+
+            self.assertTrue(any("原始像素尺寸" in error for error in errors))
 
     def test_missing_description_returns_actionable_error(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -331,6 +356,8 @@ class ArticleValidationTests(unittest.TestCase):
                   </div>
                   <h2>更新紀錄</h2>
                   <table class="update-history"><tbody><tr><td>2026-08-30</td><td>初版發布</td></tr></tbody></table>
+                  <img src="/assets/images/posts/article-format-example/request-flow.svg"
+                       alt="HTTP 請求處理流程" width="960" height="360">
                 </body></html>
                 """,
                 encoding="utf-8",
