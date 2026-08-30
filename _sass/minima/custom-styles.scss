@@ -804,7 +804,7 @@ select {
 
 .post-body {
   display: grid;
-  grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr);
+  grid-template-columns: clamp(220px, 18vw, 260px) minmax(0, 1fr);
   align-items: start;
   gap: clamp(28px, 5vw, 58px);
   margin-top: 34px;
