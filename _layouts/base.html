@@ -7,7 +7,7 @@
 
     <main id="main-content" class="page-content" aria-label="主要內容">
       <div class="site-shell{% unless page.layout == 'home' or page.layout == 'articles' %} reading-shell{% endunless %}">
-        {{ content }}
+        {{ content | replace: '<table', '<div class="table-scroll"><table' | replace: '</table>', '</table></div>' }}
       </div>
     </main>
 
