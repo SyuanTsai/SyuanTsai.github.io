@@ -1157,7 +1157,8 @@ select {
   }
 }
 
-.post-content .keep-phrase {
+.post-content .keep-phrase,
+.post-content [data-word-segment] {
   white-space: nowrap;
 }
 

@@ -156,6 +156,17 @@ jobs:
             --virtual-time-budget=5000 --window-size=390,2200 \
             --screenshot=visual-review/search-review-mobile.png \
             'http://127.0.0.1:4000/search/?q=review'
+          google-chrome --headless=new --no-sandbox --disable-gpu \
+            --virtual-time-budget=5000 --dump-dom \
+            http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html \
+            > visual-review/code-review-dom.html
+          google-chrome --headless=new --no-sandbox --disable-gpu \
+            --virtual-time-budget=5000 --dump-dom \
+            http://127.0.0.1:4000/2022/05/11/sql-server-merge.html \
+            > visual-review/sql-merge-dom.html
+          python3 scripts/verify_rendered_word_breaks.py \
+            visual-review/code-review-dom.html \
+            visual-review/sql-merge-dom.html
 
       - name: Verify browser search result
         run: |
