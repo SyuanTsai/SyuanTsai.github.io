@@ -221,11 +221,14 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertIn("Intl.Segmenter", word_breaks)
         self.assertIn('new Intl.Segmenter("zh-Hant"', word_breaks)
         self.assertIn('CSS.supports("word-break", "auto-phrase")', word_breaks)
+        self.assertIn("joinsFollowingWord", word_breaks)
+        self.assertIn("joinsPreviousWord", word_breaks)
         self.assertNotIn('".keep-phrase"', word_breaks)
         self.assertIn('".footnotes"', word_breaks)
         self.assertIn('"code"', word_breaks)
         self.assertIn('content.dataset.wordSegmentation = "native"', word_breaks)
-        self.assertIn('content.dataset.wordSegmentation = "fallback"', word_breaks)
+        self.assertIn('content.dataset.wordSegmentation = "enhanced"', word_breaks)
+        self.assertNotIn('content.dataset.wordSegmentation = "fallback"', word_breaks)
 
     def test_all_content_tables_fill_the_content_column(self) -> None:
         styles = (ROOT / "_sass/minima/custom-styles.scss").read_text(encoding="utf-8")

@@ -30,14 +30,14 @@ def span_texts(html: str, attribute_pattern: str) -> set[str]:
     return {text_content(fragment) for fragment in pattern.findall(html)}
 
 
-def verify(html_path: Path, fallback_words: set[str]) -> list[str]:
+def verify(html_path: Path, protected_words: set[str]) -> list[str]:
     html = html_path.read_text(encoding="utf-8")
     errors: list[str] = []
 
     uses_native_wrapping = 'data-word-segmentation="native"' in html
-    uses_fallback_wrapping = 'data-word-segmentation="fallback"' in html
+    uses_enhanced_wrapping = 'data-word-segmentation="enhanced"' in html
 
-    if not uses_native_wrapping and not uses_fallback_wrapping:
+    if not uses_native_wrapping and not uses_enhanced_wrapping:
         errors.append(f"{html_path}: 詞組斷行模式未完成初始化")
 
     if "keep-phrase" in html:
@@ -48,9 +48,9 @@ def verify(html_path: Path, fallback_words: set[str]) -> list[str]:
     if uses_native_wrapping and rendered_words:
         errors.append(f"{html_path}: 原生斷行模式不應再插入詞組 span")
 
-    if uses_fallback_wrapping:
-        for word in sorted(fallback_words - rendered_words):
-            errors.append(f"{html_path}: 備援模式缺少詞內保護「{word}」")
+    if uses_enhanced_wrapping:
+        for word in sorted(protected_words - rendered_words):
+            errors.append(f"{html_path}: 增強模式缺少詞內保護「{word}」")
 
     return errors
 
@@ -62,12 +62,12 @@ def main() -> int:
 
     errors = verify(
         Path(sys.argv[1]),
-        fallback_words={"程式碼"},
+        protected_words={"後續", "可讀性", "不影響", "可測試性", "程式碼"},
     )
     errors.extend(
         verify(
             Path(sys.argv[2]),
-            fallback_words={"擴充性"},
+            protected_words={"目標", "資料", "更新", "擴充性"},
         )
     )
 
@@ -75,7 +75,7 @@ def main() -> int:
         print("\n".join(errors))
         return 1
 
-    print("文章原生詞組斷行與備援模式已通過瀏覽器 DOM 驗證。")
+    print("文章原生排版與增強詞組保護已通過瀏覽器 DOM 驗證。")
     return 0
 
 
