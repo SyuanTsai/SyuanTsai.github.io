@@ -30,7 +30,11 @@ def span_texts(html: str, attribute_pattern: str) -> set[str]:
     return {text_content(fragment) for fragment in pattern.findall(html)}
 
 
-def verify(html_path: Path, protected_words: set[str]) -> list[str]:
+def verify(
+    html_path: Path,
+    protected_words: set[str],
+    glued_inline_codes: set[str] | None = None,
+) -> list[str]:
     html = html_path.read_text(encoding="utf-8")
     errors: list[str] = []
 
@@ -52,6 +56,11 @@ def verify(html_path: Path, protected_words: set[str]) -> list[str]:
         for word in sorted(protected_words - rendered_words):
             errors.append(f"{html_path}: 增強模式缺少詞內保護「{word}」")
 
+        normalized_html = unescape(html)
+        for code in sorted(glued_inline_codes or set()):
+            if f'\u00a0<code>{code}</code>' not in normalized_html:
+                errors.append(f"{html_path}: 行內程式碼「{code}」未黏住前一個詞")
+
     return errors
 
 
@@ -62,12 +71,21 @@ def main() -> int:
 
     errors = verify(
         Path(sys.argv[1]),
-        protected_words={"後續", "可讀性", "不影響", "可測試性", "程式碼"},
+        protected_words={
+            "後續",
+            "可讀性",
+            "不影響",
+            "可測試性",
+            "程式碼",
+            "與後續",
+            "只能二選一",
+        },
     )
     errors.extend(
         verify(
             Path(sys.argv[2]),
             protected_words={"目標", "資料", "更新", "擴充性"},
+            glued_inline_codes={"MERGE"},
         )
     )
 

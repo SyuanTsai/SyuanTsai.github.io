@@ -38,12 +38,50 @@
     "讓",
     "被",
     "把",
+    "與",
+    "及",
+    "或",
+    "並",
+    "且",
+    "但",
+    "則",
+    "而",
+    "以",
+    "於",
+    "在",
+    "由",
+    "從",
+    "向",
+    "對",
+    "為",
+    "如",
+    "若",
+    "只能",
     "為非"
   ]);
   var joinsPreviousWord = new Set([
     "性",
     "者",
     "們"
+  ]);
+  var hanNumerals = new Set([
+    "〇",
+    "零",
+    "一",
+    "二",
+    "兩",
+    "三",
+    "四",
+    "五",
+    "六",
+    "七",
+    "八",
+    "九",
+    "十",
+    "百",
+    "千",
+    "萬",
+    "億"
   ]);
   var protectedSelector = [
     "code",
@@ -66,7 +104,12 @@
   function shouldJoinWords(left, right) {
     return isHanWord(left)
       && isHanWord(right)
-      && (joinsFollowingWord.has(left.segment) || joinsPreviousWord.has(right.segment));
+      && (
+        joinsFollowingWord.has(left.segment)
+        || joinsPreviousWord.has(right.segment)
+        || hanNumerals.has(left.segment)
+        || hanNumerals.has(right.segment)
+      );
   }
 
   function appendProtectedWord(fragment, text) {
@@ -134,6 +177,22 @@
 
     if (insertedProtectedWord) {
       textNode.parentNode.replaceChild(fragment, textNode);
+    }
+  });
+
+  content.querySelectorAll("p code, li code, blockquote code").forEach(function (code) {
+    if (code.closest("pre")) {
+      return;
+    }
+
+    var spacing = code.previousSibling;
+
+    if (
+      spacing
+      && spacing.nodeType === Node.TEXT_NODE
+      && /[ \t\r\n]$/.test(spacing.nodeValue || "")
+    ) {
+      spacing.nodeValue = spacing.nodeValue.replace(/[ \t\r\n]+$/, "\u00a0");
     }
   });
 
