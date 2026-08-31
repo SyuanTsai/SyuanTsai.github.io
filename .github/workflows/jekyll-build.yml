@@ -105,9 +105,33 @@ jobs:
             --screenshot=visual-review/code-review-phrase-wrapping-desktop.png \
             http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html
           google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=2048,5000 \
+            --screenshot=visual-review/code-review-phrase-wrapping-wide.png \
+            http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1638,5000 \
+            --screenshot=visual-review/code-review-phrase-wrapping-zoom-125-equivalent.png \
+            http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1365,5000 \
+            --screenshot=visual-review/code-review-phrase-wrapping-zoom-150-equivalent.png \
+            http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
             --virtual-time-budget=5000 --window-size=390,9000 \
             --screenshot=visual-review/code-review-phrase-wrapping-mobile.png \
             http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=2048,7000 \
+            --screenshot=visual-review/sql-merge-phrase-wrapping-wide.png \
+            http://127.0.0.1:4000/2022/05/11/sql-server-merge.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1638,7000 \
+            --screenshot=visual-review/sql-merge-phrase-wrapping-zoom-125-equivalent.png \
+            http://127.0.0.1:4000/2022/05/11/sql-server-merge.html
+          google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
+            --virtual-time-budget=5000 --window-size=1365,7000 \
+            --screenshot=visual-review/sql-merge-phrase-wrapping-zoom-150-equivalent.png \
+            http://127.0.0.1:4000/2022/05/11/sql-server-merge.html
           google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
             --virtual-time-budget=5000 --window-size=1440,2200 \
             --screenshot=visual-review/home-desktop.png \

@@ -16,10 +16,38 @@ class TextExtractor(HTMLParser):
         self.parts.append(data)
 
 
+class ClassNameExtractor(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.class_names: set[str] = set()
+
+    def handle_starttag(
+        self,
+        _tag: str,
+        attrs: list[tuple[str, str | None]],
+    ) -> None:
+        for name, value in attrs:
+            if name == "class" and value:
+                self.class_names.update(value.split())
+
+    def handle_startendtag(
+        self,
+        tag: str,
+        attrs: list[tuple[str, str | None]],
+    ) -> None:
+        self.handle_starttag(tag, attrs)
+
+
 def text_content(fragment: str) -> str:
     parser = TextExtractor()
     parser.feed(fragment)
     return unescape("".join(parser.parts))
+
+
+def has_class_name(html: str, class_name: str) -> bool:
+    parser = ClassNameExtractor()
+    parser.feed(html)
+    return class_name in parser.class_names
 
 
 def span_texts(html: str, attribute_pattern: str) -> set[str]:
@@ -30,21 +58,52 @@ def span_texts(html: str, attribute_pattern: str) -> set[str]:
     return {text_content(fragment) for fragment in pattern.findall(html)}
 
 
-def verify(html_path: Path, automatic_words: set[str], kept_phrases: set[str]) -> list[str]:
+def word_segmentation_mode(html: str) -> str | None:
+    match = re.search(r'\bdata-word-segmentation="([^"]+)"', html)
+    return match.group(1) if match else None
+
+
+def verify(
+    html_path: Path,
+    protected_words: set[str],
+    glued_inline_codes: set[str] | None = None,
+) -> list[str]:
     html = html_path.read_text(encoding="utf-8")
     errors: list[str] = []
 
-    if 'data-word-segmentation="ready"' not in html:
-        errors.append(f"{html_path}: 自動詞組分析未完成")
+    wrapping_mode = word_segmentation_mode(html)
+    uses_native_wrapping = wrapping_mode == "native"
+    uses_enhanced_wrapping = wrapping_mode == "enhanced"
+
+    if wrapping_mode is None:
+        errors.append(f"{html_path}: 詞組斷行模式未完成初始化")
+    elif wrapping_mode == "unavailable":
+        errors.append(
+            f"{html_path}: 瀏覽器不支援 word-break: auto-phrase，"
+            "且缺少 Intl.Segmenter"
+        )
+    elif not uses_native_wrapping and not uses_enhanced_wrapping:
+        errors.append(f"{html_path}: 未知的詞組斷行模式「{wrapping_mode}」")
+
+    if has_class_name(html, "keep-phrase"):
+        errors.append(f"{html_path}: 不應以手動不可拆片語干擾自然斷行")
 
     rendered_words = span_texts(html, r"\bdata-word-segment(?:=\"\")?")
-    rendered_phrases = span_texts(html, r'\bclass="[^"]*\bkeep-phrase\b[^"]*"')
 
-    for word in sorted(automatic_words - rendered_words):
-        errors.append(f"{html_path}: 缺少自動保護詞「{word}」")
+    if uses_native_wrapping and rendered_words:
+        errors.append(f"{html_path}: 原生斷行模式不應再插入詞組 span")
 
-    for phrase in sorted(kept_phrases - rendered_phrases):
-        errors.append(f"{html_path}: 缺少不可拆片語「{phrase}」")
+    if uses_enhanced_wrapping:
+        for word in sorted(protected_words - rendered_words):
+            errors.append(f"{html_path}: 增強模式缺少詞內保護「{word}」")
+
+        normalized_html = unescape(html)
+        for code in sorted(glued_inline_codes or set()):
+            pattern = re.compile(
+                rf'\u00a0<code\b[^>]*>{re.escape(code)}</code>'
+            )
+            if not pattern.search(normalized_html):
+                errors.append(f"{html_path}: 行內程式碼「{code}」未黏住前一個詞")
 
     return errors
 
@@ -56,22 +115,30 @@ def main() -> int:
 
     errors = verify(
         Path(sys.argv[1]),
-        automatic_words={"程式碼"},
-        kept_phrases={
-            "整體程式碼健康",
-            "非必要建議",
-            "理解成本只會更高、風險也更大",
+        protected_words={
+            "後續",
+            "可讀性",
+            "不影響",
+            "可測試性",
+            "程式碼",
+            "與後續",
+            "與可測試性的",
+            "讓下一位",
+            "只能二選一",
         },
     )
     errors.extend(
         verify(
             Path(sys.argv[2]),
-            automatic_words={"擴充性"},
-            kept_phrases={
-                "更新目標資料",
-                "queued updating replication",
-                "INSERT、UPDATE 與 DELETE",
+            protected_words={
+                "目標",
+                "資料",
+                "更新",
+                "以分號",
+                "被多筆",
+                "與擴充性",
             },
+            glued_inline_codes={"MERGE"},
         )
     )
 
@@ -79,7 +146,7 @@ def main() -> int:
         print("\n".join(errors))
         return 1
 
-    print("文章詞內保護與不可拆片語已通過瀏覽器 DOM 驗證。")
+    print("文章原生排版與增強詞組保護已通過瀏覽器 DOM 驗證。")
     return 0
 
 

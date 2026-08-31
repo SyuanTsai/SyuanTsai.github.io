@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import sys
 import unittest
-from pathlib import Path
+from pathlib import Path, PurePath, PureWindowsPath
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -11,6 +11,10 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from generate_discovery_pages import check, expected_pages  # noqa: E402
 from validate_posts import parse_front_matter, post_output_url  # noqa: E402
+
+
+def repository_relative_key(path: PurePath, root: PurePath) -> str:
+    return path.relative_to(root).as_posix()
 
 
 class ContentDiscoveryTests(unittest.TestCase):
@@ -25,6 +29,16 @@ class ContentDiscoveryTests(unittest.TestCase):
             "/2022/05/11/sql-server-merge.html",
             "/2025/12/14/code-review-alignment-for-long-term-maintenance.html",
         }
+        expected_redirects = {
+            "_posts/2022-05-11-sql-server-merge.markdown": {
+                "/mssql/2022/05/11/sql-server-merge.html",
+                "/MSSQL/2022/05/11/sql-server-merge.html",
+            },
+            "_posts/2025-12-14-code-review-alignment-for-long-term-maintenance.markdown": {
+                "/code/review/2025/12/14/Code-Review-Alignment-for-Long-Term-Maintenance.html",
+                "/Code/2025/12/14/Code-Review-Alignment-for-Long-Term-Maintenance.html",
+            },
+        }
         actual_urls: set[str] = set()
 
         for path in sorted((ROOT / "_posts").glob("*.markdown")):
@@ -32,9 +46,21 @@ class ContentDiscoveryTests(unittest.TestCase):
             actual_urls.add(post_output_url(document))
             self.assertEqual(1, len(document.fields["categories"]))
             self.assertGreaterEqual(len(document.fields["tags"]), 1)
-            self.assertIn("redirect_from", document.fields)
+            self.assertEqual(
+                expected_redirects[repository_relative_key(path, ROOT)],
+                set(document.fields["redirect_from"]),
+            )
 
         self.assertEqual(expected_urls, actual_urls)
+
+    def test_legacy_redirect_lookup_uses_posix_keys_on_windows(self) -> None:
+        root = PureWindowsPath("C:/repository")
+        post = root / "_posts/2022-05-11-sql-server-merge.markdown"
+
+        self.assertEqual(
+            "_posts/2022-05-11-sql-server-merge.markdown",
+            repository_relative_key(post, root),
+        )
 
     def test_search_index_source_contains_only_required_public_fields(self) -> None:
         source = (ROOT / "search.json").read_text(encoding="utf-8")
@@ -62,11 +88,12 @@ class ContentDiscoveryTests(unittest.TestCase):
         self.assertIn("- jekyll-redirect-from", config)
         self.assertNotIn("permalink: /:categories/", config)
 
-    def test_published_posts_mark_required_phrases_as_unbroken(self) -> None:
+    def test_published_posts_leave_phrase_wrapping_to_the_browser(self) -> None:
         required_phrases = {
             "_posts/2022-05-11-sql-server-merge.markdown": (
                 "更新目標資料",
                 "queued updating replication",
+                "`INSERT`、`UPDATE` 與 `DELETE`",
             ),
             "_posts/2025-12-14-code-review-alignment-for-long-term-maintenance.markdown": (
                 "整體程式碼健康",
@@ -77,21 +104,10 @@ class ContentDiscoveryTests(unittest.TestCase):
 
         for relative_path, phrases in required_phrases.items():
             source = (ROOT / relative_path).read_text(encoding="utf-8")
+            self.assertNotIn('class="keep-phrase"', source)
             for phrase in phrases:
                 with self.subTest(post=relative_path, phrase=phrase):
-                    self.assertIn(
-                        f'<span class="keep-phrase">{phrase}</span>',
-                        source,
-                    )
-
-        sql_source = (
-            ROOT / "_posts/2022-05-11-sql-server-merge.markdown"
-        ).read_text(encoding="utf-8")
-        self.assertIn(
-            '<span class="keep-phrase"><code>INSERT</code>、<code>UPDATE</code> 與 '
-            '<code>DELETE</code></span>',
-            sql_source,
-        )
+                    self.assertIn(phrase, source)
 
 
 if __name__ == "__main__":

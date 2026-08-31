@@ -20,7 +20,11 @@ from validate_posts import (  # noqa: E402
     validate_repository,
 )
 from verify_generated_seo import HeadMetadataParser, verify_post  # noqa: E402
-from verify_unlisted_preview import verify as verify_unlisted_preview  # noqa: E402
+from verify_rendered_word_breaks import verify as verify_word_breaks  # noqa: E402
+from verify_unlisted_preview import (  # noqa: E402
+    PreviewHtmlParser,
+    verify as verify_unlisted_preview,
+)
 
 
 class ArticleValidationTests(unittest.TestCase):
@@ -200,24 +204,110 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertNotIn("max-width: 52em", styles)
         self.assertNotIn("text-wrap: pretty", styles)
         self.assertRegex(styles, r"\.post-content\s*\{[^}]*line-break: strict;")
+        self.assertIn("--syuan-prose-width: 68rem", styles)
+        self.assertRegex(
+            styles,
+            r"\.post-content > :where\(p, ul, ol, blockquote\)\s*\{"
+            r"[^}]*max-inline-size: min\(100%, var\(--syuan-prose-width\)\);",
+        )
         self.assertIn("@supports (word-break: auto-phrase)", styles)
-        self.assertIn(".post-content .keep-phrase", styles)
         self.assertRegex(styles, r"\[data-word-segment\]\s*\{[^}]*white-space: nowrap;")
+        self.assertNotIn(".post-content .keep-phrase", styles)
         self.assertRegex(styles, r"\.post-content a\.footnote\s*\{[^}]*display: inline;")
         self.assertRegex(config, r"kramdown:\s+hard_wrap: false")
         self.assertIn("不要依固定字數斷行", template)
-        self.assertIn('class="keep-phrase"', template)
+        self.assertNotIn('class="keep-phrase"', template)
         self.assertIn("### 分段與自然換行", guide)
         self.assertIn("依文章內容欄寬度自然換行", guide)
-        self.assertIn('class="keep-phrase"', guide)
+        self.assertNotIn('class="keep-phrase"', guide)
         self.assertIn("&nbsp;<sup id=\"fnref", post_layout)
         self.assertIn("assets/js/article-word-breaks.js", post_layout)
         self.assertIn("Intl.Segmenter", word_breaks)
         self.assertIn('new Intl.Segmenter("zh-Hant"', word_breaks)
-        self.assertIn('".keep-phrase"', word_breaks)
+        self.assertIn('CSS.supports("word-break", "auto-phrase")', word_breaks)
+        self.assertIn("joinsFollowingWord", word_breaks)
+        self.assertIn("joinsPreviousWord", word_breaks)
+        self.assertIn("startsPreviousWord", word_breaks)
+        self.assertIn("hanNumerals", word_breaks)
+        self.assertIn('querySelectorAll("p code, li code, blockquote code")', word_breaks)
+        self.assertIn('"\\u00a0"', word_breaks)
+        self.assertNotIn('".keep-phrase"', word_breaks)
         self.assertIn('".footnotes"', word_breaks)
         self.assertIn('"code"', word_breaks)
-        self.assertIn('content.dataset.wordSegmentation = "ready"', word_breaks)
+        self.assertIn('content.dataset.wordSegmentation = "native"', word_breaks)
+        self.assertIn('content.dataset.wordSegmentation = "enhanced"', word_breaks)
+        self.assertNotIn('content.dataset.wordSegmentation = "fallback"', word_breaks)
+
+    def test_word_break_verifier_reports_unavailable_browser_features(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            html_path = Path(directory) / "article.html"
+            html_path.write_text(
+                '<main data-word-segmentation="unavailable"></main>',
+                encoding="utf-8",
+            )
+
+            errors = verify_word_breaks(html_path, protected_words=set())
+
+            self.assertEqual(1, len(errors))
+            self.assertIn(
+                "瀏覽器不支援 word-break: auto-phrase，且缺少 Intl.Segmenter",
+                errors[0],
+            )
+            self.assertNotIn("未完成初始化", errors[0])
+
+    def test_word_break_verifier_ignores_keep_phrase_in_text_content(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            html_path = Path(directory) / "article.html"
+            html_path.write_text(
+                """
+                <main data-word-segmentation="native">
+                  <p>寫作指南提到 keep-phrase 已不再使用。</p>
+                  <pre><code>.keep-phrase { white-space: nowrap; }</code></pre>
+                </main>
+                """,
+                encoding="utf-8",
+            )
+
+            self.assertEqual(
+                [],
+                verify_word_breaks(html_path, protected_words=set()),
+            )
+
+    def test_word_break_verifier_rejects_actual_keep_phrase_class(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            html_path = Path(directory) / "article.html"
+            html_path.write_text(
+                """
+                <main data-word-segmentation="native">
+                  <span class="example keep-phrase">不可拆片語</span>
+                </main>
+                """,
+                encoding="utf-8",
+            )
+
+            errors = verify_word_breaks(html_path, protected_words=set())
+
+            self.assertEqual(1, len(errors))
+            self.assertIn("不應以手動不可拆片語干擾自然斷行", errors[0])
+
+    def test_preview_parser_ignores_keep_phrase_in_text_content(self) -> None:
+        parser = PreviewHtmlParser()
+
+        parser.feed(
+            """
+            <p>寫作指南提到 keep-phrase 已不再使用。</p>
+            <pre><code>.keep-phrase { white-space: nowrap; }</code></pre>
+            """
+        )
+
+        self.assertFalse(parser.has_keep_phrase_class)
+
+    def test_preview_parser_detects_actual_keep_phrase_class(self) -> None:
+        parser = PreviewHtmlParser()
+
+        parser.feed('<span class="example keep-phrase">不可拆片語</span>')
+
+        self.assertTrue(parser.has_keep_phrase_class)
 
     def test_all_content_tables_fill_the_content_column(self) -> None:
         styles = (ROOT / "_sass/minima/custom-styles.scss").read_text(encoding="utf-8")
@@ -526,7 +616,7 @@ class ArticleValidationTests(unittest.TestCase):
                     &nbsp;<sup id="fnref:b"><a class="footnote" href="#fn:b">2</a></sup>
                     &nbsp;<sup id="fnref:c"><a class="footnote" href="#fn:c">3</a></sup>
                   </p>
-                  <p>並<span class="keep-phrase">建立資產索引</span>。</p>
+                  <p>並建立資產索引。</p>
                   <h2>參考資料</h2>
                   <div class="footnotes" role="doc-endnotes">
                     <a class="reversefootnote" href="#fnref:a">back</a>

@@ -25,14 +25,13 @@ class PreviewHtmlParser(HTMLParser):
         self.reverse_footnote_links = 0
         self.has_footnote_list = False
         self.has_update_history_table = False
+        self.has_keep_phrase_class = False
         self.images: list[dict[str, str]] = []
         self.toc_count = 0
         self.toc_reserves_space = False
         self.toc_starts_hidden = False
         self._in_h1 = False
-        self._in_keep_phrase = False
         self.h1_parts: list[str] = []
-        self.keep_phrase_parts: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = {name: value or "" for name, value in attrs}
@@ -48,6 +47,8 @@ class PreviewHtmlParser(HTMLParser):
             self.has_footnote_list = True
         if tag == "table" and "update-history" in classes:
             self.has_update_history_table = True
+        if "keep-phrase" in classes:
+            self.has_keep_phrase_class = True
         if tag == "img":
             self.images.append(attributes)
         if tag == "nav" and "data-post-toc" in attribute_names:
@@ -56,20 +57,14 @@ class PreviewHtmlParser(HTMLParser):
             self.toc_starts_hidden = "hidden" in attribute_names
         if tag == "h1":
             self._in_h1 = True
-        if tag == "span" and "keep-phrase" in classes:
-            self._in_keep_phrase = True
 
     def handle_endtag(self, tag: str) -> None:
         if tag == "h1":
             self._in_h1 = False
-        if tag == "span" and self._in_keep_phrase:
-            self._in_keep_phrase = False
 
     def handle_data(self, data: str) -> None:
         if self._in_h1:
             self.h1_parts.append(data)
-        if self._in_keep_phrase:
-            self.keep_phrase_parts.append(data)
 
     @property
     def h1(self) -> str:
@@ -88,8 +83,8 @@ def verify(site: Path) -> list[str]:
 
     if parser.h1 != "初版文章範本預覽":
         errors.append(f"預覽頁 H1 不正確：{parser.h1 or '(空白)'}")
-    if "建立資產索引" not in parser.keep_phrase_parts:
-        errors.append("預覽頁必須將「建立資產索引」標記為不可拆短語")
+    if parser.has_keep_phrase_class:
+        errors.append("預覽頁不應以手動不可拆片語干擾瀏覽器原生斷行")
 
     if len(parser.robots) != 1:
         errors.append("預覽頁必須且只能輸出一個 robots meta")
