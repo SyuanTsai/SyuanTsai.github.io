@@ -3,7 +3,21 @@
 
   var content = document.querySelector("[data-post-content]");
 
-  if (!content || typeof Intl !== "object" || typeof Intl.Segmenter !== "function") {
+  if (!content) {
+    return;
+  }
+
+  var supportsNativePhraseWrapping = typeof CSS === "object"
+    && typeof CSS.supports === "function"
+    && CSS.supports("word-break", "auto-phrase");
+
+  if (supportsNativePhraseWrapping) {
+    content.dataset.wordSegmentation = "native";
+    return;
+  }
+
+  if (typeof Intl !== "object" || typeof Intl.Segmenter !== "function") {
+    content.dataset.wordSegmentation = "unavailable";
     return;
   }
 
@@ -18,7 +32,6 @@
     "svg",
     "textarea",
     ".footnotes",
-    ".keep-phrase",
     "[data-word-segment]"
   ].join(",");
   var hasHanCharacter = /[\u3400-\u9fff\uf900-\ufaff]/;
@@ -72,5 +85,5 @@
     textNode.parentNode.replaceChild(fragment, textNode);
   });
 
-  content.dataset.wordSegmentation = "ready";
+  content.dataset.wordSegmentation = "fallback";
 }());

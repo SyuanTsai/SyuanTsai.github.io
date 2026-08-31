@@ -75,11 +75,12 @@ class ContentDiscoveryTests(unittest.TestCase):
         self.assertIn("- jekyll-redirect-from", config)
         self.assertNotIn("permalink: /:categories/", config)
 
-    def test_published_posts_mark_required_phrases_as_unbroken(self) -> None:
+    def test_published_posts_leave_phrase_wrapping_to_the_browser(self) -> None:
         required_phrases = {
             "_posts/2022-05-11-sql-server-merge.markdown": (
                 "更新目標資料",
                 "queued updating replication",
+                "`INSERT`、`UPDATE` 與 `DELETE`",
             ),
             "_posts/2025-12-14-code-review-alignment-for-long-term-maintenance.markdown": (
                 "整體程式碼健康",
@@ -90,21 +91,10 @@ class ContentDiscoveryTests(unittest.TestCase):
 
         for relative_path, phrases in required_phrases.items():
             source = (ROOT / relative_path).read_text(encoding="utf-8")
+            self.assertNotIn('class="keep-phrase"', source)
             for phrase in phrases:
                 with self.subTest(post=relative_path, phrase=phrase):
-                    self.assertIn(
-                        f'<span class="keep-phrase">{phrase}</span>',
-                        source,
-                    )
-
-        sql_source = (
-            ROOT / "_posts/2022-05-11-sql-server-merge.markdown"
-        ).read_text(encoding="utf-8")
-        self.assertIn(
-            '<span class="keep-phrase"><code>INSERT</code>、<code>UPDATE</code> 與 '
-            '<code>DELETE</code></span>',
-            sql_source,
-        )
+                    self.assertIn(phrase, source)
 
 
 if __name__ == "__main__":

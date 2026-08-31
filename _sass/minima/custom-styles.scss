@@ -25,6 +25,7 @@
   --syuan-header: rgba(11, 17, 24, 0.92);
   --syuan-layout-gutter: clamp(20px, 4vw, 72px);
   --syuan-reading-width: 960px;
+  --syuan-prose-width: 68rem;
 }
 
 :root[data-resolved-theme="light"] {
@@ -1151,13 +1152,16 @@ select {
   line-height: 1.82;
 }
 
+.post-content > :where(p, ul, ol, blockquote) {
+  max-inline-size: min(100%, var(--syuan-prose-width));
+}
+
 @supports (word-break: auto-phrase) {
   .post-content :where(p, li, blockquote) {
     word-break: auto-phrase;
   }
 }
 
-.post-content .keep-phrase,
 .post-content [data-word-segment] {
   white-space: nowrap;
 }

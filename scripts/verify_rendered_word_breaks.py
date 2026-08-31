@@ -30,21 +30,27 @@ def span_texts(html: str, attribute_pattern: str) -> set[str]:
     return {text_content(fragment) for fragment in pattern.findall(html)}
 
 
-def verify(html_path: Path, automatic_words: set[str], kept_phrases: set[str]) -> list[str]:
+def verify(html_path: Path, fallback_words: set[str]) -> list[str]:
     html = html_path.read_text(encoding="utf-8")
     errors: list[str] = []
 
-    if 'data-word-segmentation="ready"' not in html:
-        errors.append(f"{html_path}: 自動詞組分析未完成")
+    uses_native_wrapping = 'data-word-segmentation="native"' in html
+    uses_fallback_wrapping = 'data-word-segmentation="fallback"' in html
+
+    if not uses_native_wrapping and not uses_fallback_wrapping:
+        errors.append(f"{html_path}: 詞組斷行模式未完成初始化")
+
+    if "keep-phrase" in html:
+        errors.append(f"{html_path}: 不應以手動不可拆片語干擾自然斷行")
 
     rendered_words = span_texts(html, r"\bdata-word-segment(?:=\"\")?")
-    rendered_phrases = span_texts(html, r'\bclass="[^"]*\bkeep-phrase\b[^"]*"')
 
-    for word in sorted(automatic_words - rendered_words):
-        errors.append(f"{html_path}: 缺少自動保護詞「{word}」")
+    if uses_native_wrapping and rendered_words:
+        errors.append(f"{html_path}: 原生斷行模式不應再插入詞組 span")
 
-    for phrase in sorted(kept_phrases - rendered_phrases):
-        errors.append(f"{html_path}: 缺少不可拆片語「{phrase}」")
+    if uses_fallback_wrapping:
+        for word in sorted(fallback_words - rendered_words):
+            errors.append(f"{html_path}: 備援模式缺少詞內保護「{word}」")
 
     return errors
 
@@ -56,22 +62,12 @@ def main() -> int:
 
     errors = verify(
         Path(sys.argv[1]),
-        automatic_words={"程式碼"},
-        kept_phrases={
-            "整體程式碼健康",
-            "非必要建議",
-            "理解成本只會更高、風險也更大",
-        },
+        fallback_words={"程式碼"},
     )
     errors.extend(
         verify(
             Path(sys.argv[2]),
-            automatic_words={"擴充性"},
-            kept_phrases={
-                "更新目標資料",
-                "queued updating replication",
-                "INSERT、UPDATE 與 DELETE",
-            },
+            fallback_words={"擴充性"},
         )
     )
 
@@ -79,7 +75,7 @@ def main() -> int:
         print("\n".join(errors))
         return 1
 
-    print("文章詞內保護與不可拆片語已通過瀏覽器 DOM 驗證。")
+    print("文章原生詞組斷行與備援模式已通過瀏覽器 DOM 驗證。")
     return 0
 
 
