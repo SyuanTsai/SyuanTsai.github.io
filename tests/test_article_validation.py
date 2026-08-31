@@ -192,16 +192,17 @@ class ArticleValidationTests(unittest.TestCase):
         template = (ROOT / "_templates/post.markdown").read_text(encoding="utf-8")
         guide = (ROOT / "docs/article-authoring.md").read_text(encoding="utf-8")
         post_layout = (ROOT / "_layouts/post.html").read_text(encoding="utf-8")
+        word_breaks = (ROOT / "assets/js/article-word-breaks.js").read_text(
+            encoding="utf-8"
+        )
 
         self.assertNotIn(".post-content > p:not(:has(img))", styles)
         self.assertNotIn("max-width: 52em", styles)
         self.assertNotIn("text-wrap: pretty", styles)
         self.assertRegex(styles, r"\.post-content\s*\{[^}]*line-break: strict;")
         self.assertIn("@supports (word-break: auto-phrase)", styles)
-        self.assertRegex(
-            styles,
-            r"\.post-content \.keep-phrase\s*\{[^}]*white-space: nowrap;",
-        )
+        self.assertIn(".post-content .keep-phrase", styles)
+        self.assertRegex(styles, r"\[data-word-segment\]\s*\{[^}]*white-space: nowrap;")
         self.assertRegex(styles, r"\.post-content a\.footnote\s*\{[^}]*display: inline;")
         self.assertRegex(config, r"kramdown:\s+hard_wrap: false")
         self.assertIn("不要依固定字數斷行", template)
@@ -210,6 +211,13 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertIn("依文章內容欄寬度自然換行", guide)
         self.assertIn('class="keep-phrase"', guide)
         self.assertIn("&nbsp;<sup id=\"fnref", post_layout)
+        self.assertIn("assets/js/article-word-breaks.js", post_layout)
+        self.assertIn("Intl.Segmenter", word_breaks)
+        self.assertIn('new Intl.Segmenter("zh-Hant"', word_breaks)
+        self.assertIn('".keep-phrase"', word_breaks)
+        self.assertIn('".footnotes"', word_breaks)
+        self.assertIn('"code"', word_breaks)
+        self.assertIn('content.dataset.wordSegmentation = "ready"', word_breaks)
 
     def test_all_content_tables_fill_the_content_column(self) -> None:
         styles = (ROOT / "_sass/minima/custom-styles.scss").read_text(encoding="utf-8")

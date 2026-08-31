@@ -69,8 +69,9 @@ class ContentDiscoveryTests(unittest.TestCase):
                 "queued updating replication",
             ),
             "_posts/2025-12-14-code-review-alignment-for-long-term-maintenance.markdown": (
-                "理解成本只會更高",
-                "風險也更大",
+                "整體程式碼健康",
+                "非必要建議",
+                "理解成本只會更高、風險也更大",
             ),
         }
 
@@ -82,6 +83,15 @@ class ContentDiscoveryTests(unittest.TestCase):
                         f'<span class="keep-phrase">{phrase}</span>',
                         source,
                     )
+
+        sql_source = (
+            ROOT / "_posts/2022-05-11-sql-server-merge.markdown"
+        ).read_text(encoding="utf-8")
+        self.assertIn(
+            '<span class="keep-phrase"><code>INSERT</code>、<code>UPDATE</code> 與 '
+            '<code>DELETE</code></span>',
+            sql_source,
+        )
 
 
 if __name__ == "__main__":
