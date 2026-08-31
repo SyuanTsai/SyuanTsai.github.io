@@ -30,6 +30,11 @@ def span_texts(html: str, attribute_pattern: str) -> set[str]:
     return {text_content(fragment) for fragment in pattern.findall(html)}
 
 
+def word_segmentation_mode(html: str) -> str | None:
+    match = re.search(r'\bdata-word-segmentation="([^"]+)"', html)
+    return match.group(1) if match else None
+
+
 def verify(
     html_path: Path,
     protected_words: set[str],
@@ -38,11 +43,19 @@ def verify(
     html = html_path.read_text(encoding="utf-8")
     errors: list[str] = []
 
-    uses_native_wrapping = 'data-word-segmentation="native"' in html
-    uses_enhanced_wrapping = 'data-word-segmentation="enhanced"' in html
+    wrapping_mode = word_segmentation_mode(html)
+    uses_native_wrapping = wrapping_mode == "native"
+    uses_enhanced_wrapping = wrapping_mode == "enhanced"
 
-    if not uses_native_wrapping and not uses_enhanced_wrapping:
+    if wrapping_mode is None:
         errors.append(f"{html_path}: 詞組斷行模式未完成初始化")
+    elif wrapping_mode == "unavailable":
+        errors.append(
+            f"{html_path}: 瀏覽器不支援 word-break: auto-phrase，"
+            "且缺少 Intl.Segmenter"
+        )
+    elif not uses_native_wrapping and not uses_enhanced_wrapping:
+        errors.append(f"{html_path}: 未知的詞組斷行模式「{wrapping_mode}」")
 
     if "keep-phrase" in html:
         errors.append(f"{html_path}: 不應以手動不可拆片語干擾自然斷行")

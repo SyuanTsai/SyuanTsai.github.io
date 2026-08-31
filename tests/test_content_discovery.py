@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import sys
 import unittest
-from pathlib import Path
+from pathlib import Path, PurePath, PureWindowsPath
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -11,6 +11,10 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from generate_discovery_pages import check, expected_pages  # noqa: E402
 from validate_posts import parse_front_matter, post_output_url  # noqa: E402
+
+
+def repository_relative_key(path: PurePath, root: PurePath) -> str:
+    return path.relative_to(root).as_posix()
 
 
 class ContentDiscoveryTests(unittest.TestCase):
@@ -43,11 +47,20 @@ class ContentDiscoveryTests(unittest.TestCase):
             self.assertEqual(1, len(document.fields["categories"]))
             self.assertGreaterEqual(len(document.fields["tags"]), 1)
             self.assertEqual(
-                expected_redirects[str(path.relative_to(ROOT))],
+                expected_redirects[repository_relative_key(path, ROOT)],
                 set(document.fields["redirect_from"]),
             )
 
         self.assertEqual(expected_urls, actual_urls)
+
+    def test_legacy_redirect_lookup_uses_posix_keys_on_windows(self) -> None:
+        root = PureWindowsPath("C:/repository")
+        post = root / "_posts/2022-05-11-sql-server-merge.markdown"
+
+        self.assertEqual(
+            "_posts/2022-05-11-sql-server-merge.markdown",
+            repository_relative_key(post, root),
+        )
 
     def test_search_index_source_contains_only_required_public_fields(self) -> None:
         source = (ROOT / "search.json").read_text(encoding="utf-8")

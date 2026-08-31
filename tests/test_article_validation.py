@@ -20,6 +20,7 @@ from validate_posts import (  # noqa: E402
     validate_repository,
 )
 from verify_generated_seo import HeadMetadataParser, verify_post  # noqa: E402
+from verify_rendered_word_breaks import verify as verify_word_breaks  # noqa: E402
 from verify_unlisted_preview import verify as verify_unlisted_preview  # noqa: E402
 
 
@@ -233,6 +234,23 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertIn('content.dataset.wordSegmentation = "native"', word_breaks)
         self.assertIn('content.dataset.wordSegmentation = "enhanced"', word_breaks)
         self.assertNotIn('content.dataset.wordSegmentation = "fallback"', word_breaks)
+
+    def test_word_break_verifier_reports_unavailable_browser_features(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            html_path = Path(directory) / "article.html"
+            html_path.write_text(
+                '<main data-word-segmentation="unavailable"></main>',
+                encoding="utf-8",
+            )
+
+            errors = verify_word_breaks(html_path, protected_words=set())
+
+            self.assertEqual(1, len(errors))
+            self.assertIn(
+                "瀏覽器不支援 word-break: auto-phrase，且缺少 Intl.Segmenter",
+                errors[0],
+            )
+            self.assertNotIn("未完成初始化", errors[0])
 
     def test_all_content_tables_fill_the_content_column(self) -> None:
         styles = (ROOT / "_sass/minima/custom-styles.scss").read_text(encoding="utf-8")
