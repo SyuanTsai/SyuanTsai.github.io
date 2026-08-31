@@ -7,6 +7,7 @@ tags: [sql-server, merge, t-sql]
 description: "使用 MERGE，依來源與目標資料的比對結果執行新增、更新或刪除。"
 redirect_from:
   - /mssql/2022/05/11/sql-server-merge.html
+  - /MSSQL/2022/05/11/sql-server-merge.html
 ---
 
 需要將一批來源資料同步至目標表時，分別撰寫新增、更新與刪除敘述，容易讓比對條件散落在不同位置。

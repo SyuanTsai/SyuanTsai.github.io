@@ -7,6 +7,7 @@ categories: [code]
 tags: [code-review, maintainability]
 redirect_from:
   - /code/review/2025/12/14/Code-Review-Alignment-for-Long-Term-Maintenance.html
+  - /Code/2025/12/14/Code-Review-Alignment-for-Long-Term-Maintenance.html
 ---
 
 Code Review 容易在「盡快交付」與「改善程式碼品質」之間產生拉扯；如果判斷標準不清楚，討論也容易退化成個人偏好。

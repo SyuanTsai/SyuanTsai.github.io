@@ -25,6 +25,16 @@ class ContentDiscoveryTests(unittest.TestCase):
             "/2022/05/11/sql-server-merge.html",
             "/2025/12/14/code-review-alignment-for-long-term-maintenance.html",
         }
+        expected_redirects = {
+            "_posts/2022-05-11-sql-server-merge.markdown": {
+                "/mssql/2022/05/11/sql-server-merge.html",
+                "/MSSQL/2022/05/11/sql-server-merge.html",
+            },
+            "_posts/2025-12-14-code-review-alignment-for-long-term-maintenance.markdown": {
+                "/code/review/2025/12/14/Code-Review-Alignment-for-Long-Term-Maintenance.html",
+                "/Code/2025/12/14/Code-Review-Alignment-for-Long-Term-Maintenance.html",
+            },
+        }
         actual_urls: set[str] = set()
 
         for path in sorted((ROOT / "_posts").glob("*.markdown")):
@@ -32,7 +42,10 @@ class ContentDiscoveryTests(unittest.TestCase):
             actual_urls.add(post_output_url(document))
             self.assertEqual(1, len(document.fields["categories"]))
             self.assertGreaterEqual(len(document.fields["tags"]), 1)
-            self.assertIn("redirect_from", document.fields)
+            self.assertEqual(
+                expected_redirects[str(path.relative_to(ROOT))],
+                set(document.fields["redirect_from"]),
+            )
 
         self.assertEqual(expected_urls, actual_urls)
 
