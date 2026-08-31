@@ -93,21 +93,21 @@ jobs:
             --screenshot=visual-review/sql-merge-article-mobile.png \
             http://127.0.0.1:4000/2022/05/11/sql-server-merge.html
           google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
-            --virtual-time-budget=5000 --window-size=1440,900 \
+            --virtual-time-budget=5000 --window-size=1440,7000 \
             --screenshot=visual-review/sql-merge-phrase-wrapping-desktop.png \
-            'http://127.0.0.1:4000/2022/05/11/sql-server-merge.html#使用前的判斷'
+            http://127.0.0.1:4000/2022/05/11/sql-server-merge.html
           google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
-            --virtual-time-budget=5000 --window-size=390,900 \
+            --virtual-time-budget=5000 --window-size=390,12000 \
             --screenshot=visual-review/sql-merge-phrase-wrapping-mobile.png \
-            'http://127.0.0.1:4000/2022/05/11/sql-server-merge.html#使用前的判斷'
+            http://127.0.0.1:4000/2022/05/11/sql-server-merge.html
           google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
-            --virtual-time-budget=5000 --window-size=1440,900 \
+            --virtual-time-budget=5000 --window-size=1440,5000 \
             --screenshot=visual-review/code-review-phrase-wrapping-desktop.png \
-            'http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html#2-code-review-是分散理解的關鍵時點'
+            http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html
           google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
-            --virtual-time-budget=5000 --window-size=390,900 \
+            --virtual-time-budget=5000 --window-size=390,9000 \
             --screenshot=visual-review/code-review-phrase-wrapping-mobile.png \
-            'http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html#2-code-review-是分散理解的關鍵時點'
+            http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html
           google-chrome --headless=new --no-sandbox --disable-gpu --force-dark-mode \
             --virtual-time-budget=5000 --window-size=1440,2200 \
             --screenshot=visual-review/home-desktop.png \
