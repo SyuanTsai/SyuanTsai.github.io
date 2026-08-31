@@ -81,13 +81,22 @@ def main() -> int:
             "可測試性",
             "程式碼",
             "與後續",
+            "與可測試性的",
+            "讓下一位",
             "只能二選一",
         },
     )
     errors.extend(
         verify(
             Path(sys.argv[2]),
-            protected_words={"目標", "資料", "更新", "與擴充性"},
+            protected_words={
+                "目標",
+                "資料",
+                "更新",
+                "以分號",
+                "被多筆",
+                "與擴充性",
+            },
             glued_inline_codes={"MERGE"},
         )
     )

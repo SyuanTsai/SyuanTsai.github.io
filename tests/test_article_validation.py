@@ -223,6 +223,7 @@ class ArticleValidationTests(unittest.TestCase):
         self.assertIn('CSS.supports("word-break", "auto-phrase")', word_breaks)
         self.assertIn("joinsFollowingWord", word_breaks)
         self.assertIn("joinsPreviousWord", word_breaks)
+        self.assertIn("startsPreviousWord", word_breaks)
         self.assertIn("hanNumerals", word_breaks)
         self.assertIn('querySelectorAll("p code, li code, blockquote code")', word_breaks)
         self.assertIn('"\\u00a0"', word_breaks)

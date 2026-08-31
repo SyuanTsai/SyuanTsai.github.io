@@ -56,10 +56,20 @@
     "為",
     "如",
     "若",
+    "下",
+    "同",
+    "這",
     "只能",
     "為非"
   ]);
   var joinsPreviousWord = new Set([
+    "性",
+    "者",
+    "們",
+    "號",
+    "筆"
+  ]);
+  var startsPreviousWord = new Set([
     "性",
     "者",
     "們"
@@ -101,12 +111,19 @@
     return part.isWordLike && hasHanCharacter.test(part.segment);
   }
 
+  function startsWithWordPart(text, wordParts) {
+    return Array.from(wordParts).some(function (wordPart) {
+      return text.indexOf(wordPart) === 0;
+    });
+  }
+
   function shouldJoinWords(left, right) {
     return isHanWord(left)
       && isHanWord(right)
       && (
         joinsFollowingWord.has(left.segment)
         || joinsPreviousWord.has(right.segment)
+        || startsWithWordPart(right.segment, startsPreviousWord)
         || hanNumerals.has(left.segment)
         || hanNumerals.has(right.segment)
       );
