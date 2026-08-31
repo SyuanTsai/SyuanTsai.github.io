@@ -25,6 +25,7 @@ class PreviewHtmlParser(HTMLParser):
         self.reverse_footnote_links = 0
         self.has_footnote_list = False
         self.has_update_history_table = False
+        self.has_keep_phrase_class = False
         self.images: list[dict[str, str]] = []
         self.toc_count = 0
         self.toc_reserves_space = False
@@ -46,6 +47,8 @@ class PreviewHtmlParser(HTMLParser):
             self.has_footnote_list = True
         if tag == "table" and "update-history" in classes:
             self.has_update_history_table = True
+        if "keep-phrase" in classes:
+            self.has_keep_phrase_class = True
         if tag == "img":
             self.images.append(attributes)
         if tag == "nav" and "data-post-toc" in attribute_names:
@@ -80,7 +83,7 @@ def verify(site: Path) -> list[str]:
 
     if parser.h1 != "初版文章範本預覽":
         errors.append(f"預覽頁 H1 不正確：{parser.h1 or '(空白)'}")
-    if "keep-phrase" in html:
+    if parser.has_keep_phrase_class:
         errors.append("預覽頁不應以手動不可拆片語干擾瀏覽器原生斷行")
 
     if len(parser.robots) != 1:

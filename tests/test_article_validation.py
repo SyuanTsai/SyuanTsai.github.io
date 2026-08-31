@@ -21,7 +21,10 @@ from validate_posts import (  # noqa: E402
 )
 from verify_generated_seo import HeadMetadataParser, verify_post  # noqa: E402
 from verify_rendered_word_breaks import verify as verify_word_breaks  # noqa: E402
-from verify_unlisted_preview import verify as verify_unlisted_preview  # noqa: E402
+from verify_unlisted_preview import (  # noqa: E402
+    PreviewHtmlParser,
+    verify as verify_unlisted_preview,
+)
 
 
 class ArticleValidationTests(unittest.TestCase):
@@ -286,6 +289,25 @@ class ArticleValidationTests(unittest.TestCase):
 
             self.assertEqual(1, len(errors))
             self.assertIn("不應以手動不可拆片語干擾自然斷行", errors[0])
+
+    def test_preview_parser_ignores_keep_phrase_in_text_content(self) -> None:
+        parser = PreviewHtmlParser()
+
+        parser.feed(
+            """
+            <p>寫作指南提到 keep-phrase 已不再使用。</p>
+            <pre><code>.keep-phrase { white-space: nowrap; }</code></pre>
+            """
+        )
+
+        self.assertFalse(parser.has_keep_phrase_class)
+
+    def test_preview_parser_detects_actual_keep_phrase_class(self) -> None:
+        parser = PreviewHtmlParser()
+
+        parser.feed('<span class="example keep-phrase">不可拆片語</span>')
+
+        self.assertTrue(parser.has_keep_phrase_class)
 
     def test_all_content_tables_fill_the_content_column(self) -> None:
         styles = (ROOT / "_sass/minima/custom-styles.scss").read_text(encoding="utf-8")
