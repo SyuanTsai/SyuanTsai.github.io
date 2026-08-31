@@ -1,7 +1,7 @@
 ---
 title: "Code Review 與 長期的維護討論"
 date: 2025-12-14
-last_modified_at: 2026-08-30
+last_modified_at: 2026-08-31
 description: "說明 Code Review 如何兼顧交付速度、程式碼品質與長期維護成本。"
 categories: [code]
 tags: [code-review, maintainability]
@@ -77,7 +77,7 @@ Code Review 的目的不只是在當下確認「功能能不能跑」，而是�
 ### 2) Code Review 是分散理解的關鍵時點
 
 在目前流程中，Code Review 幾乎是唯一一個「非原作者」會完整閱讀並嘗試理解程式碼的時候。
-如果 reviewer 在這階段就覺得難以理解，代表未來換人接手時，理解成本只會更高、風險也更大。
+如果 reviewer 在這階段就覺得難以理解，代表未來換人接手時，<span class="keep-phrase">理解成本只會更高</span>、<span class="keep-phrase">風險也更大</span>。
 
 因此，Code Review 不只是確認功能是否正確，還是在提前暴露：
 
@@ -104,4 +104,5 @@ Review 應先確認行為正確、測試是否保護需求，以及結構是否�
 | --- | --- |
 | 2025-12-14 | 初版發布 |
 | 2026-08-30 | 對齊正式文章範本，補充 Review 判斷界線與參考資料 |
+| 2026-08-31 | 修正比較詞組的不自然斷行 |
 {: .update-history}

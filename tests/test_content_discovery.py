@@ -62,6 +62,27 @@ class ContentDiscoveryTests(unittest.TestCase):
         self.assertIn("- jekyll-redirect-from", config)
         self.assertNotIn("permalink: /:categories/", config)
 
+    def test_published_posts_mark_required_phrases_as_unbroken(self) -> None:
+        required_phrases = {
+            "_posts/2022-05-11-sql-server-merge.markdown": (
+                "更新目標資料",
+                "queued updating replication",
+            ),
+            "_posts/2025-12-14-code-review-alignment-for-long-term-maintenance.markdown": (
+                "理解成本只會更高",
+                "風險也更大",
+            ),
+        }
+
+        for relative_path, phrases in required_phrases.items():
+            source = (ROOT / relative_path).read_text(encoding="utf-8")
+            for phrase in phrases:
+                with self.subTest(post=relative_path, phrase=phrase):
+                    self.assertIn(
+                        f'<span class="keep-phrase">{phrase}</span>',
+                        source,
+                    )
+
 
 if __name__ == "__main__":
     unittest.main()

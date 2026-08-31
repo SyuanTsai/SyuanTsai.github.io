@@ -1,7 +1,7 @@
 ---
 title: "SQL Server MERGE 語法筆記"
 date: 2022-05-11
-last_modified_at: 2026-08-30
+last_modified_at: 2026-08-31
 categories: [database]
 tags: [sql-server, merge, t-sql]
 description: "使用 MERGE，依來源與目標資料的比對結果執行新增、更新或刪除。"
@@ -125,9 +125,9 @@ WHEN NOT MATCHED BY TARGET THEN
 
 ## 使用前的判斷
 
-`MERGE` 適合來源與目標同時包含多種比對結果，需要在一個敘述中處理新增、更新或刪除的情境。若需求只是依另一張表更新目標資料，Microsoft 建議評估分開使用 `INSERT`、`UPDATE` 與 `DELETE`，可能具有更好的效能與擴充性。[^microsoft-merge]
+`MERGE` 適合來源與目標同時包含多種比對結果，需要在一個敘述中處理新增、更新或刪除的情境。若需求只是依另一張表<span class="keep-phrase">更新目標資料</span>，Microsoft 建議評估分開使用 `INSERT`、`UPDATE` 與 `DELETE`，可能具有更好的效能與擴充性。[^microsoft-merge]
 
-實際使用前仍應確認來源比對鍵唯一、索引與執行計畫，並以符合正式資料量的案例驗證結果；使用 queued updating replication 時則不應使用 `MERGE`。[^microsoft-merge]
+實際使用前仍應確認來源比對鍵唯一、索引與執行計畫，並以符合正式資料量的案例驗證結果；使用 <span class="keep-phrase">queued updating replication</span> 時則不應使用 `MERGE`。[^microsoft-merge]
 
 ## 參考資料
 
@@ -142,4 +142,5 @@ WHEN NOT MATCHED BY TARGET THEN
 | --- | --- |
 | 2022-05-11 | 初版發布 |
 | 2026-08-30 | 對齊正式文章範本，補充使用限制、適用判斷與官方文件引用 |
+| 2026-08-31 | 修正中文短詞組與英文專有名詞的不自然斷行 |
 {: .update-history}
