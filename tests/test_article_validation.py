@@ -252,6 +252,41 @@ class ArticleValidationTests(unittest.TestCase):
             )
             self.assertNotIn("未完成初始化", errors[0])
 
+    def test_word_break_verifier_ignores_keep_phrase_in_text_content(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            html_path = Path(directory) / "article.html"
+            html_path.write_text(
+                """
+                <main data-word-segmentation="native">
+                  <p>寫作指南提到 keep-phrase 已不再使用。</p>
+                  <pre><code>.keep-phrase { white-space: nowrap; }</code></pre>
+                </main>
+                """,
+                encoding="utf-8",
+            )
+
+            self.assertEqual(
+                [],
+                verify_word_breaks(html_path, protected_words=set()),
+            )
+
+    def test_word_break_verifier_rejects_actual_keep_phrase_class(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            html_path = Path(directory) / "article.html"
+            html_path.write_text(
+                """
+                <main data-word-segmentation="native">
+                  <span class="example keep-phrase">不可拆片語</span>
+                </main>
+                """,
+                encoding="utf-8",
+            )
+
+            errors = verify_word_breaks(html_path, protected_words=set())
+
+            self.assertEqual(1, len(errors))
+            self.assertIn("不應以手動不可拆片語干擾自然斷行", errors[0])
+
     def test_all_content_tables_fill_the_content_column(self) -> None:
         styles = (ROOT / "_sass/minima/custom-styles.scss").read_text(encoding="utf-8")
         guide = (ROOT / "docs/article-authoring.md").read_text(encoding="utf-8")

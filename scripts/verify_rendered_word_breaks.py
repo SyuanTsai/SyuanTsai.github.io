@@ -16,10 +16,38 @@ class TextExtractor(HTMLParser):
         self.parts.append(data)
 
 
+class ClassNameExtractor(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.class_names: set[str] = set()
+
+    def handle_starttag(
+        self,
+        _tag: str,
+        attrs: list[tuple[str, str | None]],
+    ) -> None:
+        for name, value in attrs:
+            if name == "class" and value:
+                self.class_names.update(value.split())
+
+    def handle_startendtag(
+        self,
+        tag: str,
+        attrs: list[tuple[str, str | None]],
+    ) -> None:
+        self.handle_starttag(tag, attrs)
+
+
 def text_content(fragment: str) -> str:
     parser = TextExtractor()
     parser.feed(fragment)
     return unescape("".join(parser.parts))
+
+
+def has_class_name(html: str, class_name: str) -> bool:
+    parser = ClassNameExtractor()
+    parser.feed(html)
+    return class_name in parser.class_names
 
 
 def span_texts(html: str, attribute_pattern: str) -> set[str]:
@@ -57,7 +85,7 @@ def verify(
     elif not uses_native_wrapping and not uses_enhanced_wrapping:
         errors.append(f"{html_path}: 未知的詞組斷行模式「{wrapping_mode}」")
 
-    if "keep-phrase" in html:
+    if has_class_name(html, "keep-phrase"):
         errors.append(f"{html_path}: 不應以手動不可拆片語干擾自然斷行")
 
     rendered_words = span_texts(html, r"\bdata-word-segment(?:=\"\")?")
