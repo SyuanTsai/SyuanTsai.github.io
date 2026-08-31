@@ -62,6 +62,29 @@ class ContentDiscoveryTests(unittest.TestCase):
         self.assertIn("- jekyll-redirect-from", config)
         self.assertNotIn("permalink: /:categories/", config)
 
+    def test_published_posts_protect_browser_missed_short_phrases(self) -> None:
+        sql_post = (ROOT / "_posts/2022-05-11-sql-server-merge.markdown").read_text(
+            encoding="utf-8"
+        )
+        review_post = (
+            ROOT
+            / "_posts/2025-12-14-code-review-alignment-for-long-term-maintenance.markdown"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(
+            '<span class="keep-phrase">更新目標資料</span>',
+            sql_post,
+        )
+        self.assertIn(
+            '<span class="keep-phrase">queued updating replication</span>',
+            sql_post,
+        )
+        self.assertIn(
+            '<span class="keep-phrase">理解成本只會更高</span>',
+            review_post,
+        )
+        self.assertIn('<span class="keep-phrase">風險也更大</span>', review_post)
+
 
 if __name__ == "__main__":
     unittest.main()
