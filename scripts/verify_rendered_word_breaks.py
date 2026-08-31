@@ -58,7 +58,10 @@ def verify(
 
         normalized_html = unescape(html)
         for code in sorted(glued_inline_codes or set()):
-            if f'\u00a0<code>{code}</code>' not in normalized_html:
+            pattern = re.compile(
+                rf'\u00a0<code\b[^>]*>{re.escape(code)}</code>'
+            )
+            if not pattern.search(normalized_html):
                 errors.append(f"{html_path}: 行內程式碼「{code}」未黏住前一個詞")
 
     return errors
@@ -84,7 +87,7 @@ def main() -> int:
     errors.extend(
         verify(
             Path(sys.argv[2]),
-            protected_words={"目標", "資料", "更新", "擴充性"},
+            protected_words={"目標", "資料", "更新", "與擴充性"},
             glued_inline_codes={"MERGE"},
         )
     )
