@@ -9,7 +9,7 @@ import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from html.parser import HTMLParser
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from urllib.error import HTTPError, URLError
 from urllib.parse import unquote, urljoin, urlparse
 from urllib.request import Request, urlopen
@@ -161,12 +161,15 @@ def verify_metadata(site_directory: Path) -> list[str]:
 
 
 def candidate_output_paths(site_directory: Path, path: str) -> list[Path]:
-    decoded = unquote(path).lstrip("/")
-    candidate = site_directory / decoded
+    decoded = unquote(path)
+    relative = PurePosixPath(decoded.lstrip("/"))
+    if "\\" in decoded or ".." in relative.parts:
+        return []
+    candidate = site_directory.joinpath(*relative.parts)
     candidates = [candidate]
-    if path.endswith("/") or not decoded:
+    if path.endswith("/") or not relative.parts:
         candidates = [candidate / "index.html"]
-    elif not Path(decoded).suffix:
+    elif not Path(relative.name).suffix:
         candidates.extend((candidate / "index.html", candidate.with_suffix(".html")))
     return candidates
 
