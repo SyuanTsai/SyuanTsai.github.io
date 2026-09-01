@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 
 
 EXPECTED_SITE_URL = "https://notes.tw-syuan.com"
+EXPECTED_CNAME = "Notes.Tw-Syuan.com"
 REQUIRED_PLUGINS = {"jekyll-feed", "jekyll-sitemap"}
 POST_FILENAME = re.compile(
     r"^(?P<year>\d{4})-(?P<month>\d{2})-(?P<day>\d{2})-(?P<slug>[a-z0-9]+(?:-[a-z0-9]+)*)\.(?:md|markdown)$",
@@ -144,15 +145,15 @@ def verify_site_delivery(root: Path, site_directory: Path) -> list[str]:
 
     if not source_cname_path.is_file():
         errors.append("來源根目錄缺少 `CNAME`")
-        source_cname = ""
+        source_cname: str | None = None
     else:
         source_cname = source_cname_path.read_text(encoding="utf-8").strip()
-        if source_cname.lower() != "notes.tw-syuan.com":
-            errors.append(f"`CNAME` 必須是 `Notes.Tw-Syuan.com`；實際為 `{source_cname}`")
+        if source_cname != EXPECTED_CNAME:
+            errors.append(f"`CNAME` 必須是 `{EXPECTED_CNAME}`；實際為 `{source_cname}`")
 
     if not built_cname_path.is_file():
         errors.append("建置輸出缺少 `CNAME`，部署可能覆寫自訂網域")
-    elif built_cname_path.read_text(encoding="utf-8").strip().lower() != source_cname.lower():
+    elif source_cname is not None and built_cname_path.read_text(encoding="utf-8").strip() != source_cname:
         errors.append("建置輸出的 `CNAME` 與來源不一致")
 
     sitemap_path = site_directory / "sitemap.xml"
