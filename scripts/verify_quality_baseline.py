@@ -281,6 +281,31 @@ def write_external_report(site_directory: Path, output_path: Path) -> int:
     return len(urls)
 
 
+def verify_lighthouse_accessibility(report_path: Path) -> list[str]:
+    if not report_path.is_file():
+        return [f"缺少 Lighthouse 報告 `{report_path}`"]
+    try:
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as error:
+        return [f"Lighthouse 報告不是有效 JSON：{error}"]
+
+    accessibility = report.get("categories", {}).get("accessibility", {})
+    audit_references = accessibility.get("auditRefs", [])
+    audits = report.get("audits", {})
+    if not audit_references:
+        return ["Lighthouse 報告缺少 accessibility audit references"]
+
+    errors: list[str] = []
+    for reference in audit_references:
+        audit_id = reference.get("id", "")
+        audit = audits.get(audit_id, {})
+        if audit.get("score") != 0:
+            continue
+        title = audit.get("title") or audit_id
+        errors.append(f"Lighthouse accessibility audit 失敗：{title} (`{audit_id}`)")
+    return errors
+
+
 def verify_quality_baseline(root: Path, site_directory: Path) -> list[str]:
     errors: list[str] = []
     errors.extend(verify_robots(site_directory))
@@ -296,6 +321,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--external-report", type=Path)
     parser.add_argument("--external-only", action="store_true")
+    parser.add_argument("--lighthouse-accessibility-report", type=Path)
     args = parser.parse_args(argv)
 
     root = args.root.resolve()
@@ -308,6 +334,11 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     errors = verify_quality_baseline(root, site_directory)
+    if args.lighthouse_accessibility_report:
+        report_path = args.lighthouse_accessibility_report
+        if not report_path.is_absolute():
+            report_path = root / report_path
+        errors.extend(verify_lighthouse_accessibility(report_path))
     if errors:
         print("Quality baseline verification failed:", file=sys.stderr)
         for error in errors:
