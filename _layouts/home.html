@@ -59,7 +59,7 @@ layout: default
     {%- if latest_post -%}
       <div class="home-posts-grid">
         <article class="featured-post">
-          <a class="featured-post__link" href="{{ latest_post.url | relative_url }}" aria-label="閱讀最新文章：{{ latest_post.title | escape }}">
+          <a class="featured-post__link" href="{{ latest_post.url | relative_url }}">
             <div class="featured-post__meta">
               <span>Latest note</span>
               <time datetime="{{ latest_post.date | date_to_xmlschema }}">{{ latest_post.date | date: '%Y.%m.%d' }}</time>
@@ -92,7 +92,7 @@ layout: default
           <div class="recent-post-list">
             {%- for post in recent_posts -%}
               <article class="recent-post">
-                <a class="recent-post__link" href="{{ post.url | relative_url }}" aria-label="閱讀文章：{{ post.title | escape }}">
+                <a class="recent-post__link" href="{{ post.url | relative_url }}">
                   <div class="recent-post__meta">
                     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
                     {%- if post.categories and post.categories != empty -%}
