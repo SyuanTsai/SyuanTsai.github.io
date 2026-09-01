@@ -75,6 +75,25 @@ plugins:
             errors = verify_site_delivery(root, site)
             self.assertTrue(any("Sitemap 缺少文章網址" in error for error in errors))
 
+    def test_missing_source_cname_does_not_report_misleading_mismatch(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root, site = self.create_fixture(Path(temporary_directory))
+            (root / "CNAME").unlink()
+            errors = verify_site_delivery(root, site)
+            self.assertIn("來源根目錄缺少 `CNAME`", errors)
+            self.assertNotIn("建置輸出的 `CNAME` 與來源不一致", errors)
+
+    def test_cname_uses_the_documented_casing(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root, site = self.create_fixture(Path(temporary_directory))
+            (root / "CNAME").write_text("notes.tw-syuan.com\n", encoding="utf-8")
+            (site / "CNAME").write_text("notes.tw-syuan.com\n", encoding="utf-8")
+            errors = verify_site_delivery(root, site)
+            self.assertIn(
+                "`CNAME` 必須是 `Notes.Tw-Syuan.com`；實際為 `notes.tw-syuan.com`",
+                errors,
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
