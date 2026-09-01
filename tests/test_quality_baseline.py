@@ -10,7 +10,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-from verify_quality_baseline import collect_external_urls, verify_quality_baseline
+from verify_quality_baseline import (
+    collect_external_urls,
+    verify_lighthouse_accessibility,
+    verify_quality_baseline,
+)
 
 
 class QualityBaselineTests(unittest.TestCase):
@@ -107,6 +111,36 @@ class QualityBaselineTests(unittest.TestCase):
             site = self.create_fixture(root)
             self.assertEqual(["https://example.com/docs"], collect_external_urls(site))
             self.assertEqual([], verify_quality_baseline(root, site))
+
+    def test_lighthouse_accessibility_passes_without_failed_audits(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            report = Path(temporary_directory) / "lighthouse.json"
+            report.write_text(
+                json.dumps(
+                    {
+                        "categories": {"accessibility": {"auditRefs": [{"id": "image-alt"}]}},
+                        "audits": {"image-alt": {"score": 1, "title": "Images have alt text"}},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual([], verify_lighthouse_accessibility(report))
+
+    def test_lighthouse_accessibility_reports_failed_audits(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            report = Path(temporary_directory) / "lighthouse.json"
+            report.write_text(
+                json.dumps(
+                    {
+                        "categories": {"accessibility": {"auditRefs": [{"id": "color-contrast"}]}},
+                        "audits": {"color-contrast": {"score": 0, "title": "Colors have sufficient contrast"}},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            errors = verify_lighthouse_accessibility(report)
+            self.assertEqual(1, len(errors))
+            self.assertIn("color-contrast", errors[0])
 
 
 if __name__ == "__main__":
