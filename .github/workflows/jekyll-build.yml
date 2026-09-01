@@ -40,6 +40,64 @@ jobs:
       - name: Verify GitHub Pages delivery artifacts
         run: python3 scripts/verify_site_delivery.py _site
 
+      - name: Verify deterministic quality baseline
+        run: python3 scripts/verify_quality_baseline.py _site
+
+      - name: Report external link status
+        continue-on-error: true
+        run: python3 scripts/verify_quality_baseline.py _site --external-only --external-report quality-reports/external-links.json
+
+      - name: Capture Lighthouse mobile baseline
+        continue-on-error: true
+        run: |
+          python3 -m http.server 4000 --directory _site >/tmp/syuan-notes-lighthouse.log 2>&1 &
+          quality_server_pid=$!
+          trap 'kill "$quality_server_pid"' EXIT
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4000/ >/dev/null; then
+              break
+            fi
+            sleep 0.25
+          done
+          mkdir -p quality-reports
+          npx --yes lighthouse@12.8.2 http://127.0.0.1:4000/ \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --form-factor=mobile \
+            --output=json \
+            --output-path=quality-reports/lighthouse-mobile.json \
+            --chrome-flags='--headless=new --no-sandbox'
+
+      - name: Run blocking axe accessibility audit
+        run: |
+          python3 -m http.server 4000 --directory _site >/tmp/syuan-notes-axe.log 2>&1 &
+          quality_server_pid=$!
+          trap 'kill "$quality_server_pid"' EXIT
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4000/ >/dev/null; then
+              break
+            fi
+            sleep 0.25
+          done
+          mkdir -p quality-reports
+          npx --yes @axe-core/cli@4.10.2 http://127.0.0.1:4000/ \
+            --tags wcag2a,wcag2aa,wcag21a,wcag21aa \
+            --exit --save quality-reports/axe-home.json
+          npx --yes @axe-core/cli@4.10.2 http://127.0.0.1:4000/articles/ \
+            --tags wcag2a,wcag2aa,wcag21a,wcag21aa \
+            --exit --save quality-reports/axe-articles.json
+          npx --yes @axe-core/cli@4.10.2 http://127.0.0.1:4000/2025/12/14/code-review-alignment-for-long-term-maintenance.html \
+            --tags wcag2a,wcag2aa,wcag21a,wcag21aa \
+            --exit --save quality-reports/axe-article.json
+
+      - name: Upload quality baseline reports
+        if: always()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: quality-baseline-${{ github.event.pull_request.head.sha }}
+          path: quality-reports
+          if-no-files-found: warn
+          retention-days: 7
+
       - name: Verify repository-only files are not published
         run: |
           test ! -d _site/ReferenceDocument
