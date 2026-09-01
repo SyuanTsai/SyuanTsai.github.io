@@ -99,7 +99,7 @@ PR 的確定性檢查會阻擋合併，涵蓋：
 * `robots.txt`、Canonical、Open Graph 與 JSON-LD。
 * 站內連結、頁面錨點與必要靜態資產。
 * ADR 與本文件的回復章節。
-* axe 在首頁、文章列表與代表性文章偵測到的 WCAG A／AA 違規。
+* Lighthouse 內建 axe 規則在行動版頁面偵測到的明確 accessibility audit 失敗。
 
 容易受執行環境或外部服務波動影響的項目只提供報告：
 
@@ -123,7 +123,7 @@ python3 scripts/verify_quality_baseline.py _site \
   --external-report quality-reports/external-links.json
 ```
 
-axe 與 Lighthouse 使用 workflow 中固定的 npm 套件版本。若共用 Layout、導覽或部署方式改變，仍需補做一次人工鍵盤操作、焦點順序、手機閱讀與實際回復流程確認。
+Lighthouse 使用 workflow 中固定的 npm 套件版本；四項分數只記錄 baseline，但 accessibility 類別中的個別失敗 audit 會阻擋 CI。若共用 Layout、導覽或部署方式改變，仍需補做一次人工鍵盤操作、焦點順序、手機閱讀與實際回復流程確認。
 
 ## 回復已上線的錯誤內容
 
