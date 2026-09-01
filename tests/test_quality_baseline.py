@@ -7,8 +7,8 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(ROOT))
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
 
 from verify_quality_baseline import (
     collect_external_urls,
@@ -81,6 +81,21 @@ class QualityBaselineTests(unittest.TestCase):
             errors = verify_quality_baseline(root, site)
             self.assertTrue(any("站內連結不存在" in error for error in errors))
             self.assertTrue(any("錨點不存在" in error for error in errors))
+
+    def test_encoded_parent_traversal_cannot_escape_site_directory(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            site = self.create_fixture(root)
+            (root / "outside.html").write_text("outside", encoding="utf-8")
+            (site / "index.html").write_text(
+                self.page(
+                    "https://notes.tw-syuan.com/",
+                    '<a href="/%2e%2e/outside.html">Outside</a>',
+                ),
+                encoding="utf-8",
+            )
+            errors = verify_quality_baseline(root, site)
+            self.assertTrue(any("站內連結不存在" in error for error in errors))
 
     def test_missing_open_graph_and_invalid_json_ld_are_reported(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:
