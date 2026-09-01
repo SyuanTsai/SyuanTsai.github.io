@@ -37,6 +37,9 @@ jobs:
       - name: Verify unlisted article template preview
         run: python3 scripts/verify_unlisted_preview.py _site
 
+      - name: Verify GitHub Pages delivery artifacts
+        run: python3 scripts/verify_site_delivery.py _site
+
       - name: Verify repository-only files are not published
         run: |
           test ! -d _site/ReferenceDocument
