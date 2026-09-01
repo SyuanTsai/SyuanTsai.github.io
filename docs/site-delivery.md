@@ -91,3 +91,49 @@ python3 scripts/verify_site_delivery.py _site
 ## 已確認的自動發布證據
 
 2026-08-31 的 `gh-pages` commit `bf3b44c35ddd831077f33b9185176df393ef7daa` 包含 Markdown 與網站資產變更，GitHub 管理的 `pages build and deployment` run `33364299438` 自動執行並成功完成。這可作為「Push／合併至 `gh-pages` 後自動建置與發布」的既有基線；SYP-124 合併後仍需以新 commit 的 Pages run 與正式 Sitemap／Feed 完成最終驗收。
+
+## 自動品質基線
+
+PR 的確定性檢查會阻擋合併，涵蓋：
+
+* `robots.txt`、Canonical、Open Graph 與 JSON-LD。
+* 站內連結、頁面錨點與必要靜態資產。
+* ADR 與本文件的回復章節。
+* Lighthouse 內建 axe 規則在行動版頁面偵測到的明確 accessibility audit 失敗。
+
+容易受執行環境或外部服務波動影響的項目只提供報告：
+
+* Lighthouse 行動版 Performance、Accessibility、Best Practices 與 SEO 分數。
+* 外部連結 HTTP 狀態。
+
+報告由 workflow 上傳為 `quality-baseline-<commit-sha>` artifact，保留七天。Lighthouse 分數用來比較趨勢，不設定 PR 硬門檻；外部網址暫時失敗也不阻擋合併。
+
+本機先執行確定性檢查：
+
+```bash
+bundle exec jekyll build --strict_front_matter
+python3 scripts/verify_quality_baseline.py _site
+```
+
+需要外部連結狀態報告時執行：
+
+```bash
+python3 scripts/verify_quality_baseline.py _site \
+  --external-only \
+  --external-report quality-reports/external-links.json
+```
+
+Lighthouse 使用 workflow 中固定的 npm 套件版本；四項分數只記錄 baseline，但 accessibility 類別中的個別失敗 audit 會阻擋 CI。若共用 Layout、導覽或部署方式改變，仍需補做一次人工鍵盤操作、焦點順序、手機閱讀與實際回復流程確認。
+
+## 回復已上線的錯誤內容
+
+正式站錯誤內容使用可追溯的 revert 回復，不 force-push `gh-pages`，也不手動修改或上傳 `_site`。
+
+1. 在 `gh-pages` 歷史確認最後一個已知正常 commit，以及造成錯誤的 commit 或 merge commit。
+2. 從最新 `gh-pages` 建立回復分支，執行 `git revert <bad-commit-sha>`；若是 merge commit，依 Git 提示指定主線 parent。
+3. Push 回復分支並建立 PR，等待既有 Jekyll build、品質基線與必要視覺檢查完成。
+4. 合併後確認 `pages build and deployment` 對新的 revert commit 執行成功。
+5. 以 `https://notes.tw-syuan.com/?verify=<revert-commit-sha>` 與受影響頁面驗證正式內容、Canonical、Sitemap、Feed 與 CNAME。
+6. 在原 PR 或 Jira 記錄錯誤 commit、revert commit、Pages run 與驗證結果。
+
+若 GitHub Pages 部署本身失敗但 `gh-pages` 內容正確，先依 Actions 錯誤修正後重新 Push；不要用內容回復掩蓋平台或設定問題。
