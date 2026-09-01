@@ -51,13 +51,19 @@ jobs:
         run: |
           python3 -m http.server 4000 --directory _site >/tmp/syuan-notes-lighthouse.log 2>&1 &
           quality_server_pid=$!
-          trap 'kill "$quality_server_pid"' EXIT
+          trap 'kill "$quality_server_pid" 2>/dev/null || true' EXIT
+          quality_server_ready=false
           for attempt in {1..20}; do
             if curl --fail --silent http://127.0.0.1:4000/ >/dev/null; then
+              quality_server_ready=true
               break
             fi
             sleep 0.25
           done
+          if [ "$quality_server_ready" != true ]; then
+            cat /tmp/syuan-notes-lighthouse.log
+            exit 1
+          fi
           mkdir -p quality-reports
           npx --yes lighthouse@12.8.2 http://127.0.0.1:4000/ \
             --only-categories=performance,accessibility,best-practices,seo \
