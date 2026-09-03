@@ -1,24 +1,29 @@
 ---
-title: "用 .gitconfig 隔離私人與工作 Git 身分"
+title: "同一台電腦分開管理個人與公司 Git 身分"
 date: 2026-09-03
 last_modified_at: 2026-09-03
-description: "使用條件式 Git 設定，依 Repository 位置自動切換私人與工作 Commit 身分。"
+description: "用 Git 的 includeIf 依資料夾套用不同的姓名與 Email，避免 Commit 留下錯誤身分。"
 categories: [code]
 tags: [maintainability]
 draft: true
 ---
 
-同一台電腦同時處理私人與工作 Repository 時，不要在全域設定共用的 Name 與 Email。
-最直接的做法是依 Repository 所在目錄載入不同身分檔。
+同一台電腦同時處理個人專案和公司專案，最容易踩到的雷，就是 Commit 帶到錯的姓名或 Email。
 
-這只控制新 Commit 的作者與提交者身分；Push 使用哪個帳號，仍由 SSH 或 HTTPS 驗證決定。
+解法很單純：把兩類專案放在不同資料夾，再用 Git 的 `includeIf` 依路徑載入對應的身分設定。
 
-## 核心設定
+這篇只處理 Commit 身分。Push 實際使用哪個帳號，仍由 SSH 或 HTTPS 的登入方式決定。
 
-先將 Repository 分開存放：
+## 先把專案分開放
 
-- 私人：`C:/Git/Personal/`
-- 工作：`C:/Git/Work/`
+例如：
+
+- 個人專案：`C:/Git/Personal/`
+- 公司專案：`C:/Git/Work/`
+
+只要專案放在對應的根目錄下，Git 就能自動選到正確身分。
+
+## 讓主設定檔只負責分流
 
 編輯 `C:/Users/USER/.gitconfig`：
 
@@ -33,13 +38,15 @@ draft: true
     path = C:/Users/USER/.gitconfig-work
 ```
 
-重點只有三個：
+這裡有三個重點：
 
-- 主設定檔不放共用的 `user.name` 或 `user.email`。
-- 私人與工作目錄分別載入自己的身分檔。
-- 不符合已知目錄的 Repository 不應自動套用預設身分。
+- 主 `.gitconfig` 不設定共用的 `user.name` 和 `user.email`。
+- `gitdir/i` 會依專案路徑比對，而且不分英文字母大小寫。
+- 路徑最後的 `/` 不要省略，這樣才會包含該目錄底下的所有專案。
 
-## 建立兩份身分檔
+`user.useConfigOnly = true` 會阻止 Git 自行猜測身分。專案如果不在已設定的目錄內，Git 會要求先設定姓名和 Email，避免在不知情的情況下留下錯誤紀錄。
+
+## 個人和公司各用一份設定
 
 `C:/Users/USER/.gitconfig-personal`：
 
@@ -57,9 +64,11 @@ draft: true
     email = YOUR_WORK_EMAIL
 ```
 
-## 驗證結果
+之後新增其他專案時，只要放進正確的資料夾，不必再逐一設定。
 
-在目標 Repository 執行：
+## Commit 前先確認
+
+進入要操作的專案後執行：
 
 ```powershell
 git config --show-origin --get user.name
@@ -68,17 +77,18 @@ git var GIT_AUTHOR_IDENT
 git var GIT_COMMITTER_IDENT
 ```
 
-輸出來源應指向正確的身分檔，Name 與 Email 也必須符合該 Repository 類型。
+前兩行可以確認姓名與 Email 是從哪個設定檔載入；後兩行則會顯示下一次 Commit 實際使用的身分。
 
-## 仍需注意
+如果結果不對，先檢查專案內的 `.git/config`。Repo 自己的設定優先權較高，可能會蓋掉 `includeIf` 載入的內容。
 
-- Repository-local 的 `.git/config` 可以覆蓋條件式設定。
-- `GIT_AUTHOR_EMAIL` 與 `GIT_COMMITTER_EMAIL` 等環境變數可以覆蓋 Git 設定。
-- `.gitconfig` 不決定 Push 帳號；SSH Key 或 HTTPS Credential 必須另外隔離。
-- Codex Cloud 使用獨立 Container，不會自動繼承 Host 的設定。
-- 這項設定只影響後續 Commit，不會改寫歷史紀錄。
+## 這項設定不會處理的事
 
-核心原則：先依目錄選擇身分，確認有效值後才 Commit。
+- `GIT_AUTHOR_EMAIL`、`GIT_COMMITTER_EMAIL` 等環境變數仍可能蓋掉 Git 設定。
+- SSH Key 或 HTTPS Credential 決定 Push 使用哪個帳號，必須另外設定。
+- Codex Cloud 在獨立的 Container 中執行，不會自動讀取電腦上的 `.gitconfig`。
+- 這些設定只影響之後建立的 Commit，不會修改歷史紀錄。
+
+簡單說：資料夾決定 Commit 身分，SSH 或 HTTPS 決定 Push 帳號。兩邊都要分開確認。
 
 ## 參考資料
 
@@ -90,4 +100,4 @@ git var GIT_COMMITTER_IDENT
 
 | 日期 | 內容 |
 | --- | --- |
-| 2026-09-03 | 草稿。 |
+| 2026-09-03 | 調整文章結構與用詞。 |
