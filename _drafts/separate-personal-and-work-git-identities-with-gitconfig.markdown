@@ -8,7 +8,8 @@ tags: [maintainability]
 draft: true
 ---
 
-同一台電腦同時處理私人與工作 Repository 時，不要在全域設定共用的 Name 與 Email。最直接的做法是依 Repository 所在目錄載入不同身分檔。
+同一台電腦同時處理私人與工作 Repository 時，不要在全域設定共用的 Name 與 Email。
+最直接的做法是依 Repository 所在目錄載入不同身分檔。
 
 這只控制新 Commit 的作者與提交者身分；Push 使用哪個帳號，仍由 SSH 或 HTTPS 驗證決定。
 
@@ -89,4 +90,4 @@ git var GIT_COMMITTER_IDENT
 
 | 日期 | 內容 |
 | --- | --- |
-| 2026-09-03 | 建立不含真實個人或工作識別資訊的草稿。 |
+| 2026-09-03 | 草稿。 |
