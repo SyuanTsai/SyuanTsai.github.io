@@ -10,11 +10,11 @@ and article media. The existing repository instructions classify all branches,
 commits, previews, and pull requests as public.
 
 The site uses the Jekyll Minima remote theme at the commit pinned in
-_config.yml. External theme and gem content remain outside any new license.
-The current repository has no root LICENSES directory; this branch records the
-proposed path split and the evidence boundary without publishing a license
-grant.
+_config.yml. External theme and gem content remain outside both new license
+scopes.
 
-The site content and implementation must be reviewed separately. A future
-license grant must identify the exact files, exclude third-party material, and
-preserve the public-content policy.
+Owner authorization confirmed on 2026-09-05 applies to the exact implementation,
+build, original article, and original media paths listed in LICENSE-SCOPE.md.
+This branch publishes the standard MIT and CC BY 4.0 texts for those paths only.
+CNAME, domain configuration, external material, and unverified or unlisted files
+remain outside the grants.
