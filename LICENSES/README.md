@@ -1,13 +1,13 @@
 # License index
 
-No license text is published by this branch.
+The active license texts and scopes are:
 
-The site has two intended, separate license families for review:
+- [MIT.txt](MIT.txt) — only the repository-authored implementation and build
+  paths listed in [../LICENSE-SCOPE.md](../LICENSE-SCOPE.md).
+- [CC-BY-4.0.txt](CC-BY-4.0.txt) — only the original editorial and media paths
+  listed in [../LICENSE-SCOPE.md](../LICENSE-SCOPE.md).
 
-- MIT for verified repository-authored implementation and build files.
-- CC BY 4.0 for verified original articles and media.
-
-Neither grant is effective on this branch. External theme, gems, images,
-quotations, logos, and other third-party material retain their original terms.
-The exact standard license texts may be added only after explicit owner
-authorization for the corresponding scope.
+For CC BY 4.0 material, preserve creator attribution, the source path, the
+license URI, and modification information where applicable. External themes,
+gems, images, quotations, logos, domain configuration, linked material, and
+unlisted files retain their original terms.
