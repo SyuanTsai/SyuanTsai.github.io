@@ -10,6 +10,6 @@
   create a copyright license for the site or its content.
 
 [LICENSES/MIT.txt](LICENSES/MIT.txt) applies only to the exact implementation
-and build paths listed in LICENSE-SCOPE.md. [LICENSES/CC-BY-4.0.txt](CC-BY-4.0.txt)
+and build paths listed in LICENSE-SCOPE.md. [LICENSES/CC-BY-4.0.txt](LICENSES/CC-BY-4.0.txt)
 applies only to the exact original article and media paths listed there. No
 third-party dependency or external article is included in either scope.
