@@ -1,15 +1,29 @@
 # License scope
 
-No additional license is granted by this branch.
+The standard [MIT text](LICENSES/MIT.txt) is effective only for these exact
+repository-authored implementation and build paths:
 
-The intended split for a future, explicitly authorized decision is:
+- `.github/workflows/**`
+- `_includes/**`
+- `_layouts/**`
+- `_sass/**`
+- `assets/js/**`
+- `scripts/**`
+- `tests/**`
+- `Gemfile`
+- `_config.yml`
+- `.ruby-version`
 
-| Path or material | Intended license | Boundary |
-| --- | --- | --- |
-| _layouts/**, _includes/**, _sass/**, assets/js/**, scripts/**, tests/**, .github/workflows/**, Gemfile, and site configuration authored for the build | MIT | Only repository-authored implementation and build material |
-| _posts/**, _drafts/**, and original article media | CC BY 4.0 | Only content whose authorship and licensing authority are documented |
-| External theme, gems, images, quotations, logos, domain configuration, and linked material | Original terms | Never relicensed by this repository |
+The standard [CC BY 4.0 text](LICENSES/CC-BY-4.0.txt) is effective only for
+these exact original editorial paths:
 
-The intended split is recorded for review and is not effective until the owner
-explicitly authorizes the exact MIT and CC BY 4.0 grants. External and
-unverified material remains outside any new license.
+- `_posts/**`
+- `_drafts/**`
+- `assets/images/posts/**`, limited to original article media
+
+Attribution should identify the creator credited by the relevant article or
+asset metadata and link to the source path. The following are excluded from
+both grants: external themes and gems, external images, quotations, fonts,
+icons, logos, CNAME and domain configuration, linked material, templates not
+listed above, and any unverified or unlisted file. The license files and
+rights-boundary records describe the scopes but do not expand them.
