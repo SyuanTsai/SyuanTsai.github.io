@@ -6,8 +6,10 @@
   dependencies and retain their own licenses.
 - External images, quotations, fonts, icons, logos, and linked articles retain
   the rights of their respective sources.
-- CNAME and domain configuration identify a publishing destination; they do
-  not create a copyright license for the site or its content.
+- CNAME and domain configuration identify a publishing destination; they do not
+  create a copyright license for the site or its content.
 
-No third-party dependency or external article is included in the intended MIT
-or CC BY 4.0 scope.
+[LICENSES/MIT.txt](LICENSES/MIT.txt) applies only to the exact implementation
+and build paths listed in LICENSE-SCOPE.md. [LICENSES/CC-BY-4.0.txt](CC-BY-4.0.txt)
+applies only to the exact original article and media paths listed there. No
+third-party dependency or external article is included in either scope.
