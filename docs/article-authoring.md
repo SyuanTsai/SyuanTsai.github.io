@@ -202,7 +202,7 @@ using var response = await httpClient.SendAsync(request);
 
 ### 圖片
 
-文章內文圖片優先上傳至公開 `SyuanTsai/Media-Assets` Issue，使用 GitHub 產生的完整匿名化附件網址。上傳前先以語意化檔名保存來源並計算 SHA-256，再依 `docs/static-assets.md` 更新 manifest。既有文章與文章代表圖片仍可使用 `/assets/images/posts/<slug>/`，不需要為了新規則搬移。
+文章內文圖片優先上傳至公開 `SyuanTsai/Media-Assets` Issue，使用 GitHub 產生的完整匿名化附件網址。上傳前先在 Git 外以語意化檔名暫存來源並計算 SHA-256，再依 `docs/static-assets.md` 更新 manifest。交由 Media-Assets 管理的圖片只保存於 Issue 附件，不得提交到 Media-Assets 或本站的任何分支作來源或備份；Issue 本文貼上 raw 圖片網址並不等於上傳附件。既有文章與文章代表圖片仍可使用 `/assets/images/posts/<slug>/`，不需要為了新規則搬移。
 
 #### Issue 與多圖管理
 

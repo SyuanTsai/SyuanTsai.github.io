@@ -10,7 +10,7 @@
 - 尚未依賴免費公共圖床或供應商專屬資源網址。
 - 文章範本目前使用 `/assets/images/posts/<slug>/...` 站內相對網址。
 
-現有規模不需要為容量或流量建立物件儲存服務。本站選擇以公開 GitHub Issue 附件作為文章內文圖片的主要發布方式，既有 Repository 檔案作為來源與備份；正式文章目前使用的 `/assets/` 網址維持不變，先以未列出範本完成 MVP。
+文章內文圖片存放於公開 GitHub Issue 附件；Git 只保存文字規範、來源 metadata 與 manifest。交由 Media-Assets 管理的圖片不得提交至 Media-Assets 或本站任何 Git 分支，也不得以「來源備份」為由另存一份。既有站內 `/assets/` 及文章代表圖片依原規則使用。
 
 ## 方案比較
 
@@ -25,13 +25,13 @@
 
 ### 選定方案
 
-採用「公開 GitHub Issue 附件負責文章內文圖片傳遞，Repository 保存可重新發布的來源與 manifest」：
+採用「公開 GitHub Issue 附件保存文章內文圖片，Git 保存 metadata 與 manifest」：
 
 1. 主帳號 `SyuanTsai` 建立並持有公開 `SyuanTsai/Media-Assets` Repository，開啟 Issues。
 2. 另建專用 GitHub machine user，只在雲端瀏覽器登入；不加入 `SyuanTsai.github.io`，也不成為 `Media-Assets` collaborator。
 3. 專用帳號以一般公開使用者身分建立資產 Issue；一篇文章或一個使用單位對應一個 Issue，本文保存共用資訊與 Asset index。
 4. 上傳後只使用 GitHub 產生的完整匿名化網址，不自行拼接網址。
-5. `docs/static-assets-manifest.yml` 記錄來源檔案與 GitHub 附件網址的對應。
+5. `docs/static-assets-manifest.yml` 記錄原始來源網址（如有）、語意化檔名、SHA-256、Issue 與附件網址；圖片原檔不加入 Git。
 6. 圖片內容更新時重新上傳並取得新網址，不覆寫或重複利用舊網址。
 
 這個方案接受 GitHub 供應商網址與無法自訂 Cache 的限制，以換取目前規模下最低的成本與操作負擔。若未來需要自訂網域、可控 Cache、大量檔案、自動部署或獨立 SLA，再重新評估 R2、S3＋CloudFront、DigitalOcean Spaces 或 Azure。
@@ -43,6 +43,8 @@
 | `@GitHub` 連接器（主帳號） | `SyuanTsai.github.io` 的程式碼、PR 與 Jira 對應工作 | 不保存或使用專用帳號密碼 |
 | 雲端瀏覽器（專用帳號） | `Media-Assets` 的公開 Issue、comment 與附件 | 不授予 `SyuanTsai.github.io` 存取權，不授予任何 Repository collaborator 權限 |
 | `SyuanTsai` 主帳號 | 持有及管理兩個 Repository，必要時進行復原與撤銷 | 不在雲端瀏覽器保存主帳號 session |
+
+擁有者也可使用已授權的 GitHub CLI（2.99.0 或更新且支援 `--attach`）上傳 Issue 附件。上傳前確認 `gh issue edit --help` 支援該旗標；CLI 上傳需要 Repository 寫入權限。此權限不表示允許提交圖片。瀏覽器拖曳、貼上或選擇檔案仍可使用；遇到登入或版本限制時，不得改以 Git blob、raw URL 或其他分支保存圖片。
 
 專用帳號必須使用獨立信箱、唯一密碼與 2FA；密碼、TOTP secret 與恢復碼只由擁有者保管，不寫入對話、Repository、Jira 或 manifest。
 
@@ -65,7 +67,7 @@
 https://github.com/user-attachments/assets/<uuid>
 ```
 
-GitHub 附件網址不保留可讀檔名，也沒有可由本站管理的目錄結構。語意化名稱與來源仍使用以下結構：
+GitHub 附件網址不保留可讀檔名，也沒有可由本站管理的目錄結構。下載及上傳前暫存檔使用下列語意化結構；它不是 Git 追蹤路徑，工作完成後僅保留 metadata 與附件：
 
 ```text
 assets/images/posts/<article-slug>/<semantic-name>-<content-hash>.<ext>
@@ -122,32 +124,32 @@ GitHub Issue 附件的回應標頭與 Cache 行為由 GitHub 控制，本站無�
 ## 發布流程
 
 1. 將來源檔案最佳化並計算 SHA-256。
-2. 使用語意化檔名保存來源，執行格式、大小、重複 hash 與敏感資料檢查。
+2. 使用語意化檔名在 Git 外暫存來源，執行格式、大小、重複 hash 與敏感資料檢查。
 3. 尋找該內容既有的 Issue；沒有時依標準標題建立，並在本文加入 Target project、Content identifier 與 Asset index。
-4. 第一筆資產可記在 Issue 本文；後續資產在各自的 comment 記錄 Asset ID、語意化檔名、SHA-256、尺寸與替代文字，再貼上或拖曳檔案。
+4. 第一筆資產可記在 Issue 本文；後續資產在各自的 comment 記錄 Asset ID、語意化檔名、SHA-256、尺寸與替代文字，再以瀏覽器或官方 CLI 上傳附件。
 5. 等待 GitHub 完成上傳並取得完整匿名化網址，將 Asset ID 與紀錄位置補回 Issue 的 Asset index。
 6. 更新 `docs/static-assets-manifest.yml`，再把相同網址加入文章。
 7. 驗證未登入可存取、HTTPS、Content-Type、下載內容 SHA-256、桌機／手機、深色模式、替代文字與版面。
-8. Issue、manifest 與文章一起提交 Review；不得只保存匿名化網址而沒有來源對應。發布驗證完成後可關閉 Issue。
+8. Issue、manifest 與文章一起提交 Review；檢查 diff 沒有圖片 binary、Media-Assets blob 路徑或 raw 圖片網址。不得只保存匿名化網址而沒有來源對應。發布驗證完成後可關閉 Issue。
 
 ## 備份、故障與遷移
 
 ### 備份
 
-- Git Repository 保存所有已發布來源及 manifest，GitHub Issue 附件只視為傳遞副本。
+- Git Repository 只保存來源 metadata 及 manifest；已發布圖片保存在 Issue 附件。不得將附件下載後提交回 Git 作備份。
 - manifest 至少記錄內容識別碼、Asset ID、語意化名稱、GitHub URL、SHA-256、大小、Content-Type、原始寬高、替代文字，以及所屬 Issue 與本文／comment 位置。
 - 每月抽查附件 URL 是否仍可匿名存取，並比對下載內容的 SHA-256。
-- 大型原始素材若不適合進入 Git，必須先保存於另一個受控備份位置，才可發布最佳化版本。
+- 若另有已授權的受控備份位置，可在 Git 外保留原始素材並在 manifest 記錄定位資訊；不得自行建立新的雲端備份或把圖片加入分支。
 
 ### 故障
 
-- 單一附件失效：由 Repository 保存版本重新上傳，更新 manifest 與引用該網址的文章。
+- 單一附件失效：從仍有效的附件、原始來源或已授權的 Git 外備份重新取得檔案，核對 SHA-256 後上傳新附件，更新 manifest 與文章；無法取得時回報缺少來源，不改用 Git 存圖。
 - Repository 被改為 Private 或即將刪除：在變更前依 manifest 完成全部附件遷移。
 - GitHub 服務異常：本站沒有獨立 Origin fallback；若穩定性不符合需求，啟動外部物件儲存遷移。
 
 ### 遷移
 
-1. 依 manifest 從 Repository 來源檔案重新發布到新服務。
+1. 依 manifest 從 Issue 附件或已授權的 Git 外來源取得圖片，再發布到新服務。
 2. 核對新舊檔案的 SHA-256、Content-Type 與顯示結果。
 3. 建立「舊 GitHub URL → 新 URL」對照表，批次更新文章與 manifest。
 4. 完成 Jekyll 建置及桌機／手機視覺驗證後再發布。

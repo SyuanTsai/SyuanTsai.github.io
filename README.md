@@ -17,3 +17,10 @@ This repository separates site implementation from editorial content:
 The license files are effective for their listed scopes. See
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md),
 [PROVENANCE.md](PROVENANCE.md), and [LICENSES/README.md](LICENSES/README.md).
+
+## Article image storage
+
+Images managed by Media-Assets are stored as public GitHub Issue attachments.
+Commit only metadata and manifests; do not commit their image binaries or Git
+backup copies to any branch. Follow [the asset workflow](docs/static-assets.md)
+and the [Media-Assets README](https://github.com/SyuanTsai/Media-Assets#readme).

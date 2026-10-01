@@ -12,6 +12,8 @@ assets:
       url: https://github.com/SyuanTsai/Media-Assets/issues/1
       record: body
     source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/becf7d8d-5487-4f6c-b55e-23b80312e508
       semantic_filename: article-template-rocket-example-7ff6a962.png
       sha256: 7ff6a9628352bc30eaef3f4df09cb3b2188cf69795207ee51b6116bd84550bfa
       bytes: 10370

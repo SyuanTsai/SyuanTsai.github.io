@@ -88,6 +88,8 @@ using var response = await httpClient.SendAsync(request, cancellationToken);
 
 同篇文章有多張圖片時，使用穩定且可辨識的 Asset ID，並建立資產索引。第一筆資產可記在 Issue 本文，後續每張邏輯圖片或同圖尺寸版本各用一則 comment 管理。一般中文詞組會以原生排版搭配自動語意詞保護自然換行，作者不需要加入不可拆標記。
 
+Media-Assets 圖片只保存於 Issue 附件，Git 保存來源 metadata 與 manifest；圖片原檔不加入任何分支或作 Git 備份。
+
 圖片引用必須使用 GitHub 產生的完整附件網址、能表達圖片資訊的替代文字，以及原始像素寬高。非首屏關鍵圖片加入 lazy loading；網站 CSS 會在窄螢幕依比例縮小，不需要手動建立換行。
 
 ![紫色火箭向右上方升空，尾部帶有橘色火焰](https://github.com/user-attachments/assets/becf7d8d-5487-4f6c-b55e-23b80312e508){: width="120" height="120" loading="lazy" }

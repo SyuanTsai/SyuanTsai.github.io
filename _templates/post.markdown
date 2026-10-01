@@ -53,6 +53,7 @@ categories 固定填一個小寫 kebab-case 主分類；tags 填一至五個小�
 3. 同篇文章有多張圖時，為每張邏輯圖片或同圖尺寸版本建立穩定的 Asset ID，並記在 Issue 索引與個別 comment；第一筆資產可直接記在 Issue 本文。
 4. 將下列網址替換成 GitHub 上傳完成後產生的完整附件網址，並同步更新 docs/static-assets-manifest.yml。
 5. 替代文字必須描述圖片傳達的資訊；width 與 height 使用原始像素尺寸。非首屏關鍵圖片保留 loading="lazy"。
+6. Media-Assets 圖片只存 Issue 附件；原圖暫存於 Git 外，不得提交到 main、master 或任何工作分支作備份。不可改用 raw.githubusercontent.com/SyuanTsai/Media-Assets/...。
 -->
 ![替代文字](https://github.com/user-attachments/assets/REPLACE_WITH_GITHUB_UUID){: width="960" height="540" loading="lazy" }
 
