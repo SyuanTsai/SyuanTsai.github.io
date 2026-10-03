@@ -24,3 +24,623 @@ assets:
     alt: "紫色火箭向右上方升空，尾部帶有橘色火焰"
     uploaded_at: 2026-08-30
     status: in-use
+
+  - id: darktide/portraits/sergeant-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: body
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/03a6b688-9682-44c0-830e-206a0c660d7f
+      semantic_filename: sergeant_a.png
+      sha256: b64d65e74630e8136659a4030ba7fce85688c877b0d6631183cade2adf2c44b9
+      bytes: 39101
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/03a6b688-9682-44c0-830e-206a0c660d7f
+    alt: "莫羅軍士長"
+    uploaded_at: 2026-10-03
+    status: in-use
+
+  - id: darktide/portraits/rannick-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5968951331
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/1cc1dda7-5697-4109-a2eb-f4b90b5e3c9e
+      semantic_filename: rannick_a.png
+      sha256: 0fa6f97448a1ac424640cd3ba61c8b880cea02e28ad8ea6c73058de25f4e26a7
+      bytes: 34267
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/1cc1dda7-5697-4109-a2eb-f4b90b5e3c9e
+    alt: "審訊者蘭尼克"
+    uploaded_at: 2026-10-03
+    status: in-use
+
+  - id: darktide/portraits/tech-priest-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5968952404
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/c21fcadb-1978-4295-af64-eaa71e96320a
+      semantic_filename: tech_priest_a.png
+      sha256: 208ffa30579e5a401aab3ff7b1aad75ebe7746ac1f876709f956aa2bdbad935d
+      bytes: 42938
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/c21fcadb-1978-4295-af64-eaa71e96320a
+    alt: "哈德隆歐米伽7-7"
+    uploaded_at: 2026-10-03
+    status: in-use
+
+  - id: darktide/portraits/swagger-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5970268807
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/e00d8ee8-2d5f-4487-8789-8c3cce50f680
+      semantic_filename: swagger_a.png
+      sha256: 0ea4d39f42f19405446bb25b5fb6ba4cc9430912a0fbe7d6d9a2d915d60948b8
+      bytes: 27252
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/e00d8ee8-2d5f-4487-8789-8c3cce50f680
+    alt: "斯瓦格爾"
+    uploaded_at: 2026-10-03
+    status: in-use
+
+  - id: darktide/portraits/pilot-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5970833764
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/ab5ca5fc-1631-4ef7-add7-038397996c3c
+      semantic_filename: pilot_a.png
+      sha256: d1e867111973c60b852ff911c9ee5a7d6f39f970bb62be7df708a6fffa25db18
+      bytes: 47584
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/ab5ca5fc-1631-4ef7-add7-038397996c3c
+    alt: "飛行中尉馬索茲"
+    uploaded_at: 2026-10-03
+    status: in-use
+
+  - id: darktide/portraits/alice-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5970834686
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/6f3ce3fe-9741-438a-a5d0-9b5dc1d67edb
+      semantic_filename: alice_a.png
+      sha256: fef6e942611a62b57c13f3309075e229c919290e7730fdcf8935d5ee51ac80c7
+      bytes: 36459
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/6f3ce3fe-9741-438a-a5d0-9b5dc1d67edb
+    alt: "愛麗絲·哈洛韋特"
+    uploaded_at: 2026-10-03
+    status: in-use
+
+  - id: darktide/portraits/officer-01
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972308459
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/e078fe6c-977b-4fbf-97b2-48325f34093d
+      semantic_filename: officer_01.png
+      sha256: eb1ba9f6235f8524608e86134a6fb767199705dc6c50596c1a623f3d08b33519
+      bytes: 45853
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/e078fe6c-977b-4fbf-97b2-48325f34093d
+    alt: "Moebian VI Adjutant"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/officer-02
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972317257
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/64e21958-37e0-42fa-a0e0-0bd8e2522168
+      semantic_filename: officer_02.png
+      sha256: 3cab5cf9d00e1464fbb1a560874822476679c1c2c5eeb61416b5f5629509694e
+      bytes: 42088
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/64e21958-37e0-42fa-a0e0-0bd8e2522168
+    alt: "Moebian VI Comms Officer / Moebian VI Adjutant"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/wolfer-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972320244
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/a3ae6bcf-a57b-4f64-8cd0-bd1f8fee1baa
+      semantic_filename: wolfer_a.png
+      sha256: 94c14e5ed3f0b1ebc217bb6e677dbb05c0c9d2471ac229372c936ff24713f7ce
+      bytes: 38039
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/a3ae6bcf-a57b-4f64-8cd0-bd1f8fee1baa
+    alt: "Captain Wolfer"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/brahms-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972323597
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/9b506934-8add-4014-8aa6-63948f7b8eec
+      semantic_filename: brahms_a.png
+      sha256: 3408e2db3813b6ec7d8690e96c441305a78a0907155c3dcf2284f95fb66ff7d9
+      bytes: 50263
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/9b506934-8add-4014-8aa6-63948f7b8eec
+    alt: "Shipmistress Brahms"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/brunt-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972326933
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/c560581d-5a32-4e97-bfaa-e63e8d17822e
+      semantic_filename: brunt_a.png
+      sha256: 7f45fb34c5c1ac095691041e8e4464d83ff34be6a20938f027d8f1d04316ca03
+      bytes: 45202
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/c560581d-5a32-4e97-bfaa-e63e8d17822e
+    alt: "Gurry \"Brunt\" Cernik"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/darinda-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972327690
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/b4365b7a-1532-4939-a5b8-f478c13e08fc
+      semantic_filename: darinda_a.png
+      sha256: 1c5a92ed271f462bbfa89b8b749ce08ba9e9bac20066723e90ba45ffe0c09095
+      bytes: 37518
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/b4365b7a-1532-4939-a5b8-f478c13e08fc
+    alt: "Commissar Dukane"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/default
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972330860
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/ae979242-b808-4948-b5f4-c04d9486a704
+      semantic_filename: default.png
+      sha256: 6ccf50711778fe25f75b744ca30e9f6477f382e75a17cfbd391c4c3229c7bc4c
+      bytes: 31305
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/ae979242-b808-4948-b5f4-c04d9486a704
+    alt: "Official default vox display icon"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/enginseer-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972331661
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/be6a3b3d-6391-4297-bc41-0fe7ec0c098b
+      semantic_filename: enginseer_a.png
+      sha256: 1bfb51145b151389faf2fb47b2fa945d2b5256bcdac5ca8c8c67c73727de9d47
+      bytes: 37185
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/be6a3b3d-6391-4297-bc41-0fe7ec0c098b
+    alt: "Enginseer KX-8"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/explicator-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972332446
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/363d3fed-8120-44b6-ac86-6417a3498cde
+      semantic_filename: explicator_a.png
+      sha256: a70a2702c5a80b861237bebc18ff72f25d984e9636f0f5d99a7dfde1d0c66f40
+      bytes: 40493
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/363d3fed-8120-44b6-ac86-6417a3498cde
+    alt: "Explicator Zola"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/hestia-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972335456
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/1497d995-128f-4231-b9f2-b5848aa75d1e
+      semantic_filename: hestia_a.png
+      sha256: 22bf24ad7d8303130f32b0686017b9540bffd540303412837d369fe3154b600c
+      bytes: 36067
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/1497d995-128f-4231-b9f2-b5848aa75d1e
+    alt: "Sister Hestia Prine"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/krall-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972336197
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/cfc46fbc-7928-40f1-b9f6-9e3a64e66122
+      semantic_filename: krall_a.png
+      sha256: 6a23264e941f5c8440310e197eba51123b1de56794a69b787869153d6a94a224
+      bytes: 38719
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/cfc46fbc-7928-40f1-b9f6-9e3a64e66122
+    alt: "Oska Krall"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/melk-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972336898
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/36dc4906-89e6-4196-a3b5-1c95aa92c96b
+      semantic_filename: melk_a.png
+      sha256: ff2e0eab8956d1d0e99e92e7e1a3c786ba8a67d332c663f7bcc5698c78e5e5d4
+      bytes: 35611
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/36dc4906-89e6-4196-a3b5-1c95aa92c96b
+    alt: "Sire Darius Melk"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/procter-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972337540
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/f6e83524-e6d5-4bb8-a458-b2e891dc9b55
+      semantic_filename: procter_a.png
+      sha256: 57de8e7cf7092100fc8049f9030d9a51810a00013c2829a408acf4d13097f5c2
+      bytes: 45662
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/f6e83524-e6d5-4bb8-a458-b2e891dc9b55
+    alt: "Proctor-Exactant Zorin"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/ragged-king-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972340700
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/5999c544-bdc5-4f66-917a-3df80ed93063
+      semantic_filename: ragged_king_a.png
+      sha256: f09f4899bd1054deec07e3912026a7abd4c76adf28313939d6dcb081d6eb675c
+      bytes: 44082
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/5999c544-bdc5-4f66-917a-3df80ed93063
+    alt: "The Ragged King"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/sefoni-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972341387
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/ff5a05a1-b89a-4299-91b5-cc90b809c797
+      semantic_filename: sefoni_a.png
+      sha256: de422d7f1880339f7f4b1cdbc3f0f82bc97c6e9003e80bddc0d3f6871733d038
+      bytes: 49757
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/ff5a05a1-b89a-4299-91b5-cc90b809c797
+    alt: "Sefoni"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/tank-commander-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972342269
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/6dbce95a-3625-4bce-8355-406c0cd74ae7
+      semantic_filename: tank_commander_a.png
+      sha256: 6bb6b38cae51cb464cc3f459f1dca81ea93058ce45e5dff96f386335970923b1
+      bytes: 42566
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/6dbce95a-3625-4bce-8355-406c0cd74ae7
+    alt: "Knight Commander Raximillian Dragor"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/tertium-noble-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972345440
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/5683c217-ec74-47aa-be83-012e00689b35
+      semantic_filename: tertium_noble_a.png
+      sha256: 575576b9d7e202832362dd2c417703fa1a130b0749de45d1f647f779fca38186
+      bytes: 52555
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/5683c217-ec74-47aa-be83-012e00689b35
+    alt: "Mamzel Durellia of House Barquette"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/portraits/tertium-noble-b
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972346163
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/94c17e6e-b331-40cc-91f6-417ac327bec4
+      semantic_filename: tertium_noble_b.png
+      sha256: 210fd353f41c62d831f01f4c39b651af8c850be16ea591770336250e552c6068
+      bytes: 40635
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/94c17e6e-b331-40cc-91f6-417ac327bec4
+    alt: "Sire Mangolin of House Margrave"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/classes/adamant
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972393652
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/9cf8bd79-a801-4286-91a5-9cdf1b193655
+      semantic_filename: class_adamant.png
+      sha256: 880845f2282b621d0ae710b05b3cae1de652fafa823dfe80611366de86a7255a
+      bytes: 7129
+      content_type: image/png
+      width: 348
+      height: 348
+    delivery_url: https://github.com/user-attachments/assets/9cf8bd79-a801-4286-91a5-9cdf1b193655
+    alt: "Arbitrator"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/classes/broker
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972394363
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/9192f076-5691-4fe9-a2be-39293ba1db6e
+      semantic_filename: class_broker.png
+      sha256: baf4c042a6a33332f30de9c0cbe7560f94e3b0921d3f5a05c7dde3be8d0c9d4f
+      bytes: 7790
+      content_type: image/png
+      width: 348
+      height: 348
+    delivery_url: https://github.com/user-attachments/assets/9192f076-5691-4fe9-a2be-39293ba1db6e
+    alt: "Hive Scum"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/classes/cryptic
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972397724
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/66f372c5-5202-4234-9e71-3f825706cc8a
+      semantic_filename: class_cryptic.png
+      sha256: d60b1cd4c046717ab079a381de0c5f5136cb280da2f1f614ebbceba1683ed046
+      bytes: 12019
+      content_type: image/png
+      width: 348
+      height: 348
+    delivery_url: https://github.com/user-attachments/assets/66f372c5-5202-4234-9e71-3f825706cc8a
+    alt: "Skitarius"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/classes/ogryn
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972401041
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/ee8114d4-8c98-4b7e-88dd-387b240b2276
+      semantic_filename: class_ogryn.png
+      sha256: 8831c497f338fd3d9784eac93a057d1873a6c23444fefff8483cb5a03c806fe3
+      bytes: 17717
+      content_type: image/png
+      width: 348
+      height: 348
+    delivery_url: https://github.com/user-attachments/assets/ee8114d4-8c98-4b7e-88dd-387b240b2276
+    alt: "Ogryn"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/classes/psyker
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972404170
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/e42335d6-86d8-4c5a-aa68-f97eaaafc104
+      semantic_filename: class_psyker.png
+      sha256: 8663c083336a7448726c4999bc5226b2c224c56ac55a7dbcf88fcac93a453df1
+      bytes: 10738
+      content_type: image/png
+      width: 348
+      height: 348
+    delivery_url: https://github.com/user-attachments/assets/e42335d6-86d8-4c5a-aa68-f97eaaafc104
+    alt: "Psyker"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/classes/veteran
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972407125
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/8db69a8d-25db-4448-b529-63f1c49caae8
+      semantic_filename: class_veteran.png
+      sha256: 250cdf5c01ebf0902b9d8f8467bebe15b14744746a535da0f99825e3564da90f
+      bytes: 12379
+      content_type: image/png
+      width: 348
+      height: 348
+    delivery_url: https://github.com/user-attachments/assets/8db69a8d-25db-4448-b529-63f1c49caae8
+    alt: "Veteran"
+    uploaded_at: 2026-10-04
+    status: in-use
+
+  - id: darktide/classes/zealot
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5972407836
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/a4139df1-27f4-475e-aea3-f343b9d751b2
+      semantic_filename: class_zealot.png
+      sha256: 0a48104159a8cefbdfb8d72dd3539935d28da97a2411334785aad1cf4f670d61
+      bytes: 11134
+      content_type: image/png
+      width: 348
+      height: 348
+    delivery_url: https://github.com/user-attachments/assets/a4139df1-27f4-475e-aea3-f343b9d751b2
+    alt: "Zealot"
+    uploaded_at: 2026-10-04
+    status: in-use

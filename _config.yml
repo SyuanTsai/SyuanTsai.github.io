@@ -53,6 +53,10 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: "preview/darktide"
+    values:
+      sitemap: false
 plugins:
   - jekyll-remote-theme
   - jekyll-redirect-from
