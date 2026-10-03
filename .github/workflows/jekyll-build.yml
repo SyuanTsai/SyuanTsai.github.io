@@ -28,6 +28,20 @@ jobs:
       - name: Build with GitHub Pages
         uses: actions/jekyll-build-pages@v1.0.13
 
+      - name: Verify independent Darktide preview pages
+        run: python3 scripts/verify_darktide_preview.py _site
+
+      - name: Upload rendered Darktide preview
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: darktide-preview-${{ github.event.pull_request.head.sha }}
+          path: |
+            _site/preview/darktide/
+            _site/assets/css/darktide-preview.css
+            _site/assets/js/darktide-preview.js
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Verify generated article SEO
         run: python3 scripts/verify_generated_seo.py _site
 
