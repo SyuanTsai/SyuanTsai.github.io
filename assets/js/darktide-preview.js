@@ -13,6 +13,10 @@
   const source = root.querySelector("#dialogue-source");
   const status = root.querySelector("#dialogue-status");
   const eventSelect = root.querySelector("#event-select");
+  const eventTypeSelect = root.querySelector("#event-type-select");
+  const eventTypeTitle = root.querySelector("#active-event-type");
+  const eventTypeGroups = [...root.querySelectorAll("details[data-event-type]")];
+  const eventOptionGroups = [...eventSelect.querySelectorAll("optgroup[data-event-type]")];
   const eventButtons = [...root.querySelectorAll("[data-event-button]")];
   const languageButtons = [...root.querySelectorAll("[data-language-button]")];
   const templates = new Map(
@@ -52,7 +56,27 @@
       return;
     }
 
+    const eventType = eventTypeGroups.find(
+      (group) => group.dataset.eventType === template.dataset.eventType
+    );
+
+    if (!eventType) {
+      return;
+    }
+
     activeSelection = selection;
+    eventType.open = true;
+    eventTypeSelect.value = eventType.dataset.eventType;
+    eventTypeTitle.textContent = selection.language === "en"
+      ? eventType.dataset.typeTitleEn
+      : eventType.dataset.typeTitleZh;
+    eventTypeTitle.lang = selection.language === "en" ? "en" : "zh-Hant";
+    root.dataset.activeEventType = eventType.dataset.eventType;
+    eventOptionGroups.forEach((group) => {
+      const selected = group.dataset.eventType === eventType.dataset.eventType;
+      group.hidden = !selected;
+      group.disabled = !selected;
+    });
     content.replaceChildren(template.content.cloneNode(true));
     content.lang = selection.language === "en" ? "en" : "zh-Hant";
     title.textContent = template.dataset.title;
@@ -96,7 +120,7 @@
     render(selection);
   }
 
-  eventButtons.forEach((button, index) => {
+  eventButtons.forEach((button) => {
     button.addEventListener("click", () => {
       navigate({
         event: button.dataset.eventButton,
@@ -105,23 +129,28 @@
     });
 
     button.addEventListener("keydown", (event) => {
+      const group = button.closest("details[data-event-type]");
+      const groupButtons = eventButtons.filter(
+        (candidate) => candidate.closest("details[data-event-type]") === group
+      );
+      const index = groupButtons.indexOf(button);
       let nextIndex;
 
       if (event.key === "ArrowDown" || event.key === "ArrowRight") {
-        nextIndex = (index + 1) % eventButtons.length;
+        nextIndex = (index + 1) % groupButtons.length;
       } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
-        nextIndex = (index - 1 + eventButtons.length) % eventButtons.length;
+        nextIndex = (index - 1 + groupButtons.length) % groupButtons.length;
       } else if (event.key === "Home") {
         nextIndex = 0;
       } else if (event.key === "End") {
-        nextIndex = eventButtons.length - 1;
+        nextIndex = groupButtons.length - 1;
       } else {
         return;
       }
 
       event.preventDefault();
-      eventButtons[nextIndex].click();
-      eventButtons[nextIndex].focus();
+      groupButtons[nextIndex].click();
+      groupButtons[nextIndex].focus();
     });
   });
 
@@ -132,6 +161,22 @@
         language: button.dataset.languageButton
       });
     });
+  });
+
+  eventTypeSelect.addEventListener("change", () => {
+    const group = eventOptionGroups.find(
+      (candidate) => candidate.dataset.eventType === eventTypeSelect.value
+    );
+    const options = group ? [...group.querySelectorAll("option")] : [];
+    const selected = options.find((option) => option.value === activeSelection.event)
+      || options[0];
+
+    if (selected) {
+      navigate({
+        event: selected.value,
+        language: activeSelection.language
+      });
+    }
   });
 
   eventSelect.addEventListener("change", () => {
