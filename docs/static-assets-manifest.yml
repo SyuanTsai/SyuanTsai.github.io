@@ -104,3 +104,43 @@ assets:
     alt: "斯瓦格爾"
     uploaded_at: 2026-10-03
     status: in-use
+
+  - id: darktide/portraits/pilot-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5970833764
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/ab5ca5fc-1631-4ef7-add7-038397996c3c
+      semantic_filename: pilot_a.png
+      sha256: d1e867111973c60b852ff911c9ee5a7d6f39f970bb62be7df708a6fffa25db18
+      bytes: 47584
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/ab5ca5fc-1631-4ef7-add7-038397996c3c
+    alt: "飛行中尉馬索茲"
+    uploaded_at: 2026-10-03
+    status: in-use
+
+  - id: darktide/portraits/alice-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5970834686
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/6f3ce3fe-9741-438a-a5d0-9b5dc1d67edb
+      semantic_filename: alice_a.png
+      sha256: fef6e942611a62b57c13f3309075e229c919290e7730fdcf8935d5ee51ac80c7
+      bytes: 36459
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/6f3ce3fe-9741-438a-a5d0-9b5dc1d67edb
+    alt: "愛麗絲·哈洛韋特"
+    uploaded_at: 2026-10-03
+    status: in-use
