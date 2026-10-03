@@ -19,6 +19,8 @@ permalink: /search/
     <a href="{{ '/search/' | relative_url }}" aria-current="page">搜尋文章</a>
   </nav>
 
+  <p>Darktide 字幕對話請前往 <a href="{{ '/darktide/' | relative_url }}">Darktide 資料區</a>，依事件類型與角色瀏覽。</p>
+
   <form class="search-form" role="search" data-search-form data-index-url="{{ '/search.json' | relative_url }}">
     <label for="site-search">搜尋關鍵字</label>
     <div class="search-form__controls">

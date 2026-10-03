@@ -12,9 +12,13 @@
 | Pages 來源 | `gh-pages` |
 | 自訂網域檔案 | Repository 根目錄的 `CNAME`，內容為 `Notes.Tw-Syuan.com` |
 | Sitemap | `https://notes.tw-syuan.com/sitemap.xml` |
+| Darktide 正式入口 | `https://notes.tw-syuan.com/darktide/` |
+| Darktide Sitemap 索引 | `https://notes.tw-syuan.com/darktide/sitemap.xml` |
 | Feed | `https://notes.tw-syuan.com/feed.xml` |
 
 `CNAME` 必須保留在來源根目錄。每次 PR 建置都會檢查 `_site/CNAME` 與來源一致，避免正式部署時遺失自訂網域。
+
+Darktide 全量字幕使用正式 `/darktide/` 路徑與獨立分拆 sitemap；依擁有者要求移除舊 `/preview/darktide/`，不保留轉址。每次修訂先於工作分支完成 Draft PR 建置與審閱，取得合併授權後再由既有 Pages 流程部署。詳見 [Darktide 字幕交付](darktide-dialogue-delivery.md) 與 [正式遷移計畫](darktide-production-migration.md)。文章樣板 `/preview/article-template/` 仍維持原先未列出預覽用途。
 
 ## 一般文章發布
 
