@@ -24,3 +24,63 @@ assets:
     alt: "紫色火箭向右上方升空，尾部帶有橘色火焰"
     uploaded_at: 2026-08-30
     status: in-use
+
+  - id: darktide/portraits/sergeant-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: body
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/03a6b688-9682-44c0-830e-206a0c660d7f
+      semantic_filename: sergeant_a.png
+      sha256: b64d65e74630e8136659a4030ba7fce85688c877b0d6631183cade2adf2c44b9
+      bytes: 39101
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/03a6b688-9682-44c0-830e-206a0c660d7f
+    alt: "莫羅軍士長"
+    uploaded_at: 2026-10-03
+    status: in-use
+
+  - id: darktide/portraits/rannick-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5968951331
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/1cc1dda7-5697-4109-a2eb-f4b90b5e3c9e
+      semantic_filename: rannick_a.png
+      sha256: 0fa6f97448a1ac424640cd3ba61c8b880cea02e28ad8ea6c73058de25f4e26a7
+      bytes: 34267
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/1cc1dda7-5697-4109-a2eb-f4b90b5e3c9e
+    alt: "審訊者蘭尼克"
+    uploaded_at: 2026-10-03
+    status: in-use
+
+  - id: darktide/portraits/tech-priest-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5968952404
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/c21fcadb-1978-4295-af64-eaa71e96320a
+      semantic_filename: tech_priest_a.png
+      sha256: 208ffa30579e5a401aab3ff7b1aad75ebe7746ac1f876709f956aa2bdbad935d
+      bytes: 42938
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/c21fcadb-1978-4295-af64-eaa71e96320a
+    alt: "哈德隆歐米伽7-7"
+    uploaded_at: 2026-10-03
+    status: in-use
