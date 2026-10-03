@@ -304,6 +304,22 @@
   white-space: pre-wrap;
 }
 
+.message-right {
+  flex-direction: row-reverse;
+}
+
+.message-right .speaker {
+  text-align: right;
+}
+
+.message-right .line {
+  flex-direction: row-reverse;
+}
+
+.message-right .bubble {
+  border-radius: 14px 3px 14px 14px;
+}
+
 .timestamp {
   padding-bottom: 4px;
   color: var(--muted);
