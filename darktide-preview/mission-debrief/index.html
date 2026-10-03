@@ -7,37 +7,11 @@ permalink: "/preview/darktide/mission-debrief/"
 darktide_catalog: true
 catalog_order: 1
 event_type: "mission-debrief"
+locale: "zh-tw"
+html_lang: "zh-Hant"
+counterpart_url: "/preview/darktide/en/mission-debrief/"
 unlisted: true
 sitemap: false
 ---
 
-{% assign events = site.pages | where: 'darktide_event', true | where: 'event_type', page.event_type | where: 'locale', 'zh-tw' | sort: 'event_order' %}
-<section
-  class="catalog-panel"
-  aria-labelledby="official-events-heading"
->
-  <h2 id="official-events-heading">官方事件</h2>
-  <p class="catalog-summary">{{ events.size }} 組對話 · English / 繁體中文</p>
-  <ol class="event-catalog">
-    {% for event in events %}
-      <li class="event-card">
-        <h3>{{ event.title | escape }}</h3>
-        <p
-          class="event-subtitle"
-          lang="en"
-        >{{ event.other_title | escape }}</p>
-        <p class="event-meta">{{ event.speaker | escape }} · {{ event.line_count }} 句字幕</p>
-        <div class="reader-links">
-          <a
-            href="{{ event.url | relative_url }}"
-            hreflang="zh-Hant"
-          >繁體中文</a>
-          <a
-            href="{{ event.counterpart_url | relative_url }}"
-            hreflang="en"
-          >English</a>
-        </div>
-      </li>
-    {% endfor %}
-  </ol>
-</section>
+{% include darktide-event-catalog.html %}

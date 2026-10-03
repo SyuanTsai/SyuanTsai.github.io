@@ -85,8 +85,7 @@ class DarktidePreviewTests(unittest.TestCase):
                 rendered = self.head(url) + (
                     f'<body data-event-id="{event_id}" data-locale="{locale}">'
                     + body
-                    + f'<a hreflang="{html_lang}" href="{url}" aria-current="page">Current language</a>'
-                    + f'<a hreflang="{other_lang}" href="{counterpart}">Other language</a>'
+                    + f'<a id="language-toggle" class="language-toggle" hreflang="{other_lang}" href="{counterpart}" aria-label="Switch language">Other language</a>'
                     + f'<a id="dialogue-source" href="{source_url}">Source</a>'
                     + previous + following
                     + '</body></html>'
@@ -94,35 +93,45 @@ class DarktidePreviewTests(unittest.TestCase):
                 rendered = rendered.replace('<html lang="zh-Hant">', f'<html lang="{html_lang}">')
                 self.write_output(url, rendered)
 
-        type_url = "/preview/darktide/mission-debrief/"
-        type_body = "\n".join(f'<a href="{url}">Event</a>' for url in self.event_urls)
-        self.write_source(
-            self.root / "darktide-preview/mission-debrief/index.html",
-            {
-                "layout": "darktide-preview",
-                "title": "Mission debrief",
-                "event_type": "mission-debrief",
-                "permalink": type_url,
-                "unlisted": "true",
-                "sitemap": "false",
-            },
-            type_body,
-        )
-        self.write_output(type_url, self.head(type_url) + '<body>' + type_body + '</body></html>')
-        root_url = "/preview/darktide/"
-        root_body = f'<a href="{type_url}">Mission debrief</a>'
-        self.write_source(
-            self.root / "darktide-preview.html",
-            {
-                "layout": "darktide-preview",
-                "title": "Darktide",
-                "permalink": root_url,
-                "unlisted": "true",
-                "sitemap": "false",
-            },
-            root_body,
-        )
-        self.write_output(root_url, self.head(root_url) + '<body>' + root_body + '</body></html>')
+        for locale in ("en", "zh-tw"):
+            prefix = "/preview/darktide/en/" if locale == "en" else "/preview/darktide/"
+            other_prefix = "/preview/darktide/" if locale == "en" else "/preview/darktide/en/"
+            html_lang = "en" if locale == "en" else "zh-Hant"
+            other_lang = "zh-Hant" if locale == "en" else "en"
+            for category in (False, True):
+                url = prefix + ("mission-debrief/" if category else "")
+                counterpart = other_prefix + ("mission-debrief/" if category else "")
+                body = (
+                    "\n".join(f'<a href="{event_url}">Event</a>' for event_url in self.event_urls if f'/{locale}/' in event_url)
+                    if category else f'<a href="{prefix}mission-debrief/">Mission debrief</a>'
+                )
+                fields = {
+                    "layout": "darktide-preview",
+                    "title": "Mission debrief" if category else "Darktide",
+                    "permalink": url,
+                    "locale": locale,
+                    "html_lang": html_lang,
+                    "counterpart_url": counterpart,
+                    "unlisted": "true",
+                    "sitemap": "false",
+                }
+                if category:
+                    fields["event_type"] = "mission-debrief"
+                    fields["darktide_catalog"] = "true"
+                if not category and locale == "zh-tw":
+                    source_path = self.root / "darktide-preview.html"
+                else:
+                    source_path = self.root / "darktide-preview"
+                    if locale == "en":
+                        source_path /= "en"
+                    if category:
+                        source_path /= "mission-debrief"
+                    source_path /= "index.html"
+                self.write_source(source_path, fields, body)
+                toggle = f'<a id="language-toggle" class="language-toggle" hreflang="{other_lang}" href="{counterpart}" aria-label="Switch language">Other language</a>'
+                rendered = self.head(url) + f'<body data-locale="{locale}">' + toggle + body + '</body></html>'
+                rendered = rendered.replace('<html lang="zh-Hant">', f'<html lang="{html_lang}">')
+                self.write_output(url, rendered)
         (self.site / "sitemap.xml").write_text('<urlset></urlset>', encoding="utf-8")
 
     @staticmethod
@@ -209,14 +218,29 @@ class DarktidePreviewTests(unittest.TestCase):
         self.assertTrue(any("counterpart" in error for error in errors), errors)
         self.assertTrue(any("next navigation" in error for error in errors), errors)
 
-    def test_UnitT45_checks_current_language_state(self) -> None:
-        """UnitT45: The current subtitle language has one accessible active link.
+    def test_UnitT45_checks_single_accessible_language_toggle(self) -> None:
+        """UnitT45: Each page has a single accessible counterpart control.
 
-        Scenario: A language control loses its aria-current state.
-        Purpose: Keep the selected locale apparent to assistive technology.
+        Scenario: A page duplicates the toggle and loses its accessible label.
+        Purpose: Protect direct language switching without duplicate language choices.
         """
-        self.change_output(self.event_urls[0], 'aria-current="page"', 'aria-current="false"')
-        self.assertTrue(any("current language navigation" in error for error in verify(self.site, self.root)))
+        url = self.event_urls[0]
+        self.change_output(url, 'aria-label="Switch language"', 'aria-label=""')
+        self.change_output(url, '</body>', '<a class="language-toggle" href="/">Duplicate</a></body>')
+        self.assertTrue(any("language toggle" in error for error in verify(self.site, self.root)))
+
+    def test_UnitT47_checks_index_locale_and_counterpart(self) -> None:
+        """UnitT47: Indexes keep their selected locale and matching counterpart.
+
+        Scenario: An English category links to the Chinese event and wrong index.
+        Purpose: Keep title navigation and global switching in the intended language.
+        """
+        url = "/preview/darktide/en/mission-debrief/"
+        self.change_output(url, self.event_urls[0], self.event_urls[0].replace('/en/', '/zh-tw/'))
+        self.change_output(url, 'href="/preview/darktide/mission-debrief/"', 'href="/preview/darktide/"')
+        errors = verify(self.site, self.root)
+        self.assertTrue(any("index navigation incomplete" in error for error in errors), errors)
+        self.assertTrue(any("language toggle" in error for error in errors), errors)
 
     def test_UnitT50_checks_noindex_canonical_and_sitemap(self) -> None:
         """UnitT50: Every preview stays unlisted with its own canonical URL.

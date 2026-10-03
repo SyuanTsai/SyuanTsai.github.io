@@ -36,9 +36,9 @@ layout: null
   </head>
   <body
     class="darktide-preview{% if page.darktide_event %} dialogue-reader{% endif %}"
+    data-locale="{{ page.locale | escape }}"
     {% if page.darktide_event %}
       data-event-id="{{ page.event_id | escape }}"
-      data-locale="{{ page.locale | escape }}"
     {% endif %}
     {% if page.darktide_home %}
       data-legacy-event-base="{{ '/preview/darktide/' | relative_url }}"
@@ -50,19 +50,37 @@ layout: null
     >{% if page.locale == 'en' %}Skip to content{% else %}跳至內容{% endif %}</a>
     <div class="preview-shell">
       <header class="preview-header">
-        {% if page.darktide_home %}
+        <div class="preview-toolbar">
+          {% if page.darktide_home %}
+            <a
+              class="preview-back"
+              href="{{ '/' | relative_url }}"
+            >{% if page.locale == 'en' %}← Back to website{% else %}← 返回網站{% endif %}</a>
+          {% else %}
+            <a
+              class="preview-back"
+              href="{% if page.locale == 'en' %}{{ '/preview/darktide/en/' | relative_url }}{% else %}{{ '/preview/darktide/' | relative_url }}{% endif %}"
+            >{% if page.locale == 'en' %}← Event types{% else %}← 事件類型{% endif %}</a>
+          {% endif %}
           <a
-            class="preview-back"
-            href="{{ '/' | relative_url }}"
-          >← 返回網站</a>
-        {% else %}
-          <a
-            class="preview-back"
-            href="{{ '/preview/darktide/' | relative_url }}"
-          >{% if page.locale == 'en' %}← Event types{% else %}← 事件類型{% endif %}</a>
-        {% endif %}
+            id="language-toggle"
+            class="language-toggle"
+            href="{{ page.counterpart_url | relative_url }}"
+            hreflang="{% if page.locale == 'en' %}zh-Hant{% else %}en{% endif %}"
+            lang="{% if page.locale == 'en' %}zh-Hant{% else %}en{% endif %}"
+            aria-label="{% if page.locale == 'en' %}Switch to Traditional Chinese{% else %}切換為英文{% endif %}"
+          >{% if page.locale == 'en' %}繁體中文{% else %}English{% endif %} <span aria-hidden="true">⇄</span></a>
+        </div>
         <p class="preview-eyebrow">WARHAMMER 40,000: DARKTIDE</p>
-        <h1>{{ page.title | escape }}</h1>
+        <h1>
+          {% if page.darktide_event %}
+            <span
+              class="event-number"
+              data-event-order="{{ page.event_order }}"
+            >{% if page.event_order < 10 %}0{% endif %}{{ page.event_order }}</span>
+          {% endif %}
+          {{ page.title | escape }}
+        </h1>
         {% if page.other_title %}
           <p
             class="preview-summary"

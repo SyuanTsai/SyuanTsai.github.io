@@ -1,0 +1,25 @@
+{% assign catalogues = site.pages | where: 'darktide_catalog', true | where: 'locale', page.locale | sort: 'catalog_order' %}
+<section
+  class="catalog-panel"
+  aria-labelledby="event-types-heading"
+>
+  <h2 id="event-types-heading">{% if page.locale == 'en' %}Event types{% else %}事件類型{% endif %}</h2>
+  <ul class="category-list">
+    {% for catalogue in catalogues %}
+      {% assign events = site.pages | where: 'darktide_event', true | where: 'event_type', catalogue.event_type | where: 'locale', page.locale %}
+      <li>
+        <a
+          class="category-link"
+          href="{{ catalogue.url | relative_url }}"
+        >
+          <span class="category-title">{{ catalogue.title | escape }}</span>
+          <span
+            class="category-subtitle"
+            lang="{% if page.locale == 'en' %}zh-Hant{% else %}en{% endif %}"
+          >{{ catalogue.other_title | escape }}</span>
+          <span class="category-count">{{ events.size }} {% if page.locale == 'en' %}dialogues{% else %}組對話{% endif %} →</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

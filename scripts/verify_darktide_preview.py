@@ -145,6 +145,7 @@ def verify(site: Path, root: Path | None = None) -> list[str]:
     root = (root or Path(__file__).resolve().parents[1]).resolve()
     site = site.resolve()
     documents, errors = source_documents(root)
+    documents_by_url = {str(document.fields.get("permalink", "")): document for document in documents}
     config = root / "_config.yml"
     config_text = config.read_text(encoding="utf-8") if config.is_file() else ""
     url_match = re.search(r'^url:\s*["\']?(https?://[^"\'\s#]+)', config_text, re.MULTILINE)
@@ -223,6 +224,33 @@ def verify(site: Path, root: Path | None = None) -> list[str]:
             relative = PurePosixPath(unquote(parsed.path).lstrip("/"))
             if ".." in relative.parts or not site.joinpath(*relative.parts).is_file():
                 errors.append(f"{label}: missing local asset {asset}")
+        locale = str(fields.get("locale", ""))
+        other_locale = "zh-tw" if locale == "en" else "en"
+        counterpart_url = str(fields.get("counterpart_url", ""))
+        counterpart = documents_by_url.get(counterpart_url)
+        if (
+            locale not in LOCALE_LANG
+            or page.html_lang != LOCALE_LANG.get(locale)
+            or page.body.get("data-locale") != locale
+        ):
+            errors.append(f"{label}: page locale identity mismatch")
+        if (
+            counterpart is None
+            or counterpart.fields.get("locale") != other_locale
+            or counterpart.fields.get("event_type") != fields.get("event_type")
+            or counterpart.fields.get("darktide_event") != fields.get("darktide_event")
+            or counterpart.fields.get("counterpart_url") != permalink
+        ):
+            errors.append(f"{label}: language counterpart source mismatch")
+        toggles = [link for link in page.links if "language-toggle" in link.get("class", "").split()]
+        if len(toggles) != 1 or any(
+            link.get("id") != "language-toggle"
+            or not link.get("aria-label", "").strip()
+            or link.get("hreflang") != LOCALE_LANG.get(other_locale)
+            or link_path(link.get("href", ""), permalink, site_url) != counterpart_url
+            for link in toggles
+        ):
+            errors.append(f"{label}: language toggle mismatch")
         if not is_event:
             if page.text["bubble"] or page.transcripts or page.template_count:
                 errors.append(f"{label}: index contains dialogue")
@@ -277,12 +305,6 @@ def verify(site: Path, root: Path | None = None) -> list[str]:
         page = rendered.get(str(fields.get("permalink", "")))
         if page is not None:
             permalink = str(fields["permalink"])
-            current_links = [
-                (link_path(link.get("href", ""), permalink, site_url), link.get("aria-current"))
-                for link in page.links if link.get("hreflang") == LOCALE_LANG.get(locale)
-            ]
-            if current_links != [(permalink, "page")]:
-                errors.append(f"{label}: current language navigation mismatch")
             language_links = [
                 link_path(link.get("href", ""), str(fields["permalink"]), site_url)
                 for link in page.links if link.get("hreflang") == LOCALE_LANG.get(other_locale)
@@ -310,7 +332,10 @@ def verify(site: Path, root: Path | None = None) -> list[str]:
                 if actual != expected:
                     errors.append(f"{label}: {relation} navigation mismatch")
 
-    type_indexes = {str(document.fields.get("event_type")): document for document in indexes if document.fields.get("event_type")}
+    type_indexes = {
+        (str(document.fields.get("event_type")), str(document.fields.get("locale"))): document
+        for document in indexes if document.fields.get("event_type")
+    }
     for document in indexes:
         permalink = str(document.fields.get("permalink", ""))
         page = rendered.get(permalink)
@@ -318,15 +343,16 @@ def verify(site: Path, root: Path | None = None) -> list[str]:
             continue
         hrefs = {link_path(link.get("href", ""), permalink, site_url) for link in page.links}
         event_type = str(document.fields.get("event_type", ""))
+        locale = str(document.fields.get("locale", ""))
         expected_links = (
-            {str(event.fields["permalink"]) for key, event in events.items() if key[0] == event_type}
-            if event_type else {str(index.fields["permalink"]) for index in type_indexes.values()}
+            {str(event.fields["permalink"]) for key, event in events.items() if key[0] == event_type and key[2] == locale}
+            if event_type else {str(index.fields["permalink"]) for key, index in type_indexes.items() if key[1] == locale}
         )
         if not expected_links.issubset(hrefs):
             errors.append(f"{document.path.relative_to(root).as_posix()}: index navigation incomplete")
-    for event_type in {key[0] for key in events}:
-        if event_type not in type_indexes:
-            errors.append(f"missing event type index: {event_type}")
+    for event_type, locale in groups:
+        if (event_type, locale) not in type_indexes:
+            errors.append(f"missing event type index: {event_type}/{locale}")
 
     actual_paths = set((site / PREVIEW_PREFIX.strip("/")).rglob("*.html"))
     for extra in sorted(actual_paths - expected_paths):

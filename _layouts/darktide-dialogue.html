@@ -2,7 +2,7 @@
 layout: "darktide-preview"
 ---
 
-{% assign catalogue = site.pages | where: 'darktide_catalog', true | where: 'event_type', page.event_type | first %}
+{% assign catalogue = site.pages | where: 'darktide_catalog', true | where: 'event_type', page.event_type | where: 'locale', page.locale | first %}
 {% assign siblings = site.pages | where: 'darktide_event', true | where: 'event_type', page.event_type | where: 'locale', page.locale | sort: 'event_order' %}
 {% assign previous_event = nil %}
 {% assign next_event = nil %}
@@ -24,26 +24,7 @@ layout: "darktide-preview"
       class="dialogue-breadcrumb"
       aria-label="{% if page.locale == 'en' %}Dialogue category{% else %}對話分類{% endif %}"
     >
-      <a href="{{ catalogue.url | relative_url }}">{% if page.locale == 'en' %}{{ catalogue.other_title | escape }}{% else %}{{ catalogue.title | escape }}{% endif %}</a>
-    </nav>
-    <nav
-      class="language-controls"
-      aria-label="{% if page.locale == 'en' %}Subtitle language{% else %}字幕語言{% endif %}"
-    >
-      <a
-        class="language-button"
-        href="{% if page.locale == 'zh-tw' %}{{ page.url | relative_url }}{% else %}{{ page.counterpart_url | relative_url }}{% endif %}"
-        hreflang="zh-Hant"
-        lang="zh-Hant"
-        {% if page.locale == 'zh-tw' %}aria-current="page"{% endif %}
-      >繁體中文</a>
-      <a
-        class="language-button"
-        href="{% if page.locale == 'en' %}{{ page.url | relative_url }}{% else %}{{ page.counterpart_url | relative_url }}{% endif %}"
-        hreflang="en"
-        lang="en"
-        {% if page.locale == 'en' %}aria-current="page"{% endif %}
-      >English</a>
+      <a href="{{ catalogue.url | relative_url }}">{{ catalogue.title | escape }}</a>
     </nav>
   </header>
   {{ content }}
@@ -52,7 +33,7 @@ layout: "darktide-preview"
       <a
         href="{{ previous_event.url | relative_url }}"
         rel="prev"
-      >{% if page.locale == 'en' %}← Previous event{% else %}← 上一個事件{% endif %}</a>
+      >← {% if previous_event.event_order < 10 %}0{% endif %}{{ previous_event.event_order }} · {{ previous_event.title | escape }}</a>
     {% endif %}
     <a
       id="dialogue-source"
@@ -64,7 +45,7 @@ layout: "darktide-preview"
       <a
         href="{{ next_event.url | relative_url }}"
         rel="next"
-      >{% if page.locale == 'en' %}Next event →{% else %}下一個事件 →{% endif %}</a>
+      >{% if next_event.event_order < 10 %}0{% endif %}{{ next_event.event_order }} · {{ next_event.title | escape }} →</a>
     {% endif %}
   </footer>
 </section>

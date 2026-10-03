@@ -4,32 +4,11 @@ title: "Darktide 對話預覽"
 description: "按事件類型閱讀 Darktide 官方角色字幕對話。"
 permalink: "/preview/darktide/"
 darktide_home: true
+locale: "zh-tw"
+html_lang: "zh-Hant"
+counterpart_url: "/preview/darktide/en/"
 unlisted: true
 sitemap: false
 ---
 
-{% assign catalogues = site.pages | where: 'darktide_catalog', true | sort: 'catalog_order' %}
-<section
-  class="catalog-panel"
-  aria-labelledby="event-types-heading"
->
-  <h2 id="event-types-heading">事件類型</h2>
-  <ul class="category-list">
-    {% for catalogue in catalogues %}
-      {% assign events = site.pages | where: 'darktide_event', true | where: 'event_type', catalogue.event_type | where: 'locale', 'zh-tw' %}
-      <li>
-        <a
-          class="category-link"
-          href="{{ catalogue.url | relative_url }}"
-        >
-          <span class="category-title">{{ catalogue.title | escape }}</span>
-          <span
-            class="category-subtitle"
-            lang="en"
-          >{{ catalogue.other_title | escape }}</span>
-          <span class="category-count">{{ events.size }} 組對話 →</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+{% include darktide-category-list.html %}
