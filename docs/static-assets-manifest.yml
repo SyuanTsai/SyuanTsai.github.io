@@ -84,3 +84,23 @@ assets:
     alt: "哈德隆歐米伽7-7"
     uploaded_at: 2026-10-03
     status: in-use
+
+  - id: darktide/portraits/swagger-a
+    content_id: darktide-dialogue-preview
+    issue:
+      number: 15
+      url: https://github.com/SyuanTsai/Media-Assets/issues/15
+      record: https://github.com/SyuanTsai/Media-Assets/issues/15#issuecomment-5970268807
+    source:
+      storage: github-issue-attachment
+      url: https://github.com/user-attachments/assets/e00d8ee8-2d5f-4487-8789-8c3cce50f680
+      semantic_filename: swagger_a.png
+      sha256: 0ea4d39f42f19405446bb25b5fb6ba4cc9430912a0fbe7d6d9a2d915d60948b8
+      bytes: 27252
+      content_type: image/png
+      width: 160
+      height: 180
+    delivery_url: https://github.com/user-attachments/assets/e00d8ee8-2d5f-4487-8789-8c3cce50f680
+    alt: "斯瓦格爾"
+    uploaded_at: 2026-10-03
+    status: in-use
