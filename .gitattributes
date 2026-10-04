@@ -1,0 +1,7 @@
+# Preserve original subtitle whitespace, including LF inside generated bubbles.
+darktide/unlinked-subtitles/**/*.html -text
+darktide/en/unlinked-subtitles/**/*.html -text
+darktide/character-personalities/**/*.html -text
+darktide/en/character-personalities/**/*.html -text
+darktide/response-trigger-references/**/*.html -text
+darktide/en/response-trigger-references/**/*.html -text
