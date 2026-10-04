@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index,follow">
-    <meta name="description" content="狂怒 II：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
-    <title>狂怒 II：機制與原始碼依據 · Darktide</title>
+    <meta name="description" content="狂怒II：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>狂怒II：機制與原始碼依據 · Darktide</title>
     <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/fury-ii/mechanics/">
     <link rel="stylesheet" href="/assets/css/darktide-skills.css">
     <link rel="stylesheet" href="/assets/css/darktide-reader.css">
@@ -75,14 +75,14 @@
                         <a href="/darktide/skills/scum/#recipe-combat">Combat</a>
                         <a href="/darktide/skills/scum/#recipe-concentration">Concentration</a>
                         <a href="/darktide/skills/scum/#recipe-durability">Durability</a>
-                        <a href="/darktide/skills/scum/wildfire-ii/">野火 II<small lang="en">Wildfire II</small></a>
-                        <a href="/darktide/skills/scum/wildfire-iii/">野火 III<small lang="en">Wildfire III</small></a>
-                        <a href="/darktide/skills/scum/fury-i/">狂怒 I<small lang="en">Fury I</small></a>
-                        <a href="/darktide/skills/scum/fury-ii/">狂怒 II<small lang="en">Fury II</small></a>
+                        <a href="/darktide/skills/scum/wildfire-ii/">野火II<small lang="en">Wildfire II</small></a>
+                        <a href="/darktide/skills/scum/wildfire-iii/">野火III<small lang="en">Wildfire III</small></a>
+                        <a href="/darktide/skills/scum/fury-i/">狂怒I<small lang="en">Fury I</small></a>
+                        <a href="/darktide/skills/scum/fury-ii/">狂怒II<small lang="en">Fury II</small></a>
                         <div class="dt-level"><a href="/darktide/skills/scum/fury-ii/mechanics/" aria-current="page">機制與原始碼依據</a></div>
-                        <a href="/darktide/skills/scum/wildfire-v/">野火 V<small lang="en">Wildfire V</small></a>
-                        <a href="/darktide/skills/scum/vultoprene-i/">獵鷹蕈劑 I<small lang="en">Vultoprene I</small></a>
-                        <a href="/darktide/skills/scum/vultoprene-ii/">獵鷹蕈劑 II<small lang="en">Vultoprene II</small></a>
+                        <a href="/darktide/skills/scum/wildfire-v/">野火V<small lang="en">Wildfire V</small></a>
+                        <a href="/darktide/skills/scum/vultoprene-i/">獵鷹蕈劑I<small lang="en">Vultoprene I</small></a>
+                        <a href="/darktide/skills/scum/vultoprene-ii/">獵鷹蕈劑II<small lang="en">Vultoprene II</small></a>
                       </div>
                     </details>
                     <details>
@@ -154,13 +154,13 @@
             <li><a href="/darktide/skills/">技能與天賦</a></li>
             <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
             <!-- reader:crumb --><li><a href="/darktide/skills/scum/#category-5">興奮劑配方</a></li><li><a href="/darktide/skills/scum/fury-ii/">狂怒 II</a></li><!-- /reader:crumb -->
-            <li aria-current="page">狂怒 II：機制與原始碼依據</li>
+            <li aria-current="page">狂怒II：機制與原始碼依據</li>
           </ol>
         </nav>
         <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
         <div class="skill-heading">
           <div>
-            <h1>狂怒 II：機制與原始碼依據</h1>
+            <h1>狂怒II：機制與原始碼依據</h1>
             <span class="skill-english-name" lang="en">Fury II</span>
             <div class="skill-badges" aria-label="分類與版本">
               <span>興奮劑配方</span>
@@ -177,7 +177,7 @@
           <ol>
             <li><a href="/darktide/skills/scum/fury-ii/"><span>01</span>← 返回玩家頁</a></li>
             <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
-            <li><a href="#狂怒-iifury-ii原始碼依據"><span>03</span>狂怒 II(Fury II)</a></li>
+            <li><a href="#狂怒iifury-ii原始碼依據"><span>03</span>狂怒II(Fury II)</a></li>
             <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
             <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
             <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
@@ -186,19 +186,20 @@
           </ol>
         </nav>
         </details>
-        <article class="skill-content" aria-label="狂怒 II：機制與原始碼依據">
+        <article class="skill-content" aria-label="狂怒II：機制與原始碼依據">
           <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
             <h2 id="provenance-title">版本與原始文件</h2>
             <p>
-              <a href="/darktide/skills/scum/fury-ii/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5b.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+              <a href="/darktide/skills/scum/fury-ii/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/d1c961ab802ca25e5091d79e28304d826e1ffca5/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5b.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
             </p>
             <p class="skill-source-sha">
-              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+              知識 Commit：d1c961ab802ca25e5091d79e28304d826e1ffca5<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
             </p>
           </section>
           <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
-            <h2 id="狂怒-iifury-ii原始碼依據">
-              狂怒 II(Fury II)：原始碼依據
+            <a id="狂怒-iifury-ii原始碼依據"></a>
+            <h2 id="狂怒iifury-ii原始碼依據">
+              狂怒II(Fury II)：原始碼依據
             </h2>
             <p>
               <a href="/darktide/skills/scum/fury-ii/#broker_stimm_combat_5b">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_stimm_combat_5b">原文比對</a>
@@ -265,7 +266,7 @@
             </h2>
             <ul>
               <li>
-                <strong>威力算例</strong>：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
+                <strong>威力算例</strong>：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
               </li>
               <li>
                 <strong>護甲算例</strong>：固定其他條件，護甲前 100 點、原護甲係數 0.5 時，僅本節點為 100 × (0.5 + 0.1) = 60 點。兩項合計則為 100 × (0.5 + 0.15) = 65 點。
@@ -302,7 +303,7 @@
       </main>
       <footer class="skill-footer">
         <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
-        <a href="/darktide/skills/scum/fury-ii/">← 返回狂怒 II玩家頁</a>
+        <a href="/darktide/skills/scum/fury-ii/">← 返回狂怒II玩家頁</a>
       </footer>
 <!-- reader:end -->
         </div>

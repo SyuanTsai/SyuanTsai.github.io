@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index,follow">
-    <meta name="description" content="掩體探身：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
-    <title>掩體探身：機制與原始碼依據 · Darktide</title>
+    <meta name="description" content="Low Profile：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>Low Profile：機制與原始碼依據 · Darktide</title>
     <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/cover-peeking/mechanics/">
     <link rel="stylesheet" href="/assets/css/darktide-skills.css">
     <link rel="stylesheet" href="/assets/css/darktide-reader.css">
@@ -73,12 +73,12 @@
                         <a href="/darktide/skills/veteran/#category-5">完整分類目錄 →</a>
 
                         <a href="/darktide/skills/veteran/scavenger/">拾荒者<small lang="en">Scavenger</small></a>
-                        <a href="/darktide/skills/veteran/increased-ranged-damage/">基礎遠程傷害加成<small lang="en">Increased Ranged Damage</small></a>
-                        <a href="/darktide/skills/veteran/cover-peeking/">掩體探身<small lang="en">Cover Peeking</small></a>
+                        <a href="/darktide/skills/veteran/increased-ranged-damage/">衛兵<small lang="en">Guardsman</small></a>
+                        <a href="/darktide/skills/veteran/cover-peeking/">Low Profile<small lang="en">Low Profile</small></a>
                         <div class="dt-level"><a href="/darktide/skills/veteran/cover-peeking/mechanics/" aria-current="page">機制與原始碼依據</a></div>
                         <a href="/darktide/skills/veteran/frag-grenade/">破片手雷<small lang="en">Frag Grenade</small></a>
-                        <a href="/darktide/skills/veteran/suppression-immunity/">壓制免疫<small lang="en">Suppression Immunity</small></a>
-                        <a href="/darktide/skills/veteran/survivalist-passive/">生存專家（基礎被動）<small lang="en">Survivalist Passive</small></a>
+                        <a href="/darktide/skills/veteran/suppression-immunity/">堅定不移<small lang="en">Determined</small></a>
+                        <a href="/darktide/skills/veteran/survivalist-passive/">實踐效率<small lang="en">Practiced Efficiency</small></a>
                       </div>
                     </details>
                     <details>
@@ -142,14 +142,14 @@
             <li><a href="/darktide/skills/">技能與天賦</a></li>
             <li><a href="/darktide/skills/veteran/">老兵</a></li>
             <!-- reader:crumb --><li><a href="/darktide/skills/veteran/#category-5">基礎效果</a></li><li><a href="/darktide/skills/veteran/cover-peeking/">掩體探身</a></li><!-- /reader:crumb -->
-            <li aria-current="page">掩體探身：機制與原始碼依據</li>
+            <li aria-current="page">Low Profile：機制與原始碼依據</li>
           </ol>
         </nav>
         <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
         <div class="skill-heading">
           <div>
-            <h1>掩體探身：機制與原始碼依據</h1>
-            <span class="skill-english-name" lang="en">Cover Peeking</span>
+            <h1>Low Profile：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Low Profile</span>
             <div class="skill-badges" aria-label="分類與版本">
               <span>基礎效果</span>
               <span>Release 1.13.1</span>
@@ -165,7 +165,7 @@
           <ol>
             <li><a href="/darktide/skills/veteran/cover-peeking/"><span>01</span>← 返回玩家頁</a></li>
             <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
-            <li><a href="#掩體探身cover-peeking"><span>03</span>掩體探身(Cover Peeking)</a></li>
+            <li><a href="#low-profilelow-profile"><span>03</span>Low Profile(Low Profile)</a></li>
             <li><a href="#運作方式"><span>04</span>運作方式</a></li>
             <li><a href="#原始碼確認與程式推導"><span>05</span>原始碼確認與程式推導</a></li>
             <li><a href="#原始碼依據"><span>06</span>原始碼依據</a></li>
@@ -173,19 +173,20 @@
           </ol>
         </nav>
         </details>
-        <article class="skill-content" aria-label="掩體探身：機制與原始碼依據">
+        <article class="skill-content" aria-label="Low Profile：機制與原始碼依據">
           <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
             <h2 id="provenance-title">版本與原始文件</h2>
             <p>
-              <a href="/darktide/skills/veteran/cover-peeking/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_cover_peeking.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+              <a href="/darktide/skills/veteran/cover-peeking/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/d1c961ab802ca25e5091d79e28304d826e1ffca5/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_cover_peeking.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
             </p>
             <p class="skill-source-sha">
-              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+              知識 Commit：d1c961ab802ca25e5091d79e28304d826e1ffca5<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
             </p>
           </section>
           <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
-            <h2 id="掩體探身cover-peeking">
-              掩體探身(Cover Peeking)
+            <a id="掩體探身cover-peeking"></a>
+            <h2 id="low-profilelow-profile">
+              Low Profile(Low Profile)
             </h2>
             <p>
               <a href="/darktide/skills/veteran/base-effects/">返回基礎效果</a>｜<a href="/darktide/skills/veteran/source-index/">技能樹索引</a>
@@ -262,7 +263,7 @@
       </main>
       <footer class="skill-footer">
         <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
-        <a href="/darktide/skills/veteran/cover-peeking/">← 返回掩體探身玩家頁</a>
+        <a href="/darktide/skills/veteran/cover-peeking/">← 返回Low Profile玩家頁</a>
       </footer>
 <!-- reader:end -->
         </div>

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index,follow">
-    <meta name="description" content="野火 I：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
-    <title>野火 I：機制與原始碼依據 · Darktide</title>
+    <meta name="description" content="野火I：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>野火I：機制與原始碼依據 · Darktide</title>
     <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/wildfire-i/mechanics/">
     <link rel="stylesheet" href="/assets/css/darktide-skills.css">
     <link rel="stylesheet" href="/assets/css/darktide-reader.css">
@@ -75,11 +75,11 @@
                         <a href="/darktide/skills/scum/#recipe-combat">Combat</a>
                         <a href="/darktide/skills/scum/#recipe-concentration">Concentration</a>
                         <a href="/darktide/skills/scum/#recipe-durability">Durability</a>
-                        <a href="/darktide/skills/scum/wildfire-i/">野火 I<small lang="en">Wildfire I</small></a>
+                        <a href="/darktide/skills/scum/wildfire-i/">野火I<small lang="en">Wildfire I</small></a>
                         <div class="dt-level"><a href="/darktide/skills/scum/wildfire-i/mechanics/" aria-current="page">機制與原始碼依據</a></div>
-                        <a href="/darktide/skills/scum/wildfire-iv/">野火 IV<small lang="en">Wildfire IV</small></a>
-                        <a href="/darktide/skills/scum/wildfire-ii/">野火 II<small lang="en">Wildfire II</small></a>
-                        <a href="/darktide/skills/scum/wildfire-iii/">野火 III<small lang="en">Wildfire III</small></a>
+                        <a href="/darktide/skills/scum/wildfire-iv/">野火IV<small lang="en">Wildfire IV</small></a>
+                        <a href="/darktide/skills/scum/wildfire-ii/">野火II<small lang="en">Wildfire II</small></a>
+                        <a href="/darktide/skills/scum/wildfire-iii/">野火III<small lang="en">Wildfire III</small></a>
                       </div>
                     </details>
                     <details>
@@ -151,13 +151,13 @@
             <li><a href="/darktide/skills/">技能與天賦</a></li>
             <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
             <!-- reader:crumb --><li><a href="/darktide/skills/scum/#category-5">興奮劑配方</a></li><li><a href="/darktide/skills/scum/wildfire-i/">野火 I</a></li><!-- /reader:crumb -->
-            <li aria-current="page">野火 I：機制與原始碼依據</li>
+            <li aria-current="page">野火I：機制與原始碼依據</li>
           </ol>
         </nav>
         <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
         <div class="skill-heading">
           <div>
-            <h1>野火 I：機制與原始碼依據</h1>
+            <h1>野火I：機制與原始碼依據</h1>
             <span class="skill-english-name" lang="en">Wildfire I</span>
             <div class="skill-badges" aria-label="分類與版本">
               <span>興奮劑配方</span>
@@ -174,7 +174,7 @@
           <ol>
             <li><a href="/darktide/skills/scum/wildfire-i/"><span>01</span>← 返回玩家頁</a></li>
             <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
-            <li><a href="#野火-iwildfire-i原始碼依據"><span>03</span>野火 I(Wildfire I)</a></li>
+            <li><a href="#野火iwildfire-i原始碼依據"><span>03</span>野火I(Wildfire I)</a></li>
             <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
             <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
             <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
@@ -183,19 +183,20 @@
           </ol>
         </nav>
         </details>
-        <article class="skill-content" aria-label="野火 I：機制與原始碼依據">
+        <article class="skill-content" aria-label="野火I：機制與原始碼依據">
           <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
             <h2 id="provenance-title">版本與原始文件</h2>
             <p>
-              <a href="/darktide/skills/scum/wildfire-i/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_1.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+              <a href="/darktide/skills/scum/wildfire-i/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/d1c961ab802ca25e5091d79e28304d826e1ffca5/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_1.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
             </p>
             <p class="skill-source-sha">
-              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+              知識 Commit：d1c961ab802ca25e5091d79e28304d826e1ffca5<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
             </p>
           </section>
           <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
-            <h2 id="野火-iwildfire-i原始碼依據">
-              野火 I(Wildfire I)：原始碼依據
+            <a id="野火-iwildfire-i原始碼依據"></a>
+            <h2 id="野火iwildfire-i原始碼依據">
+              野火I(Wildfire I)：原始碼依據
             </h2>
             <p>
               <a href="/darktide/skills/scum/wildfire-i/#broker_stimm_combat_1">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_stimm_combat_1">原文比對</a>
@@ -256,7 +257,7 @@
             </h2>
             <ul>
               <li>
-                <strong>威力算例</strong>：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 1 個威力節點時，為 500 × (1 + 1 × 4%) = 520。
+                <strong>威力算例</strong>：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 1 個威力節點時，為 500 × (1 + 1 × 4%) = 520。
               </li>
               <li>
                 同一使用者的配方由 syringe_broker_buff 讀取並共同套用；場域分享時依提供者配方，外部控制的持續時間另按場域設定。
@@ -290,7 +291,7 @@
       </main>
       <footer class="skill-footer">
         <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
-        <a href="/darktide/skills/scum/wildfire-i/">← 返回野火 I玩家頁</a>
+        <a href="/darktide/skills/scum/wildfire-i/">← 返回野火I玩家頁</a>
       </footer>
 <!-- reader:end -->
         </div>

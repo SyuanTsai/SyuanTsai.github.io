@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index,follow">
-    <meta name="description" content="彈幕 II：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
-    <title>彈幕 II：機制與原始碼依據 · Darktide</title>
+    <meta name="description" content="彈幕II：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>彈幕II：機制與原始碼依據 · Darktide</title>
     <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/barrage-ii/mechanics/">
     <link rel="stylesheet" href="/assets/css/darktide-skills.css">
     <link rel="stylesheet" href="/assets/css/darktide-reader.css">
@@ -75,11 +75,11 @@
                         <a href="/darktide/skills/scum/#recipe-combat">Combat</a>
                         <a href="/darktide/skills/scum/#recipe-concentration">Concentration</a>
                         <a href="/darktide/skills/scum/#recipe-durability">Durability</a>
-                        <a href="/darktide/skills/scum/barrage-i/">彈幕 I<small lang="en">Barrage I</small></a>
-                        <a href="/darktide/skills/scum/barrage-ii/">彈幕 II<small lang="en">Barrage II</small></a>
+                        <a href="/darktide/skills/scum/barrage-i/">彈幕I<small lang="en">Barrage I</small></a>
+                        <a href="/darktide/skills/scum/barrage-ii/">彈幕II<small lang="en">Barrage II</small></a>
                         <div class="dt-level"><a href="/darktide/skills/scum/barrage-ii/mechanics/" aria-current="page">機制與原始碼依據</a></div>
-                        <a href="/darktide/skills/scum/barrage-iii/">彈幕 III<small lang="en">Barrage III</small></a>
-                        <a href="/darktide/skills/scum/barrage-iv/">彈幕 IV<small lang="en">Barrage IV</small></a>
+                        <a href="/darktide/skills/scum/barrage-iii/">彈幕III<small lang="en">Barrage III</small></a>
+                        <a href="/darktide/skills/scum/barrage-iv/">彈幕IV<small lang="en">Barrage IV</small></a>
                         <a href="/darktide/skills/scum/tank/">坦克<small lang="en">Tank</small></a>
                       </div>
                     </details>
@@ -152,13 +152,13 @@
             <li><a href="/darktide/skills/">技能與天賦</a></li>
             <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
             <!-- reader:crumb --><li><a href="/darktide/skills/scum/#category-5">興奮劑配方</a></li><li><a href="/darktide/skills/scum/barrage-ii/">彈幕 II</a></li><!-- /reader:crumb -->
-            <li aria-current="page">彈幕 II：機制與原始碼依據</li>
+            <li aria-current="page">彈幕II：機制與原始碼依據</li>
           </ol>
         </nav>
         <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
         <div class="skill-heading">
           <div>
-            <h1>彈幕 II：機制與原始碼依據</h1>
+            <h1>彈幕II：機制與原始碼依據</h1>
             <span class="skill-english-name" lang="en">Barrage II</span>
             <div class="skill-badges" aria-label="分類與版本">
               <span>興奮劑配方</span>
@@ -175,7 +175,7 @@
           <ol>
             <li><a href="/darktide/skills/scum/barrage-ii/"><span>01</span>← 返回玩家頁</a></li>
             <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
-            <li><a href="#彈幕-iibarrage-ii原始碼依據"><span>03</span>彈幕 II(Barrage II)</a></li>
+            <li><a href="#彈幕iibarrage-ii原始碼依據"><span>03</span>彈幕II(Barrage II)</a></li>
             <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
             <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
             <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
@@ -184,19 +184,20 @@
           </ol>
         </nav>
         </details>
-        <article class="skill-content" aria-label="彈幕 II：機制與原始碼依據">
+        <article class="skill-content" aria-label="彈幕II：機制與原始碼依據">
           <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
             <h2 id="provenance-title">版本與原始文件</h2>
             <p>
-              <a href="/darktide/skills/scum/barrage-ii/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_2.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+              <a href="/darktide/skills/scum/barrage-ii/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/d1c961ab802ca25e5091d79e28304d826e1ffca5/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_2.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
             </p>
             <p class="skill-source-sha">
-              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+              知識 Commit：d1c961ab802ca25e5091d79e28304d826e1ffca5<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
             </p>
           </section>
           <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
-            <h2 id="彈幕-iibarrage-ii原始碼依據">
-              彈幕 II(Barrage II)：原始碼依據
+            <a id="彈幕-iibarrage-ii原始碼依據"></a>
+            <h2 id="彈幕iibarrage-ii原始碼依據">
+              彈幕II(Barrage II)：原始碼依據
             </h2>
             <p>
               <a href="/darktide/skills/scum/barrage-ii/#broker_stimm_durability_2">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_stimm_durability_2">原文比對</a>
@@ -272,7 +273,7 @@
             </h2>
             <ul>
               <li>
-                <strong>減傷算例</strong>：從彈幕 I 選到本節點，共 2 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^2 ≈ 92.160 點。
+                <strong>減傷算例</strong>：從彈幕I 選到本節點，共 2 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^2 ≈ 92.160 點。
               </li>
               <li>
                 <strong>恢復算例</strong>：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (2 × 6.25%) × (1 + 2 × 5%) = 13.75 點；實際仍受缺額限制。
@@ -312,7 +313,7 @@
       </main>
       <footer class="skill-footer">
         <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
-        <a href="/darktide/skills/scum/barrage-ii/">← 返回彈幕 II玩家頁</a>
+        <a href="/darktide/skills/scum/barrage-ii/">← 返回彈幕II玩家頁</a>
       </footer>
 <!-- reader:end -->
         </div>
