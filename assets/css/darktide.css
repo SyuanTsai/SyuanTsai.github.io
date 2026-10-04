@@ -593,3 +593,25 @@
   align-items: center;
   min-height: 44px;
 }
+
+.unlinked-subtitle-reader .unlinked-entry {
+  margin: 20px 0;
+  scroll-margin-top: 20px;
+}
+
+.unlinked-subtitle-reader .unlinked-title {
+  margin: 0;
+  color: var(--accent);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.unlinked-subtitle-reader .unlinked-title a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.unlinked-subtitle-reader .unlinked-pagination {
+  align-items: center;
+}
