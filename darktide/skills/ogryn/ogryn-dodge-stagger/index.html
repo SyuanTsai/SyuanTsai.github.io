@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="閃避撞擊 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>閃避撞擊 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/ogryn-dodge-stagger/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">閃避撞擊</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>閃避撞擊</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/ogryn/ogryn-dodge-stagger/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="閃避撞擊">
+          <a id="閃避撞擊"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>觸發方式</strong>：閃避時撞開移動方向附近的人類大小普通敵人；不作用於精英、專家或大型敵人。同一次閃避對同一敵人只處理一次。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>範圍與強度</strong>：檢查區域位於閃避方向前方，半徑 1.5 公尺。距離越遠、連續閃避次數越多，撞擊越弱；這項撞擊不直接造成生命傷害。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>強度算例</strong>：固定敵人距離 2 公尺，第一次閃避的撞擊威力為 500 × (4 − 2) ÷ (2 × 1 − 1) = 1000；第二次為 1000 ÷ 3 ≈ 333.3。這是交給踉蹌公式的威力，不是傷害點數。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/ogryn/ogryn-dodge-stagger/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/ogryn-dodge-stagger/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/BASE_EFFECTS.md#閃避撞擊">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_dodge_stagger.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/">← 返回歐格林技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

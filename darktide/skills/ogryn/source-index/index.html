@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="歐格林：來源與技術索引 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>歐格林：來源與技術索引 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/source-index/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">歐格林：來源與技術索引</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>歐格林：來源與技術索引</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="歐格林：來源與技術索引">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/">← 返回歐格林</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/SOURCE_INDEX.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="歐格林來源文件與技術索引">
+              歐格林：來源文件與技術索引
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">版本、日期與證據限制</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/ogryn/base-effects/">角色基礎效果</a>｜<a href="/darktide/skills/ogryn/unused-definitions/">未直接使用的定義</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/ogryn/localization-comparison/">遊戲本體繁中描述比對</a>｜<a href="/darktide/skills/ogryn/damage-percentage-review/">百分比描述盤點</a>
+            </p>
+            <p>
+              固定來源 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。技能樹共 <strong>86 個可選節點</strong>，均為一點；同一配置最多分配 30 點。
+              <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74">職業與基礎天賦</a>；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10">技能樹設定</a>。內部 tree version 25 不等於遊戲發行版號。
+            </p>
+            <p>
+              名稱沿用翻譯表；機制為固定版本的程式分析，未進行遊戲內驗證。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能／程式識別碼
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bombs-away/mechanics/">投彈完畢！</a> / <code>ogryn_box_explodes</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/frag-bomb/mechanics/">破片炸彈</a> / <code>ogryn_grenade_frag</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/big-friendly-rock/mechanics/">投石問路</a> / <code>ogryn_grenade_friend_rock</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/that-one-didnt-count/mechanics/">那下不算！</a> / <code>ogryn_replenish_rock_on_miss</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bigger-box-of-hurt/mechanics/">超巨量傷害箱</a> / <code>ogryn_big_box_of_hurt_more_bombs</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bonebreakers-aura/mechanics/">破骨者之環</a> / <code>ogryn_melee_damage_coherency_improved</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/coward-culling/mechanics/">優勝劣汰</a> / <code>ogryn_damage_vs_suppressed_coherency</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/stay-close/mechanics/">跟緊我！</a> / <code>ogryn_toughness_regen_aura</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/loyal-protector/mechanics/">忠誠守護者</a> / <code>ogryn_taunt_shout</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/indomitable/mechanics/">不屈不撓</a> / <code>ogryn_longer_charge</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/point-blank-barrage/mechanics/">貼身火力</a> / <code>ogryn_special_ammo</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/stomping-boots/mechanics/">跺殺之靴</a> / <code>ogryn_charge_toughness</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/pulverise/mechanics/">粉碎</a> / <code>ogryn_charge_applies_bleed</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/go-again/mechanics/">再來</a> / <code>ogryn_taunt_staggers_reduce_cooldown</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/hail-of-fire/mechanics/">槍林彈雨</a> / <code>ogryn_special_ammo_armor_pen</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/light-em-up/mechanics/">集火射擊</a> / <code>ogryn_special_ammo_fire_shots</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/valuable-distraction/mechanics/">重要干擾</a> / <code>ogryn_taunt_damage_taken_increase</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bullet-bravado/mechanics/">壯膽子彈</a> / <code>ogryn_ranged_stance_toughness_regen</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/no-pain/mechanics/">一點都不痛！</a> / <code>ogryn_taunt_restore_toughness</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/trample/mechanics/">踐踏</a> / <code>ogryn_charge_trample</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/burst-limiter-override/mechanics/">爆限超載</a> / <code>ogryn_leadbelcher_no_ammo_chance</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/feel-no-pain/mechanics/">麻木</a> / <code>ogryn_carapace_armor</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/heavy-hitter/mechanics/">重拳出擊</a> / <code>ogryn_passive_heavy_hitter</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/pained-outburst/mechanics/">痛楚爆發</a> / <code>ogryn_carapace_armor_trigger_on_zero_stacks</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/strongest/mechanics/">最強壯！</a> / <code>ogryn_carapace_armor_add_stack_on_push</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/toughest/mechanics/">最堅韌！</a> / <code>ogryn_carapace_armor_more_toughness</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/maximum-firepower/mechanics/">最大火力</a> / <code>ogryn_leadbelcher_cooldown_reduction</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/good-shootin/mechanics/">好槍法</a> / <code>ogryn_leadbelcher_crits</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bulletstorm/mechanics/">子彈風暴</a> / <code>ogryn_blo_ally_ranged_buffs</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/heat-of-battle/mechanics/">激鬥戰火</a> / <code>ogryn_blo_wield_speed</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/back-off/mechanics/">退後！</a> / <code>ogryn_blo_melee</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/dont-feel-a-thing/mechanics/">毫髮無傷</a> / <code>ogryn_heavy_hitter_tdr</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/great-cleaver/mechanics/">強力劈砍</a> / <code>ogryn_heavy_hitter_cleave</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/unstoppable/mechanics/">越戰越勇</a> / <code>ogryn_heavy_hitter_max_stacks_improves_toughness</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/impactful/mechanics/">震撼衝擊</a> / <code>ogryn_heavy_hitter_stagger</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/just-getting-started/mechanics/">熱身完畢</a> / <code>ogryn_heavy_hitter_max_stacks_improves_attack_speed</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/the-best-defence/mechanics/">最好的防禦</a> / <code>ogryn_multi_heavy_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/smash-em/mechanics/">碾碎它們！</a> / <code>ogryn_single_heavy_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/lynchpin/mechanics/">關鍵人物</a> / <code>ogryn_increased_coherency_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/keep-shooting/mechanics/">射不停</a> / <code>ogryn_reload_speed_on_empty</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/furious/mechanics/">怒不可遏</a> / <code>ogryn_more_hits_more_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/heavyweight/mechanics/">重量級</a> / <code>ogryn_ogryn_killer</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/slam/mechanics/">猛擊</a> / <code>ogryn_melee_stagger</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/soften-them-up/mechanics/">削弱敵人</a> / <code>ogryn_targets_recieve_damage_taken_increase_debuff</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/too-stubborn-to-die/mechanics/">堅韌不屈</a> / <code>ogryn_toughness_on_low_health</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/batter/mechanics/">重毆</a> / <code>ogryn_heavy_bleeds</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/hard-knocks/mechanics/">沉重打擊</a> / <code>ogryn_staggering_increases_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/unstoppable-momentum/mechanics/">勢不可擋</a> / <code>ogryn_movement_speed_after_ranged_kills</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/ammo-stash/mechanics/">彈藥儲存包</a> / <code>ogryn_increased_ammo_reserve</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/pacemaker/mechanics/">領跑者</a> / <code>ogryn_multi_hits_grant_reload_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/found-some-more/mechanics/">發現更多</a> / <code>ogryn_free_reload_after_ability</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/wont-give-in/mechanics/">絕不屈服</a> / <code>ogryn_knocked_allies_grant_damage_reduction</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/crunch/mechanics/">嘎嘎！</a> / <code>ogryn_fully_charged_attacks_gain_damage_and_stagger</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/delight-in-destruction/mechanics/">毀滅之樂</a> / <code>ogryn_nearby_bleeds_reduce_damage_taken</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/toughness-damage-reduction/mechanics/">韌性減傷</a> / <code>base_toughness_damage_reduction_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/no-hurting-friends/mechanics/">相親相愛好夥伴！</a> / <code>ogryn_damage_taken_by_all_increases_strength_tdr</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/get-stuck-in/mechanics/">全神貫注</a> / <code>ogryn_ally_movement_boost_on_ability</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/implacable/mechanics/">利刃出鞘</a> / <code>ogryn_windup_reduces_damage_taken</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/no-stopping-me/mechanics/">誰敢攔我！</a> / <code>ogryn_windup_is_uninterruptible</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/massacre/mechanics/">屠殺</a> / <code>ogryn_kills_grant_crit_chance</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/payback-time/mechanics/">報復時間</a> / <code>ogryn_revenge_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/dominate/mechanics/">主宰</a> / <code>ogryn_rending_on_elite_kills</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/reloaded-and-ready/mechanics/">換彈完畢</a> / <code>ogryn_reloading_grants_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/big-boom/mechanics/">大爆炸</a> / <code>ogryn_increase_explosion_radius</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/no-pushover/mechanics/">睚眥必報</a> / <code>ogryn_blocking_reduces_push_cost</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/attention-seeker/mechanics/">渴求關注</a> / <code>ogryn_blocking_ranged_taunts</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/for-the-liluns/mechanics/">為了小子們</a> / <code>ogryn_protect_allies</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/simple-minded/mechanics/">頭腦簡單</a> / <code>ogryn_corruption_resistance</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/focused-fighter/mechanics/">專注鬥士</a> / <code>ogryn_melee_attacks_give_mtdr</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/brutish-strength/mechanics/">蠻橫之力</a> / <code>ogryn_pushing_applies_brittleness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/fire-away/mechanics/">火力全開</a> / <code>ogryn_explosions_burn</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/unbreakable/mechanics/">堅不可摧</a> / <code>ogryn_block_all_attacks</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/pumped-up/mechanics/">士氣高昂</a> / <code>ogryn_damage_reduction_on_high_stamina</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/lucky-streak/mechanics/">好運連連</a> / <code>ogryn_crit_damage_increase</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/frenzied-blows/mechanics/">狂暴猛擊</a> / <code>ogryn_stacking_attack_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/beat-them-back/mechanics/">擊潰他們</a> / <code>ogryn_melee_damage_after_heavy</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/concentrate/mechanics/">專注</a> / <code>ogryn_drain_stamina_for_handling</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/strongman/mechanics/">大肌肌</a> / <code>ogryn_damage_reduction_after_elite_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/steady-grip/mechanics/">穩定握持</a> / <code>ogryn_toughness_while_bracing</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/cant-hit-me-again/mechanics/">休想再打中我......</a> / <code>ogryn_ranged_damage_immunity</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/dedicated-practice/mechanics/">熟能生巧</a> / <code>ogryn_wield_speed_increase</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/spray-and-slay/mechanics/">射盡殺戮</a> / <code>ogryn_ranged_improves_melee</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bash-and-blast/mechanics/">猛砸爆裂</a> / <code>ogryn_melee_improves_ranged</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bruiser/mechanics/">格鬥兵</a> / <code>ogryn_ally_elite_kills_grant_cooldown</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/strike-true/mechanics/">精準打擊</a> / <code>ogryn_weakspot_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/mobile-emplacement/mechanics/">機動部署</a> / <code>ogryn_bracing_reduces_damage_taken</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/">← 返回歐格林技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

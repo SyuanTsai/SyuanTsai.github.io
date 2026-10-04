@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="電容回收迴路：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>電容回收迴路：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/capacitor-reclamation-loop/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">電容回收迴路：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>電容回收迴路：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Capacitor Reclamation Loop</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/capacitor-reclamation-loop/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#電容回收迴路capacitor-reclamation-loop原始碼依據"><span>03</span>電容回收迴路(Capacitor Reclamation Loop)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="電容回收迴路：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/capacitor-reclamation-loop/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_multi_hits_grant_power.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="電容回收迴路capacitor-reclamation-loop原始碼依據">
+              電容回收迴路(Capacitor Reclamation Loop)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/capacitor-reclamation-loop/#cryptic_multi_hits_grant_power">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_multi_hits_grant_power">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_multi_hits_grant_power</code>；名稱鍵：<code>loc_talent_cryptic_multi_hits_grant_power</code>；描述鍵：<code>loc_talent_cryptic_multi_hits_grant_power_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_17b66510-2729-4d8a-98a2-646758b5b00c</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                Talent 數值為至少3名目標的命中條件、每次0.01份成本，觸發間隔0.25秒。模板取 params.target_number（若不是正值則退回 target_index），只在其等於3且目前時間不早於 multi_hit_window_end_t 時觸發，成功後將下一次可觸發時間設為 t+0.25。
+              </li>
+              <li>
+                因此「3名以上」由同一攻擊的第3個目標命中觸發一次；額外第4名以後目標不再為該攻擊增加恢復。0.25秒是觸發間隔限制，不是用來累計3次分散命中的窗口。
+              </li>
+              <li>
+                成功時 restore_ability_charge_percentage 使用0.01 × 單份成本；單份50點時恢復0.5點，底層固定精度資源會累積，完整份數則取 floor(資源 / 每份成本)。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1629-L1651">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1629–1651</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L447-L451">scripts/settings/talent/talent_settings_cryptic.lua：447–451</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L2034-L2071">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：2034–2071</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1103">scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1103</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L861-L872">scripts/extension_systems/ability/player_unit_ability_extension.lua：861–872</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1629-L1651">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1629–1651</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1543-L1569">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1543–1569</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                一次攻擊命中4名敵人 第3名目標命中時觸發一次：50 × 1% = 0.5點電容量；第4名不再為這次攻擊額外觸發。
+              </li>
+              <li>
+                連續8次符合條件的觸發，且每次間隔足夠 8 × 0.5點 = 4點電容量，保留為未滿一份的進度。
+              </li>
+              <li>
+                程式以第三個目標序號判斷，並對觸發加0.25秒間隔；不是要求在0.25秒內累積命中3次。
+              </li>
+              <li>
+                每次只補單份成本的1%，即50點成本時0.5點；若成本改變，實際點數跟著改變。
+              </li>
+              <li>
+                inventory 中英都明示單次攻擊命中3名以上及恢復1%；文字未提觸發間隔、第三目標序號或小數進度屬程式細節。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>998c8ded</code>。
+              </li>
+              <li>
+                繁中與英文均寫同一次攻擊命中3名以上敵人後恢復1%，與程式在命中第3個目標時觸發一次相符。0.25秒間隔及1%以單份成本為基準，是原文省略的程式細節，沒有相反描述。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_multi_hits_grant_power.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/7557cf7d-9d8b-41ba-bff3-582bdcc5c063">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/capacitor-reclamation-loop/">← 返回電容回收迴路玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

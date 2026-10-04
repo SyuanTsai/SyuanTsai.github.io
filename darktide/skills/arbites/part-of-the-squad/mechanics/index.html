@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="小隊之友：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>小隊之友：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/part-of-the-squad/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">小隊之友：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>小隊之友：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Part of the Squad</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>光環</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/arbites/part-of-the-squad/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#小隊之友part-of-the-squad原始碼依據"><span>03</span>小隊之友(Part of the Squad)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="小隊之友：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/arbites/part-of-the-squad/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_companion_coherency.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="小隊之友part-of-the-squad原始碼依據">
+              小隊之友(Part of the Squad)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/part-of-the-squad/#adamant_companion_coherency">返回玩家說明</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>｜<a href="/darktide/skills/arbites/localization-comparison/#adamant_companion_coherency">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>adamant_companion_coherency</code>；名稱鍵：<code>loc_talent_adamant_companion_coherency</code>；描述鍵：<code>loc_talent_adamant_companion_coherency_alt_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_d11bcab3-f47e-43ef-8f26-72e4ed2760fe</code>；分類：光環；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦把 adamant_companion_aura 接到 coherency_id adamant_aura，並以 special_rule adamant_dog_counts_towards_coherency 啟用戰犬協同計算；adamant_companion_counts_for_coherency 在狗生成時確認 owner_unit 與 companion_dog 後，替狗註冊 coherency tracking buff。
+              </li>
+              <li>
+                升級天賦額外掛 adamant_companion_aura，將 toughness_damage_taken_modifier 設為 talent_settings.coherency.companion.tdr=-0.075。百分比格式化用絕對值，因此顯示 +7.5% 韌性傷害減免；減傷後傷害比例為 1−0.075=0.925。
+              </li>
+              <li>
+                這個選項使用同一特殊規則識別碼的 dog-counts 變體；另兩個光環選項使用 no-companion-coherency 變體，會替換此協同規則。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L743-L772">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：743–772</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L53-L66">scripts/settings/talent/talent_settings_adamant.lua：53–66</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L534-L564">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：534–564</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L613-L658">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：613–658</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/companion_coherency_extension.lua#L1-L34">scripts/extension_systems/coherency/companion_coherency_extension.lua：1–34</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_taken_calculation.lua#L234-L258">scripts/utilities/attack/damage_taken_calculation.lua：234–258</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L743-L772">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：743–772</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L35-L63">scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：35–63</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                韌性傷害減免只作用於韌性傷害，不能直接當成生命傷害減免。
+              </li>
+              <li>
+                實際承受值還會受其他韌性減傷、目標是否在協同範圍與同時生效的 buff 影響。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>360f5bca</code>。
+              </li>
+              <li>
+                繁中寫明機械戰犬計入協同、你和協同盟友獲得額外 7.5% 韌性減傷；英文也描述 Cyber-Mastiff counts towards unit Coherency 並給 Coherency Allies additional 7.5% Toughness Damage Reduction。數值與實際掛載的 -0.075 韌性受傷修正相符。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/aura/adamant_companion_coherency.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/part-of-the-squad/">← 返回小隊之友玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

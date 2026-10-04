@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="生化武器關：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>生化武器關：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/malocator/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">生化武器關：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>生化武器關：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Malocator</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/arbites/malocator/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#生化武器關malocator原始碼依據"><span>03</span>生化武器關(Malocator)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="生化武器關：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/arbites/malocator/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_execution_order_cdr.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="生化武器關malocator原始碼依據">
+              生化武器關(Malocator)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/malocator/#adamant_execution_order_cdr">返回玩家說明</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>｜<a href="/darktide/skills/arbites/localization-comparison/#adamant_execution_order_cdr">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>adamant_execution_order_cdr</code>；名稱鍵：<code>loc_talent_adamant_exterminator_ability_cooldown</code>；描述鍵：<code>loc_talent_execution_order_cdr_on_kill_description</code>。
+              </li>
+              <li>
+                節點：<code>node_dbdb2b08-b8ce-4dc5-88c9-139f0486b54c</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                標記擊殺依 special rule 加入 adamant_execution_order_cdr。效果 duration 使用 execution_order.time=8；talent settings 另有 cdr_time=3 欄位，但此模板沒有讀取它。
+              </li>
+              <li>
+                伺服器端計時器約每秒呼叫 restore_ability_resource(combat_ability,0.5)。法務官戰鬥技能每秒自然增加 1 resource，resource_cost_per_charge 以冷卻秒數設定；restore method 將資源 clamp 至最大值。
+              </li>
+              <li>
+                程式碼核對固定至公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；此公開程式碼與本機繁中／英文文字版本對應為1.13.1。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2239-L2276">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2239–2276</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L102-L119">scripts/settings/talent/talent_settings_adamant.lua：102–119</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L958-L977">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：958–977</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L1150-L1183">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：1150–1183</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua#L7-L24">scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua：7–24</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1127-L1179">scripts/extension_systems/ability/player_unit_ability_extension.lua：1127–1179</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2257-L2276">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2257–2276</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L1752-L1777">scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：1752–1777</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                標記擊殺觸發後，理論恢復量為 8 × 0.5 = 4 秒；只缺 1.2 秒時，最多恢復 1.2 秒並充滿。
+              </li>
+              <li>
+                恢復按逐秒計時執行，實際次數受效果到期更新順序影響；4 秒是名目上限。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>1cb35d28</code>。
+              </li>
+              <li>
+                同源繁中與英文均為擊殺標記目標後增加冷卻恢復；實際持續8秒。另有未使用的cdr_time=3設定，但不構成文字或生效時間矛盾。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone_modifier/adamant_execution_order_cdr.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/malocator/">← 返回生化武器關玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

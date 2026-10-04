@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="重如律法：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>重如律法：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/weight-of-the-lex/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">重如律法：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>重如律法：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Weight of the Lex</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/arbites/weight-of-the-lex/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#重如律法weight-of-the-lex原始碼依據"><span>03</span>重如律法(Weight of the Lex)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="重如律法：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/arbites/weight-of-the-lex/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_heavy_attacks_increase_damage.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="重如律法weight-of-the-lex原始碼依據">
+              重如律法(Weight of the Lex)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/weight-of-the-lex/#adamant_heavy_attacks_increase_damage">返回玩家說明</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>｜<a href="/darktide/skills/arbites/localization-comparison/#adamant_heavy_attacks_increase_damage">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>adamant_heavy_attacks_increase_damage</code>；名稱鍵：<code>loc_talent_adamant_heavy_attacks_increase_damage</code>；描述鍵：<code>loc_talent_adamant_heavy_attacks_increase_damage_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_44740858-05d7-46c6-a2f0-a51c3aadadaf</code>；分類：技能；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                on_sweep_finish實際判params.is_heavy且num_hit_units&gt;0；區域變數is_heavy包含fallback但未被使用，不能以fallback宣稱更多觸發。加成damage=.15非melee_damage，結束後才生效，不回溯加在本次重擊。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L236-L263">scripts/utilities/attack/damage_calculation.lua：236–263</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L303-L357">scripts/extension_systems/buff/buffs/proc_buff.lua：303–357</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L243-L246">scripts/settings/talent/talent_settings_adamant.lua：243–246</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2547-L2570">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2547–2570</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1367-L1386">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：1367–1386</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L1599-L1624">scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：1599–1624</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>傷害算例</strong>：只比較增益生效後的攻擊，基礎 100 點變成 100 × (1 + 15%) = 115 點；已有同階段 25% 加成時，125 點變成 140 點。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>573a8877</code>。
+              </li>
+              <li>
+                繁中「近戰重擊後」與英文 after Heavy Melee Attack一致；命中及揮擊結束時點屬補充。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_heavy_attacks_increase_damage.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/bff83e5a-48a0-4f4c-b280-3093df526c5d">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/weight-of-the-lex/">← 返回重如律法玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

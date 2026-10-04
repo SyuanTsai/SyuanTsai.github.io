@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="擊殺順序：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>擊殺順序：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/target-priority/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">擊殺順序：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>擊殺順序：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Target Priority</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/arbites/target-priority/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#擊殺順序target-priority原始碼依據"><span>03</span>擊殺順序(Target Priority)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="擊殺順序：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/arbites/target-priority/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_increased_damage_to_high_health.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="擊殺順序target-priority原始碼依據">
+              擊殺順序(Target Priority)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/target-priority/#adamant_increased_damage_to_high_health">返回玩家說明</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>｜<a href="/darktide/skills/arbites/localization-comparison/#adamant_increased_damage_to_high_health">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>adamant_increased_damage_to_high_health</code>；名稱鍵：<code>loc_talent_adamant_increased_damage_to_high_health</code>；描述鍵：<code>loc_talent_adamant_increased_damage_to_high_health_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_2eb48f41-2b1a-42ae-9f0c-e5c6210c9949</code>；分類：技能；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                damage_vs_healthy=.15，實際DamageCalculation以current_health_percent()&gt;HEALTHY_MIN_PERCENTAGE(.75)判定；沒有持续buff。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L35-L39">scripts/utilities/attack/damage_calculation.lua：35–39</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L387-L390">scripts/utilities/attack/damage_calculation.lua：387–390</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L396-L399">scripts/settings/talent/talent_settings_adamant.lua：396–399</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2335-L2342">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2335–2342</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2646-L2664">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2646–2664</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L2070-L2095">scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：2070–2095</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>傷害算例</strong>：目標最大生命 1000、目前 800 時，基礎 100 點傷害變成 100 × 1.15 = 115 點；目前 750 時仍為 100 點。已有同階段 25% 加成且門檻成立時，125 點變成 140 點。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>c5936e7c</code>。
+              </li>
+              <li>
+                繁中「高於…生命值」與英文 above…Health一致；「造成…傷害」較不清楚，但未單憑措辭判錯，主文明寫加成及門檻。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_increased_damage_to_high_health.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/target-priority/">← 返回擊殺順序玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

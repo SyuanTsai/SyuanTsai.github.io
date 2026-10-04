@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="靈活應對：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>靈活應對：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/duck-and-dive/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">靈活應對：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>靈活應對：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Duck and Dive</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/duck-and-dive/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#靈活應對duck-and-dive原始碼依據"><span>03</span>靈活應對(Duck and Dive)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#遊戲本體繁中對照"><span>07</span>遊戲本體繁中對照</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="靈活應對：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/duck-and-dive/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_dodging_grants_stamina.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="靈活應對duck-and-dive原始碼依據">
+              靈活應對(Duck and Dive)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/duck-and-dive/#veteran_dodging_grants_stamina">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_dodging_grants_stamina</code>；名稱鍵：<code>loc_talent_ranger_stamina_on_ranged_dodge</code>；描述鍵：<code>loc_talent_veteran_stamina_on_ranged_dodge_movement_speed_desc</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1580-L1604">節點</a>：<code>default</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1750-L1771">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <p>
+              movement_speed放stat_buffs，常駐而非躲避後短暫獲得。on_ranged_dodge恢復stamina_percent0.3，cooldown_duration3；動作必須真正產生躲避遠程命中事件，不能只按閃避鍵。
+            </p>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1750-L1771">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 1750–1771 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1935-L1948">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1935–1948 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stamina.lua#L102-L119">scripts/utilities/attack/stamina.lua，第 102–119 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L151-L154">scripts/settings/talent/talent_settings_veteran.lua，第 151–154 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+            </ul>
+            <h2 id="遊戲本體繁中對照">
+              遊戲本體繁中對照
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  文字來源：本機Steam Build <code>25606770</code>，<code>content/localization/ui</code>，2026-10-01擷取；不是MOD文字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  語系鍵：<code>loc_talent_veteran_stamina_on_ranged_dodge_movement_speed_desc</code>；hash：<code>76c89d3d</code>；繁中entry_index：<code>7712</code>；英文entry_index：<code>7713</code>。以資源＋hash配對，已確認兩語系此hash各一筆。
+                </p>
+              </li>
+              <li>
+                <p>
+                  繁中問題片段：「耐力消耗」；同版英文對照片段：<code>Stamina on avoiding Ranged Attacks</code>。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  判定：<strong>明確繁中描述錯誤</strong>。資源操作錯譯：實作為Stamina.add_stamina_percent，參數.3；英文Stamina on avoiding與繁中耐力消耗不同。漏寫3秒冷卻屬不完整，不列為另一項錯誤。
+                </p>
+              </li>
+              <li>
+                <p>
+                  本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="/darktide/skills/veteran/localization-comparison/">完整比對範圍與版本限制</a>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1935-L1948">公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第1935–1948行</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L151-L154">公開依據：scripts/settings/talent/talent_settings_veteran.lua，第151–154行</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stamina.lua#L102-L119">公開依據：scripts/utilities/attack/stamina.lua，第102–119行</a>
+                </p>
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_dodging_grants_stamina.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/8567315b-bea7-4be4-aaec-22d7096945a9">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/duck-and-dive/">← 返回靈活應對玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

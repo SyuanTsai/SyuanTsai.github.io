@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="街頭硬漢：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>街頭硬漢：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/street-tough/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">街頭硬漢：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>街頭硬漢：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Street Tough</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/street-tough/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#街頭硬漢street-tough原始碼依據"><span>03</span>街頭硬漢(Street Tough)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="街頭硬漢：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/street-tough/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_passive_knockback_on_taking_melee_damage.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="街頭硬漢street-tough原始碼依據">
+              街頭硬漢(Street Tough)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/street-tough/#broker_passive_knockback_on_taking_melee_damage">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_passive_knockback_on_taking_melee_damage">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_passive_knockback_on_taking_melee_damage</code>；名稱鍵：<code>loc_talent_broker_passive_knockback_on_taking_melee_damage</code>；描述鍵：<code>loc_talent_broker_passive_knockback_on_taking_melee_damage_desc_02</code>。
+              </li>
+              <li>
+                節點：<code>node_c194e0f2-7b23-4667-bca2-57f4bdfa03cc</code>；分類：技能；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                on_player_hit_received要求melee並排除breed.tags.disabler；cooldown_duration8，獨立child移速.1/duration3，不是active_duration3後才冷卻。
+              </li>
+              <li>
+                Explosion radius3、damage profile attack=0、medium stagger，superarmor等impact不同。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3339-L3346">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3339–3346</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L240-L251">scripts/settings/damage/explosion_templates/player_explosion_templates.lua：240–251</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua#L532-L565">scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua：532–565</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L150-L181">scripts/extension_systems/buff/buffs/proc_buff.lua：150–181</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3301-L3338">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3301–3338</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3339-L3358">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3339–3358</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2345-L2387">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2345–2387</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1059-L1088">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1059–1088</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>冷卻與算例</strong>：觸發後冷卻 8 秒；單計本效果，移速 5 公尺／秒變成 5 × 1.1 = 5.5 公尺／秒。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>f7be7408</code>。
+              </li>
+              <li>
+                兩語都是受近戰攻擊觸發擊退與移速；未提排除敵人屬補充。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_knockback_on_taking_melee_damage.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933987866">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/street-tough/">← 返回街頭硬漢玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

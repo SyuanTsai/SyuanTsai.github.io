@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="擊暈：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>擊暈：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/blackout/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">擊暈：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>擊暈：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Blackout</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/blackout/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#擊暈blackout原始碼依據"><span>03</span>擊暈(Blackout)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="擊暈：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/blackout/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_blitz_flash_grenade_improved.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="擊暈blackout原始碼依據">
+              擊暈(Blackout)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/blackout/#broker_blitz_flash_grenade_improved">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_blitz_flash_grenade_improved">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_blitz_flash_grenade_improved</code>；名稱鍵：<code>loc_talent_broker_blitz_flash_grenade_improved</code>；描述鍵：<code>loc_talent_broker_blitz_flash_grenade_improved_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_90db015f-623c-44a1-b981-fce3bee1abb5</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                改良節點只替換PlayerAbility到5充能；原本base的quick_flash_grenade specialrule與blitz_charge_on_kill仍存在。改選飛彈／毒手雷會以identifier移除它們。
+              </li>
+              <li>
+                普通on_close_kill不限定melee；滿充能時函式不增加tracked_kills。針槍特例距離依params.attacking_unit計，不另驗證最後owner。
+              </li>
+              <li>
+                爆炸近外圈attack distribution及ADM均0；碰撞另有impact profile，因此主文只說爆炸不傷害，不能說整顆手雷任何命中皆無傷。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L191-L204">scripts/settings/talent/talent_settings_broker.lua：191–204</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/broker_abilities.lua#L227-L242">scripts/settings/ability/player_abilities/abilities/broker_abilities.lua：227–242</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L129-L159">scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：129–159</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua#L103-L154">scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua：103–154</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L1248-L1263">scripts/settings/projectile/player_projectile_templates.lua：1248–1263</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L1654-L1717">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：1654–1717</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L298-L317">scripts/settings/buff/helper_functions/check_proc_functions.lua：298–317</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L777-L791">scripts/settings/buff/helper_functions/check_proc_functions.lua：777–791</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/broker_buff_utils.lua#L99-L190">scripts/settings/buff/broker_buff_utils.lua：99–190</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L191-L205">scripts/settings/talent/talent_settings_broker.lua：191–205</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L640-L667">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：640–667</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L266-L294">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：266–294</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>補充算例</strong>：目前有 2 顆、已累計 19 次，下一次符合距離的擊殺後變成 3 顆，進度歸零。搭配額外彈藥袋時，上限為 5 + 1 = 6 顆。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>44ce3a9a</code>。
+              </li>
+              <li>
+                繁中明寫每20次「近戰擊殺」，同源英文是Close Range Kills，固定程式亦不限定近戰。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/tactical/broker_blitz_flash_grenade_improved.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/fd2156cb-6e65-4214-bd01-ab0b28665714">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/blackout/">← 返回擊暈玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

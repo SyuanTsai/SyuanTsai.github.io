@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="滌罪伺服頭骨：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>滌罪伺服頭骨：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/purgator-servo-skull/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">滌罪伺服頭骨：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>滌罪伺服頭骨：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Purgator Servo-Skull</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/purgator-servo-skull/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#滌罪伺服頭骨purgator-servo-skull原始碼依據"><span>03</span>滌罪伺服頭骨(Purgator Servo-Skull)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="滌罪伺服頭骨：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/purgator-servo-skull/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_flamethrower.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="滌罪伺服頭骨purgator-servo-skull原始碼依據">
+              滌罪伺服頭骨(Purgator Servo-Skull)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/purgator-servo-skull/#cryptic_flamethrower">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_flamethrower">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_flamethrower</code>；名稱鍵：<code>loc_talent_cryptic_servo_skull_flamethrower</code>；描述鍵：<code>loc_talent_cryptic_servo_skull_flamethrower_new_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_5b3ac425-e484-4aeb-83c9-19ceefa75f2d</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                特長同時加入 cryptic_servo_skull_flamethrower 與 hack_to_allow_grenades 規則，並掛載 servo_skull_extra_grenade 被動。生成函式另外生成一台標記為噴火手雷能力的伺服頭骨，且 can_shoot=false。下令時，start_order_ability 先嘗試醫療頭骨（若該特長已選且目標有效），否則再檢查噴火頭骨及有效落點；噴火驗證要求頭骨存活、處於 following 狀態、目標位置有效且至少有1次 grenade_ability 使用次數。啟動後設成 flamethrower 狀態，正常消耗1次 grenade_ability；只有名為 cryptic_servo_skull_flamethrower_uses_no_charge 的外部關鍵字可免除消耗。火焰動作持續15秒、最大射程10公尺，每幀4道射線；玩家輸入切換 circle/cone 模式。能力 cryptic_servo_skull_order 的基礎上限是3次，且 stat_buff 指向 extra_max_amount_of_grenades。servo_skull_extra_grenade 被動只有在醫療規則也存在時才給該 stat buff +2；玩家能力擴充偵測最大次數增加後補回差額，因此上限為5。噴火與醫療頭骨各自消耗同一個 grenade_ability 資源1次，基礎資料詢問設定消耗0次。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L670-L710">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：670–710</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L43-L59">scripts/settings/talent/talent_settings_cryptic.lua：43–59</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L15-L29">scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：15–29</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/spawn_companions_from_talent.lua#L10-L63">scripts/utilities/spawn_companions_from_talent.lua：10–63</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/companion/companion_servo_skull_ability.lua#L39-L72">scripts/utilities/companion/companion_servo_skull_ability.lua：39–72</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/companion/companion_servo_skull_ability.lua#L229-L302">scripts/utilities/companion/companion_servo_skull_ability.lua：229–302</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/companion/companion_servo_skull_settings.lua#L15-L19">scripts/settings/companion/companion_servo_skull_settings.lua：15–19</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/breed/breed_actions/companion/companion_servo_skull_actions.lua#L59-L90">scripts/settings/breed/breed_actions/companion/companion_servo_skull_actions.lua：59–90</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1211-L1241">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1211–1241</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L734-L770">scripts/extension_systems/ability/player_unit_ability_extension.lua：734–770</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L773-L804">scripts/extension_systems/ability/player_unit_ability_extension.lua：773–804</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L670-L710">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：670–710</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L213-L236">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：213–236</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                基礎上限3次；同時選擇噴火與醫療後上限變為5次。噴火1次、救援1次會共用並消耗2次，剩3次。
+              </li>
+              <li>
+                噴火下令需要有有效地面位置、存活且正在跟隨的噴火頭骨，並至少剩1次手雷能力使用次數。
+              </li>
+              <li>
+                圈形／錐形模式分別使用 circle／cone；火焰射程上限10公尺，動作最長15秒。
+              </li>
+              <li>
+                增加的2次使用次數以醫療特長也已選取為條件，並加在共用能力上限；此程式分支沒有給單獨噴火特長增加次數。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>e66555ce</code>。
+              </li>
+              <li>
+                繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手雷能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25606770 版本對應為1.13.1。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_flamethrower.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/295017d9-50cd-4797-8b33-bd3627a7139f">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/purgator-servo-skull/">← 返回滌罪伺服頭骨玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

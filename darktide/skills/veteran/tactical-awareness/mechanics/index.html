@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="戰術意識：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>戰術意識：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/tactical-awareness/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">戰術意識：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>戰術意識：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Tactical Awareness</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/tactical-awareness/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#戰術意識tactical-awareness原始碼依據"><span>03</span>戰術意識(Tactical Awareness)</a></li>
+            <li><a href="#實際觸發與逐秒恢復"><span>04</span>實際觸發與逐秒恢復</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#圖示來源"><span>07</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="戰術意識：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/tactical-awareness/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_elite_kills_reduce_cooldown.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="戰術意識tactical-awareness原始碼依據">
+              戰術意識(Tactical Awareness)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/tactical-awareness/#veteran_elite_kills_reduce_cooldown">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_elite_kills_reduce_cooldown</code>；名稱鍵：<code>loc_talent_veteran_elite_kills_reduce_cooldown</code>；描述鍵：<code>loc_talent_veteran_elite_kills_reduce_cooldown_alt_desc</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L997-L1029">節點</a>：<code>ability_modifier</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L746-L774">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="實際觸發與逐秒恢復">
+              實際觸發與逐秒恢復
+            </h2>
+            <ul>
+              <li>
+                被動綁 on_kill，check_proc_func=CheckProcFunctions.on_special_kill；檢查死亡與 special 標籤，不接受單純 elite。舊 talent_settings_3.passive_1.cooldown_reduction=6 等值只被存入未使用欄位。
+              </li>
+              <li>
+                實際加入 cooldown_reduction_on_elite_kills_buff：duration=3、max_stacks=1、refresh_duration_on_stack=true。start_func 的 timer=fixed_t+1；update_func 在 t&gt;timer 時令 timer+=1，並 restore_ability_resource(&#39;combat_ability&#39;,1)。重新計時不重跑 start_func，所以保留原有 tick 節奏。
+              </li>
+              <li>
+                Buff._update_duration 在 t&gt;start+3 設 finished，但 Buff.update 仍執行本影格其餘 update_funcs；BuffExtensionBase 是整體 update 後才移除完成 buff，因此正常固定影格更新下約第 1、2、3 秒各恢復 1 點。
+              </li>
+              <li>
+                老兵能力的資源自然恢復率為每秒 1 點；本效果每點因此對應 1 秒基礎冷卻。25 秒剩餘在三秒後：25−3（自然）−3（額外）=19。不是擊殺當下瞬間扣除六秒，也不是多次擊殺把額外恢復速度疊高。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L746-L774">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 746–774 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L54-L58">scripts/settings/talent/talent_settings_veteran.lua，第 54–58 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2132-L2185">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2132–2185 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L108-L119">scripts/settings/buff/helper_functions/check_proc_functions.lua，第 108–119 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1127-L1173">scripts/extension_systems/ability/player_unit_ability_extension.lua，第 1127–1173 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L7-L19">scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 7–19 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L29-L48">scripts/extension_systems/buff/buffs/buff.lua，第 29–48 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L305-L328">scripts/extension_systems/buff/buffs/buff.lua，第 305–328 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L180-L208">scripts/extension_systems/buff/buff_extension_base.lua，第 180–208 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L439-L457">scripts/extension_systems/buff/buff_extension_base.lua，第 439–457 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+              <li>
+                tick 時點受固定影格更新及資源上限影響；算例假定三次恢復前能力都尚未全滿。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_elite_kills_reduce_cooldown.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922922455">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/tactical-awareness/">← 返回戰術意識玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

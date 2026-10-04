@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="優勝劣汰：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>優勝劣汰：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/coward-culling/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">優勝劣汰：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>優勝劣汰：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Coward Culling</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>光環</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/ogryn/coward-culling/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#優勝劣汰coward-culling原始碼依據"><span>03</span>優勝劣汰(Coward Culling)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="優勝劣汰：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/coward-culling/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_damage_vs_suppressed_coherency.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="優勝劣汰coward-culling原始碼依據">
+              優勝劣汰(Coward Culling)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/coward-culling/#ogryn_damage_vs_suppressed_coherency">返回玩家說明</a>｜<a href="/darktide/skills/ogryn/source-index/">技術索引</a>｜<a href="/darktide/skills/ogryn/localization-comparison/#ogryn_damage_vs_suppressed_coherency">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>ogryn_damage_vs_suppressed_coherency</code>；名稱鍵：<code>loc_talent_ogryn_damage_vs_suppressed</code>；描述鍵：<code>loc_talent_ogryn_damage_vs_suppressed_new_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_eb153946-19bd-4e03-8dcd-7feb7be78e56</code>；分類：光環；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                協同光環將 damage_vs_suppressed 設為 0.2；天賦另安裝個人壓制增幅效果，設定值為 0.25。
+              </li>
+              <li>
+                此光環 max_stacks=1；技能樹節點位於三種歐格林光環共用的 exclusive_group=aura。
+              </li>
+              <li>
+                協同鏈建立時將單位自身加入該單位的鏈；光環影響範圍包含持有者本人。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L691-L717">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：691–717</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L2041-L2058">scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：2041–2058</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L3100-L3106">scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：3100–3106</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L190-L192">scripts/settings/talent/talent_settings_ogryn.lua：190–192</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L215-L219">scripts/settings/talent/talent_settings_ogryn.lua：215–219</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L221-L244">scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：221–244</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L188-L195">scripts/extension_systems/coherency/coherency_system.lua：188–195</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L435-L447">scripts/utilities/attack/damage_calculation.lua：435–447</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/suppression.lua#L26-L44">scripts/utilities/attack/suppression.lua：26–44</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L691-L717">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：691–717</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L220-L246">scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：220–246</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>傷害算例</strong>：只計此光環的單項加成，受壓制目標原本承受 100 點傷害時為 100 × (1 + 20%) = 120 點。
+              </li>
+              <li>
+                此算例只計對受壓制目標的 20% 傷害加成；目標壓制狀態、其他傷害修正、護甲與傷害部位會改變實際傷害。
+              </li>
+              <li>
+                額外 25% 是持有者造成的壓制效果，與隊伍對受壓制目標的 20% 傷害加成分開計算。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>4e68c42c</code>。
+              </li>
+              <li>
+                同 hash 4e68c42c 的中英文都明列你與協同盟友對受壓制敵人的傷害加成，以及持有者造成的壓制數值；設定分別為 +20% 傷害與 +25% 壓制，兩者作用對象不同。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/aura/ogryn_damage_vs_suppressed_coherency.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/coward-culling/">← 返回優勝劣汰玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="狂信徒：未使用定義（技術補充） · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>狂信徒：未使用定義（技術補充） · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/unused-definitions/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">狂信徒：未使用定義（技術補充）</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>狂信徒：未使用定義（技術補充）</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術補充 · 非當前可選技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="狂信徒：未使用定義（技術補充）">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/zealot/">← 返回狂信徒</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/UNUSED_DEFINITIONS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="狂信徒當前技能樹未直接使用的定義">
+              狂信徒：當前技能樹未直接使用的定義
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/base-effects/">角色基礎效果</a>
+            </p>
+            <p>
+              固定來源：Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。狂信徒定義共有 130 項：79 項直接出現在技能樹，4 項由職業預先提供，剩下 47 項列於下表。技能樹另有 3 個通用屬性節點，所以可選節點總數為 82。
+            </p>
+            <p>
+              比對入口：<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64">職業基礎清單</a>；82 個節點與各自固定行號見<a href="/darktide/skills/zealot/source-index/">技術索引</a>。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      talent ID
+                    </th>
+                    <th>
+                      分類、引用結果與排除原因
+                    </th>
+                    <th>
+                      原始碼依據
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <code>zealot_bleed_generates_throwing_knife</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L334-L356">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_stealth_more_cd_more_damage</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L518-L599">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1867-L1867">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_channel_staggers</code>
+                    </td>
+                    <td>
+                      不是目前 talent tree 的 talent ID，但目前可選的 zealot_bolstering_prayer 將此 special_rule 加到能力；action_zealot_channel 讀取該 rule 並執行 tick stagger。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L657-L672">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L92-L167">引用 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_zealot_channel.lua#L60-L66">引用 3</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_zealot_channel.lua#L223-L232">引用 4</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_corruption_healing_coherency</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。舊定義每秒清除 0.5 點腐敗，並非職業天生效果；目前選取的是每秒 1.5 點版本。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L828-L838">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1014-L1090">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_always_in_coherency</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L884-L908">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1625-L1625">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_always_in_coherency_improved</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L909-L923">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_quickness_toughness_per_stack</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1031-L1050">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1200-L1200">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_fanatic_rage_stacks_on_crit</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1129-L1138">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_increased_stagger_on_weakspot_melee</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1200-L1223">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_increased_damage_when_flanking</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1281-L1304">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_increased_impact</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1380-L1396">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_increased_cleave</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1418-L1433">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_multi_hits_grant_impact_and_uninterruptible</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1522-L1550">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_improved_melee_after_no_ammo</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1624-L1669">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_increased_reload_speed_on_melee_kills</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1670-L1715">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L2039-L2039">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_cleave_impact_post_push</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1758-L1783">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L677-L677">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_damage_after_heavy_attack</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1784-L1804">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1969-L1969">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_kills_increase_damage_of_next_melee</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1805-L1829">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_multihits_reduce_damage_of_next_attack</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1830-L1857">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_blocking_increases_damage_of_next_melee</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1858-L1878">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_multihits_restore_stamina</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1879-L1899">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L813-L813">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_crits_rend</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1900-L1916">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1943-L1943">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_stacking_weakspot_power</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1959-L1983">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_dodge_improvements</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2091-L2110">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L2062-L2062">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_heavy_multihits_increase_melee_damage</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2162-L2190">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1892-L1892">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_backstabs_increase_backstab_damage</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2191-L2215">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_reduced_threat_after_backstab_kill</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2216-L2239">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_melee_crits_reduce_damage_dealt</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2240-L2259">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_toughness_reduction_on_high_toughness</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2320-L2342">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_until_death_ability_cooldown</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2343-L2357">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_stacking_rending</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2406-L2437">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_sprint_angle_improvements</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2461-L2480">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_martyrdom_cdr</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2528-L2547">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_block_dodging_synergy</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2548-L2578">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_reload_from_backstab</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2579-L2598">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_backstab_allied_toughness</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2599-L2623">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_reduced_sprint_cost</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2697-L2723">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_improved_sprint</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2764-L2787">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1528-L1528">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_reduced_corruption_damage_taken</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2788-L2803">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1918-L1918">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_increased_coherency_toughness</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2887-L2910">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_toughness_on_ranged_kill</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2933-L2954">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L322-L322">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_resist_death_healing</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。技能樹中的同名字串只出現在重用的圖示路徑，不能據此判為仍可選。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3018-L3041">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1272-L1272">引用 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_combat_ability_grants_ally_toughness</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3136-L3148">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_restore_cd_on_coherency_leave</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3174-L3183">引用 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_resist_death_offensive</code>
+                    </td>
+                    <td>
+                      此不是目前 tree talent ID；目前的 zealot_resist_death_ability 節點在 passive buff_template_name 陣列中直接同時掛載 ability 與 offensive 兩個 buff。offensive buff 在 unkillable keyword 存在時啟用傷害及攻擊速度 stat buffs。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3408-L3428">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3288-L3330">引用 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L5086-L5101">引用 3</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L250-L258">引用 4</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_resist_death_recuperate</code>
+                    </td>
+                    <td>
+                      目前直接節點 zealot_resist_death_golden_toughness 的 name/display key 使用 recuperate 字串，但 passive 實際掛載的是 zealot_resist_death_golden_toughness。沒有找到目前 tree/base 節點把 zealot_resist_death_recuperate buff template 加入運行時。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3454-L3480">引用 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3429-L3436">引用 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L5102-L5143">引用 3</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L5161-L5194">引用 4</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>zealot_resist_death_lower_cooldown</code>
+                    </td>
+                    <td>
+                      未列入目前可選節點或四項職業基礎效果；未找到該定義的增益／規則由這些入口掛載。不列為目前可選技能。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3481-L3499">引用 1</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 id="判讀界線">
+              判讀界線
+            </h2>
+            <ul>
+              <li>
+                2 項定義的底層效果仍由現行技能提供：合唱的踉蹌規則，以及死戰到底升級在免死期間提供的攻擊加成。已納入對應可選技能，不列為失效。
+              </li>
+              <li>
+                1 項只被目前節點重用名稱：<code>zealot_resist_death_recuperate</code>。目前復活節點實際掛載提高韌性上限的增益，不能將舊回血實作拼接進去。
+              </li>
+              <li>
+                其餘 44 項在目前狂信徒技能樹與基礎入口未找到掛載；其中 14 項的字串仍出現在重用圖示路徑。排除範圍是目前職業配置，不宣稱其他模式、開發工具或未來版本不會引用，也不建議刪除來源。
+              </li>
+              <li>
+                本機 Steam Build 25606770 與公開來源版本對應為1.13.1；未進行遊戲內測試。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/">← 返回狂信徒技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

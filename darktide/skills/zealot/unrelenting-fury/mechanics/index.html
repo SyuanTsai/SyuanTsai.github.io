@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="無盡狂怒：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>無盡狂怒：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/unrelenting-fury/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">無盡狂怒：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>無盡狂怒：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Unrelenting Fury</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/unrelenting-fury/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#無盡狂怒unrelenting-fury原始碼依據"><span>03</span>無盡狂怒(Unrelenting Fury)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="無盡狂怒：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/unrelenting-fury/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_fotf_refund_cooldown.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="無盡狂怒unrelenting-fury原始碼依據">
+              無盡狂怒(Unrelenting Fury)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/unrelenting-fury/#zealot_fotf_refund_cooldown">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_fotf_refund_cooldown">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_fotf_refund_cooldown</code>；名稱鍵：<code>loc_talent_zealot_dash_increased_duration</code>；描述鍵：<code>loc_talent_zealot_fotf_refund_cooldown_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_1a024b73-36a7-4c24-a4be-f9844f422b4f</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦 special rule 由 zealot_dash_buff.start_func 偵測；該衝刺 buff 開始時加入 zealot_fotf_refund_cooldown，持續 5 秒。
+              </li>
+              <li>
+                refund buff 監聽 on_kill，並用 CheckProcFunctions.on_elite_or_special_kill 篩選。伺服器端觸發後呼叫 restore_ability_charge_percentage(&#39;combat_ability&#39;,0.2)，然後設定 remove_buff=true，因此每個 buff 窗口最多成功一次。
+              </li>
+              <li>
+                PlayerUnitAbilityExtension.restore_ability_charge_percentage 以該能力每格 resource_cost_per_charge 乘上比例計算返還值，再受資源池上限約束。基礎衝刺每格成本 30，因此 20% = 6 resource；自然恢復為 1/s，所以可換算成約 6 秒基礎時間。
+              </li>
+              <li>
+                有信者之怒雙充能變體增加的是 max_charges；每格仍以基礎 charge cost 計算，故 20% 是一格成本的 20%，不是兩格總池的 20%。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2504-L2527">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2504–2527</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L179-L182">scripts/settings/talent/talent_settings_zealot.lua：179–182</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1233-L1280">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：1233–1280</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L2827-L2862">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：2827–2862</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua#L7-L36">scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua：7–36</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102">scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461">scripts/extension_systems/ability/player_unit_ability_extension.lua：1437–1461</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2504-L2527">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2504–2527</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1426-L1449">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1426–1449</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>冷卻算例</strong>：基礎冷卻 30 秒時，返還 30 × 20% = 6 秒的自然回充進度；若還差 4 秒就回滿，只能補足缺少的部分。雙充能仍按一格計算，不會改成 60 × 20% = 12 秒。
+              </li>
+              <li>
+                精英/專家類型依遊戲的 breed tag 與擊殺結果判定；僅造成傷害或擊倒不等於已擊殺。
+              </li>
+              <li>
+                5 秒窗口由技能衝刺 buff 開始時加入，使用後最初的 lunge/setup 時序可能有極短延遲。
+              </li>
+              <li>
+                inventory 中文把 <code>{cooldown}</code> 格式值寫成「秒」，但固定 SHA 格式化為百分比，runtime 也是按單格 charge cost 的比例返還；同一 hash 下英文字串未寫秒，屬明確單位差異。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>0dec8750</code>。
+              </li>
+              <li>
+                inventory 同一雙語文字的繁中額外標「秒」，英文未指定秒；固定 SHA 也把值格式化為百分比且按充能成本百分比返還。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_fotf_refund_cooldown.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/unrelenting-fury/">← 返回無盡狂怒玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

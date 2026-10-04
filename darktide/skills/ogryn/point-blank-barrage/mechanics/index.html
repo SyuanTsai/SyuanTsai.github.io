@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="貼身火力：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>貼身火力：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/point-blank-barrage/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">貼身火力：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>貼身火力：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Point-Blank Barrage</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/ogryn/point-blank-barrage/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#貼身火力point-blank-barrage原始碼依據"><span>03</span>貼身火力(Point-Blank Barrage)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="貼身火力：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/point-blank-barrage/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_special_ammo.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="貼身火力point-blank-barrage原始碼依據">
+              貼身火力(Point-Blank Barrage)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/point-blank-barrage/#ogryn_special_ammo">返回玩家說明</a>｜<a href="/darktide/skills/ogryn/source-index/">技術索引</a>｜<a href="/darktide/skills/ogryn/localization-comparison/#ogryn_special_ammo">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>ogryn_special_ammo</code>；名稱鍵：<code>loc_talent_ogryn_combat_ability_special_ammo</code>；描述鍵：<code>loc_talent_ogryn_combat_ability_special_ammo_replenish_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_2febaa70-bba7-407d-8b22-c1160bd4c271</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                能力 action 設定 auto_wield_slot=slot_secondary、reload_secondary=true；ActionStanceChange 先查彈匣缺彈量，再從備用彈藥轉移，完成後送出換彈事件。備用彈藥不足時只有持有 ogryn_free_reload_after_ability 才會啟用免費轉移。
+              </li>
+              <li>
+                姿態 buff 持續12秒，stat_buffs.ranged_attack_speed=0.25、reload_speed=0.65；射速與換彈速度是速率乘數，因此時間分別除以1.25與1.65。抵肩移動懲罰及近距離傷害由啟動時加入的 no_movement_penalty buff 寫入。
+              </li>
+              <li>
+                on_ammo_consumed 事件累加 params.ammo_usage + (params.saved_ammo or 0)；停止時以 ammo_spent×0.5 計算返還，交給 Ammo.add_to_all_slots_flat。免費射擊的 saved_ammo 因而也進入返還基數。
+              </li>
+              <li>
+                combat ability settings 為 duration=12、cooldown=60、max_charges=1、ammo_return=0.5。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L296-L361">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：296–361</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L194-L203">scripts/settings/talent/talent_settings_ogryn.lua：194–203</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L271-L282">scripts/settings/talent/talent_settings_ogryn.lua：271–282</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L93-L110">scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua：93–110</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/ogryn_gunlugger_stance.lua#L17-L41">scripts/settings/ability/ability_templates/ogryn_gunlugger_stance.lua：17–41</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_stance_change.lua#L111-L155">scripts/extension_systems/ability/actions/action_stance_change.lua：111–155</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L1851-L1927">scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：1851–1927</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L3750-L3761">scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：3750–3761</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_stance_change.lua#L108-L150">scripts/extension_systems/ability/actions/action_stance_change.lua：108–150</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L530-L577">scripts/utilities/ammo.lua：530–577</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_shoot.lua#L1239-L1249">scripts/extension_systems/weapon/actions/action_shoot.lua：1239–1249</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/action_handler.lua#L397-L429">scripts/utilities/action/action_handler.lua：397–429</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L296-L361">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：296–361</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1215-L1243">scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1215–1243</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                換彈時間例子以單純1.65倍換彈速度計算；動畫、武器裝填流程和其他屬性可能改變實際耗時。
+              </li>
+              <li>
+                返還量來自事件累計並加到武器彈藥槽；可用備用彈藥上限可能使實際增加量低於計算值。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>826d5678</code>。
+              </li>
+              <li>
+                繁中原文與英文原文都寫明啟動時切換並裝填遠程武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability/ogryn_special_ammo.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/point-blank-barrage/">← 返回貼身火力玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

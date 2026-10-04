@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="電能地雷：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>電能地雷：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/voltaic-shock-mine/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">電能地雷：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>電能地雷：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Voltaic Shock Mine</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/arbites/voltaic-shock-mine/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#電能地雷voltaic-shock-mine原始碼依據"><span>03</span>電能地雷(Voltaic Shock Mine)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="電能地雷：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/arbites/voltaic-shock-mine/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_shock_mine.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="電能地雷voltaic-shock-mine原始碼依據">
+              電能地雷(Voltaic Shock Mine)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/voltaic-shock-mine/#adamant_shock_mine">返回玩家說明</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>｜<a href="/darktide/skills/arbites/localization-comparison/#adamant_shock_mine">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>adamant_shock_mine</code>；名稱鍵：<code>loc_talent_ability_shock_mine</code>；描述鍵：<code>loc_talent_ability_shock_mine_description</code>。
+              </li>
+              <li>
+                節點：<code>node_ff1dbe2a-92b6-46f8-9c71-dc777431a537</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                部署狀態ProjectileDamageExtension直接return，因此不是由一般fuse15秒控制已部署地雷。ProximityShockMine開始life_time=150+arming1；第一次掃到HEALTH_ALIVE目標便重設start_time及life_time15，即使該目標已電擊也會開始倒數。
+              </li>
+              <li>
+                每.2秒shuffle半徑3m結果，只有未electrocuted才加shock_mine_interval；模板num_targets_per_trigger3但停止條件為num_added_buffs&gt;3，最多可能處理4個，不把設定3宣稱成硬上限。
+              </li>
+              <li>
+                單次狀態3秒、隨機.3～.8秒傷害；已電擊者不重加，因此一般流程不會用refresh flag不斷重新計時。shock_grenade_stun_interval攻擊8，無甲預設插值ADM.5；正在踉蹌的poxwalker_bomber跳過傷害。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L469-L502">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：469–502</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L84-L87">scripts/settings/talent/talent_settings_adamant.lua：84–87</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua#L135-L146">scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua：135–146</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L1083-L1148">scripts/settings/projectile/player_projectile_templates.lua：1083–1148</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L475-L510">scripts/settings/buff/weapon_buff_templates.lua：475–510</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua#L34-L45">scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua：34–45</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua#L77-L216">scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua：77–216</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L149-L168">scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：149–168</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L504-L537">scripts/settings/buff/weapon_buff_templates.lua：504–537</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L648-L690">scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：648–690</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L869">scripts/extension_systems/ability/player_unit_ability_extension.lua：839–869</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L469-L502">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：469–502</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L382-L410">scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：382–410</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>傷害算例</strong>：電擊每 0.3～0.8 秒隨機結算一次。單計護甲、無其他修正時，無甲基準為 8 × 0.5 = 4 點，防彈與硬殼護甲基準為 8 × 1 = 8 點；跳數不固定，不能直接乘固定次數當總傷害。
+              </li>
+              <li>
+                原文未列地雷的逐跳傷害；本分析不以電擊持續時間乘上固定跳數推算總傷害。
+              </li>
+              <li>
+                部署設定的 life_time=150 與投射物 fuse_time=15 屬不同層級計時欄位；未把它們混成相同的可視持續時間。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>d710719f</code>。
+              </li>
+              <li>
+                繁中把英文 activates as it lands（落地啟動）寫為「落地後立即引爆」，混淆進入持續電擊狀態與立即爆炸。啟動1秒、待機及作用時間細節另依固定來源核對。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/tactical/adamant_shock_mine.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/voltaic-shock-mine/">← 返回電能地雷玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

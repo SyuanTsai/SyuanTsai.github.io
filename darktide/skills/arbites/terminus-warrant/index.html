@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="終點站令狀 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>終點站令狀 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/terminus-warrant/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">終點站令狀</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9"
+              width="80"
+              height="80"
+              alt="終點站令狀圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>終點站令狀</h1>
+            <span class="skill-english-name" lang="en">Terminus Warrant</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/arbites/terminus-warrant/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="終點站令狀">
+          <a id="adamant_terminus_warrant"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>累積與上限</strong>：遠程命中每個敵人給 1 層近戰正義；弱點命中該敵人給 3 層。每次射擊對同一目標只記一次，最多 20 層。近戰每次命中給 1 層遠程正義，最多 20 層。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>切換與消耗</strong>：切換至近戰武器會消耗近戰正義，得到 12 秒 +10% 近戰威力與 20% 韌性受傷減免；切換至遠程武器會消耗遠程正義，得到 12 秒 +10% 遠程威力、+50% 壓制與 +50% 遠程順劈。這些核心增益是固定值，不隨消耗層數比例增減。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>韌性算例</strong>：近戰效果使韌性傷害倍率為 0.8，原本 100 點韌性傷害變成 80 點；只在 12 秒效果存續期間套用。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>時間與威力算例</strong>：再切換到另一類武器就會提前結束目前增益。威力單計本效果為 500 × 1.1 = 550；原有同階段 20% 威力時，則由 600 變成 650。累積 1 層與 20 層都能啟動核心固定加成，層數另影響搭配升級的效果。
+                </p>
+              </li>
+            </ul>
+            <h2 id="繁中原文勘誤">
+              繁中原文勘誤
+            </h2>
+            <ul>
+              <li>
+                原文「弱點命中則額外堆疊 3 層」容易誤認為 1 + 3 = 4 層；正確是弱點命中合計獲得 3 層，取代一般命中的 1 層。
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/arbites/terminus-warrant/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/README.md#adamant_terminus_warrant">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_terminus_warrant.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/">← 返回法務官技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

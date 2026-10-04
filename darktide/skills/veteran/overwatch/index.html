@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="掩護射擊 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>掩護射擊 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/overwatch/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">掩護射擊</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df"
+              width="80"
+              height="80"
+              alt="掩護射擊圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>掩護射擊</h1>
+            <span class="skill-english-name" lang="en">Overwatch</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/veteran/overwatch/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="掩護射擊">
+          <a id="veteran_combat_ability_extra_charge"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <strong>滲透增加 1 次使用次數，最多儲存 2 次。</strong>
+              </li>
+              <li>
+                <strong>每次冷卻時間延長 33%。</strong>
+              </li>
+              <li>
+                兩次使用次數共用冷卻進度，<strong>依序恢復</strong>；每完成一次冷卻，恢復 1 次使用次數。
+              </li>
+              <li>
+                施放滲透後開始冷卻，隱身期間仍會計時。冷卻途中再次施放，保留已累積的進度。
+              </li>
+            </ul>
+            <h2 id="冷卻計算">
+              冷卻計算
+            </h2>
+            <ul>
+              <li>
+                未受其他冷卻效果影響時，每次恢復需要 <code>40 × (1 + 33%) = 53.2 秒</code>。
+              </li>
+              <li>
+                從零進度恢復 2 次：<code>53.2 × 2 = 106.4 秒</code>；約第 53.2 秒恢復第 1 次，第 106.4 秒恢復第 2 次。
+              </li>
+              <li>
+                首次施放後經過 20 秒，再用掉第 2 次：距離恢復 1 次仍需約 <code>53.2 − 20 = 33.2 秒</code>。
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/overwatch/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_combat_ability_extra_charge">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_extra_charge.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="極限電容 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>極限電容 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/redline-capacitors/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">極限電容</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5"
+              width="80"
+              height="80"
+              alt="極限電容圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>極限電容</h1>
+            <span class="skill-english-name" lang="en">Redline Capacitors</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/skitarii/redline-capacitors/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="極限電容">
+          <a id="cryptic_redline"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>觸發方式</strong>：戰鬥技能實際消耗或補回充能時，每份充能增加1層；一次消耗2份充能會增加2層，最多4層。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>每層效果</strong>：電容量自然恢復速度每層提高5%，韌性傷害減免每層增加5%。滿4層時，原本每秒恢復單份電容量的2%，會變成2% × (1 + 20%) = 2.4%；原本100點韌性傷害變成100 × (1 − 20%) = 80點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>持續時間</strong>：每層效果維持12秒；新增加層會重設倒數。到達4層後再次觸發不會超過上限，但會重設效果時間。沒有新觸發時，每12秒減少1層。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>充能上限</strong>：戰鬥技能充能上限由3份提高至4份。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>恢復例外</strong>：擊殺回充、弱點擊殺回充與「崇高意圖」的直接恢復量不會因這項加成提高。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/redline-capacitors/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/README.md#cryptic_redline">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

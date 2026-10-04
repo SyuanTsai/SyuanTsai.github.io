@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="拾荒者：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>拾荒者：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/scavenger/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">拾荒者：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>拾荒者：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Scavenger</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/scavenger/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#拾荒者scavenger"><span>03</span>拾荒者(Scavenger)</a></li>
+            <li><a href="#運作方式"><span>04</span>運作方式</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>05</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>06</span>原始碼依據</a></li>
+            <li><a href="#圖示來源"><span>07</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="拾荒者：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/scavenger/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_aura_gain_ammo_on_elite_kill.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="拾荒者scavenger">
+              拾荒者(Scavenger)
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/base-effects/">返回基礎效果</a>｜<a href="/darktide/skills/veteran/source-index/">技能樹索引</a>
+            </p>
+            <h2 id="運作方式">
+              運作方式
+            </h2>
+            <ul>
+              <li>
+                你或受到這個光環影響的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充最大備用彈藥量的 0.25%；光環觸發冷卻為 5 秒。
+              </li>
+              <li>
+                最大備用彈藥 400 發時，一次補給為 <code>400 × 0.25% = 1 發</code>。不足一發的部分會累積到後續補給，不會每次直接捨棄。
+              </li>
+              <li>
+                補入備用彈藥，不會直接裝填；最多補至備用彈藥上限加上彈匣缺少的彈量。生存專家光環將這項比例提高至 0.5%，不是再額外加上 0.5%。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。基礎天賦 <code>veteran_aura_gain_ammo_on_elite_kill</code>；名稱鍵 <code>loc_talent_veteran_elite_kills_grant_ammo_coop</code>；描述鍵 <code>loc_talent_veteran_elite_kills_grant_ammo_coop_cd_desc</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  由職業基礎清單啟用，不是77個技能樹節點之外的額外可選節點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  基礎 aura identifier=veteran_aura、priority=1；改良版相同identifier、priority=2，選用時取高優先序，並非兩個比例相加。
+                </p>
+              </li>
+              <li>
+                <p>
+                  每個接收光環的單位各有 proc_buff；on_minion_death 的 check_proc 只檢查 elite/special。proc_func 另要求 template_context.unit==params.attacking_unit，才遍歷擊殺者的 in_coherence_units。集合包含本人。
+                </p>
+              </li>
+              <li>
+                <p>
+                  ProcBuff 在 check成功後呼叫 proc_func，再無條件更新 _active_start_time；所以即使 proc_func 因「不是本人的擊殺」而早退，也可能令該接收者這份光環進入5秒冷卻。主文的補給條件需連同冷卻理解，並不保證每次本人擊殺都另開一次補給。
+                </p>
+              </li>
+              <li>
+                <p>
+                  每槽 amount=max_reserve×.0025+carryover；floor後餘數保留，新備用彈藥=min(原備用彈藥+整數補給,max_reserve+missing_clip)。殺手自己的1%基礎被動是另一份buff、另計5秒，可同次生效。
+                </p>
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/veteran_archetype.lua#L50-L74">scripts/settings/archetype/archetypes/veteran_archetype.lua，第 50–74 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L646-L666">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 646–666 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L105-L109">scripts/settings/talent/talent_settings_veteran.lua，第 105–109 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1488-L1596">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1488–1596 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L196-L206">scripts/settings/buff/helper_functions/check_proc_functions.lua，第 196–206 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L310-L350">scripts/extension_systems/buff/buffs/proc_buff.lua，第 310–350 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L188-L255">scripts/extension_systems/coherency/coherency_system.lua，第 188–255 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L494-L529">scripts/utilities/ammo.lua，第 494–529 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311">scripts/extension_systems/coherency/unit_coherency_extension.lua，第 256–311 行</a>
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/scavenger/">← 返回拾荒者玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

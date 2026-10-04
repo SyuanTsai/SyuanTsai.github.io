@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="超載電弧手榴彈 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>超載電弧手榴彈 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/overcharged-arc-grenades/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">超載電弧手榴彈</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/14c1a0d8-2916-40d7-a7e2-8572a0b3e6d2"
+              width="80"
+              height="80"
+              alt="超載電弧手榴彈圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>超載電弧手榴彈</h1>
+            <span class="skill-english-name" lang="en">Overcharged Arc Grenades</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/skitarii/overcharged-arc-grenades/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="超載電弧手榴彈">
+          <a id="cryptic_arc_grenades_brittleness"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：電弧手榴彈的起始電弧上限由4道增加至6道；每道電弧可再連鎖的次數維持不變。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：被電弧連鎖擊中的敵人會獲得8層脆弱，每層2.5%，持續5秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>算例</strong>：單次電弧命中可施加8×2.5%=20%脆弱；再次命中可繼續疊加，最多16層，即40%。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：只比較護甲階段，假設護甲前100點、原倍率0.5且該護甲的撕裂係數為1，8層脆弱會讓傷害由100 × 0.5 = 50點提高至100 × (0.5 + 20%) = 70點。16層則為90點；跨過護甲倍率1時須另算。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/overcharged-arc-grenades/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/README.md#cryptic_arc_grenades_brittleness">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_arc_grenades_brittleness.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

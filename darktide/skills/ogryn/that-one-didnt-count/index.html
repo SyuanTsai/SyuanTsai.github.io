@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="那下不算！ · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>那下不算！ · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/that-one-didnt-count/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">那下不算！</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/3d000b06-db5c-4ff3-96c9-54d09216587d"
+              width="80"
+              height="80"
+              alt="那下不算！圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>那下不算！</h1>
+            <span class="skill-english-name" lang="en">That One Didn't Count</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/ogryn/that-one-didnt-count/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="那下不算！">
+          <a id="ogryn_replenish_rock_on_miss"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>觸發條件</strong>：岩石命中至少一個弱點，或整次投擲沒有命中可受傷害的目標時，返還 1 顆。撞到地形仍可算落空；命中可破壞物品則可能失去落空資格。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>充能算例</strong>：投出最後一顆後若該次符合條件，會恢復為 1 顆；每次只恢復 1 顆，總數不超過 4 顆。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>冷卻算例</strong>：從前一次返還起算 5 秒；若第二顆岩石在第 4 秒結束飛行，即使符合返還條件也不會恢復。以投射物結束時計算，不只比較兩次按下投擲的時間。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/that-one-didnt-count/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/README.md#ogryn_replenish_rock_on_miss">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_replenish_rock_on_miss.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/">← 返回歐格林技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

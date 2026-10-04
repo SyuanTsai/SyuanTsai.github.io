@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="遠程刺客 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>遠程刺客 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/long-range-assassin/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">遠程刺客</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab"
+              width="80"
+              height="80"
+              alt="遠程刺客圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>遠程刺客</h1>
+            <span class="skill-english-name" lang="en">Long Range Assassin</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/veteran/long-range-assassin/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="遠程刺客">
+          <a id="veteran_snipers_focus_increased_stacks"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <strong>狙擊專注的效果上限由 10 層提高至 15 層。</strong>
+              </li>
+              <li>
+                每層效果與重新計時方式不變；滲透盔甲仍在 10 層觸發。
+              </li>
+              <li>
+                滿層的 112.5% 加成作用於遠程暴擊或弱點命中的額外傷害部分；整次命中的增幅隨武器、目標與既有加成而變。
+              </li>
+            </ul>
+            <h2 id="滿層算例">
+              滿層算例
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>十五層效果</strong>：額外傷害加成為 <code>15 × 7.5% = 112.5%</code>，裝填速度加成為 <code>15 × 1% = 15%</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>相對零層</strong>：假設未暴擊的遠程弱點命中，基礎部分 100、未加成的額外部分 40，沒有其他加成：由 <code>100 + 40 = 140 點</code> 變成 <code>100 + 40 × (1 + 112.5%) = 185 點</code>；增加 <code>45 ÷ 140 ≈ 32.14%</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>相對原本十層上限</strong>：同一算例，十層為 <code>100 + 40 × 1.75 = 170 點</code>，十五層為 185 點；升級並疊滿後再增加 <code>15 ÷ 170 ≈ 8.82%</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>裝填時間</strong>：原本裝填 4 秒，無其他裝填加成時，<code>4 ÷ 1.15 ≈ 3.48 秒</code>。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/long-range-assassin/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_snipers_focus_increased_stacks">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_snipers_focus_increased_stacks.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

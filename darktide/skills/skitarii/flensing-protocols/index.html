@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="削切協議 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>削切協議 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/flensing-protocols/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">削切協議</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9"
+              width="80"
+              height="80"
+              alt="削切協議圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>削切協議</h1>
+            <span class="skill-english-name" lang="en">Flensing Protocols</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/skitarii/flensing-protocols/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="削切協議">
+          <a id="cryptic_dissector"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>初始層數</strong>：效果啟用時先有6層；「熟練解剖者」可把上限增加到8層。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>每層效果</strong>：傷害增加2.5%，韌性承傷倍率按層數變為1−2.5%×層數。6層時傷害增加15%，韌性承傷倍率為0.85，也就是少受15%韌性傷害；選用「熟練解剖者」並達8層時，傷害增加20%、韌性承傷倍率為0.80。沒有其他增傷時，100點基礎傷害分別變成115點或120點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>觸發方式</strong>：受到生命或韌性傷害時移除1層；每1秒最多移除一次。沒有時間倒數，層數不會自行衰減。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>擊殺恢復</strong>：擊殺精英或專家敵人最多補回2層，並恢復相當於最大韌性15%的韌性。即使已達層數上限，擊殺仍會恢復韌性。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>算例</strong>：6層時受到一筆傷害會降為5層；1秒內再受傷不會再掉層，至少等1秒後的另一筆傷害才可再次移除。滿6層時，100點基礎攻擊傷害增加至115點；若同時承受100點原始韌性傷害，0.85倍率使實際韌性傷害為85點。擊殺精英時若只缺1層，只補1層，但仍恢復最大韌性15%。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/flensing-protocols/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/README.md#cryptic_dissector">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="復甦：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>復甦：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/resurgence/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">復甦：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>復甦：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Resurgence</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>光環</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/resurgence/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#復甦resurgence原始碼依據"><span>03</span>復甦(Resurgence)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="復甦：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/resurgence/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_coherency_regen_aura_improved.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="復甦resurgence原始碼依據">
+              復甦(Resurgence)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/resurgence/#cryptic_coherency_regen_aura_improved">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_coherency_regen_aura_improved">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_coherency_regen_aura_improved</code>；名稱鍵：<code>loc_talent_cryptic_coherency_regen_aura</code>；描述鍵：<code>loc_talent_cryptic_coherency_regen_aura_improved_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_e9138b1a-56be-4048-bdfa-e8c1e7ede57d</code>；分類：光環；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦掛載 cryptic_coherency_regen_aura_improved 協同模板和 cryptic_coherency_regen_aura_improved_personal_boost。協同模板使用與基礎版相同的 coherency_id，但優先級1，將 min_toughness_coherency_regen_rate_modifier 設為0.5；韌性擴充從該 additive multiplier 中扣除基值1並在戰鬥中把一般協同恢復倍率乘0.5。個人被動只給施放者 stat_buffs.toughness=25。CoherencySystem 建立 daisy-chain 時包含自身，UnitCoherencyExtension 接收並儲存自身協同進入事件，之後從整個 in_coherence_units 集合啟用鏈中可用的協同光環，因此50%最低恢復率作用於施放者本人及協同鏈內隊友。恢復仍受是否有韌性缺額、韌性恢復延遲、是否停用恢復、武器／移動倍率及其他恢復修正影響。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1034-L1058">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1034–1058</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L35-L38">scripts/settings/talent/talent_settings_cryptic.lua：35–38</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L270-L297">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：270–297</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L888-L888">scripts/settings/buff/buff_settings.lua：888–888</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L116-L149">scripts/extension_systems/toughness/player_unit_toughness_extension.lua：116–149</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L187-L251">scripts/extension_systems/coherency/coherency_system.lua：187–251</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L200-L214">scripts/extension_systems/coherency/unit_coherency_extension.lua：200–214</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L279-L311">scripts/extension_systems/coherency/unit_coherency_extension.lua：279–311</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1034-L1058">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1034–1058</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L38-L62">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：38–62</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                一般協同恢復速率為10點/秒時，最低戰鬥中速率為10×0.5=5點/秒；4秒恢復20點，韌性缺額不足時只恢復到上限。
+              </li>
+              <li>
+                50%是一般協同韌性恢復速率的最低倍率，不是每秒恢復最大韌性的50%，也不是一次恢復50點。
+              </li>
+              <li>
+                每位接收者仍受其自身武器、移動、其他恢復修正、恢復延遲與韌性上限影響。
+              </li>
+              <li>
+                個人+25點韌性是施放者的被動加成；協同恢復光環則作用於自身與協同鏈內隊友。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>a053ecfc</code>。
+              </li>
+              <li>
+                同鍵中英均描述敵人接近時仍可進行協同韌性恢復；程式補明一般恢復速率乘基礎25%／改良50%、本人亦在協同接收集合，以及恢復延遲仍有效。文字未逐一列出不算錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/aura/cryptic_coherency_regen_aura_improved.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/7090c8fb-aaaa-4015-a5c1-21e7093507be">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/resurgence/">← 返回復甦玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

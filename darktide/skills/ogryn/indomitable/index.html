@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="不屈不撓 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>不屈不撓 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/indomitable/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">不屈不撓</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3"
+              width="80"
+              height="80"
+              alt="不屈不撓圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>不屈不撓</h1>
+            <span class="skill-english-name" lang="en">Indomitable</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/ogryn/indomitable/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="不屈不撓">
+          <a id="ogryn_longer_charge"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>衝鋒與冷卻</strong>：向前衝鋒，最大距離從 12 公尺提高為 12 × 2 = 24 公尺，撞開沿途敵人；撞到巨獸會停止，地形也會限制距離。只有一層充能，基礎冷卻 25 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>衝鋒後增益</strong>：衝鋒結束後，近戰攻速與移動速度提高 25%，持續 5 秒。受攻速控制的 1 秒動作變成 1 ÷ 1.25 = 0.8 秒；原本每秒移動 5 公尺，變成 6.25 公尺。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>衝鋒防護</strong>：保留基礎衝鋒期間的 25% 減傷；只計這份效果，100 點傷害變成 75 點。衝撞與結束衝擊本身不直接造成生命傷害；粉碎提供的流血另外計算。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/indomitable/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/README.md#ogryn_longer_charge">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_longer_charge.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/">← 返回歐格林技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="貼身火力 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>貼身火力 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/point-blank-barrage/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">貼身火力</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532"
+              width="80"
+              height="80"
+              alt="貼身火力圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>貼身火力</h1>
+            <span class="skill-english-name" lang="en">Point-Blank Barrage</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/ogryn/point-blank-barrage/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="貼身火力">
+          <a id="ogryn_special_ammo"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>啟動與冷卻</strong>：切換至遠程武器，立即從備用彈藥裝填彈匣；備用彈藥不足時只能裝入剩餘彈藥。效果持續 12 秒，基礎冷卻 60 秒，只有一層充能。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>射速與換彈</strong>：遠程射速提高 25%，換彈速度提高 65%。受速度控制的 1 秒射擊間隔變成 1 ÷ 1.25 = 0.8 秒；3 秒換彈動作變成 3 ÷ 1.65 ≈ 1.82 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>近距離與移動</strong>：持有遠程武器時，近距離傷害增加 15%，並減半架槍與武器動作的移動懲罰。例如原本減速 40%，現在減速 20%；原速 5 公尺／秒，減速後由 3 提高到 4 公尺／秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>彈藥返還</strong>：效果結束時，依期間計入彈藥的 50% 補回備用彈藥。例如計入 20 發，返還 20 × 50% = 10 發。幸運子彈省下的彈藥也列入計算，補回量仍受可攜帶總量限制。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/point-blank-barrage/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/README.md#ogryn_special_ammo">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_special_ammo.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/">← 返回歐格林技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

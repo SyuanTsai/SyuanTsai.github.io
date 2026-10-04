@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="靈能者：來源與技術索引 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>靈能者：來源與技術索引 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/source-index/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">靈能者：來源與技術索引</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>靈能者：來源與技術索引</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="靈能者：來源與技術索引">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/psyker/">← 返回靈能者</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/SOURCE_INDEX.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="靈能者來源文件與技術索引">
+              靈能者：來源文件與技術索引
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">版本、日期與證據限制</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/psyker/localization-comparison/">遊戲本體繁中描述比對</a>｜<a href="/darktide/skills/psyker/damage-percentage-review/">百分比描述盤點</a>｜<a href="/darktide/skills/psyker/base-effects/">角色基礎效果</a>｜<a href="/darktide/skills/psyker/unused-definitions/">未直接用於目前技能樹的定義</a>
+            </p>
+            <p>
+              固定來源 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。技能樹共 <strong>81 個可選節點</strong>，均為一點；同一配置最多分配 30 點。零點起始佔位 <code>not_selected</code> 不屬天賦效果，不列入 81 項。
+              <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65">職業與基礎天賦</a>；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36">技能樹設定</a>。內部 tree version 26 不等於遊戲發行版號。
+            </p>
+            <p>
+              名稱沿用翻譯表；機制為固定版本的程式分析，未進行遊戲內驗證。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能／程式識別碼
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/kinetic-flayer/mechanics/">動能撕裂者</a> / <code>psyker_smite_on_hit</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/brain-rupture/mechanics/">顱腦崩裂</a> / <code>psyker_brain_burst_improved</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/assail/mechanics/">靈能攻擊</a> / <code>psyker_grenade_throwing_knives</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/ethereal-shards/mechanics/">乙太碎片</a> / <code>psyker_throwing_knives_piercing</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/smite/mechanics/">懲戒</a> / <code>psyker_grenade_chain_lightning</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/kinetic-resonance/mechanics/">動能共鳴</a> / <code>psyker_ability_increase_brain_burst_speed</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/quick-shards/mechanics/">迅捷碎片</a> / <code>psyker_throwing_knives_cast_speed</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/enfeeble/mechanics/">衰弱詛咒</a> / <code>psyker_chain_lightning_improved_target_buff</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/charged-strike/mechanics/">蓄力打擊</a> / <code>psyker_chain_lightning_heavy_attacks</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/kinetic-presence/mechanics/">動能釋放</a> / <code>psyker_aura_damage_vs_elites</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/seers-presence/mechanics/">先知之眼</a> / <code>psyker_cooldown_aura_improved</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/prescience/mechanics/">預兆</a> / <code>psyker_aura_crit_chance_aura</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/venting-shriek/mechanics/">靈能尖嘯</a> / <code>psyker_shout_vent_warp_charge</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/scriers-gaze/mechanics/">占卜者的注視</a> / <code>psyker_combat_ability_stance</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/becalming-eruption/mechanics/">平靜迸發</a> / <code>psyker_shout_reduces_warp_charge_generation</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-rupture/mechanics/">亞空間爆發</a> / <code>psyker_discharge_damage_debuff</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/creeping-flames/mechanics/">蔓延火焰</a> / <code>psyker_warpfire_on_shout</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/precognition/mechanics/">預知未來</a> / <code>psyker_overcharge_weakspot_kill_bonuses</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-speed/mechanics/">亞空間加速</a> / <code>psyker_overcharge_increased_movement_speed</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/psykinetics-aura/mechanics/">靈能學者光環</a> / <code>psyker_2_tier_3_name_2</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/reality-anchor/mechanics/">現實錨點</a> / <code>psyker_overcharge_reduced_warp_charge</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/telekine-shield/mechanics/">念力護盾</a> / <code>psyker_combat_ability_force_field</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/bolstered-shield/mechanics/">強化護盾</a> / <code>psyker_shield_extra_charge</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/sanctuary/mechanics/">庇護所</a> / <code>psyker_boost_allies_in_sphere</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/telekine-dome/mechanics/">念力穹頂</a> / <code>psyker_sphere_shield</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/enervating-threshold/mechanics/">衰弱界線</a> / <code>psyker_shield_stun_passive</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-unbound/mechanics/">亞空間突破</a> / <code>psyker_overcharge_stance_infinite_casting</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-siphon/mechanics/">亞空間虹吸</a> / <code>psyker_passive_souls_from_elite_kills</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/disrupt-destiny/mechanics/">擾動命運</a> / <code>psyker_new_mark_passive</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/empowered-psionics/mechanics/">靈能強化</a> / <code>psyker_empowered_ability</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/inner-tranquility/mechanics/">平心靜氣</a> / <code>psyker_reduced_warp_charge_cost_and_venting_speed</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/essence-harvest/mechanics/">吸精奪萃</a> / <code>psyker_toughness_on_soul</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/bio-lodestone/mechanics/">生物磁石</a> / <code>psyker_empowered_grenades_passive_improved</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/psychic-leeching/mechanics/">吸血閃電</a> / <code>psyker_empowered_chain_lightnings_replenish_toughness_to_allies</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/overpowering-souls/mechanics/">吞靈強擊</a> / <code>psyker_empowered_ability_on_elite_kills</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/perfectionism/mechanics/">完美主義</a> / <code>psyker_mark_increased_max_stacks</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/purloin-providence/mechanics/">盜竊天命</a> / <code>psyker_mark_kills_can_vent</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/lingering-influence/mechanics/">持久影響</a> / <code>psyker_mark_increased_duration</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/charged-up/mechanics/">充能完畢</a> / <code>psyker_empowered_grenades_increased_max_stacks</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/in-fire-reborn/mechanics/">涅槃</a> / <code>psyker_warpfire_generate_souls</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/psychic-vampire/mechanics/">靈能吸血鬼</a> / <code>psyker_aura_souls_on_kill</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-battery/mechanics/">亞空間電池</a> / <code>psyker_increased_max_souls</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/cruel-fortune/mechanics/">殘忍命運</a> / <code>psyker_mark_weakspot_kills</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/soulstealer/mechanics/">靈魂竊賊</a> / <code>psyker_toughness_on_warp_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/quietude/mechanics/">心如止水</a> / <code>psyker_toughness_on_vent</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-expenditure/mechanics/">亞空間耗費</a> / <code>psyker_toughness_on_melee</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/mettle/mechanics/">堅毅</a> / <code>psyker_crits_regen_toughness_movement_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/perilous-combustion/mechanics/">險惡燃燒</a> / <code>psyker_elite_kills_add_warpfire</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/battle-meditation/mechanics/">戰鬥冥想</a> / <code>psyker_chance_to_vent_on_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/perfect-timing/mechanics/">完美時機</a> / <code>psyker_crits_empower_next_attack</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/wildfire/mechanics/">野火</a> / <code>psyker_spread_warpfire_on_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/mind-in-motion/mechanics/">思維活躍</a> / <code>psyker_venting_improvements</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/malefic-momentum/mechanics/">惡意攻勢</a> / <code>psyker_kills_stack_other_weapon_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/one-with-the-warp/mechanics/">亞空間強化</a> / <code>psyker_warp_charge_reduces_toughness_damage_taken</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/anticipation/mechanics/">看破</a> / <code>psyker_improved_dodge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/empathic-evasion/mechanics/">反射閃避</a> / <code>psyker_dodge_after_crits</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/solidity/mechanics/">穩固</a> / <code>psyker_increased_vent_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-rider/mechanics/">亞空間騎士</a> / <code>psyker_damage_based_on_warp_charge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/true-aim/mechanics/">精確瞄準</a> / <code>psyker_guaranteed_crit_on_multiple_weakspot_hits</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/puppet-master/mechanics/">傀儡師</a> / <code>psyker_coherency_aura_size_increase</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/kinetic-deflection/mechanics/">動能偏斜</a> / <code>psyker_block_costs_warp_charge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/toughness-boost/mechanics/">韌性增幅</a> / <code>base_toughness_node_buff_medium_5</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/toughness-boost-base-toughness-node-buff-medium-4/mechanics/">韌性增幅</a> / <code>base_toughness_node_buff_medium_4</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/toughness-damage-reduction/mechanics/">韌性減傷</a> / <code>base_toughness_damage_reduction_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/lightning-speed/mechanics/">迅雷之勢</a> / <code>psyker_melee_attack_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-splitting/mechanics/">亞空間分裂</a> / <code>psyker_cleave_from_peril</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/souldrinker/mechanics/">汲魂者</a> / <code>psyker_killing_enemy_with_warpfire_boosts</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/by-crack-of-bone/mechanics/">骨折後遺症</a> / <code>psyker_melee_weaving</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/vulnerable-minds/mechanics/">脆弱心智</a> / <code>psyker_damage_vs_ogryns_and_monsters</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/focused-warp/mechanics/">聚焦亞空間</a> / <code>psyker_increased_warp_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/peril-equilibrium/mechanics/">反噬平衡</a> / <code>psyker_weapon_attacks_peril_equilibrium</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/surety-of-arms/mechanics/">武器在手，信心我有。</a> / <code>psyker_reload_speed_warp_charge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/crystalline-will/mechanics/">結晶意志</a> / <code>psyker_alternative_peril_explosion</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/channeled-force/mechanics/">靈能引導</a> / <code>psyker_force_staff_bonus</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/empyric-shock/mechanics/">亞空間震波</a> / <code>psyker_force_staff_quick_attack_bonus</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/just-a-dream/mechanics/">如夢似幻</a> / <code>psyker_damage_to_peril_conversion</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/immaterial-focus/mechanics/">無形專注</a> / <code>psyker_damage_resistance_stun_immunity</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/empyric-resolve/mechanics/">亞空間意志</a> / <code>psyker_warp_glass_cannon</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-ghost/mechanics/">亞空間幽魂</a> / <code>psyker_stat_mix</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/penetration-of-the-soul/mechanics/">靈魂穿透</a> / <code>psyker_warp_attacks_rending</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/psykinetic-grip/mechanics/">念力之握</a> / <code>psyker_increased_blitz_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/">← 返回靈能者技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

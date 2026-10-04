@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="強化亡命之徒：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>強化亡命之徒：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/enhanced-desperado/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">強化亡命之徒：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>強化亡命之徒：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Enhanced Desperado</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/enhanced-desperado/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#強化亡命之徒enhanced-desperado原始碼依據"><span>03</span>強化亡命之徒(Enhanced Desperado)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="強化亡命之徒：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/enhanced-desperado/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_ability_focus_improved.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="強化亡命之徒enhanced-desperado原始碼依據">
+              強化亡命之徒(Enhanced Desperado)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/enhanced-desperado/#broker_ability_focus_improved">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_ability_focus_improved">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_ability_focus_improved</code>；名稱鍵：<code>loc_talent_broker_ability_focus_improved</code>；描述鍵：<code>loc_talent_broker_ability_focus_improved_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_4fa187c3-c910-4e93-b982-cc2e68d2515b</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                此節點接到 broker_ability_focus_improved，沿用 broker_focus 共用模板並改掛強化版狀態 buff。buff 加入 sprint_movement_speed=0.20、sprinting_cost_multiplier=0、count_as_dodge_vs_ranged 與 suppression_immune；衝刺速度屬加算修正，例算為基礎 100 × (1+0.20)=120。
+              </li>
+              <li>
+                近距離標記依敵方單位位置與玩家位置計算，距離門檻取 ranged_close=12.5 公尺，並限於具有列入名單敵人標籤的單位。狀態開始時記錄起始時間；擊殺事件須為死亡結果、遠程攻擊（或武器設定視為遠程）且命中點距攻擊者不超過 12.5 公尺。
+              </li>
+              <li>
+                延長函式以自啟動時間除以 duration_max=20 取整，將 duration_extend=1 秒除以 duration_divisor=5 的相應次方；因此經過 20 秒後為 0.2 秒、40 秒後為 0.04 秒。 buff 起始時間最多推至目前時刻，避免取得已經過去的持續時間。
+              </li>
+              <li>
+                開始時把彈匣子彈移回儲備並裝滿彈匣，同時開啟免費彈藥轉移；停止時關閉免費轉移並整理彈匣。強化版的擊殺處理才延長時間；依天賦規則附加的其他效果另由相應分支節點決定。
+              </li>
+              <li>
+                遠程擊殺以近距離擊殺檢查；針槍追蹤另有獨立條件：只記錄指定針槍、狀態期間遠程命中且目標仍存活的敵人；死亡事件須由 toxin 傷害造成，且死亡位置距 params.attacking_unit 的位置不超過 12.5 公尺。這是已追蹤的針槍毒素死亡例外，不能概括為所有中毒死亡。
+              </li>
+              <li>
+                能力為單次充能，資源每秒自然恢復 1、每次消耗 45；在狀態 buff 存在時暫停充能，離開狀態才恢復。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L104-L151">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：104–151</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L119-L141">scripts/settings/talent/talent_settings_broker.lua：119–141</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/broker_abilities.lua#L37-L65">scripts/settings/ability/player_abilities/abilities/broker_abilities.lua：37–65</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L67-L180">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：67–180</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L243-L485">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：243–485</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/broker_buff_utils.lua#L99-L190">scripts/settings/buff/broker_buff_utils.lua：99–190</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L306-L318">scripts/settings/buff/helper_functions/check_proc_functions.lua：306–318</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L777-L792">scripts/settings/buff/helper_functions/check_proc_functions.lua：777–792</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_settings.lua#L18-L23">scripts/settings/damage/damage_settings.lua：18–23</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L977-L978">scripts/settings/buff/buff_settings.lua：977–978</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L884">scripts/extension_systems/ability/player_unit_ability_extension.lua：839–884</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L104-L151">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：104–151</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L578-L607">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：578–607</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>算例</strong>：只計此技能時，100 × (1 + 20%) = 120 衝刺速度；每次擊殺延長量在 20 秒後為 1 ÷ 5 = 0.2 秒，在 40 秒後為 1 ÷ 5² = 0.04 秒。
+              </li>
+              <li>
+                12.5 公尺近距離檢查使用攻擊者位置與命中點／死亡位置；不可把「毒素擊殺」單獨當成充分條件。
+              </li>
+              <li>
+                文字列有基礎冷卻，但實際冷卻還受狀態持續時間暫停影響；若擊殺延長狀態，恢復時間相應往後。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>a1148a57</code>。
+              </li>
+              <li>
+                繁中與英文都描述遠程攻擊視同閃避、衝刺免耗耐力並加速、近距離標記與遠程擊殺延長；固定版本設定值與計時邏輯相符。針槍毒素的額外追蹤條件是程式補充，原文省略不作勘誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability/broker_ability_focus_improved.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/enhanced-desperado/">← 返回強化亡命之徒玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

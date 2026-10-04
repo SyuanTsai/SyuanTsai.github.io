@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="歐格林：未使用定義（技術補充） · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>歐格林：未使用定義（技術補充） · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/unused-definitions/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">歐格林：未使用定義（技術補充）</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>歐格林：未使用定義（技術補充）</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術補充 · 非當前可選技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="歐格林：未使用定義（技術補充）">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/">← 返回歐格林</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/UNUSED_DEFINITIONS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="歐格林未被當前技能樹直接使用的定義">
+              歐格林：未被當前技能樹直接使用的定義
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/">返回玩家說明</a>｜<a href="/darktide/skills/ogryn/source-index/">技術索引</a>｜<a href="/darktide/skills/ogryn/base-effects/">角色基礎效果</a>
+            </p>
+            <ul>
+              <li>
+                固定來源：Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                歐格林定義109項；樹使用85項歐格林定義與1項通用屬性，另有7項不重複的角色基礎效果，故109 − 85 − 7 = 17項未直接列入。
+              </li>
+              <li>
+                集合依據：<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L34-L2736">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10">目前技能樹</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74">基礎天賦清單</a>。
+              </li>
+              <li>
+                以下功能名稱只供辨識，並非新增官方譯名。未直接列入不等於底層效果完全停用；分開核對天賦入口與其掛載的增益／特殊規則。
+              </li>
+            </ul>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      定義
+                    </th>
+                    <th>
+                      功能
+                    </th>
+                    <th>
+                      目前入口與底層效果判定
+                    </th>
+                    <th>
+                      固定來源
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <code>ogryn_taunt_radius_increase</code>
+                    </td>
+                    <td>
+                      嘲諷範圍增加
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L173-L199">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_leadbelcher_trigger_chance_increase</code>
+                    </td>
+                    <td>
+                      舊幸運子彈機率升級
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L431-L450">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_heavy_hitter_light_attacks_refresh</code>
+                    </td>
+                    <td>
+                      舊輕擊重新計時重拳出擊
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 目前重拳出擊本身已允許一般近戰命中加層與重新計時，不代表需要此舊節點。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L566-L581">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_increased_suppression</code>
+                    </td>
+                    <td>
+                      獨立壓制加成
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 優勝劣汰使用另一個ogryn_suppression_increase，不能因名稱相近視為同一模板。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1055-L1071">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_increased_clip_size</code>
+                    </td>
+                    <td>
+                      彈匣容量增加
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1072-L1088">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_special_ammo_movement</code>
+                    </td>
+                    <td>
+                      遠程能力移動與近距離傷害
+                    </td>
+                    <td>
+                      天賦入口未列入，但相同特殊規則ogryn_combat_no_movement_penalty已由貼身火力直接提供；移動與近距離增傷仍生效。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1593-L1617">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_decrease_suppressed_decay</code>
+                    </td>
+                    <td>
+                      壓制衰減延緩
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1800-L1823">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_block_cost_reduction</code>
+                    </td>
+                    <td>
+                      格擋消耗減少
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1848-L1874">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_frag_bomb_bleed</code>
+                    </td>
+                    <td>
+                      破片炸彈流血
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2002-L2020">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_box_bleed</code>
+                    </td>
+                    <td>
+                      手雷箱附加持續傷害
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2021-L2039">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_stagger_cleave_on_third</code>
+                    </td>
+                    <td>
+                      第三次攻擊衝擊與順劈
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2040-L2064">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_block_increases_power</code>
+                    </td>
+                    <td>
+                      格擋疊加衝擊
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2065-L2088">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_suppression_toughness</code>
+                    </td>
+                    <td>
+                      高韌性壓制免疫
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2136-L2150">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_taking_damage_improves_handling</code>
+                    </td>
+                    <td>
+                      受傷後武器操控
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2151-L2173">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_multiple_staggers_restore_stamina</code>
+                    </td>
+                    <td>
+                      多目標踉蹌恢復耐力
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2197-L2211">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_movement_boost_on_ranged_damage</code>
+                    </td>
+                    <td>
+                      舊遠程受擊防護
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 目前遠程受擊減傷另掛ogryn_ranged_damage_immunity，不把此舊效果數值混入。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2222-L2248">定義</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>ogryn_far_damage</code>
+                    </td>
+                    <td>
+                      遠程離增傷
+                    </td>
+                    <td>
+                      目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2318-L2333">定義</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 id="仍使用底層效果的項目">
+              仍使用底層效果的項目
+            </h2>
+            <ul>
+              <li>
+                貼身火力直接加入相同移動特殊規則：<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L296-L361">目前天賦掛載</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L1851-L1915">姿態啟動</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L2303-L2331">移動與近距離加成</a>。
+              </li>
+              <li>
+                本表限定目前職業樹與角色基礎入口；不宣稱其他模式、祝福、測試工具或未來版本完全無法使用上述模板。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/">← 返回歐格林技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

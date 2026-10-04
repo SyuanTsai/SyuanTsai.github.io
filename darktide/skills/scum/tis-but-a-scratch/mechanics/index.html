@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="沒甚麼，只是擦傷：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>沒甚麼，只是擦傷：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/tis-but-a-scratch/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">沒甚麼，只是擦傷：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>沒甚麼，只是擦傷：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Tis but a Scratch</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/tis-but-a-scratch/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#沒甚麼只是擦傷tis-but-a-scratch原始碼依據"><span>03</span>沒甚麼，只是擦傷(Tis but a Scratch)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="沒甚麼，只是擦傷：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/tis-but-a-scratch/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_passive_replenish_toughness_on_ranged_toughness_damage.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="沒甚麼只是擦傷tis-but-a-scratch原始碼依據">
+              沒甚麼，只是擦傷(Tis but a Scratch)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/tis-but-a-scratch/#broker_passive_replenish_toughness_on_ranged_toughness_damage">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_passive_replenish_toughness_on_ranged_toughness_damage">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_passive_replenish_toughness_on_ranged_toughness_damage</code>；名稱鍵：<code>loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage</code>；描述鍵：<code>loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_3d4045a2-3883-4d78-9bf7-ac097351162e</code>；分類：技能；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                on_damage_taken同時要求has_toughness與on_ranged_hit；子Buff duration3、max1、refresh，toughness_regen_percent=.3/3。
+              </li>
+              <li>
+                on_player_toughness_broken直接force_finish，並有prevent_toughness_regen_when_depleted。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L1955-L1978">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：1955–1978</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L362-L365">scripts/settings/buff/helper_functions/check_proc_functions.lua：362–365</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L756-L758">scripts/settings/buff/helper_functions/check_proc_functions.lua：756–758</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L160-L174">scripts/extension_systems/toughness/player_unit_toughness_extension.lua：160–174</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L366-L369">scripts/settings/talent/talent_settings_broker.lua：366–369</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L1944-L1954">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：1944–1954</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1575-L1593">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：1575–1593</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L518-L550">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：518–550</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>恢復算例</strong>：最大韌性 100 時，每秒恢復 10 點，完整 3 秒共 30 點。若第 2 秒再次觸發，恢復可延長到第 5 秒，合計最多 50 點，仍以缺額為限。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>6f652e30</code>。
+              </li>
+              <li>
+                兩語均描述遠程命中後恢復韌性；重新計時與耗盡中止為補充，不列錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_replenish_toughness_on_ranged_toughness_damage.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933987866">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/ba3e0adf-5d95-459d-9ed4-f17e21febd90">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/tis-but-a-scratch/">← 返回沒甚麼，只是擦傷玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="進階能量管理：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>進階能量管理：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/advanced-power-management/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">進階能量管理：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>進階能量管理：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Advanced Power Management</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/advanced-power-management/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#進階能量管理advanced-power-management原始碼依據"><span>03</span>進階能量管理(Advanced Power Management)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="進階能量管理：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/advanced-power-management/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline_strength.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="進階能量管理advanced-power-management原始碼依據">
+              進階能量管理(Advanced Power Management)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/advanced-power-management/#cryptic_redline_strength">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_redline_strength">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_redline_strength</code>；名稱鍵：<code>loc_talent_cryptic_power_generation_toughness</code>；描述鍵：<code>loc_talent_cryptic_redline_strength_clarified_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_3257b11f-d4b3-4657-9a70-e6ca255c1a73</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦定義把此修正連到 cryptic_redline_strength 被動；設定值為每層 power_level_modifier=0.05、最多5層、10秒。
+              </li>
+              <li>
+                被動監聽戰鬥技能使用，讀取使用前持有的充能數，並用該數量增加子效果層數。子效果 buff 上限5、每層威力等級修正0.05，新增層數時重設持續時間。
+              </li>
+              <li>
+                buff 的 stat_buffs 依層數重複計算；威力等級修正屬 additive_multiplier。PowerLevel.power_level_buff_modifier 將該通用威力等級修正與情境修正相加，返回的威力等級之後再進入攻擊類型曲線，故不能把 +15% 威力直接寫成 +15% 最終傷害。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1432-L1451">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1432–1451</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L337-L341">scripts/settings/talent/talent_settings_cryptic.lua：337–341</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1938-L1966">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1938–1966</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L733">scripts/extension_systems/buff/buffs/buff.lua：689–733</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L926-L927">scripts/settings/buff/buff_settings.lua：926–927</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L25-L60">scripts/utilities/attack/power_level.lua：25–60</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L63-L91">scripts/utilities/attack/power_level.lua：63–91</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_cryptic_chordclaw_activation.lua#L34-L65">scripts/extension_systems/weapon/actions/action_cryptic_chordclaw_activation.lua：34–65</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1432-L1451">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1432–1451</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1195-L1217">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1195–1217</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                靜態推演：使用前有3份充能，得到3層×5%=15%威力加成；基準威力500會變成575。若攻擊原本造成100點傷害，不能只靠這項威力修正推算新的實際傷害，還需要武器傷害曲線與敵人護甲資料。
+              </li>
+              <li>
+                以戰鬥技能使用前仍持有的充能數決定加層數；不是依本次技能消耗的充能數計算。
+              </li>
+              <li>
+                威力等級不是最終傷害百分比；最終傷害會依攻擊種類、傷害設定、護甲及其他修正計算。
+              </li>
+              <li>
+                以上為固定版程式碼的靜態推演，未在遊戲內實測。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>4e708242</code>。
+              </li>
+              <li>
+                本機繁中與英文都描述使用能力時按當時持有的充能取得力量，並寫明持續時間；固定版依使用前充能數增加層數，每層套用5%威力等級修正、最多5層並重設10秒倒數。UI未直接說明該力量修正作用於威力等級，也未列出上限；這些是程式細節的補充，不構成明確翻譯錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_redline_strength.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/advanced-power-management/">← 返回進階能量管理玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

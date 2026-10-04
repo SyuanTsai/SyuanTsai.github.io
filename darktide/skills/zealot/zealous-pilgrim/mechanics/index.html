@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="狂熱朝聖者：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>狂熱朝聖者：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/zealous-pilgrim/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">狂熱朝聖者：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>狂熱朝聖者：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Zealous Pilgrim</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/zealous-pilgrim/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#狂熱朝聖者zealous-pilgrim原始碼依據"><span>03</span>狂熱朝聖者(Zealous Pilgrim)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="狂熱朝聖者：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/zealous-pilgrim/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_ability.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="狂熱朝聖者zealous-pilgrim原始碼依據">
+              狂熱朝聖者(Zealous Pilgrim)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/zealous-pilgrim/#zealot_resist_death_ability">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_resist_death_ability">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_resist_death_ability</code>；名稱鍵：<code>loc_talent_zealot_resist_death_ability</code>；描述鍵：<code>loc_talent_zealot_resist_death_ability_offensive_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_3483d4d7-3f13-48de-8055-ecfc04d70aae</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                樹節點同時掛載 <code>zealot_resist_death_ability</code> 與 <code>zealot_resist_death_offensive</code>。前者監聽 <code>on_combat_ability</code>，一般技能使用時加上 <code>zealot_resist_death_temp</code>；此 timed buff 持續4秒並提供 <code>unkillable</code>。後者只在玩家有該關鍵字時套用+10% damage與+10% attack_speed。
+              </li>
+              <li>
+                隱身與聖物由各自結束流程處理：隱身 buff 的 <code>stop_func</code> 在離開隱身時加 temporary buff；channel action 在技能結束、恢復充能後加 buff。共用 handler 對這兩類 action 提前返回，避免過早觸發。
+              </li>
+              <li>
+                <code>zealot_resist_death_temp</code> 未設定 max_stacks；BuffExtension 對沒有 max_stacks 的同名 buff 建立獨立實例，因此重複使用技能時可能有重疊的4秒實例，沒有單一共享重設倒數。
+              </li>
+              <li>
+                此 modifier 與 Holy Revenant 共用 <code>exclusive_group=resist_death_1</code>，不可同時選取；可與 Fire and Fury、Risen 並用。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3288-L3330">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3288–3330</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L5062-L5084">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：5062–5084</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L5086-L5101">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：5086–5101</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4299-L4329">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4299–4329</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L5144-L5157">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：5144–5157</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_zealot_channel.lua#L455-L489">scripts/extension_systems/weapon/actions/action_zealot_channel.lua：455–489</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L470">scripts/extension_systems/buff/buff_extension_base.lua：434–470</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1990-L2012">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1990–2012</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1270-L1295">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1270–1295</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/action_handler.lua#L356-L429">scripts/utilities/action/action_handler.lua：356–429</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L289-L303">scripts/utilities/attack/damage_calculation.lua：289–303</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3288-L3330">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3288–3330</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1990-L2013">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1990–2013</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>傷害與速度算例</strong>：只計這項增益，基礎 100 點傷害變成 100 × 1.1 = 110 點；受攻速影響的 1 秒動作變成 1 ÷ 1.1 ≈ 0.909 秒。其他同階段加成先相加。
+              </li>
+              <li>
+                此無法殺死效果不會縮短死戰到底本身的120秒冷卻。
+              </li>
+              <li>
+                重複實例是由未設 max_stacks 的 BuffExtension 建立流程推導；UI呈現不在本次分析範圍。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>ccea0bcc</code>。
+              </li>
+              <li>
+                繁中與英文對使用技能、隱身/聖物起算時點及兩項增益的方向相符。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_resist_death_ability.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/zealous-pilgrim/">← 返回狂熱朝聖者玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

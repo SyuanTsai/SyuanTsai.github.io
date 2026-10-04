@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="那下不算！：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>那下不算！：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/that-one-didnt-count/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">那下不算！：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>那下不算！：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">That One Didn't Count</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/ogryn/that-one-didnt-count/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#那下不算that-one-didnt-count原始碼依據"><span>03</span>那下不算！(That One Didn't Count)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="那下不算！：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/that-one-didnt-count/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_replenish_rock_on_miss.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="那下不算that-one-didnt-count原始碼依據">
+              那下不算！(That One Didn&#39;t Count)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/that-one-didnt-count/#ogryn_replenish_rock_on_miss">返回玩家說明</a>｜<a href="/darktide/skills/ogryn/source-index/">技術索引</a>｜<a href="/darktide/skills/ogryn/localization-comparison/#ogryn_replenish_rock_on_miss">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>ogryn_replenish_rock_on_miss</code>；名稱鍵：<code>loc_talent_ogryn_replenish_rock_on_miss_name</code>；描述鍵：<code>loc_talent_ogryn_replenish_rock_on_miss_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_699c29c6-383b-478b-a462-792679f03b8c</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                此被動效果監聽玩家投射物結束事件，只接受歐格林友善岩石。
+              </li>
+              <li>
+                若投射物回報曾命中敵人但弱點命中數為 0，檢查函式拒絕觸發；其他情況通過後呼叫能力系統恢復 1 次閃擊充能。
+              </li>
+              <li>
+                共享設定將冷卻設為 5 秒，岩石能力最多 4 顆；恢復仍受能力上限限制。
+              </li>
+              <li>
+                impact_hit在is_damagable分支設true，不限enemy/minion；可破壞物也可能影響落空判定。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1931-L1955">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：1931–1955</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L2630-L2679">scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：2630–2679</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L182-L184">scripts/settings/talent/talent_settings_ogryn.lua：182–184</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L164-L177">scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua：164–177</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L410-L430">scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：410–430</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L493-L563">scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：493–563</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1931-L1955">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：1931–1955</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1548-L1570">scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1548–1570</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>充能算例</strong>：投出最後一顆後若該次符合條件，會恢復為 1 顆；每次只恢復 1 顆，總數不超過 4 顆。
+              </li>
+              <li>
+                <strong>冷卻算例</strong>：從前一次返還起算 5 秒；若第二顆岩石在第 4 秒結束飛行，即使符合返還條件也不會恢復。以投射物結束時計算，不只比較兩次按下投擲的時間。
+              </li>
+              <li>
+                觸發以投射物結束時回報的命中與弱點計數為準；普通敵人命中但沒有弱點命中不等於未命中。
+              </li>
+              <li>
+                此效果每次補 1 顆，不會超過岩石能力目前的充能上限。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>af804692</code>。
+              </li>
+              <li>
+                同源中英都寫未命中任何敵人；固定程式的impact_hit在可受傷害目標分支設值，不限敵人，可破壞物品亦可能影響。實際表現待遊戲內核對，保留差異，不列繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical_modifier/ogryn_replenish_rock_on_miss.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/3d000b06-db5c-4ff3-96c9-54d09216587d">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/that-one-didnt-count/">← 返回那下不算！玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

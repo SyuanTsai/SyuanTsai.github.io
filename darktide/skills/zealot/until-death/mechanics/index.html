@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="死戰到底：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>死戰到底：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/until-death/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">死戰到底：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>死戰到底：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Until Death</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/until-death/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#死戰到底until-death原始碼依據"><span>03</span>死戰到底(Until Death)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="死戰到底：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/until-death/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="死戰到底until-death原始碼依據">
+              死戰到底(Until Death)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/until-death/#zealot_resist_death">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_resist_death">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_resist_death</code>；名稱鍵：<code>loc_talent_zealot_resist_death</code>；描述鍵：<code>loc_talent_zealot_resist_death_base_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_0581bad8-f8c0-4321-a90b-756013fd3981</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                目前技能樹掛載 <code>zealot_resist_death</code> 被動 buff。它監聽 <code>on_damage_taken</code>，觸發機率為1；先檢查玩家是否已有 <code>unkillable</code> 關鍵字，再以 <code>params.will_die</code> 或生命值已≤1且本次傷害&gt;0判斷致命傷害。
+              </li>
+              <li>
+                Proc buff 設 <code>active_duration=8</code>、<code>cooldown_duration=120</code>，啟動期間提供 <code>unkillable</code> 關鍵字。共用 ProcBuff 冷卻判斷為啟動時間+效果期間+冷卻，因此120秒從8秒效果結束後計，不是從觸發時起算。
+              </li>
+              <li>
+                這是單一條件觸發 buff，沒有層數；處於其他無法殺死效果時，本技能的致命傷害檢查會提前返回，該次傷害不會啟動本技能冷卻。
+              </li>
+              <li>
+                三個職業核心鑰石共用 <code>exclusive_group=keystone</code>，技能樹中只能選其一。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2821-L2840">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2821–2840</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3473-L3567">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：3473–3567</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L648-L662">scripts/settings/buff/helper_functions/check_proc_functions.lua：648–662</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L150-L194">scripts/extension_systems/buff/buffs/proc_buff.lua：150–194</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L63-L95">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：63–95</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2821-L2840">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2821–2840</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L63-L95">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：63–95</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>冷卻算例</strong>：8 秒效果結束後，再冷卻 120 秒；第 0 秒觸發，約第 8 秒效果結束，約第 128 秒才再次可用。已處於其他免死效果時，不會再觸發本天賦。
+              </li>
+              <li>
+                致命條件依遊戲傷害事件的 <code>will_die</code>，或玩家生命值已≤1且仍受傷的判斷；不應擴寫成任何低生命值都會觸發。
+              </li>
+              <li>
+                總間隔128秒是由兩個計時欄位靜態推導。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>0da0b898</code>。
+              </li>
+              <li>
+                繁中與英文都描述致命傷害觸發、無法殺死效果及冷卻；起算細節省略屬描述不完整。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone/zealot_resist_death.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/until-death/">← 返回死戰到底玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

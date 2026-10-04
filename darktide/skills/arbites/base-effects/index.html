@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="法務官：角色基礎效果 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>法務官：角色基礎效果 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/base-effects/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">法務官：角色基礎效果</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>法務官：角色基礎效果</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="法務官：角色基礎效果">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/arbites/">← 返回法務官</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/BASE_EFFECTS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="法務官基礎效果">
+              法務官基礎效果
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/">返回法務官天賦</a>｜<a href="/darktide/skills/arbites/source-index/">來源索引</a>
+            </p>
+            <p>
+              以下效果由角色基礎配置提供；戰鬥技能、閃擊與光環可依配裝替換。
+            </p>
+            <p>
+              <a id="adamant_area_buff_drone"></a>
+            </p>
+            <h2 id="天鷹使節nuncio-aquila">
+              天鷹使節(Nuncio-Aquila)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>部署與充能</strong>：部署後，天鷹使節會跟隨你並持續 20 秒；基礎為 1 次充能，冷卻 60 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>友方韌性</strong>：在 7.5 公尺範圍內的友方每秒恢復相當於韌性上限 5% 的韌性。若韌性上限為 100，且全程留在範圍內，20 秒最多補回 100 點；實際恢復不會超過缺少的韌性。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>敵人受傷</strong>：範圍內的敵人承受傷害提高 15%；只計此倍率時，原本 100 點的傷害變為 115 點。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/arbites/nuncio-aquila-adamant-area-buff-drone/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="adamant_command_dog_with_tag"></a>
+            </p>
+            <h2 id="電子獒犬標記指令">
+              電子獒犬標記指令
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>指定目標</strong>：對敵人使用獒犬指令標記後，電子獒犬會優先追擊該目標。可依操作設定使用單按或連按標記；同時保留 1 個指令目標，標記最多持續 25 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>優先順序</strong>：若主人遭到獵犬撲倒、抓取等控制，獒犬的救援判定優先於指令目標；其餘時候先嘗試攻擊有效指令目標，否則自行尋敵。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>限制</strong>：未被激怒的惡魔宿主不會成為有效指令目標；獒犬進入移動平台時會取消指令。目標存活、可攻擊性與路徑仍會限制實際追擊。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/arbites/adamant-command-dog-with-tag/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="adamant_companion_aura"></a>
+            </p>
+            <h2 id="電子獒犬協同companion-aura">
+              電子獒犬協同(Companion Aura)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>協同計算</strong>：基礎被動讓你的電子獒犬加入協同判定，作為隊伍中的協同成員。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>基礎效果範圍</strong>：此基礎光環本身沒有直接套用韌性減傷等數值；狗的協同資格與額外數值光環是不同效果。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/arbites/companion-aura/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="adamant_companion_damage_per_level"></a>
+            </p>
+            <h2 id="電子獒犬等級增傷companion-damage-per-level">
+              電子獒犬等級增傷(Companion Damage per Level)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>等級增傷</strong>：電子獒犬的非流血傷害，每滿 5 級便增加基準傷害的 1/6；1–4 級為 1 倍，10 級為約 1.33 倍，30 級為 2 倍。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：其他條件相同、低等級時造成 100 點的攻擊，在 10 級變成 100 × (1 + 2 ÷ 6) ≈ 133.33 點，30 級則為 100 × 2 = 200 點。流血傷害不套用此倍率。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/arbites/companion-damage-per-level/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="adamant_grenade"></a>
+            </p>
+            <h2 id="法務官手榴彈arbites-grenade">
+              法務官手榴彈(Arbites Grenade)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>引爆與範圍</strong>：投出後碰撞引爆，爆炸半徑 10 公尺；中央 2.5 公尺使用較高的近距離傷害，外圈越遠傷害越低。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：只計爆炸中央的護甲階段，基準傷害 1,500 對無甲為 1,500 × 1 = 1,500，對防彈護甲為 1,500 × 0.5 = 750，對硬殼護甲為 1,500 × 0.2 = 300。實際還需計入命中部位、爆炸遮蔽及其他增減傷。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>攜帶與補充</strong>：最多攜帶 3 枚，每次投擲消耗 1 枚；本身沒有定時補充效果。選取技能樹的強化版後，上限提高為 4 枚。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/arbites/arbites-grenade-adamant-grenade/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/">← 返回法務官技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

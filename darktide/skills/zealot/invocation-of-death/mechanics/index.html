@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="死亡禱文：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>死亡禱文：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/invocation-of-death/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">死亡禱文：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>死亡禱文：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Invocation of Death</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/invocation-of-death/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#死亡禱文invocation-of-death原始碼依據"><span>03</span>死亡禱文(Invocation of Death)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="死亡禱文：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/invocation-of-death/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_crits_grant_cd.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="死亡禱文invocation-of-death原始碼依據">
+              死亡禱文(Invocation of Death)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/invocation-of-death/#zealot_crits_grant_cd">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_crits_grant_cd">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_crits_grant_cd</code>；名稱鍵：<code>loc_talent_maniac_cooldown_on_melee_crits</code>；描述鍵：<code>loc_talent_maniac_cooldown_on_melee_crits_buff_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_5e1591e1-f942-4d8d-9b53-0d11864a59ef</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦 passive 套用 zealot_combat_ability_crits_reduce_cooldown。父 proc buff 監聽 on_hit 與 on_sweep_start；on_hit 只有 template_data.active 時才檢查 on_melee_crit_hit，且玩家須擁有 combat_ability。成功後將 active=false 並加入 zealot_crits_cooldown_buff；下一次 sweep_start 才重置 active=true。
+              </li>
+              <li>
+                冷卻 buff duration=talent_settings.crits_grants_cd.duration=3.25 秒。start_func 設 timer=fixed time+1；update_func 每次 timer 到期恢復 1.0 點戰鬥技能資源並將 timer 加 1 秒。
+              </li>
+              <li>
+                按每秒計時，在一次觸發後約 +1、+2、+3 秒有 3 筆；duration 3.25s 留有第三筆的時間。外部同 sweep 的多個暴擊不另開 buff。
+              </li>
+              <li>
+                基礎自然回充與此額外 restore_ability_resource 並行，且充能資源池有上限。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L357-L382">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：357–382</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L5-L8">scripts/settings/talent/talent_settings_zealot.lua：5–8</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3979-L4067">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：3979–4067</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L29-L48">scripts/extension_systems/buff/buffs/buff.lua：29–48</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L103-L127">scripts/extension_systems/buff/buffs/buff.lua：103–127</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L305-L328">scripts/extension_systems/buff/buffs/buff.lua：305–328</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L461">scripts/extension_systems/buff/buff_extension_base.lua：434–461</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L357-L382">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：357–382</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1244-L1269">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1244–1269</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>冷卻算例</strong>：每秒額外恢復相當於 1 秒基礎冷卻的進度。單次完整效果通常在約第 1、2、3 秒各恢復一次，共額外 3 秒；自然回充正常時，這 3 秒合計約推進 6 秒冷卻。
+              </li>
+              <li>
+                每次命中的爆擊率、sweep 拆分方式及攻擊是否被遊戲判為 melee crit 影響觸發頻率。
+              </li>
+              <li>
+                buff 內部為 3.25 秒，但格式 num_decimals=0，不能只依介面整數顯示推出執行長度正好 3 秒。
+              </li>
+              <li>
+                相同 buff 重複添加會重新計時 duration，但自訂 timer 不由 refresh_func 重設；精確密集觸發下的 tick 相位會影響實際總回充。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>ec418944</code>。
+              </li>
+              <li>
+                同一hash的繁中與英文作用方向相符；補足觸發、疊層、恢復量與實際計算，不把原文省略當錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_crits_grant_cd.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/e185301f-93c5-4f93-8c09-7aa351258173">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/invocation-of-death/">← 返回死亡禱文玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

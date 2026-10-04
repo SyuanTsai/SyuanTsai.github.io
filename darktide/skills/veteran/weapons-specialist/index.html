@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="武器專家 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>武器專家 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/weapons-specialist/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">武器專家</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b"
+              width="80"
+              height="80"
+              alt="武器專家圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>武器專家</h1>
+            <span class="skill-english-name" lang="en">Weapons Specialist</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/veteran/weapons-specialist/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="武器專家">
+          <a id="veteran_weapon_switch_passive"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>切換至遠程武器</strong>：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；再切換武器會提前結束。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>首輪射擊</strong>：每層另提高 33 個百分點的遠程爆擊率，首次射擊後移除這項加成，攻速與裝填加成仍保留。原本 10% 爆擊率時，1 層為 <code>10% + 33% = 43%</code>，3 層為 <code>min(10% + 3 × 33%, 100%) = 100%</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>切換至近戰武器</strong>：手持遠程武器時擊殺至少 1 名敵人，再切出近戰武器，可獲得 15% 近戰攻擊速度、10% 閃避速度與 10% 閃避距離，持續 10 秒；再切換武器會提前結束。這一側最多儲存 1 層。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>速度算例</strong>：10 層提供 <code>10 × 2% = 20%</code> 遠程攻速與裝填速度。不計其他加成，原本 3 秒的裝填動作變成 <code>3 ÷ 1.2 = 2.5 秒</code>；近戰原本 1 秒的攻擊動作變成 <code>1 ÷ 1.15 ≈ 0.87 秒</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>累積條件</strong>：擊殺算在哪一側，取決於敵人死亡時你手持的武器；持續傷害或先前投出的手雷擊殺，也依當時手持的武器累積。
+                </p>
+              </li>
+            </ul>
+            <h2 id="繁中原文勘誤">
+              繁中原文勘誤
+            </h2>
+            <ul>
+              <li>
+                原文把遠程攻速、裝填速度與爆擊率都放在「下一次射擊」之下。<strong>只有額外爆擊率在首次射擊後移除</strong>；遠程攻速與裝填速度仍保留至 10 秒效果結束，或切換武器時結束。
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/weapons-specialist/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_weapon_switch_passive">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_weapon_switch_passive.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="復甦（基礎光環）：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>復甦（基礎光環）：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/resurgence-cryptic-coherency-regen-aura/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">復甦（基礎光環）：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>復甦（基礎光環）：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Resurgence</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/resurgence-cryptic-coherency-regen-aura/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#復甦基礎光環resurgence原始碼依據"><span>03</span>復甦（基礎光環）(Resurgence)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例與待確認事項"><span>06</span>算例與待確認事項</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="復甦（基礎光環）：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/resurgence-cryptic-coherency-regen-aura/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_coherency_regen_aura.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="復甦基礎光環resurgence原始碼依據">
+              復甦（基礎光環）(Resurgence)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/base-effects/#cryptic_coherency_regen_aura">返回基礎效果</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                固定來源：Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                基礎天賦：<code>cryptic_coherency_regen_aura</code>；不占可選天賦點數。
+              </li>
+              <li>
+                證據程度：原始碼確認與程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                基礎天賦 cryptic_coherency_regen_aura 掛載協同模板 cryptic_coherency_regen_aura，數值將 min_toughness_coherency_regen_rate_modifier 設為0.25。韌性擴充在戰鬥中檢查協同恢復修正，並以 max(該最小倍率減1, 0) 算出最低倍率；一般協同恢復速率乘0.25，再乘武器、站姿、其他韌性倍率等修正。仍要求有韌性缺額、恢復延遲已結束且沒有停用韌性恢復。協同系統建立 daisy-chain 時明確先加入自身單位；更新時把鏈內新增單位逐一送入 on_coherency_enter，而 UnitCoherencyExtension 會把傳入單位放入 in_coherence_units，再從該集合搜尋並啟用協同光環。因此施放者本身也在接收集合內，基礎光環會作用於自身和協同鏈內其他有效玩家。此節點的 coherency_id 與改良版相同，改良版 priority=1 高於基礎版 priority=2，兩者同時存在時每個接收者只會啟用優先級較高者。
+              </li>
+              <li>
+                本機Steam Build25606770：描述鍵 <code>loc_talent_cryptic_coherency_regen_aura_desc</code>、同源中英hash <code>f34842d1</code> 已精確配對。同鍵中英均明確包括自己與協同隊友。固定程式的25%是一般協同恢復速率倍率，仍受恢復延遲與協同條件限制；沒有把省略計算判成誤譯。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1016-L1033">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L32-L34">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L252-L269">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L888-L888">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L116-L149">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L187-L251">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L200-L214">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L279-L311">固定版本來源</a>
+              </li>
+            </ul>
+            <h2 id="算例與待確認事項">
+              算例與待確認事項
+            </h2>
+            <ul>
+              <li>
+                靜態算例：若你或協同鏈內隊友在一般協同狀態每秒恢復10點，且其他因素不變，戰鬥中的最低速率為10×0.25=2.5點/秒；4秒最多恢復10點，韌性缺額不足時只恢復到上限。
+              </li>
+              <li>
+                25%是一般協同韌性恢復速率的最低倍率，不是每秒恢復最大韌性的25%，也不是一次恢復25點。
+              </li>
+              <li>
+                恢復仍受一般韌性恢復延遲、停用條件、武器與移動倍率、其他韌性恢復屬性及最大韌性影響。
+              </li>
+              <li>
+                基礎和改良光環使用相同 coherency_id；同一接收者同時在兩種光環鏈內時，改良版 priority=1 會取代基礎版 priority=2。
+              </li>
+              <li>
+                本機文字 Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/resurgence-cryptic-coherency-regen-aura/">← 返回復甦（基礎光環）玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

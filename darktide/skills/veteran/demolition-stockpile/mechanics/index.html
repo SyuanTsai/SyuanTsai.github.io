@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="炸藥儲備：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>炸藥儲備：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/demolition-stockpile/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">炸藥儲備：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>炸藥儲備：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Demolition Stockpile</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/demolition-stockpile/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#炸藥儲備demolition-stockpile原始碼依據"><span>03</span>炸藥儲備(Demolition Stockpile)</a></li>
+            <li><a href="#圖示來源"><span>04</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="炸藥儲備：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/demolition-stockpile/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_replenish_grenades.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="炸藥儲備demolition-stockpile原始碼依據">
+              炸藥儲備(Demolition Stockpile)：原始碼依據
+            </h2>
+            <p>
+              來源版本：Release 1.13.1；完整 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+            </p>
+            <p>
+              <a href="/darktide/skills/veteran/demolition-stockpile/#veteran_replenish_grenades">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">來源與限制</a>
+            </p>
+            <ul>
+              <li>
+                名稱 key：<code>loc_talent_ranger_replenish_grenade</code>；描述 key：<code>loc_talent_veteran_grenade_regeneration_per_grenade_desc</code>。中文沿用詞表 <code>Demolition Stockpile - 炸藥儲備</code>，key 對應暫定、待使用者確認。
+              </li>
+              <li>
+                節點類型 <code>tactical_modifier</code>，花費 1 點，上限 1 點。因此歸入閃擊升級，而非光環或獨立手雷替換。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1111-L1141">節點定義</a>。
+              </li>
+              <li>
+                本文為程式分析，未進行遊戲內驗證。
+              </li>
+            </ul>
+            <p>
+              <strong>原始碼確認 — 引用與作用對象</strong>：天賦的被動效果安裝 <code>veteran_grenade_replenishment</code>；天賦系統將被動效果加入持有者的增益效果系統，再操作 <code>template_context.unit</code> 的 <code>grenade_ability</code>。因此補給持有者自己，不是協同隊友或地面彈藥。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1988-L2030">天賦與顯示參數</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/talent/player_unit_talent_extension.lua#L164-L175">被動效果安裝</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1813-L1841">持有者及種類選擇</a>。
+            </p>
+            <p>
+              <strong>原始碼確認 — 數值與計時</strong>：補給量為 1；破片手雷 60 秒、穿甲手雷 90 秒、煙霧手雷 60 秒，未匹配名稱時後備值 75 秒。初始化依目前手雷能力的識別名稱選擇週期；尚未找到手雷能力時，在更新函式中重試。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L141-L147">數值</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1843-L1887">重試與缺額</a>。
+            </p>
+            <p>
+              滿額或沒有手雷能力會清除截止時間。首次觀察到缺額且尚無計時時設 <code>next_grenade_t = t + C</code> 並結束本次更新；之後僅當 <code>t &gt; next_grenade_t</code> 補 1 顆，清除計時。再次投雷不重設既有截止時間；同一次更新最多補 1 顆，沒有依逾期長度補算多次的迴圈。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1855-L1911">完整計時分支</a>。此為週期補給，沒有增益疊層、機率或擊殺條件。
+            </p>
+            <p>
+              <strong>程式推導 — 結算與上限</strong>：缺額為 <code>max_ability_charges - remaining_ability_charges</code>。補給呼叫 <code>restore_ability_charge(..., 1)</code>，轉成每顆所需資源量再補入；資源限制在目前上限內，顆數由資源除以每顆成本無條件捨去小數，再限制在顆數上限內。此呼叫指定忽略恢復量加成（<code>ignore_stat_buffs=true</code>），跳過「恢復量」的通用加成；並不跳過最大顆數或每顆資源成本的計算。沒有超額儲存。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L712-L731">缺額</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1105-L1117">轉換</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1127-L1179">恢復量與上下限</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461">每顆成本</a>。
+            </p>
+            <p>
+              <strong>原始碼確認 — 相關升級與差異</strong>：三種手雷能力均使用 <code>extra_max_amount_of_grenades</code> 作為容量屬性；共用容量上限函式會把這個增益值加到能力的原始上限，因此容量升級會影響缺額，但本補給量仍為每次 1 顆。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L27-L62">三種手雷能力</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L734-L770">容量加算</a>。
+            </p>
+            <p>
+              天賦的內部 <code>name</code> 仍寫「every 60 seconds」，<code>format_values.time</code> 取後備值 75 秒，但另有破片／穿甲／煙霧手雷的專用值；不能把內部名稱欄位或通用時間欄位當作所有類型實際週期。已取得本體語系模板；尚未核對最終格式化畫面，不能宣稱遊戲介面必定顯示錯誤。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1988-L2030">顯示資料與被動效果</a>。
+            </p>
+            <p>
+              <strong>案例與待確認</strong>：見 <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/docs/POC.md">POC</a>。在 t=100 首次觀察到破片手雷缺額，t=160 不補給，第一個 t&gt;160 的更新才補給；這是判斷式推導，非精確遊戲排程保證。運行中更換手雷能力時，增益效果是否重建尚未追完；本文件只保證固定配裝存續期間內的種類選擇。初始化函式 <code>start_func</code> 直接呼叫能力系統；缺少能力系統的異常初始化是否可實際發生不作結論。未進行遊戲內驗證，未核實官方繁體名稱。
+            </p>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/tactical_modifier/veteran_replenish_grenades.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/demolition-stockpile/">← 返回炸藥儲備玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

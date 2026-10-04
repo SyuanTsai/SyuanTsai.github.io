@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="護教軍：角色基礎效果 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>護教軍：角色基礎效果 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/base-effects/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">護教軍：角色基礎效果</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>護教軍：角色基礎效果</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="護教軍：角色基礎效果">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/">← 返回護教軍</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/BASE_EFFECTS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="護教軍基礎效果">
+              護教軍基礎效果
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/">返回護教軍天賦</a>｜<a href="/darktide/skills/skitarii/source-index/">來源索引</a>
+            </p>
+            <p>
+              以下效果由角色基礎配置提供；戰鬥技能、閃擊與光環可依配裝替換。
+            </p>
+            <p>
+              <a id="cryptic_discharge_base"></a>
+            </p>
+            <h2 id="電能擴張器voltaic-expander">
+              電能擴張器(Voltaic Expander)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>消耗方式</strong>：一次消耗目前已補滿的1至3份充能，最多3份；未滿一份的進度，以及超出3份的完整充能都會保留。
+                </p>
+              </li>
+              <li>
+                <p>
+                  消耗 1 份時半徑 6 公尺；消耗 2 份時半徑 9 公尺；消耗 3 份時半徑 12 公尺。
+                </p>
+              </li>
+              <li>
+                <p>
+                  放電會讓範圍內敵人觸電 2 秒並持續受傷；實際生命傷害會依敵人護甲與傷害結算而變化。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>充能算例</strong>：原有2.4份時消耗2份，剩0.4份；若藉其他天賦持有4.4份，則消耗3份、剩1.4份。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/skitarii/voltaic-expander/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="cryptic_passive_cooldown_regen"></a>
+            </p>
+            <h2 id="動力引擎motive-engine">
+              動力引擎(Motive Engine)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  電容量以主動技能的單一份充能為百分比單位：每秒自然恢復 2%，所以一整份需 50 秒；三份全空補滿需 150 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>擊殺恢復</strong>：一般擊殺恢復單份電容量的2%，精英或專家擊殺恢復4%。以每份50點計，分別為50 × 2% = 1點、50 × 4% = 2點；這些恢復不受「極限電容」的恢復加成影響。
+                </p>
+              </li>
+              <li>
+                <p>
+                  進階戰鬥教範啟動時，擊殺不會觸發這項額外恢復；架勢本身會消耗電容量。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/skitarii/motive-engine/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="cryptic_servo_skull_order"></a>
+            </p>
+            <h2 id="伺服頭骨servo-skull">
+              伺服頭骨(Servo-Skull)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：伺服頭骨會跟隨你並在戰鬥中射擊敵人；啟動能力後，頭骨的射擊間隔減半、傷害提高25%，效果持續8秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：強化期間頭骨命中敵人時，會使其承受傷害提高15%，持續5秒，並施加1層燃燒；最多累積8層，達到上限後再次命中會重設燃燒的持續時間。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：能力有1次使用次數，冷卻16秒；冷卻會在8秒強化期間暫停，沒有其他冷卻加成時，強化結束後仍需約16秒恢復。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：雙按標記鍵可命令伺服頭骨攻擊已標記敵人；通常至少需要0.3份電容量才能下達射擊命令。雙按標記鍵也能命令頭骨操作可解碼的任務設備，這項操作不消耗能力使用次數。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>冷卻算例</strong>：強化8秒期間暫停冷卻，之後再恢復16秒，從啟動到下一次可用約為8 + 16 = 24秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害與射速算例</strong>：未計其他效果時，原100點傷害變成100 × 1.25 = 125點；原3秒射擊間隔變成3 × 0.5 = 1.5秒。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/skitarii/servo-skull/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="cryptic_coherency_regen_aura"></a>
+            </p>
+            <h2 id="復甦基礎光環resurgence">
+              復甦（基礎光環）(Resurgence)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：你與協同範圍內隊友即使附近有敵人，也能恢復韌性；協同韌性恢復速率至少為一般速率的25%。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>算例</strong>：若一般協同恢復速率為每秒10點，戰鬥中的最低速率為10×25%=每秒2.5點；4秒恢復10點。實際速率仍受武器、移動、其他恢復修正、恢復延遲與韌性缺額影響。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>恢復條件</strong>：仍須等受傷後的韌性恢復延遲結束，並保有正常的協同恢復；本效果不會取消恢復延遲，也不會讓韌性超過上限。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/skitarii/resurgence-cryptic-coherency-regen-aura/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

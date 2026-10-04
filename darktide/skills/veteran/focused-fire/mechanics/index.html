@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="集中火力：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>集中火力：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/focused-fire/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">集中火力：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>集中火力：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Focused Fire</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/focused-fire/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#集中火力focused-fire原始碼依據"><span>03</span>集中火力(Focused Fire)</a></li>
+            <li><a href="#上限與連動"><span>04</span>上限與連動</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#圖示來源"><span>07</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="集中火力：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/focused-fire/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_improved_tag_more_damage.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="集中火力focused-fire原始碼依據">
+              集中火力(Focused Fire)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/focused-fire/#veteran_improved_tag_more_damage">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_improved_tag_more_damage</code>；名稱鍵：<code>loc_talent_veteran_improved_tag_more_damage</code>；描述鍵：<code>loc_talent_veteran_improved_tag_more_damage_description</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1993-L2015">節點</a>：<code>keystone_modifier</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3075-L3096">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="上限與連動">
+              上限與連動
+            </h2>
+            <ul>
+              <li>
+                veteran_improved_tag_more_damage special rule 將被動 max_stacks 從 4 改為 6；每層時間仍 1.5 秒，目標每層 damage_taken_multiplier 仍 1.05。
+              </li>
+              <li>
+                六層公式 1.05^6=1.340095640625，並非 1+.05×6。Buff 的 multiplicative_multiplier 逐層相乘。
+              </li>
+              <li>
+                若另有 dead_bonus，恢復量上限隨實際標記層數達 .05×6=.30；若另有 dead_coherency_bonus，改發 allied_buff_increased_stacks，max_stacks=6、每層 damage=.025，合計 .15。
+              </li>
+              <li>
+                只提高儲存與相關上限；既有目標不會因自身層數自然增加而自動補強，仍需重新標記。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3075-L3096">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 3075–3096 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L40-L45">scripts/settings/talent/talent_settings_veteran.lua，第 40–45 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3337-L3352">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3337–3352 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3479-L3504">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3479–3504 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3286-L3309">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3286–3309 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L747">scripts/extension_systems/buff/buffs/buff.lua，第 689–747 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L763-L775">scripts/settings/buff/buff_settings.lua，第 763–775 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3251-L3284">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3251–3284 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/keystone_modifier/veteran_improved_tag_more_damage.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/a95c5ea6-546f-462d-a073-56f9d1a21103">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/focused-fire/">← 返回集中火力玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

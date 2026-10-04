@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="重顎獠牙 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>重顎獠牙 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/razor-jaw-augment/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">重顎獠牙</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/549d3657-c19a-49a6-b8ad-2c1e77080dfa"
+              width="80"
+              height="80"
+              alt="重顎獠牙圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>重顎獠牙</h1>
+            <span class="skill-english-name" lang="en">Razor-Jaw Augment</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/arbites/razor-jaw-augment/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="重顎獠牙">
+          <a id="adamant_dog_pounces_bleed_nearby"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>觸發與疊層</strong>：電子獒犬撲擊時的周邊推撞命中，以及對歐格林或巨獸的壓制攻擊，各施加 6 層流血。流血共用 16 層上限，再次施加會增加層數並重設維持時間。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>持續與衰退</strong>：每 0.5 秒結算一次傷害；停止補上流血後，維持 1.5 秒，再於後續每次結算逐層減少。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：在無甲、無其他修正的基準下，令層數比例為 n ÷ 16，每次傷害為 87.5 × (n ÷ 16)² × [3 − 2 × (n ÷ 16)]。6 層約 27.69 點，12 層約 73.83 點，16 層為 87.5 點；12 層並非 6 層傷害的兩倍。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/arbites/razor-jaw-augment/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/README.md#adamant_dog_pounces_bleed_nearby">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_dog_pounces_bleed_nearby.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/">← 返回法務官技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="目標擊倒！：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>目標擊倒！：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/target-down/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">目標擊倒！：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>目標擊倒！：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Target Down!</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/target-down/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#目標擊倒target-down原始碼依據"><span>03</span>目標擊倒！(Target Down!)</a></li>
+            <li><a href="#死亡判定與受益者"><span>04</span>死亡判定與受益者</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#圖示來源"><span>07</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="目標擊倒！：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/target-down/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_improved_tag_dead_bonus.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="目標擊倒target-down原始碼依據">
+              目標擊倒！(Target Down!)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/target-down/#veteran_improved_tag_dead_bonus">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_improved_tag_dead_bonus</code>；名稱鍵：<code>loc_talent_veteran_improved_tag_dead_bonus</code>；描述鍵：<code>loc_talent_veteran_improved_tag_dead_bonus_description</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1947-L1969">節點</a>：<code>keystone_modifier</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3021-L3040">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="死亡判定與受益者">
+              死亡判定與受益者
+            </h2>
+            <ul>
+              <li>
+                on_minion_death 僅要求 dying_unit==outlined_unit，沒有擊殺者限制。allied_defense_boost 啟用時，以 stacks_applied×.05 分別呼叫 Toughness.replenish_percentage 與 Stamina.add_stamina_percent。
+              </li>
+              <li>
+                CoherencySystem 在建立 daisy chain 時以 new_chain[unit]=coherency_extension 納入本人，再把整個鏈加入 in_coherence_units。因此這個沒有排除 owner 的迴圈同時涵蓋本人與協同成員；不能因函式名稱而誤判只給隊友。
+              </li>
+              <li>
+                韌性呼叫 ignore_stat_buffs=true，不乘一般韌性恢復速率修正；耐力按受益者最大值計算。兩者都限制於缺口。增傷標記到期會清除 outlined_unit，因此不再符合死亡事件。
+              </li>
+              <li>
+                算例：4 層→.20，韌性 100×.20=20；耐力 6×.20=1.2。另選集中火力後，6 層→.30。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3021-L3040">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 3021–3040 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3286-L3309">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3286–3309 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L200-L205">scripts/extension_systems/coherency/unit_coherency_extension.lua，第 200–205 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/toughness/toughness.lua#L16-L24">scripts/utilities/toughness/toughness.lua，第 16–24 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stamina.lua#L102-L118">scripts/utilities/attack/stamina.lua，第 102–118 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3350-L3352">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3350–3352 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L188-L255">scripts/extension_systems/coherency/coherency_system.lua，第 188–255 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285">scripts/extension_systems/toughness/player_unit_toughness_extension.lua，第 253–285 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3383-L3400">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3383–3400 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/keystone_modifier/veteran_improved_tag_dead_bonus.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/47cc6995-f2fa-407d-9cb0-4dd91fcdc10d">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/target-down/">← 返回目標擊倒！玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

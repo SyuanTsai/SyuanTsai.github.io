@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="破片炸彈：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>破片炸彈：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/frag-bomb/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">破片炸彈：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>破片炸彈：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Frag Bomb</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/ogryn/frag-bomb/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#破片炸彈frag-bomb原始碼依據"><span>03</span>破片炸彈(Frag Bomb)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="破片炸彈：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/frag-bomb/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_grenade_frag.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="破片炸彈frag-bomb原始碼依據">
+              破片炸彈(Frag Bomb)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/frag-bomb/#ogryn_grenade_frag">返回玩家說明</a>｜<a href="/darktide/skills/ogryn/source-index/">技術索引</a>｜<a href="/darktide/skills/ogryn/localization-comparison/#ogryn_grenade_frag">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>ogryn_grenade_frag</code>；名稱鍵：<code>loc_ability_ogryn_grenade_demolition</code>；描述鍵：<code>loc_ability_ogryn_grenade_demolition_instakill_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_4b421360-1595-4f94-bcf1-e4a715b9dbca</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                破片炸彈能力上限為 1 次充能且只消耗充能；投射物的一般引信為 2 秒、撞擊引信為 0.9 秒、最低存活時間為 0.6 秒。
+              </li>
+              <li>
+                ProjectileDamageExtension以life_time+dt累積時間；碰撞_reset_time清零，_has_impacted選.9秒。min_lifetime=.6是啟動檢查門檻，後續仍以同一new_life_time&gt;.9判爆炸，不是在.6之後再加.9。未碰撞採2秒，另有lag compensation。
+              </li>
+              <li>
+                爆炸半徑為 16、近距離半徑為 2、採傷害衰減，爆炸威力等級為 500。近距離傷害設定的攻擊分配為 1500；標準威力 500 對應基本輸出倍率 1；護甲插值與威力是不同參數。無甲倍率為 1；甲殼護甲的攻擊倍率範圍是 0.8 至 1.25，本例採中點，因此 1537.5。
+              </li>
+              <li>
+                傷害設定的即死標記排除巨獸、連長與歐格林；人類大小且非連長的描述與此範圍一致。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L255-L295">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：255–295</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L128-L139">scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua：128–139</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L144-L160">scripts/settings/projectile/player_projectile_templates.lua：144–160</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L207-L210">scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：207–210</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L232-L279">scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：232–279</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L633-L664">scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：633–664</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L321-L363">scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：321–363</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L291-L310">scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：291–310</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L92-L111">scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：92–111</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L1540-L1578">scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：1540–1578</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/power_level_settings.lua#L7-L25">scripts/settings/damage/power_level_settings.lua：7–25</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L21-L23">scripts/utilities/attack/power_level.lua：21–23</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L379-L445">scripts/utilities/attack/damage_profile.lua：379–445</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L249-L268">scripts/utilities/attack/attack.lua：249–268</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L345-L383">scripts/utilities/attack/damage_profile.lua：345–383</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L255-L295">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：255–295</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L358-L384">scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：358–384</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>傷害算例</strong>：只計中心 2 公尺內的一般傷害、標準威力與無其他修正，無甲傷害部分為 1500 × 1 = 1500 點；甲殼倍率取範圍中點 1.025 時，為 1500 × 1.025 = 1537.5 點。符合必殺條件的敵人另依必殺效果處理。
+              </li>
+              <li>
+                以上傷害為固定來源參數推導，假設標準威力 500、目標位於近距離爆心區且沒有其他增益、弱點或部位修正；外圍爆炸會衰減。
+              </li>
+              <li>
+                即死標記與傷害設定來自程式；沒有以遊戲實測驗證特殊敵人的完整名單或每個命中部位的表現。
+              </li>
+              <li>
+                投射物計時依固定更新、碰撞時刻與伺服器同步執行；本稿描述來源路徑，不宣稱毫秒級爆炸時刻。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>802d500b</code>。
+              </li>
+              <li>
+                同 hash 802d500b 的繁中與英文均說明爆炸半徑 16 公尺、爆心傷害較高，並將必殺對象限定為人類大小且非連長。來源同時設定半徑 16／近距離 2，並將巨獸、連長與歐格林排除在即死標記之外；原文沒有提供具體傷害公式，不視為錯誤。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical/ogryn_grenade_frag.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/ce691c05-0701-4539-921b-620c90189fa2">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/frag-bomb/">← 返回破片炸彈玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

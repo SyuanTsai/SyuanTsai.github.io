@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="蠻牛衝撞 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>蠻牛衝撞 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/bull-rush/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">蠻牛衝撞</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>蠻牛衝撞</h1>
+            <span class="skill-english-name" lang="en">Bull Rush</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/ogryn/bull-rush/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="蠻牛衝撞">
+          <a id="蠻牛衝撞bull-rush"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>衝鋒與冷卻</strong>：向前衝鋒，最大距離 12 公尺，撞開沿途敵人；只有一層充能，基礎冷卻 25 秒。基礎衝撞與結束時的衝擊不直接造成生命傷害。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>停止方式</strong>：撞上甲殼護甲、虛空盾或特定抗性目標會停止；衝出 0.5 秒後可用格擋取消，0.8 秒後可向後移動取消。地形也會限制實際距離。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>結束後增益</strong>：衝鋒結束後，近戰攻速與移動速度提高 25%，持續 5 秒。受攻速影響的 1 秒動作變成 1 ÷ 1.25 = 0.8 秒；原本每秒移動 5 公尺，變成 6.25 公尺。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>衝鋒時防護</strong>：衝鋒期間另有 25% 減傷；單計這份效果，原本 100 點傷害變成 100 × 0.75 = 75 點。其他基礎防護再依各自階段結算。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/ogryn/bull-rush/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/bull-rush/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/BASE_EFFECTS.md#蠻牛衝撞bull-rush">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_charge.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/">← 返回歐格林技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

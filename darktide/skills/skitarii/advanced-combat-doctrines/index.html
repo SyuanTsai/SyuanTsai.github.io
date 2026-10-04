@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="進階戰鬥教範 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>進階戰鬥教範 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/advanced-combat-doctrines/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">進階戰鬥教範</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/fe67d92b-3b1a-4da7-bf6a-43bb643e80d6"
+              width="80"
+              height="80"
+              alt="進階戰鬥教範圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>進階戰鬥教範</h1>
+            <span class="skill-english-name" lang="en">Advanced Combat Doctrines</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/skitarii/advanced-combat-doctrines/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="進階戰鬥教範">
+          <a id="cryptic_precision_stance"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>瞄準效果</strong>：切換至遠程武器，協助瞄準準星附近的敵人；持續期間散佈降低90%、後座力降低60%。不另提供固定的傷害加成。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>啟動消耗</strong>：至少有1份完整充能才能啟動，但實際只扣單份的25%。每份50點時，啟動消耗50 × 25% = 12.5點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>持續與射擊消耗</strong>：每秒另扣單份的10%，即50 × 10% = 5點；每次射擊再扣50 × 1% = 0.5點。這些比例都以1份計算，充能上限提高不會增加每次扣除量。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>持續時間算例</strong>：只有1份、共50點時，啟動後剩37.5點；若不射擊、不換彈且沒有額外恢復，可維持37.5 ÷ 5 = 7.5秒。滿3份時則為(150 − 12.5) ÷ 5 = 27.5秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>射擊算例</strong>：滿3份啟動後，持續10秒並射擊20次，剩150 − 12.5 − 10 × 5 − 20 × 0.5 = 77.5點；此例不計換彈與額外恢復。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>重新裝填</strong>：換彈期間暫停每秒5點的持續消耗。重新裝填速度提高25%，結束姿態後保留5秒；沒有其他加成時，原本2秒的裝填縮為2 ÷ 1.25 = 1.6秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>恢復限制</strong>：啟用期間，基礎自然恢復與額外維持成本互相抵消；職業原有的擊殺回充也會停止。其他自然恢復加成仍可抵銷部分耗電，例如增加50%自然恢復時，每秒淨消耗5 − 0.5 = 4.5點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>結束與再用</strong>：再次按下技能、切離遠程武器或電容量耗盡便結束。結束後恢復一般回充；從0點、只靠每秒1點自然恢復，要50秒才有1份可再次啟動。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/advanced-combat-doctrines/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/README.md#cryptic_precision_stance">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

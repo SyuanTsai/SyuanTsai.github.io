@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="堅毅獵手：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>堅毅獵手：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/patient-hunter/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">堅毅獵手：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>堅毅獵手：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Patient Hunter</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/patient-hunter/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#堅毅獵手patient-hunter原始碼依據"><span>03</span>堅毅獵手(Patient Hunter)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="堅毅獵手：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/patient-hunter/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_increased_duration.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="堅毅獵手patient-hunter原始碼依據">
+              堅毅獵手(Patient Hunter)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/patient-hunter/#broker_keystone_vultures_mark_increased_duration">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_keystone_vultures_mark_increased_duration">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_keystone_vultures_mark_increased_duration</code>；名稱鍵：<code>loc_talent_broker_keystone_vultures_mark_increased_duration</code>；描述鍵：<code>loc_talent_broker_keystone_vultures_mark_increased_duration_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_aab0fcfa-aa2c-4f06-bed9-dd6903333cf0</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                talent_settings 設 core duration=8、increased_duration.duration=12。vultures_mark 的 start_func 檢查 special rule，並加入 12−8=4 秒額外時間，因此 buff duration 為 12 秒。
+              </li>
+              <li>
+                vultures_mark 設 refresh_duration_on_stack=true；新 stack 或達最大層數時會重設 start_time。duration 是單一共享計時，且模板沒有 refresh_duration_on_remove_stack；到期時剩餘 stack 隨 finished buff 一起清除。
+              </li>
+              <li>
+                這項 special rule 只由 vultures_mark buff 的 start_func 使用，不改變其他兀鷲印記升級或兀鷲閃避的 1 秒效果。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2435-L2449">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2435–2449</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L440-L450">scripts/settings/talent/talent_settings_broker.lua：440–450</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3387-L3414">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3387–3414</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L461">scripts/extension_systems/buff/buff_extension_base.lua：434–461</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L560-L589">scripts/extension_systems/buff/buff_extension_base.lua：560–589</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L631-L698">scripts/extension_systems/buff/buff_extension_base.lua：631–698</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L187-L205">scripts/extension_systems/buff/buff_extension_base.lua：187–205</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2435-L2449">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2435–2449</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1658-L1680">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1658–1680</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>時間算例</strong>：第一層在 0 秒取得，第二層在 6 秒取得後，計時重設為 12 秒；若之後無新印記，現有層數在第 18 秒到期。
+              </li>
+              <li>
+                <strong>上限算例</strong>：已有 3 層時，第 4 次合格擊殺不增加第 4 層，但會重設 12 秒計時。
+              </li>
+              <li>
+                延長的是印記 buff 的共享時長；不提高 3 層上限，也不改變每層屬性加成或滿層回韌性的條件。
+              </li>
+              <li>
+                此項不延長兀鷲閃避升級所觸發的短暫閃避 buff。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>2a61076a</code>。
+              </li>
+              <li>
+                繁中與英文都將兀鷲印記持續時間列為 12 秒；程式以核心 8 秒加上 4 秒差額實作，且每次新增堆疊或重設持續時間會重設共享計時。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_vultures_mark_increased_duration.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/patient-hunter/">← 返回堅毅獵手玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

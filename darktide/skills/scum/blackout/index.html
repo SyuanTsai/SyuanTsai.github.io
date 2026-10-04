@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="擊暈 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>擊暈 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/blackout/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">擊暈</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/fd2156cb-6e65-4214-bd01-ab0b28665714"
+              width="80"
+              height="80"
+              alt="擊暈圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>擊暈</h1>
+            <span class="skill-english-name" lang="en">Blackout</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/scum/blackout/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="擊暈">
+          <a id="broker_blitz_flash_grenade_improved"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>控制範圍</strong>：快速投擲手雷，爆炸影響半徑 3.5 公尺；2.25 公尺內的踉蹌威力較高。爆炸本身不造成生命傷害，主要用於打斷及擊退敵人。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>補充方式</strong>：最多攜帶 5 顆。未滿容量時，每累計 20 次在 12.5 公尺內的擊殺，恢復 1 顆；近戰及遠程擊殺都可累計。攜帶已滿時不增加擊殺進度。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>補充算例</strong>：目前有 2 顆、已累計 19 次，下一次符合距離的擊殺後變成 3 顆，進度歸零。搭配額外彈藥袋時，上限為 5 + 1 = 6 顆。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>毒針手槍例外</strong>：先用毒針手槍命中並追蹤的敵人，若在近距離死於毒素，也可計入；一般遠程離毒殺不能直接套用此例外。
+                </p>
+              </li>
+            </ul>
+            <h2 id="繁中原文勘誤">
+              繁中原文勘誤
+            </h2>
+            <ul>
+              <li>
+                繁中原文將「近距離擊殺」寫成「近戰擊殺」。12.5 公尺內的遠程擊殺也能累計手雷恢復進度。
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/scum/blackout/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/README.md#broker_blitz_flash_grenade_improved">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_blitz_flash_grenade_improved.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/">← 返回巢都渣滓技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

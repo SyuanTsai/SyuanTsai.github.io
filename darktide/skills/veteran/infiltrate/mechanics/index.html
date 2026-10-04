@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="滲透：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>滲透：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/infiltrate/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">滲透：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>滲透：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Infiltrate</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/infiltrate/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#滲透infiltrate原始碼依據"><span>03</span>滲透(Infiltrate)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#圖示來源"><span>07</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="滲透：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/infiltrate/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_invisibility_on_combat_ability.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="滲透infiltrate原始碼依據">
+              滲透(Infiltrate)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/infiltrate/#veteran_invisibility_on_combat_ability">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_invisibility_on_combat_ability</code>；名稱鍵：<code>loc_talent_veteran_invisibility_on_combat_ability</code>；描述鍵：<code>loc_talent_veteran_invisibility_on_combat_ability_damage_desc</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L295-L327">節點</a>：<code>ability</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2032-L2113">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <p>
+              選用stealth ability，shock_trooper分支回滿本人韌性。on_combat_ability安裝隱身8秒，movement_speed=.25。隱身start即建立damage=.3的自訂增益；VeteranStealthBonusesBuff.duration()回nil，避免基底計時移除，並於首次觀察到離開隱身時設stop_t=t+8。因此傷害加成在隱身期間已生效，解除後再保留8秒。
+            </p>
+            <p>
+              退出訂閱on_shoot、on_hit、on_action_start及四種救援完成事件；不是on_player_hit_received。開始0.5秒對沒有正傷害的事件有寬限。action_name只有action_throw_grenade通過退出分支，不能說投雷不解除。流血、燃燒、破片爆炸、電漿的傷害事件可被白名單略過，但射擊事件仍能解除，因此不能保證電漿開火保留隱身。外部attack_instigator亦先排除。
+            </p>
+            <p>
+              停止時對in_melee_range+1=6公尺內敵人執行踉蹌與壓制，不保證每個敵人都被擊退。能力成本40，每秒自然回1，使用時即開始冷卻。兩次增傷buff沒有max_stacks欄位，額外施放的實例可各自存在；玩家單次算例沒有加入重疊效果。
+            </p>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2032-L2113">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2032–2113 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L73-L80">scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 73–80 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L5-L8">scripts/settings/talent/talent_settings_veteran.lua，第 5–8 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1083-L1095">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1083–1095 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1110-L1289">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1110–1289 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua#L51-L80">scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua，第 51–80 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua#L7-L44">scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua，第 7–44 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L826-L869">scripts/extension_systems/ability/player_unit_ability_extension.lua，第 826–869 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_settings.lua#L18-L25">scripts/settings/damage/damage_settings.lua，第 18–25 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability/veteran_invisibility_on_combat_ability.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922922455">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/infiltrate/">← 返回滲透玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

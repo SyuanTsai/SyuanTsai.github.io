@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="振奮擊倒 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>振奮擊倒 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/exhilarating-takedown/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">振奮擊倒</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907"
+              width="80"
+              height="80"
+              alt="振奮擊倒圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>振奮擊倒</h1>
+            <span class="skill-english-name" lang="en">Exhilarating Takedown</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/veteran/exhilarating-takedown/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="振奮擊倒">
+          <a id="veteran_replenish_toughness_on_weakspot_kill"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <strong>遠程弱點擊殺恢復 15% 最大韌性，並獲得 1 層韌性減傷，最多 3 層。</strong>
+              </li>
+              <li>
+                每層使韌性受到的傷害降低 <strong>10%</strong>，各層減傷相乘；三層合計降低 <strong>27.1%</strong>。
+              </li>
+              <li>
+                每次遠程弱點擊殺重設 <strong>8 秒</strong>持續時間。期間未再次觸發，約每 8 秒減少 1 層。
+              </li>
+              <li>
+                韌性已滿時，仍可獲得減傷並重設持續時間。
+              </li>
+            </ul>
+            <h2 id="韌性恢復">
+              韌性恢復
+            </h2>
+            <ul>
+              <li>
+                最大韌性 <strong>100</strong>：每次恢復 <code>100 × 15% = 15 點韌性</code>；目前 70 點時，恢復至 <strong>85 點</strong>。
+              </li>
+              <li>
+                恢復量不超過韌性上限：目前 95／100 點時，只恢復 <code>100 − 95 = 5 點</code>。
+              </li>
+              <li>
+                韌性恢復加成可提高恢復量。例如另有 <strong>20% 恢復量加成</strong>：<code>100 × 15% × 1.20 = 18 點</code>。
+              </li>
+            </ul>
+            <h2 id="減傷與持續時間">
+              減傷與持續時間
+            </h2>
+            <ul>
+              <li>
+                以原本受到 <strong>100 點韌性傷害</strong>、不計其他減傷為例：
+              </li>
+              <li>
+                <strong>1 層</strong>：<code>100 × 0.9 = 90</code>，減少 <strong>10 點</strong>。
+              </li>
+              <li>
+                <strong>2 層</strong>：<code>100 × 0.9² = 81</code>，減少 <strong>19 點</strong>。
+              </li>
+              <li>
+                <strong>3 層</strong>：<code>100 × 0.9³ = 72.9</code>，減少 <strong>27.1 點</strong>；此減傷僅作用於韌性。
+              </li>
+              <li>
+                三層後未再觸發：約 <strong>8 秒</strong>後剩 2 層、<strong>16 秒</strong>後剩 1 層、<strong>24 秒</strong>後效果結束。
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/exhilarating-takedown/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_replenish_toughness_on_weakspot_kill">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_replenish_toughness_on_weakspot_kill.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

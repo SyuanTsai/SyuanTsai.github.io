@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="超載電弧手榴彈：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>超載電弧手榴彈：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/overcharged-arc-grenades/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">超載電弧手榴彈：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>超載電弧手榴彈：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Overcharged Arc Grenades</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/overcharged-arc-grenades/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#超載電弧手榴彈overcharged-arc-grenades原始碼依據"><span>03</span>超載電弧手榴彈(Overcharged Arc Grenades)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="超載電弧手榴彈：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/overcharged-arc-grenades/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_arc_grenades_brittleness.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="超載電弧手榴彈overcharged-arc-grenades原始碼依據">
+              超載電弧手榴彈(Overcharged Arc Grenades)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/overcharged-arc-grenades/#cryptic_arc_grenades_brittleness">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_arc_grenades_brittleness">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_arc_grenades_brittleness</code>；名稱鍵：<code>loc_talent_cryptic_arc_grenades_brittleness</code>；描述鍵：<code>loc_talent_cryptic_arc_grenades_brittleness_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_d609f926-8570-41c2-9d4f-2954298c8f73</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦被動 cryptic_grenade_ability_arc_grenade_extra_arcs 將 arc_grenade_extra_arcs stat buff 設為2；爆炸開始時 player_grenade_explosion_templates.lua 會將 max_targets 設為 base_num_arcs(4)+num_extra_arcs(2)，故起始目標上限為6，並非延長單一電弧鏈的跳數。天賦的 special rule cryptic_arc_grenade_gives_brittleness 會被 arc_grenade_chain_lightning_source 的 _init_chain 讀取。每當鏈的節點加入時，目標取得8層 rending_debuff；模板每層撕裂倍率為0.025、持續5秒，max_stacks=16 並在加層時重新計時，因此單次鏈命中新增20%，重複命中可累積至40%。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L985-L1015">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：985–1015</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L185-L194">scripts/settings/talent/talent_settings_cryptic.lua：185–194</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1358-L1364">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1358–1364</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L482-L525">scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：482–525</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua#L58-L80">scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua：58–80</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua#L112-L124">scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua：112–124</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L366-L375">scripts/settings/buff/weapon_buff_templates.lua：366–375</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L122-L247">scripts/utilities/attack/damage_calculation.lua：122–247</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L985-L1015">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：985–1015</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1843-L1865">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1843–1865</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                基礎上限4個起始目標，增加2個後為6個；一名敵人被電弧連鎖命中時，8層×2.5%=20%撕裂增幅，維持5秒。
+              </li>
+              <li>
+                增加2個的是爆炸的起始電弧目標上限，單條連鎖仍受原有跳數與目標條件限制。
+              </li>
+              <li>
+                8層脆弱由電弧連鎖命中的節點施加；是否命中及後續可否疊至16層取決於電弧是否再次選中同一敵人。
+              </li>
+              <li>
+                每層為2.5%撕裂乘數，單次8層為20%；不是直接增加同等百分比的最終傷害。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>699afdc0</code>。
+              </li>
+              <li>
+                繁中描述列出電弧目標增加2個及命中敵人施加8層、每層2.5%脆弱。程式確認額外數值加在起始目標上限，並在電弧連鎖節點加8層、每層2.5%且5秒；最大疊層為16層。Build 25606770 版本對應為1.13.1。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_arc_grenades_brittleness.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/14c1a0d8-2916-40d7-a7e2-8572a0b3e6d2">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/overcharged-arc-grenades/">← 返回超載電弧手榴彈玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="靈能攻擊：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>靈能攻擊：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/assail/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">靈能攻擊：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>靈能攻擊：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Assail</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/psyker/assail/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#靈能攻擊assail原始碼依據"><span>03</span>靈能攻擊(Assail)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="靈能攻擊：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/psyker/assail/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_grenade_throwing_knives.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="靈能攻擊assail原始碼依據">
+              靈能攻擊(Assail)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/assail/#psyker_grenade_throwing_knives">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜<a href="/darktide/skills/psyker/localization-comparison/#psyker_grenade_throwing_knives">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>psyker_grenade_throwing_knives</code>；名稱鍵：<code>loc_ability_psyker_blitz_throwing_knives</code>；描述鍵：<code>loc_ability_psyker_blitz_throwing_knives_description</code>。
+              </li>
+              <li>
+                節點：<code>node_35ce2086-9081-49c7-9703-f3c07eb0be86</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                固定 source SHA 7e662fcda16219d775b84af50322be2e9cd9d62e。技能樹節點掛載 psyker_grenade_throwing_knives，對應 PlayerAbilities.psyker_throwing_knives。能力設定 max_charges=10、resource_cost_per_charge=3、resource_regen_per_second=1；投擲動作的 consume_ability_usage_cost=true。未裝填時每補回一次需 3÷1=3 秒，假設沒有其他資源調整且恢復不中斷。快速攻擊使用 smart_target_targeting 並把投射物朝向目標追蹤；瞄準攻擊使用單一目標選取與 aimed 投射物。投射物分別採初速 20 和 40，兩者 True Flight 都以 throwing_knives_find_highest_value_target 選目標。傷害檔案將其標為 psyker_smite，並按 armor type 設定 attack/impact 曲線；super_armor 的 attack 曲線使用 lerp_0_05，impact 曲線使用 lerp_0_5，因此對該護甲類型傷害偏低。這是該傷害階段的護甲修正，不可直接當成所有敵人上的最終傷害固定為基礎值的 5%。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L285-L316">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：285–316</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L155-L184">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：155–184</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua#L132-L145">scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua：132–145</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua#L329-L393">scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua：329–393</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua#L458-L516">scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua：458–516</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L567-L619">scripts/settings/projectile/player_projectile_templates.lua：567–619</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile_locomotion/templates/grenade_projectile_locomotion_templates.lua#L376-L434">scripts/settings/projectile_locomotion/templates/grenade_projectile_locomotion_templates.lua：376–434</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/true_flight_templates.lua#L60-L109">scripts/settings/projectile/true_flight_templates.lua：60–109</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua#L288-L375">scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua：288–375</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_handling_templates/weapon_charge_templates.lua#L112-L119">scripts/settings/equipment/weapon_handling_templates/weapon_charge_templates.lua：112–119</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L155-L184">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：155–184</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L285-L316">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：285–316</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>恢復算例</strong>：無其他恢復修正、從 0 次且無剩餘進度開始，第 3 秒補回 1 次、第 6 秒補回 2 次，補滿 10 次需 3 × 10 = 30 秒。
+              </li>
+              <li>
+                傷害算式須固定目標護甲、部位、普通或瞄準投擲、命中順序及其他加成；沒有單一適用所有目標的傷害值。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>72fc17b1</code>。
+              </li>
+              <li>
+                繁中原文描述追蹤投射物及甲殼護甲效果較差；原文未列使用次數、資源恢復及瞄準投擲的不同設定，這些屬描述不完整，沒有足以判定翻譯方向錯誤的證據。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical/psyker_grenade_throwing_knives.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/assail/">← 返回靈能攻擊玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

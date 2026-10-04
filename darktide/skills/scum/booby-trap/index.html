@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="毒性陷阱 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>毒性陷阱 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/booby-trap/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">毒性陷阱</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/c3cdd1a9-e1eb-4e29-9a5e-6bae44c280a4"
+              width="80"
+              height="80"
+              alt="毒性陷阱圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>毒性陷阱</h1>
+            <span class="skill-english-name" lang="en">Booby Trap</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/scum/booby-trap/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="毒性陷阱">
+          <a id="broker_ability_stimm_field_sub_2"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>觸發時機</strong>：場域持續時間結束時爆炸；基本場域在 20 秒後結束。若同時套用縮短場域的效果，則以實際場域持續時間結束時觸發。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>爆炸效果</strong>：半徑 3 公尺的破片爆炸命中並造成傷害的敵人會獲得 7 層毒素。只計一次爆炸，不是場域每次脈衝都施加7層。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>冷卻</strong>：場域結束並爆炸後，60 秒自然冷卻開始恢復；爆炸本身不延長冷卻暫停。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：不計其他加成與特殊減傷，距離爆心 0.5 公尺內的無護甲目標受到 20 × 500 × 300 ÷ 10000 = 300 點爆炸傷害；對應護甲係數為 0.25 時，則為 300 × 0.25 = 75 點。後續毒素傷害另外結算。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/scum/booby-trap/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/README.md#broker_ability_stimm_field_sub_2">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_ability_stimm_field_sub_2.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/">← 返回巢都渣滓技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

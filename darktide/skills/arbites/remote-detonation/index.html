@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="遠程引爆 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>遠程引爆 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/remote-detonation/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">遠程引爆</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0"
+              width="80"
+              height="80"
+              alt="遠程引爆圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>遠程引爆</h1>
+            <span class="skill-english-name" lang="en">Remote Detonation</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/arbites/remote-detonation/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="遠程引爆">
+          <a id="adamant_whistle"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>引爆位置與範圍</strong>：啟動後約 0.3 秒，在電子獒犬當下位置引爆。5 公尺內施加電擊與 2.5 秒輕度踉蹌；爆炸傷害半徑為 4 公尺，中央 2 公尺傷害較高。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>電擊與承傷</strong>：電擊狀態持續 2 秒，期間目標承受的傷害另乘 1.1。單計這項承傷增加，原本 100 點變成 110；若攻擊者另有 25% 增傷，則為 100 × 1.25 × 1.1 = 137.5。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>爆炸算例</strong>：只計中央爆炸的護甲階段，無甲基準為 600 × 1 = 600，防彈護甲為 600 × 0.5 = 300。實際還需計入部位、遮蔽及電擊附帶的承傷效果。距離獒犬 4.5 公尺時，處於電擊範圍，但已超出爆炸傷害範圍。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>充能與冷卻</strong>：最多 2 次，單次恢復需 50 秒。兩次共用同一個冷卻進度，依序補回；若短時間內用光兩次、沒有其他冷卻加成，約 50 秒先恢復一次、100 秒恢復兩次。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/arbites/remote-detonation/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/README.md#adamant_whistle">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_whistle.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/">← 返回法務官技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

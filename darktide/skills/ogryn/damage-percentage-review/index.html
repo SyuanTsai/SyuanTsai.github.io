@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="歐格林：百分比與傷害比較 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>歐格林：百分比與傷害比較 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/damage-percentage-review/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">歐格林：百分比與傷害比較</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>歐格林：百分比與傷害比較</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="歐格林：百分比與傷害比較">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/">← 返回歐格林</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/DAMAGE_PERCENTAGE_REVIEW.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="歐格林百分比與算例盤點">
+              歐格林：百分比與算例盤點
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/">返回玩家說明</a>｜<a href="/darktide/skills/ogryn/source-index/">技術索引</a>
+            </p>
+            <p>
+              以下為固定來源的靜態核對；區分傷害與威力、額外暴擊傷害、同階段加算與獨立乘算、速度與動作時間，以及最大韌性與缺額。未執行遊戲內測試。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                    <th>
+                      本次處理
+                    </th>
+                    <th>
+                      檢查結論
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bombs-away/mechanics/">投彈完畢！</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      命中與散出：手雷箱命中敵人後破開，基礎散出 6 顆；搭配「超巨量傷害箱」時，數量為 6 + 3 = 9 顆。<br>直接命中算例：按標準威力 500、近距離、沒有其他修正計算，手雷箱直接撞擊甲殼護甲的傷害為 1850 × 0.15 = 277.5 點；這只計箱子碰撞，不含散出手雷的爆炸。<br>子手雷算例：一般子手雷爆炸半徑 8 公尺、中心 2 公尺；不計其他修正，中心對無甲目標每顆造成 10 × 1 = 10 點，甲殼為 10 × 0.2 = 2 點。6 顆全部在中心命中同一無甲目標時為 60 點，並不把箱體的 1850 點傷害複製到每顆手雷。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/frag-bomb/mechanics/">破片炸彈</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只計中心 2 公尺內的一般傷害、標準威力與無其他修正，無甲傷害部分為 1500 × 1 = 1500 點；甲殼倍率取範圍中點 1.025 時，為 1500 × 1.025 = 1537.5 點。符合必殺條件的敵人另依必殺效果處理。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/big-friendly-rock/mechanics/">投石問路</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      直接命中算例：按標準威力 500、一般近距離命中且沒有其他修正計算，無甲目標為 1200 × 1 = 1200 點；甲殼護甲為 1200 × 0.25 = 300 點。<br>數量與補充：最多持有 4 顆，約每 45 秒補回 1 顆，依序恢復；從零顆開始且沒有其他修正，補滿需 4 × 45 = 180 秒。岩石不靠撿取手雷補給補充。<br>特殊敵人：岩石可直接擊殺專家敵人，並對特定敵人另有必殺設定；這些情況不以一般傷害算例決定是否擊殺。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/that-one-didnt-count/mechanics/">那下不算！</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      充能算例：投出最後一顆後若該次符合條件，會恢復為 1 顆；每次只恢復 1 顆，總數不超過 4 顆。<br>冷卻算例：從前一次返還起算 5 秒；若第二顆岩石在第 4 秒結束飛行，即使符合返還條件也不會恢復。以投射物結束時計算，不只比較兩次按下投擲的時間。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bigger-box-of-hurt/mechanics/">超巨量傷害箱</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      數量算例：手雷箱基礎散出 6 顆；選取此天賦後多 3 顆，合計為 6 + 3 = 9 顆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bonebreakers-aura/mechanics/">破骨者之環</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：原本造成 100 點近戰傷害，沒有其他修正時為 100 × 1.10 = 110 點。 若同階段另有 20% 加成，則為 100 × (1 + 20% + 10%) = 130 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/coward-culling/mechanics/">優勝劣汰</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：對受壓制目標原本造成 100 點傷害，沒有其他修正時，本效果計為 100 × 1.20 = 120 點；未受壓制的目標不套用這項加成。<br>附帶效果與疊層：天賦另使你造成的壓制提高 25%；光環效果最多 1 層、沒有獨立冷卻，而且與另外兩種歐格林光環需擇一。 例如原本一次造成 10 點壓制，現在為 10 × 1.25 = 12.5 點；這份壓制增幅只給自己。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/stay-close/mechanics/">跟緊我！</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：一筆原始恢復 15 點，沒有其他修正時變成 15 × 1.20 = 18 點；實際恢復仍受韌性缺口限制。 若只缺 5 點，就只能補 5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/loyal-protector/mechanics/">忠誠守護者</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：敵人在第 0、3、6 秒都位於範圍內，最後一次嘲諷可持續至第 6 + 15 = 21 秒。能力基礎冷卻 50 秒，只有一層充能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/indomitable/mechanics/">不屈不撓</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      衝鋒與冷卻：向前衝鋒，最大距離從 12 公尺提高為 12 × 2 = 24 公尺，撞開沿途敵人；撞到巨獸會停止，地形也會限制距離。只有一層充能，基礎冷卻 25 秒。<br>衝鋒後增益：衝鋒結束後，近戰攻速與移動速度提高 25%，持續 5 秒。受攻速控制的 1 秒動作變成 1 ÷ 1.25 = 0.8 秒；原本每秒移動 5 公尺，變成 6.25 公尺。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/point-blank-barrage/mechanics/">貼身火力</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      射速與換彈：遠程射速提高 25%，換彈速度提高 65%。受速度控制的 1 秒射擊間隔變成 1 ÷ 1.25 = 0.8 秒；3 秒換彈動作變成 3 ÷ 1.65 ≈ 1.82 秒。<br>彈藥返還：效果結束時，依期間計入彈藥的 50% 補回備用彈藥。例如計入 20 發，返還 20 × 50% = 10 發。幸運子彈省下的彈藥也列入計算，補回量仍受可攜帶總量限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/stomping-boots/mechanics/">跺殺之靴</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、連續撞中 3 次且缺額足夠時，恢復 100 × 10% × 3 = 30 點；若只缺 20 點，就只能補 20 點。其他韌性恢復加成另算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/pulverise/mechanics/">粉碎</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只計無護甲且沒有其他修正，5 層每次流血傷害為 87.5 × (5 ÷ 16)² × [3 − 2 × (5 ÷ 16)] ≈ 20.29 點；8 層為 43.75 點。流血層數與傷害不是單純等比例增加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/go-again/mechanics/">再來</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：忠誠守護者的基礎冷卻為 50 秒，一次有效觸發補回 50 × 1.5% = 0.75 秒；10 次共補回 7.5 秒，另加期間自然恢復的冷卻。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/hail-of-fire/mechanics/">槍林彈雨</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：假設基礎傷害 100、對甲殼護甲原倍率 0.5，且忽略其他修正，原本為 50 點；同時計入本天賦的增傷與撕裂後，100 × 1.15 × (0.5 + 0.15) = 74.75 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/light-em-up/mechanics/">集火射擊</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只計無護甲且無其他修正，每次燃燒傷害為 600 × (層數 ÷ 31)² × [3 − 2 × (層數 ÷ 31)]。4 層約 27.39 點，16 層約 314.51 點；這是單次結算，並非整段燃燒的總傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/valuable-distraction/mechanics/">重要干擾</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：其他條件固定，原本 100 點傷害變成 100 × 1.2 = 120 點。若敵人同時受到削弱敵人的 15% 承傷加成，兩項處於不同階段，為 100 × 1.15 × 1.2 = 138 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bullet-bravado/mechanics/">壯膽子彈</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、沒有其他加成，射擊 4 次後換彈一次，恢復 100 × (4 × 2.5% + 15%) = 25 點；只缺 10 點就只能補 10 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/no-pain/mechanics/">一點都不痛！</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      分段算例：最大韌性 100，三次嘲諷各影響 4 名敵人，立即恢復合計 100 × 10% × 3 = 30 點；持續恢復層數依序為 4、8、12，每秒恢復 2、4、6 點。<br>總量算例：忽略更新誤差、期間一直有足夠缺額且沒有其他恢復加成時，前 3 秒恢復 2 × 3 = 6 點、接著 3 秒恢復 4 × 3 = 12 點、最後 3.25 秒恢復 6 × 3.25 = 19.5 點；加上立即恢復共 67.5 點。實際仍受每個時間點的韌性缺額限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/trample/mechanics/">踐踏</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：4 次命中提供 10%，基礎 100 點變成 100 × (1 + 4 × 2.5%) = 110 點；滿 20 層為 150 點。若同階段另有 20% 增傷，滿層為 170 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/burst-limiter-override/mechanics/">爆限超載</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：5 次遠程擊殺增加 10% 遠程傷害；滿 10 層增加 20%，若基礎傷害為 100，則為 100 × 1.20 = 120。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/feel-no-pain/mechanics/">麻木</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      滿層算例：10 層時，韌性恢復倍率為 1 + 10 × 3% = 1.30；搭配「最堅韌！」為 1.55。韌性傷害為 0.97^10 ≈ 0.737；原本 100 點韌性傷害約變成 73.7 點。 原本恢復 20 點時，滿層為 20 × 1.3 = 26 點；搭配最堅韌！則為 31 點，仍受缺額限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/heavy-hitter/mechanics/">重拳出擊</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      重新計時與算例：每次新增層數都會重設 7.5 秒期限。4 次一般命中可增加 12%；滿 8 層時，基礎近戰傷害 100 變成 100 × (1 + 24%) = 124。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/pained-outburst/mechanics/">痛楚爆發</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：失層後剩 4 層、未選「最堅韌！」時，基本恢復量為最大韌性的 50% × (1 + 4 × 3%) = 56%，再受缺少韌性限制。 例如最大韌性 100 且缺額足夠，可恢復 100 × 56% = 56 點；倒地時不提供這筆恢復。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/strongest/mechanics/">最強壯！</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：6 層時推中 1 名或 3 名敵人，都恢復至 7 層；10 層時再推中敵人仍維持 10 層。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/toughest/mechanics/">最堅韌！</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      公式與上限：N 層時，本節點增加 2.5% × N；加上麻木本身的 3% × N，最多 10 層。<br>算例：10 層時恢復倍率為 1 + 10 × 5.5% = 1.55；原本恢復 20 點時，理論恢復 31 點，實際不超過缺少的韌性。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/maximum-firepower/mechanics/">最大火力</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：完整收到兩次補回且冷卻尚未完成時，2.5 秒內共推進 2.5 + 2 × 1 = 4.5 秒冷卻。這筆補回按秒結算，不能直接把 2.5 秒當成完整的 5 秒進度。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/good-shootin/mechanics/">好槍法</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：假設同一武器、護甲與部位下，普通傷害 100、暴擊額外傷害 50，幸運子彈命中時為 100 + 50 = 150 點。暴擊倍率依武器而異，並非一律兩倍；沒有命中就不造成傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bulletstorm/mechanics/">子彈風暴</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：第 0 秒觸發後，第 6 秒再次觸發，增益會再維持 8 秒，直到第 14 秒。<br>傷害算例：基礎 100 點遠程傷害變成 100 × (1 + 15%) = 115 點；同階段另有 20% 時為 135 點。增傷不累積層數。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/heat-of-battle/mechanics/">激鬥戰火</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：6 層增加 9% 遠程射速；滿 10 層增加 15%。若基礎連射間隔為 1 秒，滿層後約為 1 ÷ 1.15 = 0.87 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/back-off/mechanics/">退後！</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      消耗與算例：下一次射擊後清空層數，免費的幸運子彈也會消耗。5 層把基礎機率提高至 15% + 5 × 10% = 65%；9 層已達 105%，因此必定觸發。層數沒有固定倒數。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/dont-feel-a-thing/mechanics/">毫髮無傷</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：4 層時倍率為 0.95，原本 100 點韌性傷害變成 95 點；8 層時 100 點變成 90 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/great-cleaver/mechanics/">強力劈砍</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：4 層增加 50%；滿 8 層時，若武器基礎順劈容量為 10，容量變為 10 × 2 = 20。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/unstoppable/mechanics/">越戰越勇</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：基礎近戰擊殺恢復 10 點時，8 層恢復 10 × (1 + 8 × 15%) = 22 點，仍受缺少韌性限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/impactful/mechanics/">震撼衝擊</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：4 層增加 30%；若一次攻擊的基礎衝擊值為 100，滿 8 層時為 100 × 1.6 = 160。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/just-getting-started/mechanics/">熱身完畢</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：若某次攻擊原本每秒一次，增加 10% 攻速後，間隔約為 1 ÷ 1.10 = 0.91 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/the-best-defence/mechanics/">最好的防禦</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100 時，一般攻擊恢復 100 × 5% = 5 點，重擊恢復 100 × 15% = 15 點；若目前 95，就只能補缺少的 5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/smash-em/mechanics/">碾碎它們！</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100 時，一般攻擊恢復 100 × 5% = 5 點，重擊恢復 100 × 15% = 15 點；若目前 95，就只能補缺少的 5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/lynchpin/mechanics/">關鍵人物</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：其餘條件相同，原本每秒恢復 5 點，變成 5 × (1 + 100%) = 10 點；若同階段原有 20% 加成，則由 6 點變成 5 × (1 + 20% + 100%) = 11 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/keep-shooting/mechanics/">射不停</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：只計這份加成，受換彈速度影響的 3 秒動作變成 3 ÷ (1 + 20%) = 2.5 秒，縮短約 16.7%；不是直接少 20% 時間。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/furious/mechanics/">怒不可遏</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：上一擊命中 4 名敵人，下一擊基礎 100 點變成 100 × (1 + 4 × 3%) = 112 點；命中 10 名或更多則為 130 點。已有同階段 20% 加成、再取得 4 層時為 132 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/heavyweight/mechanics/">重量級</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只看傷害加成階段，100 × (1 + 30%) = 130 點；同階段原有 20% 增傷時為 150 點。受到原本 100 點傷害時，套用本天賦後為 100 × 0.7 = 70 點，其他減傷另算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/slam/mechanics/">猛擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：最大耐力 8 時，每次恢復 8 × 5% = 0.4；只缺 0.2 就只補 0.2。只計衝擊階段，基準 100 變成 100 × 1.25 = 125，實際能否踉蹌仍取決於敵人與攻擊。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/soften-them-up/mechanics/">削弱敵人</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：效果已施加後，原本 100 點傷害變成 100 × (1 + 15%) = 115 點；若同一承傷階段另有 20% 加成，則為 135 點。首次觸發的那一擊不會追溯重算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/too-stubborn-to-die/mechanics/">堅韌不屈</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：原本恢復 15 點，沒有其他修正時變成 15 × (1 + 100%) = 30 點；若同階段已有 20% 加成，則由 18 點變成 33 點。實際仍以缺少的韌性為上限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/batter/mechanics/">重毆</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害公式：流血傷害隨層數非線性提高。只計無護甲且沒有其他修正，每次傷害為 87.5 × (層數 ÷ 16)² × [3 − 2 × (層數 ÷ 16)]。<br>傷害算例：4 層時為 87.5 × 0.25² × 2.5 ≈ 13.67 點；8 層為 43.75 點，16 層為 87.5 點。因此 8 層不是 4 層傷害的兩倍。其他護甲與增傷會改變結果。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/hard-knocks/mechanics/">沉重打擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點近戰傷害，只有此效果時為 115 點；與削弱敵人同時生效時為 100 × (1 + 15% + 15%) = 130 點。遠程不受本項近戰承傷加成影響。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/unstoppable-momentum/mechanics/">勢不可擋</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度算例：原本每秒移動 5 公尺，沒有其他修正時變成 5 × 1.2 = 6 公尺／秒；已有同階段 10% 加成時，則為 5 × (1 + 10% + 20%) = 6.5 公尺／秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/ammo-stash/mechanics/">彈藥儲存包</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      容量算例：原備用彈藥上限 200，變成 200 × (1 + 25%) = 250 發；若原上限 101，則 101 × 1.25 = 126.25，無條件捨去小數後為 126 發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/pacemaker/mechanics/">領跑者</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：受換彈速度影響的 3 秒動作變成 3 ÷ 1.15 ≈ 2.61 秒；若同階段另有 20% 加成，則為 3 ÷ (1 + 15% + 20%) ≈ 2.22 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/found-some-more/mechanics/">發現更多</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      整數算例：最大備用彈藥 200 時，每次補 200 × 1% = 2 發；最大備用彈藥 75 時，每次累積 0.75 發，小數留到後續結算，前四次依序補 0、1、1、1 發，合計 3 發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/wont-give-in/mechanics/">絕不屈服</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：有 1、2、3 名符合條件的隊友時，這一階段的 100 點傷害分別變成 80、60、40 點；三人合計為 100 × (1 − 3 × 20%) = 40 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/crunch/mechanics/">嘎嘎！</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點傷害，4 層提供 4 × 7.5% = 30%，沒有其他加成時為 130 點；同階段原有 20% 時為 100 × (1 + 20% + 30%) = 150 點。<br>衝擊力算例：原本 100 點衝擊力，滿層為 130 點；是否使敵人踉蹌還取決於敵人門檻，不能把衝擊力直接當成傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/delight-in-destruction/mechanics/">毀滅之樂</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：3 名提供 15% 減傷，100 點變成 85 點；6 名以上為 100 × (1 − 30%) = 70 點。若另有獨立 20% 減傷，則為 100 × 0.7 × 0.8 = 56 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/toughness-damage-reduction/mechanics/">韌性減傷</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：只計此加成，100 點韌性傷害變成 100 × (1 − 10%) = 90 點；若同一計算階段已有 20% 減傷，則為 100 × (1 − 20% − 10%) = 70 點。其他獨立減傷倍率另行相乘。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/no-hurting-friends/mechanics/">相親相愛好夥伴！</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：只計此加成，威力 500 變成 500 × (1 + 5 × 2%) = 550。威力會影響傷害、衝擊力與順劈；實際傷害還需套用武器曲線與目標護甲，不能一律把最終傷害乘 1.1。<br>減傷算例：滿層後，此階段原本承受的 100 點韌性傷害變成 100 × 0.85 = 85 點；與另一個獨立 20% 減傷共存時為 68 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/get-stuck-in/mechanics/">全神貫注</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度算例：原本每秒移動 5 公尺，只有此加成時為 5 × (1 + 20%) = 6 公尺／秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/implacable/mechanics/">利刃出鞘</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：只計此效果，100 點傷害變成 100 × 0.85 = 85 點；另有獨立 20% 減傷時為 100 × 0.85 × 0.8 = 68 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/no-stopping-me/mechanics/">誰敢攔我！</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      移速算例：假設正常速度為每秒 5 公尺，蓄力原本使速度降低 50% 至 2.5 公尺／秒，移除這項減速後恢復為 5 公尺／秒；不是讓所有移動速度額外提高 100%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/massacre/mechanics/">屠殺</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：原本 5% 爆擊率，滿層變成 5% + 8 × 2% = 21%，不是 5% × 1.16。加成適用爆擊率，不代表每次攻擊必定暴擊。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/payback-time/mechanics/">報復時間</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點變成 115 點；同階段已有 20% 加成時，則為 100 × (1 + 20% + 15%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/dominate/mechanics/">主宰</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：若對甲殼護甲的原倍率為 0.5，基礎 100 點原本造成 50 點，加入 15% 撕裂後為 100 × (0.5 + 0.15) = 65 點，相對提高 30%。若原倍率已達 1，超額撕裂只取四分之一，變成 100 × (1 + 0.15 × 0.25) = 103.75 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/reloaded-and-ready/mechanics/">換彈完畢</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點遠程傷害變成 115 點；同階段已有 20% 加成時為 100 × (1 + 20% + 15%) = 135 點。近戰傷害不受此加成影響。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/big-boom/mechanics/">大爆炸</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      範圍算例：原半徑 4 公尺，變成 4 × 1.275 = 5.1 公尺；以沒有遮擋的平面圓形估算，面積變成原本的 1.275² ≈ 1.626 倍，約增加 62.6%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/no-pushover/mechanics/">睚眥必報</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      衝擊力算例：原本 100 點推擊衝擊力，強化後為 100 × (1 + 250%) = 350 點；這是造成踉蹌的強度，不是 350 點傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/attention-seeker/mechanics/">渴求關注</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間範例：第 0 秒首次嘲諷，第 4 秒再次推擊同一名仍受嘲諷的敵人，並不會把結束時間延到第 12 秒。若你死亡、無法被敵人察覺等，嘲諷可能提前結束。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/for-the-liluns/mechanics/">為了小子們</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      計算範例：威力 500 變成 550；此階段 100 點韌性傷害變成 75 點。單計 25% 扶起速度，原本 5 秒變成 5 ÷ 1.25 = 4 秒；若同階段另有 25% 扶起速度，則為 5 ÷ 1.5 ≈ 3.33 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/simple-minded/mechanics/">頭腦簡單</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      腐敗算例：原本增加 20 點腐敗，變成 20 × 0.6 = 12 點；若另有獨立 20% 腐敗減免，則為 20 × 0.6 × 0.8 = 9.6 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/focused-fighter/mechanics/">專注鬥士</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：每層乘上 0.96，5 層時為 100 × 0.96⁵ ≈ 81.54 點，合計約減少 18.46%，不是直接減少 20%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/brutish-strength/mechanics/">蠻橫之力</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：假設對甲殼護甲的原倍率為 0.5、基礎傷害 100，一次推擊後為 100 × (0.5 + 4 × 2.5%) = 60 點；滿 16 層為 90 點。超過護甲倍率 1 的部分另按超額撕裂規則計算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/fire-away/mechanics/">火力全開</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害公式：只計無護甲且沒有其他修正，每次燃燒傷害為 600 × (層數 ÷ 31)² × [3 − 2 × (層數 ÷ 31)]；分母採共用燃燒的 31 層上限，不是本天賦可施加的 8 層。<br>傷害算例：2 層約造成 7.17 點、8 層約 99.25 點／次；實際值會受護甲與其他增傷影響，也不能把單次傷害當成完整持續期間的總傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/unbreakable/mechanics/">堅不可摧</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點變成 120 點；同階段原有 30% 增傷時為 100 × (1 + 30% + 20%) = 150 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/pumped-up/mechanics/">士氣高昂</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：此階段原本 100 點傷害變成 100 × 0.875 = 87.5 點；若另有獨立 20% 減傷，則為 100 × 0.875 × 0.8 = 70 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/lucky-streak/mechanics/">好運連連</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：假設固定條件下，原傷害由 100 點基礎與 50 點暴擊額外傷害組成，原本合計 150 點；生效後為 100 + 50 × 1.75 = 187.5 點，相對提高 25%。若額外部分只有 20 點，則由 120 變成 135 點，只提高 12.5%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/frenzied-blows/mechanics/">狂暴猛擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度算例：滿層時，受攻速影響的 1 秒動作變成 1 ÷ (1 + 5 × 2.5%) ≈ 0.889 秒；不是直接縮短 12.5% 至 0.875 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/beat-them-back/mechanics/">擊潰他們</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點變成 115 點；同階段已有 20% 時為 100 × (1 + 20% + 15%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/concentrate/mechanics/">專注</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      耐力消耗：每秒消耗 0.5 點耐力，換彈時停止這筆消耗。若目前有 5 點耐力、沒有其他消耗或消耗修正，最多支撐 5 ÷ 0.5 = 10 秒。<br>操控算例：隔離其他修正，原本各為 100 的晃動、散布與後座力參數，分別變成 40、80、85。這些是操控參數，不代表命中率固定提高相同百分比。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/strongman/mechanics/">大肌肌</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：只計此效果，100 點變成 90 點；另有獨立 20% 減傷時為 100 × 0.9 × 0.8 = 72 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/steady-grip/mechanics/">穩定握持</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 200 時，每秒基礎恢復 200 × 12.5% = 25 點；持續 2 秒共 50 點。韌性恢復加成可再修正恢復量，且不會超過缺少的韌性。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/cant-hit-me-again/mechanics/">休想再打中我......</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：效果期間，此階段 100 點遠程傷害變成 80 點；近戰傷害不受這項減免影響。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/dedicated-practice/mechanics/">熟能生巧</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：原本 1 秒的動作變成 1 ÷ 1.35 ≈ 0.741 秒，約縮短 25.9%；不是縮短至原本的 35%，也不是直接減少 35% 時間。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/spray-and-slay/mechanics/">射盡殺戮</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      計算範例：基礎 100 點近戰傷害變成 115 點；受攻速影響的 1 秒動作變成 1 ÷ 1.075 ≈ 0.930 秒。其他同階段傷害或速度加成各自相加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bash-and-blast/mechanics/">猛砸爆裂</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：滿層時，基礎 100 點遠程傷害變成 115 點；同階段另有 20% 加成時為 100 × (1 + 20% + 5 × 3%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/bruiser/mechanics/">格鬥兵</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：一般自然冷卻每秒恢復 1 秒，再加每次 0.5 秒補回；完整收到 4 次補回時，4 秒內共推進 4 + 4 × 0.5 = 6 秒冷卻，其中額外省下 2 秒。實際會受到冷卻是否已滿及更新時間點影響。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/strike-true/mechanics/">精準打擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：原威力 500，命中弱點時變成 500 × 1.1 = 550；若同階段已有 20% 威力加成，則為 500 × (1 + 20% + 10%) = 650。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/ogryn/mobile-emplacement/mechanics/">機動部署</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：此階段原本 100 點傷害變成 100 × 0.75 = 75 點；另有獨立 20% 減傷時為 60 點。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/">← 返回歐格林技能</a>
+      </footer>
+    </div>
+  </body>
+</html>
