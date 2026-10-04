@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="狂信徒：來源與技術索引 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>狂信徒：來源與技術索引 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/source-index/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">狂信徒：來源與技術索引</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>狂信徒：來源與技術索引</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="狂信徒：來源與技術索引">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/zealot/">← 返回狂信徒</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/SOURCE_INDEX.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="狂信徒來源文件與技術索引">
+              狂信徒：來源文件與技術索引
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">版本、日期與證據限制</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/zealot/base-effects/">角色基礎效果</a>｜<a href="/darktide/skills/zealot/unused-definitions/">未直接使用的定義</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/zealot/localization-comparison/">遊戲本體繁中描述比對</a>｜<a href="/darktide/skills/zealot/damage-percentage-review/">百分比描述盤點</a>
+            </p>
+            <p>
+              固定來源 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。技能樹共 <strong>82 個可選節點</strong>，均為一點；同一配置最多分配 30 點。
+              <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64">職業與基礎天賦</a>；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10">技能樹設定</a>。內部 tree version 29 不等於遊戲發行版號。
+            </p>
+            <p>
+              名稱沿用翻譯表；機制為固定版本的程式分析，未進行遊戲內驗證。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能／程式識別碼
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/immolation-grenade/mechanics/">獻祭手雷</a> / <code>zealot_flame_grenade</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/blades-of-faith/mechanics/">信仰之刃</a> / <code>zealot_throwing_knives</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/stunstorm-grenade/mechanics/">眩暈風暴手雷</a> / <code>zealot_improved_stun_grenade</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/benediction/mechanics/">恩賜</a> / <code>zealot_toughness_damage_reduction_coherency_improved</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/beacon-of-purity/mechanics/">純潔信標</a> / <code>zealot_corruption_healing_coherency_improved</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/zealous/mechanics/">熱忱</a> / <code>zealot_stamina_cost_multiplier_aura</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/chorus-of-spiritual-fortitude/mechanics/">不屈靈魂合唱</a> / <code>zealot_bolstering_prayer</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/fury-of-the-faithful/mechanics/">有信者之怒</a> / <code>zealot_attack_speed_post_ability</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/holy-cause/mechanics/">神聖事業</a> / <code>zealot_channel_grants_toughness_damage_reduction</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/ecclesiarchs-call/mechanics/">教宗之喚</a> / <code>zealot_channel_grants_damage</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/redoubled-zeal/mechanics/">倍增狂熱</a> / <code>zealot_additional_charge_of_ability</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/shroudfield/mechanics/">隱秘領域</a> / <code>zealot_stealth</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/master-crafted-shroudfield/mechanics/">大師級隱秘領域</a> / <code>zealot_increased_duration</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/invigorating-revelation/mechanics/">振奮啟示</a> / <code>zealot_leaving_stealth_restores_toughness</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/martyrs-purpose/mechanics/">殉道者之願</a> / <code>zealot_restore_stealth_cd_on_damage</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/pious-cut-throat/mechanics/">虔誠刺客</a> / <code>zealot_backstab_kills_restore_cd</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/invocation-of-death/mechanics/">死亡禱文</a> / <code>zealot_crits_grant_cd</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/unrelenting-fury/mechanics/">無盡狂怒</a> / <code>zealot_fotf_refund_cooldown</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/perfectionist/mechanics/">完美主義者</a> / <code>zealot_stealth_cooldown_regeneration</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/until-death/mechanics/">死戰到底</a> / <code>zealot_resist_death</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/martyrdom/mechanics/">殉道</a> / <code>zealot_martyrdom</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/i-shall-not-fall/mechanics/">不滅意志</a> / <code>zealot_martyrdom_grants_toughness</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/maniac/mechanics/">狂燥之心</a> / <code>zealot_martyrdom_grants_attack_speed</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/inexorable-judgement/mechanics/">命定審判</a> / <code>zealot_quickness_passive</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/retributors-stance/mechanics/">懲戒者姿態</a> / <code>zealot_momentum_toughness_replenish</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/inebriates-poise/mechanics/">飄忽身形</a> / <code>zealot_quickness_passive_dodge_stacks</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/holy-revenant/mechanics/">吊命聖徒</a> / <code>zealot_resist_death_heal</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/blazing-piety/mechanics/">熾熱虔誠</a> / <code>zealot_fanatic_rage</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/stalwart/mechanics/">死忠</a> / <code>zealot_fanatic_rage_toughness_on_max</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/righteous-warrior/mechanics/">正義勇士</a> / <code>zealot_fanatic_rage_improved</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/infectious-zeal/mechanics/">迅疾狂熱</a> / <code>zealot_shared_fanatic_rage</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/restorative-verses/mechanics/">治癒詩頌</a> / <code>zealot_martyrdom_toughness_modifier</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/eternal/mechanics/">永恆</a> / <code>zealot_quickness_increased_duration</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/on-the-brink/mechanics/">危境之際</a> / <code>zealot_corruption_resistance_stacking</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/zealous-pilgrim/mechanics/">狂熱朝聖者</a> / <code>zealot_resist_death_ability</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/fire-and-fury/mechanics/">烈焰與怒火</a> / <code>zealot_resist_death_fire</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/risen/mechanics/">復活</a> / <code>zealot_resist_death_golden_toughness</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/scourge/mechanics/">天災</a> / <code>zealot_crits_apply_bleed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/backstabber/mechanics/">背刺者</a> / <code>zealot_backstab_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/disdain/mechanics/">蔑視</a> / <code>zealot_multi_hits_increase_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/purge-the-unclean/mechanics/">淨化不潔</a> / <code>zealot_increased_damage_vs_resilient</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/sustained-assault/mechanics/">持續突擊</a> / <code>zealot_hits_grant_stacking_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/enduring-faith/mechanics/">堅韌信仰</a> / <code>zealot_crits_reduce_toughness_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/second-wind/mechanics/">精力復甦</a> / <code>zealot_toughness_on_dodge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/melee-damage-boost/mechanics/">近戰增幅</a> / <code>base_melee_damage_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/the-voice-of-terra/mechanics/">泰拉之音</a> / <code>zealot_toughness_while_shooting</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/restoring-faith/mechanics/">恢復信仰</a> / <code>zealot_heal_part_of_damage_taken</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/bleed-for-the-emperor/mechanics/">為了帝皇</a> / <code>zealot_reduced_damage_on_wound</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/vicious-offering/mechanics/">惡毒贈禮</a> / <code>zealot_toughness_on_heavy_kills</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/toughness-damage-reduction/mechanics/">韌性減傷</a> / <code>base_toughness_damage_reduction_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/duellist/mechanics/">決鬥者</a> / <code>zealot_increased_crit_and_weakspot_damage_after_dodge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/shield-of-contempt/mechanics/">輕蔑之盾</a> / <code>zealot_ally_damage_taken_reduced</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/punish-impiety/mechanics/">褻瀆必懲</a> / <code>zealot_push_attacks_attack_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/thy-wrath-be-swift/mechanics/">勃然大怒</a> / <code>zealot_damage_boosts_movement</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/retaliatory-defence/mechanics/">反制護盾</a> / <code>zealot_stamina_on_block_break</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/good-balance/mechanics/">四平八穩</a> / <code>zealot_reduced_damage_after_dodge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/enemies-within-enemies-without/mechanics/">內憂外患</a> / <code>zealot_toughness_in_melee</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/faithful-frenzy/mechanics/">信仰狂亂</a> / <code>zealot_attack_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/faiths-fortitude/mechanics/">信仰之勇</a> / <code>zealot_additional_wounds</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/anoint-in-blood/mechanics/">鮮血受膏</a> / <code>zealot_increase_ranged_close_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/unfaltering/mechanics/">不屈之志</a> / <code>zealot_uninterruptible_no_slow_heavies</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/riposte/mechanics/">靈活還擊</a> / <code>zealot_stacking_melee_damage_after_dodge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/relentless-fervor/mechanics/">狂熱不懈</a> / <code>zealot_sprint_improvements</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/unseen-blade/mechanics/">無形之刃</a> / <code>zealot_damage_vs_nonthreat</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/the-masters-retribution/mechanics/">大師的反擊</a> / <code>zealot_defensive_knockback</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/blinded-by-blood/mechanics/">血色迷障</a> / <code>zealot_bled_enemies_take_more_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/desperation/mechanics/">背水一戰</a> / <code>zealot_more_damage_when_low_on_stamina</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/no-respite/mechanics/">刻不容緩</a> / <code>zealot_melee_crits_restore_stamina</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/providence/mechanics/">神恩庇護</a> / <code>zealot_revive_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/abolish-blasphemers/mechanics/">弒除瀆者</a> / <code>zealot_damage_vs_elites</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/hubris/mechanics/">傲慢</a> / <code>zealot_weakspot_damage_reduction</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/melee-damage-boost-base-melee-damage-node-buff-medium-4/mechanics/">近戰增幅</a> / <code>base_melee_damage_node_buff_medium_4</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/prime-target/mechanics/">頭號目標</a> / <code>zealot_elite_kills_empowers</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/behind-the-lines/mechanics/">敵後行動</a> / <code>zealot_suppress_on_backstab_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/time-to-kill/mechanics/">殺戮時刻</a> / <code>zealot_backstab_periodic_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/against-the-odds/mechanics/">逆境而上</a> / <code>zealot_offensive_vs_many</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/out-of-pocket/mechanics/">自掏腰包</a> / <code>zealot_reload_from_melee</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/wait-in-line/mechanics/">排隊等候</a> / <code>zealot_reduced_damage_from_ranged</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/holy-tools/mechanics/">神聖工具</a> / <code>zealot_weapon_special_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/got-your-back/mechanics/">為您撐腰</a> / <code>zealot_melee_kills_restore_toughness_to_target</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/purifying-hatred/mechanics/">淨化仇恨</a> / <code>zealot_dmg_vs_burning_electrocuted</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/dance-of-death/mechanics/">死亡之舞</a> / <code>zealot_improved_weapon_handling_after_dodge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/">← 返回狂信徒技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

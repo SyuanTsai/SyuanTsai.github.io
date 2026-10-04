@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="擾動命運 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>擾動命運 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/disrupt-destiny/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">擾動命運</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0"
+              width="80"
+              height="80"
+              alt="擾動命運圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>擾動命運</h1>
+            <span class="skill-english-name" lang="en">Disrupt Destiny</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/psyker/disrupt-destiny/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="擾動命運">
+          <a id="psyker_new_mark_passive"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>標記與取得</strong>：標記前方 40 公尺內、有視線且可被標記的敵人。親自擊殺目前標記的敵人，取得一層精準加成，最多 15 層。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>每層效果</strong>：一般傷害增加 1%、暴擊額外傷害增加 2%、弱點額外傷害增加 2.5%。15 層分別為 15%、30%、37.5%。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：只計一般增傷，100 × (1 + 15%) = 115 點。再看弱點這一項：假設同次命中已算入一般增傷後，基礎部分為 100、弱點額外部分為 50，加上 37.5% 弱點加成後為 100 + 50 × 1.375 = 168.75 點，相較這一階段原有 150 點增加 12.5%。武器的額外傷害比例不同，整次命中的增幅也不同。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>恢復與移速</strong>：擊殺標記目標後，2.5 秒內恢復最大韌性的 25%，移動速度提高 20%，持續 2.5 秒。最大韌性 100 時，總共恢復 25 點，相當於每秒 25 ÷ 2.5 = 10 點，以缺額為上限。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>重新計時與衰減</strong>：精準加成共用 5 秒倒數。新增層數，或已有層數時命中仍存活的標記目標或首領，都會重設倒數。到期只掉一層，再倒數 5 秒；例如 3 層且未再觸發重新計時，約在 5、10、15 秒依序降至 2、1、0 層。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/psyker/disrupt-destiny/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/README.md#psyker_new_mark_passive">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_new_mark_passive.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/">← 返回靈能者技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="巢都渣滓：來源與技術索引 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>巢都渣滓：來源與技術索引 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/source-index/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">巢都渣滓：來源與技術索引</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>巢都渣滓：來源與技術索引</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="巢都渣滓：來源與技術索引">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/scum/">← 返回巢都渣滓</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/SOURCE_INDEX.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="巢都渣滓來源文件與技術索引">
+              巢都渣滓：來源文件與技術索引
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">版本、日期與證據限制</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/scum/base-effects/">角色基礎效果</a>｜<a href="/darktide/skills/scum/unused-definitions/">未直接使用的定義</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/scum/localization-comparison/">遊戲本體繁中描述比對</a>｜<a href="/darktide/skills/scum/damage-percentage-review/">百分比描述盤點</a>
+            </p>
+            <p>
+              固定來源 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。技能樹共 <strong>79 個可選節點</strong>，均為一點；同一配置最多分配 30 點。
+              <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74">職業與基礎天賦</a>；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10">技能樹設定</a>。內部 tree version 15 不等於遊戲發行版號。
+            </p>
+            <p>
+              興奮劑配方樹另有獨立30點額度，每項成本1～5點且各只購買一次。
+              名稱沿用翻譯表；機制為固定版本的程式分析，未進行遊戲內驗證。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能／程式識別碼
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/blackout/mechanics/">擊暈</a> / <code>broker_blitz_flash_grenade_improved</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/boom-bringer/mechanics/">炸彈使者</a> / <code>broker_blitz_missile_launcher</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/chem-grenade/mechanics/">化學手榴彈</a> / <code>broker_blitz_tox_grenade</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/gunslinger-improved/mechanics/">精進神射手</a> / <code>broker_aura_gunslinger_improved</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/ruffian/mechanics/">惡棍</a> / <code>broker_coherency_melee_damage</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/anarchist/mechanics/">無政府主義者</a> / <code>broker_coherency_anarchist</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/enhanced-desperado/mechanics/">強化亡命之徒</a> / <code>broker_ability_focus_improved</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/stimm-supply/mechanics/">化學性依賴</a> / <code>broker_ability_stimm_field</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/rampage/mechanics/">橫衝直撞！</a> / <code>broker_ability_punk_rage</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/pulverising-strikes/mechanics/">熔爐怒吼</a> / <code>broker_ability_punk_rage_sub_2</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/channelled-aggression/mechanics/">凝聚殺意</a> / <code>broker_ability_punk_rage_sub_1</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/forges-bellow/mechanics/">沸騰之血</a> / <code>broker_ability_punk_rage_sub_3</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/boiling-blood/mechanics/">碎骨打擊</a> / <code>broker_ability_punk_rage_sub_4</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/focused-resolve/mechanics/">專注凝神</a> / <code>broker_ability_focus_sub_3</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/pick-your-targets/mechanics/">精準獵殺</a> / <code>broker_ability_focus_sub_2</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/practiced-deployment/mechanics/">熟練部署</a> / <code>broker_ability_stimm_field_sub_3</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/fast-acting-stimms/mechanics/">速效型興奮劑</a> / <code>broker_ability_stimm_field_sub_1</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/booby-trap/mechanics/">毒性陷阱</a> / <code>broker_ability_stimm_field_sub_2</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/nimble/mechanics/">靈巧</a> / <code>broker_passive_improved_dodges</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/adrenaline-frenzy/mechanics/">腎上腺素狂暴</a> / <code>broker_keystone_adrenaline_junkie</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultures-mark/mechanics/">兀鷲印記</a> / <code>broker_keystone_vultures_mark_on_kill</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/chemical-dependency/mechanics/">化學性依賴</a> / <code>broker_keystone_chemical_dependency</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/chem-enhanced/mechanics/">化學強化</a> / <code>broker_keystone_chemical_dependency_sub_1</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/chem-fortified/mechanics/">化學增強</a> / <code>broker_keystone_chemical_dependency_sub_2</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/maxed-out-chems/mechanics/">化學藥劑全開</a> / <code>broker_keystone_chemical_dependency_sub_3</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultures-push/mechanics/">兀鷲推擊</a> / <code>broker_keystone_vultures_mark_aoe_stagger</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/patient-hunter/mechanics/">堅毅獵手</a> / <code>broker_keystone_vultures_mark_increased_duration</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultures-dodge/mechanics/">兀鷲閃避</a> / <code>broker_keystone_vultures_mark_dodge_on_ranged_crit</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/adrenaline-assassin/mechanics/">腎上腺素刺客</a> / <code>broker_keystone_adrenaline_junkie_sub_1</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/stoked-rage/mechanics/">振奮怒火</a> / <code>broker_keystone_adrenaline_junkie_sub_3</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/adrenaline-unbound/mechanics/">腎上腺素突破</a> / <code>broker_keystone_adrenaline_junkie_sub_5</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/uncontrolled-aggression/mechanics/">失控攻擊</a> / <code>broker_keystone_adrenaline_junkie_sub_4</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/adrenaline-smiter/mechanics/">腎上腺素懲戒者</a> / <code>broker_keystone_adrenaline_junkie_sub_2</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/alley-rat/mechanics/">過街老鼠</a> / <code>broker_passive_longer_dodges</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/quick-and-deadly/mechanics/">快速且致命</a> / <code>broker_passive_close_range_damage_on_dodge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/a-tertium-welcome/mechanics/">特提恩是迎賓</a> / <code>broker_passive_first_target_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/in-your-face/mechanics/">打你的臉</a> / <code>broker_passive_close_ranged_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/precision-violence/mechanics/">精準暴力</a> / <code>broker_passive_restore_toughness_on_weakspot_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/voice-of-tertium/mechanics/">特提恩之聲</a> / <code>broker_passive_restore_toughness_on_close_ranged_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/float-like-a-butterfly/mechanics/">翩翩蝶舞</a> / <code>broker_passive_ninja_grants_crit_chance</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/speedloader/mechanics/">快速裝填</a> / <code>broker_passive_reload_speed_on_close_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/burst-of-energy/mechanics/">能量爆發</a> / <code>broker_passive_stun_immunity_on_toughness_broken</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/toughness-boost/mechanics/">韌性增幅</a> / <code>base_toughness_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/regained-posture/mechanics/">恢復姿態</a> / <code>broker_passive_stamina_on_successful_dodge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/slippery-customer/mechanics/">奧客</a> / <code>broker_passive_dodge_melee_on_slide</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/tis-but-a-scratch/mechanics/">沒甚麼，只是擦傷</a> / <code>broker_passive_replenish_toughness_on_ranged_toughness_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/unload/mechanics/">狂轟猛射</a> / <code>broker_passive_damage_on_reload</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/swift-endurance/mechanics/">堅韌疾速</a> / <code>broker_passive_stamina_grants_atk_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/ramping-backstabs/mechanics/">加重背刺</a> / <code>broker_passive_ramping_backstabs</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/moving-target/mechanics/">移動目標</a> / <code>broker_passive_increased_ranged_dodges</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/sample-collector/mechanics/">樣本採集</a> / <code>broker_passive_stimm_cd_on_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/jittery/mechanics/">神經質</a> / <code>broker_passive_improved_dodges_at_full_stamina</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/critical-chance-boost/mechanics/">爆擊機率增幅</a> / <code>base_crit_chance_node_buff_low_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/melee-damage-boost/mechanics/">近戰增幅</a> / <code>base_melee_damage_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/potent-tox/mechanics/">強效毒藥</a> / <code>base_toxin_power_boost_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/sticky-hands/mechanics/">黏黏手</a> / <code>broker_passive_reduce_swap_time</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/calling-for-a-time-out/mechanics/">請求暫停</a> / <code>broker_passive_reduced_toughness_damage_during_reload</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/street-tough/mechanics/">街頭硬漢</a> / <code>broker_passive_knockback_on_taking_melee_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/channelled-devastation/mechanics/">蓄力殲滅</a> / <code>broker_passive_crit_grants_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/battering-strikes/mechanics/">猛烈劈擊</a> / <code>broker_passive_melee_cleave_on_melee_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/hyper-violence/mechanics/">超暴力</a> / <code>broker_passive_melee_damage_carry_over</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/virulent-strain/mechanics/">劇毒菌株</a> / <code>broker_passive_toxin_infected_enemies_take_increased_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/toxin-mania/mechanics/">毒藥狂熱</a> / <code>broker_passive_damage_after_toxined_enemies</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/splash-damage/mechanics/">連帶傷害</a> / <code>broker_passive_toxin_spread_on_kills</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/extra-pouches/mechanics/">額外彈藥袋</a> / <code>broker_passive_increased_blitz_ammo</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/coated-weaponry/mechanics/">塗讀武裝</a> / <code>broker_passive_melee_attacks_apply_toxin</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/pocket-toxin/mechanics/">隨身毒素</a> / <code>broker_passive_blitz_inflicts_toxin</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/targeted-toxin/mechanics/">精準投毒</a> / <code>broker_passive_reduced_damage_by_toxined</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/toxic-renewal/mechanics/">毒性再生</a> / <code>broker_passive_replenish_toughness_while_toxined_enemies_in_proximity</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/ammo-jack/mechanics/">軍火商</a> / <code>broker_passive_extended_mag</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/cheap-shots/mechanics/">趁人之危</a> / <code>broker_passive_damage_vs_heavy_staggered</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/hyper-critical/mechanics/">心狠手辣</a> / <code>broker_passive_melee_crit_instakill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/punching-above-ones-weight/mechanics/">以小搏大</a> / <code>broker_passive_damage_vs_elites_monsters</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/the-sweet-spot/mechanics/">甜蜜點</a> / <code>broker_passive_increased_weakspot_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/long-lasting/mechanics/">延長藥效</a> / <code>broker_passive_stimm_increased_duration</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/blessed-stimms/mechanics/">神佑興奮劑</a> / <code>broker_passive_stimm_cleanse_on_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/hive-city-brawler/mechanics/">巢都格鬥家</a> / <code>broker_passive_dr_damage_tradeoff_on_stamina</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/pickpocket/mechanics/">順手牽羊</a> / <code>broker_passive_low_ammo_regen</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/battering-momentum/mechanics/">趁勝追擊</a> / <code>broker_passive_cleave_on_cleave</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/equip-cartel-special/mechanics/">裝備財閥特殊裝備</a> / <code>broker_stimm_activation_talent</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-i/mechanics/">野火 I</a> / <code>broker_stimm_combat_1</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-iv/mechanics/">野火 IV</a> / <code>broker_stimm_combat_4a</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-ii/mechanics/">野火 II</a> / <code>broker_stimm_combat_2</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-iii/mechanics/">野火 III</a> / <code>broker_stimm_combat_3</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/fury-i/mechanics/">狂怒 I</a> / <code>broker_stimm_combat_4b</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/fury-ii/mechanics/">狂怒 II</a> / <code>broker_stimm_combat_5b</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-v/mechanics/">野火 V</a> / <code>broker_stimm_combat_5a</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultoprene-i/mechanics/">獵鷹蕈劑 I</a> / <code>broker_stimm_combat_4c</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultoprene-ii/mechanics/">獵鷹蕈劑 II</a> / <code>broker_stimm_combat_5c</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-i/mechanics/">抗焦慮藥 I</a> / <code>broker_stimm_concentration_1</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-ii/mechanics/">抗焦慮藥 II</a> / <code>broker_stimm_concentration_2</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-iii/mechanics/">抗焦慮藥 III</a> / <code>broker_stimm_concentration_3</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-iv/mechanics/">抗焦慮藥 IV</a> / <code>broker_stimm_concentration_4</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-v/mechanics/">抗焦慮藥 V</a> / <code>broker_stimm_concentration_5a</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/barrage-i/mechanics/">彈幕 I</a> / <code>broker_stimm_durability_1</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/barrage-ii/mechanics/">彈幕 II</a> / <code>broker_stimm_durability_2</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/barrage-iii/mechanics/">彈幕 III</a> / <code>broker_stimm_durability_3</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/barrage-iv/mechanics/">彈幕 IV</a> / <code>broker_stimm_durability_4</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/tank/mechanics/">坦克</a> / <code>broker_stimm_durability_5a</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-i/mechanics/">激勵 I</a> / <code>broker_stimm_celerity_1</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/fervor/mechanics/">狂熱</a> / <code>broker_stimm_celerity_5c</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-ii/mechanics/">激勵 II</a> / <code>broker_stimm_celerity_2</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-iii/mechanics/">激勵 III</a> / <code>broker_stimm_celerity_3</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-iv/mechanics/">激勵 IV</a> / <code>broker_stimm_celerity_4</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-v/mechanics/">激勵 V</a> / <code>broker_stimm_celerity_5a</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/regain/mechanics/">恢復</a> / <code>broker_stimm_durability_5b</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/hypex/mechanics/">狂熱</a> / <code>broker_stimm_concentration_5b</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/klay/mechanics/">集中藥</a> / <code>broker_stimm_concentration_5c</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/reflex/mechanics/">反射</a> / <code>broker_stimm_celerity_5b</code>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://github.com/SyuanTsai/Media-Assets/issues/12">圖片來源 Issue</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/">← 返回巢都渣滓技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

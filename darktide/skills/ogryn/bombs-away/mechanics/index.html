@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="投彈完畢！：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>投彈完畢！：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/bombs-away/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">投彈完畢！：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>投彈完畢！：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Bombs Away!</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/ogryn/bombs-away/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#投彈完畢bombs-away原始碼依據"><span>03</span>投彈完畢！(Bombs Away!)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="投彈完畢！：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/bombs-away/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_box_explodes.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="投彈完畢bombs-away原始碼依據">
+              投彈完畢！(Bombs Away!)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/bombs-away/#ogryn_box_explodes">返回玩家說明</a>｜<a href="/darktide/skills/ogryn/source-index/">技術索引</a>｜<a href="/darktide/skills/ogryn/localization-comparison/#ogryn_box_explodes">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>ogryn_box_explodes</code>；名稱鍵：<code>loc_talent_bonebreaker_grenade_super_armor_explosion</code>；描述鍵：<code>loc_talent_bonebreaker_grenade_super_armor_explosion_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_3e19fd5d-9d22-4e5c-8981-be97b1de8854</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                手雷箱天賦指向集束手雷能力；能力設定上限為 3 次充能並只消耗充能。
+              </li>
+              <li>
+                箱體碰撞採用集束手雷箱體傷害設定，其父設定的攻擊分配為 1850；標準威力 500 對應輸出倍率 1，近距離甲殼護甲倍率為 0.15，故直接碰撞算例為 277.5。
+              </li>
+              <li>
+                命中生成的集束手雷基數為 6，並讀取 +3 修改器；每顆引信覆寫值為 0.8 + 0.4×序號至 0.8 + 0.8×序號秒，因此第 1 顆是 1.2–1.6 秒，第 6 顆是 3.2–5.6 秒，第 9 顆是 4.4–8.0 秒。
+              </li>
+              <li>
+                一般散出手雷使用半徑 8 公尺、近距離 2 公尺的爆炸設定；「驚喜箱」關鍵字生效時，集束生成程式可改用清單中的穿甲、火焰、破片、煙霧或電擊投射物。
+              </li>
+              <li>
+                一般cluster close profile attack10，unarmored1/superarmor.2；箱體1850與子手雷10分開。生成迴圈一次建立所有子投射物，序號只改引信，不是依序延遲生成。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1174-L1198">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：1174–1198</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L152-L163">scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua：152–163</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L973-L1028">scripts/settings/projectile/player_projectile_templates.lua：973–1028</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L736-L803">scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：736–803</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/grenade_damage_profile_templates.lua#L103-L203">scripts/settings/damage/damage_profiles/grenade_damage_profile_templates.lua：103–203</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L464-L510">scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：464–510</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L336-L348">scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：336–348</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/power_level_settings.lua#L7-L25">scripts/settings/damage/power_level_settings.lua：7–25</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1174-L1198">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：1174–1198</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L330-L357">scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：330–357</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>直接命中算例</strong>：按標準威力 500、近距離、沒有其他修正計算，手雷箱直接撞擊甲殼護甲的傷害為 1850 × 0.15 = 277.5 點；這只計箱子碰撞，不含散出手雷的爆炸。
+              </li>
+              <li>
+                <strong>子手雷算例</strong>：一般子手雷爆炸半徑 8 公尺、中心 2 公尺；不計其他修正，中心對無甲目標每顆造成 10 × 1 = 10 點，甲殼為 10 × 0.2 = 2 點。6 顆全部在中心命中同一無甲目標時為 60 點，並不把箱體的 1850 點傷害複製到每顆手雷。
+              </li>
+              <li>
+                直接命中算例只計箱體碰撞，未計爆炸手雷；總傷害會受散布、各自爆炸距離、護甲、命中部位與目標狀態影響。
+              </li>
+              <li>
+                引信時間是來源設定與生成程式的靜態推導；伺服器更新時序及特殊投射物類型會影響遊戲中的實際呈現。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>a06fe566</code>。
+              </li>
+              <li>
+                同 hash a06fe566 的中英文都描述手雷箱擊中敵人後破開、在目標周圍散出手雷，且是基礎手雷箱的強化版；程式將基礎數量設為 6，數量修改器另加 3。傷害與引信數值是來源補充，不是原文逐字列出的內容。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical/ogryn_box_explodes.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/a7e97984-e57a-4028-ab1b-6e89a0e42fdf">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/bombs-away/">← 返回投彈完畢！玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

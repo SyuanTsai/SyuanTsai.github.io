@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="化學藥劑全開：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>化學藥劑全開：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/maxed-out-chems/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">化學藥劑全開：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>化學藥劑全開：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Maxed Out Chems</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/maxed-out-chems/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#化學藥劑全開maxed-out-chems原始碼依據"><span>03</span>化學藥劑全開(Maxed Out Chems)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="化學藥劑全開：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/maxed-out-chems/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_keystone_chemical_dependency_sub_3.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="化學藥劑全開maxed-out-chems原始碼依據">
+              化學藥劑全開(Maxed Out Chems)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/maxed-out-chems/#broker_keystone_chemical_dependency_sub_3">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_keystone_chemical_dependency_sub_3">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_keystone_chemical_dependency_sub_3</code>；名稱鍵：<code>loc_talent_broker_keystone_chemical_dependency_sub_3</code>；描述鍵：<code>loc_talent_broker_keystone_chemical_dependency_sub_3_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_2459c212-b00a-43ce-a3b6-ad55e67605ed</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                設定 sub_3_duration=60、sub_3_max_stacks=4，核心 duration=90、max_stacks=max_stacks_cap=3。啟用升級時 stack start_func 將 max_stacks 與 max_stacks_cap 各加 1，並把持續時間調整 60−90=−30 秒，故最終為 4 層／60 秒。
+              </li>
+              <li>
+                buff 仍使用 refresh_duration_on_stack=true 與 refresh_duration_on_remove_stack=true；所有層共用 start_time，新增層與每次衰退後都重新開始完整 60 秒計時。
+              </li>
+              <li>
+                每層 +0.10 resource regen modifier 不變；能力回充消費端以 (base_resource_regen_per_second + flat_regen)×modifier 計算，因此 4 層使純基礎回充率乘 1.40。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2579-L2613">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2579–2613</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L454-L463">scripts/settings/talent/talent_settings_broker.lua：454–463</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3524-L3578">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3524–3578</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L29-L44">scripts/extension_systems/buff/buffs/buff.lua：29–44</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L461">scripts/extension_systems/buff/buff_extension_base.lua：434–461</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L560-L589">scripts/extension_systems/buff/buff_extension_base.lua：560–589</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L631-L663">scripts/extension_systems/buff/buff_extension_base.lua：631–663</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L863">scripts/extension_systems/ability/player_unit_ability_extension.lua：839–863</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2579-L2613">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2579–2613</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1612-L1634">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1612–1634</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>回充算例</strong>：4 層為 1+4×0.10=1.40；基礎 60 秒的完整線性回充約為 60/1.40=42.86 秒。
+              </li>
+              <li>
+                <strong>衰退算例</strong>：最後一次使用興奮劑後 60 秒移除 1 層；若仍無新層，再過 60 秒移除下一層。
+              </li>
+              <li>
+                回充時間示例假設回充不中斷、使用純基礎回充率且沒有其他修正；技能資源暫停或其他修正會改變實際時間。
+              </li>
+              <li>
+                新增第 4 層會延長依賴效果，卻把單層計時從 90 秒縮短為 60 秒；層數仍一次衰退一層。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>80f78eef</code>。
+              </li>
+              <li>
+                繁中與英文都指出每層改為 60 秒並將上限提高到 4；程式透過增加堆疊上限並把核心 90 秒時長減少 30 秒實作。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_chemical_dependency_sub_3.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/maxed-out-chems/">← 返回化學藥劑全開玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

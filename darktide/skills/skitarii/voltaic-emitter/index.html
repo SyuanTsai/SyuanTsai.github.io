@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="電能發射器 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>電能發射器 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/voltaic-emitter/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">電能發射器</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b"
+              width="80"
+              height="80"
+              alt="電能發射器圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>電能發射器</h1>
+            <span class="skill-english-name" lang="en">Voltaic Emitter</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/skitarii/voltaic-emitter/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="電能發射器">
+          <a id="cryptic_discharge"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>充能消耗</strong>：發動時消耗目前已補滿的1至3份充能，單次最多3份。若有4或5份，多出的份數會保留；未滿一份的進度也不會消失。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>放電效果</strong>：使周圍12公尺內命中的敵人觸電2秒，期間受到持續電擊傷害。無論消耗1、2或3份，主放電半徑都是12公尺。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>消耗2份以上</strong>：另外干擾周圍30公尺內可受武器故障影響的敵人，通常持續12秒；部分敵人的持續時間不同。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>消耗3份</strong>：接下來15秒內，你的近戰或遠程攻擊命中仍存活的敵人，會使其觸電2秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>消耗算例</strong>：目前有185點電容量，相當於3份完整充能與第4份的70%進度；發動後消耗3 × 50 = 150點，剩35點。若只靠每秒1點自然恢復，再取得1份可用充能需要(50 − 35) ÷ 1 = 15秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：初始範圍效果本身不直接扣血，傷害來自後續電擊。假設對某目標每次電擊造成10點，這次實際結算4次，合計10 × 4 = 40點；實際傷害與次數隨目標及結算時序改變。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/voltaic-emitter/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/README.md#cryptic_discharge">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="軸向斬擊：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>軸向斬擊：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/axial-slash/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">軸向斬擊：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>軸向斬擊：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Axial Slash</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/axial-slash/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#軸向斬擊axial-slash原始碼依據"><span>03</span>軸向斬擊(Axial Slash)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="軸向斬擊：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/axial-slash/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw_horizontal_swipe.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="軸向斬擊axial-slash原始碼依據">
+              軸向斬擊(Axial Slash)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/axial-slash/#cryptic_chordclaw_horizontal_swipe">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_chordclaw_horizontal_swipe">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_chordclaw_horizontal_swipe</code>；名稱鍵：<code>loc_talent_cryptic_chordclaw_horizontal_swipe</code>；描述鍵：<code>loc_talent_cryptic_chordclaw_horizontal_swipe_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_9d962b30-33ec-48bc-915f-f19f4a2d8ed2</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                Talent 只開啟 cryptic_chordclaw_do_horizontal_swipe 特殊規則。武器 action handler 依此規則，把 ability lunge attack 從預設 big sticky attack 分支切換至 action_horizontal_attack_1。
+              </li>
+              <li>
+                橫掃 action 是 guaranteed_crit=true 的 heavy sweep，damage profile 為 chordclaw_horizontal。該 profile 依目標序列設定 attack power 500、480、450、410、360，後續目標300；impact power依序100、90、80、70、60，後續50。這些為 power distribution，不能直接當成對所有敵人的生命損失。
+              </li>
+              <li>
+                此天賦改變攻擊動作與傷害 profile；沒有在此天賦模板加入固定額外傷害或新的充能消耗。能力本身的使用成本仍由弦爪能力設定決定。
+              </li>
+              <li>
+                from_charge分支在1030–1038固定選action_heavy_sticky_attack_1，不經快速施放的三個天賦條件分支；所以本天賦替換快速施放，按住蓄力保留原重刺。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L513-L522">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：513–522</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_action_handler_data.lua#L697-L710">scripts/settings/equipment/weapon_action_handler_data.lua：697–710</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L561-L575">scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：561–575</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L739-L751">scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：739–751</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L459-L527">scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：459–527</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L663-L751">scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：663–751</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L459-L550">scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：459–550</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L1007-L1039">scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：1007–1039</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L513-L522">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：513–522</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1147-L1170">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1147–1170</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                以弦爪能力發動攻擊且選取軸向斬擊 攻擊分支切換至橫掃，對前五個目標的攻擊力量依序為500、480、450、410、360；後續目標使用300。這些不是生命傷害點數。
+              </li>
+              <li>
+                橫掃命中一個可暴擊目標 攻擊設定使用必定暴擊；實際生命傷害仍依目標防護與命中部位計算。
+              </li>
+              <li>
+                天賦描述未提供固定傷害數字；來源傷害設定檔的 power distribution 會再經目標、防護與命中計算，不能當作生命傷害。
+              </li>
+              <li>
+                攻擊鏈是否命中多個目標由掃掠、穿透與敵人位置決定，不保證每次都命中 profile 所列全部目標。
+              </li>
+              <li>
+                繁中與英文只描述新增橫掃動作，與來源 action 分支一致；額外的攻擊設定檔細節為原文省略，未見明確矛盾。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>262d64b6</code>。
+              </li>
+              <li>
+                inventory 中英都表示弦爪改用橫向橫掃，與特殊規則選取水平掃擊 action 相符。兩種本地化都未列攻擊力量表，屬未呈現內部數值，不能據此判為錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_chordclaw_horizontal_swipe.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/94595162-990c-418a-9bbc-9b3e90ed790b">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/axial-slash/">← 返回軸向斬擊玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

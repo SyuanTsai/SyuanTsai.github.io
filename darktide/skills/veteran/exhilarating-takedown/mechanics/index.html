@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="振奮擊倒：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>振奮擊倒：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/exhilarating-takedown/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">振奮擊倒：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>振奮擊倒：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Exhilarating Takedown</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/exhilarating-takedown/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#振奮擊倒exhilarating-takedown原始碼依據"><span>03</span>振奮擊倒(Exhilarating Takedown)</a></li>
+            <li><a href="#圖示來源"><span>04</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="振奮擊倒：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/exhilarating-takedown/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_replenish_toughness_on_weakspot_kill.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="振奮擊倒exhilarating-takedown原始碼依據">
+              振奮擊倒(Exhilarating Takedown)：原始碼依據
+            </h2>
+            <p>
+              來源版本：Release 1.13.1；完整 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+            </p>
+            <p>
+              <a href="/darktide/skills/veteran/exhilarating-takedown/#veteran_replenish_toughness_on_weakspot_kill">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">來源與限制</a>
+            </p>
+            <ul>
+              <li>
+                名稱鍵：<code>loc_talent_veteran_toughness_on_weakspot_kill</code>；描述鍵：<code>loc_talent_veteran_toughness_on_weakspot_kill_alt_desc</code>。中文沿用詞表 Exhilarating Takedown 的「振奮擊倒」，鍵與名稱對應待確認。
+              </li>
+              <li>
+                節點 <code>node_f0744989-1f87-4da4-aa97-30a821197ed9</code>，類型 <code>default</code>，花費及上限均為 1。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L858-L885">目前節點</a>。
+              </li>
+              <li>
+                天賦安裝 <code>veteran_ranged_weakspot_toughness_recovery</code>；其觸發後加入 <code>veteran_ranged_weakspot_toughenss_buff</code>（保留原始拼字）。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2302-L2340">天賦對應</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1716-L1750">觸發與減傷效果</a>。
+              </li>
+            </ul>
+            <p>
+              <strong>原始碼確認：觸發</strong>。訂閱 <code>on_hit</code>，觸發機率 1；條件為 <code>hit_weakspot</code> 且 <code>attack_result=died</code>，以及 <code>attack_type=ranged</code> 或傷害設定的 <code>count_as_ranged_attack</code>。未設額外冷卻；特殊設定「算作遠程攻擊」亦可通過，因此正文的普通近戰排除不應套用到這種特殊標記。共用事件發送會排除玩家對友方、禁止觸發的傷害類型、<code>skip_on_hit_proc</code> 或已處理過的事件。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L216-L224">遠程擊殺判斷</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L473-L520">弱點與組合判斷</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L550-L620">事件資料及排除</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L86-L88">禁止觸發的傷害類型</a>。
+            </p>
+            <p>
+              <strong>程式推導：恢復</strong>。設定量為 0.15；呼叫時不忽略恢復加成。名目量為 <code>最大韌性 × 0.15 × toughness_replenish_modifier × toughness_replenish_multiplier</code>；實際量受缺額限制，不產生超額韌性。倒地且未強制協助、死亡、禁止恢復關鍵字，以及只允許能力恢復而本次原因不在允許清單內，都可令恢復為 0。原觸發函式不檢查恢復量回傳值，仍會加入減傷效果。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L121-L126">數值</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285">恢復公式與上下限</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L411-L475">恢復允許清單及阻止條件</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1723-L1731">恢復後仍加層</a>。
+            </p>
+            <p>
+              <strong>程式推導：減傷</strong>。有效層數限制在 3；此屬性為連乘型，逐層乘入 0.9。減傷因子在韌性傷害步驟與其他近戰／遠程韌性因子共同計算，之後仍有上下限與近戰外溢等步驟，不能把同一百分比直接套到生命傷害。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L404-L410">有效層數</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L1001-L1004">屬性型別</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L727">逐層乘算</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_taken_calculation.lua#L211-L281">韌性傷害結算</a>。
+            </p>
+            <p>
+              <strong>程式推導：重新計時與衰退</strong>。新增層會把共用起始時間改成觸發時間；超過 <code>起始時間+8</code> 才標為到期。移除前有二或三層時，只移除一層並重設計時；重設同時清除到期旗標；最後一層到期才刪除效果。因此非所有層一起在 8 秒後消失。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L461">加入及重新計時</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L29-L44">嚴格大於時間門檻</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L635-L669">移除與重設</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L619-L639">重設清除到期旗標</a>。
+            </p>
+            <p>
+              <strong>有效上限與內部計數的差別</strong>：設定只有 <code>max_stacks=3</code>，沒有 <code>max_stacks_cap</code>，內部計數可暫時超過 3，但效果計算仍限制在三層。每次加層的索引會指向同一效果物件；到期遍歷這些索引時，溢出計數可在同一輪更新連續移除，直到從三層降到二層時重設計時。不能將溢出計數寫成額外減傷，也不能說每個溢出計數都能額外延長 8 秒。這是程式推導，尚無遊戲實測。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L560-L589">沒有硬上限時允許加層</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L469-L515">計數本身不封頂</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L488">多索引共用物件</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L187-L206">到期逐索引處理</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L647-L698">移除與清除目前索引</a>。
+            </p>
+            <p>
+              <strong>相關互動</strong>：恢復流程發送的事件同時帶有名目量及實際量；「天生領袖」對應的共享效果讀取名目量，排除來源原因為 <code>shared</code> 的事件，再為協同內其他單位補充韌性。因此不能以持有者已滿韌性便推論共享量一定為零；該共享天賦的完整數值與範圍不在本五技能樣本的驗收內。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L477-L491">恢復事件</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2330-L2377">共享效果讀取與排除</a>。
+            </p>
+            <p>
+              <strong>顯示差異與待確認</strong>：內部名稱敘述仍寫 6 秒，但設定與顯示參數引用的是 8 秒。已取得本體語系模板；尚未核對最終格式化畫面，不能宣稱遊戲介面必定錯誤。原始碼事件如何對應每種特殊武器／傷害的實際弱點命中，以及精確同幀更新表現，未進行遊戲內驗證；正文只給已確認的判斷規則。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2302-L2339">內部文字與顯示參數</a>。
+            </p>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_replenish_toughness_on_weakspot_kill.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/exhilarating-takedown/">← 返回振奮擊倒玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="法務官手榴彈：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>法務官手榴彈：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/arbites-grenade-adamant-grenade/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">法務官手榴彈：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>法務官手榴彈：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Arbites Grenade</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/arbites/arbites-grenade-adamant-grenade/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#法務官手榴彈arbites-grenade原始碼依據"><span>03</span>法務官手榴彈(Arbites Grenade)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例與待確認事項"><span>06</span>算例與待確認事項</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="法務官手榴彈：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/arbites/arbites-grenade-adamant-grenade/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_grenade.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="法務官手榴彈arbites-grenade原始碼依據">
+              法務官手榴彈(Arbites Grenade)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/base-effects/#adamant_grenade">返回基礎效果</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                固定來源：Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                基礎天賦：<code>adamant_grenade</code>；不占可選天賦點數。
+              </li>
+              <li>
+                證據程度：原始碼確認與程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                adamant_archetype.base_talents 將 adamant_grenade 配在手雷欄位。能力設定 only_uses_charges=true，max_charges 讀取 base_charges=3，並無固定 cooldown 欄位。
+              </li>
+              <li>
+                adamant_grenade 投射物設定 fuse_time=2、impact_fuse_time=0、impact_triggered=true，爆炸採 ExplosionTemplates.adamant_grenade；爆炸設定 radius=10、close_radius=2.5、static_power_level=500，並開啟傷害衰減。
+              </li>
+              <li>
+                直接碰撞另引用 adamant_grenade_impact 傷害設定；爆炸傷害使用 adamant_grenade 與 close_adamant_grenade profile。近距離外的最終生命傷害不能只用 500 power 或半徑推成固定傷害數字。
+              </li>
+              <li>
+                ProjectileDamageExtension的impact_triggered分支在碰撞後將引信設為impact_fuse_time=0；不能將fuse_time2直接寫成投出2秒就爆炸。未撞擊保險流程先等待max_lifetime=4，再開始2秒引信，約6秒，另受更新與延遲補償影響。
+              </li>
+              <li>
+                強化版只有充能3→4，沒有套用settings中damage_increase/radius_increase欄位；不把未消費的50%當成增傷。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/adamant_archetype.lua#L56-L59">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L377-L402">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L95-L100">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua#L93-L104">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L1053-L1068">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L377-L396">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/grenade_damage_profile_templates.lua#L425-L434">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L691-L768">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L232-L350">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L691-L814">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/weapon_system.lua#L270-L329">固定版本來源</a>
+              </li>
+            </ul>
+            <h2 id="算例與待確認事項">
+              算例與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>傷害算例</strong>：只計爆炸中央的護甲階段，基準傷害 1,500 對無甲為 1,500 × 1 = 1,500，對防彈護甲為 1,500 × 0.5 = 750，對硬殼護甲為 1,500 × 0.2 = 300。實際還需計入命中部位、爆炸遮蔽及其他增減傷。
+              </li>
+              <li>
+                無撞擊保險引信需先等 4 秒再計 2 秒，約投出 6 秒後引爆；更新與延遲補償仍會影響精確時點。
+              </li>
+              <li>
+                10 公尺是爆炸半徑設定，不保證半徑邊緣仍造成固定可見傷害；來源開啟傷害衰減。
+              </li>
+              <li>
+                傷害還會受近距離/外層 profile、護甲、命中部位及其他修正影響；此稿不將 power level 500 誤作 500 點生命傷害。
+              </li>
+              <li>
+                強化版直接增加攜帶上限；未被生效流程讀取的傷害／半徑設定不計入。
+              </li>
+              <li>
+                本機文字 Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/arbites-grenade-adamant-grenade/">← 返回法務官手榴彈玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="腎上腺素狂暴：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>腎上腺素狂暴：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/adrenaline-frenzy/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">腎上腺素狂暴：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>腎上腺素狂暴：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Adrenaline Frenzy</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/adrenaline-frenzy/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#腎上腺素狂暴adrenaline-frenzy原始碼依據"><span>03</span>腎上腺素狂暴(Adrenaline Frenzy)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="腎上腺素狂暴：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/adrenaline-frenzy/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_keystone_adrenaline_junkie.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="腎上腺素狂暴adrenaline-frenzy原始碼依據">
+              腎上腺素狂暴(Adrenaline Frenzy)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/adrenaline-frenzy/#broker_keystone_adrenaline_junkie">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_keystone_adrenaline_junkie">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_keystone_adrenaline_junkie</code>；名稱鍵：<code>loc_talent_broker_keystone_adrenaline_junkie</code>；描述鍵：<code>loc_talent_broker_keystone_adrenaline_junkie_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_887dd932-ea4e-42cb-b294-64f30771d7e0</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                設定為 regular_grant=1、crit_grant=1、adrenaline_duration=2、adrenaline_max_stacks=30、frenzy_duration=10、frenzy_max_stacks=1、melee_attack_speed=0.1、melee_damage=0.25。
+              </li>
+              <li>
+                proc check 僅接受 attack_type=melee；一般命中給 1 層，CheckProcFunctions.on_crit 另加 1 層。達到 30 層時 on_reached_max_stack_func 加入 frenzy buff，並將堆疊 buff 的 refresh_duration_on_remove_stack 關閉；條件退出隨後清除該層數 buff。
+              </li>
+              <li>
+                adrenaline stack buff 設 refresh_duration_on_stack 與 refresh_duration_on_remove_stack。新層重設共享計時；逾時後內部移除一層並重設計時，因此未命中時逐層每 2 秒衰退。Frenzy buff max_stacks=1 且 refresh_duration_on_stack=true，重觸發可更新其 10 秒持續時間。
+              </li>
+              <li>
+                melee_attack_speed 與 melee_damage 在 buff_settings 都是 additive_multiplier。近戰攻擊速度倍率為 1+0.10=1.10；damage_calculation 將近戰傷害項加到傷害倍率總和，所以其他同階段 +20% 時例為 100×(1+0.20+0.25)=145，而非逐項相乘。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L464-L480">scripts/settings/talent/talent_settings_broker.lua：464–480</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2614-L2697">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2614–2697</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3600-L3685">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3600–3685</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3686-L3759">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3686–3759</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3761-L3804">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3761–3804</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L29-L44">scripts/extension_systems/buff/buffs/buff.lua：29–44</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L619-L630">scripts/extension_systems/buff/buffs/buff.lua：619–630</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L461">scripts/extension_systems/buff/buff_extension_base.lua：434–461</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L631-L663">scripts/extension_systems/buff/buff_extension_base.lua：631–663</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L863-L869">scripts/settings/buff/buff_settings.lua：863–869</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L236-L245">scripts/utilities/attack/damage_calculation.lua：236–245</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L295-L320">scripts/utilities/attack/damage_calculation.lua：295–320</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L582-L612">scripts/utilities/attack/damage_calculation.lua：582–612</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/behavior/nodes/actions/bt_melee_attack_action.lua#L45-L51">scripts/extension_systems/behavior/nodes/actions/bt_melee_attack_action.lua：45–51</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/action_handler.lua#L356-L428">scripts/utilities/action/action_handler.lua：356–428</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2614-L2697">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2614–2697</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L690-L721">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：690–721</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>暴擊算例</strong>：一次一般近戰命中 1 層；若該次暴擊，則 1+1=2 層。
+              </li>
+              <li>
+                <strong>狂暴算例</strong>：攻速倍率 1+0.10=1.10，1 秒動作約 1/1.10=0.91 秒；傷害單計此項為 100×(1+0.25)=125，同階段已有 20% 時為 100×(1+0.20+0.25)=145。
+              </li>
+              <li>
+                近戰傷害算例只表達 damage_calculation 的傷害加法修正階段；武器傷害、部位、護甲、暴擊、弱點與承傷修正仍會影響最終數值。
+              </li>
+              <li>
+                實際攻擊時間還受武器動作與其他速度修正影響；0.91 秒是單計 +10% 速度的比例示例。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>b4493ff1</code>。
+              </li>
+              <li>
+                繁中與英文一致描述近戰命中、暴擊額外層、2 秒失層、30 層門檻及 10 秒近戰攻速／傷害增益；實際層數與重新計時細節由固定版本的 buff 消費邏輯補足。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone/broker_keystone_adrenaline_junkie.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/adrenaline-frenzy/">← 返回腎上腺素狂暴玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

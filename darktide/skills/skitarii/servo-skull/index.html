@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="伺服頭骨 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>伺服頭骨 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/servo-skull/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">伺服頭骨</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>伺服頭骨</h1>
+            <span class="skill-english-name" lang="en">Servo-Skull</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/skitarii/servo-skull/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="伺服頭骨">
+          <a id="伺服頭骨servo-skull"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：伺服頭骨會跟隨你並在戰鬥中射擊敵人；啟動能力後，頭骨的射擊間隔減半、傷害提高25%，效果持續8秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：強化期間頭骨命中敵人時，會使其承受傷害提高15%，持續5秒，並施加1層燃燒；最多累積8層，達到上限後再次命中會重設燃燒的持續時間。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：能力有1次使用次數，冷卻16秒；冷卻會在8秒強化期間暫停，沒有其他冷卻加成時，強化結束後仍需約16秒恢復。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：雙按標記鍵可命令伺服頭骨攻擊已標記敵人；通常至少需要0.3份電容量才能下達射擊命令。雙按標記鍵也能命令頭骨操作可解碼的任務設備，這項操作不消耗能力使用次數。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>冷卻算例</strong>：強化8秒期間暫停冷卻，之後再恢復16秒，從啟動到下一次可用約為8 + 16 = 24秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害與射速算例</strong>：未計其他效果時，原100點傷害變成100 × 1.25 = 125點；原3秒射擊間隔變成3 × 0.5 = 1.5秒。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/skitarii/servo-skull/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/servo-skull/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/BASE_EFFECTS.md#伺服頭骨servo-skull">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_order.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

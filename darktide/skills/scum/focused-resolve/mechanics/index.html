@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="專注凝神：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>專注凝神：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/focused-resolve/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">專注凝神：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>專注凝神：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Focused Resolve</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/focused-resolve/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#專注凝神focused-resolve原始碼依據"><span>03</span>專注凝神(Focused Resolve)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="專注凝神：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/focused-resolve/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_ability_focus_sub_3.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="專注凝神focused-resolve原始碼依據">
+              專注凝神(Focused Resolve)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/focused-resolve/#broker_ability_focus_sub_3">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_ability_focus_sub_3">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_ability_focus_sub_3</code>；名稱鍵：<code>loc_talent_broker_ability_focus_sub_3</code>；描述鍵：<code>loc_talent_broker_ability_focus_sub_3_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_28d7a3c1-58af-42f2-99c4-70b734175557</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                此節點啟用 broker_focus_cooldown_regain；強化專注 buff 的 on_kill 與特定 on_minion_death 共用擊殺處理。一般 on_kill 檢查死亡結果、遠程攻擊（或武器設定視為遠程）及命中點至攻擊者位置在12.5公尺內；此檢查沒有另讀 outline/標記狀態。
+              </li>
+              <li>
+                受害者 breed 標籤含 elite 或 special 時恢復1秒；其他合格擊殺恢復0.5秒。template_data.cooldown_restored 逐次累加，且每次先扣除已恢復量後再受 max_restore=5 限制，因此單次能力狀態總恢復不超過5秒。
+              </li>
+              <li>
+                能力資源設定45點消耗、每秒自然補1點；buff 存續期間自然補充被暫停。restore_ability_resource 仍直接加回資源並受滿值上限約束，因此5點恢復最多把充能需求從45減到40；停止狀態後自然補充再繼續。
+              </li>
+              <li>
+                特殊的間接擊殺來自針槍追蹤：狀態期間僅將指定針槍、遠程攻擊命中且仍存活的敵人記錄為已追蹤；後續 minion death 必須 damage_type=toxin，且死亡位置到 params.attacking_unit 目前位置不超過12.5公尺。這不是任何 toxin 死亡都觸發，攻擊者位置也不保證等於能力持有者的位置。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L220-L260">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：220–260</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L119-L141">scripts/settings/talent/talent_settings_broker.lua：119–141</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/broker_abilities.lua#L37-L65">scripts/settings/ability/player_abilities/abilities/broker_abilities.lua：37–65</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L255-L314">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：255–314</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L398-L450">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：398–450</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/broker_buff_utils.lua#L99-L190">scripts/settings/buff/broker_buff_utils.lua：99–190</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L306-L318">scripts/settings/buff/helper_functions/check_proc_functions.lua：306–318</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L777-L792">scripts/settings/buff/helper_functions/check_proc_functions.lua：777–792</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102">scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L884">scripts/extension_systems/ability/player_unit_ability_extension.lua：839–884</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L220-L260">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：220–260</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L2025-L2047">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：2025–2047</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>冷卻算例</strong>：若沒有其他修正，45秒冷卻按每秒1點充能；一般近距離遠程擊殺每次補0.5秒，精英／專家補1秒，累計最多5秒後自然充能尚需40秒。
+              </li>
+              <li>
+                遠程擊殺觸發依近距離檢查，不會因其他距離的擊殺而恢復；原文所稱標記目標不會由擊殺處理另外檢查標記狀態。
+              </li>
+              <li>
+                針槍毒素間接死亡須此前被指定針槍遠程命中追蹤、毒素致死且死亡位置距攻擊者不超過12.5公尺；不能概括為任何毒素擊殺。
+              </li>
+              <li>
+                最大5秒是單次專注期間的累計上限；冷卻自然充能暫停到專注狀態結束。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>5ba532cd</code>。
+              </li>
+              <li>
+                繁中與英文都寫標記敵人擊殺恢復0.5秒、精英或專家恢復1秒、上限5秒，數值相符。固定版本程式的普通擊殺檢查是近距離遠程擊殺，沒有另外檢查標記旗標；針槍毒素死亡是有追蹤及距離條件的特例，原文省略不等於翻譯錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_focus_sub_3.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/focused-resolve/">← 返回專注凝神玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

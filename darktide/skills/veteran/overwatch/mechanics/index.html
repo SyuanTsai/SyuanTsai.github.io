@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="掩護射擊：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>掩護射擊：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/overwatch/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">掩護射擊：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>掩護射擊：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Overwatch</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/overwatch/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#掩護射擊overwatch原始碼依據"><span>03</span>掩護射擊(Overwatch)</a></li>
+            <li><a href="#圖示來源"><span>04</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="掩護射擊：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/overwatch/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_extra_charge.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="掩護射擊overwatch原始碼依據">
+              掩護射擊(Overwatch)：原始碼依據
+            </h2>
+            <p>
+              來源版本：Release 1.13.1；完整 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+            </p>
+            <p>
+              <a href="/darktide/skills/veteran/overwatch/#veteran_combat_ability_extra_charge">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">來源與限制</a>
+            </p>
+            <ul>
+              <li>
+                名稱鍵：<code>loc_talent_veteran_combat_ability_extra_charge</code>；描述鍵：<code>loc_talent_veteran_combat_ability_extra_charge_description</code>。中文沿用詞表 Overwatch 的「掩護射擊」，名稱對應待確認。
+              </li>
+              <li>
+                節點 <code>node_6469a1ec-589f-49a3-a53e-3676c3181dad</code>，類型 <code>ability_modifier</code>，花費及上限均為 1。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1333-L1355">升級節點</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L295-L327">滲透節點與能力分支</a>。
+              </li>
+              <li>
+                天賦的被動增益直接使用同名模板；模板提供 <code>ability_extra_charges=1</code> 及 <code>combat_ability_resource_cost_per_use_modifier=0.33</code>，效果最多計一次。沒有觸發事件、持續時間、疊層累積或額外目標範圍。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L606-L644">天賦及顯示值</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L358-L366">兩項屬性</a>。
+              </li>
+            </ul>
+            <p>
+              <strong>原始碼確認：對應能力</strong>。滲透天賦配備 <code>veteran_combat_ability_stealth</code>；該能力繼承共用老兵能力設定的 <code>ability_extra_charges</code> 屬性、基礎上限 1 與每秒恢復 1 單位，並改用 40 單位的每次充能成本。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2094-L2112">滲透配備能力</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L7-L24">共用能力設定</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L65-L80">滲透能力覆寫</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L78-L85">基礎上限</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L5-L8">滲透的40秒基準</a>。
+            </p>
+            <p>
+              <strong>程式推導：容量與恢復時間</strong>。最大充能為 <code>基礎上限 + 額外充能屬性</code>，因此本節點使 1 變成 2。每次充能成本為 <code>(基礎成本 + 固定成本增減) × 成本倍率</code>；成本倍率是加算型，本節點加入 0.33。僅此項時為 <code>40 × (1+0.33)=53.2</code>，而不是只花 40×0.33。恢復速率仍為每秒 1，所以基準時間為 53.2 秒。若另有成本增減或恢復速率加成，應先組合各自的屬性再計算，不能將任何配裝都固定寫成 53.2 秒。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L734-L770">容量計算</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461">每次成本公式</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L731-L740">成本屬性型別</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L727">屬性加算規則</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1299-L1320">每次恢復時間換算</a>。
+            </p>
+            <p>
+              <strong>程式推導：同一資源池</strong>。最大資源為 <code>最大充能 × 每次充能成本</code>，本例為 106.4；共用更新每次加上 <code>每秒淨恢復量 × dt</code>，限制在上限內，再以資源除以每次成本、無條件捨去小數換成可用充能。因此從零資源起算，第一份與第二份按累積門檻依序可用，沒有兩個獨立計時器。一般使用只消耗 1 次充能對應的資源，剩餘小數進度仍留在同一資源池。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1323-L1348">資源容量</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L880">恢復與充能門檻</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L999-L1027">按充能扣除資源</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1487-L1511">預設使用1次</a>。
+            </p>
+            <p>
+              <strong>原始碼確認／程式推導：起算與例外</strong>。滲透的施放動作設定為動作開始時消耗成本；共用動作只在存在暫停冷卻設定時暫停恢復，而此能力的定義沒有該設定。因此正常施放產生資源缺額後，共用更新即可恢復，不需要等隱身效果結束。若其他系統設定了恢復暫停或調整恢復屬性，則依共用更新規則處理。提高充能上限時，共用更新可能補給新增容量，但有重生跳過旗標，不能宣稱任何重生或重配裝時都必定立即給滿兩次。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/veteran_stealth_combat_ability.lua#L90-L101">施放開始扣除</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_ability_base.lua#L25-L43">共用動作扣除及暫停條件</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L788-L803">容量變動與重生例外</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L826-L860">恢復暫停檢查</a>。
+            </p>
+            <p>
+              <strong>顯示與待確認</strong>：顯示參數也從同一模板取得 +1 次與 +33%，這兩個值與執行屬性一致；已比對本體繁中模板，最終格式化顯示仍待遊戲內核對。精確可用時刻受固定更新、小數精度及其他效果影響；53.2／106.4 秒是明列假設下的資源模型推導，不是遊戲內碼表實測。滲透的完整隱身／仇恨／傷害效果不在此升級節點的完成範圍。
+            </p>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_combat_ability_extra_charge.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/overwatch/">← 返回掩護射擊玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

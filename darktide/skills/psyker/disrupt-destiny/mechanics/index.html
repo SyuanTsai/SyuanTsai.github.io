@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="擾動命運：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>擾動命運：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/disrupt-destiny/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">擾動命運：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>擾動命運：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Disrupt Destiny</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/psyker/disrupt-destiny/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#擾動命運disrupt-destiny原始碼依據"><span>03</span>擾動命運(Disrupt Destiny)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="擾動命運：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/psyker/disrupt-destiny/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_new_mark_passive.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="擾動命運disrupt-destiny原始碼依據">
+              擾動命運(Disrupt Destiny)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/disrupt-destiny/#psyker_new_mark_passive">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜<a href="/darktide/skills/psyker/localization-comparison/#psyker_new_mark_passive">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>psyker_new_mark_passive</code>；名稱鍵：<code>loc_talent_psyker_marked_enemies_passive</code>；描述鍵：<code>loc_talent_psyker_marked_enemies_passive_updated_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_44ce21ca-9b23-46b9-a6df-eae7ee03114b</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                選敵函式查詢 40 公尺範圍，只接受 breed.psyker_mark_target 為 true 的存活敵人；水平視角 dot 必須大於 0.5，且 perception_extension 回報有視線。初次選敵取廣域查詢中第一個有效目標；重選時以最後死亡位置附近距離最近的有效目標為準。
+              </li>
+              <li>
+                更新函式約每秒檢查目前目標是否仍可見；目標死亡或可見／交戰條件逾時會走重選邏輯。這個更新節奏不是每秒標記機率。
+              </li>
+              <li>
+                on_hit 處理先要求 attacking_unit 等於玩家自身，再要求 attack_result 為 died 且 victim_unit 等於 current_target；滿足後才發放移速／韌性 buff 與一層精準度，然後從命中位置重新選敵。
+              </li>
+              <li>
+                若不是擊殺，玩家攻擊目前標記目標或符合 boss tags 的目標時，只要已有精準層數便呼叫 refresh_duration_of_stacking_buff，重新計時堆疊 buff 持續時間。
+              </li>
+              <li>
+                精準 buff duration=5、max_stacks=15，且 refresh_duration_on_stack 與 refresh_duration_on_remove_stack 均為 true。到期堆疊移除一層後會將剩餘堆疊的 start time 重設，因此逐層衰減，不是各層獨立計時。
+              </li>
+              <li>
+                傷害計算先將一般傷害 buff 套到 base damage，再額外計算 finesse boost；弱點與暴擊加成只在條件成立時套用，兩者同時成立時，finesse multiplier 內的弱點與暴擊增幅相加。
+              </li>
+              <li>
+                獎勵buff韌性恢復率為.25/2.5每秒，移速+.2、持續2.5秒。
+              </li>
+              <li>
+                遠程閃避標記使用{[keywords.count_as_dodge_vs_ranged]=true}字典；table.enum值為字串，而Buff初始化取#template.keywords、更新按數字索引讀取。因此該宣告不能作為已生效遠程閃避的證據，玩家說明不列此效果。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1957-L2066">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1957–2066</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L639-L733">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：639–733</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L741-L755">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：741–755</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L765-L840">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：765–840</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L841-L895">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：841–895</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L924-L971">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：924–971</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L973-L1019">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：973–1019</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L16-L18">scripts/settings/talent/talent_settings_psyker.lua：16–18</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L587-L614">scripts/utilities/attack/damage_calculation.lua：587–614</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782">scripts/utilities/attack/damage_calculation.lua：672–782</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L462">scripts/extension_systems/buff/buff_extension_base.lua：434–462</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L635-L663">scripts/extension_systems/buff/buff_extension_base.lua：635–663</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua#L108-L119">scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua：108–119</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L130-L139">scripts/extension_systems/buff/buffs/buff.lua：130–139</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L809-L818">scripts/extension_systems/buff/buffs/buff.lua：809–818</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/foundation/utilities/table.lua#L1110-L1126">scripts/foundation/utilities/table.lua：1110–1126</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1957-L2066">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1957–2066</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1266-L1295">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1266–1295</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>傷害算例</strong>：只計一般增傷，100 × (1 + 15%) = 115 點。再看弱點這一項：假設同次命中已算入一般增傷後，基礎部分為 100、弱點額外部分為 50，加上 37.5% 弱點加成後為 100 + 50 × 1.375 = 168.75 點，相較這一階段原有 150 點增加 12.5%。武器的額外傷害比例不同，整次命中的增幅也不同。
+              </li>
+              <li>
+                <strong>重新計時與衰減</strong>：精準加成共用 5 秒倒數。新增層數，或已有層數時命中仍存活的標記目標或首領，都會重設倒數。到期只掉一層，再倒數 5 秒；例如 3 層且未再觸發重新計時，約在 5、10、15 秒依序降至 2、1、0 層。
+              </li>
+              <li>
+                breed.psyker_mark_target 決定哪些敵種可成為候選；玩家文案只寫「可被標記的敵人」，不逐種列名。
+              </li>
+              <li>
+                新增層或合格的非擊殺命中會重設整組計時；到期只掉一層並重啟剩餘層倒數。
+              </li>
+              <li>
+                同時暴擊／弱點的傷害算例假設直擊與 finesse 額外傷害各 100，且沒有護甲曲線與其他加成，不能當作所有武器的固定最終傷害。
+              </li>
+              <li>
+                其他天賦可把上限改為25、持續時間改為10秒，或讓弱點擊殺一次給3層；這些 modifier 的變體另行記錄。
+              </li>
+              <li>
+                source SHA 與本機 Build 25606770 版本對應為1.13.1。
+              </li>
+              <li>
+                同時暴擊並命中弱點時，兩種額外加成於共同finesse階段相加；沒有命中條件的加成不生效。遠程閃避keyword宣告未符合陣列格式，遊戲內表現留待確認。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>cfa752d8</code>。
+              </li>
+              <li>
+                現有本地化說明寫成每秒機率標記；源碼選敵邏輯則依可標記敵種、前向視角及視線條件挑選，逐秒只是目標狀態檢查／重選節奏。文字與程式來源皆為1.13.1；先保留差異待遊戲內核對。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone/psyker_new_mark_passive.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/disrupt-destiny/">← 返回擾動命運玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

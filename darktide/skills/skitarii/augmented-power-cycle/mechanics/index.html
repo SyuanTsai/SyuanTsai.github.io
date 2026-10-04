@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="強化能量循環：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>強化能量循環：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/augmented-power-cycle/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">強化能量循環：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>強化能量循環：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Augmented Power-Cycle</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/augmented-power-cycle/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#強化能量循環augmented-power-cycle原始碼依據"><span>03</span>強化能量循環(Augmented Power-Cycle)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="強化能量循環：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/augmented-power-cycle/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_increased_passive_cooldown_regen.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="強化能量循環augmented-power-cycle原始碼依據">
+              強化能量循環(Augmented Power-Cycle)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/augmented-power-cycle/#cryptic_increased_passive_cooldown_regen">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_increased_passive_cooldown_regen">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_increased_passive_cooldown_regen</code>；名稱鍵：<code>loc_talent_cryptic_increased_passive_cooldown_regen</code>；描述鍵：<code>loc_talent_cryptic_increased_passive_cooldown_regen_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_b540e7b8-df34-4676-b412-e95eec0b05b0</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦設定 cooldown_percent_regen_per_second=0.01；模板將其換算為 combat_ability_resource_regen_modifier 的 +0.5：基準冷卻50秒 ÷ (1 / 0.01) = 0.5。此 stat buff 是 additive multiplier，故預設修正1變為1.5，並乘上基礎電容量恢復率。
+              </li>
+              <li>
+                護教軍電能發射器每道成本50、最多3道、基礎恢復1資源點/秒；資源池容量由 max_charges × cost_per_charge 得150。加成後以1.5點/秒恢復，資源仍以小數累進，但可用完整道數按 floor(資源 / 50) 計算。
+              </li>
+              <li>
+                這個恢復倍率套用於目前戰鬥技能資源。精準姿態設有啟動期間每秒1點的持續成本，所以同時選取本天賦時，僅就此持續成本而言淨恢復為每秒0.5點；姿態本身的啟動與射擊耗電仍另計。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1652-L1674">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1652–1674</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L1-L13">scripts/settings/talent/talent_settings_cryptic.lua：1–13</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L444-L446">scripts/settings/talent/talent_settings_cryptic.lua：444–446</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L2073-L2089">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：2073–2089</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L70-L91">scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：70–91</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L116-L130">scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：116–130</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L846-L869">scripts/extension_systems/ability/player_unit_ability_extension.lua：846–869</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1323-L1345">scripts/extension_systems/ability/player_unit_ability_extension.lua：1323–1345</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1652-L1674">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1652–1674</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1486-L1512">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1486–1512</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>時間算例</strong>：沒有其他加成或持續消耗時，一份從空補滿需 100% ÷ 3% ≈ 33.33 秒，三份全空補滿需 300% ÷ 3% = 100 秒。
+              </li>
+              <li>
+                1%是以單道50點成本換算的額外恢復速率，不是每秒補滿整個三道資源池的1%。
+              </li>
+              <li>
+                例算假設戰鬥技能未啟動、沒有暫停恢復或其他恢復倍率／持續消耗；實際恢復會由能力目前狀態共同決定。
+              </li>
+              <li>
+                文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>34a7eed6</code>。
+              </li>
+              <li>
+                已逐項比對本機同一描述鍵的繁中與英文，觸發、作用方向及數值占位一致；主文補充實際分母、時間與限制，省略細節不列錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_increased_passive_cooldown_regen.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/augmented-power-cycle/">← 返回強化能量循環玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

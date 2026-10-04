@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="醫療伺服頭骨：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>醫療伺服頭骨：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/medicae-servo-skull/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">醫療伺服頭骨：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>醫療伺服頭骨：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Medicae Servo-Skull</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/medicae-servo-skull/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#醫療伺服頭骨medicae-servo-skull原始碼依據"><span>03</span>醫療伺服頭骨(Medicae Servo-Skull)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="醫療伺服頭骨：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/medicae-servo-skull/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_inject_ally.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="醫療伺服頭骨medicae-servo-skull原始碼依據">
+              醫療伺服頭骨(Medicae Servo-Skull)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/medicae-servo-skull/#cryptic_servo_skull_inject_ally">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_servo_skull_inject_ally">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_servo_skull_inject_ally</code>；名稱鍵：<code>loc_talent_cryptic_servo_skull_inject_ally</code>；描述鍵：<code>loc_talent_cryptic_servo_skull_inject_ally_revive_new_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_f09fc8b6-be58-4bca-8d9c-b4ed66c72473</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                特長加入 cryptic_servo_skull_inject_ally 規則；生成函式因此生成額外醫療頭骨並設 can_shoot=false。下令時從目標玩家單位取得醫療頭骨，驗證它存活且狀態為 following，目標必須是玩家單位、PlayerUnitStatus.requires_allied_interaction_help 為真、沒有吊掛在邊緣，且不在已被協助狀態。能力設定注入消耗量1，啟動狀態 inject_ally 並消耗1次 grenade_ability。注射動作設定 revive=true、延遲1秒後救援，並給予暫時無敵效果。注射後 cryptic_servo_skull_medicae_buff 持續5秒；其韌性承傷乘數為0.25（即承受原傷害的25%，減少75%），每幀按 0.2 × dt 呼叫 recover_percentage_toughness，亦即每秒恢復最大韌性的20%，但受韌性上限約束。talent_settings 還保留 toughness_bonus=50 與 instant_toughness_percent=0.5 的格式值，但原始碼中未找到它們的執行端；實際治療流程目前引用的是上述每秒恢復與承傷乘數。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L711-L779">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：711–779</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L43-L49">scripts/settings/talent/talent_settings_cryptic.lua：43–49</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/spawn_companions_from_talent.lua#L39-L54">scripts/utilities/spawn_companions_from_talent.lua：39–54</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/companion/companion_servo_skull_ability.lua#L39-L55">scripts/utilities/companion/companion_servo_skull_ability.lua：39–55</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/companion/companion_servo_skull_ability.lua#L305-L389">scripts/utilities/companion/companion_servo_skull_ability.lua：305–389</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/companion/companion_servo_skull_settings.lua#L15-L19">scripts/settings/companion/companion_servo_skull_settings.lua：15–19</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/breed/breed_actions/companion/companion_servo_skull_actions.lua#L91-L104">scripts/settings/breed/breed_actions/companion/companion_servo_skull_actions.lua：91–104</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1049-L1061">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1049–1061</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/toughness/toughness.lua#L16-L24">scripts/utilities/toughness/toughness.lua：16–24</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1211-L1241">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1211–1241</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L15-L29">scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：15–29</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L734-L770">scripts/extension_systems/ability/player_unit_ability_extension.lua：734–770</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/companion/companion_servo_skull_ability.lua#L391-L420">scripts/utilities/companion/companion_servo_skull_ability.lua：391–420</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L711-L779">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：711–779</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1625-L1648">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1625–1648</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                最大韌性100點的隊友在完整5秒恢復期間每秒恢復20點，合計最多100點（若未先達上限）；韌性承傷則維持原本的25%。
+              </li>
+              <li>
+                若玩家同時擁有噴火與醫療兩台頭骨，任一有效噴火指令或一次救援各消耗共用池1次；兩者上限基礎3次，雙選時為5次。
+              </li>
+              <li>
+                只可指定目前需要盟友協助、且未吊掛邊緣或已進入其他協助狀態的玩家隊友；頭骨還必須存活並處於跟隨狀態。
+              </li>
+              <li>
+                每秒恢復量以受援者最大韌性為基準，實際恢復會受韌性上限影響。
+              </li>
+              <li>
+                固定來源定義 +50 韌性與立即恢復最大韌性50%的格式值，但醫療頭骨執行路徑未讀取它們；實際確認到的是每秒恢復20%與韌性承傷乘數0.25。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>86ee1b55</code>。
+              </li>
+              <li>
+                繁中描述已涵蓋救援、75%韌性承傷減免、每秒20%韌性恢復與5秒持續。程式確認承傷乘數0.25代表減免75%，並確認有效目標判斷與共用次數消耗；翻譯沒有列出這些條件屬機制省略。Build 25606770 版本對應為1.13.1。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_servo_skull_inject_ally.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/adeeeef3-0c2e-450a-974b-66ce6c6366bd">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/medicae-servo-skull/">← 返回醫療伺服頭骨玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

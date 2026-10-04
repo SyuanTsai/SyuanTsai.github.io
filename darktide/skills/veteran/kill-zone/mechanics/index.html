@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="殺戮地帶：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>殺戮地帶：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/kill-zone/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">殺戮地帶：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>殺戮地帶：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Kill Zone</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/kill-zone/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#殺戮地帶kill-zone原始碼依據"><span>03</span>殺戮地帶(Kill Zone)</a></li>
+            <li><a href="#遊戲本體繁中對照"><span>04</span>遊戲本體繁中對照</a></li>
+            <li><a href="#圖示來源"><span>05</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="殺戮地帶：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/kill-zone/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_ranged_power_out_of_melee.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="殺戮地帶kill-zone原始碼依據">
+              殺戮地帶(Kill Zone)：原始碼依據
+            </h2>
+            <p>
+              來源版本：Release 1.13.1；完整 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+            </p>
+            <p>
+              <a href="/darktide/skills/veteran/kill-zone/#veteran_ranged_power_out_of_melee">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">來源與限制</a>
+            </p>
+            <ul>
+              <li>
+                名稱 key：<code>loc_talent_veteran_ranged_power_out_of_melee</code>；描述 key：<code>loc_talent_veteran_ranged_power_out_of_melee_new_desc</code>。中文沿用詞表 Kill Zone 譯名，key 對應暫定、待使用者確認。
+              </li>
+              <li>
+                節點 <code>node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d</code>，<code>default</code>，1 點，上限 1。來源見<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L691-L720">節點來源</a>。無 ability 替換、疊層或獨有互斥宣告。
+              </li>
+              <li>
+                本文為程式分析，未進行遊戲內驗證。
+              </li>
+            </ul>
+            <p>
+              <strong>原始碼確認 — 條件與持續</strong>：talent 安裝同名 passive Buff；訂閱 <code>on_player_hit_received</code>，只在 <code>attack_type == melee</code> 且 <code>attacked_unit</code> 是自己時，寫入 <code>last_hit_t=t</code>。固定更新以 <code>t &gt; last_hit_t + 8</code> 決定是否提供 <code>ranged_damage=0.15</code>。沒有附近敵人查詢、擊殺、暴擊、協同或距離門檻，也沒有疊層；生效後持續到下一個合格命中令條件失效。這是本人傷害 stat，不直接施加隊友。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1530-L1560">talent 與舊顯示資料</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L680-L719">Buff 完整邏輯</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L191-L193">8 秒設定</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L368-L370">近戰判斷</a>。
+            </p>
+            <p>
+              <strong>原始碼確認 — 事件限制</strong>：該事件由伺服器為玩家目標送出，需通過共用 <code>should_proc</code> 及事件去重；此 Buff predicate 沒有要求傷害值大於 0。因此只能描述為「收到合格的近戰命中事件」，不能自行添加必須扣生命、不能被韌性吸收等限制。遠程命中不改此計時器。共用攻擊流程會排除玩家對友方目標，<code>grimoire</code> damage type 不觸發 proc。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L752-L782">受擊事件</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L550-L581">友方與 should_proc</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L86-L88">排除 damage type</a>。是否所有格擋／閃避情境都會到達此路徑，需要各攻擊呼叫端逐項核對；不作通用保證。
+            </p>
+            <p>
+              <strong>程式推導 — 加算位置</strong>：<code>ranged_damage</code> 是 <code>additive_multiplier</code>；Buff 的條件成立才將 0.15 加入該 stat。傷害計算將 <code>(ranged_damage - 1)</code> 加入一般 damage stat 合計；遠程判定接受 <code>attack_type=ranged</code> 或 profile 的 <code>count_as_ranged_attack</code>。因此 +15 個百分點加入此加算部分，不能無條件宣稱所有最終傷害乘 1.15；例如該部分原為 1.25，加入後為 1.40，此部分相對增加 12%。其他裝甲、profile、弱點及後續傷害步驟仍適用。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L938-L950">stat 類型</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L727">條件與 stat 聚合</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L236-L245">合計起點與遠程判定</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L317-L319">遠程傷害加入合計</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L575-L584">後續倍率與回傳</a>。
+            </p>
+            <p>
+              <strong>程式推導 — 邊界與更新順序</strong>：初始化是 <code>last_hit_t=0</code>，不是「安裝時間」。若目前任務時間已大於 8，首次 update 即可生效；不能說每次重新配裝必須固定等待 8 秒。若 t=100 受擊，t=108 恰好相等仍不生效，第一個大於 108 的 update 才生效；期間再受擊會延後完整門檻。沒有自然 duration 或一次性消耗。Buff 固定更新先計算條件、再處理事件、最後更新 stats；事件改 timestamp 後，條件布林可能到下一輪才更新，精確畫面／攻擊幀的延遲未實測。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L690-L715">初始化與條件</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/player_unit_buff_extension.lua#L131-L144">固定更新順序</a>。
+            </p>
+            <p>
+              <strong>顯示差異與待確認</strong>：talent 內部 <code>name</code> 仍描述附近無敵人，format_values 也保留 radius；目前實際增益效果使用「上次近戰受擊時間」，不能以舊描述取代執行邏輯。後續已取得本機Build 25606770的繁中模板；其8秒誤譯見下方對照。radius未出現在目前模板，不將未使用的格式參數當成原文錯誤。中文 key 對應與遊戲內表現待確認；不影響以上靜態條件和數值。POC 案例見 <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/docs/POC.md">POC</a>。
+            </p>
+            <h2 id="遊戲本體繁中對照">
+              遊戲本體繁中對照
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  文字來源：本機Steam Build <code>25606770</code>，<code>content/localization/ui</code>，2026-10-01擷取；不是MOD文字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  語系鍵：<code>loc_talent_veteran_ranged_power_out_of_melee_new_desc</code>；hash：<code>4da1db07</code>；繁中entry_index：<code>5056</code>；英文entry_index：<code>5056</code>。以資源＋hash配對，已確認兩語系此hash各一筆。
+                </p>
+              </li>
+              <li>
+                <p>
+                  繁中問題片段：「持續{cooldown:%s}秒」；同版英文對照片段：<code>avoided Melee Attacks for {cooldown:%s}s</code>。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  判定：<strong>明確繁中描述錯誤</strong>。把生效等待時間譯成持續時間：同版英文的for cooldown seconds修飾避開近戰的期間；繁中改成傷害加成持續時間。buff以last_hit_t+cooldown判定，沒有8秒增傷到期機制。
+                </p>
+              </li>
+              <li>
+                <p>
+                  本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="/darktide/skills/veteran/localization-comparison/">完整比對範圍與版本限制</a>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L680-L719">公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第680–719行</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L191-L193">公開依據：scripts/settings/talent/talent_settings_veteran.lua，第191–193行</a>
+                </p>
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_ranged_power_out_of_melee.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/kill-zone/">← 返回殺戮地帶玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

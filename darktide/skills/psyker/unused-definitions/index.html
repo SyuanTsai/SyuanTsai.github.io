@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="靈能者：未使用定義（技術補充） · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>靈能者：未使用定義（技術補充） · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/unused-definitions/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">靈能者：未使用定義（技術補充）</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>靈能者：未使用定義（技術補充）</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術補充 · 非當前可選技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="靈能者：未使用定義（技術補充）">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/psyker/">← 返回靈能者</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/UNUSED_DEFINITIONS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="靈能者當前技能樹未直接使用的定義">
+              靈能者：當前技能樹未直接使用的定義
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/source-index/">返回技術索引</a>｜<a href="/darktide/skills/psyker/base-effects/">角色基礎效果</a>
+            </p>
+            <p>
+              比對固定 SHA <code>7e662fcda16219d775b84af50322be2e9cd9d62e</code> 的技能樹、職業基礎天賦與天賦定義。本表表示沒有獨立節點直接引用該識別碼；相關增益或特殊規則可能已併入其他技能。
+            </p>
+            <p>
+              職業天賦檔共有 98 項定義；目前樹使用其中 78 項，另使用 3 項通用屬性定義，共 81 項。其餘 20 項中，4 項為職業基礎效果，另外 16 項列於下表。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      talent ID
+                    </th>
+                    <th>
+                      判定
+                    </th>
+                    <th>
+                      定義與實作來源
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <code>psyker_shout_damage_per_warp_charge</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載。喊聲的傷害分支仍存在，但必須有此特殊規則才會改用傷害設定，不能加入基礎喊聲說明。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L344-L375">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_psyker_shout.lua#L220-L240">引用核對 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_overcharge_reduced_toughness_damage_taken</code>
+                    </td>
+                    <td>
+                      效果仍由占卜者的注視掛載；不是獨立節點。注視期間承受韌性傷害乘 0.8，即降低 20%，不等同生命減傷。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L537-L560">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L37-L112">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1227-L1244">引用核對 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_throwing_knives_combat_ability_recharge</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載。保留模板在使用戰鬥技能時補回閃擊次數，不能把舊名稱／註解解讀為目前的擊殺恢復效果。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L803-L818">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2789-L2803">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L19-L21">引用核對 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_warp_charge_generation_generates_toughness</code>
+                    </td>
+                    <td>
+                      效果仍由心如止水掛載；不是獨立節點。心如止水同時安裝反噬增加及降低的韌性恢復模板，不能因舊節點不存在就排除增加反噬時的恢復。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1009-L1031">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1449-L1467">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/warp_charge.lua#L11-L26">引用核對 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L980-L1008">引用核對 3</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_souls_increase_damage</code>
+                    </td>
+                    <td>
+                      效果仍由亞空間虹吸掛載；不是獨立節點。依持有的亞空間充能提供傷害加成，已併入該鑰石說明。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1270-L1286">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1235-L1242">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L410-L460">引用核對 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1528-L1548">引用核對 3</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_increased_chain_lightning_size</code>
+                    </td>
+                    <td>
+                      效果仍由懲戒掛載；不是獨立節點。其設定提供額外 1 次連鎖、1 公尺半徑，角度修正為 0；已計入懲戒的數值。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1303-L1330">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L340-L347">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L199-L230">引用核對 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2159-L2167">引用核對 3</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L333-L338">引用核對 4</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_2_tier_3_name_3</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載。保留模板會在對應蓄力攻擊命中時施加非亞空間傷害易傷；模板存在不代表基礎閃擊自帶此效果。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1434-L1447">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1858-L1889">引用核對 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_aura_toughness_on_ally_knocked_down</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載。隊友倒地時恢復協同成員韌性的模板仍存在，不能併入現有光環。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1448-L1463">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L3138-L3160">引用核對 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_boost_allies_passing_through_force_field</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載。穿越力場取得移動及韌性保護的模板仍存在，每座力場對同一玩家只記錄一次；不是目前力場自帶效果。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1643-L1675">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2570-L2609">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2610-L2624">引用核對 2</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_souls_restore_cooldown_on_ability</code>
+                    </td>
+                    <td>
+                      同一特殊規則仍由亞空間虹吸提供；不是獨立節點。使用戰鬥技能時依亞空間充能縮短冷卻並消耗充能，已併入該鑰石說明。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1806-L1819">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L410-L460">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L217-L227">引用核對 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L289-L312">引用核對 3</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_mark_increased_range</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載；標記流程也未讀取此規則。現行搜尋距離直接使用 40 公尺，不能把舊定義的 25→40 公尺顯示參數當成可選升級。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2067-L2102">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2067-L2101">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L639-L653">引用核對 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L765-L772">引用核對 3</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L819-L833">引用核對 4</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_mark_increased_mark_targets</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載；只保留特殊規則占位，未找到標記流程的實際讀取。不能由識別碼推論增加多少目標。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2175-L2184">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L819-L839">引用核對 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_blocking_soulblaze</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載，且其指向的同名增益模板不存在。現行骨折後遺症僅重用圖示路徑，不能據此視為格擋施加靈魂之火。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2281-L2296">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1816-L1823">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2297-L2324">引用核對 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L3190-L3228">引用核對 3</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_soulblaze_reduces_damage_taken</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載。保留模板在持有者施加靈魂之火時提供韌性保護；事件中的 buffer_unit 是施加者，並非被燃燒的目標。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2431-L2467">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L3394-L3413">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L81-L83">引用核對 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L79-L99">引用核對 3</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_ranged_crits_vent</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載。保留模板處理非亞空間遠程暴擊時的反噬降低，不能列為目前被動效果。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2468-L2494">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L3414-L3455">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L72-L75">引用核對 2</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/warp_charge.lua#L92-L114">引用核對 3</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/shared_overheat_and_warp_charge_functions.lua#L18-L24">引用核對 4</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>psyker_force_staff_wield_speed</code>
+                    </td>
+                    <td>
+                      未由目前技能樹或職業基礎天賦掛載。保留模板依反噬調整通用切換速度，模板內沒有法杖類型條件；不能僅依舊名稱判定適用武器。
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2576-L2591">天賦定義</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L3613-L3633">引用核對 1</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L89-L92">引用核對 2</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 id="判讀界線">
+              判讀界線
+            </h2>
+            <ul>
+              <li>
+                其中 5 項的效果或特殊規則仍由目前可選技能提供：注視的韌性保護、心如止水的產生反噬恢復、亞空間虹吸的傷害與冷卻、懲戒的連鎖修正。這些已納入對應技能，不能列為無效。
+              </li>
+              <li>
+                其餘 11 項區分為未掛載的保留實作、未被讀取的規則及缺少模板的殘留定義；沒有把它們一律稱為已停用。
+              </li>
+              <li>
+                未掛載判定以本固定版本的職業基礎清單、81 個可選節點及其實際增益／特殊規則引用為範圍；不宣稱其他模式、測試工具或未來版本不會引用。
+              </li>
+              <li>
+                本機 Steam Build 25606770 與此公開來源版本對應為1.13.1，未進行遊戲內測試。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/">← 返回靈能者技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

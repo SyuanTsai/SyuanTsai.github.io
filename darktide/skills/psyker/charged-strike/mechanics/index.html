@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="蓄力打擊：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>蓄力打擊：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/charged-strike/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">蓄力打擊：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>蓄力打擊：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Charged Strike</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/psyker/charged-strike/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#蓄力打擊charged-strike原始碼依據"><span>03</span>蓄力打擊(Charged Strike)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="蓄力打擊：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/psyker/charged-strike/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_chain_lightning_heavy_attacks.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="蓄力打擊charged-strike原始碼依據">
+              蓄力打擊(Charged Strike)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/charged-strike/#psyker_chain_lightning_heavy_attacks">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜<a href="/darktide/skills/psyker/localization-comparison/#psyker_chain_lightning_heavy_attacks">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>psyker_chain_lightning_heavy_attacks</code>；名稱鍵：<code>loc_talent_psyker_chain_lightning_heavy_attacks</code>；描述鍵：<code>loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_d958faa6-e3ea-4c79-bc84-3477063b09f7</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                固定原始碼 SHA 7e662fcda16219d775b84af50322be2e9cd9d62e。此天賦掛載命中觸發效果，並以 CheckProcFunctions.on_heavy_hit 篩選重擊。觸發後，命中目標被加上 psyker_heavy_swings_shock；若同時擁有衰弱詛咒，則改用 psyker_heavy_swings_shock_improved。兩者由短暫電擊效果模板複製而來，duration=2，max_stacks=1，並以 psyker_heavy_swings_shock 傷害設定造成電擊期間的持續傷害。此天賦本身不提供固定的近戰傷害加成。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1949-L1971">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1949–1971</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2519-L2529">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：2519–2529</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L3518-L3537">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：3518–3537</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L1088-L1132">scripts/settings/buff/weapon_buff_templates.lua：1088–1132</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2519-L2529">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：2519–2529</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1949-L1971">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1949–1971</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>搭配衰弱詛咒</strong>：這 2 秒電擊也會使目標受到的傷害增加 10%。只比較該承傷倍率，原本 100 點傷害變成 100 × 1.1 = 110 點。
+              </li>
+              <li>
+                若同時選取衰弱詛咒，目標會改用強化電擊版本並承受該天賦的全來源增傷；未選取時只有電擊與持續傷害。
+              </li>
+              <li>
+                目標電擊效果的最大疊層為 1；傷害量仍依目標、攻擊狀態與傷害設定變動，原始碼片段未給可套用所有敵人的固定數值。
+              </li>
+              <li>
+                文字與程式來源皆為1.13.1；實際表現待遊戲內核對；未做遊戲內測試。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>e84d2a21</code>。
+              </li>
+              <li>
+                本地繁中說明列出近戰重擊電擊並造成傷害，與固定原始碼的重擊命中觸發及兩秒持續傷害效果相符。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical_modifier/psyker_chain_lightning_heavy_attacks.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/charged-strike/">← 返回蓄力打擊玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

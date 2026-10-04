@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="老兵：角色基礎效果 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>老兵：角色基礎效果 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/base-effects/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">老兵：角色基礎效果</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>老兵：角色基礎效果</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="老兵：角色基礎效果">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/">← 返回老兵</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/BASE_EFFECTS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="老兵基礎效果">
+              老兵基礎效果
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/">返回老兵天賦</a>｜<a href="/darktide/skills/veteran/source-index/">來源索引</a>
+            </p>
+            <p>
+              下列效果由角色基礎配置提供；可替換的手雷與光環依配裝選擇變更。起始戰鬥技能另見<a href="/darktide/skills/veteran/volley-fire/#veteran_combat_ability_stance">火力齊射</a>。
+            </p>
+            <h2 id="破片手雷frag-grenade">
+              破片手雷(Frag Grenade)
+            </h2>
+            <ul>
+              <li>
+                可攜帶 3 顆破片手雷，投出後約 1.7 秒引爆。爆炸半徑 10 公尺，中央 2 公尺為高傷害區，外圍傷害逐漸降低。
+              </li>
+              <li>
+                未計其他加成與部位修正，中央爆炸對無甲目標的基礎傷害為 500；對甲殼護甲的倍率為 0.2，因此為 <code>500 × 0.2 = 100 點</code>。
+              </li>
+              <li>
+                選擇粉碎者破片手雷會為合格爆炸命中加上流血；穿甲手雷或煙霧手雷則會替換目前的手雷種類。基礎破片手雷本身沒有流血效果。
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/veteran/frag-grenade/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <h2 id="拾荒者scavenger">
+              拾荒者(Scavenger)
+            </h2>
+            <ul>
+              <li>
+                你或受到這個光環影響的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充最大備用彈藥量的 0.25%；光環觸發冷卻為 5 秒。
+              </li>
+              <li>
+                最大備用彈藥 400 發時，一次補給為 <code>400 × 0.25% = 1 發</code>。不足一發的部分會累積到後續補給，不會每次直接捨棄。
+              </li>
+              <li>
+                補入備用彈藥，不會直接裝填；最多補至備用彈藥上限加上彈匣缺少的彈量。生存專家光環將這項比例提高至 0.5%，不是再額外加上 0.5%。
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/veteran/scavenger/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <h2 id="掩體探身cover-peeking">
+              掩體探身(Cover Peeking)
+            </h2>
+            <ul>
+              <li>
+                蹲在合適的掩體後方，使用支援探身的武器瞄準時，可以抬高視線越過掩體。
+              </li>
+              <li>
+                掩體必須夠近，高度也必須位於可探身範圍；離開掩體、失去可探身條件或結束瞄準時，就會停止探身。
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/veteran/cover-peeking/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <h2 id="壓制免疫suppression-immunity">
+              壓制免疫(Suppression Immunity)
+            </h2>
+            <ul>
+              <li>
+                不會因敵人的火力壓制而累積壓制效果。
+              </li>
+              <li>
+                這項免疫不會減少被子彈命中的傷害，也不代表免疫擊退、倒地或其他控制。
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/veteran/suppression-immunity/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <h2 id="基礎遠程傷害加成increased-ranged-damage">
+              基礎遠程傷害加成(Increased Ranged Damage)
+            </h2>
+            <ul>
+              <li>
+                遠程傷害增加 25%，與同一階段的傷害加成相加。
+              </li>
+              <li>
+                基礎傷害 100 點、沒有其他加成時，結果為 <code>100 × (1 + 25%) = 125 點</code>。若再獲得 15% 同階段遠程加成，則為 <code>100 × (1 + 25% + 15%) = 140 點</code>。
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/veteran/increased-ranged-damage/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <h2 id="生存專家基礎被動survivalist-passive">
+              生存專家（基礎被動）(Survivalist Passive)
+            </h2>
+            <ul>
+              <li>
+                親自擊殺精英或專家敵人時，補充自己最大備用彈藥量的 1%，每 5 秒最多觸發一次。
+              </li>
+              <li>
+                最大備用彈藥 400 發時，一次補充 <code>400 × 1% = 4 發</code>。不足一發的部分累積到後續補給；直接補入備用彈藥，不會裝填。
+              </li>
+              <li>
+                這份個人補給與拾荒者／生存專家光環分開計算。若1%被動與0.5%光環同次觸發，最大備用彈藥400發時，本人合計得到 <code>400 × (1% + 0.5%) = 6 發</code>，仍受可補充彈量上限限制。
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/veteran/survivalist-passive/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

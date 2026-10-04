@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="歐格林：角色基礎效果 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>歐格林：角色基礎效果 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/base-effects/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">歐格林：角色基礎效果</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>歐格林：角色基礎效果</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="歐格林：角色基礎效果">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/">← 返回歐格林</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/BASE_EFFECTS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="歐格林基礎效果">
+              歐格林基礎效果
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/">返回歐格林天賦</a>｜<a href="/darktide/skills/ogryn/source-index/">來源索引</a>
+            </p>
+            <p>
+              以下效果由角色基礎配置提供；戰鬥技能、閃擊與光環可依配裝替換。
+            </p>
+            <p>
+              <a id="ogryn_charge"></a>
+            </p>
+            <h2 id="蠻牛衝撞bull-rush">
+              蠻牛衝撞(Bull Rush)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>衝鋒與冷卻</strong>：向前衝鋒，最大距離 12 公尺，撞開沿途敵人；只有一層充能，基礎冷卻 25 秒。基礎衝撞與結束時的衝擊不直接造成生命傷害。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>停止方式</strong>：撞上甲殼護甲、虛空盾或特定抗性目標會停止；衝出 0.5 秒後可用格擋取消，0.8 秒後可向後移動取消。地形也會限制實際距離。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>結束後增益</strong>：衝鋒結束後，近戰攻速與移動速度提高 25%，持續 5 秒。受攻速影響的 1 秒動作變成 1 ÷ 1.25 = 0.8 秒；原本每秒移動 5 公尺，變成 6.25 公尺。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>衝鋒時防護</strong>：衝鋒期間另有 25% 減傷；單計這份效果，原本 100 點傷害變成 100 × 0.75 = 75 點。其他基礎防護再依各自階段結算。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/ogryn/bull-rush/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="ogryn_grenade_box"></a>
+            </p>
+            <h2 id="巨量傷害盒big-box-of-hurt">
+              巨量傷害盒(Big Box of Hurt)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>投擲方式</strong>：把整箱手雷當作投擲物砸向敵人，最多攜帶 3 箱；投出一箱剩 3 − 1 = 2 箱。不會按秒自動補充，需要手雷補給。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：只計箱體直接命中、未暴擊也未命中弱點，沒有其他加成時，無護甲目標為 1850 × 1 = 1850 點；甲殼護甲為 1850 × 0.15 = 277.5 點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>升級差異</strong>：一般基礎配置下，箱體不會散出手雷；選擇投彈完畢！會改為命中後散出子手雷的版本。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/ogryn/big-box-of-hurt/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="ogryn_melee_damage_coherency"></a>
+            </p>
+            <h2 id="威嚇氣場intimidating-presence">
+              威嚇氣場(Intimidating Presence)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>光環效果</strong>：你與協同範圍內的隊友，近戰傷害提高 7.5%。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：只計此加成，基礎 100 點變成 100 × (1 + 7.5%) = 107.5 點；同階段另有 20% 時則為 127.5 點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>替換方式</strong>：選取強化近戰光環後改為 10%，不是把兩者相加成 17.5%；其他光環選擇也會替換這個基礎光環。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/ogryn/intimidating-presence/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="ogryn_helping_hand"></a>
+            </p>
+            <h2 id="救援時不可打斷">
+              救援時不可打斷
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>救援防護</strong>：扶起倒地隊友、拉起懸掛隊友、解開捕網或救出被俘隊友時，獲得不可打斷效果；救援結束後效果消失。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>擊退算例</strong>：救援期間，受到的推動速度降為原本的 10%。在其他條件相同時，原本推動速度 10 變成 10 × (1 − 90%) = 1；這不會讓你免受傷害。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/ogryn/ogryn-helping-hand/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="ogryn_base_tank_passive"></a>
+            </p>
+            <h2 id="基礎減傷與閃避防護">
+              基礎減傷與閃避防護
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>基礎減傷</strong>：一般傷害減少 20%，韌性傷害另減少 25%。忽略其他修正時，100 點生命傷害變成 80 點；若同時經過這兩層防護，100 點韌性傷害變成 100 × 0.8 × 0.75 = 60 點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>閃避防護</strong>：閃避期間另降低 50% 傷害，閃避結束後保留 0.25 秒。單計基礎 20% 加上這份 50%，100 × 0.8 × 0.5 = 40 點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>連續閃避</strong>：若在上次閃避結束後的 0.25 秒內開始下一次閃避，重疊期間兩份 50% 減傷會相乘。單計上述基礎防護，100 點一般傷害變成 100 × 0.8 × 0.5 × 0.5 = 20 點；韌性傷害再乘 0.75，為 15 點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>移動限制</strong>：移除武器本身固定附帶的移動減速；瞄準、攻擊動作與其他來源的減速仍依各自效果處理。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/ogryn/ogryn-base-tank-passive/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="ogryn_dodge_stagger"></a>
+            </p>
+            <h2 id="閃避撞擊">
+              閃避撞擊
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>觸發方式</strong>：閃避時撞開移動方向附近的人類大小普通敵人；不作用於精英、專家或大型敵人。同一次閃避對同一敵人只處理一次。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>範圍與強度</strong>：檢查區域位於閃避方向前方，半徑 1.5 公尺。距離越遠、連續閃避次數越多，撞擊越弱；這項撞擊不直接造成生命傷害。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>強度算例</strong>：固定敵人距離 2 公尺，第一次閃避的撞擊威力為 500 × (4 − 2) ÷ (2 × 1 − 1) = 1000；第二次為 1000 ÷ 3 ≈ 333.3。這是交給踉蹌公式的威力，不是傷害點數。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/ogryn/ogryn-dodge-stagger/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="ogryn_coherency_radius_increase"></a>
+            </p>
+            <h2 id="卓越氣場towering-presence">
+              卓越氣場(Towering Presence)
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>協同範圍</strong>：自身協同半徑增加 50%；光環的傷害或恢復百分比不因此增加。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>範圍算例</strong>：若原協同半徑為 15 公尺，套用後為 15 × (1 + 50%) = 22.5 公尺。若同階段另有 25%，則為 15 × (1 + 50% + 25%) = 26.25 公尺。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/ogryn/towering-presence/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/">← 返回歐格林技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

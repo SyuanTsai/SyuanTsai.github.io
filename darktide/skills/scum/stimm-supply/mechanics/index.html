@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="化學性依賴：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>化學性依賴：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/stimm-supply/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">化學性依賴：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>化學性依賴：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Stimm Supply</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/stimm-supply/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#化學性依賴stimm-supply原始碼依據"><span>03</span>化學性依賴(Stimm Supply)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="化學性依賴：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/stimm-supply/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_ability_stimm_field.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="化學性依賴stimm-supply原始碼依據">
+              化學性依賴(Stimm Supply)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/stimm-supply/#broker_ability_stimm_field">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_ability_stimm_field">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_ability_stimm_field</code>；名稱鍵：<code>loc_talent_broker_ability_stimm_field</code>；描述鍵：<code>loc_talent_broker_ability_stimm_field_desc_3</code>。
+              </li>
+              <li>
+                節點：<code>node_e341cdcf-7254-4ac0-9f37-cb056b00d14d</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                此節點接到單次充能的 broker_ability_stimm_field；放置動作消耗使用成本，部署物生命期由 stimm_field.life_time=20、proximity_radius=3 控制。能力的手動暫停條件會在仍有該部署物工作時維持暫停，因此 60 秒自然充能自場域工作結束後恢復。
+              </li>
+              <li>
+                場域啟動後為在範圍內的存活幹員附加 syringe_broker_buff_stimm_field，並在有人進出時新增、移除或重套效果。對範圍內單位的腐敗承受倍率設為 0；伺服器端每 0.25 秒呼叫 reduce_permanent_damage(0.5)。格式值採 20/0.25*0.5=40 點上限，實際可治療量受目標可移除的腐敗限制。
+              </li>
+              <li>
+                若口袋欄位裝有具 syringe 標籤的普通興奮劑，場域建構時加入該興奮劑的場域版本，並卸下已裝備物品；興奮劑場域版本複製其原有效果。若使用巢都渣滓自己的口袋興奮劑能力，則按剩餘充能消耗一次；沒有可用充能時不複製興奮劑天賦效果。
+              </li>
+              <li>
+                離開範圍時一般會移除場域效果；部署物工作結束會清理仍在範圍內的效果。選用「速效型興奮劑」後，另由其分支規則把效果縮短至 5 秒場域生命期並延續 15 秒，這屬另一節點效果。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L495-L521">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：495–521</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L170-L188">scripts/settings/talent/talent_settings_broker.lua：170–188</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/broker_abilities.lua#L98-L137">scripts/settings/ability/player_abilities/abilities/broker_abilities.lua：98–137</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_abilities/broker_stimm_field.lua#L102-L130">scripts/settings/equipment/weapon_templates/combat_abilities/broker_stimm_field.lua：102–130</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/deployables/templates/broker_stimm_field_crate.lua#L5-L16">scripts/settings/deployables/templates/broker_stimm_field_crate.lua：5–16</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua#L23-L105">scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua：23–105</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua#L127-L210">scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua：127–210</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua#L220-L364">scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua：220–364</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/broker_buff_utils.lua#L14-L97">scripts/settings/buff/broker_buff_utils.lua：14–97</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L786-L811">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：786–811</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L4091-L4205">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：4091–4205</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L825-L884">scripts/extension_systems/ability/player_unit_ability_extension.lua：825–884</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/player_unit_health_extension.lua#L270-L286">scripts/extension_systems/health/player_unit_health_extension.lua：270–286</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L495-L521">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：495–521</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L782-L813">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：782–813</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>算例</strong>：20 秒場域以每 0.25 秒移除 0.5 點腐敗，格式值為 20 ÷ 0.25 × 0.5 = 40 點；這是目標有足夠腐敗可供移除時的上限。
+              </li>
+              <li>
+                40 點是格式值推算的最大腐敗治療量，不代表所有隊友都會實際治療到 40 點；已無可移除腐敗時不會治療出額外生命。
+              </li>
+              <li>
+                分享的興奮劑效果取決於放置時攜帶的興奮劑類型及可用使用次數。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>81b45839</code>。
+              </li>
+              <li>
+                繁中與英文都描述地面氣體場域、持續治療腐敗、腐敗免疫與分享已裝備興奮劑效果；設定 20 秒、0.25 秒間隔、每次 0.5 點與範圍觸發相符。冷卻暫停及裝備消耗細節是程式補充，不是原文矛盾。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability/broker_ability_stimm_field.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/70eb922d-eda2-4ed7-b945-ed3b305b10a6">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/stimm-supply/">← 返回化學性依賴玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

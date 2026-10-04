@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="彈藥存放：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>彈藥存放：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/ammunition-deposit/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">彈藥存放：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>彈藥存放：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Ammunition Deposit</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>光環</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/ammunition-deposit/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#彈藥存放ammunition-deposit原始碼依據"><span>03</span>彈藥存放(Ammunition Deposit)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="彈藥存放：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/ammunition-deposit/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ammo_aura.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="彈藥存放ammunition-deposit原始碼依據">
+              彈藥存放(Ammunition Deposit)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/ammunition-deposit/#cryptic_ammo_aura">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_ammo_aura">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_ammo_aura</code>；名稱鍵：<code>loc_talent_cryptic_ammo_aura</code>；描述鍵：<code>loc_talent_cryptic_ammo_aura_toughness_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_4d9ce721-2e3e-4c09-8fa2-345ff9c390bc</code>；分類：光環；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦加入 cryptic_coherency_empty 協同標記並對施放者掛載 cryptic_ammo_aura 被動，後者提供 toughness=25。該被動的 start_func 由伺服器列舉 Managers.player:human_players()，逐一給每位有存活玩家單位的玩家 cryptic_ammo_aura_effect；沒有檢查 coherency、距離或隊伍鏈。效果模板的每一階增加 ammo_reserve_capacity=0.15，stat buff 為 additive_multiplier。PlayerUnitWeaponExtension 將總倍率乘到各武器的目前及最大儲備用彈藥藥，因此基礎倍率1加0.15後為1.15；例如101 × 1.15 = 116.15，向下取整為116發。後續加入任務的人類玩家也會由 player_spawned_func 接收效果。結束時程式移除曾給出的效果。現有本地天賦字串說「你與協同中的盟友」，但固定來源的彈藥效果分發是任務玩家範圍而非協同檢查；版本對應為1.13.1。 stepped_stat_buff 的 min_max_step_func回傳0,1，且各階表值均0.15，因此多來源仍只取單階15%，不是多名隊友各加15%。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1090-L1115">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1090–1115</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L39-L42">scripts/settings/talent/talent_settings_cryptic.lua：39–42</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L117-L197">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：117–197</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L198-L224">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：198–224</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L694-L694">scripts/settings/buff/buff_settings.lua：694–694</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1324-L1337">scripts/extension_systems/weapon/player_unit_weapon_extension.lua：1324–1337</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1408-L1424">scripts/extension_systems/weapon/player_unit_weapon_extension.lua：1408–1424</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/stepped_stat_buff.lua#L10-L66">scripts/extension_systems/buff/buffs/stepped_stat_buff.lua：10–66</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1090-L1115">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1090–1115</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L63-L93">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：63–93</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                儲備容量101發時，floor(101 × 1.15)=116發；分數發數不保留。避免用浮點乘法正好接近整數邊界的案例推斷遊戲顯示，精確顯示仍需遊戲內核對。
+              </li>
+              <li>
+                來源實作直接對所有人類玩家發放彈藥容量效果，沒有按協同距離或協同鏈排除遠處隊友。
+              </li>
+              <li>
+                +25點韌性是施放者的個人被動；彈藥容量效果則在來源程式中發給任務玩家。
+              </li>
+              <li>
+                本機繁中說明所寫的協同條件與固定來源分發範圍不同；本機 Build 25606770 是否使用相同實作尚待確認，不據此判定翻譯錯誤。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>cc394399</code>。
+              </li>
+              <li>
+                繁中描述列出自身韌性及自己與協同隊友的儲備用彈藥藥增加。固定原始碼確認自身獲得25點韌性，且 ammo_reserve_capacity +15% 會發給全部人類玩家而無協同判斷；Build 25606770 版本對應為1.13.1，先記錄實作範圍差異，不判為錯譯。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/aura/cryptic_ammo_aura.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/ammunition-deposit/">← 返回彈藥存放玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

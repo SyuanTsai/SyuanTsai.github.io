@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="崇高意圖：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>崇高意圖：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/higher-purpose/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">崇高意圖：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>崇高意圖：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Higher Purpose</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/higher-purpose/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#崇高意圖higher-purpose原始碼依據"><span>03</span>崇高意圖(Higher Purpose)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="崇高意圖：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/higher-purpose/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector_power.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="崇高意圖higher-purpose原始碼依據">
+              崇高意圖(Higher Purpose)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/higher-purpose/#cryptic_dissector_power">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_dissector_power">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_dissector_power</code>；名稱鍵：<code>loc_talent_cryptic_dissector_power</code>；描述鍵：<code>loc_talent_cryptic_dissector_power_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_ce7afddd-b252-4604-a423-da685ffa5410</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                此修改器啟用 special_rule cryptic_dissector_increased_cooldown_gained_on_elite_or_special_kills。cryptic_ability_recharge 的擊殺處理先採 base=2%或elite/special=4%；選用此rule時只把elite/special值加0.025，得到6.5%。
+              </li>
+              <li>
+                恢復呼叫 restore_ability_charge_percentage(COMBAT_ABILITY_TYPE, cooldown_to_restore)。PlayerUnitAbilityExtension以resource_cost_per_charge乘此比例，而不是max_ability_resource整池；helper把ignore_stat_buffs設為true，因此紅線的resource_restored_modifier及其他stat buff不再乘一次。若單份成本50點，6.5%=3.25資源點，其中本修改器單獨增加1.25點。
+              </li>
+              <li>
+                擊殺proc在偵測到 cryptic_precision_stance keyword 時先return，故該姿態期間一般擊殺2%、精英／專家總6.5%都不會恢復。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1820-L1842">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1820–1842</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1211-L1231">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1211–1231</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L19-L22">scripts/settings/talent/talent_settings_cryptic.lua：19–22</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L251-L263">scripts/settings/talent/talent_settings_cryptic.lua：251–263</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L298-L342">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：298–342</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102">scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L70-L115">scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：70–115</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L3-L18">scripts/settings/talent/talent_settings_cryptic.lua：3–18</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1211-L1231">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1211–1231</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1820-L1842">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1820–1842</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                靜態推演：單份成本50點時，本修改器增加50×0.025=1.25點。精英／專家擊殺原本4%恢復50×0.04=2點，加入後總計50×0.065=3.25點；恢復不足一整份時只增加進度。
+              </li>
+              <li>
+                總6.5%由固定職業擊殺恢復4%與本修改器額外2.5%相加；不可只把額外值寫成總恢復。
+              </li>
+              <li>
+                百分比依單一充能成本計算，不依全部充能總池。restore_ability_charge_percentage忽略stat buffs，所以此恢復不受紅線恢復倍率放大。
+              </li>
+              <li>
+                precision stance keyword會使整個擊殺恢復proc提前return。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>2baab5a1</code>。
+              </li>
+              <li>
+                繁中與英文說明精英／專家擊殺額外恢復2.5%電容量；固定版確認額外值並加到職業既有4%精英／專家恢復上。中英皆用additional，6.5%總值與單充能分母屬程式推導，不是文字誤譯。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_dissector_power.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/higher-purpose/">← 返回崇高意圖玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

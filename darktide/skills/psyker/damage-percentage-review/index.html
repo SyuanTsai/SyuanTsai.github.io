@@ -1,0 +1,1297 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="靈能者：百分比與傷害比較 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>靈能者：百分比與傷害比較 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/damage-percentage-review/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">靈能者：百分比與傷害比較</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>靈能者：百分比與傷害比較</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="靈能者：百分比與傷害比較">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/psyker/">← 返回靈能者</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/DAMAGE_PERCENTAGE_REVIEW.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="靈能者天賦百分比描述盤點">
+              靈能者天賦：百分比描述盤點
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜[描述規則](../../../../../../AI Prompt/Skill-Info-Workflow.md)
+            </p>
+            <ul>
+              <li>
+                固定來源 Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                範圍：81 個目前可選節點，核對主頁效果、算例與逐項來源。下表摘錄各項計算基準；完整觸發條件與限制見來源子文件。
+              </li>
+              <li>
+                本次是靜態公式與描述驗收，尚未完成遊戲內測試；未指定武器、蓄力或敵人時，不宣稱所有武器具有相同最終增幅。
+              </li>
+            </ul>
+            <h2 id="共用計算依據">
+              共用計算依據
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  一般增傷在相同階段加算；弱點／暴擊／靈巧加成只修正相應額外傷害。以基礎部分 100、額外部分 50 為例，額外傷害增加 30% 後為 <code>100 + 50 × 1.3 = 165</code>，相較原本 150 增加 10%。不同武器與目標的額外傷害比例不同。
+                </p>
+              </li>
+              <li>
+                <p>
+                  蓄力或恢復「速度」提高時，時間應除以速度倍率。例如速度 +50%：<code>2 ÷ 1.5 ≈ 1.33 秒</code>；不能直接把原時間減半。
+                </p>
+              </li>
+              <li>
+                <p>
+                  反噬數值直接扣除時使用百分點；反噬生成減少時對新生成量乘倍率。兩者需分開說明。
+                </p>
+              </li>
+              <li>
+                <p>
+                  持續恢復按最大韌性計算、受缺額限制；同一持續恢復效果重新計時，不代表恢復速率疊加。
+                </p>
+              </li>
+              <li>
+                <p>
+                  層數加算與逐層乘算分開核對。例如每層生成量乘 0.99，25 層是 <code>0.99²⁵ ≈ 77.78%</code>，不是降低 25%。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L232-L245">一般傷害階段</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782">弱點、暴擊與靈巧的額外傷害</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_smite_targeting.lua#L153-L162">蓄力速度換算</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L729">逐層屬性運算</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285">韌性恢復</a>
+                </p>
+              </li>
+            </ul>
+            <h2 id="81-項逐項結果">
+              81 項逐項結果
+            </h2>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                    <th>
+                      本次處理
+                    </th>
+                    <th>
+                      檢查結論
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/kinetic-flayer/mechanics/">動能撕裂者</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：第 0 秒觸發後，第 11 秒的命中仍不能再次觸發；12 秒冷卻結束後的下一次合格命中才會觸發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/brain-rupture/mechanics/">顱腦崩裂</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      反噬算例：沒有其他修正時，兩種模式蓄滿約增加 20 個反噬百分點，成功攻擊再增加 25 個百分點，共約 20 + 25 = 45 個百分點。滿蓄後繼續維持，每秒再增加約 9 個百分點。；傷害算例：固定同一目標、蓄力程度與其他加成，原本造成 100 點傷害的攻擊，變成 100 × 1.5 = 150 點。此數字用來說明倍率；實際傷害仍依護甲與攻擊條件變動。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/assail/mechanics/">靈能攻擊</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：無其他恢復修正、從 0 次且無剩餘進度開始，第 3 秒補回 1 次、第 6 秒補回 2 次，補滿 10 次需 3 × 10 = 30 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/ethereal-shards/mechanics/">乙太碎片</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      穿透算例：無其他穿透修正，原本可穿過 2 個質量單位，變成 2 × 1.5 = 3 個質量單位。敵人質量不同，不等於固定多打 1 名敵人。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/smite/mechanics/">懲戒</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      擴散方式：後續傳導範圍為 5 + 1 = 6 公尺。快速施放從最多一次傳導起步，在 1.2、1.8、2.7 秒依序提高至 2、3、4 次；蓄力施放則在 0.4、0.6、0.9 秒達到相同上限。敵人位置與視線仍會限制實際數量。；反噬算例：沒有其他修正時，快速施放前 0.1 秒約增加 0.75 個反噬百分點，之後每秒約增加 22.5 個百分點。持續 0.35 秒約增加 0.75 + 22.5 × 0.25 = 6.375 個百分點；蓄力前置過程完整進行 0.8 秒時，該階段另增加約 5 個百分點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/kinetic-resonance/mechanics/">動能共鳴</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      蓄力算例：假設原蓄力需 2 秒、無其他加成，2 ÷ 1.75 ≈ 1.14 秒；原本產生 10 個百分點反噬，則變成 10 × 0.5 = 5 個百分點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/quick-shards/mechanics/">迅捷碎片</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：只計此天賦，原本每次需 3 秒，變成 3 ÷ 1.3 ≈ 2.31 秒；從完全耗盡補滿 10 次約需 30 ÷ 1.3 ≈ 23.08 秒。恢復速率增加 30%，不等於等待時間縮短 30%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/enfeeble/mechanics/">衰弱詛咒</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只比較此目標承傷倍率、其他條件相同，原本受到 100 點傷害變成 100 × 1.1 = 110 點；電擊效果移除後，這項加成結束。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/charged-strike/mechanics/">蓄力打擊</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      搭配衰弱詛咒：這 2 秒電擊也會使目標受到的傷害增加 10%。只比較該承傷倍率，原本 100 點傷害變成 100 × 1.1 = 110 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/kinetic-presence/mechanics/">動能釋放</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只比較此階段，基準 100 點、沒有其他加成時，100 × 1.1 = 110 點；已有 25% 同階段加成時，由 125 變成 100 × (1 + 25% + 10%) = 135 點。非精英敵人不享有此加成。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/seers-presence/mechanics/">先知之眼</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：恢復速率固定且沒有其他修正，原本需 40 秒，改為 40 × (1 − 10%) = 36 秒；原本需 60 秒則改為 54 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/prescience/mechanics/">預兆</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：原本 10% 爆擊率變成 10% + 5% = 15%；不是 10% × 1.05 = 10.5%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/venting-shriek/mechanics/">靈能尖嘯</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      反噬算例：80% − 50 個百分點 = 30%；原有 40% 時則降至 0%，最低不會小於零。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/scriers-gaze/mechanics/">占卜者的注視</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：不計其他加成，滿層時非暴擊、非弱點的 100 點傷害變成 100 × (1 + 10% + 30%) = 140 點；結束後只保留累積的 30%，因此是 130 點。；弱點算例：只看弱點加成這一項，假設一般傷害 100、弱點額外傷害 50，原有 150 點會變成 100 + 50 × 1.10 = 155 點，整次命中約增加 3.33%；注視的其他增傷另計。；恢復與暴擊算例：最大韌性 100 時，每秒恢復 100 × 2.5% = 2.5 點，以缺少的韌性為上限；原有 5% 爆擊率變成 5% + 20% = 25%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/becalming-eruption/mechanics/">平靜迸發</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      疊層算例：每層將生成量乘以 0.99。原本增加 10 個反噬百分點，10 層後為 10 × 0.99¹⁰ ≈ 9.04 個百分點；25 層為 10 × 0.99²⁵ ≈ 7.78 個百分點，約減少 22.22%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-rupture/mechanics/">亞空間爆發</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：不計其他加成，敵人原本造成 100 點傷害會變成 100 × 0.9 = 90 點；原本承受 100 點則變成 100 × 1.1 = 110 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/creeping-flames/mechanics/">蔓延火焰</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數算例：反噬比例 × 6，再無條件進位，最低 1 層、最高 6 層。例如 50% × 6 = 3 層；80% × 6 = 4.8，取 5 層；即使反噬為 0% 也會施加 1 層。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/precognition/mechanics/">預知未來</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      疊層算例：注視累積 8 層時完成一次弱點擊殺，變成 8 + 1 = 9 層；不會因此延長注視的實際持續時間。；傷害算例：靈巧加成作用於弱點或暴擊的額外傷害。只看 30% 靈巧加成，假設一般傷害 100、額外傷害 50，150 點會變成 100 + 50 × 1.30 = 165 點，整次命中增加 10%；注視的其他加成另計。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-speed/mechanics/">亞空間加速</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度算例：只看此效果，原本每秒移動 5 公尺，變成 5 × (1 + 20%) = 6 公尺。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/psykinetics-aura/mechanics/">靈能學者光環</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：若倒數原剩 20 秒，在正常恢復 1 秒並觸發一次額外恢復後，變成 20 − 1 − 0.5 = 18.5 秒。；完整恢復量：正常逐幀更新且未中斷時，3 次額外恢復合計 0.5 × 3 = 1.5 秒，另加這段期間原本就會自然經過的冷卻時間。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/reality-anchor/mechanics/">現實錨點</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      生成算例：原本增加 10 個反噬百分點，變成 10 × 0.8 = 8 個百分點；不會直接扣除已累積的反噬。；平息算例：原本需要 10 秒的平息過程變成 10 × 0.7 = 7 秒。換算為每秒速率是 1 ÷ 0.7 ≈ 1.429 倍，約快 42.9%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/telekine-shield/mechanics/">念力護盾</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      耐久算例：已發生 12 次有效扣除時，剩餘 20 − 12 = 8 次。此處計算的是護盾命中次數，與你的生命或韌性無關。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/bolstered-shield/mechanics/">強化護盾</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：兩次充能都耗盡後，40 秒恢復第一格，再等 40 秒恢復第二格，合計 40 × 2 = 80 秒。其他冷卻加成另計。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/sanctuary/mechanics/">庇護所</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復與減傷算例：最大韌性 100 時，每秒恢復 100 × 10% = 10 點，3 秒最多恢復 30 點，以缺額為上限。減傷期間原本承受 40 點韌性傷害，變成 40 × 0.5 = 20 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/telekine-dome/mechanics/">念力穹頂</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間比較：相較原本護盾，持續時間增加 25 − 17.5 = 7.5 秒；冷卻增加 60 − 40 = 20 秒。耐久仍可承受 20 次有效扣除。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/enervating-threshold/mechanics/">衰弱界線</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：一般敵人每次有效穿越的機率為 20%；100 次穿越的期望觸發次數為 100 × 20% = 20 次，並非每五次保證觸發一次。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-unbound/mechanics/">亞空間突破</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續時間：10 秒離場效果加上 1.5 秒緩衝，共 10 + 1.5 = 11.5 秒。注視本身仍會在反噬達 100% 時結束。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-siphon/mechanics/">亞空間虹吸</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：每層增加 4% 傷害。不計其他加成，4 層時 100 × (1 + 4% × 4) = 116 點；搭配亞空間電池達 6 層時則為 124 點。；冷卻算例：施放戰鬥技能會消耗全部充能，每層恢復該能力一次使用所需冷卻的 7.5%。以 30 秒冷卻、4 層計算，立即縮短 30 × 7.5% × 4 = 9 秒，剩約 21 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/disrupt-destiny/mechanics/">擾動命運</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只計一般增傷，100 × (1 + 15%) = 115 點。再看弱點這一項：假設同次命中已算入一般增傷後，基礎部分為 100、弱點額外部分為 50，加上 37.5% 弱點加成後為 100 + 50 × 1.375 = 168.75 點，相較這一階段原有 150 點增加 12.5%。武器的額外傷害比例不同，整次命中的增幅也不同。；恢復與移速：擊殺標記目標後，2.5 秒內恢復最大韌性的 25%，移動速度提高 20%，持續 2.5 秒。最大韌性 100 時，總共恢復 25 點，相當於每秒 25 ÷ 2.5 = 10 點，以缺額為上限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/empowered-psionics/mechanics/">靈能強化</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      顱腦崩裂：不產生反噬，傷害增加 50%，蓄力速度增加 50%。沒有其他增傷時，100 × 1.5 = 150 點；原本 2 秒蓄力變成 2 ÷ 1.5 ≈ 1.33 秒，約縮短 33.3%。；懲戒：傷害增加 200%。沒有其他增傷時，100 × (1 + 200%) = 300 點。；靈能攻擊：不產生反噬、不消耗投擲次數，並提高傷害與穿透能力；仍會消耗一層靈能強化。穿透容量由 2 提高至 4，是 4 ÷ 2 = 2 倍；實際能貫穿的敵人數量依敵人與命中條件而變。；機率算例：每次皆有空位可儲存時，100 次擊殺的期望取得次數為 100 × 10% = 10 次；不是每十次擊殺保證觸發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/inner-tranquility/mechanics/">平心靜氣</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      反噬算例：原本增加 10 個反噬百分點，4 層時變成 10 × (1 − 8% × 4) = 6.8 個百分點；6 層時為 5.2 個百分點。其他生成修正另計。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/essence-harvest/mechanics/">吸精奪萃</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100 時，每秒恢復 100 × 30% ÷ 5 = 6 點；完整持續 5 秒共 30 點。若只缺 12 點，實際最多補回 12 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/bio-lodestone/mechanics/">生物磁石</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：每次都有空位可儲存時，100 次擊殺的期望取得次數由 100 × 10% = 10 次，提高至 100 × 15% = 15 次。隨機結果不保證剛好等於期望值。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/psychic-leeching/mechanics/">吸血閃電</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100 的玩家恢復 100 × 20% = 20 點；最大韌性 150 的玩家恢復 30 點，各自以缺額為上限。一次懲戒命中更多敵人不會增加這次恢復量。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/overpowering-souls/mechanics/">吞靈強擊</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數算例：原有 0 層時擊殺一名精英，變成 1 層；基礎上限為 1 層，已滿層時再擊殺不會變成 2 層。搭配充能完畢後，上限提高至 3 層。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/perfectionism/mechanics/">完美主義</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：25 層提供 25% 一般傷害、50% 暴擊額外傷害與 62.5% 弱點額外傷害。只計一般傷害，100 × (1 + 25%) = 125 點；弱點與暴擊的額外部分需依武器另外計算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/purloin-providence/mechanics/">盜竊天命</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      反噬算例：原有 60% 反噬時，變成 60% − 5 個百分點 = 55%；原有 3% 時則降至 0%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/lingering-influence/mechanics/">持久影響</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：原有 3 層且之後都沒有重新計時，會在約 10、20、30 秒依序減至 2、1、0 層；原本約需 5 × 3 = 15 秒，現在約需 10 × 3 = 30 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/charged-up/mechanics/">充能完畢</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數算例：已有 2 層時再取得一層，2 + 1 = 3 層；已有 3 層時再次取得仍維持 3 層。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/in-fire-reborn/mechanics/">涅槃</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：不受充能上限截斷時，100 次符合條件的死亡事件，期望取得 100 × 10% = 10 層；實際結果依隨機判定而異。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/psychic-vampire/mechanics/">靈能吸血鬼</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：每次皆有空位可儲存時，100 次符合條件的擊殺，期望取得 100 × 4% = 4 層；不是每 25 次擊殺保證取得一層。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-battery/mechanics/">亞空間電池</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：6 層共增加 6 × 4% = 24% 傷害；沒有其他加成時，100 × 1.24 = 124 點。相較原本 4 層的 116 點，增加 8 點。；冷卻算例：6 層恢復一次能力冷卻的 6 × 7.5% = 45%；以 30 秒計算，恢復 13.5 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/cruel-fortune/mechanics/">殘忍命運</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數算例：原有 4 層時，4 + 3 = 7 層；原有 14 層、上限 15 層時，則停在 15 層。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/soulstealer/mechanics/">靈魂竊賊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、沒有其他恢復加成時，每次恢復 100 × 7.5% = 7.5 點；若目前為 96，實際補回 100 − 96 = 4 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/quietude/mechanics/">心如止水</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、無其他恢復加成，反噬從 40% 升到 60%，恢復 100 × 20% × 0.4 = 8 點；之後從 60% 降到 50%，再恢復 100 × 10% × 0.4 = 4 點。韌性滿額時不會超補。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-expenditure/mechanics/">亞空間耗費</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、沒有其他加成且缺額足夠，普通命中恢復 2.5 點；弱點擊殺每秒恢復 100 × 15% ÷ 3 = 5 點，持續 3 秒共 15 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/mettle/mechanics/">堅毅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、缺額足夠且無其他加成，持續 4 秒恢復 100 × 10% = 10 點；疊到 3 層仍每秒恢復 2.5 點，移動倍率則為 1 + 3 × 5% = 1.15。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/perilous-combustion/mechanics/">險惡燃燒</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數算例：附近敵人原本沒有靈魂之火時，獲得 2 層；原本有 3 層時，變成 3 + 2 = 5 層。傷害會隨層數非線性成長，5 層不是 1 層傷害的 5 倍。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/battle-meditation/mechanics/">戰鬥冥想</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      反噬算例：原本產生 20 個百分點反噬的攻擊改為 20 × 0.9 = 18 個百分點。觸發擊殺效果時，50% 反噬降到 40%；原本只有 6% 時降到 0%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/perfect-timing/mechanics/">完美時機</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只比較此增傷階段，其餘倍率固定為 1。基準 100 點、無其他加成時，100 × (1 + 15%) = 115 點；原有 25% 同階段加成時，從 125 變成 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/wildfire/mechanics/">野火</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數算例：死者有 6 層、附近兩名有效敵人原本都為 0 層時，可分配總数為 min(6,4) = 4，輪流各給 1 層，結果各得 2 層。只有一名有效目標時可得 4 層。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/mind-in-motion/mechanics/">思維活躍</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      移速算例：無其他修正、該階段原本每秒移動 5 公尺時，5 × (1 + 5%) = 5.25 公尺。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/malefic-momentum/mechanics/">惡意攻勢</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只比較此增傷階段，其餘倍率固定為 1。基準 100 點、無其他加成時，100 × (1 + 25%) = 125 點；原有 25% 同階段加成時，從 125 變成 100 × (1 + 25% + 25%) = 150 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/one-with-the-warp/mechanics/">亞空間強化</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：反噬 50% 時，減傷為 10% + (33% − 10%) × 50% = 21.5%。原本 100 點韌性傷害變成 100 × 0.785 = 78.5 點；另有獨立 20% 減傷時為 78.5 × 0.8 = 62.8 點。此項不降低生命傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/anticipation/mechanics/">看破</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：武器原本可連續有效閃避 3 次，變成 3 + 1 = 4 次。若延續時間原本為 0.2 秒，則為 0.2 × 1.5 = 0.3 秒；不代表整個閃避動作時間增加 50%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/empathic-evasion/mechanics/">反射閃避</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：第 0 秒觸發，效果持續到約第 1 秒；第 0.6 秒再觸發，延續到約第 1.6 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/solidity/mechanics/">穩固</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：相同武器、起始反噬與其他條件下，原本需 4 秒的平息過程約變成 4 × 0.7 = 2.8 秒。換算每秒處理速度為 1 ÷ 0.7 ≈ 1.429 倍，約快 42.9%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-rider/mechanics/">亞空間騎士</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：反噬 50%、該階段基準傷害 100、其他倍率為 1 時，100 × (1 + 20% × 50%) = 110 點。若原有 25% 同階段加成，從 125 變成 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/true-aim/mechanics/">精確瞄準</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：從 0 層開始，五次各自有效的弱點命中為 1 → 2 → 3 → 4 → 5 層；之後觸發的遠程暴擊消耗這組效果。暴擊傷害仍依武器、部位與目標計算，不是固定雙倍。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/puppet-master/mechanics/">傀儡師</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      範圍算例：其他修正不變，原半徑 8 公尺變成 8 × 1.75 = 14 公尺。增加的是半徑；若只比較平面圓形面積，面積倍率為 1.75² = 3.0625。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/kinetic-deflection/mechanics/">動能偏斜</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      格擋算例：最大耐力 4 點、一次格擋原需 2 點，沒有其他反噬修正時，增加 2 ÷ 4 × 25% = 12.5 個百分點反噬。原為 50% 時變成 62.5%，此次不耗耐力。；接近上限：同一格擋若從 90% 開始，只能接收 7 個百分點反噬；剩餘 12.5 − 7 = 5.5 個百分點換回 5.5% ÷ 25% × 4 = 0.88 點耐力。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/toughness-boost/mechanics/">韌性增幅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      韌性算例：沒有其他修正時，最大韌性 100 變成 100 + 15 = 115 點；選取另一個同效果節點後為 130 點。這是增加最大值，不是持續恢復韌性。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/toughness-boost-base-toughness-node-buff-medium-4/mechanics/">韌性增幅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      韌性算例：沒有其他修正時，最大韌性 100 變成 100 + 15 = 115 點；選取另一個同效果節點後為 130 點。這是增加最大值，不是持續恢復韌性。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/toughness-damage-reduction/mechanics/">韌性減傷</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：原本 100 點韌性傷害、此階段無其他減傷時，100 × (1 − 10%) = 90 點。若已有 5% 同階段減傷，則為 100 × (1 − 5% − 10%) = 85 點；其他獨立乘算減傷再另外套用。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/lightning-speed/mechanics/">迅雷之勢</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：只比較受攻速影響的動作區段，原本 1 秒且沒有其他攻速加成時，變成 1 ÷ 1.1 ≈ 0.909 秒；不等於整個連段固定縮短 10%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-splitting/mechanics/">亞空間分裂</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      順劈算例：原本傷害順劈容量為 4 個質量單位、反噬 50%、無其他加成時，4 × (1 + 50%) = 6。這不代表單一敵人的傷害增加 50%，也不能直接換算成多打固定幾名敵人。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/souldrinker/mechanics/">汲魂者</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復與機率算例：最大韌性 100、缺額足夠且沒有其他修正時，每秒恢復 100 × 15% ÷ 5 = 3 點；原本 10% 爆擊率變成 10% + 5% = 15%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/by-crack-of-bone/mechanics/">骨折後遺症</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      反噬算例：反噬 60% 時觸發，降到 50%；期間原本產生 20 個百分點的攻擊，改為 20 × 0.8 = 16 個百分點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/vulnerable-minds/mechanics/">脆弱心智</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只比較此增傷階段，其餘倍率固定為 1。基準 100 點、無其他加成時，100 × (1 + 20%) = 120 點；原有 25% 同階段加成時，從 125 變成 100 × (1 + 25% + 20%) = 145 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/focused-warp/mechanics/">聚焦亞空間</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只比較此增傷階段，其餘倍率固定為 1。基準 100 點、無其他加成時，100 × (1 + 15%) = 115 點；原有 25% 同階段加成時，從 125 變成 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/peril-equilibrium/mechanics/">反噬平衡</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      反噬算例：反噬 70% 時連續觸發三次，70% → 72% → 74% → 75%；原本 90% 時仍為 90%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/surety-of-arms/mechanics/">武器在手，信心我有。</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      裝填算例：僅比較受裝填速度影響的區段，原需 3 秒，變成 3 ÷ 1.3 ≈ 2.31 秒。；反噬算例：彈匣容量 40 發、補回 20 發、無其他反噬修正時，增加 20 ÷ 40 × 15% = 7.5 個百分點反噬；補回整個彈匣才增加 15 個百分點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/crystalline-will/mechanics/">結晶意志</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害與範圍算例：只比較這兩項修正，原本 100 點爆炸傷害變成 100 × 2 = 200 點；原爆炸半徑 10 公尺變成 10 × 1.25 = 12.5 公尺。實際傷害仍受距離衰減與敵人護甲影響。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/channeled-force/mechanics/">靈能引導</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只比較各自增傷階段、原傷害均為 100 且無其他加成時，主要攻擊為 100 × 1.2 = 120 點，次要攻擊為 100 × 1.1 = 110 點。兩項作用於不同攻擊，不能合成單次 30% 增傷。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/empyric-shock/mechanics/">亞空間震波</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：目標原本受到 100 點亞空間傷害，1 層為 100 × 1.06 = 106 點；5 層為 100 × 1.06⁵ ≈ 133.82 點，增加約 33.82%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/just-a-dream/mechanics/">如夢似幻</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：只比較此減傷階段，原本 100 點傷害變成 100 × 0.75 = 75 點。；反噬算例：若該次回報的生命與韌性傷害合計 40 點、無其他反噬修正，增加 40 × 0.25 = 10 個百分點反噬；原為 50% 時到 60%，原為 92% 時最多到 97%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/immaterial-focus/mechanics/">無形專注</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：只比較此減傷階段，100 點傷害變成 100 × 0.9 = 90 點。若另有獨立 20% 減傷，則為 100 × 0.8 × 0.9 = 72 點，合計減少 28%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/empyric-resolve/mechanics/">亞空間意志</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      反噬算例：原本產生 20 個百分點反噬，變成 20 × 0.6 = 12 個百分點；另有獨立 10% 反噬減免時，為 20 × 0.6 × 0.9 = 10.8 個百分點。；恢復算例：原本恢復 10 點韌性，變成 10 × 0.7 = 7 點；若另有 25% 恢復加成，則為 10 × 1.25 × 0.7 = 8.75 點，仍受最大韌性限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/warp-ghost/mechanics/">亞空間幽魂</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：沒有其他加成時，原本恢復 10 點韌性變成 10 × 1.25 = 12.5 點；原有 20% 同類恢復加成時，10 × (1 + 20% + 25%) = 14.5 點。；自然消退算例：在同一適用反噬區段，原本每秒下降 5 個百分點，變成 5 × 0.2 = 1 個百分點；其他條件不變，同一段反噬消退約需 5 倍時間。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/penetration-of-the-soul/mechanics/">靈魂穿透</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      護甲算例：只比較抗撕裂修正為 1 的護甲階段，排除弱點、暴擊與其他倍率。護甲前傷害 100、原護甲倍率 0.5，反噬 100% 時由 100 × 0.5 = 50，變成 100 × (0.5 + 0.2) = 70 點，實際提高 40%。；不同目標：同一 20% 撕裂，若原護甲倍率已為 1、超額撕裂換算係數為 0.25，則從 100 變成 100 × (1 + 0.2 × 0.25) = 105 點，只提高 5%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/psyker/psykinetic-grip/mechanics/">念力之握</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只比較此增傷階段，其餘倍率固定為 1。基準 100 點、無其他加成時，100 × (1 + 20%) = 120 點；原有 25% 同階段加成時，從 125 變成 100 × (1 + 25% + 20%) = 145 點。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/">← 返回靈能者技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

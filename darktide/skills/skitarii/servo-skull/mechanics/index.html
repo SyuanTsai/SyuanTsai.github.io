@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="伺服頭骨：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>伺服頭骨：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/servo-skull/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">伺服頭骨：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>伺服頭骨：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Servo-Skull</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/servo-skull/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#伺服頭骨servo-skull原始碼依據"><span>03</span>伺服頭骨(Servo-Skull)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例與待確認事項"><span>06</span>算例與待確認事項</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="伺服頭骨：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/servo-skull/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_order.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="伺服頭骨servo-skull原始碼依據">
+              伺服頭骨(Servo-Skull)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/base-effects/#cryptic_servo_skull_order">返回基礎效果</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                固定來源：Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                基礎天賦：<code>cryptic_servo_skull_order</code>；不占可選天賦點數。
+              </li>
+              <li>
+                證據程度：原始碼確認與程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                基礎天賦 cryptic_servo_skull_order 將 PlayerAbilities.cryptic_servo_skull_order_base 裝入閃擊欄位，提供1次能力使用次數，能力冷卻16秒、每秒恢復1秒冷卻資源；pause_fulfilled_func 在同伴仍持有 cryptic_servo_skull_temporary_buff 時回傳 false，因此冷卻在強化期間暫停。天賦特殊規則 cryptic_servo_skull_hack 由 SpawnCompanionsFromTalent 觸發生成伺服頭骨並設 can_shoot=true。按下能力會消耗1次使用次數，給頭骨 cryptic_servo_skull_temporary_buff，持續8秒；其 minion_shoot_cooldown_modifier=0.5 令射擊間隔成為原來一半（速率為原來2倍），damage_modifier=0.25。該限時效果開始時會在玩家掛載 cryptic_servo_skull_order server_only_proc_buff；此獨立同名增益只接受 on_hit 中 attack_instigator_unit 等於 hack 伺服頭骨且目標仍存活的命中，伺服頭骨命中時施加 cryptic_servo_skull_debuff（damage_taken_modifier=0.15、5秒）與1層 flamer_assault；目標已有8層燃燒時只重設燃燒的持續時間。控制方式另由 cryptic_double_tag_templates 提供：可解碼互動目標通過 hacking 驗證時進入 hacking 狀態，該行為的能力使用成本設定為0；敵人射擊命令檢查戰鬥技能至少有30%充能，訓練場不檢查此門檻。選擇 cryptic_servo_skull_improved 時能力改成 inactive 版本，並直接常駐套用複製後移除期限與啟停函式的 companion 強化效果，同時把 cryptic_servo_skull_order proc buff 作為被動掛載；因此這份基礎說明中的8秒手動強化不應套用到該改良節點。
+              </li>
+              <li>
+                本機Steam Build25606770：描述鍵 <code>loc_talent_cryptic_servo_skull_base_burn_desc</code>、同源中英hash <code>a5b8ce99</code> 已精確配對。中英均列出命令、強化8秒、射速與傷害增幅、燃燒及易傷；冷卻在強化期間暫停屬未展開細節，不是錯誤。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L569-L628">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L50-L64">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L34-L68">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/cryptic_servo_skull_order_base.lua#L6-L39">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/spawn_companions_from_talent.lua#L10-L41">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/companion/companion_servo_skull_settings.lua#L15-L28">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1063-L1209">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/smart_tag/double_tag/cryptic_double_tag_templates.lua#L12-L139">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/companion/companion_servo_skull_ability.lua#L423-L571">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/breed/breed_actions/companion/companion_servo_skull_actions.lua#L19-L58">固定版本來源</a>
+              </li>
+            </ul>
+            <h2 id="算例與待確認事項">
+              算例與待確認事項
+            </h2>
+            <ul>
+              <li>
+                靜態算例：不計其他冷卻修正，啟動後前8秒能力冷卻暫停；強化結束後以16秒恢復，因此從啟動到重新可用約24秒。
+              </li>
+              <li>
+                射速算例：原射擊間隔假設為3秒，套用0.5間隔倍率後為3×0.5=1.5秒；同一段時間內射擊速率加倍。實際單發傷害依頭骨攻擊資料與目標而定，這裡只比較天賦倍率。
+              </li>
+              <li>
+                以上時間與射速算例是依程式設定靜態推算，未作遊戲內測試；實際總等待時間可能受其他冷卻修正影響。
+              </li>
+              <li>
+                雙按標記射擊命令的30%門檻檢查戰鬥技能充能；若選擇「心智網指令」，額外射速強化會再消耗該充能，細節見對應天賦草稿。
+              </li>
+              <li>
+                改良節點把頭骨傷害與射速提升改為常駐，並常駐命中效果；本基礎天賦的限時能力規則不代表改良節點。
+              </li>
+              <li>
+                本機文字 Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/servo-skull/">← 返回伺服頭骨玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

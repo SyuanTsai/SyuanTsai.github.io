@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="虔誠刺客：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>虔誠刺客：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/pious-cut-throat/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">虔誠刺客：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>虔誠刺客：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Pious Cut-Throat</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/pious-cut-throat/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#虔誠刺客pious-cut-throat原始碼依據"><span>03</span>虔誠刺客(Pious Cut-Throat)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="虔誠刺客：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/pious-cut-throat/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_backstab_kills_restore_cd.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="虔誠刺客pious-cut-throat原始碼依據">
+              虔誠刺客(Pious Cut-Throat)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/pious-cut-throat/#zealot_backstab_kills_restore_cd">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_backstab_kills_restore_cd">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_backstab_kills_restore_cd</code>；名稱鍵：<code>loc_talent_zealot_backstab_kills_restore_cd</code>；描述鍵：<code>loc_talent_zealot_cooldown_on_backstab_weakspot_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_5321e553-acec-4b27-9d43-a5af507fa953</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦被動 buff 監聽 on_hit，先經 CheckProcFunctions.on_melee_hit；之後以 <code>is_backstab OR on_weakspot_hit</code> 判定，故任一條件滿足即可，不需擊殺。
+              </li>
+              <li>
+                命中後加入 zealot_weakspot_backstab_hit_cooldown_cooldown_buff。其 duration=2、max_stacks=1、refresh_duration_on_stack=true；start_func 將自訂 timer 設為 fixed time+1，update_func 每秒 restore_ability_resource(&#39;combat_ability&#39;,0.75) 並把 timer 加 1。
+              </li>
+              <li>
+                以 30 點/格、自然 1/秒作例，額外資源兩筆約 1.5 點，等同於約 1.5 秒自然充能。buff 更新先檢查 duration，再運行 template update_func；達到過期邊界後仍可能執行最後一筆更新。
+              </li>
+              <li>
+                Talent format_values 還留有 ability_cooldown=0.1，但描述文字用的是 cooldown 欄位 0.75；runtime buff 只使用 0.75，未使用 0.1 欄位。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1256-L1280">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1256–1280</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L175-L178">scripts/settings/talent/talent_settings_zealot.lua：175–178</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4068-L4134">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4068–4134</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L29-L48">scripts/extension_systems/buff/buffs/buff.lua：29–48</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L103-L127">scripts/extension_systems/buff/buffs/buff.lua：103–127</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L305-L328">scripts/extension_systems/buff/buffs/buff.lua：305–328</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L461">scripts/extension_systems/buff/buff_extension_base.lua：434–461</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1256-L1280">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1256–1280</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1138-L1163">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1138–1163</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>冷卻算例</strong>：每秒額外恢復相當於 0.75 秒基礎冷卻的進度；完整兩次結算共 0.75 × 2 = 1.5 秒。若自然回充也正常運作，同期約共推進 2 + 1.5 = 3.5 秒，充能已滿的部分不保留。
+              </li>
+              <li>
+                連續命中會重新計時 buff 時長；自訂 timer 只在 buff 首次建立時初始化，重新計時不一定重置已在跑的秒計時，因此密集觸發時不應將每次命中都簡單視為獨立 1.5 資源。
+              </li>
+              <li>
+                「30 點成本下 1.5 點等於 1.5 秒」是假設基礎自然回充 1 點/秒；其他回充加成或暫停會改變實際等待時間。
+              </li>
+              <li>
+                Talent 定義名稱欄仍寫 Backstab kills，但執行程式是 melee hit；inventory 繁中敘述說命中，故先記程式行為，不判為繁中錯譯。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>169457dc</code>。
+              </li>
+              <li>
+                同一hash的繁中與英文作用方向相符；補足觸發、疊層、恢復量與實際計算，不把原文省略當錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_backstab_kills_restore_cd.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/pious-cut-throat/">← 返回虔誠刺客玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

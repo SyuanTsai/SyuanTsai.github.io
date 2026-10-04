@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="肉搏戰：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>肉搏戰：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/close-quarters-killzone/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">肉搏戰：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>肉搏戰：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Close Quarters Killzone</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/close-quarters-killzone/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#肉搏戰close-quarters-killzone原始碼依據"><span>03</span>肉搏戰(Close Quarters Killzone)</a></li>
+            <li><a href="#觸發與自訂倒數"><span>04</span>觸發與自訂倒數</a></li>
+            <li><a href="#距離公式"><span>05</span>距離公式</a></li>
+            <li><a href="#原始碼依據"><span>06</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>07</span>算例條件與待確認事項</a></li>
+            <li><a href="#遊戲本體繁中對照"><span>08</span>遊戲本體繁中對照</a></li>
+            <li><a href="#圖示來源"><span>09</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="肉搏戰：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/close-quarters-killzone/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_increased_close_damage_after_combat_ability.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="肉搏戰close-quarters-killzone原始碼依據">
+              肉搏戰(Close Quarters Killzone)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/close-quarters-killzone/#veteran_increased_close_damage_after_combat_ability">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_increased_close_damage_after_combat_ability</code>；名稱鍵：<code>loc_talent_veteran_ability_assault</code>；描述鍵：<code>loc_talent_veteran_ability_assault_desc</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1634-L1661">節點</a>：<code>ability_modifier</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1303-L1344">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="觸發與自訂倒數">
+              觸發與自訂倒數
+            </h2>
+            <ul>
+              <li>
+                非隱身能力由 veteran_buffs_after_combat_ability 施加；隱身由 invisibility.start_func 直接施加。模板 duration=10、max_stacks=max_stacks_cap=1、damage_near=.15。
+              </li>
+              <li>
+                VeteranStealthBonusesBuff 在第一次偵測不處於隱身時設定 _stop_t=t+10；duration() 回 nil，不使用標準 start_time 到期。即使 refresh_duration_on_stack=true，一般 set_start_time 不重設 _stop_t/_in_invisibility，故已開始倒數不會因重施延長。
+              </li>
+            </ul>
+            <h2 id="距離公式">
+              距離公式
+            </h2>
+            <ul>
+              <li>
+                共用 damage_calculation 將 damage_near 與遠程加成依 sqrt(clamp((distance−12.5)/17.5,0,1)) 插值，再加到一般傷害倍率；damage_near 本身沒有 ranged-only 條件。此天賦的獨立貢獻為 .15×(1−sqrt(clamp((d−12.5)/17.5,0,1)))。
+              </li>
+              <li>
+                d≤12.5→.15；d=16.875→.075；d≥30→0。公式中的distance若呼叫端未提供，預設0。其他天賦的遠程加成另按同一插值合併。
+              </li>
+              <li>
+                算例基礎100、沒有其他加成：100×1.15=115。已有同階段25%時100×1.40=140。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1303-L1344">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 1303–1344 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1977-L2014">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1977–2014 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2032-L2047">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2032–2047 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1223-L1225">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1223–1225 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua#L15-L44">scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua，第 15–44 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L24-L26">scripts/utilities/attack/damage_calculation.lua，第 24–26 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L284-L319">scripts/utilities/attack/damage_calculation.lua，第 284–319 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_settings.lua#L18-L27">scripts/settings/damage/damage_settings.lua，第 18–27 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L619-L639">scripts/extension_systems/buff/buffs/buff.lua，第 619–639 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+            </ul>
+            <h2 id="遊戲本體繁中對照">
+              遊戲本體繁中對照
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  文字來源：本機Steam Build <code>25606770</code>，<code>content/localization/ui</code>，2026-10-01擷取；不是MOD文字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  語系鍵：<code>loc_talent_veteran_ability_assault_desc</code>；hash：<code>1eb58318</code>；繁中entry_index：<code>2009</code>；英文entry_index：<code>2009</code>。以資源＋hash配對，已確認兩語系此hash各一筆。
+                </p>
+              </li>
+              <li>
+                <p>
+                  繁中問題片段：「近戰傷害加成」；同版英文對照片段：<code>Close Damage</code>。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  判定：<strong>明確繁中描述錯誤</strong>。效果種類錯譯：Close Damage是依距離的damage_near，並非按近戰攻擊類型判斷的melee_damage。原文另稱離開潛行後才開始，與固定版本實作有差異，但此處只將近戰／近距離的同版語系差異列為勘誤。
+                </p>
+              </li>
+              <li>
+                <p>
+                  本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="/darktide/skills/veteran/localization-comparison/">完整比對範圍與版本限制</a>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2032-L2047">公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第2032–2047行</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L284-L297">公開依據：scripts/utilities/attack/damage_calculation.lua，第284–297行</a>
+                </p>
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_increased_close_damage_after_combat_ability.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/close-quarters-killzone/">← 返回肉搏戰玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    >
+    <meta
+      name="robots"
+      content="index,follow"
+    >
+    <meta
+      name="description"
+      content="老兵天賦炸藥儲備：手雷補給時間、計時規則與補給算例。"
+    >
+    <title>炸藥儲備 · 老兵技能 · Darktide</title>
+    <link
+      rel="canonical"
+      href="https://notes.tw-syuan.com/darktide/skills/veteran/demolition-stockpile/"
+    >
+    <link
+      rel="stylesheet"
+      href="/assets/css/darktide-skills.css"
+    >
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">炸藥儲備</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf"
+              width="80"
+              height="80"
+              alt="炸藥儲備天賦圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>炸藥儲備</h1>
+            <span class="skill-english-name" lang="en">Demolition Stockpile</span>
+            <div class="skill-badges" aria-label="技能分類與版本">
+              <span>老兵</span>
+              <span>閃擊升級</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <a id="veteran_replenish_grenades"></a>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果</a></li>
+            <li><a href="#replenishment"><span>02</span>補給時間</a></li>
+            <li><a href="#examples"><span>03</span>補給算例</a></li>
+            <li><a href="#sources"><span>04</span>來源與版本</a></li>
+            <li><a href="#git-player-details"><span>05</span>詳細資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="炸藥儲備技能說明">
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果</h2>
+            <ul class="skill-effects">
+              <li>手雷未滿時，定期補充 <strong>1 顆手雷</strong>。</li>
+              <li>投擲手雷<strong>不會重置補給倒數</strong>；手雷補滿時，清除倒數進度。</li>
+              <li>每次補充 1 顆後，若手雷仍未補滿，重新開始下一輪倒數。</li>
+            </ul>
+          </section>
+          <section class="skill-section" id="replenishment" aria-labelledby="replenishment-title">
+            <h2 id="replenishment-title">補給時間</h2>
+            <table class="skill-table">
+              <thead>
+                <tr>
+                  <th scope="col">手雷種類</th>
+                  <th scope="col">每輪時間</th>
+                  <th scope="col">補給量</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">粉碎者破片手雷</th>
+                  <td><strong>60</strong> 秒</td>
+                  <td>1 顆</td>
+                </tr>
+                <tr>
+                  <th scope="row">煙霧手雷</th>
+                  <td><strong>60</strong> 秒</td>
+                  <td>1 顆</td>
+                </tr>
+                <tr>
+                  <th scope="row">穿甲手雷</th>
+                  <td><strong>90</strong> 秒</td>
+                  <td>1 顆</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="skill-section" id="examples" aria-labelledby="examples-title">
+            <h2 id="examples-title">補給算例</h2>
+            <div class="skill-example">
+              <h3>缺少 2 顆破片手雷</h3>
+              <p>從缺少手雷、開始倒數時起算；期間不再投擲，也沒有其他手雷補給。</p>
+              <p class="skill-formula">60 秒 × 2 輪 ＝ 約 120 秒</p>
+              <p>約 60 秒後補回第 1 顆，再等約 60 秒補回第 2 顆。</p>
+              <ol class="skill-timeline" aria-label="兩顆破片手雷補給順序">
+                <li>
+                  <time datetime="PT0S">0 秒</time>
+                  <span>缺少 2 顆</span>
+                </li>
+                <li>
+                  <time datetime="PT60S">約 60 秒</time>
+                  <span>補回第 1 顆</span>
+                </li>
+                <li>
+                  <time datetime="PT120S">約 120 秒</time>
+                  <span>補回第 2 顆</span>
+                </li>
+              </ol>
+            </div>
+            <div class="skill-example">
+              <h3>倒數途中再次投擲</h3>
+              <p>破片手雷已倒數 30 秒，再投擲 1 顆；投擲後共缺少 2 顆，期間沒有其他手雷補給。</p>
+              <p class="skill-formula">60 秒 − 30 秒 ＝ 約 30 秒</p>
+              <p>原本的倒數繼續。再等約 30 秒補回第 1 顆，之後再等約 60 秒補回第 2 顆。</p>
+            </div>
+            <p class="skill-note">算例以固定配裝推導；實際補給發生於倒數到期後的遊戲更新，因此使用近似時間。</p>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">來源與版本</h2>
+            <ul class="skill-source-list">
+              <li>
+                <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_replenish_grenades">Git 玩家說明 ↗</a>
+                <span>保留原職業文件、技能分類與算例。</span>
+              </li>
+              <li>
+                <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_replenish_grenades.md">逐技能原始碼依據 ↗</a>
+                <span>完整計時規則、恢復上限、例外與圖示來源。</span>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L141-L147">補給量與種類時間 ↗</a>
+                <span>每次 1 顆；破片與煙霧 60 秒、穿甲 90 秒。</span>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1855-L1911">倒數與補給行為 ↗</a>
+                <span>手雷滿額清除倒數；缺額開始計時，到期後補給。</span>
+              </li>
+            </ul>
+            <p class="skill-note">依 Release 1.13.1 原始碼分析，未進行遊戲內實測。中文名稱沿用既有詞表，尚未核實官方繁體名稱。</p>
+            <p class="skill-source-sha">Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e</p>
+          </section>
+          <section class="skill-section" id="git-player-details" aria-labelledby="git-player-details-title">
+            <h2 id="git-player-details-title">機制與原始碼依據</h2>
+            <p>
+              <a href="/darktide/skills/veteran/demolition-stockpile/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_replenish_grenades">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_replenish_grenades.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ 技能與天賦 ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="狙擊專注 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>狙擊專注 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/marksmans-focus/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">狙擊專注</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4"
+              width="80"
+              height="80"
+              alt="狙擊專注圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>狙擊專注</h1>
+            <span class="skill-english-name" lang="en">Marksman's Focus</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/veteran/marksmans-focus/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="狙擊專注">
+          <a id="veteran_snipers_focus"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <strong>遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程暴擊或弱點命中的額外傷害加成增加 7.5%，裝填速度增加 1%。</strong>
+              </li>
+              <li>
+                額外傷害加成不提高基礎部分；武器與目標不同，整次命中的增幅也會不同。同時暴擊並命中弱點時，這項加成只套用一次。
+              </li>
+              <li>
+                效果最多按 <strong>10 層</strong>計算。已有層數時，任何弱點命中都能重設 <strong>5 秒</strong>持續時間；近戰弱點命中也可重新計時，但不增加層數。
+              </li>
+              <li>
+                未再觸發重新計時時，約每 5 秒減少 1 層；移動本身不消耗層數。
+              </li>
+            </ul>
+            <h2 id="傷害裝填與衰減算例">
+              傷害、裝填與衰減算例
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>十層效果</strong>：額外傷害加成為 <code>10 × 7.5% = 75%</code>，裝填速度加成為 <code>10 × 1% = 10%</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害增幅</strong>：假設未暴擊的遠程弱點命中，基礎部分 100、未加成的額外部分 40，無其他加成：由 <code>100 + 40 = 140 點</code> 變成 <code>100 + 40 × (1 + 75%) = 170 點</code>，整次命中增加 <code>30 ÷ 140 ≈ 21.43%</code>。若額外部分改為 100，同條件則為 <code>200 → 100 + 100 × 1.75 = 275 點</code>，增加 <code>75 ÷ 200 = 37.5%</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>搭配堅定不移</strong>：同樣未暴擊且命中弱點，基礎與未加成的額外部分各 100，無其他加成：<code>100 + 100 × (1 + 75% + 30%) = 305 點</code>。兩項加成在額外傷害部分相加。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>裝填時間</strong>：原本裝填 4 秒，無其他裝填加成時，<code>4 ÷ 1.1 ≈ 3.64 秒</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>層數衰減</strong>：只有 3 層且不再重新計時時：約第 5 秒剩 2 層、第 10 秒剩 1 層、第 15 秒歸零。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/marksmans-focus/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_snipers_focus">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_snipers_focus.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="熔爐怒吼：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>熔爐怒吼：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/pulverising-strikes/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">熔爐怒吼：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>熔爐怒吼：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Pulverising Strikes</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/pulverising-strikes/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#熔爐怒吼pulverising-strikes原始碼依據"><span>03</span>熔爐怒吼(Pulverising Strikes)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="熔爐怒吼：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/pulverising-strikes/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_ability_punk_rage_sub_2.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="熔爐怒吼pulverising-strikes原始碼依據">
+              熔爐怒吼(Pulverising Strikes)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/pulverising-strikes/#broker_ability_punk_rage_sub_2">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_ability_punk_rage_sub_2">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_ability_punk_rage_sub_2</code>；名稱鍵：<code>loc_talent_broker_ability_punk_rage_sub_2</code>；描述鍵：<code>loc_talent_broker_ability_punk_rage_sub_2_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_0625b695-b695-49f5-9050-551fbd7e9699</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                此節點啟用 rage_cleave 特殊規則；怒火狀態把 max_hit_mass_attack_modifier 與 max_hit_mass_impact_modifier 各加 0.5，兩者皆為加算修正，格式值使用攻擊命中重量 +50%。它改變穿透／命中重量預算及衝擊，不是直接傷害。
+              </li>
+              <li>
+                持續期間的伺服器更新檢查 ramping buff 疊層；疊層數隨存續時間逐步補到 elapsed time 門檻，結束時由怒火停止流程逐一結束已建立的疊層 buff。每層 stat_buffs.melee_power_level_modifier=0.025，buff max_stacks=10，因此總修正上限 10×0.025=0.25。
+              </li>
+              <li>
+                主怒火 buff 同樣提供 0.35 melee_power_level_modifier；BuffSettings 把此屬性列為加算，因此只合併主能力與此節點時最多為 0.35+0.25=0.60 威力等級修正。其他天賦、武器與目標條件仍會改變最終傷害。
+              </li>
+              <li>
+                疊層是怒火存續時間驅動，不以近戰命中作為疊層觸發；近戰命中另觸發怒火本身的持續時間延長。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L372-L424">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：372–424</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L142-L168">scripts/settings/talent/talent_settings_broker.lua：142–168</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L542-L554">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：542–554</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L559-L606">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：559–606</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L663-L675">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：663–675</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L683-L744">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：683–744</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L860-L878">scripts/settings/buff/buff_settings.lua：860–878</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L25-L91">scripts/utilities/attack/power_level.lua：25–91</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L42-L64">scripts/utilities/attack/damage_profile.lua：42–64</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L372-L424">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：372–424</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1903-L1925">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1903–1925</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>算例</strong>：10 層 × 每層 2.5% = 25%；與主怒火的 35% 加算後為 60% 近戰威力等級修正。
+              </li>
+              <li>
+                橫掃與衝擊的重量修正影響命中／穿透能力，不應換算成固定額外目標數或直接傷害百分比。
+              </li>
+              <li>
+                滿 10 層所需時間與怒火實際結束時間會受近戰延長及更新時點影響；不能假設每次使用都必定在基本 10 秒內達到完整上限。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>fb3a2cef</code>。
+              </li>
+              <li>
+                繁中與英文都寫怒火期間增加橫掃，並按持續時間每秒取得近戰威力、最多10次；程式給每層2.5%與10層上限。+50%橫掃來自格式值，沒有翻譯差異。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_punk_rage_sub_2.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/pulverising-strikes/">← 返回熔爐怒吼玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="速效型興奮劑：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>速效型興奮劑：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/fast-acting-stimms/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">速效型興奮劑：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>速效型興奮劑：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Fast Acting Stimms</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/fast-acting-stimms/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#速效型興奮劑fast-acting-stimms原始碼依據"><span>03</span>速效型興奮劑(Fast Acting Stimms)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="速效型興奮劑：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/fast-acting-stimms/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_ability_stimm_field_sub_1.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="速效型興奮劑fast-acting-stimms原始碼依據">
+              速效型興奮劑(Fast Acting Stimms)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/fast-acting-stimms/#broker_ability_stimm_field_sub_1">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_ability_stimm_field_sub_1">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_ability_stimm_field_sub_1</code>；名稱鍵：<code>loc_talent_broker_ability_stimm_field_sub_1</code>；描述鍵：<code>loc_talent_broker_ability_stimm_field_sub_1_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_9abd28ea-b786-4e90-a185-4afabef584ec</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                special rule broker_stimm_field_linger 使 proximity 初始化時將 _life_time 改為 sub_1_life_time=5，並記錄 _linger_time=15。場域半徑仍為3公尺。
+              </li>
+              <li>
+                單位離場時，_remove_buff_from_unit 改呼叫 _make_linger，對已套用 buff 呼叫 remove_externally_controlled_buff_with_linger(local_id,...,15)。部署物生命期結束時 destroy 也會對仍在場域內的單位呼叫 _make_linger；所以離場或場域結束都可能保留已取得效果15秒，重新進場時會重新接回既有 buff。
+              </li>
+              <li>
+                場域工作生命期以5秒結束後不再有該 proximity job，player ability 的 manual pause fulfillment 因而恢復 resource regeneration；15秒 lingering buffs 不會延長能力冷卻暫停。冷卻資源每秒自然補1、每次充能成本60，所以部署後約5秒場域時間加60秒自然回充，共65秒至滿充。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L522-L549">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：522–549</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L170-L188">scripts/settings/talent/talent_settings_broker.lua：170–188</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua#L34-L52">scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua：34–52</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua#L107-L125">scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua：107–125</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua#L308-L364">scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua：308–364</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua#L220-L305">scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua：220–305</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/broker_abilities.lua#L98-L137">scripts/settings/ability/player_abilities/abilities/broker_abilities.lua：98–137</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L825-L884">scripts/extension_systems/ability/player_unit_ability_extension.lua：825–884</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L522-L549">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：522–549</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L2094-L2116">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：2094–2116</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>冷卻算例</strong>：基本場域5秒結束後恢復60秒自然充能，總計約5+60=65秒。隊友的場域效果可以再留15秒，但這不會延後場域冷卻。
+              </li>
+              <li>
+                15秒延續是離場或場域結束後身上效果的剩餘時間，不表示部署物本身再存在15秒。
+              </li>
+              <li>
+                冷卻以場域 job 結束作為恢復自然充能條件，沒有把效果延續時間加進暫停時長。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>8022348e</code>。
+              </li>
+              <li>
+                繁中與英文都描述場域縮短至5秒、離開後效果再持續15秒；固定版程式在離場與場域結束時都讓已套用效果延續15秒。冷卻在場域本體結束後恢復是程式補充。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_stimm_field_sub_1.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/4ea2874c-338f-42ec-95cb-9f4c08e64794">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/fast-acting-stimms/">← 返回速效型興奮劑玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

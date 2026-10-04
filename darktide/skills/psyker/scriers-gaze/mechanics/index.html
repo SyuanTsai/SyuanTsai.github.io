@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="占卜者的注視：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>占卜者的注視：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/scriers-gaze/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">占卜者的注視：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>占卜者的注視：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Scrier's Gaze</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/psyker/scriers-gaze/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#占卜者的注視scriers-gaze原始碼依據"><span>03</span>占卜者的注視(Scrier's Gaze)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="占卜者的注視：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/psyker/scriers-gaze/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_combat_ability_stance.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="占卜者的注視scriers-gaze原始碼依據">
+              占卜者的注視(Scrier&#39;s Gaze)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/scriers-gaze/#psyker_combat_ability_stance">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜<a href="/darktide/skills/psyker/localization-comparison/#psyker_combat_ability_stance">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>psyker_combat_ability_stance</code>；名稱鍵：<code>loc_talent_psyker_combat_ability_overcharge_stance</code>；描述鍵：<code>loc_talent_psyker_combat_ability_overcharge_stance_improved_description</code>。
+              </li>
+              <li>
+                節點：<code>node_2a022d3f-fddf-4faf-a79d-c8fe6a18fe36</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                能力模板直接加成 damage +0.10、weakspot_damage +0.10、critical_strike_chance +0.20；被動韌性傷害倍率為0.8，代表韌性承傷減少20%。注視期間每幀按0.025*dt恢復韌性，0.025為最大韌性的比例。每秒堆疊一層，最多30層；另有每秒傷害lerp，最高+30%，與基礎+10% damage欄位並存。反噬生成速率隨時間以平方曲線增加，擊殺會增加抵銷量而暫緩累積；到100%時 buff 停止。弱點擊殺的 bonus_stacks 只有啟用 Precognition 後才會增加。結束時按目前 stacks+bonus_stacks 建立傷害增益，持續10秒。能力冷卻25秒且主動buff存在時暫停冷卻，因此無其他冷卻修正時，計時從離開注視後恢復。 傷害計算先將一般傷害加成套到基礎傷害，再把弱點／暴擊額外傷害加上去。注視的 +10% 弱點傷害會進入額外傷害的乘數，因此示範中 100 基礎 + 50 額外變成 100 + 55 = 155；不是 150 × 1.1。注視疊滿時，一般傷害 +40% 也會放大基礎與弱點額外部分；在同一傷害曲線比例的簡化例中為 140 + 70 × 1.1 = 217。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L37-L112">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：37–112</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua#L78-L105">scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua：78–105</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1024-L1079">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1024–1079</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1093-L1149">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1093–1149</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1169-L1199">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1169–1199</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1227-L1244">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1227–1244</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L5-L15">scripts/settings/talent/talent_settings_psyker.lua：5–15</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L133-L135">scripts/settings/talent/talent_settings_psyker.lua：133–135</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L65-L95">scripts/utilities/attack/damage_calculation.lua：65–95</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L232-L242">scripts/utilities/attack/damage_calculation.lua：232–242</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L711">scripts/utilities/attack/damage_calculation.lua：672–711</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L715-L724">scripts/utilities/attack/damage_calculation.lua：715–724</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L717-L724">scripts/utilities/attack/damage_calculation.lua：717–724</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L772-L782">scripts/utilities/attack/damage_calculation.lua：772–782</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L37-L112">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：37–112</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L482-L514">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：482–514</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>傷害算例</strong>：不計其他加成，滿層時非暴擊、非弱點的 100 點傷害變成 100 × (1 + 10% + 30%) = 140 點；結束後只保留累積的 30%，因此是 130 點。
+              </li>
+              <li>
+                <strong>弱點算例</strong>：只看弱點加成這一項，假設一般傷害 100、弱點額外傷害 50，原有 150 點會變成 100 + 50 × 1.10 = 155 點，整次命中約增加 3.33%；注視的其他增傷另計。
+              </li>
+              <li>
+                <strong>恢復與暴擊算例</strong>：最大韌性 100 時，每秒恢復 100 × 2.5% = 2.5 點，以缺少的韌性為上限；原有 5% 爆擊率變成 5% + 20% = 25%。
+              </li>
+              <li>
+                實際注視長短由反噬累積、武器動作、擊殺及其他修正共同決定；30層上限不保證能達成。
+              </li>
+              <li>
+                弱點傷害欄只在弱點命中參與；完整攻擊結果要按武器、敵人和攻擊類型計算，這裡分開示範各項加成。
+              </li>
+              <li>
+                遊戲文字Build25606770與公開source commit版本對應為1.13.1；公開程式碼中的註解固定8秒與執行時100%反噬結束條件不同，採執行邏輯並待遊戲內確認。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>00d42220</code>。
+              </li>
+              <li>
+                原文將注視寫成「進入／離開注視範圍」，容易誤解成地面區域；同源英文與實作均指角色進入／結束注視狀態。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability/psyker_combat_ability_stance.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/scriers-gaze/">← 返回占卜者的注視玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

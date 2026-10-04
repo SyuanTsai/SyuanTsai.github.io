@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="護教軍：來源與技術索引 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>護教軍：來源與技術索引 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/source-index/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">護教軍：來源與技術索引</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>護教軍：來源與技術索引</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="護教軍：來源與技術索引">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/">← 返回護教軍</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/SOURCE_INDEX.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="護教軍來源文件與技術索引">
+              護教軍：來源文件與技術索引
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">版本、日期與證據限制</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/skitarii/base-effects/">角色基礎效果</a>｜<a href="/darktide/skills/skitarii/unused-definitions/">未直接使用的定義</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/skitarii/localization-comparison/">遊戲本體繁中描述比對</a>｜<a href="/darktide/skills/skitarii/damage-percentage-review/">百分比描述盤點</a>
+            </p>
+            <p>
+              固定來源 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。技能樹共 <strong>97 個可選節點</strong>，均為一點；同一配置最多分配 30 點。
+              <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84">職業與基礎天賦</a>；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10">技能樹設定</a>。內部 tree version 18 不等於遊戲發行版號。
+            </p>
+            <p>
+              名稱沿用翻譯表；機制為固定版本的程式分析，未進行遊戲內驗證。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能／程式識別碼
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/integrated-refraction-emitter/mechanics/">整合型艾曼納圖斯力場</a> / <code>cryptic_grenade_ability_force_field</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/purgator-servo-skull/mechanics/">滌罪伺服頭骨</a> / <code>cryptic_flamethrower</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/medicae-servo-skull/mechanics/">醫療伺服頭骨</a> / <code>cryptic_servo_skull_inject_ally</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/arc-grenades/mechanics/">電弧手榴彈</a> / <code>cryptic_grenade_ability_arc_grenade</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/artificer-servo-skull/mechanics/">匠師伺服頭骨</a> / <code>cryptic_servo_skull_improved</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/overcharged-arc-grenades/mechanics/">超載電弧手榴彈</a> / <code>cryptic_arc_grenades_brittleness</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/enhanced-arc-grenades/mechanics/">強化電弧手榴彈</a> / <code>cryptic_arc_grenades_weapon_malfunction</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/overcharged-refraction-emitter/mechanics/">過載艾曼納圖斯力場</a> / <code>cryptic_force_field_duration_increase</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/kinetic-repulsion/mechanics/">動能排斥</a> / <code>cryptic_force_field_capacitance_restore</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/noospheric-command/mechanics/">心智網指令</a> / <code>cryptic_servo_skull_improved_tagging</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/voltaic-resistance/mechanics/">電流抗性</a> / <code>cryptic_force_field_arcs</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/resurgence/mechanics/">復甦</a> / <code>cryptic_coherency_regen_aura_improved</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/ammunition-deposit/mechanics/">彈藥存放</a> / <code>cryptic_ammo_aura</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/foe-render-creed/mechanics/">碎敵信條</a> / <code>cryptic_aura_weapon_improved</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/chordclaw-strike/mechanics/">弦爪重擊</a> / <code>cryptic_chordclaw</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/restoration-protocol/mechanics/">修復協定</a> / <code>cryptic_precision_stance_toughness_suppression</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/writ-of-ammunition-enumeration/mechanics/">彈藥盤點之旨</a> / <code>cryptic_precision_stance_fire_rate_increased</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/voltaic-arcs/mechanics/">電流弧</a> / <code>cryptic_discharge_generates_arcs</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/voltaic-motivator/mechanics/">電能驅動</a> / <code>cryptic_discharge_attack_speed_increase</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/voltaic-overcharge/mechanics/">電流超載</a> / <code>cryptic_discharge_toughness</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/axial-slash/mechanics/">軸向斬擊</a> / <code>cryptic_chordclaw_horizontal_swipe</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/probing-strikes/mechanics/">試探連擊</a> / <code>cryptic_chordclaw_quick_stab_combo</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/flux-conduit-build-up/mechanics/">通量導管蓄積</a> / <code>cryptic_crits_grant_power</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/reactor-coil-recharge/mechanics/">反應爐線圈充能</a> / <code>cryptic_weakspot_kills_grant_power</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/augmented-power-cycle/mechanics/">強化能量循環</a> / <code>cryptic_increased_passive_cooldown_regen</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/capacitor-reclamation-loop/mechanics/">電容回收迴路</a> / <code>cryptic_multi_hits_grant_power</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/voltaic-emitter/mechanics/">電能發射器</a> / <code>cryptic_discharge</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/advanced-combat-doctrines/mechanics/">進階戰鬥教範</a> / <code>cryptic_precision_stance</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/satiated-steel/mechanics/">鋼鐵富足</a> / <code>cryptic_chordclaw_capacitance_restoration</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/slice-and-dice/mechanics/">千刀萬剮</a> / <code>cryptic_chordclaw_consecutive_bonus</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/piercing-sight/mechanics/">洞察之眼</a> / <code>cryptic_precision_stance_crit_cleave</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/calculated-priority/mechanics/">精算順序</a> / <code>cryptic_precision_stance_damage_on_elite_kill</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/flensing-protocols/mechanics/">削切協議</a> / <code>cryptic_dissector</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/redline-capacitors/mechanics/">極限電容</a> / <code>cryptic_redline</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/power-overload/mechanics/">能量超載</a> / <code>cryptic_overload_keystone</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/critical-power-overload/mechanics/">爆擊能量過載</a> / <code>cryptic_overload_keystone_bigger_explosion</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/invigorating-overload/mechanics/">振奮過載</a> / <code>cryptic_overload_keystone_toughness_stamina</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/static-capacitor-drain/mechanics/">靜電電容消耗</a> / <code>cryptic_overload_keystone_permastack</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/servo-sinew-surge/mechanics/">伺服肌腱湧動</a> / <code>cryptic_dissector_crit_attack_speed</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/honed-dissector/mechanics/">熟練解剖者</a> / <code>cryptic_dissector_max_stacks</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/advanced-power-management/mechanics/">進階能量管理</a> / <code>cryptic_redline_strength</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/capacitory-limit-override/mechanics/">電容極限覆寫</a> / <code>cryptic_redline_rending</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/resource-optimisation-canticles/mechanics/">資源最佳化聖歌</a> / <code>cryptic_redline_extra_max_stacks</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/enhanced-capacitance-protocols/mechanics/">強化電容協議</a> / <code>cryptic_dissector_ability_stacks</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/powerdrive/mechanics/">動力驅動</a> / <code>cryptic_overload_keystone_abilities</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/higher-purpose/mechanics/">崇高意圖</a> / <code>cryptic_dissector_power</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/surge-extension/mechanics/">脈衝延伸</a> / <code>cryptic_redline_toughness</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/power-redistribution-uplink/mechanics/">能量載分配鏈路</a> / <code>cryptic_crits_grant_tdr</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/adaptive-combat-engram/mechanics/">適應性戰鬥記憶體</a> / <code>cryptic_dr_on_toughness_break</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/evasive-servo-recovery/mechanics/">閃避伺服恢復</a> / <code>cryptic_successful_dodge_stamina</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/omnissian-recharge-litany/mechanics/">歐姆尼賽亞充能聖歌</a> / <code>cryptic_multi_hits_restore_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/channelled-motive-force/mechanics/">原初動力導流</a> / <code>cryptic_stamina_increases_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/entropic-transfer/mechanics/">熵能轉移</a> / <code>cryptic_electrocution_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/overcharge-transfer-lattice/mechanics/">過載轉移晶格</a> / <code>cryptic_electrocution_defense</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/sureshot-cogitator-sync/mechanics/">精準思算機同步</a> / <code>cryptic_weakspot_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/shockline-breach-protocol/mechanics/">電擊破壞協定</a> / <code>cryptic_pushing_grants_cleave</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/rad-sink/mechanics/">輻射槽</a> / <code>cryptic_stacking_ranged_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/progressive-plating-matrix/mechanics/">漸進裝甲矩陣</a> / <code>cryptic_stacking_tdr</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/retribution-conduit/mechanics/">報應導管</a> / <code>cryptic_damage_vs_electrocuted_scaling_on_charge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/galvanic-marking-array/mechanics/">電流標記陣列</a> / <code>cryptic_elite_kills_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/auto-repair-doctrines/mechanics/">自我修復教義</a> / <code>cryptic_toughness_per_charge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/last-stand-relay/mechanics/">絕境中繼</a> / <code>cryptic_crit_chance_based_on_charge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/weakness-analysis-doctrine/mechanics/">弱點分析教義</a> / <code>cryptic_afflicted_increased_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/ablative-motion-routines/mechanics/">離格動作例程</a> / <code>cryptic_mobile_defense</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/power-overflow/mechanics/">能量溢流</a> / <code>cryptic_shared_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/target-neutralization-feedback/mechanics/">目標殲滅回饋</a> / <code>cryptic_stun_suppression_immune</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/binary-ballistics-protocol/mechanics/">二元彈道協議</a> / <code>cryptic_elite_kills_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/force-distribution-actuators/mechanics/">力量分配致動器</a> / <code>cryptic_push_stagger_stamina</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/superior-tracking-litanies/mechanics/">卓越追蹤聖歌</a> / <code>cryptic_no_braced_movement_penalty</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/hydraulic-impact/mechanics/">液壓衝擊</a> / <code>cryptic_better_heavies</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/hybrid-combat-covenant/mechanics/">混合戰鬥契約</a> / <code>cryptic_hybrid_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/kinetic-energy-distributors/mechanics/">動能分配器</a> / <code>cryptic_toughness_on_damage_taken</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/uncapped-arrestor/mechanics/">無限抑制器</a> / <code>cryptic_melee_attacks_give_melee_attack_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/electro-strike-conduit/mechanics/">電擊打擊導管</a> / <code>cryptic_melee_crits_electrocute_first</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/gunsmith/mechanics/">槍械技師</a> / <code>cryptic_auto_reload</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/assassination-protocols/mechanics/">暗殺協議</a> / <code>cryptic_ranged_vs_bfg</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/system-shock/mechanics/">系統電擊</a> / <code>cryptic_electrocution_applies_brittleness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/ammo-cell-augury/mechanics/">彈藥預知</a> / <code>cryptic_ammo_reserve</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/voltaic-restoration/mechanics/">電能修復</a> / <code>cryptic_coherency_toughness_on_ability</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/salvation-doctrine/mechanics/">救贖教範</a> / <code>cryptic_revive_speed_and_dr</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/ammunition-restoration-pod/mechanics/">彈藥補給艙</a> / <code>cryptic_passive_ammo_replenishment</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/sustained-assault-doctrine/mechanics/">持續攻擊教義</a> / <code>cryptic_stacking_melee_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/galvanized-coating/mechanics/">鍍鋅精密塗層</a> / <code>cryptic_stun_dr_power</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/moebian-conductor/mechanics/">莫比亞導體</a> / <code>cryptic_damage_on_ability</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/servo-core-recharge-engine/mechanics/">伺服核心充能引擎</a> / <code>cryptic_weakspot_kills_restore_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/adaptive-combat-calibration/mechanics/">適應性戰鬥校準</a> / <code>cryptic_cleave_and_impact</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/residual-current-buffer/mechanics/">剩餘電流緩衝</a> / <code>cryptic_tdr_based_on_charge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/superior-defence-engrams/mechanics/">卓越防禦記憶模組</a> / <code>cryptic_ranged_stacking_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/target-prioritization-psalms/mechanics/">標記優先聖詩</a> / <code>cryptic_specials_marking</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/protectorate-protocol/mechanics/">守護協議</a> / <code>cryptic_disabled_allies_defense</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/data-sensor-protocol/mechanics/">數據感應協定</a> / <code>cryptic_ally_coherency_defenses</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/sequenced-charge/mechanics/">序列充能</a> / <code>cryptic_strength_on_charge_gain</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/slaughter-protocol/mechanics/">屠殺協議</a> / <code>cryptic_toughness_replenishment_on_kill_bonus</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/precision-combat-augurs/mechanics/">精準戰鬥探測儀</a> / <code>cryptic_next_hit_all_damage_on_dodge</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/voltaic-burst/mechanics/">電流爆發</a> / <code>cryptic_electrocution_push</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/ablative-wards/mechanics/">抗腐護符</a> / <code>cryptic_corruption_resistance_doom</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/skitarii/threat-detection-imperative/mechanics/">威脅偵測指令</a> / <code>cryptic_ranged_kills_tdr</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="猛攻 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>猛攻 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/onslaught/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">猛攻</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/0801494c-4548-4fcb-afe7-8a7c563ef396"
+              width="80"
+              height="80"
+              alt="猛攻圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>猛攻</h1>
+            <span class="skill-english-name" lang="en">Onslaught</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/veteran/onslaught/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="猛攻">
+          <a id="veteran_continous_hits_apply_rending"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <strong>連續命中同一個仍存活的敵人，從第二次攻擊起，每次施加 1 層脆弱。</strong>
+              </li>
+              <li>
+                每層使目標的護甲修正受到 <strong>2.5%</strong> 撕裂效果，最多 <strong>16 層（40%）</strong>；其他隊友攻擊此目標也能受益。
+              </li>
+              <li>
+                實際增幅取決於攻擊者的武器、目標護甲與已有撕裂；滿層 40% 不是所有攻擊的最終傷害都增加 40%。
+              </li>
+              <li>
+                近戰與遠程均可觸發，每次揮擊或射擊最多處理第一個有效命中；流血等持續傷害不疊層。
+              </li>
+              <li>
+                持續 <strong>5 秒</strong>，新增層數重新計時。改打另一個敵人後，須重新連續命中；射空本身不清除已追蹤的目標。
+              </li>
+            </ul>
+            <h2 id="疊層與傷害算例">
+              疊層與傷害算例
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>四層脆弱</strong>：對同一敵人完成五次合資格命中，第一下建立連續命中，後四下合計 <code>4 × 2.5% = 10%</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>四層後的下一擊</strong>：假設未暴擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，無其他加成：由 <code>100 × 0.5 = 50 點</code> 變成 <code>100 × (0.5 + 10%) = 60 點</code>，實際增加 <code>10 ÷ 50 = 20%</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>十六層後的下一擊</strong>：同條件為 <code>100 × (0.5 + 40%) = 90 點</code>，相對零層增加 <code>40 ÷ 50 = 80%</code>。這是此護甲倍率下的算例；換武器、換護甲，或改為弱點／暴擊命中，須重新計算。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/onslaught/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_continous_hits_apply_rending">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_continous_hits_apply_rending.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

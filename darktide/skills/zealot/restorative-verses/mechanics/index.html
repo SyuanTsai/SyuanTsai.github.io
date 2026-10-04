@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="治癒詩頌：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>治癒詩頌：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/restorative-verses/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">治癒詩頌：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>治癒詩頌：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Restorative Verses</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/restorative-verses/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#治癒詩頌restorative-verses原始碼依據"><span>03</span>治癒詩頌(Restorative Verses)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="治癒詩頌：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/restorative-verses/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_martyrdom_toughness_modifier.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="治癒詩頌restorative-verses原始碼依據">
+              治癒詩頌(Restorative Verses)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/restorative-verses/#zealot_martyrdom_toughness_modifier">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_martyrdom_toughness_modifier">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_martyrdom_toughness_modifier</code>；名稱鍵：<code>loc_talent_zealot_martyrdom_toughness_modifier</code>；描述鍵：<code>loc_talent_zealot_martyrdom_toughness_modifier_upd_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_4db4d1f1-d5b8-4d3f-a352-b50194ef96e4</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                節點掛載 <code>zealot_martyrdom_toughness_modifier</code>，修改 <code>toughness_replenish_modifier</code>。Buff 最大值為設定每格0.05×5，並依殉道的失去傷口格數/5線性插值，因此0至5格分別由0%增至25%。
+              </li>
+              <li>
+                此 stat 是韌性恢復效率倍率，不是立即 <code>Toughness.replenish_percentage</code> 呼叫；不應翻成每疊直接恢復固定韌性。
+              </li>
+              <li>
+                傷口格數與殉道共用：更新函式取 <code>damage_taken</code> 和 <code>permanent_damage_taken</code> 較大值，再用 Health helper 按最大生命/最大傷口換算完整已失去格數。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2300-L2319">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2300–2319</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L122-L124">scripts/settings/talent/talent_settings_zealot.lua：122–124</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L633-L652">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：633–652</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L680-L704">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：680–704</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/health.lua#L117-L127">scripts/utilities/health.lua：117–127</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1598-L1622">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1598–1622</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285">scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2300-L2319">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2300–2319</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1598-L1622">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1598–1622</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>恢復算例</strong>：某效果原本補 10 點韌性，2 層時為 10 × (1 + 2 × 5%) = 11 點；5 層時為 12.5 點。若另有同階段 20% 恢復加成，滿層為 10 × (1 + 20% + 25%) = 14.5 點，仍受韌性缺額限制。
+              </li>
+              <li>
+                示例說明加到恢復效率的 modifier，不計入其他恢復修正的最後合併公式。
+              </li>
+              <li>
+                每格的傷口格寬由實際最大生命值與最大傷口數決定；設定中的 <code>health_step=.15</code> 未被目前計算路徑讀取。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>d473a3ea</code>。
+              </li>
+              <li>
+                繁中寫成「每疊加一層會恢復5%韌性」，把效率提升誤成直接恢復；英文為 Toughness Replenishment，執行時掛載 toughness_replenish_modifier 並隨失去傷口格插值。應改為「每層提高韌性回復效率5%」一類表述。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_martyrdom_toughness_modifier.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/restorative-verses/">← 返回治癒詩頌玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

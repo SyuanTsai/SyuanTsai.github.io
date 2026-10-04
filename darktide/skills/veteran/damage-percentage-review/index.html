@@ -1,0 +1,1248 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="老兵：百分比與傷害比較 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>老兵：百分比與傷害比較 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/damage-percentage-review/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">老兵：百分比與傷害比較</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>老兵：百分比與傷害比較</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="老兵：百分比與傷害比較">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/">← 返回老兵</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/DAMAGE_PERCENTAGE_REVIEW.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="老兵天賦百分比描述盤點">
+              老兵天賦：百分比描述盤點
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>｜[描述規則](../../../../../../AI Prompt/Skill-Info-Workflow.md)
+            </p>
+            <ul>
+              <li>
+                固定來源 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>，沿用 Release 1.13.1 文件範圍。
+              </li>
+              <li>
+                範圍：逐項閱讀77個目前節點的玩家效果、目錄與算例，檢查百分比作用對象、比較分母、加算／乘算、武器差異、速度／時間及恢復基準。另重讀下列10項相關的共用結算與增益實作。
+              </li>
+              <li>
+                結果：6項額外傷害描述補強，4項相鄰的威力／撕裂描述補強；其餘67項未發現本次同類表達問題，保留既有說明。這不是77項機制全部重新逆向，也不是遊戲內測試。
+              </li>
+              <li>
+                沒有指定武器型號、攻擊／蓄力方式與測試目標，因此不判定盧修斯固定增加15%，也不判定所有自動槍都更高。
+              </li>
+            </ul>
+            <h2 id="共用計算依據">
+              共用計算依據
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  弱點／暴擊先算額外傷害F，再把適用加成相加後乘入，最後加回基礎部分B。原有加成s、新增a時，比較 <code>B + F × (1 + s)</code> 與 <code>B + F × (1 + s + a)</code>；增幅為 <code>a × F ÷ [B + F × (1 + s)]</code>。這是該階段的比例；比較前後其餘條件及後續流程需保持一致，且原值須大於零。
+                </p>
+              </li>
+              <li>
+                <p>
+                  B和F使用同一次命中的護甲、部位、武器傷害設定、暴擊及其他攻擊條件；不能把身體傷害直接視為弱點命中的B。姿態的一般遠程增傷會先影響上游，分項例不能冒充完整能力結果。
+                </p>
+              </li>
+              <li>
+                <p>
+                  威力影響輸入及傷害曲線；撕裂修正護甲倍率。兩者都不能直接套用只增加F的公式。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L60-L109">傷害結算順序</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782">額外傷害與同階段加成</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L26-L91">威力加成</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L69-L95">護甲與撕裂</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/armor_settings.lua#L8-L19">護甲類型的撕裂係數</a>
+                </p>
+              </li>
+            </ul>
+            <h2 id="77項逐項結果">
+              77項逐項結果
+            </h2>
+            <p>
+              「保留」只表示本次未發現同類描述問題，並不新增遊戲內驗證保證。技能連結通往各自的固定來源與限制。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                    <th>
+                      本次處理
+                    </th>
+                    <th>
+                      檢查結論
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/smoke-grenade/mechanics/">煙霧手雷</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      煙霧持續與引信時間分開；無弱點傷害百分比。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/grenadier/mechanics/">擲彈兵</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      機率與期望次數已分開，沒有把期望值寫成保底觸發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/grenade-tinkerer/mechanics/">手雷專家</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      分開爆炸傷害、半徑及煙霧持續；已排除流血並註明護甲等變因。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/krak-grenade/mechanics/">穿甲手雷</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      爆炸算例已限定中心、護甲、非首領及一般部位。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/demolition-stockpile/mechanics/">炸藥儲備</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      冷卻／補給已分別說明自然經過時間、額外恢復或依序補回。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/shredder-frag-grenade/mechanics/">粉碎者破片手雷</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      流血按層數曲線，已限定目標護甲；未把層數比例當成線性傷害比例。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/close-and-kill/mechanics/">抵近殺敵</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      只計該光環的移速倍率，已列單位及不重複套用。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/fire-team/mechanics/">火力小分隊</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/survivalist/mechanics/">生存專家</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      補彈依備用彈藥上限，已區分個人／光環及小數累積。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/volley-fire/mechanics/">火力齊射</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      補強額外傷害
+                    </td>
+                    <td>
+                      區分遠程傷害與弱點額外傷害；分項算例不再容易被當成能力總增幅。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/infiltrate/mechanics/">滲透</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/low-profile/mechanics/">低調</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      仇恨權重與被攻擊機率已明確分開。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/executioners-stance/mechanics/">處決者姿態</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      補強額外傷害
+                    </td>
+                    <td>
+                      說明15%→25%的升級差額，分開各階段及比較基準。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/enhanced-target-priority/mechanics/">目標引導增強</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      輪廓種類、範圍及時間效果；無待釐清的傷害百分比。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/counter-fire/mechanics/">火力反擊</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      輪廓種類、範圍及時間效果；無待釐清的傷害百分比。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/hunters-resolve/mechanics/">獵手決意</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      明確限定韌性傷害；已區分同類加算、獨立乘算或各層乘算，依各技能例子處理。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/tactical-awareness/mechanics/">戰術意識</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      冷卻／補給已分別說明自然經過時間、額外恢復或依序補回。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/voice-of-command/mechanics/">發號施令</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      回滿／救援、範圍與冷卻效果；無弱點增幅混淆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/only-in-death-does-duty-end/mechanics/">只有死亡，職責才會終結</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      回滿／救援、範圍與冷卻效果；無弱點增幅混淆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/marksman/mechanics/">鷹眼</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      補強威力／撕裂
+                    </td>
+                    <td>
+                      威力與額外傷害分開；補線性階段前提及125→145的16%增幅。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/duty-and-honour/mechanics/">責任與榮譽</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      固定韌性點數已與百分比、目前值、最大值或重疊份數分開。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/overwatch/mechanics/">掩護射擊</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      冷卻／補給已分別說明自然經過時間、額外恢復或依序補回。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/close-quarters-killzone/mechanics/">肉搏戰</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/the-bigger-they-are/mechanics/">敵人越大...</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      輪廓種類、範圍及時間效果；無待釐清的傷害百分比。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/marksmans-focus/mechanics/">狙擊專注</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      補強額外傷害
+                    </td>
+                    <td>
+                      75%只作用於額外部分；補實際增幅、堅定不移加算及暴擊弱點不重複套用。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/chink-in-their-armour/mechanics/">滲透盔甲</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      補強威力／撕裂
+                    </td>
+                    <td>
+                      比較護甲倍率與已有撕裂；分開護甲階段與狙擊專注總效果。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/tunnel-vision/mechanics/">視野狹窄</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      韌性恢復量加成與最大耐力恢復分開，已用20→24及上限算例。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/long-range-assassin/mechanics/">遠程刺客</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      補強額外傷害
+                    </td>
+                    <td>
+                      區分112.5%額外加成、相對零層及相對十層的增幅。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/weapons-specialist/mechanics/">武器專家</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      爆擊率、攻速與裝填各自計算；已交代機率上限與時間換算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/on-your-toes/mechanics/">時刻警覺</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      恢復依最大值計算，已交代缺額／上限；未把恢復比例當成傷害加成。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/always-prepared/mechanics/">有備無患</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      以彈匣缺額乘層數比例，已交代向上取整、備用彈藥及缺口限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/invigorated/mechanics/">活力煥發</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      最大耐力恢復與耐力消耗倍率分開，已各自代入數值。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/focus-target/mechanics/">鎖定目標</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      目標承傷逐層乘算；已列1.05的次方及對照數值，未將層數百分比直接相加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/target-down/mechanics/">目標擊倒！</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      恢復依最大值計算，已交代缺額／上限；未把恢復比例當成傷害加成。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/redirect-fire/mechanics/">轉移火力！</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/focused-fire/mechanics/">集中火力</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      目標承傷逐層乘算；已列1.05的次方及對照數值，未將層數百分比直接相加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/demolition-team/mechanics/">爆破小隊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      機率與期望次數已分開，沒有把期望值寫成保底觸發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/tactical-reload/mechanics/">戰術裝填</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      速度增幅與所需時間分開；時間以原時間除以速度倍率計算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/volley-adept/mechanics/">齊射能手</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      速度增幅與所需時間分開；時間以原時間除以速度倍率計算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/precision-strikes/mechanics/">堅定不移</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      補強額外傷害
+                    </td>
+                    <td>
+                      補上額外傷害占比、15%／20%對照、既有加成及控制變因。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/desperado/mechanics/">亡命之徒</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      補強額外傷害
+                    </td>
+                    <td>
+                      區分爆擊率、額外傷害、單次傷害及平均傷害；補不同占比算例。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/out-for-blood/mechanics/">嗜血</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      恢復依最大值計算，已交代缺額／上限；未把恢復比例當成傷害加成。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/skirmisher/mechanics/">遊擊者</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/exploit-weakness/mechanics/">趁火打劫</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/leave-no-one-behind/mechanics/">不拋棄不放棄</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      移速、救援速度與減傷分開；時間除以速度倍率，減傷另算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/rending-strikes/mechanics/">裂擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      補強威力／撕裂
+                    </td>
+                    <td>
+                      比較原護甲倍率0.5與1；補20%／2.5%增幅及非弱點非暴擊前提。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/reciprocity/mechanics/">互惠互利</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      爆擊率以百分點相加，未當成單次傷害倍率。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/agile-engagement/mechanics/">靈活接敵</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/serrated-blade/mechanics/">鋸齒刀刃</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      流血按層數曲線，已限定目標護甲；未把層數比例當成線性傷害比例。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/trench-fighter-drill/mechanics/">戰壕兵訓練</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      速度增幅與所需時間分開；時間以原時間除以速度倍率計算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/onslaught/mechanics/">猛攻</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      補強威力／撕裂
+                    </td>
+                    <td>
+                      說明40%脆弱不等於最終增傷40%；補層數已存在後下一擊的對照。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/toughness-boost/mechanics/">韌性提升</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      固定韌性點數已與百分比、目前值、最大值或重疊份數分開。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/catch-a-breath/mechanics/">喘息片刻</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      恢復依最大值計算，已交代缺額／上限；未把恢復比例當成傷害加成。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/opening-salvo/mechanics/">首輪齊射</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      爆擊率以百分點相加，未當成單次傷害倍率。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/kill-zone/mechanics/">殺戮地帶</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/shock-trooper/mechanics/">突擊隊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      暴擊免消耗彈藥；已以實際暴擊次數計算消耗，無傷害倍率說法。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/withering-fire/mechanics/">凋零烈焰</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      穿透能力與命中數／單體傷害已明確分開。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/exhilarating-takedown/mechanics/">振奮擊倒</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      明確限定韌性傷害；已區分同類加算、獨立乘算或各層乘算，依各技能例子處理。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/fully-loaded/mechanics/">全副武裝</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      容量增幅已區分備用彈藥／彈匣並列向下取整。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/born-leader/mechanics/">天生領袖</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      分享依原本應恢復量，已交代施放者缺額、隊友恢復加成與上限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/field-improvisation/mechanics/">臨場發揮</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      醫療速度、最大韌性恢復與腐敗處理各有算例及上限條件。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/covering-fire/mechanics/">火力掩護</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/competitive-urge/mechanics/">求勝心</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/confirmed-kill/mechanics/">擊殺紀錄</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      恢復依最大值計算，已交代缺額／上限；未把恢復比例當成傷害加成。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/close-order-drill/mechanics/">密集隊形訓練</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      明確限定韌性傷害；已區分同類加算、獨立乘算或各層乘算，依各技能例子處理。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/longshot/mechanics/">遠射</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/one-motion/mechanics/">行雲流水</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      速度增幅與所需時間分開；時間以原時間除以速度倍率計算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/deadshot/mechanics/">死亡射手</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      爆擊率以百分點相加，未當成單次傷害倍率。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/bring-it-down/mechanics/">幹掉它！</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/superiority-complex/mechanics/">優越情節</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/duck-and-dive/mechanics/">靈活應對</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      恢復依最大值計算，已交代缺額／上限；未把恢復比例當成傷害加成。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/iron-will/mechanics/">鋼鐵意志</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      明確限定韌性傷害；已區分同類加算、獨立乘算或各層乘算，依各技能例子處理。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/lock-and-load/mechanics/">荷槍實彈</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      容量增幅已區分備用彈藥／彈匣並列向下取整。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/keep-their-heads-down/mechanics/">讓他們全趴下！</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      壓制值與傷害已明確分開。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/covert-operative/mechanics/">秘密特工</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      側後方傷害單獨計算；已明定上游傷害與無額外背刺的前提。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/melee-damage-boost/mechanics/">近戰傷害提升</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      一般傷害加成；既有算例已限定只計該效果或同階段加算，未把弱點額外傷害當成整筆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/toughness-damage-reduction/mechanics/">韌性減傷</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      保留
+                    </td>
+                    <td>
+                      明確限定韌性傷害；已區分同類加算、獨立乘算或各層乘算，依各技能例子處理。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 id="驗證與限制">
+              驗證與限制
+            </h2>
+            <ul>
+              <li>
+                算例是固定參數的靜態推導；具名武器與敵人的最終傷害、傷害顯示取整及遊戲內行為仍未實測。
+              </li>
+              <li>
+                傷害推導與格式驗收結果記錄於 <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/docs/POC.md">POC</a>；可重用的預防規則已納入 [PROMPT](../../../../../../AI Prompt/Skill-Info-Workflow.md)。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

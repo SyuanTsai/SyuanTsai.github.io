@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="痛楚爆發：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>痛楚爆發：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/pained-outburst/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">痛楚爆發：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>痛楚爆發：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Pained Outburst</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/ogryn/pained-outburst/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#痛楚爆發pained-outburst原始碼依據"><span>03</span>痛楚爆發(Pained Outburst)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="痛楚爆發：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/pained-outburst/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor_trigger_on_zero_stacks.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="痛楚爆發pained-outburst原始碼依據">
+              痛楚爆發(Pained Outburst)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/pained-outburst/#ogryn_carapace_armor_trigger_on_zero_stacks">返回玩家說明</a>｜<a href="/darktide/skills/ogryn/source-index/">技術索引</a>｜<a href="/darktide/skills/ogryn/localization-comparison/#ogryn_carapace_armor_trigger_on_zero_stacks">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>ogryn_carapace_armor_trigger_on_zero_stacks</code>；名稱鍵：<code>loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks</code>；描述鍵：<code>loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_a919d7de-281e-485f-aabb-5d7c18d3aa4c</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                父 buff 的 <code>on_stacks_removed_func</code> 只在子層移除回呼中檢查門檻；<code>ogryn_carapace_explosion.stacks=5</code>。唯一 buff <code>duration=30</code>，並以 <code>has_unique_buff_id</code> 防止冷卻期間重複建立。
+              </li>
+              <li>
+                效果起始時若角色存活且未倒地，呼叫 <code>Toughness.replenish_percentage(unit, 0.5, false, ...)</code>；<code>false</code> 表示不略過 stat buffs。接著以 <code>ogryn_carapace_armor_explosion</code>、<code>radius=2.5</code>、<code>ogryn_charge_finish</code> profile 建立爆炸。
+              </li>
+              <li>
+                <code>stack_offset=-1</code> 使玩家可見層數=內部子層數−1；回呼直接檢查原始 <code>num_child_stacks&lt;=5</code>，因此依此來源實際在可見 4 層或更低才符合條件，較兩種語言描述的「5 層以下」少一層。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1693-L1727">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：1693–1727</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L97-L99">scripts/settings/talent/talent_settings_ogryn.lua：97–99</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L683-L760">scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：683–760</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/parent_proc_buff.lua#L170-L191">scripts/extension_systems/buff/buffs/parent_proc_buff.lua：170–191</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L113-L129">scripts/settings/damage/explosion_templates/player_explosion_templates.lua：113–129</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/ogryn_damage_profile_templates.lua#L95-L125">scripts/settings/damage/damage_profiles/archetypes/ogryn_damage_profile_templates.lua：95–125</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/toughness/toughness.lua#L16-L24">scripts/utilities/toughness/toughness.lua：16–24</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L275">scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–275</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1693-L1727">scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：1693–1727</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L740-L762">scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：740–762</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>算例</strong>：失層後剩 4 層、未選「最堅韌！」時，基本恢復量為最大韌性的 50% × (1 + 4 × 3%) = 56%，再受缺少韌性限制。 例如最大韌性 100 且缺額足夠，可恢復 100 × 56% = 56 點；倒地時不提供這筆恢復。
+              </li>
+              <li>
+                機制核對至指定公開來源 SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；本機 Build 25606770 的中英文字串與公開來源版本對應為1.13.1，文字與實作差異待遊戲內核對。
+              </li>
+              <li>
+                程式檢查內部子層數而非扣除 stack offset 後的可見層數。角色倒地時仍建立爆炸，但起始函式略過韌性恢復。30 秒是唯一 buff 的存續時間；冷卻過後仍須再有一次子層移除才會觸發。
+              </li>
+              <li>
+                中英文字都寫 5 層或以下；固定來源在失層回呼時檢查的數值換算成玩家可見層數是 4 層或更低。文字與程式來源皆為1.13.1；這項差異待遊戲內核對。固定來源使用的爆發設定對護甲的直接傷害倍率皆為 0，效果是擊退而非造成傷害。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>d03260f0</code>。
+              </li>
+              <li>
+                繁中寫「當…層數達…層以下時」，英文寫「reaches … stacks or below」，兩種本機文字都表示 5 層或以下。固定公開來源在失去一層後檢查內部層數，換算為玩家可見 4 層或更低；文字與程式來源皆為1.13.1；實際表現待遊戲內核對，不單憑此判定翻譯錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone_modifier/ogryn_carapace_armor_trigger_on_zero_stacks.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/pained-outburst/">← 返回痛楚爆發玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

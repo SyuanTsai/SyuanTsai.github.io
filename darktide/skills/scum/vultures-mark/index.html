@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="兀鷲印記 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>兀鷲印記 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/vultures-mark/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">兀鷲印記</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd"
+              width="80"
+              height="80"
+              alt="兀鷲印記圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>兀鷲印記</h1>
+            <span class="skill-english-name" lang="en">Vulture's Mark</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/scum/vultures-mark/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="兀鷲印記">
+          <a id="broker_keystone_vultures_mark_on_kill"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>取得印記</strong>：以遠程攻擊擊殺精英或專家敵人，取得 1 層，持續 8 秒；再次取得會增加層數並重設共享計時，最多 3 層。沒有新層時，最後一次取得後 8 秒印記全數消失。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>每層加成</strong>：每層增加 5% 遠程傷害、5 個百分點遠程爆擊率與 5% 移動速度。3 層時分別為 +15%、+15 個百分點、+15%。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>滿層回韌性</strong>：3 層期間，每次再以遠程攻擊擊殺精英或專家，恢復自己與協同範圍內的隊友最大韌性的 15%；實際回補不超過各自韌性缺額。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>武器例外</strong>：以毒針手槍造成近距離 毒素擊殺取得印記：需先以遠程武器槽的毒針手槍 命中精英／專家並在其毒素效果仍有效時，由毒素在近距離造成死亡。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：無其他修正時，基礎遠程傷害 100 在 3 層下為 100×(1+3×0.05)=115；同階段已有 +20% 時為 100×(1+0.20+0.15)=135。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>回韌性算例</strong>：最大韌性 100 且缺額至少 15 時，滿層遠程精英／專家擊殺回補 100×0.15=15 點。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/scum/vultures-mark/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/README.md#broker_keystone_vultures_mark_on_kill">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_on_kill.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/">← 返回巢都渣滓技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

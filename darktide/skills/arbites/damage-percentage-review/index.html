@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="法務官：百分比與傷害比較 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>法務官：百分比與傷害比較 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/damage-percentage-review/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">法務官：百分比與傷害比較</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>法務官：百分比與傷害比較</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="法務官：百分比與傷害比較">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/arbites/">← 返回法務官</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/DAMAGE_PERCENTAGE_REVIEW.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="法務官百分比與算例盤點">
+              法務官：百分比與算例盤點
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/">返回玩家說明</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>
+            </p>
+            <p>
+              以下為固定來源的靜態核對，區分傷害與威力、暴擊額外傷害、同階段加算與獨立乘算、速度與動作時間、最大韌性與缺額，以及自然倒數與額外冷卻恢復。未進行遊戲內測試。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                    <th>
+                      本次處理
+                    </th>
+                    <th>
+                      檢查結論
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/remote-detonation/mechanics/">遠程引爆</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      電擊與承傷：電擊狀態持續 2 秒，期間目標承受的傷害另乘 1.1。單計這項承傷增加，原本 100 點變成 110；若攻擊者另有 25% 增傷，則為 100 × 1.25 × 1.1 = 137.5。；爆炸算例：只計中央爆炸的護甲階段，無甲基準為 600 × 1 = 600，防彈護甲為 600 × 0.5 = 300。實際還需計入部位、遮蔽及電擊附帶的承傷效果。距離獒犬 4.5 公尺時，處於電擊範圍，但已超出爆炸傷害範圍。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/arbites-grenade/mechanics/">法務官手榴彈</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只計爆炸中央的護甲階段，基準傷害 1,500 對無甲為 1,500 × 1 = 1,500，對防彈護甲為 1,500 × 0.5 = 750，對硬殼護甲為 1,500 × 0.2 = 300。實際還需計入命中部位、爆炸遮蔽及其他增減傷。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/voltaic-shock-mine/mechanics/">電能地雷</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：電擊每 0.3～0.8 秒隨機結算一次。單計護甲、無其他修正時，無甲基準為 8 × 0.5 = 4 點，防彈與硬殼護甲基準為 8 × 1 = 8 點；跳數不固定，不能直接乘固定次數當總傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/part-of-the-squad/mechanics/">小隊之友</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      韌性防護：你和協同中的盟友額外獲得 7.5% 韌性傷害減免；只計此效果時，原本 100 點韌性傷害變成 100 × (1 − 0.075) = 92.5 點。若同階段已有 10% 韌性減傷，則為 100 × (1 − 10% − 7.5%) = 82.5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/ruthless-efficiency/mechanics/">雷厲風行</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      換彈速度：你和協同中的盟友額外獲得 12.5% 換彈速度；原本需 2 秒的換彈動作，在只計此效果時約為 2 ÷ 1.125 = 1.78 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/breaking-dissent/mechanics/">鎮壓異己</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：對踉蹌敵人原本造成 100 點傷害，只計此光環時為 100 × (1 + 0.10) = 110 點；對未踉蹌敵人仍是 100 點。同階段已有 25% 增傷時，對符合條件的敵人為 100 × (1 + 25% + 10%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/break-the-line/mechanics/">突破重圍</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害與衝擊：衝鋒結束後，6 秒內傷害提高 25%、衝擊提高 50%。單計這項加成，100 點傷害變成 125 點、100 單位衝擊變成 150；若已有同階段 25% 傷害加成，則為 100 × (1 + 25% + 25%) = 150 點。再次觸發重新計時。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/nuncio-aquila/mechanics/">天鷹使節</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      部署與冷卻：瞄準後朝指定方向部署；快速點按會在自身位置部署並跟隨你。傳令機持續 20 秒，範圍 7.5 公尺，冷卻 60 秒。；盟友支援：強化版每秒恢復最大韌性的 7.5%，並提高壓制與衝擊各 30%、降低後座力 25%；同時免疫眩暈、減速及壓制。例如在範圍內連續 2 秒，理論恢復 15% 最大韌性，實際恢復以缺少的韌性為限。；敵人受制：範圍內敵人受到的傷害提高 15%；例如其他條件相同時，原本 100 點傷害按 1.15 倍計算為 115 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/castigators-stance/mechanics/">懲戒者姿態</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：韌性由 40/100 啟動時補至 100/100；若原始傷害為 100，單看此技能的 0.3 倍承受倍率，結算為 30。姿態結束後傷害減免另維持 2 秒。；威力與移動算例：單計本效果，原本 500 的威力變成 500 × 1.2 = 600；原本每秒移動 5 公尺變成 5 × 1.15 = 5.75 公尺。威力會再進入傷害、衝擊與順劈的各自公式，不能把三者都直接視為增加 20%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/blessed-armament/mechanics/">蒙福軍武</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      補彈算法：每次觸發以彈匣容量的 10% 計算並無條件進位。例如容量 30 發，計算為 30×10%=3 發；若只缺 1 發，就只補 1 發。備用彈藥不足時只轉入剩餘彈藥，不會憑空產生子彈。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/writ-of-execution/mechanics/">處決令</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：6 層為 6×7.5%=45%；以 100 點基準傷害及同一傷害層級另有 +25% 加成計算，100×(1+45%+25%)=170。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/bloodlust/mechanics/">嗜血殺戮</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：單計這項加成，電子獒犬的基礎 100 點直接傷害變成 100 × (1 + 75%) = 175 點；若已有同階段 25% 加成，則為 200 點。這項犬傷害加成不套用在流血傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/inspiring-recitation/mechanics/">振奮朗誦</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：單次原本造成 100 點韌性傷害的攻擊，在只計入此升級時按 0.7 倍計算為 70 點；實際仍與其他韌性減傷共同結算。；速度算例：單計本效果，原本 5 秒的救援需 5 ÷ 1.3 ≈ 3.85 秒；原本 1 秒的可加速攻擊動作需 1 ÷ 1.1 ≈ 0.91 秒。離開傳令機範圍後失去這些加成。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/fear-of-justice/mechanics/">畏怯正義</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      近戰傷害：受傳令機影響的敵人，近戰傷害降低 25%。例如原本 100 點近戰傷害，僅計此效果後為 100×(1−25%)=75 點。；近戰攻速算例：敵人的近戰攻速降低 25%。在未碰到動作最短時間限制時，原本 1 秒的動作變成 1 ÷ 0.75 ≈ 1.33 秒，也就是時間增加約 33.3%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/commendation-from-condemnation/mechanics/">懲惡揚善</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：擊中 3 名不同的合格目標，恢復 3×20%=60% 韌性及 3×15%=45% 耐力；同一名敵人再被擊中不增加恢復量。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/targeted-brutality/mechanics/">針鋒相對</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：6 次一般命中返還 6×0.5=3 秒，3 次高階目標命中返還 3×1=3 秒；合計 6 秒後按 5 秒上限結算，20 秒基礎冷卻最多因此返還 5 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/engage/mechanics/">交鋒</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：3.75 公尺基礎距離 + 3.75 公尺增幅 = 7.5 公尺。實際位移可能因路徑碰撞或中途取消而縮短。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/kill-order/mechanics/">殺戮命令</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：電子獒犬原本造成 100 點非流血傷害時，單看此升級為 100×(1+50%)=150 點；若「嗜血殺戮」的 +75% 同時生效且兩者同層累加，則為 100×(1+50%+75%)=225 點，尚未計入敵人防禦。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/execution-order/mechanics/">處刑命令</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：最大韌性 100 時恢復 15 點，最多補滿。單計增傷，玩家基礎 100 點變成 110，獒犬基礎 100 點變成 250；玩家已有同階段 25% 增傷時為 100 × (1 + 25% + 10%) = 135。可加速的 1 秒攻擊動作則為 1 ÷ 1.1 ≈ 0.91 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/terminus-warrant/mechanics/">終點站令狀</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      韌性算例：近戰效果使韌性傷害倍率為 0.8，原本 100 點韌性傷害變成 80 點；只在 12 秒效果存續期間套用。；時間與威力算例：再切換到另一類武器就會提前結束目前增益。威力單計本效果為 500 × 1.1 = 550；原有同階段 20% 威力時，則由 600 變成 650。累積 1 層與 20 層都能啟動核心固定加成，層數另影響搭配升級的效果。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/forceful/mechanics/">堅定不移</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      滿層算例：每層給 +5% 衝擊，10 層合計 +50%。每層傷害倍率為 0.975，10 層依共用堆層規則計為 0.975^10 ≈ 0.776，約比基準傷害少 22.4%；這是乘算結果，並非直接相加成 25%。例如原本 100 點傷害，滿層為 100 × 0.975¹⁰ ≈ 77.63 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/lone-wolf/mechanics/">孤狼</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害與速度算例：單計本技能，100 點傷害變成 100 × 1.2 = 120；同階段已有 25% 增傷時為 145。原本 1 秒的可加速攻擊動作為 1 ÷ 1.1 ≈ 0.91 秒；100 點韌性傷害變成 85，若已有同階段 10% 韌性減傷則變成 75。；補充算例：一般手雷缺少至少 1 顆時，開始等 45 秒並補回 1 顆；電能地雷缺額則等 90 秒。補回後重新等下一次，滿充能時不計時。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/will-of-the-lex/mechanics/">律法之志</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      滿層算例：10 層時每秒恢復 10 × 0.5% = 最大韌性的 5%；若最大韌性為 100，理論上每秒恢復 5 點，實際不會超過韌性缺額。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/adamant-will/mechanics/">堅定意志</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      觸發與持續：堅定不移到達 10 層時啟用免疫眩暈與減速；離開滿層後再維持 3 秒。；完美格擋：效果期間，完美格擋可擋下原本不可格擋的攻擊；一般格擋不會因此獲得相同能力。此效果仍需符合攻擊的格擋判定，不等於全程無敵。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/targets-acquired/mechanics/">鎖定目標</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度與順劈算例：單計本效果，原本 1 秒的可加速攻擊動作需 1 ÷ 1.1 ≈ 0.91 秒；可造成傷害的順劈質量額度原本 10 時變成 10 × 1.5 = 15。這不是固定多打中 50% 的敵人，也不會一併提高踉蹌用的順劈額度。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/arbites-vigilant/mechanics/">法務官警覺</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：6 層提供 15%，10 層提供 25%；單計本效果，500 威力在 10 層時變成 500 × 1.25 = 625。威力再經傷害、衝擊與順劈各自公式結算，不能直接把所有最終效果都乘 1.25。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/judicial-force/mechanics/">審判之力</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：滿層與歸零各有獨立的 5 秒冷卻。例如滿層震撼後 1 秒失去全部層數，仍可觸發歸零震撼；但同一種震撼需隔滿 5 秒才能再觸發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/obstinate/mechanics/">能屈能伸</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：每秒額外恢復 0.33 秒，12 秒名目總量為 3.96 秒。若開始時還需冷卻 20 秒，經過 12 秒並收到 12 次恢復，剩餘為 20 − 12 − 12 × 0.33 = 4.04 秒。實際以未恢復的冷卻為限；到期更新順序可能少一次恢復。再次觸發只重新計時，不加快恢復速度。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/terminal-decree/mechanics/">終端律令</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：每層恢復最大韌性的 1%；消耗 20 層可恢復 20%。最大韌性為 100 時是 20 點，若只消耗 7 層則是 7 點；每人仍受自身韌性缺額上限限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/efficient-killer/mechanics/">效率殺手</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      暴擊傷害算例：25% 加成作用於暴擊的額外傷害部分。若普攻 100、暴擊 150，則變成 100 + (150 − 100) × 1.25 = 162.5，整筆暴擊傷害實際提高約 8.33%；另一把武器若暴擊 200，則變成 225，提高 12.5%。武器與護甲不同，實際增幅也不同。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/malocator/mechanics/">生化武器關</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：每秒額外恢復 0.5 秒，8 秒名目總量為 4 秒。若開始時還需冷卻 20 秒，經過 8 秒並收到 8 次恢復，剩餘為 20 − 8 − 8 × 0.5 = 8 秒。實際以未恢復的冷卻為限；到期更新順序可能少一次恢復。再次觸發只重新計時，不加快恢復速度。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/no-lenience/mechanics/">罪不可赦</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：若基礎 100 點、護甲傷害係數原為 0.5，傷害由 50 變成 100 × (0.5 + 0.1) = 60，實際提高 20%。若係數已達 1 且該護甲適用超額轉換，則為 100 × (1 + 0.1 × 0.25) = 102.5。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/keeping-protocol/mechanics/">殺戮協議</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      滿層算例：30 層提供 +30% 對巨獸傷害；巨獸攻擊你的傷害倍率為 0.99^30 ≈ 0.740，約降低 26.0%（只計此效果）。例如基礎 100 點對巨獸傷害變成 130；巨獸原本造成 100 點傷害時，變成約 73.97 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/not-far-behind/mechanics/">不落人後</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例與重新計時：單計本效果，基礎 100 點傷害變成 110；已有同階段 25% 加成時為 135。原本每秒移動 5 公尺變成 5 × 1.1 = 5.5 公尺。再次撲擊會重設 5 秒倒數，不累加幅度。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/go-get-em/mechanics/">往前進攻！</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：對遠程敵人，犬傷害增加 50%。單計這項加成，基礎 100 點變成 150；若已有同階段 25% 加成，則為 100 × (1 + 25% + 50%) = 175 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/unleashed-brutality/mechanics/">猛犬出擊</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：對精英與專家敵人，犬傷害增加 25%。單計這項加成，基礎 100 點變成 125；若已有同階段 25% 加成，則為 100 × (1 + 25% + 25%) = 150 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/writ-of-judgement/mechanics/">審判之旨</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      加成與算例：持續 12 秒，近戰與遠程攻速各提高 10%，爆擊率增加 10 個百分點。例如原本 5% 爆擊率變成 15%；1 秒的可加速動作需 1 ÷ 1.1 ≈ 0.91 秒。再次觸發重新計時，不累加幅度。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/man-and-cyber-mastiff/mechanics/">電子獒犬與人</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、沒有其他恢復加成且缺額足夠時，每秒恢復 100 × 5% = 5 點；3 秒共 15 點。若只缺 2 點，就只能補 2 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/withering-fire/mechanics/">凋零烈焰</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：單計此階段，基礎 100 點變成 100 × (1 + 15%) = 115 點；原有 25% 同階段加成時，125 點變成 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/hammer-of-judgement/mechanics/">審判之錘</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      攻速算例：只計受攻速影響的動作段，原本 1 秒變成 1 ÷ 1.1 ≈ 0.909 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/target-neutralised/mechanics/">繩之以法</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、缺額足夠且沒有其他恢復加成，一次擊殺共恢復 100 × 10% + 100 × 2.5% × 4 = 20 點。兩次擊殺的持續恢復重疊時，每秒共 5 點；實際補量不超過缺額。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/up-close/mechanics/">近在眉睫</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、沒有其他恢復加成時，每次恢復 100 × 5% = 5 點；目前 98 點時只能補 2 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/force-of-will/mechanics/">鐵血之志</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、無其他恢復加成時，每次恢復 100 × 7.5% = 7.5 點；一擊掃中 3 名敵人仍最多恢復 7.5 點，並受缺額限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/voltaic-mandibles-augment/mechanics/">電能獠牙</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：未受其他加成、命中一般無甲部位時，單次基準電擊為 57.5 × 0.5 = 28.75 點；換成防彈護甲的基準係數 1，則為 57.5 點。實際仍受敵人部位、抗性與其他傷害加成影響。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/walk-it-off/mechanics/">走一走治百病</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、缺額足夠且沒有其他恢復加成，每秒約恢復 100 × 10% ÷ 3 = 3.33 點。啟動 2 秒後再次觸發並持續至結束，共約恢復 3.33 × 5 = 16.67 點，而非瞬間補 20 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/true-grit/mechanics/">堅忍不拔</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：其他生命減傷已結算後，原本要承受 120 點時變成 min(120, 50) = 50 點；原本 30 點仍是 30 點。這是固定上限，不是 50% 減傷。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/toughness-damage-reduction/mechanics/">韌性減傷</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：單計韌性減傷階段，原本 100 點韌性傷害變成 100 × (1 − 10%) = 90 點。若已有同階段 20% 減傷，則為 100 × (1 − 20% − 10%) = 70 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/arbitrator-armour/mechanics/">法務官之鎧</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      效果與算例：最大韌性增加 25 點。原本 100 點、沒有百分比修正時，變成 100 + 25 = 125 點。；加成順序：這 25 點先加入基礎韌性，再套用最大韌性百分比加成。例如另有 20% 最大韌性加成，為 (100 + 25) × 1.2 = 150 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/ammo-belt/mechanics/">彈藥腰帶</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      容量算例：武器原本可帶 400 發備用彈藥時，變成 400 × (1 + 25%) = 500 發；若原本 101 發，101 × 1.25 = 126.25，容量取整數 126 發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/rebreather/mechanics/">呼吸器</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      腐敗算例：單計腐敗抗性，原本增加 20 點腐敗時，變成 20 × 0.8 = 16 點。；毒氣算例：單計毒氣減傷，原本造成 100 點傷害的毒氣變成 100 × 0.25 = 25 點；這兩種效果分別作用於腐敗與傷害階段。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/suppression-protocols/mechanics/">苛政壓制</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：單計這項效果，100 點韌性傷害變成 100 × 0.8 = 80 點；另有獨立 10% 韌性減傷時，為 100 × 0.8 × 0.9 = 72 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/ranged-damage-boost/mechanics/">遠程傷害增幅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：沒有其他加成時，基礎 100 點遠程傷害變成 100 × (1 + 10%) = 110 點；原有同階段 25% 加成時，125 點變成 100 × (1 + 25% + 10%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/melee-damage-boost/mechanics/">近戰增幅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：沒有其他加成時，基礎 100 點近戰傷害變成 100 × (1 + 10%) = 110 點；原有同階段 25% 加成時，125 點變成 100 × (1 + 25% + 10%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/razor-jaw-augment/mechanics/">重顎獠牙</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：在無甲、無其他修正的基準下，令層數比例為 n ÷ 16，每次傷害為 87.5 × (n ÷ 16)² × [3 − 2 × (n ÷ 16)]。6 層約 27.69 點，12 層約 73.83 點，16 層為 87.5 點；12 層並非 6 層傷害的兩倍。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/imposing-force/mechanics/">勢如破竹</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：原本承受 100 點傷害時，單計本效果為 100 × 0.75 = 75 點；另有獨立 20% 減傷則為 100 × 0.75 × 0.8 = 60 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/hold-the-line/mechanics/">堅守陣線</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：每層讓承受傷害乘以 0.97。5 層時，100 × 0.97⁵ ≈ 85.87 點，約減少 14.13%。存續期間也減少遠程傷害；遠程命中不消耗層數。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/cleave-boost/mechanics/">順劈加成</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      順劈算例：單計順劈容量，原本可穿過 10 單位敵人質量的攻擊，變成 10 × (1 + 25%) = 12.5 單位。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/impact-boost/mechanics/">衝擊加成</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      衝擊算例：單計衝擊倍率，原本 100 單位踉蹌強度變成 100 × (1 + 25%) = 125 單位。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/plasteel-plates/mechanics/">塑鋼裝甲</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      效果與算例：最大韌性增加 25 點。原本 100 點、沒有百分比修正時，變成 100 + 25 = 125 點。；加成順序：這 25 點先加入基礎韌性，再套用最大韌性百分比加成。例如另有 20% 最大韌性加成，為 (100 + 25) × 1.2 = 150 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/serrated-maw/mechanics/">鋒利獠牙</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：若基礎傷害 100、原本護甲係數 0.5，傷害為 50；加入 15% 脆弱後，變成 100 × (0.5 + 0.15) = 65，實際提高 30%。若該護甲適用超額破甲轉換、原本係數已達 1，則為 100 × (1 + 0.15 × 0.25) = 103.75，並非固定增加 15% 最終傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/arbites-revelatum/mechanics/">追跡法務官</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點傷害、無其他修正時變成 100 × (1 + 15%) = 115 點；同階段原有 25% 加成時，由 125 點變成 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/soulguilt-scan/mechanics/">罪孽判官</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：只計這個威力階段，原本 500、滿層 16% 時為 500 × (1 + 8 × 2%) = 580；若已有同階段 20% 威力加成，則由 600 變成 680。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/judicious-efficiency/mechanics/">恰如其分</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      換彈算例：只計受換彈速度影響的動作段，原本 3 秒變成 3 ÷ 1.2 = 2.5 秒；加速 20% 不等於時間減少 20%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/march/mechanics/">行軍之志</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      移速算例：單計此倍率，原本每秒移動 5 公尺，變成 5 × 1.15 = 5.75 公尺；其他動作減速仍照常處理。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/no-escape/mechanics/">無處可逃</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      效果算例：單計本效果，100 點傷害變成 110 點；每秒移動 5 公尺變成 5 × 1.1 = 5.5 公尺。若已有同階段 25% 增傷，則為 100 × (1 + 25% + 10%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/drive-them-back/mechanics/">兵敗如山倒</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      順劈算例：原本可穿過 10 單位敵人質量，單計此效果變成 10 × 1.75 = 17.5 單位。這是傷害穿透容量，不會一併增加踉蹌穿透容量。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/shield-plates/mechanics/">盾型裝甲</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、缺額足夠且沒有其他恢復加成，一次同時觸發兩份效果的完美格擋，共恢復 100 × 10% + 100 × 15% = 25 點；其中 10 點立即補回、15 點分 3 秒補回。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/weight-of-the-lex/mechanics/">重如律法</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只比較增益生效後的攻擊，基礎 100 點變成 100 × (1 + 15%) = 115 點；已有同階段 25% 加成時，125 點變成 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/strike-down/mechanics/">毀滅打擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      護甲算例：先隔離護甲階段，假設傷害基準 100、甲殼護甲倍率 0.5，原本 50 點變成 100 × (0.5 + 0.15) = 65 點，此階段提高 30%。其他暴擊、弱點與增傷再依各自階段計算。；超出護甲缺口：若原甲殼倍率已達 1，超出部分只按四分之一換算；本項變成 100 × (1 + 0.15 × 0.25) = 103.75 點。不同武器與敵人的實際增幅會不同。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/zealous-dedication/mechanics/">狂熱信仰</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：原本爆擊率 5%，滿層後為 5% + 8 × 2% = 21%；不是把原本 5% 乘以 1.16。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/prosecution-blow/mechanics/">制裁重擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      護甲算例：先隔離護甲階段，假設傷害基準 100、甲殼護甲倍率 0.5，原本 50 點變成 100 × (0.5 + 0.2) = 70 點，此階段提高 40%。其他暴擊、弱點與增傷再依各自階段計算。；超出護甲缺口：若原甲殼倍率已達 1，超出部分只按四分之一換算；本項變成 100 × (1 + 0.2 × 0.25) = 105 點。不同武器與敵人的實際增幅會不同。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/street-smarts/mechanics/">街頭妙招</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      閃避次數：有效閃避次數增加 1 次。例如武器原本可連續有效閃避 3 次，選取後為 3 + 1 = 4 次。；判定時間：近戰閃避結束後的判定寬限從 0.2 秒變成 0.2 × 1.25 = 0.25 秒，增加 0.05 秒；這不會把整段閃避動作加長 25%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/monstrosity-hunter/mechanics/">巨獸獵人</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：對符合類型的目標，基礎 100 點傷害變成 100 × (1 + 20%) = 120 點；已有同階段 25% 加成時，為 100 × (1 + 25% + 20%) = 145 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/the-emperors-fist/mechanics/">帝皇之拳</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      分項算例：單計增傷，原本 100 點近戰傷害變成 115 點；原本 100 單位踉蹌強度變成 130。已有同階段 25% 增傷時，傷害為 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/target-selection/mechanics/">篩選目標</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：對符合條件的目標，基礎 100 點傷害變成 115 點；同階段已有 25% 加成時，則為 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/target-priority/mechanics/">擊殺順序</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：目標最大生命 1000、目前 800 時，基礎 100 點傷害變成 100 × 1.15 = 115 點；目前 750 時仍為 100 點。已有同階段 25% 加成且門檻成立時，125 點變成 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/canine-morale/mechanics/">猛犬氣場</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：最大韌性 100 時，每秒恢復 100 × 10% ÷ 5 = 2 點，完整 5 秒共 10 點，最多補滿；只計本效果，原本 100 點韌性傷害變成 100 × 0.8 = 80 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/rapid-movement/mechanics/">迅疾走位</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      滑行加速：滑行結束後，衝刺速度提高 5%，持續 5 秒；再次滑行可重新計時。例如原本每秒衝刺 6 公尺，單計本效果為 6 × 1.05 = 6.3 公尺。；擊殺恢復：擊殺敵人恢復最大耐力的 5%，每 0.75 秒最多觸發一次；不需要先滑行。最大耐力 6 點時，每次為 6 × 5% = 0.3 點，最多補滿。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/final-warning/mechanics/">最後通牒</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點遠程傷害變成 115 點；同階段原有 25% 加成時，由 125 點變成 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/priority-endowment/mechanics/">秉賦為先</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      容量算例：原本 30 發彈匣，30 × 1.15 = 34.5，向上取整數為 35 發；原本 5 發則由 5 × 1.15 = 5.75 變成 6 發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/cower-miscreants/mechanics/">惡徒退散</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：攻擊受壓制的敵人，單計此效果，基礎 100 點傷害變成 100 × 1.25 = 125 點；原有同階段 20% 加成時，由 120 點變成 145 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/justified-measures/mechanics/">正當手段</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：滿層為 5 × 2% = 10%，基礎 100 點傷害變成 110 點；同階段原有 25% 加成時，125 點變成 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/suppression-force/mechanics/">壓制武力</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：單計這項削弱，敵人原本造成 100 點傷害時變成 100 × (1 − 20%) = 80 點；這是削弱敵人的輸出，不是對敵人追加傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/concussive/mechanics/">震盪攻擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      搭配算例：搭配鎮壓異己的 10% 對踉蹌增傷，後續符合條件的基礎 100 點攻擊變成 100 × 1.1 = 110 點。單選本天賦不會自行增加傷害或強制敵人倒退。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/target-the-weak/mechanics/">針對弱者</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只計目標承傷階段，100 點近戰傷害變成 115 點。若攻擊者本身另有 25% 增傷，兩個階段相乘為 100 × 1.25 × 1.15 = 143.75 點；若是目標已有同階段 25% 承傷增加，則為 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/retaliatory-force/mechanics/">還治其人之身</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      格擋消耗：格擋耐力消耗降低 15%；原本消耗 2 點耐力，單計本效果為 2 × 0.85 = 1.7 點。；增益算例：基礎 100 點傷害變成 115 點；受攻速影響的 1 秒動作變成 1 ÷ 1.15 ≈ 0.870 秒。若已有同階段 25% 增傷，則為 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/">← 返回法務官技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

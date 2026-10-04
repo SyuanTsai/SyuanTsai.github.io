@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="完美主義者：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>完美主義者：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/perfectionist/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">完美主義者：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>完美主義者：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Perfectionist</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/perfectionist/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#完美主義者perfectionist原始碼依據"><span>03</span>完美主義者(Perfectionist)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="完美主義者：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/perfectionist/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_stealth_cooldown_regeneration.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="完美主義者perfectionist原始碼依據">
+              完美主義者(Perfectionist)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/perfectionist/#zealot_stealth_cooldown_regeneration">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_stealth_cooldown_regeneration">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_stealth_cooldown_regeneration</code>；名稱鍵：<code>loc_talent_zealot_stealth_increased_damage</code>；描述鍵：<code>loc_talent_zealot_stealth_cooldown_regeneration_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_de287eb8-d0e5-46ab-98c2-d71496a3bd4a</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦節點只附加 special_rules.zealot_invisibility_refund_cooldown，並未把同名 <code>zealot_stealth_cooldown_regeneration</code> proc buff 當作 passive 加上。
+              </li>
+              <li>
+                zealot_invisibility.start_func 讀取此 special rule 設置 cooldown_on_kill；proc_func 在潛行 buff 活躍時接收到本人的 kill 結果，依被擊殺 breed tags 選擇 0.5、0.3 或 0.15，呼叫 restore_ability_charge_percentage。成功後將 got_cooldown=true，限制每次潛行一次。
+              </li>
+              <li>
+                三個比例設定值分別是 monster=.5、ogryn=.3、other=.15；能力回充共用函式按 <code>resource_cost_per_charge × percentage</code> 還原資源，所以 30 點單次成本分別返還 15、9、4.5 點。
+              </li>
+              <li>
+                buff_templates.lua 另存在名為 zealot_stealth_cooldown_regeneration 的 1 秒冷卻 proc buff，但此 talent def 沒有 passive 指向它；計算應依 base invisibility 的 special-rule hook，而非套用那個未附加模板的事件節流。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2438-L2460">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2438–2460</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L149-L153">scripts/settings/talent/talent_settings_zealot.lua：149–153</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua#L60-L76">scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua：60–76</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4241-L4267">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4241–4267</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4280-L4295">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4280–4295</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L2735-L2786">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：2735–2786</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102">scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461">scripts/extension_systems/ability/player_unit_ability_extension.lua：1437–1461</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2438-L2460">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2438–2460</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1865-L1889">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1865–1889</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>冷卻算例</strong>：隱秘領域基礎冷卻 30 秒，因此分別返還 30 × 50% = 15 秒、30 × 30% = 9 秒、30 × 15% = 4.5 秒的自然回充進度，仍以目前缺額為上限。
+              </li>
+              <li>
+                擊殺必須在隱形 buff 仍活躍時被 proc；離開潛行後的擊殺不適用。
+              </li>
+              <li>
+                每次潛行一次是成功恢復後鎖定；沒有可恢復空間或缺少目標 breed 資訊時，程式結果可能不同。
+              </li>
+              <li>
+                名稱相似的 <code>zealot_stealth_cooldown_regeneration</code> buff 模板不是該 talent 的附加 passive，不能拿它的 1 秒 cooldown_duration 推成此 talent 每秒可返還一次。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>d641c97c</code>。
+              </li>
+              <li>
+                inventory 繁中在 50%/30%/15% 格式值後加入「秒」；固定 SHA 的 talent 將其格式化為 percentage，實際按單次充能成本比例返還。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_stealth_cooldown_regeneration.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/8532537c-fff4-4014-8ee6-e16572b9cdeb">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/perfectionist/">← 返回完美主義者玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

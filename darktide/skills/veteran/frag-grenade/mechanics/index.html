@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="破片手雷：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>破片手雷：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/frag-grenade/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">破片手雷：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>破片手雷：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Frag Grenade</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/frag-grenade/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#破片手雷frag-grenade"><span>03</span>破片手雷(Frag Grenade)</a></li>
+            <li><a href="#運作方式"><span>04</span>運作方式</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>05</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>06</span>原始碼依據</a></li>
+            <li><a href="#圖示來源"><span>07</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="破片手雷：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/frag-grenade/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_frag_grenade.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="破片手雷frag-grenade">
+              破片手雷(Frag Grenade)
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/base-effects/">返回基礎效果</a>｜<a href="/darktide/skills/veteran/source-index/">技能樹索引</a>
+            </p>
+            <h2 id="運作方式">
+              運作方式
+            </h2>
+            <ul>
+              <li>
+                可攜帶 3 顆破片手雷，投出後約 1.7 秒引爆。爆炸半徑 10 公尺，中央 2 公尺為高傷害區，外圍傷害逐漸降低。
+              </li>
+              <li>
+                未計其他加成與部位修正，中央爆炸對無甲目標的基礎傷害為 500；對甲殼護甲的倍率為 0.2，因此為 <code>500 × 0.2 = 100 點</code>。
+              </li>
+              <li>
+                選擇粉碎者破片手雷會為合格爆炸命中加上流血；穿甲手雷或煙霧手雷則會替換目前的手雷種類。基礎破片手雷本身沒有流血效果。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。基礎天賦 <code>veteran_frag_grenade</code>；名稱鍵 <code>loc_ability_frag_grenade</code>；描述鍵 <code>loc_ability_frag_grenade_description</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  由職業基礎清單啟用，不是77個技能樹節點之外的額外可選節點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  職業 base_talents 指向 veteran_frag_grenade；player_ability 指向 grenade_frag item，only_uses_charges=true、max_charges=3。
+                </p>
+              </li>
+              <li>
+                <p>
+                  Projectile fuse_time=1.7，ExplosionTemplates.frag_grenade 的 static_power_level=500、close_radius=2、radius=10、damage_falloff=true。
+                </p>
+              </li>
+              <li>
+                <p>
+                  close_frag_grenade 的 attack power_distribution=500，unarmored ADM=1、super_armor=.2。以 default power500、damage output20/max power10000換算，歸一化倍率=500×20/10000=1；中心基礎傷害500×1×ADM。未套任何其他增傷／撕裂／部位修正。
+                </p>
+              </li>
+              <li>
+                <p>
+                  grenade_apply_bleed 是另選 passive，不是此基礎能力內建；穿甲與煙霧天賦另換 player_ability。
+                </p>
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/veteran_archetype.lua#L50-L74">scripts/settings/archetype/archetypes/veteran_archetype.lua，第 50–74 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L33-L42">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 33–42 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L27-L62">scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 27–62 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L102-L104">scripts/settings/talent/talent_settings_veteran.lua，第 102–104 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L258-L271">scripts/settings/projectile/player_projectile_templates.lua，第 258–271 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L25-L51">scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua，第 25–51 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L213-L258">scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua，第 213–258 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/power_level_settings.lua#L7-L29">scripts/settings/damage/power_level_settings.lua，第 7–29 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L63-L94">scripts/utilities/attack/power_level.lua，第 63–94 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1021-L1074">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 1021–1074 行</a>
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/frag-grenade/">← 返回破片手雷玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>
