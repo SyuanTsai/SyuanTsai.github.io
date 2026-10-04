@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index,follow">
-    <meta name="description" content="反噬平衡：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
-    <title>反噬平衡：機制與原始碼依據 · Darktide</title>
+    <meta name="description" content="危險平衡：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>危險平衡：機制與原始碼依據 · Darktide</title>
     <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/peril-equilibrium/mechanics/">
     <link rel="stylesheet" href="/assets/css/darktide-skills.css">
   </head>
@@ -21,13 +21,13 @@
           <ol>
             <li><a href="/darktide/skills/">技能與天賦</a></li>
             <li><a href="/darktide/skills/psyker/">靈能者</a></li>
-            <li aria-current="page">反噬平衡：機制與原始碼依據</li>
+            <li aria-current="page">危險平衡：機制與原始碼依據</li>
           </ol>
         </nav>
         <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
         <div class="skill-heading">
           <div>
-            <h1>反噬平衡：機制與原始碼依據</h1>
+            <h1>危險平衡：機制與原始碼依據</h1>
             <span class="skill-english-name" lang="en">Peril Equilibrium</span>
             <div class="skill-badges" aria-label="分類與版本">
               <span>技能</span>
@@ -42,7 +42,7 @@
           <ol>
             <li><a href="/darktide/skills/psyker/peril-equilibrium/"><span>01</span>← 返回玩家頁</a></li>
             <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
-            <li><a href="#反噬平衡peril-equilibrium原始碼依據"><span>03</span>反噬平衡(Peril Equilibrium)</a></li>
+            <li><a href="#危險平衡peril-equilibrium原始碼依據"><span>03</span>危險平衡(Peril Equilibrium)</a></li>
             <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
             <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
             <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
@@ -50,19 +50,20 @@
             <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
           </ol>
         </nav>
-        <article class="skill-content" aria-label="反噬平衡：機制與原始碼依據">
+        <article class="skill-content" aria-label="危險平衡：機制與原始碼依據">
           <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
             <h2 id="provenance-title">版本與原始文件</h2>
             <p>
-              <a href="/darktide/skills/psyker/peril-equilibrium/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+              <a href="/darktide/skills/psyker/peril-equilibrium/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/d1c961ab802ca25e5091d79e28304d826e1ffca5/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
             </p>
             <p class="skill-source-sha">
-              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+              知識 Commit：d1c961ab802ca25e5091d79e28304d826e1ffca5<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
             </p>
           </section>
           <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
-            <h2 id="反噬平衡peril-equilibrium原始碼依據">
-              反噬平衡(Peril Equilibrium)：原始碼依據
+            <a id="反噬平衡peril-equilibrium原始碼依據"></a>
+            <h2 id="危險平衡peril-equilibrium原始碼依據">
+              危險平衡(Peril Equilibrium)：原始碼依據
             </h2>
             <p>
               <a href="/darktide/skills/psyker/peril-equilibrium/#psyker_weapon_attacks_peril_equilibrium">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜<a href="/darktide/skills/psyker/localization-comparison/#psyker_weapon_attacks_peril_equilibrium">原文比對</a>
@@ -142,7 +143,7 @@
       </main>
       <footer class="skill-footer">
         <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
-        <a href="/darktide/skills/psyker/peril-equilibrium/">← 返回反噬平衡玩家頁</a>
+        <a href="/darktide/skills/psyker/peril-equilibrium/">← 返回危險平衡玩家頁</a>
       </footer>
     </div>
   </body>
