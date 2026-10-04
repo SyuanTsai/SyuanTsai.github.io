@@ -12,7 +12,7 @@
 - 用途待確認字幕是上述分類清單的例外：中英各採每頁最多 25 筆的閱讀分頁，不再另產生每筆字幕的 HTML。每筆保留獨立區塊、來源編號與 hash 錨點，編號只表示來源索引順序，不構成連續對話。從原未對應索引確認用途的性格介紹及回應觸發條件引用另有分類與獨立頁。已確認官方事件的獨立網址與閱讀方式維持既有結構。
 - `darktide/{locale}/{event-type}/{event-id}/index.html` 每檔只包含自己的字幕或回應索引；大型群組另拆回應分頁。檔案保持兩格縮排、屬性分行及原始 bubble 文字空白。
 - 任務通訊直接分一般戰役任務、死神試煉（遊戲內）及莫羅、左拉、布拉姆斯、佐林四個具名角色頁。三人故事回聲為額外選集，連到同一正文，不增加事件數。
-- 共用資產為 `assets/css/darktide.css`。所有分類、相鄰頁、角色首句與語言切換使用原生連結，不依賴 JavaScript。
+- 對話樣式為 `assets/css/darktide.css`，階層外框共用 `assets/css/darktide-reader.css`。所有分類、相鄰頁、角色首句與語言切換使用原生連結，不依賴 JavaScript。
 - 依擁有者最新指示，移除舊 `preview/darktide/` 與入口 hash 相容邏輯，不保留轉址或字幕副本。舊預覽網址不再支援。
 - 正式頭使用 index/follow 與 `/darktide/` canonical。Darktide 使用 `darktide/sitemap.xml` 索引與分拆 urlset，由 robots.txt 公告；`_config.yml` 的 Darktide `sitemap: false` 僅避免混入一般文章 sitemap，不禁止正式頁收錄。
 - 官方附件沿用 Media-Assets Issue #15；`docs/static-assets-manifest.yml` 記錄新增素材。不加入圖片二進位、集中字幕 JSON、測試或對話驗證程式。
@@ -32,7 +32,7 @@ python scripts/generate_darktide_unlinked_pages.py --dialogue-source "C:/Git/Per
 
 此命令只更新網站的字幕用途分類、首頁相關分類卡與 Darktide sitemap，來源保持唯讀；其他官方事件、技能內容、技能產生流程與提示詞不在此產生器範圍。用途待確認字幕的中文入口為 `/darktide/unlinked-subtitles/`，英文入口為 `/darktide/en/unlinked-subtitles/`；後續頁使用 `page-002/` 等路徑，同頁中英直接切換。每筆可由 `#unlinked_subtitle_<hash>` 直接定位。原本每筆未對應字幕的獨立網址由分頁與錨點或已確認用途的獨立頁取代。
 
-原始正文歸檔 commit 為 `dc40cbfa80193fdfbdc759a4a9cd3378905b83ff`，角色來源沿用 `23c8cc124d2616d2956ae1734c67ce0c878c8fa4`；字幕仍從 Build 25606770 原始語系資源取回。完整原未對應索引共有 14,251 筆。依固定 Source `7e662fcda16219d775b84af50322be2e9cd9d62e` 的行為確認 38 筆角色建立性格介紹與 22 筆回應觸發條件引用後，其餘 14,191 筆分成每語系 568 頁，最後一頁 16 筆。原本缺中文的 30 筆仍保留既有缺漏說明，不補寫或翻譯原文。分頁使用原生連結，不需要 JavaScript；每頁保持多行 HTML，沿用共用深色 CSS。
+原始正文歸檔 commit 為 `dc40cbfa80193fdfbdc759a4a9cd3378905b83ff`，角色來源沿用 `23c8cc124d2616d2956ae1734c67ce0c878c8fa4`；字幕仍從 Build 25606770 原始語系資源取回。完整原未對應索引共有 14,251 筆。依固定 Source `7e662fcda16219d775b84af50322be2e9cd9d62e` 的行為確認 38 筆角色建立性格介紹與 22 筆回應觸發條件引用後，其餘 14,191 筆分成每語系 568 頁，最後一頁 16 筆。原本缺中文的 30 筆在繁中頁顯示同一 hash 的官方英文原文，標註「尚無官方繁中翻譯，暫以英文原文顯示。」並以 `lang="en"` 標示氣泡語系；英文文字保留原始空白，不補造中文翻譯，Mods 原始缺漏紀錄維持不變。分頁、網址、hash 錨點與原始排序保持不變。分頁使用原生連結，不需要 JavaScript；每頁保持多行 HTML，沿用共用深色 CSS。
 
 用途 metadata 唯一維護於 Mods Repository 的 `Game Info/對話文本/source-catalog/subtitle-usages/`，只有 TSV 參照資料，不含字幕正文。產生器預設從同一來源讀取；使用原始正文唯讀快照時，可用 `--classification-source` 指向同一權威來源的用途 TSV 目錄。網站不保存人工同步的用途清單或全字幕 JSON。
 
@@ -41,6 +41,14 @@ python scripts/generate_darktide_unlinked_pages.py --dialogue-source "C:/Git/Per
 - `/darktide/character-personalities/` 與英文配對分類有 38 個獨立性格介紹頁，ID 由官方 character voice 建立。顯示官方職業／性格名稱與職業圖示；圖示不是固定人物肖像，畫面介紹未宣稱等同試聽音訊。
 - `/darktide/response-trigger-references/` 與英文配對分類有 22 個獨立引用頁，保留 26 處官方回應規則的來源及既有候選閱讀入口。只證明規則會檢查這句話；原始播放事件與發話者未確認，不把回應者標作原說話者，也不拼接候選成線性劇情。
 - 其餘「用途待確認」只表示固定版本中未找到可證引用，不能宣稱未使用或事件不存在。來源原編號保留，抽出已分類條目後頁內編號可能不連續。
+
+## 共用階層閱讀外框
+
+一般對話來源同步後，執行 `python scripts/apply_darktide_reader.py`；用途字幕產生器最後也呼叫相同外框。技能仍由 Mods 的技能匯出器讀固定 Markdown，不使用對話產生器。這兩個流程只共用 CSS 與導覽契約。
+
+桌面目錄寬 250px，依事件類型、分類分頁與目前內容導覽，只列目前分支及最多五個鄰近入口；完整清單仍是獨立目錄。手機「瀏覽目錄」預設收合，右側保留原本 LINE 氣泡、角色列、語言按鈕、來源及原生前後頁。首頁以同一目錄進入內容，原完整分類清單收在可展開區。
+
+外框讀取既有 canonical、title 與目錄連結作導航，不解析後重寫字幕。標記內只保存外框；重新套用先移除自身標記，原閱讀正文不變。網站整合依賴 [容量 PR #54](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/54) 的 `f4db2525353dbb176f8855cc65842e49aa610a08` 與 [來源 PR #194](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/194) 的 `619e0e36bdca5da302d658e6c60f1bf67150a34f`，保留其25筆分頁、分類與網址，沒有合併 GitHub PR 或正式發布。
 
 ## 核對與交付
 

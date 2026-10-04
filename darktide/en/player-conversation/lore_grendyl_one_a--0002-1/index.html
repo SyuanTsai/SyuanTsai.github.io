@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="/assets/css/darktide.css"
     >
+    <link rel="stylesheet" href="/assets/css/darktide-reader.css">
   </head>
   <body
     class="darktide-preview dialogue-reader"
@@ -30,6 +31,60 @@
   >
     <a class="skip-link" href="#darktide-content">Skip to content</a>
     <div class="preview-shell">
+      <!-- directory-reader:start -->
+      <div class="dt-layout">
+        <details class="dt-directory">
+          <summary>Browse directory</summary>
+          <nav aria-label="Darktide directory">
+            <a class="dt-brand" href="/darktide/en/">DARKTIDE</a>
+            <details>
+              <summary>Skills and talents (Traditional Chinese)</summary>
+              <div class="dt-level">
+                <a href="/darktide/skills/">Class directory</a>
+                <a href="/darktide/skills/arbites/">Arbites</a>
+                <a href="/darktide/skills/ogryn/">Ogryn</a>
+                <a href="/darktide/skills/psyker/">Psyker</a>
+                <a href="/darktide/skills/scum/">Scum</a>
+                <a href="/darktide/skills/skitarii/">Skitarii</a>
+                <a href="/darktide/skills/veteran/">Veteran</a>
+                <a href="/darktide/skills/zealot/">Zealot</a>
+              </div>
+            </details>
+            <details open>
+              <summary>Dialogue and subtitles</summary>
+              <div class="dt-level">
+                <a href="/darktide/en/">Archive home</a>
+                <details open>
+                  <summary>Player conversations</summary>
+                  <div class="dt-level">
+                    <a href="/darktide/en/player-conversation/">Category directory</a>
+                    <a href="/darktide/en/player-conversation/lore_grendyl_one_a--0002-1/" aria-current="page">Player conversations · lore grendyl one a · Section 0002 · Page 1</a>
+                  </div>
+                </details>
+                <details>
+                  <summary>Other categories</summary>
+                  <div class="dt-level">
+                    <a href="/darktide/en/mission-debrief/">Mission debriefs</a>
+                    <a href="/darktide/en/cinematic/">Fixed cinematic subtitles</a>
+                    <a href="/darktide/en/cinematic-dialogue/">Cinematic dialogue and manual subtitles</a>
+                    <a href="/darktide/en/mission-brief/">Mission briefings</a>
+                    <a href="/darktide/en/mission-vox/">Mission vox</a>
+                    <a href="/darktide/en/hub-conversation/">Hub conversations</a>
+                    <a href="/darktide/en/npc-interaction/">NPC interactions</a>
+                    <a href="/darktide/en/player-vo/">Player callouts and replies</a>
+                    <a href="/darktide/en/enemy-vo/">Enemy voices</a>
+                    <a href="/darktide/en/unlinked-vo/">Unlinked text candidates</a>
+                    <a href="/darktide/en/character-personalities/">Character personality introductions</a>
+                    <a href="/darktide/en/response-trigger-references/">Response trigger references</a>
+                    <a href="/darktide/en/unlinked-subtitles/">Subtitles awaiting classification</a>
+                  </div>
+                </details>
+              </div>
+            </details>
+          </nav>
+        </details>
+        <div class="dt-reading">
+        <!-- directory-reader:body -->
       <header class="preview-header">
         <nav class="preview-toolbar">
           <a class="preview-back" href="/darktide/en/">← Event types
@@ -52,6 +107,15 @@
         </h1>
         <p class="preview-summary">lore grendyl one b</p>
       </header>
+      <!-- directory-reader:crumb -->
+      <nav class="dt-breadcrumb" aria-label="Current location">
+        <ol>
+          <li><a href="/darktide/en/">Darktide</a></li>
+          <li><a href="/darktide/en/player-conversation/">Player conversations</a></li>
+          <li aria-current="page">Player conversations · lore grendyl one a · Section 0002 · Page 1</li>
+        </ol>
+      </nav>
+      <!-- /directory-reader:crumb -->
       <main id="darktide-content" tabindex="-1">
         <section class="dialogue-panel">
           <header class="dialogue-header">
@@ -1675,6 +1739,10 @@
           </footer>
         </section>
       </main>
+        <!-- directory-reader:end -->
+        </div>
+      </div>
+      <!-- /directory-reader:end -->
     </div>
   </body>
 </html>

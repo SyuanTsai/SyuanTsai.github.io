@@ -33,7 +33,7 @@ def read_literal(path):
     return path.read_bytes().decode("utf-8-sig")
 
 
-def scoped_transcript(path, event_id, raw_text):
+def scoped_transcript(path, event_id, raw_text, fallback_text=None):
     match = TRANSCRIPT.search(read_literal(path))
     if match is None:
         raise ValueError(f"No transcript in {path.name}")
@@ -57,6 +57,23 @@ def scoped_transcript(path, event_id, raw_text):
     if raw_text is None:
         if bubbles:
             raise ValueError(f"Missing original locale text for {event_id}")
+        if fallback_text is not None:
+            block, count = re.subn(
+                r'(<div class="line">)\s*<p class="note">.*?</p>\s*(</div>)',
+                lambda line: (
+                    '<p class="note">'
+                    + '尚無官方繁中翻譯，暫以英文原文顯示。</p>'
+                    + '\n                '
+                    + line.group(1)
+                    + '\n                  <div class="bubble" lang="en">'
+                    + html.escape(fallback_text)
+                    + '</div>\n                '
+                    + line.group(2)
+                ),
+                block, count=1, flags=re.DOTALL,
+            )
+            if count != 1:
+                raise ValueError(f"Expected one missing subtitle block for {event_id}")
     else:
         if len(bubbles) != 1:
             raise ValueError(f"Expected one original subtitle for {event_id}")
@@ -108,6 +125,7 @@ def load_entries(source, resources):
                     source / locale / "events" / f"{event_id}.html",
                     event_id,
                     texts[locale].get(key),
+                    fallback_text=texts["en"].get(key) if locale == "zh-tw" else None,
                 )
                 for locale in ("zh-tw", "en")
             },
@@ -664,6 +682,8 @@ def main():
         if not any(path.parent.iterdir()):
             path.parent.rmdir()
     regenerate_sitemap(site)
+    from apply_darktide_reader import apply_reader
+    apply_reader(site)
     print(f"Published {len(personalities)} personality introductions, {len(triggers)} trigger references, "
           f"and {len(remaining)} awaiting classification in {total} pages per language; "
           f"removed {len(legacy)} superseded pages.")
