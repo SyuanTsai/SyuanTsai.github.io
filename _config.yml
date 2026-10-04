@@ -53,8 +53,9 @@ defaults:
       type: posts
     values:
       layout: post
+  # Darktide uses its own split sitemap announced in robots.txt.
   - scope:
-      path: "preview/darktide"
+      path: "darktide"
     values:
       sitemap: false
 plugins:
