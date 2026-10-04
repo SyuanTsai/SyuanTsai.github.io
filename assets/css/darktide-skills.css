@@ -587,6 +587,50 @@
   scroll-margin-top: 24px;
 }
 
+/* The hierarchy occupies the left column; section links stay with the article. */
+.darktide-skills .skill-shell {
+  width: min(1500px, 100%);
+  padding: 0;
+}
+
+.darktide-skills .skill-reader {
+  display: block;
+}
+
+.skill-page-toc {
+  margin-bottom: 24px;
+  padding: 12px 18px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+}
+
+.skill-page-toc > summary {
+  min-height: 44px;
+  padding: 8px 0;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.skill-page-toc .skill-sidebar {
+  position: static;
+  padding: 8px 0;
+  border: 0;
+}
+
+.skill-page-toc .skill-sidebar h2 {
+  display: none;
+}
+
+.skill-page-toc .skill-sidebar ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.skill-page-toc .skill-sidebar a {
+  min-height: 44px;
+}
+
 @media (max-width: 760px) {
   .skill-sidebar ol {
     display: block;

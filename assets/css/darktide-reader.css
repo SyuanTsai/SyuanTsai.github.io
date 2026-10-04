@@ -1,0 +1,124 @@
+/* Shared directory and reading frame; content styles stay with each exporter. */
+.dt-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  min-height: 100vh;
+  align-items: start;
+}
+
+.dt-reading {
+  min-width: 0;
+  padding: 24px 32px 40px;
+}
+
+.dt-directory {
+  min-width: 0;
+  padding: 18px 14px 28px;
+  background: #0c1216;
+  border-right: 1px solid #26383f;
+  color: #bac6ca;
+  overflow-wrap: anywhere;
+}
+
+.dt-directory summary {
+  min-height: 44px;
+  padding: 9px 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dt-directory summary::marker {
+  color: #8da2aa;
+}
+
+.dt-directory a {
+  display: block;
+  min-height: 44px;
+  padding: 9px 10px;
+  color: #a8bbc2;
+  font-size: 14px;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.dt-directory a:hover,
+.dt-directory summary:hover {
+  color: #d2dadd;
+  background: #10191e;
+}
+
+.dt-directory a[aria-current="page"] {
+  color: #8bc7d1;
+  background: #17292f;
+  box-shadow: inset 2px 0 #76b9c4;
+}
+
+.dt-directory a:focus-visible,
+.dt-directory summary:focus-visible {
+  outline: 2px solid #76b9c4;
+  outline-offset: 2px;
+}
+
+.dt-level {
+  margin-left: 8px;
+  padding-left: 10px;
+  border-left: 1px solid #26383f;
+}
+
+.dt-directory .dt-brand {
+  color: #d2dadd;
+  font-family: Cambria, Georgia, serif;
+  font-size: 22px;
+}
+
+.dt-directory small {
+  display: block;
+  color: #8da2aa;
+  font-size: 11px;
+}
+
+.dt-directory-note {
+  margin: 18px 6px 0;
+  padding-top: 14px;
+  border-top: 1px solid #26383f;
+  color: #8da2aa;
+  font-size: 12px;
+}
+
+@media (min-width: 901px) {
+  .dt-directory {
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    scrollbar-color: #26383f #0c1216;
+  }
+
+  .dt-directory > summary {
+    display: none;
+  }
+
+  .dt-directory::details-content {
+    content-visibility: visible;
+  }
+
+  .dt-directory:not([open]) > nav {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .dt-layout {
+    display: block;
+  }
+
+  .dt-directory {
+    border-right: 0;
+    border-bottom: 1px solid #26383f;
+    padding: 8px 14px;
+  }
+
+  .dt-reading {
+    padding: 20px 18px 32px;
+  }
+}
