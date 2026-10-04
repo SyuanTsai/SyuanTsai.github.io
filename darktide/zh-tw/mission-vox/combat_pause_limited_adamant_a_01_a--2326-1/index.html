@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="/assets/css/darktide.css"
     >
+    <link rel="stylesheet" href="/assets/css/darktide-reader.css">
   </head>
   <body
     class="darktide-preview dialogue-reader"
@@ -30,6 +31,60 @@
   >
     <a class="skip-link" href="#darktide-content">跳至內容</a>
     <div class="preview-shell">
+      <!-- directory-reader:start -->
+      <div class="dt-layout">
+        <details class="dt-directory">
+          <summary>瀏覽目錄</summary>
+          <nav aria-label="Darktide 階層目錄">
+            <a class="dt-brand" href="/darktide/">DARKTIDE</a>
+            <details>
+              <summary>技能與天賦</summary>
+              <div class="dt-level">
+                <a href="/darktide/skills/">七職業目錄</a>
+                <a href="/darktide/skills/arbites/">法務官 · Arbites</a>
+                <a href="/darktide/skills/ogryn/">歐格林 · Ogryn</a>
+                <a href="/darktide/skills/psyker/">靈能者 · Psyker</a>
+                <a href="/darktide/skills/scum/">巢都渣滓 · Scum</a>
+                <a href="/darktide/skills/skitarii/">護教軍 · Skitarii</a>
+                <a href="/darktide/skills/veteran/">老兵 · Veteran</a>
+                <a href="/darktide/skills/zealot/">狂信徒 · Zealot</a>
+              </div>
+            </details>
+            <details open>
+              <summary>對話與字幕</summary>
+              <div class="dt-level">
+                <a href="/darktide/">資料區首頁</a>
+                <details open>
+                  <summary>任務通訊</summary>
+                  <div class="dt-level">
+                    <a href="/darktide/mission-vox/">分類目錄</a>
+                    <a href="/darktide/zh-tw/mission-vox/combat_pause_limited_adamant_a_01_a--2326-1/" aria-current="page">任務通訊 · combat pause limited adamant a 01 a · 段落 2326 · 分頁 1</a>
+                  </div>
+                </details>
+                <details>
+                  <summary>其他分類</summary>
+                  <div class="dt-level">
+                    <a href="/darktide/mission-debrief/">任務結束簡報</a>
+                    <a href="/darktide/cinematic/">固定影片字幕</a>
+                    <a href="/darktide/cinematic-dialogue/">過場語音與手動字幕</a>
+                    <a href="/darktide/mission-brief/">任務簡報</a>
+                    <a href="/darktide/hub-conversation/">艦內閒談</a>
+                    <a href="/darktide/npc-interaction/">NPC 互動</a>
+                    <a href="/darktide/player-conversation/">玩家閒談</a>
+                    <a href="/darktide/player-vo/">玩家呼喊與回應</a>
+                    <a href="/darktide/enemy-vo/">敵方聲音</a>
+                    <a href="/darktide/unlinked-vo/">未連結文字候選</a>
+                    <a href="/darktide/character-personalities/">角色性格介紹</a>
+                    <a href="/darktide/response-trigger-references/">回應觸發條件引用</a>
+                    <a href="/darktide/unlinked-subtitles/">用途待確認字幕</a>
+                  </div>
+                </details>
+              </div>
+            </details>
+          </nav>
+        </details>
+        <div class="dt-reading">
+        <!-- directory-reader:body -->
       <header class="preview-header">
         <nav class="preview-toolbar">
           <a class="preview-back" href="/darktide/">← 事件類型
@@ -52,6 +107,15 @@
         </h1>
         <p class="preview-summary">bonding conversation metropolitan syllables a</p>
       </header>
+      <!-- directory-reader:crumb -->
+      <nav class="dt-breadcrumb" aria-label="目前位置">
+        <ol>
+          <li><a href="/darktide/">Darktide</a></li>
+          <li><a href="/darktide/mission-vox/">任務通訊</a></li>
+          <li aria-current="page">任務通訊 · combat pause limited adamant a 01 a · 段落 2326 · 分頁 1</li>
+        </ol>
+      </nav>
+      <!-- /directory-reader:crumb -->
       <main id="darktide-content" tabindex="-1">
         <section class="dialogue-panel">
           <header class="dialogue-header">
@@ -109,6 +173,10 @@
           </footer>
         </section>
       </main>
+        <!-- directory-reader:end -->
+        </div>
+      </div>
+      <!-- /directory-reader:end -->
     </div>
   </body>
 </html>

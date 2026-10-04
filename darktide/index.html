@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="/assets/css/darktide.css"
     >
+    <link rel="stylesheet" href="/assets/css/darktide-reader.css">
   </head>
   <body
     class="darktide-preview"
@@ -30,6 +31,49 @@
   >
     <a class="skip-link" href="#darktide-content">跳至內容</a>
     <div class="preview-shell">
+      <!-- directory-reader:start -->
+      <div class="dt-layout">
+        <details class="dt-directory">
+          <summary>瀏覽目錄</summary>
+          <nav aria-label="Darktide 階層目錄">
+            <a class="dt-brand" href="/darktide/">DARKTIDE</a>
+            <details>
+              <summary>技能與天賦</summary>
+              <div class="dt-level">
+                <a href="/darktide/skills/">七職業目錄</a>
+                <a href="/darktide/skills/arbites/">法務官 · Arbites</a>
+                <a href="/darktide/skills/ogryn/">歐格林 · Ogryn</a>
+                <a href="/darktide/skills/psyker/">靈能者 · Psyker</a>
+                <a href="/darktide/skills/scum/">巢都渣滓 · Scum</a>
+                <a href="/darktide/skills/skitarii/">護教軍 · Skitarii</a>
+                <a href="/darktide/skills/veteran/">老兵 · Veteran</a>
+                <a href="/darktide/skills/zealot/">狂信徒 · Zealot</a>
+              </div>
+            </details>
+            <details open>
+              <summary>對話與字幕</summary>
+              <div class="dt-level">
+                <a href="/darktide/" aria-current="page">資料區首頁</a>
+                <a href="/darktide/mission-debrief/">任務結束簡報</a>
+                <a href="/darktide/cinematic/">固定影片字幕</a>
+                <a href="/darktide/cinematic-dialogue/">過場語音與手動字幕</a>
+                <a href="/darktide/mission-brief/">任務簡報</a>
+                <a href="/darktide/mission-vox/">任務通訊</a>
+                <a href="/darktide/hub-conversation/">艦內閒談</a>
+                <a href="/darktide/npc-interaction/">NPC 互動</a>
+                <a href="/darktide/player-conversation/">玩家閒談</a>
+                <a href="/darktide/player-vo/">玩家呼喊與回應</a>
+                <a href="/darktide/enemy-vo/">敵方聲音</a>
+                <a href="/darktide/unlinked-vo/">未連結文字候選</a>
+                <a href="/darktide/character-personalities/">角色性格介紹</a>
+                <a href="/darktide/response-trigger-references/">回應觸發條件引用</a>
+                <a href="/darktide/unlinked-subtitles/">用途待確認字幕</a>
+              </div>
+            </details>
+          </nav>
+        </details>
+        <div class="dt-reading">
+        <!-- directory-reader:body -->
       <header class="preview-header">
         <nav class="preview-toolbar">
           <a class="preview-back" href="/">← 網站首頁
@@ -51,7 +95,23 @@
         </h1>
         <p class="preview-summary">技能、天賦與中英字幕對話</p>
       </header>
+      <!-- directory-reader:crumb -->
+      <nav class="dt-breadcrumb" aria-label="目前位置">
+        <ol>
+
+          <li aria-current="page">Darktide · 技能與字幕對話</li>
+        </ol>
+      </nav>
+      <!-- /directory-reader:crumb -->
       <main id="darktide-content" tabindex="-1">
+        <!-- directory-reader:home -->
+        <section class="catalog-panel dt-home-intro">
+          <h2>選擇閱讀內容</h2>
+          <p>從目錄進入技能、事件類型與個別對話。手機可先展開「瀏覽目錄」。用途待確認字幕每頁最多25筆，每筆仍是獨立條目，不串成連續劇情。</p>
+        </section>
+        <details class="dt-home-catalog">
+          <summary>完整對話類型清單</summary>
+        <!-- directory-reader:catalog -->
         <section class="catalog-panel">
           <h2>技能與天賦</h2>
           <p class="catalog-summary">Release 1.13.1 · 七職業技能、升級、興奮劑配方與完整機制依據。</p>
@@ -169,7 +229,14 @@
             </li>
           </ul>
         </section>
+        <!-- directory-reader:catalog-end -->
+        </details>
+        <!-- /directory-reader:home -->
       </main>
+        <!-- directory-reader:end -->
+        </div>
+      </div>
+      <!-- /directory-reader:end -->
     </div>
   </body>
 </html>

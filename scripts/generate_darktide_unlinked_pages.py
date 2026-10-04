@@ -664,6 +664,8 @@ def main():
         if not any(path.parent.iterdir()):
             path.parent.rmdir()
     regenerate_sitemap(site)
+    from apply_darktide_reader import apply_reader
+    apply_reader(site)
     print(f"Published {len(personalities)} personality introductions, {len(triggers)} trigger references, "
           f"and {len(remaining)} awaiting classification in {total} pages per language; "
           f"removed {len(legacy)} superseded pages.")
