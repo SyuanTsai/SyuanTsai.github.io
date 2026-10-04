@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="電流抗性：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>電流抗性：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/voltaic-resistance/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">電流抗性：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>電流抗性：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Voltaic Resistance</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/voltaic-resistance/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#電流抗性voltaic-resistance原始碼依據"><span>03</span>電流抗性(Voltaic Resistance)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="電流抗性：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/voltaic-resistance/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_force_field_arcs.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="電流抗性voltaic-resistance原始碼依據">
+              電流抗性(Voltaic Resistance)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/voltaic-resistance/#cryptic_force_field_arcs">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_force_field_arcs">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_force_field_arcs</code>；名稱鍵：<code>loc_talent_cryptic_force_field_arcs</code>；描述鍵：<code>loc_talent_cryptic_force_field_arcs_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_a2f854fa-6833-41cb-8022-e5a4617d8646</code>；分類：閃擊；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                節點啟用 cryptic_force_field_generates_arcs_based_on_hits_blocked 後，力場健康擴充在力場物件到期時由 fixed_update 呼叫 kill；受遠程攻擊使其生命值歸零也會呼叫 kill。若伺服器端施放者仍存活且特長啟用，kill 會計算 ceil(吸收遠程攻擊數/6)，再 clamp 到1至4。0次攻擊時原始計算為0，仍會被 clamp 成1；到期路徑沒有先檢查攻擊次數，因此零次吸收仍實際進入找目標流程。程式接著查詢玩家周圍12公尺的敵人，只選存活、可指定且位於玩家前方（方向點積大於0.5）的目標；找不到目標時不會實際發射。每個初選目標啟動 force_field_arc_chain_lightning_source，連鎖半徑12公尺，最多4次跳躍。此結束電弧與力場本身啟動／結束時的5公尺爆炸分開。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L876-L891">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：876–891</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L164-L176">scripts/settings/talent/talent_settings_cryptic.lua：164–176</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L24-L39">scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：24–39</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L80-L100">scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：80–100</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L141-L196">scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：141–196</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua#L21-L40">scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua：21–40</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua#L42-L55">scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua：42–55</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_activate_force_shield.lua#L103-L125">scripts/extension_systems/ability/actions/action_activate_force_shield.lua：103–125</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L56-L64">scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：56–64</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_activate_force_shield.lua#L103-L114">scripts/extension_systems/ability/actions/action_activate_force_shield.lua：103–114</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L876-L891">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：876–891</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L2530-L2553">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：2530–2553</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                力場結束時吸收0至6次遠程攻擊→1道，7至12次→2道，13至18次→3道，19次以上→4道上限；即使0次也會算出1道，但須有前方12公尺內的有效目標。
+              </li>
+              <li>
+                0次吸收會由下限 clamp 成1道，且到期時會執行尋找目標；若前方12公尺內沒有存活且可指定敵人，實際沒有電弧目標。
+              </li>
+              <li>
+                只計遠程攻擊或被標記為遠程的攻擊，不按攻擊傷害量計數。
+              </li>
+              <li>
+                額外連鎖受有效目標、連鎖距離與4次跳躍上限影響。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>143e5c50</code>。
+              </li>
+              <li>
+                固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25606770 版本對應為1.13.1。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_force_field_arcs.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/ba6e0fe8-b601-433e-a423-8a6b8ee7b79b">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/voltaic-resistance/">← 返回電流抗性玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

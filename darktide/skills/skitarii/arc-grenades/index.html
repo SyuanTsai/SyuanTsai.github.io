@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="電弧手榴彈 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>電弧手榴彈 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/arc-grenades/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">電弧手榴彈</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/6a4875ee-4056-4964-ae36-846e598954bc"
+              width="80"
+              height="80"
+              alt="電弧手榴彈圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>電弧手榴彈</h1>
+            <span class="skill-english-name" lang="en">Arc Grenades</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/skitarii/arc-grenades/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="電弧手榴彈">
+          <a id="cryptic_grenade_ability_arc_grenade"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：爆炸半徑10公尺，最多向4名敵人發出電弧；優先選取特定重甲敵人，再尋找其他精英與有效目標。每道電弧可再連鎖附近敵人。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>連鎖範圍</strong>：每條電弧可在12公尺內連鎖最多5次；實際命中數取決於附近是否有有效敵人。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>電擊傷害</strong>：範圍爆炸與電弧跳躍本身不直接扣血，傷害來自電弧命中後的持續電擊。電擊持續約1.1秒，每0.2秒結算一次；單次傷害會隨敵人護甲與其他加成改變。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：假設對某目標每次電擊造成12點傷害，這次實際結算5次，合計12 × 5 = 60點。此例只示範加總方式，並非所有敵人固定受到60點傷害。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>擊殺回充</strong>：電弧手榴彈或其電弧擊殺精英、專家時，每次恢復0.04份電容量。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>算例</strong>：擊殺3名符合條件的敵人，共恢復3×0.04=0.12份電容量；手雷本身最多有3次使用次數。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>電容量算例</strong>：單份50點時，每名合格擊殺額外恢復50 × 4% = 2點；擊殺3名合計6點。此為手雷額外效果，職業原有擊殺回充另計。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>使用次數</strong>：基礎可攜帶3顆；不會像力場一樣隨時間自行補充。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/arc-grenades/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/README.md#cryptic_grenade_ability_arc_grenade">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_grenade_ability_arc_grenade.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

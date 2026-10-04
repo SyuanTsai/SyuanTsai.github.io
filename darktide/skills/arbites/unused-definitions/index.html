@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="法務官：未使用定義（技術補充） · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>法務官：未使用定義（技術補充） · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/unused-definitions/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">法務官：未使用定義（技術補充）</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>法務官：未使用定義（技術補充）</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術補充 · 非當前可選技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="法務官：未使用定義（技術補充）">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/arbites/">← 返回法務官</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/UNUSED_DEFINITIONS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="法務官目前技能樹與職業基礎清單未直接引用的定義">
+              法務官：目前技能樹與職業基礎清單未直接引用的定義
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/">返回玩家說明</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>
+            </p>
+            <p>
+              <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定來源版本</a>；完整 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+            </p>
+            <p>
+              本清單比對固定版本的 <code>adamant_talents.lua</code> 定義、技能樹直接引用及 <code>adamant_archetype.base_talents</code>。<code>adamant_talents.lua</code> 共 126 個定義；技能樹 86 個 ID 中有 81 個引用這些法務官定義，另 5 個引用共用的 <code>base_talents.lua</code> 屬性節點；職業基礎清單另直接引用 5 個法務官定義。剩下 40 個法務官 talent ID 沒有出現在技能樹或職業基礎清單。
+            </p>
+            <p>
+              <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10">技能樹來源</a>；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/adamant_archetype.lua#L51-L68">基礎清單來源</a>。
+            </p>
+            <p>
+              「未直接引用」是這兩份清單的 ID 差集，不等同於已證明整段程式碼完全無用途。表格保留定義行號，供後續追查引用。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      talent ID
+                    </th>
+                    <th>
+                      定義來源
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      adamant_companion_focus_melee
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2434-L2453">第 2434–2453 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_dog_kills_replenish_toughness
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1015-L1033">第 1015–1033 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_execution_order_ally_toughness
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2277-L2295">第 2277–2295 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_execution_order_monster_debuff
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2239-L2256">第 2239–2256 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_exterminator
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2099-L2131">第 2099–2131 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_exterminator_ability_cooldown
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2334-L2352">第 2334–2352 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_exterminator_boss_damage
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2315-L2333">第 2315–2333 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_exterminator_stack_during_activation
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2353-L2371">第 2353–2371 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_exterminator_stamina_ammo
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2372-L2394">第 2372–2394 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_exterminator_toughness
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2296-L2314">第 2296–2314 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_forceful_ranged
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1562-L1582">第 1562–1582 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_grenade_increased_damage
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L453-L468">第 453–468 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_grenade_increased_radius
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L437-L452">第 437–452 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_gutter_forged
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1258-L1280">第 1258–1280 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_increased_damage_vs_horde
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1102-L1117">第 1102–1117 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_mag_strips
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1149-L1164">第 1149–1164 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_no_movement_penalty
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1479-L1494">第 1479–1494 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_pinning_dog_cleave_bonus
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2877-L2892">第 2877–2892 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_pinning_dog_kills_cdr
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2961-L2980">第 2961–2980 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_pinning_dog_permanent_stacks
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2913-L2932">第 2913–2932 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_restore_toughness_to_allies_on_combat_ability
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1434-L1448">第 1434–1448 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_riot_pads
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1239-L1257">第 1239–1257 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_shout
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L35-L57">第 35–57 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_shout_improved
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L58-L88">第 58–88 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_stance_damage
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L276-L291">第 276–291 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_stance_dance
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1651-L1709">第 1651–1709 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_stance_dance_cleave
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1762-L1785">第 1762–1785 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_stance_dance_elite_kills
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1710-L1736">第 1710–1736 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_stance_dance_reload_speed
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1737-L1761">第 1737–1761 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_stance_dance_weakspots
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1786-L1825">第 1786–1825 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_suppression_immunity
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2494-L2503">第 2494–2503 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_terminus_warrant_improved
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2012-L2050">第 2012–2050 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_terminus_warrant_melee
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1988-L2011">第 1988–2011 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_terminus_warrant_ranged
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1955-L1987">第 1955–1987 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_terminus_warrant_upgrade
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1926-L1954">第 1926–1954 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_uninterruptible_heavies
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2821-L2830">第 2821–2830 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_verispex
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1181-L1195">第 1181–1195 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_weapon_handling
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2618-L2645">第 2618–2645 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_wield_speed_aura
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L647-L671">第 647–671 行</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      adamant_wield_speed_on_melee_kill
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1343-L1366">第 1343–1366 行</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 id="判讀界線">
+              判讀界線
+            </h2>
+            <ul>
+              <li>
+                技能樹 共 86 個直接引用 ID，其中 81 個來自 <code>adamant_talents.lua</code>，5 個是 <code>base_talents.lua</code> 的共用屬性節點。
+              </li>
+              <li>
+                <code>adamant_archetype.lua</code> 的 5 個 <code>base_talents</code>（戰鬥技能、手雷、電子獒犬協同、電子獒犬等級傷害、標記命令）都能在 <code>adamant_talents.lua</code> 找到定義，且沒有和技能樹 ID 重複。
+              </li>
+              <li>
+                差集只統計 talent ID 是否被技能樹或職業基礎清單直接引用；沒有把通用 <code>base_talents.lua</code> 的 141 個共享定義，或 buff、special rule、能力與武器資料當成法務官未使用天賦。未追完底層引用前，不推斷這 40 個定義可刪除或完全沒有執行時用途。
+              </li>
+              <li>
+                這是固定 SHA 的靜態比較，不推論其他版本、測試模式或遊戲外工具的引用。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/">← 返回法務官技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

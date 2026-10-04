@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="平靜迸發：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>平靜迸發：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/becalming-eruption/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">平靜迸發：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>平靜迸發：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Becalming Eruption</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/psyker/becalming-eruption/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#平靜迸發becalming-eruption原始碼依據"><span>03</span>平靜迸發(Becalming Eruption)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="平靜迸發：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/psyker/becalming-eruption/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_shout_reduces_warp_charge_generation.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="平靜迸發becalming-eruption原始碼依據">
+              平靜迸發(Becalming Eruption)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/becalming-eruption/#psyker_shout_reduces_warp_charge_generation">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜<a href="/darktide/skills/psyker/localization-comparison/#psyker_shout_reduces_warp_charge_generation">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>psyker_shout_reduces_warp_charge_generation</code>；名稱鍵：<code>loc_talent_psyker_shout_reduces_warp_charge_generation</code>；描述鍵：<code>loc_talent_psyker_shout_reduces_warp_charge_generation_description</code>。
+              </li>
+              <li>
+                節點：<code>node_b6b57be7-9aa8-483b-a127-6c1815d452a4</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                尖嘯結束事件把 num_hits 作為層數加入 psyker_shout_warp_generation_reduction；buff 持續5秒、最多25層。模板預設和第1組override的每層 warp_charge_amount 為0.99，第2組override為0.98。天賦格式化讀取tier值，示例只採用0.99情境。遊戲 buff 設定把 warp_charge_amount 歸類為 multiplicative_multiplier，而多層buff計算會逐層乘入，因此1%層值時總反噬生成係數為0.99^n，不是把百分比直接相加。尚未在遊戲內確認各配置時，不能把某一override視作所有配置都固定使用。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L266-L316">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：266–316</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L405-L445">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：405–445</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L419-L445">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：419–445</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L362-L417">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：362–417</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L315-L343">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：315–343</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L515-L541">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：515–541</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L1018-L1021">scripts/settings/buff/buff_settings.lua：1018–1021</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L729">scripts/extension_systems/buff/buffs/buff.lua：689–729</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L266-L316">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：266–316</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L515-L541">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：515–541</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                本次尖嘯有效命中10名敵人，採用每層係數0.99，沒有其它反噬生成修正。 0.99^10 ≈ 0.9044。 效果期間的反噬生成約為原值的90.44%，即約降低9.56%。
+              </li>
+              <li>
+                25層上限、每層係數0.99。 0.99^25 ≈ 0.7778。 反噬生成約為原值的77.78%，即約降低22.22%；持續5秒。
+              </li>
+              <li>
+                尖嘯命中數取決於動作的目標篩選，且受25層上限限制；未核實同一目標在某些特殊碰撞下的重複計數。
+              </li>
+              <li>
+                buff 還有0.98的 tier override；若客戶端 Build25606770 使用不同 tier/配置，數值算例不能直接套用，須同版核對。
+              </li>
+              <li>
+                反噬生成 stat 與反噬平息不是同一效果；本天賦不直接減少已累積反噬。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>57df8e08</code>。
+              </li>
+              <li>
+                同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_shout_reduces_warp_charge_generation.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/becalming-eruption/">← 返回平靜迸發玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

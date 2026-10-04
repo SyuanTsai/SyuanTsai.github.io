@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="狂信徒：角色基礎效果 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>狂信徒：角色基礎效果 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/base-effects/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">狂信徒：角色基礎效果</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>狂信徒：角色基礎效果</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="狂信徒：角色基礎效果">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/zealot/">← 返回狂信徒</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/BASE_EFFECTS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="狂信徒角色基礎效果">
+              狂信徒：角色基礎效果
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/unused-definitions/">未直接使用的定義</a>
+            </p>
+            <p>
+              以下四項由職業設定預先提供，不占 82 個可選節點。功能標題只用於辨識。固定來源為 Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>；以下為靜態核對，未進行遊戲內測試。
+            </p>
+            <p>
+              四項基礎效果未取得可唯一配對的獨立圖示，未借用其他節點的圖片。
+            </p>
+            <p>
+              <a id="zealot_dash"></a>
+            </p>
+            <h2 id="基礎戰鬥能力">
+              基礎戰鬥能力
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  天賦識別碼：<code>zealot_dash</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>衝鋒與冷卻</strong>：向前衝鋒；一般距離 7 公尺，鎖定目標時可延長至 21 公尺，途中受碰撞與可通行路徑影響。基礎冷卻 30 秒、1 次充能。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>韌性恢復</strong>：啟動時恢復 50% 最大韌性；上限 100、目前 20 時可補 50 點至 70，若目前已有 70，就只補缺少的 30 點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>攻速加成</strong>：獲得 20% 攻擊速度，生效約 11 秒。只計這份加成，受影響的 1 秒動作變成 1 ÷ 1.2 ≈ 0.833 秒；再次施放會重設效果的持續時間。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>下一次近戰命中</strong>：3 秒內的下一次合格近戰命中增加 25% 近戰傷害、必定暴擊，並獲得 100% 近戰撕裂；推擊與遠程命中不消耗這次強化。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：先只看近戰傷害階段，基礎 100 點變成 100 × 1.25 = 125 點；已有同階段 20% 增傷時則為 145 點。暴擊的額外傷害與撕裂對護甲的影響另算，不能把 125 當成所有武器的最終傷害。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>特殊攻擊</strong>：部分武器啟動特殊效果、並持續黏著敵人攻擊時，可保留強化到該段攻擊結束；實際行為依武器而定。
+                </p>
+              </li>
+            </ul>
+            <h3 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h3>
+            <ul>
+              <li>
+                <p>
+                  zealot_archetype.lua 的 base_talents 將 zealot_dash 指派至 slot_combat_ability；talent definition 綁定 PlayerAbilities.zealot_targeted_dash。
+                </p>
+              </li>
+              <li>
+                <p>
+                  base_dash max_charges=1，冷卻取 talent_settings_2.combat_ability.cooldown=30；能力 template 使用 LungeTemplates.zealot_dash。
+                </p>
+              </li>
+              <li>
+                <p>
+                  lunge template 設定 restore_toughness=.5、lunge impact damage profile、damage radius=3，並在結束時加入 zealot_combat_ability_attack_speed_increase 與 zealot_dash_buff。
+                </p>
+              </li>
+              <li>
+                <p>
+                  zealot_dash_buff 設定 duration=3，stat buffs 分別讀取 melee_damage=.25、melee_critical_strike_chance=1、melee_rending_multiplier=1；attack-speed buff 讀取 combat_ability_2.attack_speed=.2、active_duration=10，template duration 再加 1 秒以覆蓋延遲時段。
+                </p>
+              </li>
+              <li>
+                <p>
+                  固定來源的衝刺 lunge template 本身就掛 attack-speed buff；可選 zealot_attack_speed_post_ability 也選用 clone of base_dash。此處為來源結構重疊疑點，僅依程式設定記錄，不據此判定該可選節點沒有其他版本差異。
+                </p>
+              </li>
+            </ul>
+            <h3 id="原始碼依據">
+              原始碼依據
+            </h3>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L27-L53">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua#L7-L36">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L304-L318">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L423-L427">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/zealot_dash.lua#L53-L85">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/lunge/zealot_lunge_templates.lua#L14-L97">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1233-L1244">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4135-L4155">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L383-L427">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L383-L428">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L420-L430">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/lunge/zealot_lunge_templates.lua#L79-L92">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1233-L1329">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/action_handler.lua#L356-L429">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L289-L303">固定版本來源</a>
+              </li>
+            </ul>
+            <h3 id="待確認事項">
+              待確認事項
+            </h3>
+            <ul>
+              <li>
+                本版基礎與強化衝鋒共用同一 lunge，且都掛載攻速效果；能力的 clone 主要改圖示。這是固定來源的結構，不能據此推定其他遊戲版本選點後完全沒有變化。
+              </li>
+              <li>
+                公開執行時長為 11 秒，格式資料 active_duration=10；與本機文字的顯示差異仍待遊戲內核對。
+              </li>
+              <li>
+                本機 Steam Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+            <hr>
+            <p>
+              <a id="zealot_shock_grenade"></a>
+            </p>
+            <h2 id="基礎閃擊">
+              基礎閃擊
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  天賦識別碼：<code>zealot_shock_grenade</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：最多攜帶 3 枚震撼手雷，引信 1.5 秒；投出一枚後，3 − 1 = 2 枚。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>範圍與效果</strong>：爆炸最大半徑 8 公尺、近距區域半徑 2 公尺，命中附加持續 8 秒的電擊。點選眩暈風暴手雷後，半徑乘 1.5，分別變成 12 與 3 公尺，攜帶量不變。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：只計週期電擊、沒有其他修正時，單次無護甲傷害為 8 × 0.5 = 4 點；間隔約 0.3～0.8 秒。同一電擊效果只重新計時，不疊成多層。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>控制限制</strong>：敵人抗性與遮蔽物會影響結果；已在踉蹌中的瘟疫爆者會跳過週期電擊，並非免疫所有爆炸效果。
+                </p>
+              </li>
+            </ul>
+            <h3 id="原始碼確認與程式推導-1">
+              原始碼確認與程式推導
+            </h3>
+            <ul>
+              <li>
+                <p>
+                  base_talents 將 zealot_shock_grenade 綁到手雷槽，talent definition 綁 PlayerAbilities.zealot_shock_grenade。
+                </p>
+              </li>
+              <li>
+                <p>
+                  能力使用 grenade_shock inventory item，max_charges 從 zealot_2.grenade.max_charges 讀取，設定值 3；投射物 fuse_time=1.5。
+                </p>
+              </li>
+              <li>
+                <p>
+                  電擊與傷害鏈和<a href="/darktide/skills/zealot/stunstorm-grenade/mechanics/">眩暈風暴手雷</a>共用；基礎版本沒有 explosion_radius_modifier_shock=.5。
+                </p>
+              </li>
+            </ul>
+            <h3 id="原始碼依據-1">
+              原始碼依據
+            </h3>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L54-L63">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua#L94-L105">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L319-L321">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L413-L426">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L66-L101">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L413-L474">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L64-L91">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L319-L328">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L513-L519">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/explosion.lua#L484-L502">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L648-L690">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/explosion.lua#L429-L482">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/power_level_settings.lua#L7-L25">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L21-L23">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L63-L91">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L29-L80">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L219-L227">固定版本來源</a>
+              </li>
+            </ul>
+            <h3 id="待確認事項-1">
+              待確認事項
+            </h3>
+            <ul>
+              <li>
+                傷害例只計隔離的週期電擊，不含初次爆炸；未測量敵人控制抗性與實際結算次數。
+              </li>
+              <li>
+                本機 Steam Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+            <hr>
+            <p>
+              <a id="zealot_toughness_damage_coherency"></a>
+            </p>
+            <h2 id="基礎韌性減傷光環">
+              基礎韌性減傷光環
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  天賦識別碼：<code>zealot_toughness_damage_coherency</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>效果</strong>：你與協同範圍內的隊友，受到的韌性傷害降低 7.5%。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>算例</strong>：100 × (1 − 7.5%) = 92.5 點韌性傷害；不直接減少生命傷害。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>替換與疊加</strong>：恩賜取代此光環，改為 15% 減傷；不能將兩者相加成 22.5%，多個相同光環也不重複累加。
+                </p>
+              </li>
+            </ul>
+            <h3 id="原始碼確認與程式推導-2">
+              原始碼確認與程式推導
+            </h3>
+            <ul>
+              <li>
+                <p>
+                  base_talent 定義把 zealot_coherency_toughness_damage_resistance 設為 coherency buff；0.925 由 talent_settings_2.coherency.toughness_damage_taken_multiplier 提供，定義格式化為 1−0.925=7.5%。
+                </p>
+              </li>
+              <li>
+                <p>
+                  buff template max_stacks=talent_settings_2.coherency.max_stacks=1、coherency_id=zelot_maniac_coherency_aura、priority=2；改良模板沿用同一 ID 並以 priority=1 勝出。
+                </p>
+              </li>
+              <li>
+                <p>
+                  coherency daisy-chain 建立時把 unit 自己加入集合；同一 ID 的 buff 由 selector 選擇 priority 數字較小者。
+                </p>
+              </li>
+              <li>
+                <p>
+                  接收端若帶有 prevent_coherency_buffs_from_other_players keyword，通用 coherency selector 只採用同一位玩家來源的 aura；這是一般接收端例外，不是此 base aura 賦予的效果。
+                </p>
+              </li>
+            </ul>
+            <h3 id="原始碼依據-2">
+              原始碼依據
+            </h3>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L779-L801">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L325-L328">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3283-L3356">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L188-L195">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L779-L827">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L319-L328">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L381-L384">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_taken_calculation.lua#L234-L255">固定版本來源</a>
+              </li>
+            </ul>
+            <h3 id="待確認事項-2">
+              待確認事項
+            </h3>
+            <ul>
+              <li>
+                100×0.925 是隔離此 aura 的算例；不表示遊戲會在所有來源中以同一順序或同一聚合方式計算其他減傷。
+              </li>
+              <li>
+                本機 Steam Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+            <hr>
+            <p>
+              <a id="zealot_more_toughness_on_melee"></a>
+            </p>
+            <h2 id="近戰擊殺回復更多韌性">
+              近戰擊殺回復更多韌性
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  天賦識別碼：<code>zealot_more_toughness_on_melee</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>效果</strong>：近戰擊殺的韌性恢復量提高 75%；單純命中不會觸發。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>恢復算例</strong>：若未加成時一次近戰擊殺恢復 10 點，現在為 10 × (1 + 75%) = 17.5 點；若同階段另有 25% 恢復加成，則為 10 × (1 + 75% + 25%) = 20 點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>恢復上限</strong>：武器、最大韌性及其他恢復倍率仍會影響實際點數；只缺 8 點韌性時，就只能恢復 8 點。
+                </p>
+              </li>
+            </ul>
+            <h3 id="原始碼確認與程式推導-3">
+              原始碼確認與程式推導
+            </h3>
+            <ul>
+              <li>
+                <p>
+                  base_talent 的 passive 掛 zealot_increased_toughness_recovery_from_kills；buff template 將 talent_settings_2.toughness_1.toughness_melee_replenish 設為 toughness_melee_replenish stat buff。
+                </p>
+              </li>
+              <li>
+                <p>
+                  設定值為 0.75；韌性 extension 只有 recovery_type==toughness_replenish_types.melee_kill 時讀取 toughness_melee_replenish，再與 total toughness-replenish modifiers 合併。
+                </p>
+              </li>
+              <li>
+                <p>
+                  來源運算式把該 stat 值與其他 stat modifiers 合併；75% 是該 base stat 的來源顯示值，不可忽略其他 multiplier 或武器恢復係數。
+                </p>
+              </li>
+            </ul>
+            <h3 id="原始碼依據-3">
+              原始碼依據
+            </h3>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2841-L2864">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L344-L346">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1440-L1446">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L223-L242">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L1005-L1011">固定版本來源</a>
+              </li>
+            </ul>
+            <h3 id="待確認事項-3">
+              待確認事項
+            </h3>
+            <ul>
+              <li>
+                這是 recovery percentage 的算例；實際韌性點數取決於 max toughness、目前韌性損傷、武器 template recovery_percentage_modifiers 及其他 stat buffs。
+              </li>
+              <li>
+                本機 Steam Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+            <hr>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/">← 返回狂信徒技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

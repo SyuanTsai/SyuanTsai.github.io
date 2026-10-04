@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="抗焦慮藥 III · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>抗焦慮藥 III · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/kalma-iii/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">抗焦慮藥 III</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/dc414369-8882-423d-9c5f-ba6a04583163"
+              width="80"
+              height="80"
+              alt="抗焦慮藥 III圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>抗焦慮藥 III</h1>
+            <span class="skill-english-name" lang="en">Kalma III</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>興奮劑配方</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/scum/kalma-iii/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="抗焦慮藥 III">
+          <a id="broker_stimm_concentration_3"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>配方成本</strong>：3 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>恢復速度</strong>：戰鬥技能自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>持續恢復算例</strong>：從抗焦慮藥 I 選到本節點時，總加成為 18.75%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.1875 秒；15 秒藥效內共恢復 15 × 1.1875 = 17.8125 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>剩餘時間算例</strong>：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 17.8125 = 42.1875 秒；之後恢復原速。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>暫停期間</strong>：戰鬥技能若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/scum/kalma-iii/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/README.md#broker_stimm_concentration_3">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_3.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/">← 返回巢都渣滓技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

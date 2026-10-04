@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="動力引擎：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>動力引擎：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/motive-engine/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">動力引擎：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>動力引擎：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Motive Engine</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/motive-engine/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#動力引擎motive-engine原始碼依據"><span>03</span>動力引擎(Motive Engine)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例與待確認事項"><span>06</span>算例與待確認事項</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="動力引擎：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/motive-engine/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_cooldown_regen.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="動力引擎motive-engine原始碼依據">
+              動力引擎(Motive Engine)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/base-effects/#cryptic_passive_cooldown_regen">返回基礎效果</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                固定來源：Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                基礎天賦：<code>cryptic_passive_cooldown_regen</code>；不占可選天賦點數。
+              </li>
+              <li>
+                證據程度：原始碼確認與程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                talent_settings_cryptic.lua 將 PASSIVE_COOLDOWN_REGENERATION_PERCENT_PER_SECOND 設為 0.02，general cooldown time 為其倒數 50 秒；cryptic_passive_cooldown_regen 的同名設定將恢復率設為 0.02。
+              </li>
+              <li>
+                combat ability 定義 resource_regen_per_second=1、resource_cost_per_charge=cooldown=50 且 max_charges=3。因此自然恢復率是 1/50=0.02 份/秒；內部資源上限為 3 × 50=150，完整恢復需 150 秒。
+              </li>
+              <li>
+                cryptic_ability_recharge 在 on_kill 判定；一般敵人補 0.02、帶 elite 或 special tag 的敵人補 0.04。它在 cryptic_precision_stance keyword 存在時提前返回。restore_ability_charge_percentage 將此比例乘上單一份成本，不是總三份容量的百分比。
+              </li>
+              <li>
+                同名 passive buff 的 combat_ability_resource_regen_modifier=0 是中性 additive-multiplier 數值；底層能力仍按 resource_regen_per_second 自然恢復。settings 中 base_charges、charge_gain、min/max_charge、max_power 由 format_values 讀取，未作為 ability resource runtime 欄位；實際上限由 player ability 設定 max_charges=3。
+              </li>
+              <li>
+                進階戰鬥教範期間，能力基礎每秒自然恢復 1 資源點與同值的 while-active 成本相抵；架勢另按每秒 10% 單份進度與每次射擊 1% 額外消耗同一資源池，重裝時暫停每秒消耗。
+              </li>
+              <li>
+                本機Steam Build25606770：描述鍵 <code>loc_talent_cryptic_passive_cooldown_regen_desc</code>、同源中英hash <code>cc7d6ab9</code> 已精確配對。中英共同將職業資源概括為至少1、最多3份的消耗模式；實際能力分別採用1份、最多3份或分段比例消耗。共同概括不能單獨判成繁中誤譯；以各能力的固定程式為準。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L1-L17">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1531-L1586">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L70-L100">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L283-L356">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L2083-L2089">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L846-L875">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L742-L742">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L99-L101">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L126-L140">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L449-L513">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1390-L1402">固定版本來源</a>
+              </li>
+            </ul>
+            <h2 id="算例與待確認事項">
+              算例與待確認事項
+            </h2>
+            <ul>
+              <li>
+                單份充能從空槽自然恢復；50 秒 × 每秒 2% = 100%；回到一整份可用充能。
+              </li>
+              <li>
+                三份充能全空；每份需 50 秒，資源池上限為三份；50 × 3 = 150 秒自然補滿。
+              </li>
+              <li>
+                缺一整份進度時擊殺普通敵人；恢復 2% × 50 秒 = 1 秒自然恢復量；擊殺精英或專家敵人則為 4% × 50 秒 = 2 秒量。
+              </li>
+              <li>
+                擊殺恢復是單一份充能資源成本的百分比；不應乘上三份容量。
+              </li>
+              <li>
+                擊殺 proc 在進階戰鬥教範啟動時直接跳過。
+              </li>
+              <li>
+                format_values 內有未參與 runtime 充能資源計算的顯示欄位；runtime 三份上限來自能力資料。
+              </li>
+              <li>
+                本機文字 Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/motive-engine/">← 返回動力引擎玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

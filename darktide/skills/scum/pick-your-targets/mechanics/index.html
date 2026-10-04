@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="精準獵殺：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>精準獵殺：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/pick-your-targets/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">精準獵殺：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>精準獵殺：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Pick Your Targets</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/pick-your-targets/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#精準獵殺pick-your-targets原始碼依據"><span>03</span>精準獵殺(Pick Your Targets)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="精準獵殺：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/pick-your-targets/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_ability_focus_sub_2.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="精準獵殺pick-your-targets原始碼依據">
+              精準獵殺(Pick Your Targets)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/pick-your-targets/#broker_ability_focus_sub_2">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_ability_focus_sub_2">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_ability_focus_sub_2</code>；名稱鍵：<code>loc_talent_broker_ability_focus_sub_2</code>；描述鍵：<code>loc_talent_broker_ability_focus_sub_2_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_276ffd37-efb4-4ced-b119-38aa2714359b</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                此節點啟用 broker_focus_rending。broker_focus_stance 在此規則下將 ranged_rending_multiplier 設為0.15，且只在 focus buff 存續期間套用。此屬性為加算撕裂項，由傷害計算的遠程攻擊撕裂路徑讀取；不能直接當成傷害 +15%。
+              </li>
+              <li>
+                通過專注 on_kill 檢查後，若 sub_2_rending 啟用，加入 broker_focus_sub_2_damage。此 buff duration=3、max_stacks=5、每層 ranged_damage=0.03、refresh_duration_on_stack=true，專注 buff 消失時由 conditional_exit_func 結束。ranged_damage 是加算修正；滿層只計本 buff 為+0.15。
+              </li>
+              <li>
+                普通擊殺檢查要求死亡結果、遠程攻擊（或武器設定視為遠程）及命中點到攻擊者位置≤12.5m；沒有讀取敵人是否帶有 outline/標記狀態。針槍的 on_minion_death 例外只針對已追蹤、被 toxin 傷害擊殺且死亡點離 params.attacking_unit 位置≤12.5m 的目標。
+              </li>
+              <li>
+                refresh_duration_on_remove_stack=true，因此停止補層後不是3秒全消，而是每次移除1層後重設3秒。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L171-L219">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：171–219</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L119-L141">scripts/settings/talent/talent_settings_broker.lua：119–141</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L255-L314">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：255–314</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L319-L346">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：319–346</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L398-L450">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：398–450</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L465-L485">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：465–485</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/broker_buff_utils.lua#L99-L190">scripts/settings/buff/broker_buff_utils.lua：99–190</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L306-L318">scripts/settings/buff/helper_functions/check_proc_functions.lua：306–318</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L777-L792">scripts/settings/buff/helper_functions/check_proc_functions.lua：777–792</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L875-L878">scripts/settings/buff/buff_settings.lua：875–878</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L942-L953">scripts/settings/buff/buff_settings.lua：942–953</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L629-L660">scripts/utilities/attack/damage_calculation.lua：629–660</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L171-L219">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：171–219</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L2048-L2070">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：2048–2070</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>遠程傷害算例</strong>：5層 × 每層3% = 15%；只計此 buff 時，100×(1+0.15)=115。撕裂+15%屬另一項護甲修正，不能再當成直接傷害+15%相乘。
+              </li>
+              <li>
+                傷害疊層持續3秒並重新計時，且在專注狀態結束時提早移除。
+              </li>
+              <li>
+                擊殺觸發依固定版近距離遠程檢查；程式沒有另外讀標記狀態。針槍毒素擊殺須符合獨立追蹤條件。
+              </li>
+              <li>
+                +15%撕裂與+15%遠程傷害是不同效果，不可合併成+30%直接傷害。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>4946598e</code>。
+              </li>
+              <li>
+                繁中與英文都寫專注期間遠程攻擊加撕裂，並由擊殺累積遠程傷害、最多5層；設定數值為撕裂0.15、每層遠程傷害0.03、上限5層。近距離檢查與針槍追蹤是程式細節補充。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_focus_sub_2.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/pick-your-targets/">← 返回精準獵殺玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="基礎減傷與閃避防護：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>基礎減傷與閃避防護：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/ogryn/ogryn-base-tank-passive/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/ogryn/">歐格林</a></li>
+            <li aria-current="page">基礎減傷與閃避防護：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>基礎減傷與閃避防護：機制與原始碼依據</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/ogryn/ogryn-base-tank-passive/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#基礎減傷與閃避防護原始碼依據"><span>03</span>基礎減傷與閃避防護</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例與待確認事項"><span>06</span>算例與待確認事項</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="基礎減傷與閃避防護：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/ogryn/ogryn-base-tank-passive/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_base_tank_passive.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="基礎減傷與閃避防護原始碼依據">
+              基礎減傷與閃避防護：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/ogryn/base-effects/#ogryn_base_tank_passive">返回基礎效果</a>｜<a href="/darktide/skills/ogryn/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                固定來源：Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                基礎天賦：<code>ogryn_base_tank_passive</code>；不占可選天賦點數。
+              </li>
+              <li>
+                證據程度：原始碼確認與程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                tank settings damage_taken_multiplier=.8、toughness_damage_taken_multiplier=.75、damage_taken_while_dodging=.5、dodge_linger_duration=.25。
+              </li>
+              <li>
+                conditional_stat_buffs 在 Dodge.is_dodging 時套用 0.5；on_dodge_end 另啟動 0.25 秒 proc_stat_buffs。ProcBuff 先呼叫父類別計算一般／條件屬性，再加入有效的 proc 屬性。damage_taken_multiplier 屬乘法型，因此上一閃避的尾段與下一次閃避重疊時，兩份 0.5 相乘；一般傷害倍率為 0.8 × 0.5 × 0.5 = 0.2，韌性再乘 0.75 為 0.15。這是程式推導，未作遊戲內測量。
+              </li>
+              <li>
+                static_movement_reduction_multiplier=0只消除weapon_template.static_speed_reduction_mod的減速差值，其他weapon_action/alternate_fire乘數獨立。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L5-L11">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L57-L81">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1496-L1512">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L587-L626">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_taken_calculation.lua#L223-L258">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L467-L504">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L727">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L288-L299">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L775-L775">固定版本來源</a>
+              </li>
+            </ul>
+            <h2 id="算例與待確認事項">
+              算例與待確認事項
+            </h2>
+            <ul>
+              <li>
+                傷害例只隔離所列階段；敵人攻擊、韌性穿透、腐敗與特殊傷害可能有其他路徑。
+              </li>
+              <li>
+                本機文字 Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/ogryn/ogryn-base-tank-passive/">← 返回基礎減傷與閃避防護玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

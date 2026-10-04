@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="隱秘領域：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>隱秘領域：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/shroudfield/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">隱秘領域：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>隱秘領域：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Shroudfield</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/shroudfield/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#隱秘領域shroudfield原始碼依據"><span>03</span>隱秘領域(Shroudfield)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="隱秘領域：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/shroudfield/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_stealth.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="隱秘領域shroudfield原始碼依據">
+              隱秘領域(Shroudfield)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/shroudfield/#zealot_stealth">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_stealth">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_stealth</code>；名稱鍵：<code>loc_ability_zealot_stealth</code>；描述鍵：<code>loc_ability_zealot_stealth_rending_description</code>。
+              </li>
+              <li>
+                節點：<code>node_f1b10508-b92d-45c4-8661-941d3eadac13</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                PlayerAbilities.zealot_invisibility 以 zealot_invisibility buff 為 ability template，設定 cooldown=30、max_charges=1、resource_cost_per_charge=30、resource_regen_per_second=1；基礎 buff duration=3。
+              </li>
+              <li>
+                buff stat_buffs 明確為 movement_speed=0.2、critical_strike_chance=1、finesse_modifier_bonus=1.5、backstab_damage=1.5、flanking_damage=1.5、melee_rending_multiplier=1，並帶 invisible、allow_backstabbing、allow_flanking keywords。
+              </li>
+              <li>
+                buff 接收 on_shoot、on_hit、on_revive、on_rescue、on_pull_up、on_remove_net、on_action_start 等事件。proc 僅處理本人的事件，忽略列出的持續傷害類型；傷害為 0 且非 toughness_absorbed 結果會略過。action_name 篩選允許手雷與投擲小刀動作進入解除流程。啟動後前 0.5 秒另有 exit_grace 避免非傷害事件立即剝除。
+              </li>
+              <li>
+                天賦格式值直接從 buff template 讀取；未裝延長天賦時，冷卻 30 秒。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L240-L333">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：240–333</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua#L60-L76">scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua：60–76</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4157-L4195">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4157–4195</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4206-L4269">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4206–4269</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4271-L4301">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4271–4301</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782">scripts/utilities/attack/damage_calculation.lua：672–782</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack_positioning.lua#L9-L65">scripts/utilities/attack/attack_positioning.lua：9–65</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L240-L333">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：240–333</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L752-L784">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：752–784</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>靈巧傷害算例</strong>：先固定攻擊種類、部位與護甲，只看靈巧加成；基礎部分 100、弱點／暴擊額外部分 50 時，由 150 變成 100 + 50 × (1 + 150%) = 225，整次增加 50%。額外部分若為 100，則由 200 變成 350，增加 75%。背刺與撕裂等其他因素另算。
+              </li>
+              <li>
+                <strong>移速算例</strong>：基礎 5 公尺／秒、沒有其他修正時，變成 5 × 1.2 = 6 公尺／秒。
+              </li>
+              <li>
+                這些是 stat modifier，不能直接相加成一個總傷害倍率；暴擊、靈巧、背刺、側襲及撕裂在不同結算條件／階段生效。
+              </li>
+              <li>
+                程式中的 proc filters 表明，特定傷害類型、零傷害結果、他人造成的事件及未允許的 action_name 可能不會使潛行退出；以簡述涵蓋主要行為，避免把所有事件都當成同一觸發。
+              </li>
+              <li>
+                冷卻恢復可由其他天賦返還或加速；30 秒是未受額外修正的基礎資源成本與自然恢復估算。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>644f101d</code>。
+              </li>
+              <li>
+                同一hash的繁中與英文作用方向相符；補足觸發、疊層、恢復量與實際計算，不把原文省略當錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability/zealot_stealth.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/shroudfield/">← 返回隱秘領域玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

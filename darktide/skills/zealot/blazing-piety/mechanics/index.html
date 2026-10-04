@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="熾熱虔誠：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>熾熱虔誠：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/blazing-piety/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">熾熱虔誠：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>熾熱虔誠：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Blazing Piety</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/blazing-piety/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#熾熱虔誠blazing-piety原始碼依據"><span>03</span>熾熱虔誠(Blazing Piety)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="熾熱虔誠：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/blazing-piety/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_fanatic_rage.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="熾熱虔誠blazing-piety原始碼依據">
+              熾熱虔誠(Blazing Piety)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/blazing-piety/#zealot_fanatic_rage">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_fanatic_rage">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_fanatic_rage</code>；名稱鍵：<code>loc_talent_zealot_fanatic_rage</code>；描述鍵：<code>loc_talent_zealot_fanatic_rage_crit_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_9e19621f-a49c-46a1-837a-056d1ea935bb</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                主鑰石授予 <code>zealot_preacher_crits_grants_stack</code> 特殊規則；Piety proc buff 監聽 <code>on_minion_death</code> 與 <code>on_hit</code>。敵方 minion death 在伺服器端檢查距玩家≤25公尺且 side_name 不同；程式未另外檢查擊殺者。<code>on_hit</code> 若判斷為暴擊即加1層，兩種來源共用同一 talent resource。
+              </li>
+              <li>
+                資源上限25。每次 <code>_fanatic_rage_add_stack</code> 都把共享的 <code>remove_stack_t</code> 設為當下+8秒；即使已滿層，額外事件也重設此時間與8秒 Fury buff。Fury 基礎 buff 為+0.15 critical strike chance，duration=8，且滿層重複加入會 refresh duration。
+              </li>
+              <li>
+                若八秒沒有新事件，先減少1層，後續單層衰退間隔為 <code>abs(current_resource / 5 - 5) × 0.8</code> 秒；剩24層時約0.16秒，剩1層時約3.84秒。這個衰退 timer 同時由擊殺與暴擊重設。
+              </li>
+              <li>
+                Fury buff 停止時 stop_func 會將 resource 清為0。因此連續維持觸發能延長狂怒；中斷後狂怒到期會重置計數，不能把未滿25的舊層數帶入下一輪。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1071-L1107">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1071–1107</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L459-L468">scripts/settings/talent/talent_settings_zealot.lua：459–468</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L765-L978">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：765–978</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L979-L999">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：979–999</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1296-L1329">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1296–1329</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1071-L1107">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1071–1107</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1296-L1329">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1296–1329</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>爆擊率算例</strong>：原本爆擊率 5%，狂怒時變成 5% + 15% = 20%，不是 5% × 1.15。附近死亡與暴擊命中各自計數，因此暴擊擊殺可能同時符合兩項。
+              </li>
+              <li>
+                距離條件依事件位置與玩家位置計算；若事件沒有位置，程式以玩家位置作為事件位置。
+              </li>
+              <li>
+                衰退間隔公式描述程式排程，實際節奏受伺服器更新步長影響。
+              </li>
+              <li>
+                暴擊層數要求該核心鑰石授予的 special rule；此處按目前主鑰石定義描述。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>c80efade</code>。
+              </li>
+              <li>
+                中英文都表示敵人在範圍內死亡可累積到狂怒、暴擊也計入；小兵對象、共用層數、衰退及到期重置屬實作補足。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone/zealot_fanatic_rage.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/blazing-piety/">← 返回熾熱虔誠玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

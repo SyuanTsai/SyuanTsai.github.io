@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="老兵：來源與技術索引 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>老兵：來源與技術索引 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/source-index/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">老兵：來源與技術索引</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>老兵：來源與技術索引</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="老兵：來源與技術索引">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/">← 返回老兵</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/SOURCE_INDEX.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="老兵來源文件與技術索引">
+              老兵：來源文件與技術索引
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">版本、日期與證據限制</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/veteran/localization-comparison/">遊戲本體繁中描述比對</a>｜<a href="/darktide/skills/veteran/damage-percentage-review/">77項百分比描述盤點</a>｜<a href="/darktide/skills/veteran/base-effects/">角色基礎效果</a>｜<a href="/darktide/skills/veteran/unused-definitions/">未直接用於目前技能樹的定義</a>
+            </p>
+            <p>
+              固定來源 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。技能樹共 <strong>77 個節點</strong>（76 個一點節點、1 個零點起始節點），同一配置最多分配 30 點；不是可同時選滿的 77 個天賦。
+            </p>
+            <p>
+              <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74">職業與基礎天賦</a>；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10">技能樹設定</a>。內部 tree version 34 不等於遊戲發行版號。
+            </p>
+            <p>
+              名稱沿用翻譯表；機制為固定版本的程式分析，未進行遊戲內驗證。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能／程式識別碼
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/smoke-grenade/mechanics/">煙霧手雷</a> / <code>veteran_smoke_grenade</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/grenadier/mechanics/">擲彈兵</a> / <code>veteran_extra_grenade</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/grenade-tinkerer/mechanics/">手雷專家</a> / <code>veteran_improved_grenades</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/krak-grenade/mechanics/">穿甲手雷</a> / <code>veteran_krak_grenade</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/demolition-stockpile/mechanics/">炸藥儲備</a> / <code>veteran_replenish_grenades</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/shredder-frag-grenade/mechanics/">粉碎者破片手雷</a> / <code>veteran_grenade_apply_bleed</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/close-and-kill/mechanics/">抵近殺敵</a> / <code>veteran_movement_speed_coherency</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/fire-team/mechanics/">火力小分隊</a> / <code>veteran_increased_damage_coherency</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/survivalist/mechanics/">生存專家</a> / <code>veteran_aura_gain_ammo_on_elite_kill_improved</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/volley-fire/mechanics/">火力齊射</a> / <code>veteran_combat_ability_stance</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/infiltrate/mechanics/">滲透</a> / <code>veteran_invisibility_on_combat_ability</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/low-profile/mechanics/">低調</a> / <code>veteran_reduced_threat_after_combat_ability</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/executioners-stance/mechanics/">處決者姿態</a> / <code>veteran_combat_ability_elite_and_special_outlines</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/enhanced-target-priority/mechanics/">目標引導增強</a> / <code>veteran_combat_ability_coherency_outlines</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/counter-fire/mechanics/">火力反擊</a> / <code>veteran_combat_ability_ranged_roamer_outlines</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/hunters-resolve/mechanics/">獵手決意</a> / <code>veteran_toughness_bonus_leaving_invisibility</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/tactical-awareness/mechanics/">戰術意識</a> / <code>veteran_elite_kills_reduce_cooldown</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/voice-of-command/mechanics/">發號施令</a> / <code>veteran_combat_ability_stagger_nearby_enemies</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/only-in-death-does-duty-end/mechanics/">只有死亡，職責才會終結</a> / <code>veteran_combat_ability_revive_nearby_allies</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/marksman/mechanics/">鷹眼</a> / <code>veteran_increased_weakspot_power_after_combat_ability</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/duty-and-honour/mechanics/">責任與榮譽</a> / <code>veteran_combat_ability_increase_and_restore_toughness_to_coherency</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/overwatch/mechanics/">掩護射擊</a> / <code>veteran_combat_ability_extra_charge</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/close-quarters-killzone/mechanics/">肉搏戰</a> / <code>veteran_increased_close_damage_after_combat_ability</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/the-bigger-they-are/mechanics/">敵人越大...</a> / <code>veteran_combat_ability_ogryn_outlines</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/marksmans-focus/mechanics/">狙擊專注</a> / <code>veteran_snipers_focus</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/chink-in-their-armour/mechanics/">滲透盔甲</a> / <code>veteran_snipers_focus_rending_bonus</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/tunnel-vision/mechanics/">視野狹窄</a> / <code>veteran_snipers_focus_toughness_bonus</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/long-range-assassin/mechanics/">遠程刺客</a> / <code>veteran_snipers_focus_increased_stacks</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/weapons-specialist/mechanics/">武器專家</a> / <code>veteran_weapon_switch_passive</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/on-your-toes/mechanics/">時刻警覺</a> / <code>veteran_weapon_switch_replenish_toughness</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/always-prepared/mechanics/">有備無患</a> / <code>veteran_weapon_switch_replenish_ammo</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/invigorated/mechanics/">活力煥發</a> / <code>veteran_weapon_switch_replenish_stamina</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/focus-target/mechanics/">鎖定目標</a> / <code>veteran_improved_tag</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/target-down/mechanics/">目標擊倒！</a> / <code>veteran_improved_tag_dead_bonus</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/redirect-fire/mechanics/">轉移火力！</a> / <code>veteran_improved_tag_dead_coherency_bonus</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/focused-fire/mechanics/">集中火力</a> / <code>veteran_improved_tag_more_damage</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/demolition-team/mechanics/">爆破小隊</a> / <code>veteran_aura_elite_kills_restore_grenade</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/tactical-reload/mechanics/">戰術裝填</a> / <code>veteran_faster_reload_on_non_empty_clips</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/volley-adept/mechanics/">齊射能手</a> / <code>veteran_reload_speed_on_elite_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/precision-strikes/mechanics/">堅定不移</a> / <code>veteran_increased_weakspot_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/desperado/mechanics/">亡命之徒</a> / <code>veteran_increased_melee_crit_chance_and_melee_finesse</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/out-for-blood/mechanics/">嗜血</a> / <code>veteran_all_kills_replenish_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/skirmisher/mechanics/">遊擊者</a> / <code>veteran_increase_damage_after_sprinting</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/exploit-weakness/mechanics/">趁火打劫</a> / <code>veteran_crits_apply_rending</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/leave-no-one-behind/mechanics/">不拋棄不放棄</a> / <code>veteran_movement_speed_towards_downed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/rending-strikes/mechanics/">裂擊</a> / <code>veteran_rending_bonus</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/reciprocity/mechanics/">互惠互利</a> / <code>veteran_dodging_grants_crit</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/agile-engagement/mechanics/">靈活接敵</a> / <code>veteran_kill_grants_damage_to_other_slot</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/serrated-blade/mechanics/">鋸齒刀刃</a> / <code>veteran_hits_cause_bleed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/trench-fighter-drill/mechanics/">戰壕兵訓練</a> / <code>veteran_attack_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/onslaught/mechanics/">猛攻</a> / <code>veteran_continous_hits_apply_rending</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/toughness-boost/mechanics/">韌性提升</a> / <code>base_toughness_node_buff_medium_2</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/catch-a-breath/mechanics/">喘息片刻</a> / <code>veteran_replenish_toughness_outside_melee</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/opening-salvo/mechanics/">首輪齊射</a> / <code>veteran_bonus_crit_chance_on_ammo</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/kill-zone/mechanics/">殺戮地帶</a> / <code>veteran_ranged_power_out_of_melee</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/shock-trooper/mechanics/">突擊隊</a> / <code>veteran_no_ammo_consumption_on_lasweapon_crit</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/withering-fire/mechanics/">凋零烈焰</a> / <code>veteran_increased_ranged_cleave</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/exhilarating-takedown/mechanics/">振奮擊倒</a> / <code>veteran_replenish_toughness_on_weakspot_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/fully-loaded/mechanics/">全副武裝</a> / <code>veteran_ammo_increase</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/born-leader/mechanics/">天生領袖</a> / <code>veteran_allies_in_coherency_share_toughness_gain</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/field-improvisation/mechanics/">臨場發揮</a> / <code>veteran_better_deployables</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/covering-fire/mechanics/">火力掩護</a> / <code>veteran_replenish_toughness_and_boost_allies</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/competitive-urge/mechanics/">求勝心</a> / <code>veteran_ally_kills_increase_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/confirmed-kill/mechanics/">擊殺紀錄</a> / <code>veteran_elite_kills_replenish_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/close-order-drill/mechanics/">密集隊形訓練</a> / <code>veteran_reduced_toughness_damage_in_coherency</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/longshot/mechanics/">遠射</a> / <code>veteran_increased_damage_based_on_range</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/one-motion/mechanics/">行雲流水</a> / <code>veteran_reduce_swap_time</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/deadshot/mechanics/">死亡射手</a> / <code>veteran_ads_drain_stamina</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/bring-it-down/mechanics/">幹掉它！</a> / <code>veteran_big_game_hunter</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/superiority-complex/mechanics/">優越情節</a> / <code>veteran_increase_damage_vs_elites</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/duck-and-dive/mechanics/">靈活應對</a> / <code>veteran_dodging_grants_stamina</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/iron-will/mechanics/">鋼鐵意志</a> / <code>veteran_tdr_on_high_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/lock-and-load/mechanics/">荷槍實彈</a> / <code>veteran_clip_size</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/keep-their-heads-down/mechanics/">讓他們全趴下！</a> / <code>veteran_increase_suppression</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/covert-operative/mechanics/">秘密特工</a> / <code>veteran_increased_damage_when_flanking</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/melee-damage-boost/mechanics/">近戰傷害提升</a> / <code>base_melee_damage_node_buff_high_2</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/toughness-damage-reduction/mechanics/">韌性減傷</a> / <code>base_toughness_damage_reduction_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

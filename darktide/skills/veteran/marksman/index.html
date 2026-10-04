@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="鷹眼 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>鷹眼 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/marksman/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">鷹眼</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/fc16005a-fb09-4db6-bd15-e18d45c6d935"
+              width="80"
+              height="80"
+              alt="鷹眼圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>鷹眼</h1>
+            <span class="skill-english-name" lang="en">Marksman</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/veteran/marksman/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="鷹眼">
+          <a id="veteran_increased_weakspot_power_after_combat_ability"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>效果</strong>：使用戰鬥技能後，命中弱點時的攻擊威力提高 20%，持續 10 秒；近戰與遠程攻擊皆可受益。使用滲透時，隱身期間便生效，解除隱身後再維持 10 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>作用方式</strong>：先提高這次弱點命中的攻擊威力，再計算傷害與踉蹌；與堅定不移只加強弱點額外傷害的方式不同。實際傷害增幅仍受武器設定、目標及其他威力加成影響。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>威力算例</strong>：未計其他威力加成，原本 500 的攻擊威力變成 <code>500 × (1 + 20%) = 600</code>。這會提高該次弱點命中的基礎傷害及踉蹌力量。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：只看基礎傷害階段，假設無甲目標、傷害隨威力成正比，且先不計弱點額外傷害與其他倍率：原本 100 點，生效後為 <code>100 × 1.2 = 120 點</code>。若原有同階段 25% 威力加成，則由 125 變成 <code>100 × (1 + 25% + 20%) = 145 點</code>，實際增加 <code>20 ÷ 125 = 16%</code>；整次弱點命中的傷害須繼續計算額外傷害及部位倍率。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>持續與重觸發</strong>：不疊層；已開始的 10 秒倒數不會因效果期間再次施放而重設。例如第 4 秒再次施放，仍約在第一次倒數開始後第 10 秒結束。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>適用範圍</strong>：必須命中弱點；這項加成不增加順劈或穿透的目標數。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/marksman/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_increased_weakspot_power_after_combat_ability">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_increased_weakspot_power_after_combat_ability.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

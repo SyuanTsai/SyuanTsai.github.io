@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="占卜者的注視 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>占卜者的注視 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/scriers-gaze/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">占卜者的注視</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a"
+              width="80"
+              height="80"
+              alt="占卜者的注視圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>占卜者的注視</h1>
+            <span class="skill-english-name" lang="en">Scrier's Gaze</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/psyker/scriers-gaze/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="占卜者的注視">
+          <a id="psyker_combat_ability_stance"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>啟動效果</strong>：立即平息 50 個反噬百分點；注視期間增加 10% 傷害、20 個百分點爆擊率及 10% 弱點額外傷害，獲得 20% 韌性減傷與壓制免疫。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>持續效果</strong>：每秒累積 1% 傷害加成，最多 30%；每秒恢復最大韌性的 2.5%。反噬會持續上升，擊殺可暫時減緩累積。反噬達 100% 時注視結束，累積的傷害加成再保留 10 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：不計其他加成，滿層時非暴擊、非弱點的 100 點傷害變成 100 × (1 + 10% + 30%) = 140 點；結束後只保留累積的 30%，因此是 130 點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>弱點算例</strong>：只看弱點加成這一項，假設一般傷害 100、弱點額外傷害 50，原有 150 點會變成 100 + 50 × 1.10 = 155 點，整次命中約增加 3.33%；注視的其他增傷另計。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>恢復與暴擊算例</strong>：最大韌性 100 時，每秒恢復 100 × 2.5% = 2.5 點，以缺少的韌性為上限；原有 5% 爆擊率變成 5% + 20% = 25%。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>冷卻</strong>：基礎冷卻 25 秒；注視生效期間暫停恢復，結束後才繼續倒數。
+                </p>
+              </li>
+            </ul>
+            <h2 id="繁中原文勘誤">
+              繁中原文勘誤
+            </h2>
+            <ul>
+              <li>
+                原文將注視寫成「進入／離開注視範圍」，容易誤解成地面區域；同源英文與實作均指角色進入／結束注視狀態。
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/psyker/scriers-gaze/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/README.md#psyker_combat_ability_stance">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_combat_ability_stance.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/">← 返回靈能者技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

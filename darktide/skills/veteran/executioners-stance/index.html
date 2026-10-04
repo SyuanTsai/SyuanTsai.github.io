@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="處決者姿態 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>處決者姿態 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/executioners-stance/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">處決者姿態</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba"
+              width="80"
+              height="80"
+              alt="處決者姿態圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>處決者姿態</h1>
+            <span class="skill-english-name" lang="en">Executioner's Stance</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/veteran/executioners-stance/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="處決者姿態">
+          <a id="veteran_combat_ability_elite_and_special_outlines"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <strong>強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。</strong>
+              </li>
+              <li>
+                兩項傷害加成各由 15% 提高至 25%，各增加 10 個百分點；弱點加成仍只強化額外傷害部分，整次命中的增幅依武器與目標而變。
+              </li>
+              <li>
+                姿態持續 <strong>6 秒</strong>、冷卻 <strong>30 秒</strong>；期間每秒恢復 <strong>10% 最大韌性</strong>。
+              </li>
+              <li>
+                顯示精英與專家敵人的輪廓；歐格林、巨獸與首領須搭配「敵人越大...」才能納入。一般精英限約 50 公尺內，專家不受這項距離限制。
+              </li>
+              <li>
+                擊殺符合輪廓種類的敵人，將姿態持續時間重設為 6 秒。冷卻持續計時；散布、後座力與晃動改善沿用火力齊射。
+              </li>
+            </ul>
+            <h2 id="傷害恢復與刷新算例">
+              傷害、恢復與刷新算例
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>遠程傷害</strong>：單看遠程傷害階段，基礎傷害 100 且無其他加成：火力齊射為 <code>100 × 1.15 = 115 點</code>，升級後為 <code>100 × 1.25 = 125 點</code>；相對於升級前增加 <code>10 ÷ 115 ≈ 8.70%</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>弱點額外傷害</strong>：只比較弱點加成的升級，固定其他效果結算後的基礎部分 100、未加成的弱點額外部分 40，且未暴擊、無其他額外傷害加成：由 <code>100 + 40 × 1.15 = 146 點</code> 變成 <code>100 + 40 × 1.25 = 150 點</code>，增加 <code>4 ÷ 146 ≈ 2.74%</code>。這只反映弱點加成由 15% 升至 25% 的差異，完整增幅還須納入遠程傷害的升級。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>韌性恢復</strong>：最大韌性 100、缺額足夠且無恢復加成：每秒 <code>100 × 10% = 10 點</code>，完整 6 秒約恢復 <code>10 × 6 = 60 點</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>重新計時</strong>：第 4 秒完成合資格擊殺，姿態維持至約第 <code>4 + 6 = 10 秒</code>。
+                </p>
+              </li>
+            </ul>
+            <h2 id="繁中原文勘誤">
+              繁中原文勘誤
+            </h2>
+            <ul>
+              <li>
+                原文寫擊殺後「延長」效果時間，應為 <strong>將剩餘時間重設為完整持續時間</strong>。未搭配延長天賦時，剩 2 秒再擊殺會回到 6 秒，不是變成 8 秒。
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/executioners-stance/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_combat_ability_elite_and_special_outlines">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_elite_and_special_outlines.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

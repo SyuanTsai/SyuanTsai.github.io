@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="責任與榮譽：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>責任與榮譽：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/duty-and-honour/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">責任與榮譽：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>責任與榮譽：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Duty and Honour</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/duty-and-honour/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#責任與榮譽duty-and-honour原始碼依據"><span>03</span>責任與榮譽(Duty and Honour)</a></li>
+            <li><a href="#上限當前韌性與到期"><span>04</span>上限、當前韌性與到期</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#圖示來源"><span>07</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="責任與榮譽：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/duty-and-honour/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_increase_and_restore_toughness_to_coherency.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="責任與榮譽duty-and-honour原始碼依據">
+              責任與榮譽(Duty and Honour)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/duty-and-honour/#veteran_combat_ability_increase_and_restore_toughness_to_coherency">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_combat_ability_increase_and_restore_toughness_to_coherency</code>；名稱鍵：<code>loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency</code>；描述鍵：<code>loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1310-L1332">節點</a>：<code>ability_modifier</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L480-L517">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="上限當前韌性與到期">
+              上限、當前韌性與到期
+            </h2>
+            <ul>
+              <li>
+                ActionVeteranCombatAbility.start 先對 in_coherence_units 加入 increase_toughness_to_coherency，再對 squad_leader 本人 recover_max_toughness。CoherencySystem 的鏈包含本人，故本人也有75上限加成。
+              </li>
+              <li>
+                buff duration=10、toughness_bonus_flat=75，沒有 max_stacks，因此多次施加建立獨立實例，而不是只重新計時同一份。最大韌性公式為 ceil((base+toughness)×toughness_bonus)+toughness_bonus_flat，75在百分比上限修正之後相加。
+              </li>
+              <li>
+                目前韌性以最大值減 toughness_damage 表示。上限增加時不增 damage，所以目前值同步增加75；本人 recover_max_toughness 又把 damage清零。隊友沒有額外的回滿呼叫。
+              </li>
+              <li>
+                上限降低時 handle_max_toughness_changes_due_to_buffs 把已損失量扣掉上限差值，最低0，因此目前韌性保留到恢復後上限：160/175→100/100；60/175時damage115，上限−75後damage40，結果60/100。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L480-L517">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 480–517 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua#L52-L78">scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua，第 52–78 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2311-L2327">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2311–2327 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L325-L340">scripts/extension_systems/toughness/player_unit_toughness_extension.lua，第 325–340 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L188-L255">scripts/extension_systems/coherency/coherency_system.lua，第 188–255 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L79-L88">scripts/extension_systems/toughness/player_unit_toughness_extension.lua，第 79–88 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L200-L209">scripts/extension_systems/toughness/player_unit_toughness_extension.lua，第 200–209 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L439-L484">scripts/extension_systems/buff/buff_extension_base.lua，第 439–484 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_combat_ability_increase_and_restore_toughness_to_coherency.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/56d61b06-dd20-4832-8293-0220d1f3960c">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/duty-and-honour/">← 返回責任與榮譽玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

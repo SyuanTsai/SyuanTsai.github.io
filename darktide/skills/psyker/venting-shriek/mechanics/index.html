@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="靈能尖嘯：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>靈能尖嘯：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/venting-shriek/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">靈能尖嘯：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>靈能尖嘯：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Venting Shriek</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/psyker/venting-shriek/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#靈能尖嘯venting-shriek原始碼依據"><span>03</span>靈能尖嘯(Venting Shriek)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="靈能尖嘯：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/psyker/venting-shriek/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_shout_vent_warp_charge.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="靈能尖嘯venting-shriek原始碼依據">
+              靈能尖嘯(Venting Shriek)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/venting-shriek/#psyker_shout_vent_warp_charge">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜<a href="/darktide/skills/psyker/localization-comparison/#psyker_shout_vent_warp_charge">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>psyker_shout_vent_warp_charge</code>；名稱鍵：<code>loc_talent_psyker_shout_vent_warp_charge</code>；描述鍵：<code>loc_talent_psyker_shout_vent_warp_charge_description</code>。
+              </li>
+              <li>
+                節點：<code>node_650c5469-5194-4722-a4f8-7d62487039df</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦定義改接 psyker_discharge_shout_improved 並啟用 shout_warp_charge_vent_improved 特殊規則。能力設定的冷卻為 30 秒；天賦設定提供 0.5 平息量。動作先發送 on_combat_ability 事件，再依特殊規則呼叫 WarpCharge.decrease_immediate(0.5)。SharedFunctions.remove_immediate 計算 current_percentage - remove_percentage 並限制在 0 到 1，因此是固定百分點移除。攻擊目標由前方方向、扇形角度和能力距離共同篩選；距離平方小於等於 9 的近身例外可放寬角度條件。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L317-L343">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：317–343</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L162-L171">scripts/settings/talent/talent_settings_psyker.lua：162–171</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua#L6-L26">scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua：6–26</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_psyker_shout.lua#L108-L146">scripts/extension_systems/ability/actions/action_psyker_shout.lua：108–146</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_psyker_shout.lua#L220-L289">scripts/extension_systems/ability/actions/action_psyker_shout.lua：220–289</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/warp_charge.lua#L94-L109">scripts/utilities/warp_charge.lua：94–109</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/shared_overheat_and_warp_charge_functions.lua#L18-L25">scripts/utilities/shared_overheat_and_warp_charge_functions.lua：18–25</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L317-L343">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：317–343</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L452-L481">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：452–481</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                技能前反噬為 80%；不計同時發生的其他反噬變化。 80% - 50 個百分點 = 30%。 技能後反噬為 30%。
+              </li>
+              <li>
+                技能前反噬為 40%；不計同時發生的其他反噬變化。 40% - 50 個百分點，結果限制在最低 0%。 技能後反噬為 0%。
+              </li>
+              <li>
+                實際命中數與範圍取決於目標位置、能力配置的角度/距離及執行時狀態；例子不代表固定可命中數。
+              </li>
+              <li>
+                遊戲文字為 Build25606770；機制證據是公開原始碼 commit 7e662fcda16219d775b84af50322be2e9cd9d62e，版本對應為1.13.1。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>7d4501be</code>。
+              </li>
+              <li>
+                同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability/psyker_shout_vent_warp_charge.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/d0500b6b-c91c-4c34-857a-6c144800fe37">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/venting-shriek/">← 返回靈能尖嘯玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="法務官：來源與技術索引 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>法務官：來源與技術索引 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/source-index/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">法務官：來源與技術索引</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>法務官：來源與技術索引</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="法務官：來源與技術索引">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/arbites/">← 返回法務官</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/SOURCE_INDEX.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="法務官來源文件與技術索引">
+              法務官：來源文件與技術索引
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">版本、日期與證據限制</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/arbites/base-effects/">角色基礎效果</a>｜<a href="/darktide/skills/arbites/unused-definitions/">未直接使用的定義</a>
+            </p>
+            <p>
+              <a href="/darktide/skills/arbites/localization-comparison/">遊戲本體繁中描述比對</a>｜<a href="/darktide/skills/arbites/damage-percentage-review/">百分比描述盤點</a>
+            </p>
+            <p>
+              固定來源 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。技能樹共 <strong>86 個可選節點</strong>，均為一點；同一配置最多分配 30 點。
+              <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74">職業與基礎天賦</a>；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10">技能樹設定</a>。內部 tree version 19 不等於遊戲發行版號。
+            </p>
+            <p>
+              名稱沿用翻譯表；機制為固定版本的程式分析，未進行遊戲內驗證。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能／程式識別碼
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/remote-detonation/mechanics/">遠程引爆</a> / <code>adamant_whistle</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/arbites-grenade/mechanics/">法務官手榴彈</a> / <code>adamant_grenade_improved</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/voltaic-shock-mine/mechanics/">電能地雷</a> / <code>adamant_shock_mine</code>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/part-of-the-squad/mechanics/">小隊之友</a> / <code>adamant_companion_coherency</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/ruthless-efficiency/mechanics/">雷厲風行</a> / <code>adamant_reload_speed_aura</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/breaking-dissent/mechanics/">鎮壓異己</a> / <code>adamant_damage_vs_staggered_aura</code>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/break-the-line/mechanics/">突破重圍</a> / <code>adamant_charge</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/nuncio-aquila/mechanics/">天鷹使節</a> / <code>adamant_area_buff_drone_improved</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/castigators-stance/mechanics/">懲戒者姿態</a> / <code>adamant_stance</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/blessed-armament/mechanics/">蒙福軍武</a> / <code>adamant_stance_ranged_kills_transfer_ammo</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/writ-of-execution/mechanics/">處決令</a> / <code>adamant_stance_elite_kills_stack_damage</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/bloodlust/mechanics/">嗜血殺戮</a> / <code>adamant_stance_dog_bloodlust</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/inspiring-recitation/mechanics/">振奮朗誦</a> / <code>adamant_drone_buff_talent</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/fear-of-justice/mechanics/">畏怯正義</a> / <code>adamant_drone_debuff_talent</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/commendation-from-condemnation/mechanics/">懲惡揚善</a> / <code>adamant_charge_toughness</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/targeted-brutality/mechanics/">針鋒相對</a> / <code>adamant_charge_cooldown_reduction</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/engage/mechanics/">交鋒</a> / <code>adamant_charge_longer_distance</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/kill-order/mechanics/">殺戮命令</a> / <code>adamant_dog_damage_after_ability</code>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/execution-order/mechanics/">處刑命令</a> / <code>adamant_execution_order</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/terminus-warrant/mechanics/">終點站令狀</a> / <code>adamant_terminus_warrant</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/forceful/mechanics/">堅定不移</a> / <code>adamant_forceful</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/lone-wolf/mechanics/">孤狼</a> / <code>adamant_disable_companion</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/will-of-the-lex/mechanics/">律法之志</a> / <code>adamant_forceful_toughness_regen_per_stack</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/adamant-will/mechanics/">堅定意志</a> / <code>adamant_forceful_stun_immune_and_block_all</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/targets-acquired/mechanics/">鎖定目標</a> / <code>adamant_forceful_offensive</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/arbites-vigilant/mechanics/">法務官警覺</a> / <code>adamant_forceful_ability_damage</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/judicial-force/mechanics/">審判之力</a> / <code>adamant_forceful_stagger_on_low_high</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/obstinate/mechanics/">能屈能伸</a> / <code>adamant_terminus_warrant_cdr</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/terminal-decree/mechanics/">終端律令</a> / <code>adamant_terminus_warrant_support</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/efficient-killer/mechanics/">效率殺手</a> / <code>adamant_execution_order_crit</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/malocator/mechanics/">生化武器關</a> / <code>adamant_execution_order_cdr</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/no-lenience/mechanics/">罪不可赦</a> / <code>adamant_execution_order_rending</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/keeping-protocol/mechanics/">殺戮協議</a> / <code>adamant_execution_order_permastack</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/not-far-behind/mechanics/">不落人後</a> / <code>adamant_pinning_dog_bonus_moving_towards</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/go-get-em/mechanics/">往前進攻！</a> / <code>adamant_companion_focus_ranged</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/unleashed-brutality/mechanics/">猛犬出擊</a> / <code>adamant_companion_focus_elite</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/writ-of-judgement/mechanics/">審判之旨</a> / <code>adamant_terminus_warrant_improved_combined</code>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/man-and-cyber-mastiff/mechanics/">電子獒犬與人</a> / <code>adamant_toughness_regen_near_companion</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/withering-fire/mechanics/">凋零烈焰</a> / <code>adamant_damage_after_reloading</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/hammer-of-judgement/mechanics/">審判之錘</a> / <code>adamant_multiple_hits_attack_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/target-neutralised/mechanics/">繩之以法</a> / <code>adamant_elite_special_kills_replenish_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/up-close/mechanics/">近在眉睫</a> / <code>adamant_close_kills_restore_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/force-of-will/mechanics/">鐵血之志</a> / <code>adamant_staggers_replenish_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/voltaic-mandibles-augment/mechanics/">電能獠牙</a> / <code>adamant_dog_attacks_electrocute</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/walk-it-off/mechanics/">走一走治百病</a> / <code>adamant_stamina_spent_replenish_toughness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/true-grit/mechanics/">堅忍不拔</a> / <code>adamant_limit_dmg_taken_from_hits</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/toughness-damage-reduction/mechanics/">韌性減傷</a> / <code>base_toughness_damage_reduction_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/arbitrator-armour/mechanics/">法務官之鎧</a> / <code>adamant_armor</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/ammo-belt/mechanics/">彈藥腰帶</a> / <code>adamant_ammo_belt</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/rebreather/mechanics/">呼吸器</a> / <code>adamant_rebreather</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/suppression-protocols/mechanics/">苛政壓制</a> / <code>adamant_hitting_multiple_gives_tdr</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/ranged-damage-boost/mechanics/">遠程傷害增幅</a> / <code>base_ranged_damage_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/melee-damage-boost/mechanics/">近戰增幅</a> / <code>base_melee_damage_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/razor-jaw-augment/mechanics/">重顎獠牙</a> / <code>adamant_dog_pounces_bleed_nearby</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/imposing-force/mechanics/">勢如破竹</a> / <code>adamant_damage_reduction_after_elite_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/hold-the-line/mechanics/">堅守陣線</a> / <code>adamant_staggers_reduce_damage_taken</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/cleave-boost/mechanics/">順劈加成</a> / <code>base_cleave_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/impact-boost/mechanics/">衝擊加成</a> / <code>base_impact_node_buff_medium_1</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/plasteel-plates/mechanics/">塑鋼裝甲</a> / <code>adamant_plasteel_plates</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/serrated-maw/mechanics/">鋒利獠牙</a> / <code>adamant_dog_applies_brittleness</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/arbites-revelatum/mechanics/">追跡法務官</a> / <code>adamant_dodge_grants_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/soulguilt-scan/mechanics/">罪孽判官</a> / <code>adamant_stacking_weakspot_strength</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/judicious-efficiency/mechanics/">恰如其分</a> / <code>adamant_elite_special_kills_reload_speed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/march/mechanics/">行軍之志</a> / <code>adamant_movement_speed_on_block</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/no-escape/mechanics/">無處可逃</a> / <code>adamant_elite_special_kills_offensive_boost</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/drive-them-back/mechanics/">兵敗如山倒</a> / <code>adamant_cleave_after_push</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/shield-plates/mechanics/">盾型裝甲</a> / <code>adamant_shield_plates</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/weight-of-the-lex/mechanics/">重如律法</a> / <code>adamant_heavy_attacks_increase_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/strike-down/mechanics/">毀滅打擊</a> / <code>adamant_melee_attacks_on_staggered_rend</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/zealous-dedication/mechanics/">狂熱信仰</a> / <code>adamant_crit_chance_on_kill</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/prosecution-blow/mechanics/">制裁重擊</a> / <code>adamant_crits_rend</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/street-smarts/mechanics/">街頭妙招</a> / <code>adamant_dodge_improvement</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/monstrosity-hunter/mechanics/">巨獸獵人</a> / <code>adamant_monster_hunter</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/the-emperors-fist/mechanics/">帝皇之拳</a> / <code>adamant_first_melee_hit_increased_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/target-selection/mechanics/">篩選目標</a> / <code>adamant_pinning_dog_elite_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/target-priority/mechanics/">擊殺順序</a> / <code>adamant_increased_damage_to_high_health</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/canine-morale/mechanics/">猛犬氣場</a> / <code>adamant_pinning_dog_kills_buff_allies</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/rapid-movement/mechanics/">迅疾走位</a> / <code>adamant_sprinting_sliding</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/final-warning/mechanics/">最後通牒</a> / <code>adamant_ranged_damage_on_melee_stagger</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/priority-endowment/mechanics/">秉賦為先</a> / <code>adamant_clip_size</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/cower-miscreants/mechanics/">惡徒退散</a> / <code>adamant_damage_vs_suppressed</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/justified-measures/mechanics/">正當手段</a> / <code>adamant_stacking_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/suppression-force/mechanics/">壓制武力</a> / <code>adamant_staggered_enemies_deal_less_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/concussive/mechanics/">震盪攻擊</a> / <code>adamant_melee_weakspot_hits_count_as_stagger</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/target-the-weak/mechanics/">針對弱者</a> / <code>adamant_staggering_enemies_take_more_damage</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/arbites/retaliatory-force/mechanics/">還治其人之身</a> / <code>adamant_perfect_block_damage_boost</code>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/">← 返回法務官技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

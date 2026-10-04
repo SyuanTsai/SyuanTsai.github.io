@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="巢都渣滓：未使用定義（技術補充） · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>巢都渣滓：未使用定義（技術補充） · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/unused-definitions/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">巢都渣滓：未使用定義（技術補充）</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>巢都渣滓：未使用定義（技術補充）</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術補充 · 非當前可選技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="巢都渣滓：未使用定義（技術補充）">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/scum/">← 返回巢都渣滓</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/UNUSED_DEFINITIONS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="巢都渣滓未被技能樹或基礎清單直接引用的天賦定義">
+              巢都渣滓：未被技能樹或基礎清單直接引用的天賦定義
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                固定來源：Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                主天賦樹有79個可選節點，其中75個來自職業定義、4個來自共用屬性定義。另有5項基礎設定、1項條件式興奮劑與獨立配方樹的零點起始說明；配方29項由設定動態產生。
+              </li>
+              <li>
+                職業檔的114個直接定義扣除上述82項後，剩32項未被這些清單直接選用。這不等於同名Buff、special rule或舊資料完全無用途；例如閃擊補充與額外閃避的Buff仍由基礎天賦使用。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/broker_archetype.lua#L53-L89">職業基礎與條件式清單</a>；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L3194-L3196">動態配方接入</a>。
+              </li>
+            </ul>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      talent ID
+                    </th>
+                    <th>
+                      定義來源
+                    </th>
+                    <th>
+                      處理
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <code>broker_ability_focus_noclip</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L152-L170">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_keystone_adrenaline_junkie_sub_6</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2856-L2888">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_keystone_adrenaline_junkie_sub_7</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2889-L2935">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_keystone_adrenaline_junkie_sub_8</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2936-L2979">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_ammo_on_backstab</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1594-L1612">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_backstabs_grant_crit_chance</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L992-L1011">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_blitz_charge_on_kill</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1250-L1268">固定定義</a>
+                    </td>
+                    <td>
+                      天賦定義未直接選用；同名Buff仍由基礎天賦引用。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_close_range_damage_on_slide</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1483-L1491">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_close_range_rending</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1284-L1299">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_close_ranged_finesse_damage</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1454-L1462">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_crit_kill_at_close_range_reload</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1427-L1435">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_crit_to_damage</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1300-L1308">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_extra_consecutive_dodges</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1325-L1339">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_finesse_damage</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1492-L1500">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_heavy_attack_dash</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1445-L1453">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_hollowtip_bullets</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1436-L1444">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_increased_aura_size</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1959-L1981">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_increased_dodges</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L60-L75">固定定義</a>
+                    </td>
+                    <td>
+                      天賦定義未直接選用；同名Buff仍由基礎天賦引用。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_increased_toxin_damage</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2107-L2122">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_melee_apply_brittleness</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L3022-L3063">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_non_crits_increase_crit</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2322-L2344">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_parries_grant_crit_chance</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L972-L991">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_punk_grit</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1012-L1049">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_push_on_damage_taken</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1545-L1574">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_ranged_apply_brittleness</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2980-L3021">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_reload_on_crit</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1411-L1426">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_repeated_melee_hits_increases_damage</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L839-L858">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_sprinting_reduces_threat</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1199-L1229">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_strength_vs_aggroed</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1309-L1324">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_stun_on_max_toxin_stacks</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2038-L2056">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_toughness_on_toxined_kill</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2082-L2106">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>broker_passive_weakspot_on_x_hit</code>
+                    </td>
+                    <td>
+                      <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1269-L1283">固定定義</a>
+                    </td>
+                    <td>
+                      未直接列入目前清單；不當成可選技能。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/">← 返回巢都渣滓技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

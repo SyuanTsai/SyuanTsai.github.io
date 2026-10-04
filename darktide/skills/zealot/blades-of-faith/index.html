@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="信仰之刃 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>信仰之刃 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/blades-of-faith/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">信仰之刃</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/8d21cff6-d918-4e91-8426-b98634887a03"
+              width="80"
+              height="80"
+              alt="信仰之刃圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>信仰之刃</h1>
+            <span class="skill-english-name" lang="en">Blades of Faith</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/zealot/blades-of-faith/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="信仰之刃">
+          <a id="zealot_throwing_knives"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：以投擲刀取代手雷，最多攜帶 12 把，可在衝刺時投擲。一般手雷補給無法補充投擲刀。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害與護甲</strong>：普通命中、沒有其他修正時，無護甲部位的基準傷害為 585 點；防彈護甲為 585 × 0.8 = 468 點，甲殼護甲的普通命中基準為 0。弱點、暴擊、穿甲與敵人部位會另改變結果，不能把 0 解讀為任何情況都無法傷害重甲敵人。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>近戰補充</strong>：由你以近戰擊殺精英或專家敵人時，補回 1 把，最多補到 12 把。例如原有 11 把，完成一次合格擊殺後變成 11 + 1 = 12 把。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>彈藥補充算例</strong>：沒有額外補給倍率時，小型彈藥補給恢復 12 × 15% = 1.8，無條件進位為 2 把；大型彈藥補給為 12 × 50% = 6 把；部署式彈藥箱可補滿。任務的彈藥補給倍率會影響這些數量，最終仍不能超過 12 把。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>投擲時間</strong>：標準動作在開始後 0.25 秒擲出，動作總長 0.55 秒；這不包含飛行時間。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/zealot/blades-of-faith/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/README.md#zealot_throwing_knives">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_throwing_knives.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/">← 返回狂信徒技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

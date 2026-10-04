@@ -1,0 +1,1278 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="老兵：繁中原文比對 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>老兵：繁中原文比對 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/localization-comparison/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">老兵：繁中原文比對</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>老兵：繁中原文比對</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="老兵：繁中原文比對">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/">← 返回老兵</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/LOCALIZATION_COMPARISON.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="老兵遊戲本體繁中描述比對">
+              老兵：遊戲本體繁中描述比對
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/">玩家技能說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <h2 id="判定方式與範圍">
+              判定方式與範圍
+            </h2>
+            <ul>
+              <li>
+                逐項比對77個目前節點：本頁玩家說明、遊戲本體繁中模板、同一資源的英文模板；77個描述鍵均核對固定原始碼的天賦定義（74個老兵定義及3個通用屬性定義）。
+              </li>
+              <li>
+                <strong>只有正反效果、作用對象、資源方向、物理量／單位、時間操作等明確矛盾才列勘誤。描述不完整不算錯誤。</strong> 省略公式、上限、冷卻、暴擊／弱點結算、恢復基準或特殊互動，只作補充差異。
+              </li>
+              <li>
+                繁中與英文按<code>content/localization/ui + hash</code>配對，每個目標hash在兩個語言各一筆；不靠行號或中文名稱猜測對應。英文僅協助辨識譯意，機制證據仍使用固定公開原始碼。
+              </li>
+              <li>
+                原始模板中的預留符號尚未在遊戲執行期代入。本次核對疑點相關的格式參數，不宣稱已還原77項遊戲畫面的完整最終文字。
+              </li>
+              <li>
+                結果：<strong>12項繁中勘誤</strong>已加在各技能正文下；<strong>4項跨來源實作差異待遊戲內核對</strong>，未標為遊戲原文錯誤；其餘<strong>61項未判錯</strong>。肉搏戰同時存在一項已確認翻譯問題與一項待遊戲內確認的生效時間差異，逐項統計列在12項中。
+              </li>
+            </ul>
+            <h2 id="本機文本證據">
+              本機文本證據
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  本機遊戲：<code>&lt;遊戲安裝目錄&gt;</code>；擷取日期：2026-10-02；Steam Build：<code>25606770</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  完整匯出目錄：Repository內的<code>Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1</code>，維持Git忽略；本文件只保存比對結論、識別碼及必要短引文，不提交完整語系文字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  固定機制來源：Release 1.13.1，SHA <code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。<strong>版本Steam Build 25606770對應1.13.1</strong>；個別文字與實作差異仍待遊戲內核對，省略細節不列為翻譯錯誤。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <code>zh-tw/ui.jsonl</code> SHA-256：<code>15efa95c6ff87e99fbdfd4e0a6c282de94b2f1c5a21eac327c48a87399185f3c</code>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <code>en/ui.jsonl</code> SHA-256：<code>fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668</code>。
+                </p>
+              </li>
+            </ul>
+            <h2 id="逐項比對結果">
+              逐項比對結果
+            </h2>
+            <p>
+              「未判錯」不代表文字詳盡，也不代表已完成所有實作或遊戲內驗證。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能
+                    </th>
+                    <th>
+                      原文hash
+                    </th>
+                    <th>
+                      判定
+                    </th>
+                    <th>
+                      比對差異與處理
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/smoke-grenade/mechanics/">煙霧手雷</a>
+                    </td>
+                    <td>
+                      <code>f80c5f1d</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/grenadier/mechanics/">擲彈兵</a>
+                    </td>
+                    <td>
+                      <code>61aa0cc5</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/grenade-tinkerer/mechanics/">手雷專家</a>
+                    </td>
+                    <td>
+                      <code>60708f06</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      單位錯誤：繁中在百分比預留符號後追加秒，英文未追加時間單位；smoke格式為percentage，實作為smoke_fog_duration_modifier=1。不是單純少寫公式。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/krak-grenade/mechanics/">穿甲手雷</a>
+                    </td>
+                    <td>
+                      <code>c7aead0a</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/demolition-stockpile/mechanics/">炸藥儲備</a>
+                    </td>
+                    <td>
+                      <code>3b1bc587</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/shredder-frag-grenade/mechanics/">粉碎者破片手雷</a>
+                    </td>
+                    <td>
+                      <code>3aea2f09</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/close-and-kill/mechanics/">抵近殺敵</a>
+                    </td>
+                    <td>
+                      <code>8234f832</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/fire-team/mechanics/">火力小分隊</a>
+                    </td>
+                    <td>
+                      <code>9a17fbd0</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/survivalist/mechanics/">生存專家</a>
+                    </td>
+                    <td>
+                      <code>c68ffc9a</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      單位錯誤：ammo_2使用percentage，繁中卻接固定數量單位發。另少寫隊友擊殺也可觸發，屬不完整，不另外列為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/volley-fire/mechanics/">火力齊射</a>
+                    </td>
+                    <td>
+                      <code>a34966f2</code>
+                    </td>
+                    <td>
+                      待遊戲內核對
+                    </td>
+                    <td>
+                      文字使用傷害／弱點傷害預留符號；1.13.1格式參數各取25%，起始增益各為15%。需核對安裝版格式參數及執行邏輯，未直接標原文數字錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/infiltrate/mechanics/">滲透</a>
+                    </td>
+                    <td>
+                      <code>957cbfa6</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/low-profile/mechanics/">低調</a>
+                    </td>
+                    <td>
+                      <code>7d63094b</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      少寫隱身期間已生效及其他能力觸發，沒有明確排他說法；不因範圍較簡略判錯。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/executioners-stance/mechanics/">處決者姿態</a>
+                    </td>
+                    <td>
+                      <code>38234496</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      時間操作錯譯：同資源英文是refreshes，繁中譯為延長指定秒數，會把重設剩餘時間誤讀為在現有剩餘時間上加秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/enhanced-target-priority/mechanics/">目標引導增強</a>
+                    </td>
+                    <td>
+                      <code>5a8d783e</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/counter-fire/mechanics/">火力反擊</a>
+                    </td>
+                    <td>
+                      <code>cc0d22dd</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/hunters-resolve/mechanics/">獵手決意</a>
+                    </td>
+                    <td>
+                      <code>59344e21</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文說離開潛行後有減傷，未明說隱身期間沒有；少寫較早生效的期間視為不完整。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/tactical-awareness/mechanics/">戰術意識</a>
+                    </td>
+                    <td>
+                      <code>83519bd4</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      目前模板已寫專家擊殺與冷卻恢復，不因talent識別碼含elite而判原文錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/voice-of-command/mechanics/">發號施令</a>
+                    </td>
+                    <td>
+                      <code>e3ff1400</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      Stagger譯為眩暈屬術語取法；本頁用踉蹌並補敵人抗性，不直接列為效果錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/only-in-death-does-duty-end/mechanics/">只有死亡，職責才會終結</a>
+                    </td>
+                    <td>
+                      <code>1ae25548</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      模板只有扶起倒地盟友，沒有冷卻增加／範圍降低；殘留格式參數不構成原文錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/marksman/mechanics/">鷹眼</a>
+                    </td>
+                    <td>
+                      <code>94eac308</code>
+                    </td>
+                    <td>
+                      待遊戲內核對
+                    </td>
+                    <td>
+                      中英模板都說滲透於離開潛行後生效；固定版本在隱身開始加入增益。屬文字／實作差異，待遊戲內核對，未作繁中錯譯註記。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/duty-and-honour/mechanics/">責任與榮譽</a>
+                    </td>
+                    <td>
+                      <code>b4e057ef</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/overwatch/mechanics/">掩護射擊</a>
+                    </td>
+                    <td>
+                      <code>157c4806</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/close-quarters-killzone/mechanics/">肉搏戰</a>
+                    </td>
+                    <td>
+                      <code>1eb58318</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      效果種類錯譯：Close Damage是依距離的damage_near，並非按近戰攻擊類型判斷的melee_damage。原文另稱離開潛行後才開始，與固定版本實作有差異，但此處只將近戰／近距離的同版語系差異列為勘誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/the-bigger-they-are/mechanics/">敵人越大...</a>
+                    </td>
+                    <td>
+                      <code>3a6dce0c</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      模板只有輪廓與時間，沒有額外25%傷害；殘留格式參數不構成原文錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/marksmans-focus/mechanics/">狙擊專注</a>
+                    </td>
+                    <td>
+                      <code>bd7cf7c2</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      目前模板已寫弱點擊殺、弱點命中重新計時與逐層衰減；沒有舊移動耗層文字，不能以未使用的grace_time參數推定原文錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/chink-in-their-armour/mechanics/">滲透盔甲</a>
+                    </td>
+                    <td>
+                      <code>9b41f430</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      十層門檻及撕裂效果相容；未展開護甲結算不是錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/tunnel-vision/mechanics/">視野狹窄</a>
+                    </td>
+                    <td>
+                      <code>a8372526</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      把恢復量修正譯成直接恢復：每層寫入toughness_replenish_modifier=.04，由已存在的恢復事件乘入；不是每層發出一次韌性恢復。遠程擊殺限定的省略另視為不完整。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/long-range-assassin/mechanics/">遠程刺客</a>
+                    </td>
+                    <td>
+                      <code>c41d398b</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/weapons-specialist/mechanics/">武器專家</a>
+                    </td>
+                    <td>
+                      <code>4ead394a</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      修飾範圍錯誤：英文next shot限定爆擊率，繁中把三項效果一併限定為下一次射擊。實作只有conditional crit讀取shot；attack/reload為常駐stat_buffs，受buff本身期間限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/on-your-toes/mechanics/">時刻警覺</a>
+                    </td>
+                    <td>
+                      <code>9a112db1</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      省略各側獨立冷卻，不等於宣稱共用冷卻；不判錯。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/always-prepared/mechanics/">有備無患</a>
+                    </td>
+                    <td>
+                      <code>8e3d6e40</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      補給方向錯譯：英文明確為Reserve→Clip，繁中把目的地寫成彈藥儲備。實作使用transfer_from_reserve_to_clip；每層3.3%與十層33%的比例相符，不列為數值錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/invigorated/mechanics/">活力煥發</a>
+                    </td>
+                    <td>
+                      <code>6ac67293</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/focus-target/mechanics/">鎖定目標</a>
+                    </td>
+                    <td>
+                      <code>88d879aa</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      每層額外承傷未指定加算；本頁補充逐層乘算，不能以未寫乘法判錯。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/target-down/mechanics/">目標擊倒！</a>
+                    </td>
+                    <td>
+                      <code>57da5a14</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/redirect-fire/mechanics/">轉移火力！</a>
+                    </td>
+                    <td>
+                      <code>df1f9c55</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      效果方向錯譯：同版英文為grant Damage，實作寫入damage=.025；不是damage_taken或toughness_damage_taken。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/focused-fire/mechanics/">集中火力</a>
+                    </td>
+                    <td>
+                      <code>dd75ed2b</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文只改上限，未列其他搭配效果屬不完整。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/demolition-team/mechanics/">爆破小隊</a>
+                    </td>
+                    <td>
+                      <code>6839ad59</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/tactical-reload/mechanics/">戰術裝填</a>
+                    </td>
+                    <td>
+                      <code>09e8437d</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/volley-adept/mechanics/">齊射能手</a>
+                    </td>
+                    <td>
+                      <code>7c429a4b</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/precision-strikes/mechanics/">堅定不移</a>
+                    </td>
+                    <td>
+                      <code>8c42b6fb</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      只寫弱點傷害加成；沒有宣稱所有武器最終傷害固定提高30%。未解釋額外部分／公式屬不完整，不判錯。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/desperado/mechanics/">亡命之徒</a>
+                    </td>
+                    <td>
+                      <code>0ffe42c2</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      爆擊率與靈巧加成相容；沒有展開額外傷害公式屬不完整。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/out-for-blood/mechanics/">嗜血</a>
+                    </td>
+                    <td>
+                      <code>a8f7b6af</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      繁中少寫英文additional，但所列擊殺恢復仍成立；不把省略基礎恢復的區別當成錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/skirmisher/mechanics/">遊擊者</a>
+                    </td>
+                    <td>
+                      <code>dc400859</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/exploit-weakness/mechanics/">趁火打劫</a>
+                    </td>
+                    <td>
+                      <code>e32d7197</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      目前模板已改為近戰爆擊後增傷；內部識別碼含rending不是目前原文。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/leave-no-one-behind/mechanics/">不拋棄不放棄</a>
+                    </td>
+                    <td>
+                      <code>30d79ef9</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      繁中只提韌性減傷，未明說生命不受益；少寫生命傷害減免視為不完整。向隊友移動的文字未細列視角判定，不判錯。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/rending-strikes/mechanics/">裂擊</a>
+                    </td>
+                    <td>
+                      <code>e703007a</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      只寫撕裂比例，未宣稱所有最終傷害直接乘該比例；沒有護甲算例屬不完整。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/reciprocity/mechanics/">互惠互利</a>
+                    </td>
+                    <td>
+                      <code>46119770</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/agile-engagement/mechanics/">靈活接敵</a>
+                    </td>
+                    <td>
+                      <code>27db301b</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/serrated-blade/mechanics/">鋸齒刀刃</a>
+                    </td>
+                    <td>
+                      <code>b1249139</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/trench-fighter-drill/mechanics/">戰壕兵訓練</a>
+                    </td>
+                    <td>
+                      <code>dff95aa9</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      「變為」措辭不佳，但格式參數自帶+號表示增量；不只依這個動詞判定減速或固定10%攻速。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/onslaught/mechanics/">猛攻</a>
+                    </td>
+                    <td>
+                      <code>29626c69</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      脆弱、時間及疊層相容；未說明第二次起算、每次攻擊限制與護甲公式屬不完整。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/toughness-boost/mechanics/">韌性提升</a>
+                    </td>
+                    <td>
+                      <code>329702b6</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/catch-a-breath/mechanics/">喘息片刻</a>
+                    </td>
+                    <td>
+                      <code>8db6388a</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/opening-salvo/mechanics/">首輪齊射</a>
+                    </td>
+                    <td>
+                      <code>e58119bd</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文保留彈藥比例預留符號，未硬寫固定發數；本頁補充80%彈匣門檻。前若干比例子彈的簡略說法與邊界差異未足以證明同版錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/kill-zone/mechanics/">殺戮地帶</a>
+                    </td>
+                    <td>
+                      <code>4da1db07</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      把生效等待時間譯成持續時間：同版英文的for cooldown seconds修飾避開近戰的期間；繁中改成傷害加成持續時間。buff以last_hit_t+cooldown判定，沒有8秒增傷到期機制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/shock-trooper/mechanics/">突擊隊</a>
+                    </td>
+                    <td>
+                      <code>db8f86c6</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/withering-fire/mechanics/">凋零烈焰</a>
+                    </td>
+                    <td>
+                      <code>51fc5118</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/exhilarating-takedown/mechanics/">振奮擊倒</a>
+                    </td>
+                    <td>
+                      <code>498dcee2</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/fully-loaded/mechanics/">全副武裝</a>
+                    </td>
+                    <td>
+                      <code>3dd8af7f</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      「變為」措辭不佳，但參數自帶+號；省略備用彈藥上限、取整與彈匣區別視為不完整。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/born-leader/mechanics/">天生領袖</a>
+                    </td>
+                    <td>
+                      <code>61c0a8f2</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/field-improvisation/mechanics/">臨場發揮</a>
+                    </td>
+                    <td>
+                      <code>2e81989a</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/covering-fire/mechanics/">火力掩護</a>
+                    </td>
+                    <td>
+                      <code>a72a212c</code>
+                    </td>
+                    <td>
+                      待遊戲內核對
+                    </td>
+                    <td>
+                      中英模板描述範圍內盟友；固定版本迴圈選出單一隊友再套效果。待核對安裝版行為，未作繁中錯譯註記。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/competitive-urge/mechanics/">求勝心</a>
+                    </td>
+                    <td>
+                      <code>4b7d2d48</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/confirmed-kill/mechanics/">擊殺紀錄</a>
+                    </td>
+                    <td>
+                      <code>b0b81b76</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/close-order-drill/mechanics/">密集隊形訓練</a>
+                    </td>
+                    <td>
+                      <code>bcb7160f</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/longshot/mechanics/">遠射</a>
+                    </td>
+                    <td>
+                      <code>187b8f4c</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/one-motion/mechanics/">行雲流水</a>
+                    </td>
+                    <td>
+                      <code>8de5cb15</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      把速度加成寫成縮短為某比例：swap_speed格式帶正號，實作wield_speed=.5，時間除以速度倍率。屬計算量與操作錯誤，不是少寫詳細公式。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/deadshot/mechanics/">死亡射手</a>
+                    </td>
+                    <td>
+                      <code>81e6a4bd</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      屬性名稱錯譯：同版英文是Sway Reduction；格式參數讀1-sway_modifier，設定sway=.4而recoil=-.12。不是術語風格差異，而是把一個數值套在另一屬性上。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/bring-it-down/mechanics/">幹掉它！</a>
+                    </td>
+                    <td>
+                      <code>d17359f1</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/superiority-complex/mechanics/">優越情節</a>
+                    </td>
+                    <td>
+                      <code>db5e86d9</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/duck-and-dive/mechanics/">靈活應對</a>
+                    </td>
+                    <td>
+                      <code>76c89d3d</code>
+                    </td>
+                    <td>
+                      繁中勘誤
+                    </td>
+                    <td>
+                      資源操作錯譯：實作為Stamina.add_stamina_percent，參數.3；英文Stamina on avoiding與繁中耐力消耗不同。漏寫3秒冷卻屬不完整，不列為另一項錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/iron-will/mechanics/">鋼鐵意志</a>
+                    </td>
+                    <td>
+                      <code>9702d945</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/lock-and-load/mechanics/">荷槍實彈</a>
+                    </td>
+                    <td>
+                      <code>5f584f5e</code>
+                    </td>
+                    <td>
+                      待遊戲內核對
+                    </td>
+                    <td>
+                      中英模板都說向上取整；固定版本武器初始化使用floor向下取整。兩者有明確跨來源矛盾，但尚未遊戲內確認實際取整，不直接標遊戲原文錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/keep-their-heads-down/mechanics/">讓他們全趴下！</a>
+                    </td>
+                    <td>
+                      <code>dcdb4dab</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文提遠程壓制，未明說其他來源不適用；不因範圍較簡略判錯。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/covert-operative/mechanics/">秘密特工</a>
+                    </td>
+                    <td>
+                      <code>19928629</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      背刺／後半側為位置術語差異，原文仍是遠程攻擊；未見明確數值或效果方向矛盾。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/melee-damage-boost/mechanics/">近戰傷害提升</a>
+                    </td>
+                    <td>
+                      <code>7b5da013</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/veteran/toughness-damage-reduction/mechanics/">韌性減傷</a>
+                    </td>
+                    <td>
+                      <code>1272bcc0</code>
+                    </td>
+                    <td>
+                      未判錯
+                    </td>
+                    <td>
+                      原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 id="未放入玩家主頁的跨來源差異">
+              未放入玩家主頁的跨來源差異
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>火力齊射</strong>：繁中與英文均使用同組數值預留符號，沒有獨立寫死25%。1.13.1格式參數取25%，起始能力實際加成15%；仍須對上安裝版的格式與增益，不能僅依固定公開版本推定遊戲畫面必然顯示錯誤。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>鷹眼／肉搏戰</strong>：中英模板都把滲透的加成寫為解除潛行後生效；1.13.1在隱身開始加入增益。這是明確的文字／固定版本實作差異，但不是已證實的繁中獨有翻譯錯誤。肉搏戰的「近戰」錯譯則另行勘誤。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>荷槍實彈</strong>：兩種語言都寫向上取整，固定版本武器初始化採向下取整；須遊戲內實測確認。現有玩家文案沿用其已標示的1.13.1機制，未反過來將本文的向下取整當成原文引句。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>火力掩護</strong>：兩種語言都描述範圍內盟友；1.13.1只選一名隊友並有選人距離疑點。列為待遊戲內核對，不用模型推測判定哪一版本的玩家畫面或行為。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L206-L245">火力齊射的格式與起始增益引用</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L296-L323">姿態實際加成</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1223-L1229">隱身開始加入肉搏戰／鷹眼</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1326-L1346">彈匣初始化取整</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1597-L1673">火力掩護選人與效果</a>
+                </p>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

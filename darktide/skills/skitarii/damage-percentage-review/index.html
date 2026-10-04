@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="護教軍：百分比與傷害比較 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>護教軍：百分比與傷害比較 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/damage-percentage-review/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">護教軍：百分比與傷害比較</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>護教軍：百分比與傷害比較</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="護教軍：百分比與傷害比較">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/">← 返回護教軍</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/DAMAGE_PERCENTAGE_REVIEW.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="護教軍百分比與算例盤點">
+              護教軍：百分比與算例盤點
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>
+            </p>
+            <p>
+              逐項區分單份電容量與全部充能、自然恢復速率與直接恢復、韌性上限與缺額、逐層加算與獨立乘算，以及弱點額外傷害與整筆傷害。以下為固定原始碼的靜態核對，未進行遊戲內測試。
+            </p>
+            <p>
+              | 技能 | 分類 | 本次處理 | 檢查結論 |
+              |---|---|---|
+              | <a href="/darktide/skills/skitarii/integrated-refraction-emitter/mechanics/">整合型艾曼納圖斯力場</a> | 閃擊 | 已核對（靜態） | 運作方式：指定並啟動艾曼納圖斯力場，在你周圍展開可吸收遠程攻擊的護盾，持續8秒；啟動與結束時會電擊5公尺內敵人。；運作方式：基礎有3次使用次數，每次啟動消耗1次；不計其他修正時，每次需75秒恢復，3次全用完後恢復全部需225秒。 |
+              | <a href="/darktide/skills/skitarii/purgator-servo-skull/mechanics/">滌罪伺服頭骨</a> | 閃擊 | 已核對（靜態） | 算例：基礎上限3次；若也選擇醫療伺服頭骨，上限增加2次至5次，噴火與救援共用這5次使用次數。 |
+              | <a href="/darktide/skills/skitarii/medicae-servo-skull/mechanics/">醫療伺服頭骨</a> | 閃擊 | 已核對（靜態） | 算例：若隊友最大韌性為100，恢復期間每秒恢復20韌性，最多可恢復100；每次救援消耗1次閃擊使用次數，並與噴火伺服頭骨共用。 |
+              | <a href="/darktide/skills/skitarii/arc-grenades/mechanics/">電弧手榴彈</a> | 閃擊 | 已核對（靜態） | 傷害算例：假設對某目標每次電擊造成12點傷害，這次實際結算5次，合計12 × 5 = 60點。此例只示範加總方式，並非所有敵人固定受到60點傷害。；算例：擊殺3名符合條件的敵人，共恢復3×0.04=0.12份電容量；手雷本身最多有3次使用次數。；電容量算例：單份50點時，每名合格擊殺額外恢復50 × 4% = 2點；擊殺3名合計6點。此為手雷額外效果，職業原有擊殺回充另計。 |
+              | <a href="/darktide/skills/skitarii/artificer-servo-skull/mechanics/">匠師伺服頭骨</a> | 閃擊 | 已核對（靜態） | 算例：以原本每發100傷害、3秒射擊冷卻為例，常駐加成後每發125傷害、冷卻1.5秒。頭骨射中敵人時，該敵人5秒內承受傷害提高15%，並增加1層燃燒；最多8層，達上限時重設燃燒的持續時間。 |
+              | <a href="/darktide/skills/skitarii/overcharged-arc-grenades/mechanics/">超載電弧手榴彈</a> | 閃擊 | 已核對（靜態） | 算例：單次電弧命中可施加8×2.5%=20%脆弱；再次命中可繼續疊加，最多16層，即40%。；傷害算例：只比較護甲階段，假設護甲前100點、原倍率0.5且該護甲的撕裂係數為1，8層脆弱會讓傷害由100 × 0.5 = 50點提高至100 × (0.5 + 20%) = 70點。16層則為90點；跨過護甲倍率1時須另算。 |
+              | <a href="/darktide/skills/skitarii/enhanced-arc-grenades/mechanics/">強化電弧手榴彈</a> | 閃擊 | 已核對（靜態） | 時間算例：第0秒命中後，故障原訂第12秒結束；若第8秒再次命中，改至8 + 12 = 第20秒結束。部分敵人仍會改用近戰攻擊。 |
+              | <a href="/darktide/skills/skitarii/overcharged-refraction-emitter/mechanics/">過載艾曼納圖斯力場</a> | 閃擊 | 已核對（靜態） | 算例：12秒力場的中點為12÷2=6秒，因此三次爆炸分別在0秒、6秒與12秒附近發生；每次影響範圍仍為5公尺。 |
+              | <a href="/darktide/skills/skitarii/kinetic-repulsion/mechanics/">動能排斥</a> | 閃擊 | 已核對（靜態） | 算例：吸收10次遠程攻擊恢復0.25份；吸收30次達0.75份上限，之後不再增加。；點數算例：單份電容量為50點時，每次吸收恢復50 × 2.5% = 1.25點；30次最多恢復50 × 75% = 37.5點。依吸收次數計算，單次攻擊傷害較高不會恢復更多。 |
+              | <a href="/darktide/skills/skitarii/noospheric-command/mechanics/">心智網指令</a> | 閃擊 | 已核對（靜態） | 算例：原本3秒的射擊冷卻變為0.45秒；完整2秒加速消耗0.3份電容量（相當於一份的30%）。；搭配匠師伺服頭骨：常駐射擊間隔減半與本效果相乘。例如原本3秒，常駐強化後為1.5秒，再啟動指令為3 × 0.5 × 0.15 = 0.225秒；這是射擊間隔的計算，實際攻擊仍受瞄準與目標條件限制。 |
+              | <a href="/darktide/skills/skitarii/voltaic-resistance/mechanics/">電流抗性</a> | 閃擊 | 已核對（靜態） | 算例：即使沒有吸收遠程攻擊，力場到期時仍會嘗試發射1道；前方12公尺內有有效敵人時才會命中目標。 |
+              | <a href="/darktide/skills/skitarii/resurgence/mechanics/">復甦</a> | 光環 | 已核對（靜態） | 算例：若一般協同恢復速率為每秒10點，你和隊友在戰鬥中的最低速率為10×50%=每秒5點；在恢復沒有中斷且缺額足夠時，4秒恢復20點，受韌性缺額與個人恢復修正影響。 |
+              | <a href="/darktide/skills/skitarii/ammunition-deposit/mechanics/">彈藥存放</a> | 光環 | 已核對（靜態） | 算例：原本最多攜帶101發儲備用彈藥藥，增加15%後為101 × 1.15 = 116.15，向下取整為116發；目前儲備數也會隨容量變更調整。 |
+              | <a href="/darktide/skills/skitarii/foe-render-creed/mechanics/">碎敵信條</a> | 光環 | 已核對（靜態） | 順劈算例：若攻擊原本能穿透的目標質量總額為10點，增幅後為10 × 1.15 = 11.5點；實際多命中幾名敵人取決於敵人質量與武器限制。；撕裂算例：只比較護甲階段，假設護甲前100點傷害、原護甲倍率0.5，且此護甲類型的撕裂係數為1，結果由100 × 0.5 = 50點變成100 × (0.5 + 0.075) = 57.5點。跨過護甲倍率1時另有換算，不能視為所有命中直接增加7.5%傷害。 |
+              | <a href="/darktide/skills/skitarii/chordclaw-strike/mechanics/">弦爪重擊</a> | 能力 | 已核對（靜態） | 傷害算例：只比較30%近戰加成，固定護甲、暴擊與其他條件後，原100點變成100 × (1 + 30%) = 130點；若同階段已有20%加成，則是100 × (1 + 20% + 30%) = 150點。撕裂與暴擊另依目標計算。 |
+              | <a href="/darktide/skills/skitarii/restoration-protocol/mechanics/">修復協定</a> | 能力 | 已核對（靜態） | 恢復算例：最大韌性 150、沒有其他恢復加成時，每秒恢復 150 × 10% = 15 點，維持 4 秒可恢復 60 點。 |
+              | <a href="/darktide/skills/skitarii/writ-of-ammunition-enumeration/mechanics/">彈藥盤點之旨</a> | 能力 | 已核對（靜態） | 射速算例：原本每秒 5 發，單看受此倍率影響的射速，初期為 5 × 1.15 = 5.75 發／秒；4 秒後為 5 × 1.30 = 6.5 發／秒。其他動作與武器限制另計。 |
+              | <a href="/darktide/skills/skitarii/voltaic-arcs/mechanics/">電流弧</a> | 能力 | 已核對（靜態） | 觸發方式：使用電能發射器時，每消耗一份完整電容量，向前釋放一道電弧；消耗 3 份就釋放 3 道。；作用範圍：初始目標需在前方 12 公尺內且仍存活。每道電弧可繼續向附近有效目標連鎖，最多 4 次，造成電擊傷害與衝擊。；例外：附近目標不足時，實際電弧或連鎖數會較少；傷害仍依護甲與攻擊結算，不能用電弧數直接當作生命傷害。 |
+              | <a href="/darktide/skills/skitarii/voltaic-motivator/mechanics/">電能驅動</a> | 能力 | 已核對（靜態） | 攻速算例：消耗 1、2、3 份時，合計增加 10%、15%、20%。若受影響的攻擊動作原需 1 秒，消耗 3 份後為 1 ÷ 1.20 ≈ 0.833 秒。 |
+              | <a href="/darktide/skills/skitarii/voltaic-overcharge/mechanics/">電流超載</a> | 能力 | 已核對（靜態） | 恢復算例：最大韌性 100、消耗 2 份並命中 5 名合格敵人時，100 × (2 × 25% + 5 × 1%) = 55 點；只缺 40 點就只補 40 點。 |
+              | <a href="/darktide/skills/skitarii/axial-slash/mechanics/">軸向斬擊</a> | 能力 | 已核對（靜態） | 目標順序算例：只比較同部位、同護甲與相同修正的傷害分配，第二名相對第一名為480 ÷ 500 = 96%；若第一名受到100點，第二名為96點。第五名為100 × 360 ÷ 500 = 72點；實際結果仍依各目標條件計算。 |
+              | <a href="/darktide/skills/skitarii/probing-strikes/mechanics/">試探連擊</a> | 能力 | 已核對（靜態） | 持續時間：流血持續9.5秒；再施加流血會重新計時。三次都對同一敵人造成傷害時，新增層數為6 + 6 + 6 = 18層，達到上限。 |
+              | <a href="/darktide/skills/skitarii/flux-conduit-build-up/mechanics/">通量導管蓄積</a> | 能力 | 已核對（靜態） | 恢復算例：單份電容量為50點時，額外恢復50 × 5% = 2.5點，分4秒恢復；加上原本每秒1點，4秒共恢復4 × (1 + 2.5 ÷ 4) = 6.5點。再次暴擊會延長這段加速期間。 |
+              | <a href="/darktide/skills/skitarii/reactor-coil-recharge/mechanics/">反應爐線圈充能</a> | 能力 | 已核對（靜態） | 運作方式：以弱點命中並擊殺敵人時，恢復目前戰鬥技能單份成本的2%電容量；每份成本50點時，每次弱點擊殺恢復1點。；運作方式：電容量進度會累積；每50點形成一份完整充能，未滿50點前仍保留進度。 |
+              | <a href="/darktide/skills/skitarii/augmented-power-cycle/mechanics/">強化能量循環</a> | 能力 | 已核對（靜態） | 時間算例：沒有其他加成或持續消耗時，一份從空補滿需 100% ÷ 3% ≈ 33.33 秒，三份全空補滿需 300% ÷ 3% = 100 秒。 |
+              | <a href="/darktide/skills/skitarii/capacitor-reclamation-loop/mechanics/">電容回收迴路</a> | 能力 | 已核對（靜態） | 運作方式：同一次攻擊命中第3名敵人時，恢復目前戰鬥技能單份50點成本的1%，也就是0.5點電容量；命中更多敵人仍只因這次攻擊恢復一次。；運作方式：每次恢復後至少等待0.25秒才可再次觸發；電容量小數會累積，50點才形成一份完整充能。 |
+              | <a href="/darktide/skills/skitarii/voltaic-emitter/mechanics/">電能發射器</a> | 能力 | 已核對（靜態） | 消耗算例：目前有185點電容量，相當於3份完整充能與第4份的70%進度；發動後消耗3 × 50 = 150點，剩35點。若只靠每秒1點自然恢復，再取得1份可用充能需要(50 − 35) ÷ 1 = 15秒。；傷害算例：初始範圍效果本身不直接扣血，傷害來自後續電擊。假設對某目標每次電擊造成10點，這次實際結算4次，合計10 × 4 = 40點；實際傷害與次數隨目標及結算時序改變。 |
+              | <a href="/darktide/skills/skitarii/advanced-combat-doctrines/mechanics/">進階戰鬥教範</a> | 能力 | 已核對（靜態） | 啟動消耗：至少有1份完整充能才能啟動，但實際只扣單份的25%。每份50點時，啟動消耗50 × 25% = 12.5點。；持續與射擊消耗：每秒另扣單份的10%，即50 × 10% = 5點；每次射擊再扣50 × 1% = 0.5點。這些比例都以1份計算，充能上限提高不會增加每次扣除量。；持續時間算例：只有1份、共50點時，啟動後剩37.5點；若不射擊、不換彈且沒有額外恢復，可維持37.5 ÷ 5 = 7.5秒。滿3份時則為(150 − 12.5) ÷ 5 = 27.5秒。；射擊算例：滿3份啟動後，持續10秒並射擊20次，剩150 − 12.5 − 10 × 5 − 20 × 0.5 = 77.5點；此例不計換彈與額外恢復。；重新裝填：換彈期間暫停每秒5點的持續消耗。重新裝填速度提高25%，結束姿態後保留5秒；沒有其他加成時，原本2秒的裝填縮為2 ÷ 1.25 = 1.6秒。；恢復限制：啟用期間，基礎自然恢復與額外維持成本互相抵消；職業原有的擊殺回充也會停止。其他自然恢復加成仍可抵銷部分耗電，例如增加50%自然恢復時，每秒淨消耗5 − 0.5 = 4.5點。 |
+              | <a href="/darktide/skills/skitarii/satiated-steel/mechanics/">鋼鐵富足</a> | 能力 | 已核對（靜態） | 恢復算例：50 × 25% = 12.5點，分5秒恢復，因此每秒額外恢復12.5 ÷ 5 = 2.5點。若未再次觸發且未提前補滿，完整5秒會得到這12.5點。 |
+              | <a href="/darktide/skills/skitarii/slice-and-dice/mechanics/">千刀萬剮</a> | 能力 | 已核對（靜態） | 運作方式：每次啟動弦爪技能增加一層弦爪傷害加成，每層20%，最多3層；新層加入時重設5秒持續時間。；運作方式：三層時共提高弦爪傷害60%。假設弦爪原始傷害為100，僅計此效果時約為120／140／160。 |
+              | <a href="/darktide/skills/skitarii/piercing-sight/mechanics/">洞察之眼</a> | 能力 | 已核對（靜態） | 順劈算例：若攻擊原本有10點穿透質量額度，啟用後為10 × 1.3 = 13點，4秒後為10 × 1.6 = 16點。能穿過幾名敵人仍取決於目標質量與武器的停止穿透規則。；暴擊算例：若原本遠程爆擊率7.5%，啟用後為7.5% + 15% = 22.5%；4秒後為7.5% + 30% = 37.5%。 |
+              | <a href="/darktide/skills/skitarii/calculated-priority/mechanics/">精算順序</a> | 能力 | 已核對（靜態） | 運作方式：最多累積5層，也就是5×5%=25%傷害加成；再次取得層數會重設這項加成的10秒持續時間。；傷害算例：5層共增加5 × 5% = 25%。沒有其他加成時，100 × (1 + 25%) = 125點；若同階段原有20%，則為100 × (1 + 20% + 25%) = 145點。 |
+              | <a href="/darktide/skills/skitarii/flensing-protocols/mechanics/">削切協議</a> | 鑰石 | 已核對（靜態） | 每層效果：傷害增加2.5%，韌性承傷倍率按層數變為1−2.5%×層數。6層時傷害增加15%，韌性承傷倍率為0.85，也就是少受15%韌性傷害；選用「熟練解剖者」並達8層時，傷害增加20%、韌性承傷倍率為0.80。沒有其他增傷時，100點基礎傷害分別變成115點或120點。；算例：6層時受到一筆傷害會降為5層；1秒內再受傷不會再掉層，至少等1秒後的另一筆傷害才可再次移除。滿6層時，100點基礎攻擊傷害增加至115點；若同時承受100點原始韌性傷害，0.85倍率使實際韌性傷害為85點。擊殺精英時若只缺1層，只補1層，但仍恢復最大韌性15%。 |
+              | <a href="/darktide/skills/skitarii/redline-capacitors/mechanics/">極限電容</a> | 鑰石 | 已核對（靜態） | 每層效果：電容量自然恢復速度每層提高5%，韌性傷害減免每層增加5%。滿4層時，原本每秒恢復單份電容量的2%，會變成2% × (1 + 20%) = 2.4%；原本100點韌性傷害變成100 × (1 − 20%) = 80點。 |
+              | <a href="/darktide/skills/skitarii/power-overload/mechanics/">能量超載</a> | 鑰石 | 已核對（靜態） | 算例：已有28層時擊殺一名精英或專家，增加2層至30層，立即觸發並歸零；若已有29層時增加2層，也只觸發一次，超過30層的部分不會留下。 |
+              | <a href="/darktide/skills/skitarii/critical-power-overload/mechanics/">爆擊能量過載</a> | 鑰石 | 已核對（靜態） | 傷害算例：對受影響敵人原本造成100點的攻擊，變成100 × 1.15 = 115點。這是敵人承傷提高，這次範圍效果本身不造成爆炸傷害。 |
+              | <a href="/darktide/skills/skitarii/invigorating-overload/mechanics/">振奮過載</a> | 鑰石 | 已核對（靜態） | 恢復算例：最大韌性100、最大耐力5格時，一次恢復100 × 20% = 20點韌性及5 × 20% = 1格耐力；若只缺12點韌性，就只補12點。；其他加成：韌性恢復仍受你的韌性恢復加成影響。例如只有25%恢復加成時，20 × 1.25 = 25點；不會超過最大韌性。 |
+              | <a href="/darktide/skills/skitarii/static-capacitor-drain/mechanics/">靜電電容消耗</a> | 鑰石 | 已核對（靜態） | 傷害算例：基礎100點傷害，取得15%加成後為100 × (1 + 15%) = 115點；若同階段已有20%加成，則為100 × (1 + 20% + 15%) = 135點。；減傷算例：原本承受100點韌性傷害，取得20%韌性減傷後為100 × (1 − 20%) = 80點；與超載本身15%韌性減傷同時生效時，為100 × 0.8 × 0.85 = 68點。；充能算例：每份充能需50點電容量，原本每秒恢復1點；取得加成後為1 × (1 + 25%) = 1.25點，補回1份需50 ÷ 1.25 = 40秒。若另有50%自然恢復加成，則每秒恢復1 × (1 + 50% + 25%) = 1.75點。 |
+              | <a href="/darktide/skills/skitarii/servo-sinew-surge/mechanics/">伺服肌腱湧動</a> | 鑰石 | 已核對（靜態） | 算例：6層時額外增加9個百分點爆擊率與9%近戰攻擊速度；8層時額外增加12個百分點爆擊率與12%近戰攻擊速度。；實際計算：若原本爆擊率為7.5%，6層後為7.5% + 6 × 1.5% = 16.5%；原本1秒完成的近戰攻擊，在沒有其他攻速加成時約需1 ÷ 1.09 = 0.917秒。 |
+              | <a href="/darktide/skills/skitarii/honed-dissector/mechanics/">熟練解剖者</a> | 鑰石 | 已核對（靜態） | 算例：每層傷害+2.5%，所以8層時傷害+20%；韌性承傷倍率為1−0.025×8=0.80。沒有其他增傷時，100點基礎攻擊傷害變成120點；若承受100點原始韌性傷害，實際為80點。 |
+              | <a href="/darktide/skills/skitarii/advanced-power-management/mechanics/">進階能量管理</a> | 鑰石 | 已核對（靜態） | 算例：使用前有3份充能，會獲得3層、威力提高15%。若原本威力為500，修正後為575。這不代表最終傷害必定增加15%；最終傷害仍取決於攻擊類型、武器傷害設定與目標護甲等條件。 |
+              | <a href="/darktide/skills/skitarii/capacitory-limit-override/mechanics/">電容極限覆寫</a> | 鑰石 | 已核對（靜態） | 傷害算例：只比較護甲階段，假設護甲前傷害100點、原護甲倍率0.5，且該類護甲的撕裂係數為1，原本100 × 0.5 = 50點，生效後為100 × (0.5 + 0.15) = 65點。此例增加30%傷害；不同護甲倍率會有不同增幅，不能直接把所有傷害乘1.15。 |
+              | <a href="/darktide/skills/skitarii/resource-optimisation-canticles/mechanics/">資源最佳化聖歌</a> | 鑰石 | 已核對（靜態） | 充能算例：護教軍戰鬥技能基礎上限3份，「極限電容」增加1份，本天賦再增加1份，合計3 + 1 + 1 = 5份。電能發射器每次仍最多消耗3份。；減傷算例：極限電容達5層時，韌性承傷倍率為0.75；若一次攻擊原本會對韌性造成100點傷害，套用後承受75點。；恢復算例：極限電容5層時，自然恢復速率增加25%；沒有其他修正時，每秒由單份的2%提高至2% × 1.25 = 2.5%。 |
+              | <a href="/darktide/skills/skitarii/enhanced-capacitance-protocols/mechanics/">強化電容協議</a> | 鑰石 | 已核對（靜態） | 算例：基礎上限6層時，若剩3層，下一次能力使用會補回3層至6層；若已滿6層，使用能力不會超過上限。 |
+              | <a href="/darktide/skills/skitarii/powerdrive/mechanics/">動力驅動</a> | 鑰石 | 已核對（靜態） | 充能算例：一次姿態消耗啟動0.25份、維持1.6份、射擊0.2份，合計2.05份；取完整2份，增加2 × 5 = 10層。途中恢復的充能不會扣回已累計的消耗量。；超載算例：原有22層，消耗2份充能再增加10層，22 + 10 = 32層，立刻觸發一次超載並歸零；超過門檻的2層不保留。 |
+              | <a href="/darktide/skills/skitarii/higher-purpose/mechanics/">崇高意圖</a> | 鑰石 | 已核對（靜態） | 算例：若單份充能成本為50點，額外2.5%是1.25點；原有4%為2點，合計恢復3.25點。這些資源先累積進充能條，未必當場增加一整份可用充能。 |
+              | <a href="/darktide/skills/skitarii/surge-extension/mechanics/">脈衝延伸</a> | 鑰石 | 已核對（靜態） | 觸發方式：每次補回或消耗戰鬥技能充能，開始一段5秒韌性恢復；極限電容已達層數上限時仍可觸發。；恢復量：基礎總量為最大韌性的25%，平均每秒5%；例如最大韌性100時，基礎速率是每秒5點，5秒合計25點。；再次觸發：恢復尚未完成時再次觸發，會重新開始5秒倒數並重設剩餘恢復量；若一次充能變化讓極限電容增加2層，仍只啟動一次25%恢復，不是50%。 |
+              | <a href="/darktide/skills/skitarii/power-redistribution-uplink/mechanics/">能量載分配鏈路</a> | 技能 | 已核對（靜態） | 恢復算例：最大韌性 100 時，每秒恢復 100 × 2.5% = 2.5 點，完整 3 秒恢復 7.5 點；沒有其他減傷時，原本 100 點韌性傷害變成 100 × 0.85 = 85 點。 |
+              | <a href="/darktide/skills/skitarii/adaptive-combat-engram/mechanics/">適應性戰鬥記憶體</a> | 技能 | 已核對（靜態） | 減傷算例：沒有其他減傷時，100 × (1 − 30%) = 70 點；若另有獨立的 25% 減傷，則是 100 × 0.70 × 0.75 = 52.5 點。 |
+              | <a href="/darktide/skills/skitarii/evasive-servo-recovery/mechanics/">閃避伺服恢復</a> | 技能 | 已核對（靜態） | 恢復算例：最大耐力 5 格時，每次恢復 5 × 10% = 0.5 格；目前 4.8 格則只補到 5 格。 |
+              | <a href="/darktide/skills/skitarii/omnissian-recharge-litany/mechanics/">歐姆尼賽亞充能聖歌</a> | 技能 | 已核對（靜態） | 恢復算例：最大韌性 150 時，每秒恢復 150 × 10% ÷ 3 = 5 點，完整效果共 15 點。 |
+              | <a href="/darktide/skills/skitarii/channelled-motive-force/mechanics/">原初動力導流</a> | 技能 | 已核對（靜態） | 傷害算例：消耗 0.4 格，再消耗 0.6 格即可觸發。假設基礎傷害 100、同階段原有 25% 加成，結果為 100 × (1 + 25% + 15%) = 140 點。 |
+              | <a href="/darktide/skills/skitarii/entropic-transfer/mechanics/">熵能轉移</a> | 技能 | 已核對（靜態） | 恢復算例：最大韌性 100 時，每秒恢復 100 × 12% ÷ 4 = 3 點；第 2 秒再次觸發，效果延長至第 6 秒，期間共可恢復 18 點。 |
+              | <a href="/darktide/skills/skitarii/overcharge-transfer-lattice/mechanics/">過載轉移晶格</a> | 技能 | 已核對（靜態） | 觸發方式：受到近戰攻擊傷害時，以攻擊者為中心，電擊 2.5 公尺內的存活敵人；單純格擋不觸發。；電擊效果：電擊狀態維持 3 秒，再次施加會重新計時；對不同敵人的實際控制效果仍取決於其抗性。；冷卻方式：觸發後冷卻 15 秒。例如第 0 秒觸發，第 10 秒再被打不會重複發動，第 15 秒後再次受到符合條件的攻擊才會發動。 |
+              | <a href="/darktide/skills/skitarii/sureshot-cogitator-sync/mechanics/">精準思算機同步</a> | 技能 | 已核對（靜態） | 傷害算例：同一攻擊的基礎部分為 100、弱點額外部分為 100 時，原傷害 200 → 100 + 100 × 1.25 = 225，整筆增加 12.5%。若額外部分為 200，則 300 → 100 + 200 × 1.25 = 350，增加約 16.67%。；其他加成：若弱點額外部分已有 20% 同階段加成，則 100 + 100 × (1 + 20% + 25%) = 245；原本為 220，這次增加約 11.36%。 |
+              | <a href="/darktide/skills/skitarii/shockline-breach-protocol/mechanics/">電擊破壞協定</a> | 技能 | 已核對（靜態） | 順劈算例：假設攻擊原本能處理 10 單位敵人質量，效果變成 10 × (1 + 50%) = 15。能多打中幾人仍取決於敵人質量與攻擊本身的限制。 |
+              | <a href="/darktide/skills/skitarii/rad-sink/mechanics/">輻射槽</a> | 技能 | 已核對（靜態） | 傷害算例：基礎傷害 100 時，一層為 100 × 1.10 = 110，兩層為 100 × 1.20 = 120；若原有 25% 同階段加成，兩層為 100 × (1 + 25% + 20%) = 145。 |
+              | <a href="/darktide/skills/skitarii/progressive-plating-matrix/mechanics/">漸進裝甲矩陣</a> | 技能 | 已核對（靜態） | 減傷算例：6 層提供 6 × 2.5% = 15% 減傷，原本 100 點韌性傷害變成 85；再配合另一項獨立 20% 減傷，則 100 × 0.85 × 0.80 = 68 點。 |
+              | <a href="/darktide/skills/skitarii/retribution-conduit/mechanics/">報應導管</a> | 技能 | 已核對（靜態） | 傷害算例：保有 3 份時，加成為 10% + 3 × 5% = 25%；基礎傷害 100 → 125。有其他 20% 同階段加成時，100 × (1 + 20% + 25%) = 145。 |
+              | <a href="/darktide/skills/skitarii/galvanic-marking-array/mechanics/">電流標記陣列</a> | 技能 | 已核對（靜態） | 傷害算例：4 層為 20%，基礎 100 → 100 × 1.20 = 120。從滿層起不再觸發，15、30、45、60 秒後分別剩 3、2、1、0 層。 |
+              | <a href="/darktide/skills/skitarii/auto-repair-doctrines/mechanics/">自我修復教義</a> | 技能 | 已核對（靜態） | 恢復算例：最大韌性 200、保有 3 份時，每秒恢復 200 × (3% + 3 × 0.5%) = 9 點；0 份時仍每秒恢復 200 × 3% = 6 點。 |
+              | <a href="/darktide/skills/skitarii/last-stand-relay/mechanics/">絕境中繼</a> | 技能 | 已核對（靜態） | 機率算例：假設原本爆擊率 7.5%，有完整電容量時為 7.5% + 6% = 13.5%；沒有完整一份時為 7.5% + 6% + 4% = 17.5%。 |
+              | <a href="/darktide/skills/skitarii/weakness-analysis-doctrine/mechanics/">弱點分析教義</a> | 技能 | 已核對（靜態） | 傷害算例：基礎傷害 100、有 25% 同階段加成時，100 × (1 + 25% + 10%) = 135 點。 |
+              | <a href="/darktide/skills/skitarii/ablative-motion-routines/mechanics/">離格動作例程</a> | 技能 | 已核對（靜態） | 減傷算例：原傷害 100 → 100 × 0.75 = 75。若另有獨立 30% 減傷，則為 100 × 0.75 × 0.70 = 52.5 點。 |
+              | <a href="/darktide/skills/skitarii/power-overflow/mechanics/">能量溢流</a> | 技能 | 已核對（靜態） | 分配算例：自己已滿，接到原本會恢復 20 點的效果，每位隊友各獲得 20 × 25% = 5 點；3 名隊友合計可獲得 15 點，不是把 5 點平分。 |
+              | <a href="/darktide/skills/skitarii/target-neutralization-feedback/mechanics/">目標殲滅回饋</a> | 技能 | 已核對（靜態） | 觸發方式：以弱點命中擊殺敵人後，獲得 5 秒的一般受擊僵直與壓制免疫。；重新計時方式：期間再次弱點擊殺會重設 5 秒。例如第 0 秒觸發、第 3 秒再觸發，效果延至第 8 秒。；效果範圍：這項效果不提供減傷，也不能視為免疫捕網、撲倒等所有控制。 |
+              | <a href="/darktide/skills/skitarii/binary-ballistics-protocol/mechanics/">二元彈道協議</a> | 技能 | 已核對（靜態） | 恢復算例：最大韌性 200，每秒 200 × 15% ÷ 3 = 10 點，完整 3 秒共 30 點；若第 2 秒再次觸發，連續 5 秒共可恢復 50 點。 |
+              | <a href="/darktide/skills/skitarii/force-distribution-actuators/mechanics/">力量分配致動器</a> | 技能 | 已核對（靜態） | 衝擊算例：最大耐力 6 格時，需至少 3 格；假設原推擊衝擊為 100，生效後為 100 × (1 + 75%) = 175。 |
+              | <a href="/darktide/skills/skitarii/superior-tracking-litanies/mechanics/">卓越追蹤聖歌</a> | 技能 | 已核對（靜態） | 移動算例：原本速度為正常移動的 60%，減速幅度是 40%；生效後為 1 − 40% × 0.5 = 80% 正常速度。；散布效果：常駐減少 45% 射擊散布，無須先架槍。例如同條件散布為 10，且無其他散布加成時，變成 10 × (1 − 45%) = 5.5。 |
+              | <a href="/darktide/skills/skitarii/hydraulic-impact/mechanics/">液壓衝擊</a> | 技能 | 已核對（靜態） | 傷害算例：基礎重擊 100、有 25% 同階段傷害加成時，100 × (1 + 25% + 15%) = 140。 |
+              | <a href="/darktide/skills/skitarii/hybrid-combat-covenant/mechanics/">混合戰鬥契約</a> | 技能 | 已核對（靜態） | 傷害算例：5 層遠程增傷為 15%，基礎射擊 100 → 115。即使同時也有 5 層近戰增傷，這一發射擊仍只吃遠程的 15%。 |
+              | <a href="/darktide/skills/skitarii/kinetic-energy-distributors/mechanics/">動能分配器</a> | 技能 | 已核對（靜態） | 恢復算例：最大韌性 100 時，每秒恢復 100 × 25% ÷ 5 = 5 點；第 2 秒再次受傷，恢復可延至第 7 秒，期間最多恢復 35 點。 |
+              | <a href="/darktide/skills/skitarii/uncapped-arrestor/mechanics/">無限抑制器</a> | 技能 | 已核對（靜態） | 攻速算例：5 層提高 12.5% 攻速；若受攻速影響的攻擊動作原需 1 秒，則為 1 ÷ 1.125 ≈ 0.889 秒，實際整套連段還包含其他動作。 |
+              | <a href="/darktide/skills/skitarii/electro-strike-conduit/mechanics/">電擊打擊導管</a> | 技能 | 已核對（靜態） | 觸發方式：近戰爆擊命中時，對這次揮擊的第一個目標施加電擊；目標需在命中後仍存活。；電擊方式：電擊狀態維持 3 秒，再次施加會重新計時，不會因同次順劈擊中 5 人就讓 5 人都電擊。；例外：沒有額外觸發冷卻；各敵人是否能被持續控住，仍取決於敵人自身的抗性。 |
+              | <a href="/darktide/skills/skitarii/gunsmith/mechanics/">槍械技師</a> | 技能 | 已核對（靜態） | 裝填速度：裝填速度提高 15%。若受加速的裝填動作原需 2 秒，則為 2 ÷ 1.15 ≈ 1.74 秒。；彈藥算例：彈匣容量 30 發，每批 30 × 7.5% = 2.25，向上取整為 3 發。彈匣缺 2 發就只補 2 發，備用彈藥只有 1 發就只補 1 發。 |
+              | <a href="/darktide/skills/skitarii/assassination-protocols/mechanics/">暗殺協議</a> | 技能 | 已核對（靜態） | 傷害算例：目標符合其中一類、基礎遠程傷害 100 時，100 × 1.25 = 125；若同階段原有 20% 加成，則 100 × (1 + 20% + 25%) = 145。 |
+              | <a href="/darktide/skills/skitarii/system-shock/mechanics/">系統電擊</a> | 技能 | 已核對（靜態） | 傷害算例：脆弱提高攻擊對護甲的有效程度，不能直接當成整筆傷害增加 7.5%。假設一擊的無護甲基準為 100、原護甲倍率 0.5，加入 7.5% 脆弱後，該段為 100 × (0.5 + 0.075) = 57.5，原本是 50。 |
+              | <a href="/darktide/skills/skitarii/ammo-cell-augury/mechanics/">彈藥預知</a> | 技能 | 已核對（靜態） | 容量算例：原儲備上限 200 發，變成 200 × (1 + 25%) = 250 發；原本 203 發則計算 253.75，取整為 253 發。若另有 15% 同類容量加成，200 × (1 + 25% + 15%) = 280 發。 |
+              | <a href="/darktide/skills/skitarii/voltaic-restoration/mechanics/">電能修復</a> | 技能 | 已核對（靜態） | 恢復算例：你最大韌性 100，恢復 100 × 20% = 20 點；隊友最大韌性 200，恢復 200 × 20% = 40 點。 |
+              | <a href="/darktide/skills/skitarii/salvation-doctrine/mechanics/">救贖教範</a> | 技能 | 已核對（靜態） | 時間算例：原本 4 秒的援助動作，在沒有其他速度加成時為 4 ÷ 1.25 = 3.2 秒。；減傷算例：援助期間原本 100 點傷害變成 100 × 0.75 = 75；停止援助後不再享有這項減傷。 |
+              | <a href="/darktide/skills/skitarii/ammunition-restoration-pod/mechanics/">彈藥補給艙</a> | 技能 | 已核對（靜態） | 取整算例：儲備上限 250 發，每次累計 250 × 1% = 2.5 發；先補 2 發並保留 0.5，下次合計補 3 發。連續四次共補 10 發。 |
+              | <a href="/darktide/skills/skitarii/sustained-assault-doctrine/mechanics/">持續攻擊教義</a> | 技能 | 已核對（靜態） | 傷害算例：5 層提供 15%，基礎傷害 100 → 115；若原有 25% 同階段加成，100 × (1 + 25% + 15%) = 140。 |
+              | <a href="/darktide/skills/skitarii/galvanized-coating/mechanics/">鍍鋅精密塗層</a> | 技能 | 已核對（靜態） | 計算算例：單份電容量的基礎恢復時間為 50 秒，7.5% 等同 50 × 7.5% = 3.75 秒自然恢復量。原本 100 點傷害則變成 100 × 0.85 = 85 點。 |
+              | <a href="/darktide/skills/skitarii/moebian-conductor/mechanics/">莫比亞導體</a> | 技能 | 已核對（靜態） | 傷害算例：基礎傷害 100、有 25% 同階段加成時，100 × (1 + 25% + 15%) = 140 點。 |
+              | <a href="/darktide/skills/skitarii/servo-core-recharge-engine/mechanics/">伺服核心充能引擎</a> | 技能 | 已核對（靜態） | 恢復算例：最大韌性 200 時，每次恢復 200 × 5% = 10 點；連續 3 次符合條件的擊殺可恢復 30 點，但最多補到上限。 |
+              | <a href="/darktide/skills/skitarii/adaptive-combat-calibration/mechanics/">適應性戰鬥校準</a> | 技能 | 已核對（靜態） | 邊界算例：最大韌性 100，51 點享有順劈，50 點或49 點享有衝擊。順劈基準 10 → 10 × 1.30 = 13；衝擊基準 100 → 130。 |
+              | <a href="/darktide/skills/skitarii/residual-current-buffer/mechanics/">剩餘電流緩衝</a> | 技能 | 已核對（靜態） | 減傷算例：3 份時，10% + 3 × 2.5% = 17.5%；100 點韌性傷害 → 100 × 0.825 = 82.5。另有獨立 20% 韌性減傷時，82.5 × 0.8 = 66 點。 |
+              | <a href="/darktide/skills/skitarii/superior-defence-engrams/mechanics/">卓越防禦記憶模組</a> | 技能 | 已核對（靜態） | 恢復算例：最大韌性 200、5 層時，每秒恢復 200 × 5 × 1% = 10 點；維持滿層 8 秒共可恢復 80 點，最多補到上限。 |
+              | <a href="/darktide/skills/skitarii/target-prioritization-psalms/mechanics/">標記優先聖詩</a> | 技能 | 已核對（靜態） | 運作方式：附近 12.5 公尺內存活的專家敵人會顯示輪廓；不必手動標記。；更新方式：約每 0.25 秒更新一次，敵人離開範圍或死亡後移除輪廓。；標記區別：這是敵人輪廓提示，本身沒有增傷、充能或額外手動標記獎勵。 |
+              | <a href="/darktide/skills/skitarii/protectorate-protocol/mechanics/">守護協議</a> | 技能 | 已核對（靜態） | 減傷算例：單一效果下，原本 100 點傷害變成 100 × 0.75 = 75 點；另有獨立 20% 減傷時為 100 × 0.75 × 0.80 = 60 點。 |
+              | <a href="/darktide/skills/skitarii/data-sensor-protocol/mechanics/">數據感應協定</a> | 技能 | 已核對（靜態） | 恢復算例：受傷者最大耐力 6 格、最大韌性 120，對應恢復 6 × 25% = 1.5 格耐力，或 120 × 25% = 30 點韌性；不是讓全隊同時恢復。 |
+              | <a href="/darktide/skills/skitarii/sequenced-charge/mechanics/">序列充能</a> | 技能 | 已核對（靜態） | 威力算例：假設某項攻擊在套用威力加成前的威力值為 500，生效後為 500 × 1.125 = 562.5；若同階段另有 20%，則 500 × (1 + 20% + 12.5%) = 662.5。 |
+              | <a href="/darktide/skills/skitarii/slaughter-protocol/mechanics/">屠殺協議</a> | 技能 | 已核對（靜態） | 恢復算例：若一次近戰擊殺原本恢復 5 點韌性，常態變成 5 × 1.25 = 6.25 點；0 份電容量時為 5 × 1.50 = 7.5 點。；其他加成：若原有 20% 同階段韌性恢復加成，0 份時為 5 × (1 + 20% + 50%) = 8.5 點，最多補到上限。 |
+              | <a href="/darktide/skills/skitarii/precision-combat-augurs/mechanics/">精準戰鬥探測儀</a> | 技能 | 已核對（靜態） | 傷害算例：基礎傷害 100，生效時為 100 × 1.15 = 115；已有 25% 同階段加成時，100 × (1 + 25% + 15%) = 140。 |
+              | <a href="/darktide/skills/skitarii/voltaic-burst/mechanics/">電流爆發</a> | 技能 | 已核對（靜態） | 時間算例：推擊在第 0 秒結束，下一次能施加電擊的推擊最早在第 12 秒後；冷卻中的推擊仍保留本身的普通效果。 |
+              | <a href="/darktide/skills/skitarii/ablative-wards/mechanics/">抗腐護符</a> | 技能 | 已核對（靜態） | 防禦效果：一般受到的腐敗量減少 90%。例如同條件原本增加 10 點腐敗，單靠這項抗性會變成 10 × 0.10 = 1 點。；代價算例：沒有其他修正、全程存活且不需要救援時，60 秒會發生 3 次，共增加 3 點基準腐敗。倒地或被制伏等需要援助的狀態會跳過當次。 |
+              | <a href="/darktide/skills/skitarii/threat-detection-imperative/mechanics/">威脅偵測指令</a> | 技能 | 已核對（靜態） | 減傷算例：5 層合計 20%，原本 100 點韌性傷害變成 100 × (1 − 5 × 4%) = 80；另有獨立 15% 減傷時，80 × 0.85 = 68 點。 |
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/">← 返回護教軍技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

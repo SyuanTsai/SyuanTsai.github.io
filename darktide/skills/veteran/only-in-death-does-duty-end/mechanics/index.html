@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="只有死亡，職責才會終結：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>只有死亡，職責才會終結：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/only-in-death-does-duty-end/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">只有死亡，職責才會終結：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>只有死亡，職責才會終結：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Only In Death Does Duty End</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/only-in-death-does-duty-end/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#只有死亡職責才會終結only-in-death-does-duty-end原始碼依據"><span>03</span>只有死亡，職責才會終結(Only In Death Does Duty End)</a></li>
+            <li><a href="#從天賦到救援判定"><span>04</span>從天賦到救援判定</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#圖示來源"><span>07</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="只有死亡，職責才會終結：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/only-in-death-does-duty-end/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_revive_nearby_allies.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="只有死亡職責才會終結only-in-death-does-duty-end原始碼依據">
+              只有死亡，職責才會終結(Only In Death Does Duty End)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/only-in-death-does-duty-end/#veteran_combat_ability_revive_nearby_allies">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_combat_ability_revive_nearby_allies</code>；名稱鍵：<code>loc_talent_veteran_combat_ability_revives</code>；描述鍵：<code>loc_talent_veteran_combat_ability_revives_new_description</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1088-L1110">節點</a>：<code>ability_modifier</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L565-L605">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="從天賦到救援判定">
+              從天賦到救援判定
+            </h2>
+            <ul>
+              <li>
+                節點只掛 special_rules.shout_revives_allies，沒有 passive。veteran_shout 的 allies.revive_allies=true；ShoutAbility._handle_allied_targets 以 radius×shout_radius_modifier 查詢 allied player，逐一檢查 PlayerUnitStatus.is_knocked_down，再設定 force_assist=true。沒有「只救一人」或要求傷害擊殺的條件。
+              </li>
+              <li>
+                固定 SHA 的同名未接入 buff 內有 combat_ability_resource_cost_per_use_modifier=+.5、shout_radius_modifier=−.33。如果掛上，含義應是成本增加50%、半徑減少33%，不能顛倒成減冷卻／增範圍。但本節點只用 find_value 讀取它作格式文字，沒有實際把它加到角色。
+              </li>
+              <li>
+                CharacterSheet 只將 talent.passive 轉為 class_loadout.passives；TalentExtension 依該清單施加 buff。這個節點的 special rule 唯一實際效果是救援判定，故沒有其他修正時半徑仍9、能力成本40、每秒恢復1，即40秒。
+              </li>
+              <li>
+                主文保留可執行的9公尺與40秒，格式宣告和執行內容的落差留在此處。被其他敵人制伏、懸掛及死亡救援不是 is_knocked_down 條件。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L565-L605">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 565–605 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2509-L2516">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2509–2516 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/character_sheet.lua#L325-L343">scripts/utilities/character_sheet.lua，第 325–343 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/talent/player_unit_talent_extension.lua#L130-L170">scripts/extension_systems/talent/player_unit_talent_extension.lua，第 130–170 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/utilities/shout_ability.lua#L230-L296">scripts/extension_systems/ability/utilities/shout_ability.lua，第 230–296 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/shout_target_templates.lua#L51-L66">scripts/settings/ability/shout_target_templates.lua，第 51–66 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/veteran_combat_ability.lua#L5-L100">scripts/settings/ability/ability_templates/veteran_combat_ability.lua，第 5–100 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L81-L87">scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 81–87 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1459">scripts/extension_systems/ability/player_unit_ability_extension.lua，第 1437–1459 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L195-L201">scripts/settings/talent/talent_settings_veteran.lua，第 195–201 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+              <li>
+                格式文字與未接入 buff 的資料存在落差；9公尺／40秒為此固定 SHA 的靜態執行結果，應優先列入遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_combat_ability_revive_nearby_allies.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/a8bcdde1-34e3-449d-9b46-e9130865b285">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/only-in-death-does-duty-end/">← 返回只有死亡，職責才會終結玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

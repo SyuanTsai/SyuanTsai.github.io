@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="穿甲手雷 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>穿甲手雷 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/krak-grenade/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">穿甲手雷</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/b0967626-73da-49a8-a1b9-1f4d6c1daffa"
+              width="80"
+              height="80"
+              alt="穿甲手雷圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>穿甲手雷</h1>
+            <span class="skill-english-name" lang="en">Krak Grenade</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/veteran/krak-grenade/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="穿甲手雷">
+          <a id="veteran_krak_grenade"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <strong>投出會追向合適裝甲目標、並黏附其身上的穿甲手雷。</strong>
+              </li>
+              <li>
+                最多攜帶 <strong>3 顆</strong>。碰撞或黏附後約 <strong>1 秒</strong>引爆；未碰撞時，飛行約 2 秒後開始 1 秒引信。
+              </li>
+              <li>
+                爆炸中心 <strong>1.5 公尺內</strong>傷害最高，外圈延伸至 <strong>5 公尺</strong>；中心爆炸可穿過盾牌。
+              </li>
+            </ul>
+            <h2 id="傷害與計時算例">
+              傷害與計時算例
+            </h2>
+            <ul>
+              <li>
+                中心爆炸、無其他加成、非首領、一般受擊部位：無甲目標為 <strong>2,400</strong>；甲殼護甲倍率為 2，得到 <code>2,400 × 2 = 4,800 傷害</code>。
+              </li>
+              <li>
+                在投出後 0.4 秒黏附，約在 <code>0.4 + 1 = 1.4 秒</code>爆炸；實際時間會受遊戲更新影響。
+              </li>
+              <li>
+                首領與爆炸外圈有另外的傷害計算，不能把 4,800 當成所有命中的固定傷害。
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/veteran/krak-grenade/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/README.md#veteran_krak_grenade">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_krak_grenade.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

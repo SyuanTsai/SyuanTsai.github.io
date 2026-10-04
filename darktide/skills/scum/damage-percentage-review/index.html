@@ -1,0 +1,1623 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="巢都渣滓：百分比與傷害比較 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>巢都渣滓：百分比與傷害比較 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/damage-percentage-review/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">巢都渣滓：百分比與傷害比較</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>巢都渣滓：百分比與傷害比較</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="巢都渣滓：百分比與傷害比較">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/scum/">← 返回巢都渣滓</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/DAMAGE_PERCENTAGE_REVIEW.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="巢都渣滓百分比與算例盤點">
+              巢都渣滓：百分比與算例盤點
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>
+            </p>
+            <p>
+              逐項核對威力、一般增傷與額外弱點／暴擊傷害、護甲、速度與時間倒數、韌性最大值與缺額，以及冷卻恢復倍率。以下為固定前提的程式推導，未進行遊戲內測試。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                    <th>
+                      本次處理
+                    </th>
+                    <th>
+                      檢查結論
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/blackout/mechanics/">擊暈</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      補充算例：目前有 2 顆、已累計 19 次，下一次符合距離的擊殺後變成 3 顆，進度歸零。搭配額外彈藥袋時，上限為 5 + 1 = 6 顆。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/boom-bringer/mechanics/">炸彈使者</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：以未受其他修正、未衰減的內圈爆炸計，基礎傷害為 20 × (500 × 2800 ÷ 10000) = 2800。打到無甲部位套 1.25 倍為 3500，甲殼部位套 2.4 倍為 6720。這些數字不含飛彈直擊、部位、敵人特殊減傷或其他天賦。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/chem-grenade/mechanics/">化學手榴彈</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      毒傷算例：6 層毒素每次結算的輸入威力為 500 × 6 ÷ 30 = 100，再依毒素曲線與護甲計算。其他手段可把相同毒素疊至更高，不能把 6 層當作所有毒素的總上限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/gunslinger-improved/mechanics/">精進神射手</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      小彈藥算例：小彈藥原補 15% 備用彈藥，分享量為個人備用彈藥上限 × 15% × 10%，無條件進位。上限 200 的隊友得到 3 發，上限 100 的隊友得到 ⌈1.5⌉ = 2 發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/ruffian/mechanics/">惡棍</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點近戰傷害變成 110；同階段另有 25% 時為 100 × (1 + 25% + 10%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/anarchist/mechanics/">無政府主義者</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：原本 10% 變成 10% + 5% = 15%，原本 25% 則變成 30%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/enhanced-desperado/mechanics/">強化亡命之徒</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      衝刺算例：衝刺速度增加 20%；原本 5 公尺／秒變成 5 × 1.2 = 6 公尺／秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/stimm-supply/mechanics/">化學性依賴</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      治療腐敗：每 0.25 秒最多移除 0.5 點腐敗，按 20 ÷ 0.25 × 0.5 計算，標示總量為最多 40 點；場域效果期間腐敗承受量為 0。 無法清除已吞掉完整生命區段的腐敗；離開場域後，基本效果會移除。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/rampage/mechanics/">橫衝直撞！</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      近戰威力與攻擊速度：獲得加算 +35% 近戰威力等級及 +20% 近戰攻擊速度。威力等級會影響攻擊輸出與衝擊，不能直接當成同百分比的傷害；攻擊速度 +20% 只計此效果時，原本 1 秒的動作約為 1 ÷ 1.20 = 0.83 秒。 例如威力 500 變成 500 × 1.35 = 675，再套用武器傷害與踉蹌曲線。；承受傷害：承受傷害乘以 0.75；只計此效果時，100 點來襲傷害變為 100 × 0.75 = 75 點，也就是減少 25%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/pulverising-strikes/mechanics/">熔爐怒吼</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      順劈算例：怒火期間，傷害與踉蹌的順劈容量各增加 50%；原本容量 10 變成 15。實際能穿過幾名敵人，仍取決於敵人質量及武器限制。；與怒火合併：若已取得怒火本身的 +35% 近戰威力等級，只計這兩項且累積到上限時為 35% + (10 × 2.5%) = 60% 威力等級修正；這不是最終傷害 +60%。 例如威力 500 變成 500 × 1.6 = 800。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/channelled-aggression/mechanics/">凝聚殺意</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      護甲算例：假設原本護甲傷害倍率為 0.5，且該護甲完整接受這項撕裂，會變成 0.5 + 0.25 = 0.75；同一筆護甲前 100 點傷害由 50 變成 75。不同護甲與武器原有穿透力，會改變實際增幅。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/forges-bellow/mechanics/">沸騰之血</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      敵人減速：每次怒吼使範圍內敵人的近戰攻擊速度降低 50%，持續 5 秒。以原本 1 秒的近戰攻擊間隔估算，速度剩一半後間隔約為 1 ÷ 0.5 = 2 秒；這是比原來長 100%，不是長 50%。遠程攻擊速度不在這個修正欄位內。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/boiling-blood/mechanics/">碎骨打擊</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      特殊敵人延長：近戰命中精英、專家、怪物或隊長類敵人，怒火延長 1 秒。此類命中每次延長量到 30 秒後才開始遞減；30 秒後為 0.5 秒、60 秒後為 0.25 秒。；一般敵人延長：普通敵人命中仍沿用基礎每次 0.3 秒，並在 20 秒後開始遞減。30 秒門檻不會一併改動普通敵人的延長規則。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/focused-resolve/mechanics/">專注凝神</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：技能每秒自然充能 1，基礎冷卻 45 秒；達到 5 秒恢復上限後，專注結束再自然充能約需 45−5=40 秒。專注期間冷卻自然充能暫停，但擊殺恢復會直接補入充能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/pick-your-targets/mechanics/">精準獵殺</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只計滿 5 層時，基礎 100 點遠程傷害 × (1 + 5 × 0.03) = 115 點；其他遠程傷害修正會與此加算合併。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/practiced-deployment/mechanics/">熟練部署</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：技能還需 40 秒冷卻時觸發，即可直接再次使用；效果約在半秒內觸發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/fast-acting-stimms/mechanics/">速效型興奮劑</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻：場域結束後開始 60 秒自然冷卻，雖然部分隊友的效果仍可能延續 15 秒。只計這段能力時間，從部署到下一次自然充能約為 5+60=65 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/booby-trap/mechanics/">毒性陷阱</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：不計其他加成與特殊減傷，距離爆心 0.5 公尺內的無護甲目標受到 20 × 500 × 300 ÷ 10000 = 300 點爆炸傷害；對應護甲係數為 0.25 時，則為 300 × 0.25 = 75 點。後續毒素傷害另外結算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/nimble/mechanics/">靈巧</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      閃避速度：閃避移動速度增加 25%；同一時刻原本 4 公尺／秒時，變成 4 × 1.25 = 5 公尺／秒。實際動作時間仍依整條速度曲線計算。；閃避判定：閃避結束後，近戰及擒抱攻擊仍將你視為閃避中的時間，由 0.25 秒延長至 0.25 + 0.15 = 0.4 秒；遠程則額外保留 0.15 秒。是否能避開攻擊，仍取決於該攻擊的判定方式。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/adrenaline-frenzy/mechanics/">腎上腺素狂暴</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      狂暴速度：近戰攻速加法倍率從 1 變成 1.1；原本 1 秒的受影響動作約為 1 ÷ 1.1 = 0.91 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultures-mark/mechanics/">兀鷲印記</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：無其他修正時，基礎遠程傷害 100 在 3 層下為 100×(1+3×0.05)=115；同階段已有 +20% 時為 100×(1+0.20+0.15)=135。；回韌性算例：最大韌性 100 且缺額至少 15 時，滿層遠程精英／專家擊殺回補 100×0.15=15 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/chemical-dependency/mechanics/">化學性依賴</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數：最多 3 層。每層增加 10% 戰鬥技能資源回充倍率，3 層時回充倍率為 1+3×0.10=1.30，即比基礎回充快 30%。；回充算例：若原本需要 60 秒完成同一段戰鬥技能回充，且回充不中斷、沒有其他修正，3 層後約需 60÷1.30=46.15 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/chem-enhanced/mechanics/">化學強化</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      最大層數算例：巢都渣滓 基礎爆擊率 10%，3 層加成 3×5%=15 個百分點，未計武器額外機率時為 10%+15%=25%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/chem-fortified/mechanics/">化學增強</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      每層減傷：每層把承受的韌性傷害乘以 0.95。3 層時為 0.95³=0.8574 倍，即韌性傷害約降低 14.26%，不是 15%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/maxed-out-chems/mechanics/">化學藥劑全開</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      回充：每層核心的 +10% 戰鬥技能資源回充仍有效；4 層倍率為 1+4×0.10=1.40。 原本 60 秒的連續冷卻恢復，變成 60 ÷ 1.4 ≈ 42.86 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultures-push/mechanics/">兀鷲推擊</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      觸發：遠程攻擊擊殺精英或專家時觸發；不要求先有兀鷲印記層數。；範圍與效果：推開自己周圍 3 公尺內的敵人，造成踉蹌，不造成直接傷害。；目標差異：實際能否推動敵人仍取決於其踉蹌抗性、護甲與當下狀態，無法保證中斷所有敵人的動作。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/patient-hunter/mechanics/">堅毅獵手</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：第一層在 0 秒取得，第二層在 6 秒取得後，計時重設為 12 秒；若之後無新印記，現有層數在第 18 秒到期。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultures-dodge/mechanics/">兀鷲閃避</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：第 0 秒觸發，第 0.6 秒再度遠程暴擊後，效果延續至第 1.6 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/adrenaline-assassin/mechanics/">腎上腺素刺客</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      弱點命中：弱點近戰命中給原本的 1 層，再額外給 2 層，共 3 層。；一般命中：非弱點近戰命中不給層；暴擊檢查仍獨立執行，所以非弱點近戰爆擊仍額外得到 1 層。；弱點暴擊：弱點命中的 3 層再加暴擊額外 1 層，共 4 層；仍受核心的 30 層上限及層數計時規則限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/stoked-rage/mechanics/">振奮怒火</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續時間：觸發狂暴後持續 20 秒，比核心的 10 秒多 10 秒。；重新計時：重新達到 30 層再觸發狂暴時，狂暴仍只有一份；新觸發會把持續時間重設為 20 秒。；不變部分：此升級不改變腎上腺素的 2 秒堆疊計時、30 層上限或狂暴的攻速與傷害倍率。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/adrenaline-unbound/mechanics/">腎上腺素突破</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復量：每秒恢復最大韌性的 5%；最大韌性 100 時，每次恢復 為 100 × 0.05 = 5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/uncontrolled-aggression/mechanics/">失控攻擊</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數時間：獲得腎上腺素層後，計時為 4 秒；新層會重設共享計時。；衰退：4 秒內沒有新層時，先失去 1 層並重新計時；若仍沒有新層，之後每 4 秒再失去 1 層。；上限觸發：仍以 30 層觸發狂暴；到達上限時核心會觸發狂暴並清除腎上腺素層。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/adrenaline-smiter/mechanics/">腎上腺素懲戒者</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      觸發：近戰擊殺一般敵人時，核心命中層 1 層加此升級 4 層，共 5 層；若是近戰爆擊擊殺，再加核心暴擊層，共 6 層。；精英擊殺：精英擊殺額外再給 10 層，因此一般精英擊殺共 15 層，精英暴擊擊殺共 16 層。；非擊殺命中：近戰攻擊沒有擊殺目標時不獲得層數，即使該擊是暴擊也不會觸發核心的暴擊額外層。；精英判定：額外 10 層只看精英分類；只有專家分類的敵人不算此精英加成。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/alley-rat/mechanics/">過街老鼠</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      距離算例：以職業基礎 2.5 公尺，且沒有武器修正或連續閃避衰減計算，變成 2.5 × 1.5 = 3.75 公尺。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/quick-and-deadly/mechanics/">快速且致命</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      距離算例：加成從 12.5 公尺以外逐步降低，到 30 公尺歸零。距離 16.875 公尺時，比例為 √((16.875 − 12.5) ÷ 17.5) = 0.5，加成剩 15% × (1 − 0.5) = 7.5%；基礎 100 點變成 107.5 點。；近距離算例：單計本效果，基礎 100 點變成 115；已有同階段 25% 增傷時為 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/a-tertium-welcome/mechanics/">特提恩是迎賓</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：第一個目標的基礎傷害若為 100，單計此效果變成 100 × 1.15 = 115；已有同階段 25% 增傷則為 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/in-your-face/mechanics/">打你的臉</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：16.875 公尺時，衰減比例為 √((16.875 − 12.5) ÷ 17.5) = 0.5，加成為 25% + (10% − 25%) × 0.5 = 17.5%。基礎 100 點變成 117.5；同階段已有 25% 增傷時，則為 100 × (1 + 25% + 17.5%) = 142.5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/precision-violence/mechanics/">精準暴力</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100，依序命中一般目標及弱點，會先恢復 4 點、再恢復 8 點，合計 12 點；若同次還有暴擊弱點命中，則可再恢復 12 點。每次仍以缺額為限，例如只缺 5 點時最多補 5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/voice-of-tertium/mechanics/">特提恩之聲</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100 時，一般敵人恢復 8 點、精英或專家恢復 15 點；目前已有 95 點時，兩者實際都只補 5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/float-like-a-butterfly/mechanics/">翩翩蝶舞</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：原本 10% 爆擊率變成 10% + 20% = 30%；原本 25% 則變成 45%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/speedloader/mechanics/">快速裝填</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：原本可加速的換彈動作需 2 秒，單計此效果變成 2 ÷ 1.3 ≈ 1.54 秒；已有 20% 同階段換彈速度時，則為 2 ÷ (1 + 20% + 30%) ≈ 1.33 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/burst-of-energy/mechanics/">能量爆發</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復與冷卻算例：最大韌性 100 時，單計本技能由 0 恢復到 50。觸發後先維持 6 秒免暈，再冷卻 10 秒；沒有其他變動時，兩次可觸發時間至少相隔 6 + 10 = 16 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/toughness-boost/mechanics/">韌性增幅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      算例：原本 100 點變成 125 點；若另有 20% 最大韌性加成，則為 (100 + 25) × 1.2 = 150 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/regained-posture/mechanics/">恢復姿態</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大耐力 5 點時，每次恢復 5 × 10% = 0.5 點；目前為 4.8 點時，實際只恢復 0.2 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/slippery-customer/mechanics/">奧客</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      運作方式：滑行期間具有近戰閃避判定，敵人的近戰攻擊會依閃避規則處理；並非直接免疫所有傷害。；觸發限制：開始滑行不等於已成功避開攻擊。需要實際避開符合判定的攻擊，才會觸發成功閃避相關天賦。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/tis-but-a-scratch/mechanics/">沒甚麼，只是擦傷</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100 時，每秒恢復 10 點，完整 3 秒共 30 點。若第 2 秒再次觸發，恢復可延長到第 5 秒，合計最多 50 點，仍以缺額為限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/unload/mechanics/">狂轟猛射</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：彈匣容量 100 發，效果內已用 30 發，增傷為 2% + ⌊30 ÷ 10⌋ × 2% = 8%。基礎 100 點變成 108；若同階段已有 25%，則為 100 × (1 + 25% + 8%) = 133 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/swift-endurance/mechanics/">堅韌疾速</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：目前耐力 5.8 點，以 5 點計，增加 10% 攻速。原本 1 秒的可加速動作變成 1 ÷ 1.1 ≈ 0.91 秒；不是縮短 10% 至 0.9 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/ramping-backstabs/mechanics/">加重背刺</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：5 層共增加 50%。若進入此加成階段的威力為 500，則為 500 × 1.5 = 750；另有同階段 20% 威力時為 500 × (1 + 20% + 50%) = 850。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/moving-target/mechanics/">移動目標</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      次數算例：武器原有 3 次有效閃避時，變成 3 + 1 = 4 次。這項加成不增加閃避距離或速度。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/sample-collector/mechanics/">樣本採集</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：剩餘 20 秒時，擊殺 4 名一般敵人縮短 4 × 0.5 = 2 秒，剩 18 秒；4 名受毒素感染的敵人則縮短 4 秒，剩 16 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/jittery/mechanics/">神經質</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      時間算例：原本停止連續閃避後需等待 1 秒，變成 1 × (1 − 40%) = 0.6 秒。最大耐力 4 點時，至少保有 4 × 75% = 3 點即可生效。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/critical-chance-boost/mechanics/">爆擊機率增幅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      機率算例：原本 10% 爆擊率變成 10% + 5% = 15%；原本 25% 則變成 30%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/melee-damage-boost/mechanics/">近戰增幅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點近戰傷害變成 110；同階段原有 25% 增傷時為 100 × (1 + 25% + 10%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/potent-tox/mechanics/">強效毒藥</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：毒素輸入威力 500 時，單計此效果變成 500 × 1.1 = 550，再依毒素傷害曲線和敵人護甲計算；不能直接把每次毒傷都視為固定增加 10%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/sticky-hands/mechanics/">黏黏手</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      切換算例：可加速的切換動作原需 1 秒，變成 1 ÷ 1.4 ≈ 0.71 秒。；散佈算例：單計此效果，原本 2 度的散佈角變成 2 × 0.7 = 1.4 度。後座力修正影響不穩定度累積與恢復，實際鏡頭位移還取決於武器曲線。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/calling-for-a-time-out/mechanics/">請求暫停</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：原本承受 100 點韌性傷害，單計此效果變成 100 × 0.75 = 75 點；若同階段另有 20% 韌性減傷，則為 100 × (1 − 20% − 25%) = 55 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/street-tough/mechanics/">街頭硬漢</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻與算例：觸發後冷卻 8 秒；單計本效果，移速 5 公尺／秒變成 5 × 1.1 = 5.5 公尺／秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/channelled-devastation/mechanics/">蓄力殲滅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：爆擊率 12.8%，取 12 段，增傷 12 × 0.5% = 6%；基礎 100 點變成 106。同階段另有 25% 增傷時為 100 × (1 + 25% + 6%) = 131 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/battering-strikes/mechanics/">猛烈劈擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      順劈算例：5 層提供 50%。原本可穿過總質量 10 的目標，變成 10 × 1.5 = 15；能命中幾名敵人仍取決於各敵人的質量、護甲及武器限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/hyper-violence/mechanics/">超暴力</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：造成 300 點傷害、敵人只剩 100 點生命，溢出 200，取得 200 × 25% = 50 點加傷；下一次近戰在此結算階段原為 100 點，變成 150 點。這是固定加傷，不是增加 50%。；再次擊殺：效果期間會先扣除目前加傷，再算新的 25%；只有新值更高才替換並重新計時。已有 50 點加傷、下一次溢出 400 時，新值為 (400 − 50) × 25% = 87.5；若溢出僅 200，新值 37.5 較低，不會替換或重新計時。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/virulent-strain/mechanics/">劇毒菌株</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：原本造成 100 點傷害，單計易傷變成 110；若攻擊者另有 25% 增傷，則為 100 × 1.25 × 1.1 = 137.5 點。若目標原本另有同階段 20% 易傷，則該階段為 1 + 20% + 10% = 1.3 倍。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/toxin-mania/mechanics/">毒藥狂熱</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：附近有 2 名感染敵人，增傷 10%，基礎 100 點變成 110；同階段原有 25% 時為 100 × (1 + 25% + 10%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/splash-damage/mechanics/">連帶傷害</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      毒素算例：每 0.35 秒依目前毒素層數造成一次傷害。2 層的輸入威力為 500 × 2 ÷ 30 ≈ 33.33，再依毒素曲線與護甲算傷害；不是直接造成 33.33 點傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/extra-pouches/mechanics/">額外彈藥袋</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      容量算例：原本最多攜帶 3 次閃擊時，變成 3 + 1 = 4 次；原本 2 次則變成 3 次。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/coated-weaponry/mechanics/">塗讀武裝</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害運作：毒素每 0.35 秒結算一次。3 層的輸入威力為 500 × 3 ÷ 30 = 50，再依傷害曲線與敵人護甲換算。層數增加會提高威力，不能把威力直接當傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/pocket-toxin/mechanics/">隨身毒素</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      疊層算例：敵人已有 2 層相同毒素，再被提供 6 層的爆炸命中，變成 2 + 6 = 8 層；最多 30 層，重新施加會重新計時。；傷害運作：相同毒素每 0.35 秒結算一次，8 層輸入威力為 500 × 8 ÷ 30 ≈ 133.33，再依毒素曲線與護甲計算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/targeted-toxin/mechanics/">精準投毒</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：該敵人原本造成 100 點傷害，單計本效果變成 85；適用 30% 的頭目則為 70。這是降低敵人的輸出，隊友受到該敵人攻擊時也能受益。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/toxic-renewal/mechanics/">毒性再生</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、附近 4 名感染敵人，每秒恢復 100 × 4 × 1% = 4 點；10 名或更多時，每秒最多 10 點。只缺 3 點時實際只補 3 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/ammo-jack/mechanics/">軍火商</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      容量算例：原本 30 發，變成 ⌈30 × 1.15⌉ = 35 發；原本 7 發，變成 ⌈7 × 1.15⌉ = 9 發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/cheap-shots/mechanics/">趁人之危</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點，輕度踉蹌時為 110，中度或重度為 115；另有同階段 25% 增傷時，後者為 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/hyper-critical/mechanics/">心狠手辣</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      生命門檻算例：敵人原有 190 點生命，這次暴擊造成 100，命中後剩 90；90 &lt; 100，因此處決。原有 200 時剩 100，因 100 不小於 100，不觸發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/punching-above-ones-weight/mechanics/">以小搏大</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點變成 115；若已有同階段 25% 增傷，則為 100 × (1 + 25% + 15%) = 140 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/the-sweet-spot/mechanics/">甜蜜點</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：假設一般部分 100、弱點額外部分 100，原本合計 200；加成後為 100 + 100 × 1.25 = 225，總傷害增加 12.5%。；武器差異算例：另一武器若一般部分 100、額外部分 300，原本 400，生效後為 100 + 300 × 1.25 = 475，總增幅為 18.75%。所以同一項 25% 弱點加成，在不同武器上不會固定增加相同的總傷害百分比。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/long-lasting/mechanics/">延長藥效</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續算例：原本持續 15 秒的興奮劑，變成 15 + 5 = 20 秒；這是固定加 5 秒，不是增加 5%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/blessed-stimms/mechanics/">神佑興奮劑</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大生命 200 時，每次最多清除 2 點；累計清除量達到 100 點後停止。每次重新用藥會重設本次累計量。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/hive-city-brawler/mechanics/">巢都格鬥家</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      計算方式：減傷 = 20% × 目前耐力比例；近戰增傷 = 20% × 已消耗耐力比例。兩者隨耐力變化即時調整。；半耐力算例：剩餘 50% 耐力時，減傷與近戰增傷各 10%。單計本效果，原本承受 100 點變成 90，原本造成 100 點近戰傷害變成 110。；滿空耐力算例：滿耐力時承傷 100 × 0.8 = 80，近戰不增傷；耐力耗盡時不減傷，近戰則為 100 × 1.2 = 120。；與其他加成：減傷採獨立承傷倍率，例如另有 20% 獨立減傷，滿耐力時為 100 × 0.8 × 0.8 = 64。近戰傷害則與同階段增傷相加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/pickpocket/mechanics/">順手牽羊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      補充算例：備用上限 150，門檻為 ⌊150 × 20%⌋ = 30 發。目前 8 發時補 22 發到 30；已有 30 發則不觸發。上限 37 時，門檻取整為 7 發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/battering-momentum/mechanics/">趁勝追擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      順劈算例：原本傷害順劈容量 10、踉蹌順劈容量 8，分別變成 10 × 1.5 = 15、8 × 1.5 = 12。實際命中人數仍取決於敵人質量與武器限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/equip-cartel-special/mechanics/">裝備財閥特殊裝備</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復時間：藥效結束後才開始恢復。配方共花費 P 點時，基礎恢復秒數為「15 + 60 × (P − 1) ÷ 29」，有小數就無條件進位；1 點為 15 秒，15 點為 44 秒，30 點為 75 秒。；完整週期算例：配方花費 30 點、不計其他恢復效果，注射後先生效 15 秒，再恢復 75 秒，合計 15 + 75 = 90 秒可再次使用。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-i/mechanics/">野火 I</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 1 個威力節點時，為 500 × (1 + 1 × 4%) = 520。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-iv/mechanics/">野火 IV</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。；額外傷害算例：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.1 = 210，整筆傷害提高 5%。野火 IV、V 的這項加成合計 35%，同例為 235。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-ii/mechanics/">野火 II</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 2 個威力節點時，為 500 × (1 + 2 × 4%) = 540。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-iii/mechanics/">野火 III</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 3 個威力節點時，為 500 × (1 + 3 × 4%) = 560。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/fury-i/mechanics/">狂怒 I</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。；護甲算例：固定其他條件，護甲前 100 點、原護甲係數 0.5 時，僅本節點為 100 × (0.5 + 0.05) = 55 點。兩項合計則為 100 × (0.5 + 0.15) = 65 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/fury-ii/mechanics/">狂怒 II</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。；護甲算例：固定其他條件，護甲前 100 點、原護甲係數 0.5 時，僅本節點為 100 × (0.5 + 0.1) = 60 點。兩項合計則為 100 × (0.5 + 0.15) = 65 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/wildfire-v/mechanics/">野火 V</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。；額外傷害算例：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.25 = 225，整筆傷害提高 12.5%。野火 IV、V 的這項加成合計 35%，同例為 235。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultoprene-i/mechanics/">獵鷹蕈劑 I</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。；暴擊算例：原本 10%，僅本節點變成 10% + 5% = 15%；兩項合計為 25%，最終限制於 0%～100%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/vultoprene-ii/mechanics/">獵鷹蕈劑 II</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      威力算例：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。；暴擊算例：原本 10%，僅本節點變成 10% + 10% = 20%；兩項合計為 25%，最終限制於 0%～100%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-i/mechanics/">抗焦慮藥 I</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續恢復算例：從抗焦慮藥 I 選到本節點時，總加成為 6.25%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.0625 秒；15 秒藥效內共恢復 15 × 1.0625 = 15.9375 秒。；剩餘時間算例：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 15.9375 = 44.0625 秒；之後恢復原速。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-ii/mechanics/">抗焦慮藥 II</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續恢復算例：從抗焦慮藥 I 選到本節點時，總加成為 12.5%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.125 秒；15 秒藥效內共恢復 15 × 1.125 = 16.875 秒。；剩餘時間算例：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 16.875 = 43.125 秒；之後恢復原速。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-iii/mechanics/">抗焦慮藥 III</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續恢復算例：從抗焦慮藥 I 選到本節點時，總加成為 18.75%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.1875 秒；15 秒藥效內共恢復 15 × 1.1875 = 17.8125 秒。；剩餘時間算例：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 17.8125 = 42.1875 秒；之後恢復原速。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-iv/mechanics/">抗焦慮藥 IV</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續恢復算例：從抗焦慮藥 I 選到本節點時，總加成為 25%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.25 秒；15 秒藥效內共恢復 15 × 1.25 = 18.75 秒。；剩餘時間算例：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 18.75 = 41.25 秒；之後恢復原速。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/kalma-v/mechanics/">抗焦慮藥 V</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續恢復算例：從抗焦慮藥 I 選到本節點時，總加成為 50%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.5 秒；15 秒藥效內共恢復 15 × 1.5 = 22.5 秒。；剩餘時間算例：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 22.5 = 37.5 秒；之後恢復原速。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/barrage-i/mechanics/">彈幕 I</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：從彈幕 I 選到本節點，共 1 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^1 ≈ 96.000 點。；恢復算例：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (1 × 6.25%) × (1 + 1 × 5%) = 6.5625 點；實際仍受缺額限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/barrage-ii/mechanics/">彈幕 II</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：從彈幕 I 選到本節點，共 2 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^2 ≈ 92.160 點。；恢復算例：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (2 × 6.25%) × (1 + 2 × 5%) = 13.75 點；實際仍受缺額限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/barrage-iii/mechanics/">彈幕 III</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：從彈幕 I 選到本節點，共 3 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^3 ≈ 88.474 點。；恢復算例：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (3 × 6.25%) × (1 + 3 × 5%) = 21.5625 點；實際仍受缺額限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/barrage-iv/mechanics/">彈幕 IV</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：從彈幕 I 選到本節點，共 4 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^4 ≈ 84.935 點。；恢復算例：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (4 × 6.25%) × (1 + 4 × 5%) = 30 點；實際仍受缺額限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/tank/mechanics/">坦克</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：原本恢復 10 點的效果，合計變成 10 × (1 + 20% + 30%) = 15 點；最多補滿韌性。；注射算例：最大韌性 100，彈幕 I～IV 共提供 25% 一次恢復，套用此路線 50% 恢復加成後為 100 × 25% × 1.5 = 37.5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-i/mechanics/">激勵 I</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      切換算例：原本可加速的切換動作為 1 秒，僅此項時為 1 ÷ 1.25 = 0.8 秒；I、II 合計為 1 ÷ 1.5 ≈ 0.667 秒。；攻速算例：從激勵 I 選到本節點，共增加 4%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.04 ≈ 0.962 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/fervor/mechanics/">狂熱</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      移動算例：沒有其他加成時，原移速每秒 4 公尺變成 4 × 1.1 = 4.4 公尺；原閃避距離 2.5 公尺變成 2.5 × 1.1 = 2.75 公尺。；有效閃避恢復：停止連續閃避後，恢復有效閃避次數的等待時間縮短 10%；原為 1 秒時，變成 1 × (1 − 10%) = 0.9 秒。這不改變兩次閃避之間的基本間隔。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-ii/mechanics/">激勵 II</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      切換算例：原本可加速的切換動作為 1 秒，僅此項時為 1 ÷ 1.25 = 0.8 秒；I、II 合計為 1 ÷ 1.5 ≈ 0.667 秒。；耐力算例：原消耗 10 點，僅此項時變成 10 × 0.85 = 8.5 點；II、III、IV 都選取時為 10 × 0.85 × 0.85 × 0.8 = 5.78 點。；攻速算例：從激勵 I 選到本節點，共增加 8%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.08 ≈ 0.926 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-iii/mechanics/">激勵 III</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      耐力算例：原消耗 10 點，僅此項時變成 10 × 0.85 = 8.5 點；II、III、IV 都選取時為 10 × 0.85 × 0.85 × 0.8 = 5.78 點。；攻速算例：從激勵 I 選到本節點，共增加 12%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.12 ≈ 0.893 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-iv/mechanics/">激勵 IV</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      耐力算例：原消耗 10 點，僅此項時變成 10 × 0.8 = 8 點；II、III、IV 都選取時為 10 × 0.85 × 0.85 × 0.8 = 5.78 點。；攻速算例：從激勵 I 選到本節點，共增加 16%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.16 ≈ 0.862 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/spur-v/mechanics/">激勵 V</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      攻速算例：原本可加速的 1 秒攻擊動作，在整條激勵路線下為 1 ÷ 1.2 ≈ 0.833 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/regain/mechanics/">恢復</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100，計入彈幕 I～IV 的 20% 恢復加成，每次恢復 100 × 5% × 1.2 = 6 點；若只缺 3 點，實際只補 3 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/hypex/mechanics/">狂熱</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/klay/mechanics/">集中藥</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/scum/reflex/mechanics/">反射</a>
+                    </td>
+                    <td>
+                      興奮劑配方
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      換彈速度：增加 30%；原本可加速的換彈動作為 2 秒時，變成 2 ÷ 1.3 ≈ 1.538 秒。；後座算例：原每發增加 0.2 不穩定度，變成 0.2 × 0.5 = 0.1；原每秒消退 0.2，變成 0.2 ÷ 0.5 = 0.4。實際槍口偏移仍依武器後座曲線計算。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/">← 返回巢都渣滓技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

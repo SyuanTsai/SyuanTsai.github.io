@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="天災 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>天災 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/scourge/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">天災</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8"
+              width="80"
+              height="80"
+              alt="天災圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>天災</h1>
+            <span class="skill-english-name" lang="en">Scourge</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/zealot/scourge/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="天災">
+          <a id="zealot_crits_apply_bleed"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>施加流血</strong>：近戰爆擊造成傷害且敵人仍存活時，施加 2 層流血。近戰命中已流血的敵人時，獲得 1 層近戰爆擊率加成，每層增加 10 個百分點，最多 3 層，持續 3 秒；再次觸發會重新計時。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>觸發順序</strong>：先檢查敵人是否已流血，再施加本次暴擊的流血。因此，對未流血敵人的第一次暴擊，不會僅因這次新加的流血就同時獲得爆擊率加成。近戰擊殺流血敵人的事件也可提供加成。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>爆擊率算例</strong>：原本近戰爆擊率 5%，滿 3 層後為 5% + 3 × 10% = 35%，不是 5% × 1.3。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>流血傷害算例</strong>：流血每約 0.5 秒結算一次，最多 16 層。固定無甲部位、沒有其他修正，2 層的單次傷害為 175 × (2 ÷ 16)² × [3 − 2 × (2 ÷ 16)] × 0.5 ≈ 3.76 點；8 層為 43.75 點，層數與傷害不是等比例增加。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>流血持續</strong>：增加層數會重設 1.5 秒保留時間；到期後隨每次結算逐層消退，不是 1.5 秒一到全部消失。
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/zealot/scourge/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/README.md#zealot_crits_apply_bleed">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_crits_apply_bleed.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/">← 返回狂信徒技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

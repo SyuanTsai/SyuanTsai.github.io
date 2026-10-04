@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="兀鷲推擊：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>兀鷲推擊：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/vultures-push/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">兀鷲推擊：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>兀鷲推擊：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Vulture's Push</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/vultures-push/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#兀鷲推擊vultures-push原始碼依據"><span>03</span>兀鷲推擊(Vulture's Push)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="兀鷲推擊：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/vultures-push/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_aoe_stagger.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="兀鷲推擊vultures-push原始碼依據">
+              兀鷲推擊(Vulture&#39;s Push)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/vultures-push/#broker_keystone_vultures_mark_aoe_stagger">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_keystone_vultures_mark_aoe_stagger">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_keystone_vultures_mark_aoe_stagger</code>；名稱鍵：<code>loc_talent_broker_keystone_vultures_mark_aoe_stagger</code>；描述鍵：<code>loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_c2a46314-e334-402f-a37d-12e5f58d1594</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                proc buff 監聽 on_kill；check_proc_func 要求 CheckProcFunctions.on_ranged_hit 與 on_elite_or_special_kill 同時成立。後者要求攻擊結果為 died 且目標帶 elite 或 special tag；前者接受 ranged attack_type 或 count_as_ranged_attack damage profile。
+              </li>
+              <li>
+                符合條件時在玩家位置 + Vector3(0,0,0.65) 建立 broker_vultures_mark_aoe_stagger explosion。Explosion template 的 min_radius 和 radius 都是 3，篩選 villains。
+              </li>
+              <li>
+                DamageProfileTemplate 設 attack power distribution=0、impact=0.55、stagger_override=medium；impact 對 unarmored/player 為 1、armored/resistant/berserker/disgustingly_resilient 為 0.4、super_armor/void_shield 為 0.1。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2426-L2434">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2426–2434</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3432-L3450">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3432–3450</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L120-L145">scripts/settings/buff/helper_functions/check_proc_functions.lua：120–145</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L216-L224">scripts/settings/buff/helper_functions/check_proc_functions.lua：216–224</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L228-L239">scripts/settings/damage/explosion_templates/player_explosion_templates.lua：228–239</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua#L499-L531">scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua：499–531</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2426-L2434">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2426–2434</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1635-L1657">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1635–1657</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>範圍算例</strong>：擊殺點不影響爆炸中心；爆炸固定以玩家位置上方 0.65 公尺為中心，作用半徑 3 公尺。
+              </li>
+              <li>
+                <strong>Impact 算例</strong>：設定基礎 impact 0.55；套用超級護甲係數 0.1 後為 0.55×0.1=0.055（未計其他 power 或 stagger 修正）。
+              </li>
+              <li>
+                半徑內是否被擊退或踉蹌仍受目標的 stagger resistance、護甲及其他狀態修正影響。
+              </li>
+              <li>
+                只監聽 on_kill 並要求遠程擊殺；毒針手槍 毒素 on_minion_death 的印記特例不會自動滿足此升級的 on_kill handler。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>d98831c7</code>。
+              </li>
+              <li>
+                繁中與英文都描述遠程擊殺精英／專家時推開附近敵人；程式設定 3 公尺爆炸及中等踉蹌，沒有直接攻擊傷害。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_vultures_mark_aoe_stagger.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/a887e60a-cbd4-4d49-8e44-20661f7f2dcb">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/vultures-push/">← 返回兀鷲推擊玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

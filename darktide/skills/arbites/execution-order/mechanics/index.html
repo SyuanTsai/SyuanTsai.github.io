@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="處刑命令：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>處刑命令：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/execution-order/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">處刑命令：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>處刑命令：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Execution Order</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/arbites/execution-order/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#處刑命令execution-order原始碼依據"><span>03</span>處刑命令(Execution Order)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="處刑命令：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/arbites/execution-order/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_execution_order.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="處刑命令execution-order原始碼依據">
+              處刑命令(Execution Order)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/execution-order/#adamant_execution_order">返回玩家說明</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>｜<a href="/darktide/skills/arbites/localization-comparison/#adamant_execution_order">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>adamant_execution_order</code>；名稱鍵：<code>loc_talent_adamant_exterminator</code>；描述鍵：<code>loc_talent_execution_order_description</code>。
+              </li>
+              <li>
+                節點：<code>node_52c3f35e-7fe4-4321-a04c-2a51eccac74c</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                selector query40m、dot&gt;.5與LoS；monster/captain/cultist_captain走instant_type分支，不需t&gt;next_t。選中第一個合格項即break，不能據chosen_distance宣稱最近。已標記排除候選但未清除其他標記；移除須超40m、在背後且非aggroed。
+              </li>
+              <li>
+                on_hit 只有 server 處理。標記目標死亡才進入 _execution_order_proc：恢復 0.15 最大韌性、建立本人的 8 秒 +10% damage／+10% attack speed buff，並在已選升級時建立相應 child buff。 _execution_order_proc同時給companion buff；on_minion_death直接return，故不是全隊任意擊殺。
+              </li>
+              <li>
+                dog 分支檢查 companion hit 的 damage_profile.initial_pounce，且 victim 仍在標記 targets/deleted_units 中，才建立 8 秒 companion_damage_modifier=1.5 buff。共享 damage_calculation 會把 owner 的 companion_damage_modifier 加入 companion 的傷害 stat。 此旗標也存在於對歐格林與巨獸的持續壓制 profile，不能僅按名稱推斷每次撲擊只觸發一次；標記擊殺另有獨立路徑給予同一犬增益。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2132-L2165">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2132–2165</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L102-L119">scripts/settings/talent/talent_settings_adamant.lua：102–119</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L845-L955">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：845–955</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L958-L990">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：958–990</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L991-L1097">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：991–1097</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L1098-L1122">scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：1098–1122</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/toughness/toughness.lua#L16-L35">scripts/utilities/toughness/toughness.lua：16–35</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L265-L276">scripts/utilities/attack/damage_calculation.lua：265–276</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/action_handler.lua#L356-L428">scripts/utilities/action/action_handler.lua：356–428</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L236-L276">scripts/utilities/attack/damage_calculation.lua：236–276</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua#L227-L240">scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua：227–240</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2132-L2165">scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2132–2165</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L91-L122">scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：91–122</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                最大韌性 100、被標記敵人被擊殺且韌性缺額至少 15 時，恢復 15 點；自身 +10% 傷害和攻速到 8 秒到期。
+              </li>
+              <li>
+                戰犬對標記目標作初次 pounce 命中後，若符合程式條件，狗的傷害 modifier 為 1+1.5，即基礎傷害的 2.5 倍，維持 8 秒。
+              </li>
+              <li>
+                機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；繁中、英文模板與程式來源皆為1.13.1；遊戲內最終顯示仍待核對。程式實作和文字措辭如有差異，先列文字與實作差異待核，不直接判為翻譯錯誤。
+              </li>
+              <li>
+                文字概稱獒犬攻擊標記敵人後增傷；固定實作的命中分支要求 initial_pounce，對歐格林與巨獸的後續攻擊亦帶此旗標。標記擊殺另可給予同一增益；命中條件的文字邊界留待遊戲內核對。
+              </li>
+              <li>
+                「定期標記」不是無條件每 3 秒標記：必須有符合範圍、方位、視線與目標類別的候選敵人。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>720bc321</code>。
+              </li>
+              <li>
+                繁中與同源英文的擊殺恢復、玩家與獒犬增益一致。兩者概稱獒犬攻擊標記目標後增傷；固定實作的命中分支只接受 initial_pounce，對歐格林與巨獸的持續壓制也帶此旗標，標記擊殺另可給予增益。命中條件的文字邊界待遊戲內核對。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone/adamant_execution_order.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/execution-order/">← 返回處刑命令玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

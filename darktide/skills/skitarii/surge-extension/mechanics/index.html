@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="脈衝延伸：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>脈衝延伸：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/surge-extension/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">脈衝延伸：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>脈衝延伸：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Surge-Extension</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/surge-extension/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#脈衝延伸surge-extension原始碼依據"><span>03</span>脈衝延伸(Surge-Extension)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="脈衝延伸：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/surge-extension/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline_toughness.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="脈衝延伸surge-extension原始碼依據">
+              脈衝延伸(Surge-Extension)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/surge-extension/#cryptic_redline_toughness">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_redline_toughness">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_redline_toughness</code>；名稱鍵：<code>loc_talent_cryptic_power_generation_one_more_charge</code>；描述鍵：<code>loc_talent_cryptic_redline_toughness_clarified_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_d8193dca-b6d3-428a-b970-654b16fda839</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                設定值為5秒與25%韌性。子模板由共用的韌性持續恢復生成器建立，監聽戰鬥技能充能補回與消耗事件。
+              </li>
+              <li>
+                生成器啟動時把 toughness_left_to_restore 設為0.25；更新期間每秒按0.05×dt扣除預算並以 Toughness.replenish_percentage 恢復。Redline 子模板將持續時間和總量改為設定中的5秒與0.25。
+              </li>
+              <li>
+                能力系統一次充能變化可以把實際增加或消耗的充能總數寫進單一事件參數；此恢復模板的 proc_func 不讀取數量，每次事件只把預算重設為0.25。因此同一事件增加多層不會多次乘算恢復量；事件在恢復期間再發生時也會重新計時主動時間並重設預算。
+              </li>
+              <li>
+                韌性恢復按最大韌性比例計算，受已缺失韌性上限、韌性恢復停用條件及既有 toughness_replenish_modifier / toughness_replenish_multiplier 影響。
+              </li>
+              <li>
+                此模板直接監聽充能事件且check_proc_func=nil，沒有檢查極限電容是否實際增加層數；已滿層仍會觸發。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1482-L1505">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1482–1505</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L346-L349">scripts/settings/talent/talent_settings_cryptic.lua：346–349</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L77-L105">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：77–105</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1974-L1983">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1974–1983</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L865-L879">scripts/extension_systems/ability/player_unit_ability_extension.lua：865–879</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1064-L1075">scripts/extension_systems/ability/player_unit_ability_extension.lua：1064–1075</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1559-L1580">scripts/extension_systems/ability/player_unit_ability_extension.lua：1559–1580</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L323-L355">scripts/extension_systems/buff/buffs/proc_buff.lua：323–355</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/toughness/toughness.lua#L16-L25">scripts/utilities/toughness/toughness.lua：16–25</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L279">scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–279</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1482-L1505">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1482–1505</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L2013-L2035">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：2013–2035</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                靜態推演：最大韌性100時，一次觸發最多設定25點恢復預算，按每秒5點恢復5秒。若恢復3秒後再次觸發，倒數重回5秒，尚未用完的預算會重設為25點；已恢復的韌性不會倒扣。
+              </li>
+              <li>
+                恢復量是最大韌性的百分比，不是目前缺口的25%；韌性已滿時不會超過上限。
+              </li>
+              <li>
+                恢復會受到韌性恢復停用狀態及其他韌性恢復修正影響。
+              </li>
+              <li>
+                繁中與英文都以獲得一層描述觸發；固定版以充能變化事件處理，若單一事件帶入多個充能，這項恢復仍只計一次。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>5f6b15fb</code>。
+              </li>
+              <li>
+                繁中與英文都表示獲得極限電容層數時恢復25%韌性、持續5秒，固定版設定與模板採用相同總量和時間。程式按充能變化事件觸發，且單一事件即使增加多層也只啟動一次恢復；這是實際觸發粒度的補充，未發現足以判定為誤譯的相反描述。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_redline_toughness.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/surge-extension/">← 返回脈衝延伸玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

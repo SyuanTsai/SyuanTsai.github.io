@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="熱忱：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>熱忱：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/zealous/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">熱忱：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>熱忱：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Zealous</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>光環</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/zealous/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#熱忱zealous原始碼依據"><span>03</span>熱忱(Zealous)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="熱忱：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/zealous/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_stamina_cost_multiplier_aura.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="熱忱zealous原始碼依據">
+              熱忱(Zealous)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/zealous/#zealot_stamina_cost_multiplier_aura">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_stamina_cost_multiplier_aura">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_stamina_cost_multiplier_aura</code>；名稱鍵：<code>loc_talent_zealot_stamina_cost_multiplier_aura</code>；描述鍵：<code>loc_talent_zealot_stamina_cost_multiplier_delay_aura_description</code>。
+              </li>
+              <li>
+                節點：<code>node_a943bfdb-5117-4252-a3bb-ecaf704d5b9d</code>；分類：光環；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                talent format_values 將 stamina_cost_multiplier .85 格式化成降低百分比，將設定 stamina_delay 的絕對值作為秒數。zealot_stamina_cost_multiplier_aura 設定值為 .85 及 −.15。
+              </li>
+              <li>
+                buff template 將這兩項值分別掛到 stat_buffs.stamina_cost_multiplier 和 stat_buffs.stamina_regeneration_delay；max_stacks 從 Zealot coop_2.max_stacks 讀取，值為 1。
+              </li>
+              <li>
+                協同 selector 以 coherency_id 對光環去重且優先數字小者；此 aura 的 ID 是 zealot_stamina_cost_multiplier_aura、priority=1。coherency daisy chain 包括自身。
+              </li>
+              <li>
+                模板 related_talents 指向 zealot_toughness_damage_reduction_coherency_improved。Tactical overlay 同時以 buff_template_name 或 related_talents 名稱比對 talent，採用第一個匹配即停止；若先迭代到恩賜定義，overlay 可能顯示錯誤標題或描述。這是顯示 metadata 疑點，不改變此 template 的耐力 stat buffs。
+              </li>
+              <li>
+                接收端若帶有 prevent_coherency_buffs_from_other_players keyword，通用 coherency selector 只採用同一位玩家來源的 aura；這是接收端例外，本次三個 Zealot aura 定義沒有賦予該 keyword。
+              </li>
+              <li>
+                Stamina.drain 與 drain_pecentage 均將消耗乘 stamina_cost_multiplier；Stamina.update 把 regeneration_delay 與 stat 加算，通過等待時間後才依每秒速率恢復。
+              </li>
+              <li>
+                tactical_overlay 的 buff lookup 會以 buff 名或 related_talents 比對；此處 related_talents 指向恩賜，因此可能造成顯示對應疑點。未做 UI 實測，不將其視為光環效果錯誤。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L860-L883">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：860–883</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L99-L102">scripts/settings/talent/talent_settings_zealot.lua：99–102</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L319-L328">scripts/settings/talent/talent_settings_zealot.lua：319–328</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3408-L3425">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：3408–3425</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L188-L195">scripts/extension_systems/coherency/coherency_system.lua：188–195</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311">scripts/extension_systems/coherency/unit_coherency_extension.lua：256–311</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/hud/elements/tactical_overlay/hud_element_tactical_overlay.lua#L393-L449">scripts/ui/hud/elements/tactical_overlay/hud_element_tactical_overlay.lua：393–449</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stamina.lua#L14-L60">scripts/utilities/attack/stamina.lua：14–60</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stamina.lua#L121-L148">scripts/utilities/attack/stamina.lua：121–148</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L860-L883">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：860–883</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1450-L1476">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1450–1476</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                消耗 20 點耐力的動作只套用倍率 0.85 時會消耗 17 點；此為倍率的隔離算例。
+              </li>
+              <li>
+                若某動作原恢復延遲為 0.50 秒，單獨加上 −0.15 秒修正後是 0.35 秒。
+              </li>
+              <li>
+                耐力算例未計其他裝備或天賦；恢復暫停狀態仍可阻止恢復。
+              </li>
+              <li>
+                related_talents 的對應疑點只記錄於技術文件，不當作已確認的玩家端錯誤。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>2b5c13bc</code>。
+              </li>
+              <li>
+                繁中寫「耐力消耗變為{stamina_cost_multiplier:%s}」，英文為帶符號的 Stamina Cost；固定來源會格式化為 −15%。機制為消耗乘 .85，但尚未確認該 Build 實際代入的文字，故將「變為」的措辭問題列為待核，不當成已完成的遊戲顯示勘誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/aura/zealot_stamina_cost_multiplier_aura.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/9e356573-f707-473e-8a64-943ae670aeeb">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/zealous/">← 返回熱忱玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

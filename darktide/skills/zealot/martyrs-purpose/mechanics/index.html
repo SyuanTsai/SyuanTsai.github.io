@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="殉道者之願：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>殉道者之願：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/martyrs-purpose/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">殉道者之願：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>殉道者之願：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Martyr's Purpose</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/martyrs-purpose/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#殉道者之願martyrs-purpose原始碼依據"><span>03</span>殉道者之願(Martyr's Purpose)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="殉道者之願：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/martyrs-purpose/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_restore_stealth_cd_on_damage.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="殉道者之願martyrs-purpose原始碼依據">
+              殉道者之願(Martyr&#39;s Purpose)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/martyrs-purpose/#zealot_restore_stealth_cd_on_damage">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_restore_stealth_cd_on_damage">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_restore_stealth_cd_on_damage</code>；名稱鍵：<code>loc_talent_zealot_damage_taken_restores_cd</code>；描述鍵：<code>loc_talent_zealot_damage_taken_restores_cd_new_description</code>。
+              </li>
+              <li>
+                節點：<code>node_5a6a015e-77a8-4675-a51b-7fd233eb1b26</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦將 passive buff zealot_cooldown_based_on_health 套用在玩家。Buff 由伺服器保存 HealthExtension 與 AbilityExtension，timer 初始為最新 fixed time +1。
+              </li>
+              <li>
+                每次 timer 到期，讀取 current_health_percent，計算 multiplier=clamp((1-health_percent)/(1-0.25),0,1)，將 0.5×multiplier 直接 restore_ability_resource(&#39;combat_ability&#39;)，再把 timer 加 1 秒。低於 25% 後 clamp 至 1，最高額外回充 0.5 資源/秒。
+              </li>
+              <li>
+                此機制不是 on_damage proc；它以目前生命比例持續評估，所以傷害只會透過降低生命值間接提高回充，治療則降低額外回充。
+              </li>
+              <li>
+                自然回充另由 PlayerUnitAbilityExtension 運作。下列時間例假設自然值 1 resource/s 且 buff 每個週期按時執行；實際增益、暫停、上限與 fixed update 會影響時長。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L632-L656">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：632–656</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L548-L552">scripts/settings/talent/talent_settings_zealot.lua：548–552</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L2512-L2549">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：2512–2549</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L773-L875">scripts/extension_systems/ability/player_unit_ability_extension.lua：773–875</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461">scripts/extension_systems/ability/player_unit_ability_extension.lua：1437–1461</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L632-L656">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：632–656</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L973-L999">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：973–999</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>冷卻算例</strong>：生命穩定在 50%、自然回充正常時，每秒合計 1 + 0.5 × 0.5 ÷ 0.75 ≈ 1.333 秒進度，30 秒技能約 22.5 秒回滿；生命在 25% 以下時為 30 ÷ 1.5 = 20 秒。實際按秒結算，可能略有時間差。
+              </li>
+              <li>
+                天賦值只表示額外回充；實際總回充還要加自然恢復及其他冷卻修正。
+              </li>
+              <li>
+                計時器每秒取樣，因此生命剛跨過門檻的效果不一定在同一畫格即時套用。
+              </li>
+              <li>
+                inventory 的繁中描述說明以失去生命值為依據；source 顯示其運作不是按單次受擊的傷害量直接換算冷卻，二者語義並無直接衝突，先不判勘誤。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>62f53f3a</code>。
+              </li>
+              <li>
+                同一hash的繁中與英文作用方向相符；補足觸發、疊層、恢復量與實際計算，不把原文省略當錯誤。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_restore_stealth_cd_on_damage.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/9e0abda0-3593-44eb-8ca8-9a7f282bcfd8">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/martyrs-purpose/">← 返回殉道者之願玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

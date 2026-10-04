@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="亞空間爆發：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>亞空間爆發：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/warp-rupture/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">亞空間爆發：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>亞空間爆發：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Warp Rupture</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/psyker/warp-rupture/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#亞空間爆發warp-rupture原始碼依據"><span>03</span>亞空間爆發(Warp Rupture)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="亞空間爆發：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/psyker/warp-rupture/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_discharge_damage_debuff.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="亞空間爆發warp-rupture原始碼依據">
+              亞空間爆發(Warp Rupture)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/warp-rupture/#psyker_discharge_damage_debuff">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜<a href="/darktide/skills/psyker/localization-comparison/#psyker_discharge_damage_debuff">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>psyker_discharge_damage_debuff</code>；名稱鍵：<code>loc_talent_psyker_shout_damage_per_warp_charge</code>；描述鍵：<code>loc_talent_psyker_discharge_damage_debuff_description</code>。
+              </li>
+              <li>
+                節點：<code>node_685300ac-9564-437d-9611-de94d66ec880</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                命中目標時，尖嘯特殊規則對目標施加 psyker_discharge_damage_debuff。模板 max_stacks=1、持續8秒，stat_buffs.damage=-0.1 且 damage_taken_multiplier=1.1。天賦文字把這兩個倍率呈現為目標傷害降低10%和承受傷害提高10%。這兩項影響目標攻防不同欄位，不能只說成單一「受到傷害增加」效果。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L376-L409">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：376–409</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L128-L132">scripts/settings/talent/talent_settings_psyker.lua：128–132</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L446-L455">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：446–455</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_psyker_shout.lua#L108-L111">scripts/extension_systems/ability/actions/action_psyker_shout.lua：108–111</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_psyker_shout.lua#L179-L185">scripts/extension_systems/ability/actions/action_psyker_shout.lua：179–185</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L376-L409">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：376–409</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L542-L565">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：542–565</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                忽略其它增傷/減傷；以目標原本造成100點傷害、承受100點傷害作示意。 造成傷害100×0.9=90；受到傷害100×1.1=110。 目標對玩家的示例傷害為90，玩家對該目標的示例傷害為110，效果維持8秒。
+              </li>
+              <li>
+                示例只展示兩個倍率本身；實際戰鬥結果還會受目標護甲、傷害類型與其它統計欄位影響。
+              </li>
+              <li>
+                程式碼顯示buff上限1層；重新計時/覆蓋時的精確計時邊界未在此做遊戲內測試。
+              </li>
+              <li>
+                文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>c5561004</code>。
+              </li>
+              <li>
+                同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_discharge_damage_debuff.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/warp-rupture/">← 返回亞空間爆發玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

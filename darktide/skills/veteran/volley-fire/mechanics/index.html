@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="火力齊射：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>火力齊射：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/volley-fire/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">火力齊射：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>火力齊射：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Volley Fire</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/volley-fire/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#火力齊射volley-fire原始碼依據"><span>03</span>火力齊射(Volley Fire)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#百分比與實際傷害增幅"><span>06</span>百分比與實際傷害增幅</a></li>
+            <li><a href="#算例條件與待確認事項"><span>07</span>算例條件與待確認事項</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="火力齊射：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/volley-fire/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_stance.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="火力齊射volley-fire原始碼依據">
+              火力齊射(Volley Fire)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/volley-fire/#veteran_combat_ability_stance">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_combat_ability_stance</code>；名稱鍵：<code>loc_talent_veteran_2_combat_ability</code>；描述鍵：<code>loc_ability_veteran_base_ability_desc</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L11-L36">節點</a>：<code>start</code>，花費 0 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L206-L247">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <p>
+              職業基礎天賦與起始節點都使用 veteran_combat_ability_stance。實際基礎 buff 取 combat_ability_base 的0.15／0.15／0.5，不能用format_values引用的0.25直接描述起始效果。姿態主buff另套散布-.38、後座-.24、晃動乘.4及免疫關鍵字；退出條件是disabled，不是換武器。施放切副武器槽，但沒有掛載自動裝填特殊規則。
+            </p>
+            <p>
+              能力成本30、每秒自然回1，沒有pause_cooldown_settings，動作開始即消耗；所以冷卻與6秒姿態重疊。ranged_damage進一般傷害加算階段；ranged_weakspot_damage只加在弱點finesse部分。玩家的兩個傷害例子各自固定前一階段輸入，並非把兩者結果直接相加的完整武器公式。
+            </p>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L206-L247">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 206–247 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L7-L24">scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 7–24 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L65-L72">scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 65–72 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L73-L100">scripts/settings/talent/talent_settings_veteran.lua，第 73–100 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L85-L109">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 85–109 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L202-L207">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 202–207 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L296-L315">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 296–315 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua#L91-L112">scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua，第 91–112 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua#L180-L198">scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua，第 180–198 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L284-L320">scripts/utilities/attack/damage_calculation.lua，第 284–320 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L715-L782">scripts/utilities/attack/damage_calculation.lua，第 715–782 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L826-L869">scripts/extension_systems/ability/player_unit_ability_extension.lua，第 826–869 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_ability_base.lua#L25-L43">scripts/extension_systems/weapon/actions/action_ability_base.lua，第 25–43 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/veteran_combat_ability.lua#L90-L106">scripts/settings/ability/ability_templates/veteran_combat_ability.lua，第 90–106 行</a>
+              </li>
+            </ul>
+            <h2 id="百分比與實際傷害增幅">
+              百分比與實際傷害增幅
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>程式推導</strong>：ranged_damage=.15 與 ranged_weakspot_damage=.15 作用位置不同；一般傷害先結算，再計算並加回 finesse。不可把兩項合成「整筆弱點傷害+30%」，也不能只用1.15代表能力總增幅。
+                </p>
+              </li>
+              <li>
+                <p>
+                  玩家弱點例只隔離 ranged_weakspot_damage 這一項：保持上游條件與 B=100、F=40 不變、無暴擊或其他 finesse 加成，140→146，相對增幅6/140≈4.29%。它不是施放前後的完整對照；完整對照須重算 ranged_damage 對 B 及 F 的影響，包括 finesse 的 max 與下限分支。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L296-L323">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 296–323 行</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L60-L95">scripts/utilities/attack/damage_calculation.lua，第 60–95 行</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782">scripts/utilities/attack/damage_calculation.lua，第 672–782 行</a>
+                </p>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/start/veteran_combat_ability_stance.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922922455">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/volley-fire/">← 返回火力齊射玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

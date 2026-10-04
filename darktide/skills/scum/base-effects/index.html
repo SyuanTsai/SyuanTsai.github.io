@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="巢都渣滓：角色基礎效果 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>巢都渣滓：角色基礎效果 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/base-effects/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">巢都渣滓：角色基礎效果</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>巢都渣滓：角色基礎效果</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="巢都渣滓：角色基礎效果">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/scum/">← 返回巢都渣滓</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/BASE_EFFECTS.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="巢都渣滓基礎效果">
+              巢都渣滓基礎效果
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/">返回巢都渣滓天賦</a>｜<a href="/darktide/skills/scum/source-index/">來源索引</a>
+            </p>
+            <p>
+              以下效果由角色基礎配置提供；戰鬥技能、閃擊與光環可依配裝替換。
+            </p>
+            <p>
+              <a id="broker_ability_focus"></a>
+            </p>
+            <h2 id="亡命之徒desperado基礎戰鬥能力">
+              亡命之徒(Desperado)：基礎戰鬥能力
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>持續與冷卻</strong>：使用後切換至遠程武器並進入「專注」10 秒；基礎為 1 次充能，冷卻 45 秒。專注期間冷卻暫停。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>移動與防護</strong>：專注期間衝刺速度提高 20%，衝刺不消耗耐力；遠程攻擊會把你視為正在閃避，並免疫壓制。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>韌性與裝填</strong>：啟用時恢復韌性並裝滿彈匣；專注期間裝填不消耗備用彈藥，結束時彈匣依正常備用彈藥量重新結算。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>冷卻算例</strong>：未受其他修正時，10 秒專注結束後再等 45 秒，合計 10 + 45 = 55 秒可再次使用。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/scum/desperado/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="broker_blitz_flash_grenade"></a>
+            </p>
+            <h2 id="閃光彈blinder基礎閃擊">
+              閃光彈(Blinder)：基礎閃擊
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>投擲效果</strong>：快速投出閃光彈，碰撞後引爆；爆炸半徑 3.5 公尺，內圈 2.25 公尺的踉蹌較強。爆炸本身不造成生命傷害，投射物直擊另計。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>數量與補充</strong>：最多 3 枚；未滿時，每累積 20 次在 12.5 公尺內的擊殺補回 1 枚，近戰與遠程擊殺都可計入。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>補充算例</strong>：目前 2 枚、已累積 19 次合格擊殺，再擊殺 1 人即可回到 3 枚並將計數歸零；滿額時的擊殺不會繼續增加計數。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>毒針手槍例外</strong>：以毒針手槍命中並追蹤的敵人，在近距離死於毒素時也可計入。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/scum/blinder/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="broker_aura_gunslinger"></a>
+            </p>
+            <h2 id="神射手gunslinger基礎光環">
+              神射手(Gunslinger)：基礎光環
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>分享方式</strong>：你或具有此光環的協同隊友撿取彈藥時，向該撿取者協同中的成員分享補給；每人依自己的武器容量換算，不是把撿取者拿到的發數平均分配。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>小彈藥算例</strong>：每名成員依自己的備用彈藥上限 × 15% × 5% 計算，無條件進位。上限 200 發者得到 ⌈1.5⌉ = 2 發，上限 100 發者得到 ⌈0.75⌉ = 1 發。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>大彈藥與彈藥箱</strong>：大彈藥原補 50%，上限 200 發時分享 200 × 50% × 5% = 5 發。一般部署彈藥箱以備用彈藥上限加彈匣容量計算；200 + 30 時，分享 ⌈230 × 5%⌉ = 12 發，仍受缺額限制。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>重複套用限制</strong>：相同光環不重複套用；精進神射手將比例提高至 10%，取代基本 5%。分享結果不會再觸發連鎖分享。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/scum/gunslinger/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="broker_passive_improved_sprint_dodge"></a>
+            </p>
+            <h2 id="迅如疾風like-the-wind基礎被動">
+              迅如疾風(Like the Wind)：基礎被動
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>衝刺閃避</strong>：判定角度由 70° 降至 55°；敵人從較偏側面的方向攻擊時，更容易被判定為你已用衝刺閃避。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>耐力耗盡後</strong>：進入衝刺加時期間仍可觸發衝刺閃避判定。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>連續閃避</strong>：在閃避距離開始衰減前，額外多 1 次有效連續閃避；總數依武器的閃避設定而異。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>角度算例</strong>：來襲方向與前後朝向的較小夾角為 60° 時，原本未超過 70° 門檻；現在超過 70° − 15° = 55°，可符合側向衝刺的閃避條件。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/scum/like-the-wind/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="broker_stimm_description_talent"></a>
+            </p>
+            <h2 id="財閥專員cartel-special專用興奮劑">
+              財閥專員(Cartel Special)：專用興奮劑
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>調配方式</strong>：在專用興奮劑配方中選擇效果；配方有獨立的 30 點額度，與一般天賦分開。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>裝備條件</strong>：至少選擇一項配方，才會取得專用興奮劑。配方的效果會在使用興奮劑後生效。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>配方內容</strong>：可搭配攻速、威力、韌性與戰鬥技能恢復等效果；詳細數值見<a href="/darktide/skills/scum/equip-cartel-special/#broker_stimm_activation_talent">興奮劑配方</a>。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/scum/cartel-special/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+            <p>
+              <a id="broker_syringe"></a>
+            </p>
+            <h2 id="專用興奮劑充能">
+              專用興奮劑充能
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>裝備條件</strong>：選取任一專用興奮劑配方後取得，基本可儲存 1 次使用次數；使用時消耗該次數。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>藥效時間</strong>：注射後所選配方生效 15 秒；延長藥效增加 5 秒。藥效期間暫停這支興奮劑的自然恢復。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>恢復時間</strong>：依配方總花費由 15～75 秒變動，藥效結束才開始計算；例如花費 15 點時，恢復時間為 ⌈15 + 60 × (15 − 1) ÷ 29⌉ = 44 秒，含 15 秒藥效共 59 秒。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>戰鬥技能搭配</strong>：化學性依賴可將專用興奮劑的配方效果分享給範圍內隊友；持續時間依該能力的場域與延續效果決定。
+                </p>
+              </li>
+            </ul>
+            <p>
+              <a href="/darktide/skills/scum/broker-syringe/mechanics/">原始碼依據與算例條件</a>
+            </p>
+            <hr>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/">← 返回巢都渣滓技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

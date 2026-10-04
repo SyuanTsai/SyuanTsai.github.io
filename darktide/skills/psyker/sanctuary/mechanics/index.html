@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="庇護所：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>庇護所：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/psyker/sanctuary/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/psyker/">靈能者</a></li>
+            <li aria-current="page">庇護所：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>庇護所：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Sanctuary</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>能力</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/psyker/sanctuary/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#庇護所sanctuary原始碼依據"><span>03</span>庇護所(Sanctuary)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="庇護所：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/psyker/sanctuary/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_boost_allies_in_sphere.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="庇護所sanctuary原始碼依據">
+              庇護所(Sanctuary)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/psyker/sanctuary/#psyker_boost_allies_in_sphere">返回玩家說明</a>｜<a href="/darktide/skills/psyker/source-index/">技術索引</a>｜<a href="/darktide/skills/psyker/localization-comparison/#psyker_boost_allies_in_sphere">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>psyker_boost_allies_in_sphere</code>；名稱鍵：<code>loc_talent_psyker_force_field_grants_toughness</code>；描述鍵：<code>loc_talent_psyker_force_field_grants_toughness_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_d64a57d2-05d8-4077-92a2-d12069d8d628</code>；分類：能力；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                天賦啟用 Sanctuary 特殊規則，但ForceFieldUnitExtension只在同時偵測到 sphere_shield 時指定進場buff和消散buff，因此實際需選念力穹頂。進場buff每秒按 shield_toughness_ally*dt 恢復韌性，參數0.1表示每秒最大韌性10%。進場單位包含所有有效玩家，無隊主排除；消散時只對當時仍記在 _players_inside 的玩家施加end buff。end buff duration=5、toughness_damage_taken_multiplier=0.5，即韌性傷害減半。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1611-L1642">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1611–1642</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L266-L280">scripts/settings/talent/talent_settings_psyker.lua：266–280</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/force_field/psyker_force_field_unit_extension.lua#L88-L141">scripts/extension_systems/force_field/psyker_force_field_unit_extension.lua：88–141</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/force_field/psyker_force_field_unit_extension.lua#L362-L418">scripts/extension_systems/force_field/psyker_force_field_unit_extension.lua：362–418</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/force_field/psyker_force_field_unit_extension.lua#L420-L450">scripts/extension_systems/force_field/psyker_force_field_unit_extension.lua：420–450</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2540-L2569">scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2540–2569</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1611-L1642">scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1611–1642</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1132-L1155">scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1132–1155</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                角色最大韌性100，於球形護盾中完整停留3秒且沒有溢補。 每秒恢復100×10%=10；3秒共30。 最多恢復30點韌性；離開前仍在圈內者在護盾消散時取得5秒、韌性承傷減半。
+              </li>
+              <li>
+                恢復只在球形護盾內；程式碼明確要求球形護盾形狀，所以不能直接擴寫成普通前方護盾牆也生效。
+              </li>
+              <li>
+                韌性恢復可能受到上限/溢補等一般規則影響；算例假設沒有溢補。
+              </li>
+              <li>
+                「盟友」的遊戲文案不包含細節；source遍歷進入球形護盾的玩家，包含施法者若其留在圈內。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>fe5dbdd8</code>。
+              </li>
+              <li>
+                同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_boost_allies_in_sphere.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/psyker/sanctuary/">← 返回庇護所玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

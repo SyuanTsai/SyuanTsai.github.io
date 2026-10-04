@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="有備無患：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>有備無患：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/always-prepared/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">有備無患：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>有備無患：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Always Prepared</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/always-prepared/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#有備無患always-prepared原始碼依據"><span>03</span>有備無患(Always Prepared)</a></li>
+            <li><a href="#原始碼依據"><span>04</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>05</span>算例條件與待確認事項</a></li>
+            <li><a href="#遊戲本體繁中對照"><span>06</span>遊戲本體繁中對照</a></li>
+            <li><a href="#圖示來源"><span>07</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="有備無患：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/always-prepared/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_weapon_switch_replenish_ammo.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="有備無患always-prepared原始碼依據">
+              有備無患(Always Prepared)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/always-prepared/#veteran_weapon_switch_replenish_ammo">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_weapon_switch_replenish_ammo</code>；名稱鍵：<code>loc_talent_veteran_weapon_switch_replenish_ammo</code>；描述鍵：<code>loc_talent_veteran_weapon_switch_replenish_ammo_description</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1863-L1887">節點</a>：<code>keystone_modifier</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2873-L2888">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <p>
+              只有切到 slot_secondary 且 ranged_stacks&gt;0 才補彈。公式為 ceil(missing_ammo_in_clip * .33 * (ranged_stacks/10))；計算的是目前彈匣缺口，不是備用彈藥總量。隨後 Ammo.transfer_from_reserve_to_clip 從 reserve 移轉，受缺口、reserve 和 clip cap 約束；本次切換後 ranged_stacks 清零。
+            </p>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2873-L2887">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2873–2887 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2985-L3024">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2985–3024 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L202-L220">scripts/utilities/ammo.lua，第 202–220 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L428-L465">scripts/utilities/ammo.lua，第 428–465 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+            </ul>
+            <h2 id="遊戲本體繁中對照">
+              遊戲本體繁中對照
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  文字來源：本機Steam Build <code>25606770</code>，<code>content/localization/ui</code>，2026-10-01擷取；不是MOD文字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  語系鍵：<code>loc_talent_veteran_weapon_switch_replenish_ammo_description</code>；hash：<code>8e3d6e40</code>；繁中entry_index：<code>9200</code>；英文entry_index：<code>9201</code>。以資源＋hash配對，已確認兩語系此hash各一筆。
+                </p>
+              </li>
+              <li>
+                <p>
+                  繁中問題片段：「為彈藥儲備中補充」；同版英文對照片段：<code>in your Clip from your Reserve</code>。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  判定：<strong>明確繁中描述錯誤</strong>。補給方向錯譯：英文明確為Reserve→Clip，繁中把目的地寫成彈藥儲備。實作使用transfer_from_reserve_to_clip；每層3.3%與十層33%的比例相符，不列為數值錯誤。
+                </p>
+              </li>
+              <li>
+                <p>
+                  本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="/darktide/skills/veteran/localization-comparison/">完整比對範圍與版本限制</a>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2873-L2888">公開依據：scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第2873–2888行</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2985-L2994">公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第2985–2994行</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L428-L465">公開依據：scripts/utilities/ammo.lua，第428–465行</a>
+                </p>
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/keystone_modifier/veteran_weapon_switch_replenish_ammo.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/842c2a40-8bb4-45fa-a1e2-672fedf80d78">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/always-prepared/">← 返回有備無患玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

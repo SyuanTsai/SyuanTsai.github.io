@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="兀鷲閃避：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>兀鷲閃避：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/scum/vultures-dodge/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/scum/">巢都渣滓</a></li>
+            <li aria-current="page">兀鷲閃避：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>兀鷲閃避：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Vulture's Dodge</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/scum/vultures-dodge/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#兀鷲閃避vultures-dodge原始碼依據"><span>03</span>兀鷲閃避(Vulture's Dodge)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="兀鷲閃避：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/scum/vultures-dodge/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_dodge_on_ranged_crit.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="兀鷲閃避vultures-dodge原始碼依據">
+              兀鷲閃避(Vulture&#39;s Dodge)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/scum/vultures-dodge/#broker_keystone_vultures_mark_dodge_on_ranged_crit">返回玩家說明</a>｜<a href="/darktide/skills/scum/source-index/">技術索引</a>｜<a href="/darktide/skills/scum/localization-comparison/#broker_keystone_vultures_mark_dodge_on_ranged_crit">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>broker_keystone_vultures_mark_dodge_on_ranged_crit</code>；名稱鍵：<code>loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit</code>；描述鍵：<code>loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_7c3d0b39-9457-4c3e-a4f6-3334c6d07b96</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                proc buff 監聽 on_hit 並使用 CheckProcFunctions.on_crit_ranged；該 check 要求 params.is_critical_strike 且 attack_type=ranged 或 damage_profile.count_as_ranged_attack。
+              </li>
+              <li>
+                觸發時加入 broker_vultures_mark_dodge_on_ranged_crit_dodge_buff。此 buff max_stacks=1、duration=1、refresh_duration_on_stack=true，並掛 keywords.count_as_dodge_vs_melee 與 keywords.count_as_dodge_vs_ranged。
+              </li>
+              <li>
+                Dodge.is_dodging 對 attack_type=melee 或 incapacitating_grab 使用 melee dodge rules，因此 count_as_dodge_vs_melee 也覆蓋擒抱；attack_type=ranged 則查 count_as_dodge_vs_ranged。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2450-L2464">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2450–2464</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L451-L453">scripts/settings/talent/talent_settings_broker.lua：451–453</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3452-L3477">scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3452–3477</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L336-L344">scripts/settings/buff/helper_functions/check_proc_functions.lua：336–344</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua#L100-L127">scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua：100–127</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L461">scripts/extension_systems/buff/buff_extension_base.lua：434–461</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2450-L2464">scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2450–2464</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1681-L1703">scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1681–1703</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>時間算例</strong>：第 0 秒發生遠程暴擊時，判定 buff 為 1 秒；若第 0.6 秒再次遠程暴擊，計時重設，效果延至第 1.6 秒。
+              </li>
+              <li>
+                <strong>判定算例</strong>：buff 活躍時，Dodge.is_dodging 對 melee、incapacitating_grab 與 ranged 類型會由對應 keyword 回傳為閃避。
+              </li>
+              <li>
+                實際攻擊是否被閃避，取決於該攻擊是否呼叫並採用 Dodge.is_dodging 判定；此 buff 本身不改變攻擊傷害或移動狀態。
+              </li>
+              <li>
+                此 buff 沒有 count_as_dodge_vs_all；它只命中 Dodge.is_dodging 的 melee、incapacitating_grab（使用 melee 規則）及 ranged 分支，其他攻擊類型若不採這些分支不會因此算作閃避。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>c8880e0b</code>。
+              </li>
+              <li>
+                繁中與英文稱「所有攻擊」視為閃避；本版 Dodge.is_dodging 的實際 keyword 分支覆蓋 melee、incapacitating_grab（依 melee 規則）及 ranged，並未設 count_as_dodge_vs_all，故解讀依該函式實際查詢的攻擊類型。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_vultures_mark_dodge_on_ranged_crit.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/scum/vultures-dodge/">← 返回兀鷲閃避玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

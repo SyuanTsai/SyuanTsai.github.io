@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="武器專家：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>武器專家：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/weapons-specialist/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">武器專家：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>武器專家：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Weapons Specialist</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/weapons-specialist/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#武器專家weapons-specialist原始碼依據"><span>03</span>武器專家(Weapons Specialist)</a></li>
+            <li><a href="#觸發層數與公式"><span>04</span>觸發、層數與公式</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#遊戲本體繁中對照"><span>07</span>遊戲本體繁中對照</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="武器專家：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/weapons-specialist/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_weapon_switch_passive.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="武器專家weapons-specialist原始碼依據">
+              武器專家(Weapons Specialist)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/veteran/weapons-specialist/#veteran_weapon_switch_passive">返回玩家說明</a>｜<a href="/darktide/skills/veteran/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>veteran_weapon_switch_passive</code>；名稱鍵：<code>loc_talent_veteran_weapon_switch</code>；描述鍵：<code>loc_talent_veteran_weapon_switch_new_description</code>。
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1811-L1839">節點</a>：<code>keystone</code>，花費 1 點；<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2717-L2826">天賦定義</a>。
+              </li>
+              <li>
+                名稱對應沿用翻譯表；未進行遊戲內驗證。
+              </li>
+            </ul>
+            <h2 id="觸發層數與公式">
+              觸發、層數與公式
+            </h2>
+            <ul>
+              <li>
+                on_kill 讀取當下 inventory_component.wielded_slot，不檢查 params.attack_type。slot_primary 累積 ranged_stacks，最多 10；slot_secondary 累積 melee_stacks，最多 1。對應 on_wield 依儲存層數建立增益後清空儲存量。沒有擊殺層數時，with_stacks 的 1..n 迴圈不會建立增益。
+              </li>
+              <li>
+                遠程增益 duration=10、max_stacks=max_stacks_cap=10；每層 ranged_attack_speed=.02、reload_speed=.02。conditional ranged_critical_strike_chance=.33 同樣經 Buff._calculate_stat_buffs 的逐層迴圈合併，<strong>不是整個效果固定 +33 個百分點</strong>。n 層增加 .33n，CriticalStrike.chance 把總機率限制於 0..1。
+              </li>
+              <li>
+                非自動射擊在 ActionShoot 啟動時判定暴擊；自動射擊進入 prepare_shooting 時判定。HitScan 先讀取並結算暴擊，再發送 on_shoot；該事件令 shot=true，使下一次屬性彙整移除額外爆擊率。因此首次射擊能使用此機率；某些自動武器會保留已擲出的暴擊連發結果，不能把「機率加成移除」解讀為後續所有子彈必定非暴擊。
+              </li>
+              <li>
+                遠程／近戰增益各在離開 slot_secondary／slot_primary 時結束。近戰 buff max_stacks=1、duration=10，melee_attack_speed=.15、dodge_speed_multiplier=1.1、dodge_distance_modifier=.1。
+              </li>
+              <li>
+                動作速度加成與同階段速度修正相加；算例假定沒有其他速度加成，動作時間以原時間除以速度倍率。閃避距離原值 3 公尺則為 3×1.1=3.3 公尺。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L46-L50">scripts/settings/talent/talent_settings_veteran.lua，第 46–50 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2717-L2825">scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2717–2825 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2912-L3045">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2912–3045 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3082-L3129">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3082–3129 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3145-L3192">scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3145–3192 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L799-L804">scripts/settings/buff/buff_settings.lua，第 799–804 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L863-L865">scripts/settings/buff/buff_settings.lua，第 863–865 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L939-L961">scripts/settings/buff/buff_settings.lua，第 939–961 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L404-L410">scripts/extension_systems/buff/buffs/buff.lua，第 404–410 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L747">scripts/extension_systems/buff/buffs/buff.lua，第 689–747 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/critical_strike.lua#L13-L39">scripts/utilities/attack/critical_strike.lua，第 13–39 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_shoot.lua#L149-L159">scripts/extension_systems/weapon/actions/action_shoot.lua，第 149–159 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_shoot.lua#L594-L615">scripts/extension_systems/weapon/actions/action_shoot.lua，第 594–615 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_shoot.lua#L997-L1068">scripts/extension_systems/weapon/actions/action_shoot.lua，第 997–1068 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_shoot_hit_scan.lua#L150-L219">scripts/extension_systems/weapon/actions/action_shoot_hit_scan.lua，第 150–219 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L412-L415">scripts/extension_systems/buff/buff_extension_base.lua，第 412–415 行</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/action_handler.lua#L356-L429">scripts/utilities/action/action_handler.lua，第 356–429 行</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+              </li>
+              <li>
+                靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+              </li>
+              <li>
+                個別武器的暴擊連發長度與切換當影格的事件順序，需以該武器遊戲實測補驗；上述算例計算的是暴擊判定機率，不保證一輪多發射擊全數重新判定。
+              </li>
+            </ul>
+            <h2 id="遊戲本體繁中對照">
+              遊戲本體繁中對照
+            </h2>
+            <ul>
+              <li>
+                <p>
+                  文字來源：本機Steam Build <code>25606770</code>，<code>content/localization/ui</code>，2026-10-01擷取；不是MOD文字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  語系鍵：<code>loc_talent_veteran_weapon_switch_new_description</code>；hash：<code>4ead394a</code>；繁中entry_index：<code>5119</code>；英文entry_index：<code>5119</code>。以資源＋hash配對，已確認兩語系此hash各一筆。
+                </p>
+              </li>
+              <li>
+                <p>
+                  繁中問題片段：「每層效果使你的下一次射擊獲得」；同版英文對照片段：<code>as well as {ranged_crit_chance:%s} Ranged Critical Hit Chance on your next shot</code>。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+                </p>
+              </li>
+              <li>
+                <p>
+                  判定：<strong>明確繁中描述錯誤</strong>。修飾範圍錯誤：英文next shot限定爆擊率，繁中把三項效果一併限定為下一次射擊。實作只有conditional crit讀取shot；attack/reload為常駐stat_buffs，受buff本身期間限制。
+                </p>
+              </li>
+              <li>
+                <p>
+                  本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="/darktide/skills/veteran/localization-comparison/">完整比對範圍與版本限制</a>。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3082-L3129">公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第3082–3129行</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L46-L50">公開依據：scripts/settings/talent/talent_settings_veteran.lua，第46–50行</a>
+                </p>
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/keystone/veteran_weapon_switch_passive.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/weapons-specialist/">← 返回武器專家玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

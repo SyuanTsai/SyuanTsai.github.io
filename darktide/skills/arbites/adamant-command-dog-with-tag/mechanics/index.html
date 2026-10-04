@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="電子獒犬標記指令：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>電子獒犬標記指令：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/arbites/adamant-command-dog-with-tag/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/arbites/">法務官</a></li>
+            <li aria-current="page">電子獒犬標記指令：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>電子獒犬標記指令：機制與原始碼依據</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>基礎效果</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/arbites/adamant-command-dog-with-tag/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#電子獒犬標記指令原始碼依據"><span>03</span>電子獒犬標記指令</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例與待確認事項"><span>06</span>算例與待確認事項</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="電子獒犬標記指令：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/arbites/adamant-command-dog-with-tag/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Arbites/adamant_command_dog_with_tag.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="電子獒犬標記指令原始碼依據">
+              電子獒犬標記指令：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/arbites/base-effects/#adamant_command_dog_with_tag">返回基礎效果</a>｜<a href="/darktide/skills/arbites/source-index/">技術索引</a>
+            </p>
+            <ul>
+              <li>
+                固定來源：Release 1.13.1／<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                基礎天賦：<code>adamant_command_dog_with_tag</code>；不占可選天賦點數。
+              </li>
+              <li>
+                證據程度：原始碼確認與程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                基礎天賦本身只有名稱／描述，但生效流程由職業專屬 smart tag 系統處理。HUD 讀 companion_command_tap=single 或 double_tap，傳入 is_double_tag；SmartTagExtension 依 archetype=adamant 選取 resolver，要求 enemy breed 且存在 companion，回傳 enemy_companion_target。
+              </li>
+              <li>
+                enemy_companion_target 使用 unit_threat_companion 標記、lifetime=25，double_tag 群組上限 1。CompanionTagManagerBaseExtension 每次 update 查擁有者的該類標記；DogExtension 將存活有效目標寫入 whistle.current_target，移動平台會取消；未 aggro 的 daemonhost 不設定新目標。
+              </li>
+              <li>
+                選敵器先處理主人受制後的救援，再讀 whistle.current_target；需目標存活且取得攻擊 token。無效時清除，沒有有效指令目標才走戰鬥中的一般評分選敵。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/adamant_archetype.lua#L66-L68">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L30-L34">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/hud/elements/smart_tagging/hud_element_smart_tagging.lua#L246-L303">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/smart_tag/smart_tag_extension.lua#L169-L194">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/smart_tag/smart_tag_extension.lua#L238-L259">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/smart_tag/double_tag_settings.lua#L3-L12">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/smart_tag/double_tag/adamant_double_tag_settings.lua#L3-L18">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/smart_tag/double_tag/adamant_double_tag_templates.lua#L9-L20">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/smart_tag/smart_tag_settings.lua#L9-L15">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/companion_tag_manager/companion_tag_manager_base_extension.lua#L25-L50">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/companion_tag_manager/companion_tag_manager_dog_extension.lua#L12-L56">固定版本來源</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/perception/target_selection_templates/companion_dog_target_selection_template.lua#L108-L203">固定版本來源</a>
+              </li>
+            </ul>
+            <h2 id="算例與待確認事項">
+              算例與待確認事項
+            </h2>
+            <ul>
+              <li>
+                指令目標 A 有效時優先追擊 A；改指定 B 後指令群組只保留一個目標。若主人受制且符合救援條件，救援先於這項追擊。
+              </li>
+              <li>
+                單按／連按取決於玩家輸入設定，不指定鍵盤或控制器實體按鍵。標記 25 秒是有效期間上限，不保證電子獒犬在這段期間持續攻擊或抵達目標。
+              </li>
+              <li>
+                救援仍受狀態進入後的 initial_target_disable_cooldown、目標與移動條件限制；未進行遊戲內操作測試。
+              </li>
+              <li>
+                本機文字 Build 25606770 與固定公開來源版本對應為1.13.1。
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/arbites/adamant-command-dog-with-tag/">← 返回電子獒犬標記指令玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

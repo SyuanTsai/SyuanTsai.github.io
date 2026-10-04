@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="熟練解剖者：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>熟練解剖者：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/skitarii/honed-dissector/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/skitarii/">護教軍</a></li>
+            <li aria-current="page">熟練解剖者：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>熟練解剖者：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Honed Dissector</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/skitarii/honed-dissector/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#熟練解剖者honed-dissector原始碼依據"><span>03</span>熟練解剖者(Honed Dissector)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="熟練解剖者：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/skitarii/honed-dissector/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector_max_stacks.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="熟練解剖者honed-dissector原始碼依據">
+              熟練解剖者(Honed Dissector)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/skitarii/honed-dissector/#cryptic_dissector_max_stacks">返回玩家說明</a>｜<a href="/darktide/skills/skitarii/source-index/">技術索引</a>｜<a href="/darktide/skills/skitarii/localization-comparison/#cryptic_dissector_max_stacks">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>cryptic_dissector_max_stacks</code>；名稱鍵：<code>loc_talent_cryptic_dissector_max_stacks</code>；描述鍵：<code>loc_talent_cryptic_dissector_max_stacks_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_dcc243dd-aaf5-41cd-be8c-5db40d46967f</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                talent_settings_cryptic.lua將max_stacks設為6、extra_max_stacks設為2。Definition顯示值計算6+2並設 special_rule cryptic_dissector_extra_max_stacks。
+              </li>
+              <li>
+                cryptic_dissector start_func檢查此rule，把num_max_stacks設為8；cryptic_dissector_stack start_func同步增加max_stacks與max_stacks_cap 2，確保顯示層與外部受控buff的上限一致。被動初始化用num_max_stacks個stack，所以啟用後直接滿8層。stepped表也依6+2生成8層，傷害每層仍為2.5%、韌性承傷倍率第8階為0.80。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1124-L1146">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1124–1146</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1162-L1177">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1162–1177</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L251-L263">scripts/settings/talent/talent_settings_cryptic.lua：251–263</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1369-L1391">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1369–1391</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1488-L1528">scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1488–1528</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1162-L1177">scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1162–1177</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1124-L1146">scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1124–1146</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                靜態推演：6+2=8層；8×2.5%=20%傷害增幅，100點基礎傷害變成120點。韌性承傷倍率為1−0.025×8=0.80，100點原始韌性傷害變成80點。
+              </li>
+              <li>
+                只提高削切協議上限，不提高單層數值，也不更改受傷失層、精英／專家擊殺補層或擊殺韌性恢復規則。
+              </li>
+              <li>
+                傷害算例假設沒有其他傷害修正；韌性算例假設沒有其他減傷。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>52304209</code>。
+              </li>
+              <li>
+                繁中與英文都說明上限提高到8；固定版基礎6層加2層，文字一致。啟用時初始滿層及其既有每層效果是程式補充，不屬誤譯。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_dissector_max_stacks.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/skitarii/honed-dissector/">← 返回熟練解剖者玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

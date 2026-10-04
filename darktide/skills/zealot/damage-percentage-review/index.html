@@ -1,0 +1,1245 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="狂信徒：百分比與傷害比較 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>狂信徒：百分比與傷害比較 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/damage-percentage-review/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">狂信徒：百分比與傷害比較</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>狂信徒：百分比與傷害比較</h1>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技術資料</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#provenance"><span>01</span>來源與版本</a></li>
+            <li><a href="#source-document"><span>02</span>完整資料</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="狂信徒：百分比與傷害比較">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">來源與版本</h2>
+            <p>
+              <a href="/darktide/skills/zealot/">← 返回狂信徒</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/DAMAGE_PERCENTAGE_REVIEW.md">原始 Git 文件 ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4；Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="狂信徒百分比與算例盤點">
+              狂信徒：百分比與算例盤點
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>
+            </p>
+            <p>
+              以下覆蓋 82 個可選節點。每列保留作用對象、實際算例與限制；弱點／暴擊額外傷害不當成整次命中增幅，速率不當成時間減免，固定恢復點數不當成最大值百分比。所有結果為靜態推導，未進行遊戲內測試。
+            </p>
+            <div class="skill-table-scroll" role="region" aria-label="資料表" tabindex="0">
+              <table class="skill-table">
+                <thead>
+                  <tr>
+                    <th>
+                      技能
+                    </th>
+                    <th>
+                      分類
+                    </th>
+                    <th>
+                      本次處理
+                    </th>
+                    <th>
+                      檢查結論
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/immolation-grenade/mechanics/">獻祭手雷</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：假設該難度下，無護甲敵人的單次燃燒基準為 100 點，且沒有其他增傷或減傷，隨機結果為 50% 時造成 100 × 0.5 = 50 點；150% 時則為 100 × 1.5 = 150 點。同條件下，防彈護甲的基準為 75 點，甲殼護甲為 5 點。；計算限制：初次爆炸、站在火焰中的燃燒、離開後的餘火是分開計算的效果。每次傷害與間隔都會變動，不能把上述單次數字直接當成每秒傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/blades-of-faith/mechanics/">信仰之刃</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害與護甲：普通命中、沒有其他修正時，無護甲部位的基準傷害為 585 點；防彈護甲為 585 × 0.8 = 468 點，甲殼護甲的普通命中基準為 0。弱點、暴擊、穿甲與敵人部位會另改變結果，不能把 0 解讀為任何情況都無法傷害重甲敵人。；近戰補充：由你以近戰擊殺精英或專家敵人時，補回 1 把，最多補到 12 把。例如原有 11 把，完成一次合格擊殺後變成 11 + 1 = 12 把。；彈藥補充算例：沒有額外補給倍率時，小型彈藥補給恢復 12 × 15% = 1.8，無條件進位為 2 把；大型彈藥補給為 12 × 50% = 6 把；部署式彈藥箱可補滿。任務的彈藥補給倍率會影響這些數量，最終仍不能超過 12 把。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/stunstorm-grenade/mechanics/">眩暈風暴手雷</a>
+                    </td>
+                    <td>
+                      閃擊
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      範圍算例：只有此天賦修正時，最大半徑為 8 × 1.5 = 12 公尺，近距離區域半徑為 2 × 1.5 = 3 公尺。範圍判定仍會受爆炸位置與遮蔽物影響。；傷害算例：只計電擊的週期傷害，沒有其他修正時，單次對無護甲部位為 8 × 0.5 = 4 點，對防彈護甲為 8 × 1 = 8 點；初次爆炸另計。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/benediction/mechanics/">恩賜</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：原本 100 點韌性傷害，變成 100 × (1 − 15%) = 85 點。若另有獨立計算的 40% 韌性減傷，則為 100 × 0.85 × 0.6 = 51 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/beacon-of-purity/mechanics/">純潔信標</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：若仍保有全部傷口、目前有 10 點腐敗，一次恢復後為 10 − 1.5 = 8.5 點；在沒有新增腐敗的情況下，7 次恢復即可清除這 10 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/zealous/mechanics/">熱忱</a>
+                    </td>
+                    <td>
+                      光環
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      消耗算例：原本消耗 20 點耐力的動作，變成 20 × (1 − 15%) = 17 點。這是消耗降低 15%，不是只消耗原本的 15%。；恢復算例：若原本停止消耗後要等 0.50 秒才開始恢復耐力，現在只要等 0.50 − 0.15 = 0.35 秒；每秒恢復速度本身不因此提高。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/chorus-of-spiritual-fortitude/mechanics/">不屈靈魂合唱</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：忽略脈衝間的持續恢復，最大韌性 100、目前 40，第一次脈衝先補 100 × 20% = 20 點，再增加 15 點上限及目前值，成為 75／115。之後每秒恢復量也按當時上限計算，例如上限 115 時為 115 × 25% = 28.75 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/fury-of-the-faithful/mechanics/">有信者之怒</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      攻速加成：獲得 20% 攻擊速度，生效約 11 秒。只計這份加成，受影響的 1 秒動作變成 1 ÷ 1.2 ≈ 0.833 秒；再次施放會重設效果的持續時間。；傷害算例：先只看近戰傷害階段，基礎 100 點變成 100 × 1.25 = 125 點；已有同階段 20% 增傷時則為 145 點。暴擊的額外傷害與撕裂對護甲的影響另算，不能把 125 當成所有武器的最終傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/holy-cause/mechanics/">神聖事業</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：滿層時，100 點韌性傷害變成 100 × (1 − 5 × 8%) = 60 點；另有獨立 25% 韌性減傷時，為 100 × 0.6 × 0.75 = 45 點。此項沒有直接降低生命傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/ecclesiarchs-call/mechanics/">教宗之喚</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：滿層時，基礎 100 點變成 100 × (1 + 5 × 6%) = 130 點；若原本已有同階段 25% 加成，則是 100 × (1 + 25% + 30%) = 155 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/redoubled-zeal/mechanics/">倍增狂熱</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：連續用完兩次後，約 30 秒恢復第一格、約 60 秒回滿兩格；兩次使用共用同一個冷卻資源，並不是等 30 秒就同時補滿兩格。若只用一次，只需補回該次消耗。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/shroudfield/mechanics/">隱秘領域</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      運作方式：進入隱身 3 秒，基礎冷卻 30 秒、1 次充能。期間移動速度提高 20%，爆擊率增加 100 個百分點，近戰撕裂提高 100%。；靈巧傷害算例：先固定攻擊種類、部位與護甲，只看靈巧加成；基礎部分 100、弱點／暴擊額外部分 50 時，由 150 變成 100 + 50 × (1 + 150%) = 225，整次增加 50%。額外部分若為 100，則由 200 變成 350，增加 75%。背刺與撕裂等其他因素另算。；移速算例：基礎 5 公尺／秒、沒有其他修正時，變成 5 × 1.2 = 6 公尺／秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/master-crafted-shroudfield/mechanics/">大師級隱秘領域</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害與威脅算例：固定其他條件，背刺階段基準 100 點變成 100 × 1.5 = 150；已有同階段 20% 背刺加成時為 170 點。原本威脅權重 100 變成 100 × 0.25 = 25，並不代表敵人鎖定你的機率固定剩 25%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/invigorating-revelation/mechanics/">振奮啟示</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復與減傷算例：最大韌性 100、目前 20，進入時補 100 × 50% = 50 點至 70；若只缺 30 點就只補 30 點。離開後原本 100 點傷害變成 100 × 0.7 = 70；另有獨立 25% 減傷時為 52.5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/martyrs-purpose/mechanics/">殉道者之願</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      計算方式：額外恢復量 = 0.5 × min[(1 − 目前生命比例) ÷ 0.75, 1]。生命恢復後，額外效果也會下降，不需要新受一次傷才更新。；冷卻算例：生命穩定在 50%、自然回充正常時，每秒合計 1 + 0.5 × 0.5 ÷ 0.75 ≈ 1.333 秒進度，30 秒技能約 22.5 秒回滿；生命在 25% 以下時為 30 ÷ 1.5 = 20 秒。實際按秒結算，可能略有時間差。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/pious-cut-throat/mechanics/">虔誠刺客</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：每秒額外恢復相當於 0.75 秒基礎冷卻的進度；完整兩次結算共 0.75 × 2 = 1.5 秒。若自然回充也正常運作，同期約共推進 2 + 1.5 = 3.5 秒，充能已滿的部分不保留。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/invocation-of-death/mechanics/">死亡禱文</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：每秒額外恢復相當於 1 秒基礎冷卻的進度。單次完整效果通常在約第 1、2、3 秒各恢復一次，共額外 3 秒；自然回充正常時，這 3 秒合計約推進 6 秒冷卻。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/unrelenting-fury/mechanics/">無盡狂怒</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：基礎冷卻 30 秒時，返還 30 × 20% = 6 秒的自然回充進度；若還差 4 秒就回滿，只能補足缺少的部分。雙充能仍按一格計算，不會改成 60 × 20% = 12 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/perfectionist/mechanics/">完美主義者</a>
+                    </td>
+                    <td>
+                      能力
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：隱秘領域基礎冷卻 30 秒，因此分別返還 30 × 50% = 15 秒、30 × 30% = 9 秒、30 × 15% = 4.5 秒的自然回充進度，仍以目前缺額為上限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/until-death/mechanics/">死戰到底</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：8 秒效果結束後，再冷卻 120 秒；第 0 秒觸發，約第 8 秒效果結束，約第 128 秒才再次可用。已處於其他免死效果時，不會再觸發本天賦。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/martyrdom/mechanics/">殉道</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      運作方式：每失去一整格生命，近戰傷害提高 10%，最多 5 層、50%；恢復生命後，層數也會跟著下降。腐敗占用的生命同樣納入計算。；傷口算例：最大生命 200、共 4 格傷口，每格為 50。失去 49 點尚未滿一格，不增加層數；失去 100 點為 2 層，近戰基礎 100 點傷害變成 100 × (1 + 2 × 10%) = 120 點。；其他加成：同樣 2 層、原本已有同階段 25% 近戰增傷時，為 100 × (1 + 25% + 20%) = 145 點。最多 5 層不代表任何傷口數都能在存活時達到滿層。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/i-shall-not-fall/mechanics/">不滅意志</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：3 層為 22.5% 韌性減傷，100 × (1 − 22.5%) = 77.5 點；5 層為 62.5 點。若另有同階段 10% 韌性減傷，滿層時為 100 × (1 − 37.5% − 10%) = 52.5 點，獨立減傷再相乘。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/maniac/mechanics/">狂燥之心</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度算例：3 層增加 3 × 6% = 18% 近戰攻速，受影響的 1 秒動作變成 1 ÷ 1.18 ≈ 0.847 秒；5 層為 1 ÷ 1.3 ≈ 0.769 秒。其他同階段攻速先相加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/inexorable-judgement/mechanics/">命定審判</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      累積勢能：移動每累積 5 公尺獲得 1 層勢能，最多 20 層；衝刺距離以雙倍計算，因此從 0 層到滿層需要一般移動 100 公尺，或衝刺 50 公尺。；傷害與速度：每層增加 1% 傷害、1% 近戰攻速及 1% 遠程攻速。滿 20 層時，基礎 100 點變成 100 × 1.2 = 120 點；受影響的 1 秒動作變成 1 ÷ 1.2 ≈ 0.833 秒。同階段其他加成先相加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/retributors-stance/mechanics/">懲戒者姿態</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、以 20 層啟動時，每秒補 100 × 20 × 0.5% = 10 點；完整 6 秒最多 60 點。搭配延長至 10 秒時最多 100 點，均受恢復加成與目前缺額限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/inebriates-poise/mechanics/">飄忽身形</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數算例：原本 18 層，成功閃避後為 min(18 + 3, 20) = 20 層；超出的 1 層不保留。加成期間可累積下一輪，但必須等本輪結束再命中，才會使用這些勢能。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/holy-revenant/mechanics/">吊命聖徒</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：假設累積額度原本為 0、沒有其他治療修正，連續兩次各造成 100 點近戰傷害，第一次累積並補 100 × 0.7% × 3 = 2.1 點；第二次額度增至 4.2，再補 4.2 點，合計 6.3 點。；上限：每次計算的治療量，最多補到最大生命的 25%；例如最大生命 100、目前 24，該次最多先算 1 點。其他治療倍率會在之後套用，仍不能清除腐敗。這不是整場只能恢復 25 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/blazing-piety/mechanics/">熾熱虔誠</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      狂怒效果：累積 25 層後進入狂怒，爆擊率增加 15 個百分點，持續 8 秒；滿層後繼續觸發會重新計時。；爆擊率算例：原本爆擊率 5%，狂怒時變成 5% + 15% = 20%，不是 5% × 1.15。附近死亡與暴擊命中各自計數，因此暴擊擊殺可能同時符合兩項。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/stalwart/mechanics/">死忠</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復與減傷算例：最大韌性 100，啟動時最多補 50 點；滿層維持 8 秒另可補 100 × 2% × 8 = 16 點，均受缺額限制。原本 100 點韌性傷害變成 100 × 0.75 = 75 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/righteous-warrior/mechanics/">正義勇士</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      運作方式：熾熱虔誠啟動期間，額外增加 10 個百分點爆擊率；與原本的 15 個百分點合計為 25 個百分點。；爆擊率算例：原本爆擊率 5%，搭配此升級進入狂怒後為 5% + 15% + 10% = 30%。這是追加機率，不是把原本 5% 乘以 1.25。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/infectious-zeal/mechanics/">迅疾狂熱</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      運作方式：熾熱虔誠開始時，當下協同範圍內的其他隊友獲得 10 個百分點爆擊率，持續 8 秒；這份共享加成不再給你自己。；爆擊率算例：隊友原本 5%，效果期間變成 5% + 10% = 15%。你的「正義勇士」不會把隊友這份 10 個百分點一起提高。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/restorative-verses/mechanics/">治癒詩頌</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：某效果原本補 10 點韌性，2 層時為 10 × (1 + 2 × 5%) = 11 點；5 層時為 12.5 點。若另有同階段 20% 恢復加成，滿層為 10 × (1 + 20% + 25%) = 14.5 點，仍受韌性缺額限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/eternal/mechanics/">永恆</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續算例：第 0 秒命中啟動後，原本約第 6 秒結束，改為約第 10 秒結束；期間命中仍不會重設本輪加成的持續時間。持續時間增加 4 秒，層數與每層加成不變。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/on-the-brink/mechanics/">危境之際</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      腐敗算例：原本會獲得 20 點腐敗，3 層時為 20 × (1 − 3 × 10%) = 14 點；5 層時為 10 點。其他腐敗倍率另相乘，不會因此免疫所有腐敗來源。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/zealous-pilgrim/mechanics/">狂熱朝聖者</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害與速度算例：只計這項增益，基礎 100 點傷害變成 100 × 1.1 = 110 點；受攻速影響的 1 秒動作變成 1 ÷ 1.1 ≈ 0.909 秒。其他同階段加成先相加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/fire-and-fury/mechanics/">烈焰與怒火</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      層數算例：目標原本 0 層，連續 4 次近戰命中可達 4 × 3 = 12 層；接著再命中不會由本天賦升至 15 層。；傷害算例：固定無甲部位、沒有其他修正，3 層單次燃燒傷害為 400 × (3 ÷ 31)² × [3 − 2 × (3 ÷ 31)] × 1.5 ≈ 15.77 點；12 層約 200.11 點。這是單次結算，並非所有敵人的固定每秒傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/risen/mechanics/">復活</a>
+                    </td>
+                    <td>
+                      鑰石
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      韌性算例：原本最大韌性 100、目前 60，取得一層後變成最大 105、目前 65。若完整取得 8 層、期間沒有其他變化，就成為 100／140；到期回到上限 100 時，可保留目前 100。若到期前目前只有 70，則保持 70／100。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/scourge/mechanics/">天災</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      施加流血：近戰爆擊造成傷害且敵人仍存活時，施加 2 層流血。近戰命中已流血的敵人時，獲得 1 層近戰爆擊率加成，每層增加 10 個百分點，最多 3 層，持續 3 秒；再次觸發會重新計時。；爆擊率算例：原本近戰爆擊率 5%，滿 3 層後為 5% + 3 × 10% = 35%，不是 5% × 1.3。；流血傷害算例：流血每約 0.5 秒結算一次，最多 16 層。固定無甲部位、沒有其他修正，2 層的單次傷害為 175 × (2 ÷ 16)² × [3 − 2 × (2 ÷ 16)] × 0.5 ≈ 3.76 點；8 層為 43.75 點，層數與傷害不是等比例增加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/backstabber/mechanics/">背刺者</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：固定相同武器、護甲及命中部位，沒有其他背刺／側襲加成時，該階段 100 點變成 100 × (1 + 25%) = 125 點。已有 20% 同類加成時，則由 120 點變成 100 × (1 + 20% + 25%) = 145 點，實際增幅約 20.83%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/disdain/mechanics/">蔑視</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      更新方式：依最近一次揮擊的命中數重新計算，不跨多次揮擊累加；下一次揮空後，加成歸零。；傷害算例：沒有其他加成，上一擊命中 3 名敵人時，下一擊的 100 點變成 100 × (1 + 3 × 5%) = 115 點；命中 5 名以上則為 125 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/purge-the-unclean/mechanics/">淨化不潔</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只看這項護甲類型加成，原有 100 點變成 100 × 1.20 = 120 點。若已有 10% 同類加成，則由 110 點變成 100 × (1 + 10% + 20%) = 130 點，實際增幅約 18.18%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/sustained-assault/mechanics/">持續突擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：沒有其他加成，3 層使 100 × (1 + 3 × 4%) = 112 點；滿層為 120 點。原有同階段 25% 加成時，滿層則為 100 × (1 + 25% + 20%) = 145 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/enduring-faith/mechanics/">堅韌信仰</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：只計此效果，原有 100 點韌性傷害變成 100 × 0.6 = 60 點。若另有獨立的 10% 韌性減傷，則為 100 × 0.6 × 0.9 = 54 點，共降低 46%；這不是生命減傷。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/second-wind/mechanics/">精力復甦</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、沒有其他恢復加成時，一次補 100 × 15% = 15 點；目前已有 95 點則只能補 5 點，恢復至上限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/melee-damage-boost/mechanics/">近戰增幅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：沒有其他加成，100 × (1 + 10%) = 110 點；兩個節點皆選取時為 120 點。已有 25% 同階段加成，再選一個節點則是 100 × (1 + 25% + 10%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/the-voice-of-terra/mechanics/">泰拉之音</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、沒有其他恢復加成且持續射擊 2 秒，停火後的 0.5 秒也完整生效，合計 100 × 10% × (2 + 0.5) = 25 點。以缺少的韌性為上限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/restoring-faith/mechanics/">恢復信仰</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：沒有其他治療修正，一次失去 50 點生命，總計可恢復 50 × 20% = 10 點，平均每秒約 2.5 點。恢復期間再受 30 點傷害，另增加 6 點待恢復量。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/bleed-for-the-emperor/mechanics/">為了帝皇</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：最大生命 200、共 4 格傷口，每格 50。現在有 120 點生命，下一條分界是 100；原本 30 點傷害會跨過分界，因此變成 30 × 0.6 = 18 點，受擊後剩 102 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/vicious-offering/mechanics/">惡毒贈禮</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大韌性 100、沒有其他恢復加成時，每次合格擊殺額外補 100 × 10% = 10 點。若只缺 4 點，就只補 4 點；原本的近戰擊殺恢復另計。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/toughness-damage-reduction/mechanics/">韌性減傷</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：沒有其他加成時，100 × (1 − 10%) = 90 點韌性傷害。若已有同一加算階段的 20% 韌性減傷，則為 100 × (1 − 20% − 10%) = 70 點；獨立乘算的減傷效果另行相乘。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/duellist/mechanics/">決鬥者</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      弱點算例：固定未暴擊、沒有其他加成，基礎部分 100、弱點額外部分 50，原有 150 點變成 100 + 50 × 1.5 = 175 點，整次增加約 16.67%。額外部分若為 100，則 200 → 250 點，增加 25%。；既有加成：基礎與額外部分皆為 100，原有 25% 同階段加成時，由 100 + 100 × 1.25 = 225 點，變成 100 + 100 × (1 + 25% + 50%) = 275 點，實際增幅約 22.22%。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/shield-of-contempt/mechanics/">輕蔑之盾</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：只計這份效果，之後原本 100 點傷害變成 100 × 0.4 = 40 點。第 0 秒觸發時，效果約於第 4 秒結束，約第 8 秒才能再次觸發。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/punish-impiety/mechanics/">褻瀆必懲</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度算例：只計這項加成，原本 1 秒的受影響動作變成 1 ÷ 1.1 ≈ 0.909 秒；已有同階段 20% 攻速時，則為 1 ÷ (1 + 20% + 10%) ≈ 0.769 秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/thy-wrath-be-swift/mechanics/">勃然大怒</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度算例：基礎移速 5 公尺／秒、沒有其他修正時，加速後為 5 × 1.15 = 5.75 公尺／秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/retaliatory-defence/mechanics/">反制護盾</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大耐力為 6，破防耗盡至 0 時，補回 6 × 50% = 3；冷卻期間再次破防不會再補。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/good-balance/mechanics/">四平八穩</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：原本 100 點傷害變成 100 × 0.75 = 75 點。若另有獨立乘算的 40% 減傷，則為 100 × 0.75 × 0.6 = 45 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/enemies-within-enemies-without/mechanics/">內憂外患</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      運作方式：5 公尺內有敵人時，每秒恢復 2.5% 最大韌性；每多一名敵人，再增加每秒 1 個百分點，最多每秒 7.5%。被控制而無法行動時暫停恢復。；恢復算例：最大韌性 100，附近 3 名一般敵人時，每秒補 100 × [2.5% + (3 − 1) × 1%] = 4.5 點；6 名時達到每秒 7.5 點上限。；大型敵人：固定來源將巨獸與特定頭目按 6 名敵人計算，因此單獨一名即可達恢復上限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/faithful-frenzy/mechanics/">信仰狂亂</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度算例：只計本天賦，原本 1 秒的受影響近戰動作變成 1 ÷ 1.1 ≈ 0.909 秒；基礎移速 5 公尺／秒變成 5 × 1.05 = 5.25 公尺／秒。其他同階段攻速先相加，再用總速度倍率換算時間。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/faiths-fortitude/mechanics/">信仰之勇</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷口算例：最大生命 200、原本 2 格傷口時，每格 200 ÷ 2 = 100；選取後變成 4 格，每格 200 ÷ 4 = 50。它不會把生命值加到 400。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/anoint-in-blood/mechanics/">鮮血受膏</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      距離算例：固定其他條件，基礎 100 點傷害，在 12.5 公尺內為 100 × 1.25 = 125；在 16.875 公尺，加成為 25% × [1 − √((16.875 − 12.5) ÷ 17.5)] = 12.5%，所以是 112.5 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/unfaltering/mechanics/">不屈之志</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度算例：基礎移速 5 公尺／秒，某蓄力原本使移速乘 0.5，通常只能走 2.5 公尺／秒；本天賦取消該動作的減速後可維持 5 公尺／秒。其他來源的速度修正仍另算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/riposte/mechanics/">靈活還擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：3 層共 15%，基礎 100 點變成 100 × (1 + 3 × 5%) = 115 點；已有同階段 20% 加成時，則是 100 × (1 + 20% + 15%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/relentless-fervor/mechanics/">狂熱不懈</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      速度與消耗算例：若原本衝刺速度為 6 公尺／秒、每秒消耗 2 點耐力，只計此天賦後為 6 × 1.1 = 6.6 公尺／秒、2 × 0.9 = 1.8 點耐力／秒。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/unseen-blade/mechanics/">無形之刃</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：只計本天賦，100 × 1.2 = 120 點；若已有同階段 25% 增傷，則是 100 × (1 + 25% + 20%) = 145 點。敵人改為鎖定你後，這項條件增傷就不成立。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/the-masters-retribution/mechanics/">大師的反擊</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：第 0 秒觸發後，第 3 秒再次挨打不會再推擊，約第 8 秒才可再次觸發。它不會撤銷已受到的那次傷害。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/blinded-by-blood/mechanics/">血色迷障</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：敵人原本承受 100 點傷害，變成 100 × 1.15 = 115 點。若你先有另一階段的 20% 傷害加成，則 100 × 1.2 × 1.15 = 138 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/desperation/mechanics/">背水一戰</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      運作方式：近戰增傷 = 20% × 已消耗的耐力比例。滿耐力沒有加成，剩一半耐力時增加 10%，耗盡時增加 20%；耐力恢復後，加成也會跟著下降。；傷害算例：最大耐力 6、目前剩 2，已消耗 4 ÷ 6；增傷為 20% × 4 ÷ 6 ≈ 13.33%，基礎 100 點變成約 113.33 點。同階段其他近戰增傷先相加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/no-respite/mechanics/">刻不容緩</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：最大耐力 6，每次補 6 × 10% = 0.6 點；若只缺 0.2 點，就只恢復 0.2 點。一次橫掃暴擊命中多個敵人，仍受 1 秒冷卻限制。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/providence/mechanics/">神恩庇護</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      效果算例：受幫助隊友原本移速 5 公尺／秒，只計這份加成後為 5 × 1.1 = 5.5；原本 100 點韌性傷害變成 100 × 0.85 = 85 點。效果給被協助的隊友，不是給你自己。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/abolish-blasphemers/mechanics/">弒除瀆者</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：100 × 1.15 = 115 點；若已有同階段 20% 傷害加成，則是 100 × (1 + 20% + 15%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/hubris/mechanics/">傲慢</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      持續與算例：效果不累積層數，再次觸發會重新計時。只計本天賦時，100 × 0.85 = 85 點傷害；另有獨立 25% 減傷時為 100 × 0.85 × 0.75 = 63.75 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/melee-damage-boost-base-melee-damage-node-buff-medium-4/mechanics/">近戰增幅</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：沒有其他加成，100 × (1 + 10%) = 110 點；兩個節點皆選取時為 120 點。已有 25% 同階段加成，再選一個節點則是 100 × (1 + 25% + 10%) = 135 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/prime-target/mechanics/">頭號目標</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害與恢復算例：基礎 100 點傷害變成 100 × 1.1 = 110 點；最大韌性 100 時，每秒補 100 × 15% ÷ 5 = 3 點。第 3 秒重新觸發、之後完整持續到第 8 秒，合計可補 24 點，仍以韌性缺額為限。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/behind-the-lines/mechanics/">敵後行動</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      冷卻算例：第 0 秒觸發後，第 2 秒再次重擊背刺擊殺不會再觸發；約第 5 秒起才可再次生效。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/time-to-kill/mechanics/">殺戮時刻</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：固定其他條件、該階段基準為 100，沒有其他背刺加成時為 100 × 1.5 = 150 點；若已有同階段 20% 背刺加成，則由 120 變成 100 × (1 + 20% + 50%) = 170 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/against-the-odds/mechanics/">逆境而上</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：附近 6 名敵人為 3 層，基礎 100 點變成 100 × (1 + 3 × 2%) = 106 點；10 名以上最多 110 點。同階段其他傷害加成先相加。；順劈算例：原本可穿透的敵人體型總量為 10，3 層時變成 10 × (1 + 3 × 10%) = 13；滿層為 15。這是可穿透總量，不等於固定多命中 3 或 5 名敵人。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/out-of-pocket/mechanics/">自掏腰包</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      裝填算例：彈匣上限 30、目前 10 發，缺少 20 發，擊殺後從備用彈藥移入 20 × 10% = 2 發，變成 12 發。下次缺 18 發，計入 1.8 發，本次移入 1 發，剩下的 0.8 累積到後續擊殺。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/wait-in-line/mechanics/">排隊等候</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      減傷算例：只計本項，原本 100 點遠程傷害變成 100 × 0.8 = 80 點；另有獨立 25% 通用減傷時，為 100 × 0.8 × 0.75 = 60 點。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/holy-tools/mechanics/">神聖工具</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點變成 100 × 1.2 = 120 點；已有同階段 25% 近戰增傷時，則 100 × (1 + 25% + 20%) = 145 點。一次橫掃的效果維持到該次揮擊結束。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/got-your-back/mechanics/">為您撐腰</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      恢復算例：隊友最大韌性 120、你為 100，隊友補 120 × 7.5% = 9 點，你額外補 100 × 5% = 5 點；雙方各自受恢復加成與韌性缺額限制，原本近戰擊殺恢復另算。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/purifying-hatred/mechanics/">淨化仇恨</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      傷害算例：基礎 100 點、僅符合其中一項時為 100 × 1.15 = 115；兩者皆符合時為 100 × (1 + 15% + 15%) = 130 點。其他同階段增傷也先相加。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/darktide/skills/zealot/dance-of-death/mechanics/">死亡之舞</a>
+                    </td>
+                    <td>
+                      技能
+                    </td>
+                    <td>
+                      已核對（靜態）
+                    </td>
+                    <td>
+                      散布算例：只計本效果，原本 4 度的受影響散布角變成 4 × 0.25 = 1 度。這不代表命中率固定提高 75%。；後座算例：每次原本增加 0.2 的不穩定度，變成 0.2 × 0.5 = 0.1；恢復時的衰減速度則乘 1 ÷ 0.5 = 2。實際準星偏移仍依武器後座曲線，不能保證所有畫面晃動直接減半。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/">← 返回狂信徒技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

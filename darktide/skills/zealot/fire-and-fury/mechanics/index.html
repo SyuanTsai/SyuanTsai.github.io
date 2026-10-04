@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="烈焰與怒火：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>烈焰與怒火：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/fire-and-fury/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">烈焰與怒火：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>烈焰與怒火：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Fire and Fury</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>鑰石</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/zealot/fire-and-fury/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#烈焰與怒火fire-and-fury原始碼依據"><span>03</span>烈焰與怒火(Fire and Fury)</a></li>
+            <li><a href="#原始碼確認與程式推導"><span>04</span>原始碼確認與程式推導</a></li>
+            <li><a href="#原始碼依據"><span>05</span>原始碼依據</a></li>
+            <li><a href="#算例條件與待確認事項"><span>06</span>算例條件與待確認事項</a></li>
+            <li><a href="#原文核對"><span>07</span>原文核對</a></li>
+            <li><a href="#圖示來源"><span>08</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="烈焰與怒火：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/zealot/fire-and-fury/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_fire.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="烈焰與怒火fire-and-fury原始碼依據">
+              烈焰與怒火(Fire and Fury)：原始碼依據
+            </h2>
+            <p>
+              <a href="/darktide/skills/zealot/fire-and-fury/#zealot_resist_death_fire">返回玩家說明</a>｜<a href="/darktide/skills/zealot/source-index/">技術索引</a>｜<a href="/darktide/skills/zealot/localization-comparison/#zealot_resist_death_fire">原文比對</a>
+            </p>
+            <ul>
+              <li>
+                來源版本：Release 1.13.1；固定 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+              </li>
+              <li>
+                天賦：<code>zealot_resist_death_fire</code>；名稱鍵：<code>loc_talent_zealot_resist_death_fire</code>；描述鍵：<code>loc_talent_zealot_resist_death_fire_desc</code>。
+              </li>
+              <li>
+                節點：<code>node_9ad99512-0439-46e8-8113-5d7de6d174da</code>；分類：鑰石；每節點一點。
+              </li>
+              <li>
+                證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
+              </li>
+            </ul>
+            <h2 id="原始碼確認與程式推導">
+              原始碼確認與程式推導
+            </h2>
+            <ul>
+              <li>
+                被動 <code>zealot_resist_death_fire</code> 只處理 melee/ranged <code>on_hit</code>，要求目標仍存活且玩家有 <code>unkillable</code> 關鍵字；近戰與遠程分別嘗試加3與1層，共用目標上的 <code>flamer_assault</code>，talent 上限為12。未滿時只補入不超上限的層數；已滿時呼叫 refresh_duration_of_stacking_buff。
+              </li>
+              <li>
+                <code>flamer_assault</code> 是 interval buff：單層 duration=4 秒、interval=0.5 秒、refresh_duration_on_stack=true，最多31層。因點燃升級把此 buff 封頂於12層，其他來源可使實際層數不同；每次觸發新增層也重設 buff duration。
+              </li>
+              <li>
+                每次 tick 設 x=current_stack_count/31，smooth=x²×(3−2x)，再送出 power_level=500×smooth 的 <code>DamageProfileTemplates.burning</code> 攻擊。燃燒 profile 的 attack power_distribution=400、toughness_multiplier=3、ignore_shield=true，並套用 default target boost curve；因此不能把 layer count 直接換成固定生命值傷害。
+              </li>
+              <li>
+                IntervalBuff 在尚未另行指定 start_interval_on_apply 時，第一次 interval 以0.5秒排定，之後每0.5秒呼叫 interval_func；4秒 duration 及持續加層重新計時共同決定 tick 時間窗。
+              </li>
+              <li>
+                flamer_assault設interval_stack_removal=true，故4秒不是一次全清；到期之後每tick移除一層。零其他修正的無甲單tick=400*smoothstep(n/31)*1.5，最大31層是共用buffcap，12只是此天賦的加層上限。
+              </li>
+            </ul>
+            <h2 id="原始碼依據">
+              原始碼依據
+            </h2>
+            <ul>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3331-L3345">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3331–3345</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L5020-L5060">scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：5020–5060</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L250-L270">scripts/settings/talent/talent_settings_zealot.lua：250–270</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L50-L77">scripts/settings/buff/weapon_buff_templates.lua：50–77</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/interval_buff.lua#L10-L65">scripts/extension_systems/buff/buffs/interval_buff.lua：10–65</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/buff_damage_profile_templates.lua#L301-L328">scripts/settings/damage/damage_profiles/buff_damage_profile_templates.lua：301–328</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L2014-L2036">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：2014–2036</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/buff_damage_profile_templates.lua#L19-L28">scripts/settings/damage/damage_profiles/buff_damage_profile_templates.lua：19–28</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L21-L23">scripts/utilities/attack/power_level.lua：21–23</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L63-L94">scripts/utilities/attack/power_level.lua：63–94</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/power_level_settings.lua#L7-L29">scripts/settings/damage/power_level_settings.lua：7–29</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L386-L444">scripts/utilities/attack/damage_profile.lua：386–444</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3331-L3345">scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3331–3345</a>
+              </li>
+              <li>
+                <a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L2014-L2036">scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：2014–2036</a>
+              </li>
+            </ul>
+            <h2 id="算例條件與待確認事項">
+              算例條件與待確認事項
+            </h2>
+            <ul>
+              <li>
+                <strong>層數算例</strong>：目標原本 0 層，連續 4 次近戰命中可達 4 × 3 = 12 層；接著再命中不會由本天賦升至 15 層。
+              </li>
+              <li>
+                <strong>傷害算例</strong>：固定無甲部位、沒有其他修正，3 層單次燃燒傷害為 400 × (3 ÷ 31)² × [3 − 2 × (3 ÷ 31)] × 1.5 ≈ 15.77 點；12 層約 200.11 點。這是單次結算，並非所有敵人的固定每秒傷害。
+              </li>
+              <li>
+                約167是 burn tick 使用的 power_level，不是對所有敵人的固定生命值傷害；profile 會依敵人類型與目標 boost curve 得出實際結果。
+              </li>
+              <li>
+                0.5秒 tick 節奏是程式定時器推導；更新步長可能使實際執行落在定時點之後。
+              </li>
+              <li>
+                「持有無法殺死」是檢查玩家 buff 關鍵字，因此實際上任何授予 <code>unkillable</code> 的來源都可能開啟此效果；列出的 Resist Death 子升級與基礎效果只是常見來源。
+              </li>
+              <li>
+                遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+              </li>
+            </ul>
+            <h2 id="原文核對">
+              原文核對
+            </h2>
+            <ul>
+              <li>
+                對應 hash：<code>2ee3f440</code>。
+              </li>
+              <li>
+                繁中及英文都描述無法殺死期間由武器命中施加燃燒，方向與對象相同。燃燒層數、時長、tick 間隔及 power scaling 為原文未展開的機制細節。
+              </li>
+            </ul>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_resist_death_fire.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/fire-and-fury/">← 返回烈焰與怒火玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>

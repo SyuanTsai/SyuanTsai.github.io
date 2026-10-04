@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="獻祭手雷 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>獻祭手雷 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/zealot/immolation-grenade/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/zealot/">狂信徒</a></li>
+            <li aria-current="page">獻祭手雷</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div class="skill-icon-frame">
+            <img
+              src="https://github.com/user-attachments/assets/aaab981f-d4ba-4278-b79d-873fccac1faa"
+              width="80"
+              height="80"
+              alt="獻祭手雷圖示"
+              decoding="async"
+            >
+          </div>
+          <div>
+            <h1>獻祭手雷</h1>
+            <span class="skill-english-name" lang="en">Immolation Grenade</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>閃擊</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
+            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
+            <li><a href="/darktide/skills/zealot/immolation-grenade/mechanics/"><span>03</span>機制與原始碼依據</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="獻祭手雷">
+          <a id="zealot_flame_grenade"></a>
+          <section class="skill-section" id="effects" aria-labelledby="effects-title">
+            <h2 id="effects-title">技能效果與算例</h2>
+            <ul>
+              <li>
+                <p>
+                  <strong>運作方式</strong>：最多攜帶 3 枚；引信為 1.7 秒。引爆時先造成爆炸傷害，接著留下持續 15 秒的火焰區域。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>持續傷害</strong>：火焰範圍內的敵人每隔約 0.5～1.25 秒受到一次燃燒傷害；每次傷害另在該難度基準的 50%～150% 之間隨機取值。離開火焰後，還會留下持續 1 秒的餘火效果。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>傷害算例</strong>：假設該難度下，無護甲敵人的單次燃燒基準為 100 點，且沒有其他增傷或減傷，隨機結果為 50% 時造成 100 × 0.5 = 50 點；150% 時則為 100 × 1.5 = 150 點。同條件下，防彈護甲的基準為 75 點，甲殼護甲為 5 點。
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>計算限制</strong>：初次爆炸、站在火焰中的燃燒、離開後的餘火是分開計算的效果。每次傷害與間隔都會變動，不能把上述單次數字直接當成每秒傷害。
+                </p>
+              </li>
+            </ul>
+            <h2 id="繁中原文勘誤">
+              繁中原文勘誤
+            </h2>
+            <ul>
+              <li>
+                繁中原文將英文「Burning and Staggering」寫成「燃燒並使敵人暈眩」；此處應為「燃燒並使敵人踉蹌」，不能把踉蹌當成眩暈。
+              </li>
+            </ul>
+          </section>
+          <section class="skill-section" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">詳細資料與版本</h2>
+            <p>
+              <a href="/darktide/skills/zealot/immolation-grenade/mechanics/">機制與原始碼依據 →</a>
+            </p>
+            <p>
+              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/README.md#zealot_flame_grenade">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_flame_grenade.md">原始 Git 機制文件 ↗</a>
+            </p>
+            <p class="skill-note">
+              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。譯名沿用既有詞表。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/zealot/">← 返回狂信徒技能</a>
+      </footer>
+    </div>
+  </body>
+</html>

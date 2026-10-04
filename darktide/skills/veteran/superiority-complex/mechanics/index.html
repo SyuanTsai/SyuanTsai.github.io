@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="優越情節：機制與原始碼依據 · Darktide Release 1.13.1 技能效果與固定來源。">
+    <title>優越情節：機制與原始碼依據 · Darktide</title>
+    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/superiority-complex/mechanics/">
+    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
+  </head>
+  <body class="darktide-skills">
+    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
+    <div class="skill-shell">
+      <header class="skill-header">
+        <nav class="skill-toolbar" aria-label="網站導覽">
+          <a href="/darktide/">← Darktide</a>
+          <a href="/darktide/skills/">技能與天賦</a>
+        </nav>
+        <nav class="skill-breadcrumb" aria-label="目前位置">
+          <ol>
+            <li><a href="/darktide/skills/">技能與天賦</a></li>
+            <li><a href="/darktide/skills/veteran/">老兵</a></li>
+            <li aria-current="page">優越情節：機制與原始碼依據</li>
+          </ol>
+        </nav>
+        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
+        <div class="skill-heading">
+          <div>
+            <h1>優越情節：機制與原始碼依據</h1>
+            <span class="skill-english-name" lang="en">Superiority Complex</span>
+            <div class="skill-badges" aria-label="分類與版本">
+              <span>技能</span>
+              <span>Release 1.13.1</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="skill-reader" id="skill-content" tabindex="-1">
+        <nav class="skill-sidebar" aria-label="本頁內容">
+          <h2>本頁內容</h2>
+          <ol>
+            <li><a href="/darktide/skills/veteran/superiority-complex/"><span>01</span>← 返回玩家頁</a></li>
+            <li><a href="#provenance"><span>02</span>版本與原始文件</a></li>
+            <li><a href="#優越情節superiority-complex原始碼依據"><span>03</span>優越情節(Superiority Complex)</a></li>
+            <li><a href="#圖示來源"><span>04</span>圖示來源</a></li>
+          </ol>
+        </nav>
+        <article class="skill-content" aria-label="優越情節：機制與原始碼依據">
+          <section class="skill-section" id="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">版本與原始文件</h2>
+            <p>
+              <a href="/darktide/skills/veteran/superiority-complex/">← 返回玩家頁</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_increase_damage_vs_elites.md">原始 Git 文件 ↗</a> · <a href="https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e">固定 Source Code ↗</a>
+            </p>
+            <p class="skill-source-sha">
+              知識 Commit：23c8cc124d2616d2956ae1734c67ce0c878c8fa4<br>Source SHA：7e662fcda16219d775b84af50322be2e9cd9d62e
+            </p>
+          </section>
+          <section class="skill-section skill-mechanics" id="source-document" aria-label="完整 Git 來源內容">
+            <h2 id="優越情節superiority-complex原始碼依據">
+              優越情節(Superiority Complex)：原始碼依據
+            </h2>
+            <p>
+              來源版本：Release 1.13.1；完整 SHA：<code>7e662fcda16219d775b84af50322be2e9cd9d62e</code>。
+            </p>
+            <p>
+              <a href="/darktide/skills/veteran/superiority-complex/#veteran_increase_damage_vs_elites">返回玩家說明</a>｜<a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/README.md">來源與限制</a>
+            </p>
+            <ul>
+              <li>
+                名稱鍵：<code>loc_talent_veteran_increase_damage_vs_elites</code>；描述鍵：<code>loc_talent_veteran_increase_damage_vs_elites_desc</code>。沿用既有詞表 Superiority Complex 的「優越情節」，名稱與鍵的對應待使用者確認。
+              </li>
+              <li>
+                目前節點為 <code>node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01</code>，類型 <code>default</code>，花費及上限均為 1。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1551-L1579">節點定義</a>。
+              </li>
+            </ul>
+            <p>
+              <strong>原始碼確認：引用與數值</strong>。天賦安裝的是 <code>veteran_increase_elite_damage</code>，不能因識別碼不同而漏追此效果。其 <code>damage_vs_elites=0.15</code>，有效層數上限 1；未設事件觸發、距離條件、持續時間或冷卻。顯示參數也讀取同一屬性，未發現數值與執行設定不一致。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L893-L916">天賦引用及顯示參數</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L736-L743">被動效果</a>。
+            </p>
+            <p>
+              <strong>程式推導：作用對象與存續</strong>。共用天賦系統將被動效果加入持有者，移除天賦時移除其效果；有效疊層限制為 1。因此它是配裝持有期間的自身被動加成，不是為目標施加易傷，也不會隨命中次數增加。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/talent/player_unit_talent_extension.lua#L164-L175">被動效果安裝</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/talent/player_unit_talent_extension.lua#L221-L231">移除被動效果</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L404-L410">有效層數限制</a>。
+            </p>
+            <p>
+              <strong>原始碼確認：目標條件</strong>。共同傷害流程檢查 <code>attacked_breed_or_nil.tags.elite</code>；只有成立時才加入攻擊者的 <code>damage_vs_elites</code>。此項沒有近戰、遠程、弱點或致命一擊限制；專家分類則在另一個判定處理，不能把專家標記本身當成精英。目標分類缺失時亦不加成。以上適用於使用該共同傷害流程及攻擊者屬性的傷害，不據此保證所有特殊傷害來源都會傳入相同屬性。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L334-L355">精英及專家分類判定</a>。
+            </p>
+            <p>
+              <strong>程式推導：加算位置</strong>。此屬性為加算倍率；效果聚合將 0.15 加入屬性，傷害計算再將屬性值減 1 後加入傷害加算合計。故原合計為 1 時變 1.15，原為 1.25 時變 1.40。接著仍與其他倍率及目標受傷屬性共同結算，不能將所有最終傷害一概另乘 1.15。<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L780-L786">屬性型別</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L727">屬性聚合</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L236-L245">加算起點</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L334-L337">加入精英加成</a>、<a href="https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L575-L614">後續倍率與傷害結算</a>。
+            </p>
+            <p>
+              <strong>案例與待確認</strong>：精英目標與非精英目標、近戰與遠程，以及已有其他傷害加成時的靜態案例見 <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/23c8cc124d2616d2956ae1734c67ce0c878c8fa4/Game%20Info/releases/1.13.X/docs/POC.md">POC</a>。已比對本體繁中模板；最終格式化顯示仍待遊戲內核對；未進行遊戲內傷害測試，也未逐一驗證所有特殊傷害來源。這些限制不改變上述共同傷害流程中的分類判定與加算數值。
+            </p>
+            <h2 id="圖示來源">
+              圖示來源
+            </h2>
+            <p>
+              <a href="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_increase_damage_vs_elites.webp">原圖</a>｜<a href="https://github.com/SyuanTsai/Media-Assets/issues/6">圖片來源 Issue</a>｜<a href="https://github.com/user-attachments/assets/915cdbef-5b88-4d3b-a4f1-e29e8a8f0f07">圖片附件</a>
+            </p>
+            <p>
+              圖片僅供技能辨識，不作機制證據。
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer class="skill-footer">
+        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
+        <a href="/darktide/skills/veteran/superiority-complex/">← 返回優越情節玩家頁</a>
+      </footer>
+    </div>
+  </body>
+</html>
