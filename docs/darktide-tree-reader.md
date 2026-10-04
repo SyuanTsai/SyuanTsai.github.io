@@ -67,4 +67,26 @@
 
 [容量 Test Jekyll site run 37181281886](https://github.com/SyuanTsai/SyuanTsai.github.io/actions/runs/37181281886)全部成功，artifact `11295247047`對應容量精確head。使用與第一階段相同工作流程、未壓縮artifact成員計量，容量變更本身為25,952檔、555,099,057 bytes，比公開基準減少27,815檔、71,209,521 bytes。用途待確認1,136檔、35,358,479 bytes，新用途頁124檔、548,523 bytes；技能正文與容量前相同。完整導覽的增量在整合CI後另記，沒有恢復暫緩的全面HTML精簡。
 
-本機46個既有單元檢查、文章來源與9個discovery來源通過。加入對話分類入口後，全部1,335個技能article、681份完整機制／補充內容與圖示列表保持原樣，85,628個技能本機連結與錨點通過。完整對話原文、整合瀏覽與既有CI結果在實際驗證後補入；來源HTTP預覽不作Jekyll證據。
+本機46個既有單元檢查、文章來源與9個discovery來源通過。加入對話分類入口後，全部1,335個技能article、681份完整機制／補充內容與圖示列表保持原樣，85,628個技能本機連結與錨點通過；限定Veteran重生後172檔SHA-256相同，包含炸藥儲備。全部24,564個對話／首頁外框重跑為0更新。
+
+全站核對1,166,307個本機引用與156,226個片段引用，沒有失效連結或錨點。24,564個對話頁形成12,282組雙語配對，sitemap的25,899個唯一URL與HTML集合一致。來源樹中兩個 `/` 入口由Jekyll的 `index.markdown` 提供，正式CI亦已驗證根路由。HTML沒有script元素或inline handler，也沒有preview輸出或舊別名。
+
+三種用途分類的28,472筆原始字幕逐字符合Build 25606770語系資源，未trim或正規化空白；英文14,251筆、繁中14,221筆，另30筆繁中缺列保持明確說明。280個用途來源永久連結全部使用固定Source SHA及有效行號，38個性格錨點均包含對應character voice ID。沒有宣稱遊戲內逐場播放或未取得音訊已驗證。
+
+GPT-6 Luna／max唯讀代理完成19個代表頁 × 1280／390／320px共57次停用JS載入，355個代表同源連結全部HTTP200，76個代表附件圖片載入成功。涵蓋單角色、雙角色、三角色、12位說話者的64則回應頁、首／中／末字幕分頁、性格與回應引用頁；沒有整頁水平溢出，鍵盤目錄、skip focus、角色跳轉、跨頁錨點、語言往返、原生返回均通過。主控另瀏覽實際Jekyll產物，390／320px雙角色頁無溢出，官方肖像正常載入。來源HTTP驗收與Jekyll產物驗收分開記錄。
+
+## 最終建置與Draft交付
+
+網站導覽提交 `bbc2fedbf30761d5fcd299bb11af7d0eb8f7dfb2` 為 [整合Draft PR #55](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/55)，包含第一階段PR #53的技能成果。[Test Jekyll site run 37183677310](https://github.com/SyuanTsai/SyuanTsai.github.io/actions/runs/37183677310)全部成功：完整建置、SEO、discovery、delivery、deterministic quality、Lighthouse accessibility、視覺與搜尋檢查均通過。artifact `11296121643` 對應此精確head；與容量artifact逐檔比較，全部25,899個原閱讀區byte完全相同，包含保留的兩個首頁分類內容。
+
+來源匯出器提交 `03deab2e667f929f73c6fa586ee4bf94bc08cfb3` 為 [Mods Draft PR #195](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/195)。只修改匯出器、共用導覽流程與既有AI-LOGS／索引，Game Info正文及容量用途來源保持不變。Node語法及既有Markdown引用檢查通過；此來源分支沒有適用的遠端CI報告，不新增workflow。
+
+| 相同CI方法的未壓縮產物 | 檔案數 | bytes |
+| --- | ---: | ---: |
+| 原公開基準 | 53,767 | 626,308,578 |
+| 僅容量分類／分頁 | 25,952 | 555,099,057 |
+| 完整階層導覽整合 | 25,953 | 664,805,402 |
+
+容量改動減少27,815檔、71,209,521 bytes；技能與對話導覽共增加1檔、109,706,345 bytes。相對原基準，最後淨減27,814檔、淨增38,496,824 bytes。整合技能HTML為1,335檔、21,104,797 bytes；用途待確認1,136檔、39,368,282 bytes，新用途分類124檔、987,391 bytes。這些是建置後的未壓縮成員，不是ZIP、Git或下載容量；沒有宣稱共用外框可等量減少部署重複HTML。
+
+每次提交前檢查精確diff，自己的author與committer均使用擁有者指定Git metadata身分；公開文件沒有私人路徑或聯絡資訊。隔離index保留本機runtime instructions與原index，公開祖先排除本機remediation；臨時QA與截圖不提交。最後交付保持Draft，整合未由本任務合併、標記Ready或發布。官方30筆繁中缺漏、未取得音訊與技能英文未交付保持原有來源限制；本次版型沒有未解驗收問題。
