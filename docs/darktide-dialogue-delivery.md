@@ -32,7 +32,7 @@ python scripts/generate_darktide_unlinked_pages.py --dialogue-source "C:/Git/Per
 
 此命令只更新網站的字幕用途分類、首頁相關分類卡與 Darktide sitemap，來源保持唯讀；其他官方事件、技能內容、技能產生流程與提示詞不在此產生器範圍。用途待確認字幕的中文入口為 `/darktide/unlinked-subtitles/`，英文入口為 `/darktide/en/unlinked-subtitles/`；後續頁使用 `page-002/` 等路徑，同頁中英直接切換。每筆可由 `#unlinked_subtitle_<hash>` 直接定位。原本每筆未對應字幕的獨立網址由分頁與錨點或已確認用途的獨立頁取代。
 
-原始正文歸檔 commit 為 `dc40cbfa80193fdfbdc759a4a9cd3378905b83ff`，角色來源沿用 `23c8cc124d2616d2956ae1734c67ce0c878c8fa4`；字幕仍從 Build 25606770 原始語系資源取回。完整原未對應索引共有 14,251 筆。依固定 Source `7e662fcda16219d775b84af50322be2e9cd9d62e` 的行為確認 38 筆角色建立性格介紹與 22 筆回應觸發條件引用後，其餘 14,191 筆分成每語系 568 頁，最後一頁 16 筆。原本缺中文的 30 筆仍保留既有缺漏說明，不補寫或翻譯原文。分頁使用原生連結，不需要 JavaScript；每頁保持多行 HTML，沿用共用深色 CSS。
+原始正文歸檔 commit 為 `dc40cbfa80193fdfbdc759a4a9cd3378905b83ff`，角色來源沿用 `23c8cc124d2616d2956ae1734c67ce0c878c8fa4`；字幕仍從 Build 25606770 原始語系資源取回。完整原未對應索引共有 14,251 筆。依固定 Source `7e662fcda16219d775b84af50322be2e9cd9d62e` 的行為確認 38 筆角色建立性格介紹與 22 筆回應觸發條件引用後，其餘 14,191 筆分成每語系 568 頁，最後一頁 16 筆。原本缺中文的 30 筆在繁中頁顯示同一 hash 的官方英文原文，標註「尚無官方繁中翻譯，暫以英文原文顯示。」並以 `lang="en"` 標示氣泡語系；英文文字保留原始空白，不補造中文翻譯，Mods 原始缺漏紀錄維持不變。分頁、網址、hash 錨點與原始排序保持不變。分頁使用原生連結，不需要 JavaScript；每頁保持多行 HTML，沿用共用深色 CSS。
 
 用途 metadata 唯一維護於 Mods Repository 的 `Game Info/對話文本/source-catalog/subtitle-usages/`，只有 TSV 參照資料，不含字幕正文。產生器預設從同一來源讀取；使用原始正文唯讀快照時，可用 `--classification-source` 指向同一權威來源的用途 TSV 目錄。網站不保存人工同步的用途清單或全字幕 JSON。
 
