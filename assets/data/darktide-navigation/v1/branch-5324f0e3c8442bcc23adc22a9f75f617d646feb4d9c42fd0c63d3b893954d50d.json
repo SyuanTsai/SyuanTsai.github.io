@@ -1,0 +1,386 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/psyker/",
+      "title": "閃擊",
+      "url": "/darktide/skills/psyker/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/psyker/",
+      "title": "光環",
+      "url": "/darktide/skills/psyker/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/psyker/",
+      "title": "能力",
+      "url": "/darktide/skills/psyker/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/psyker/",
+      "title": "鑰石",
+      "url": "/darktide/skills/psyker/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/psyker/",
+      "title": "技能",
+      "url": "/darktide/skills/psyker/#category-4"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/psyker/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/psyker/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 2,
+    "parent": "/darktide/skills/",
+    "title": "靈能者",
+    "titleEn": "Psyker",
+    "url": "/darktide/skills/psyker/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-4",
+    "kind": "skill-category",
+    "order": 4,
+    "parent": "/darktide/skills/psyker/",
+    "title": "技能",
+    "url": "/darktide/skills/psyker/#category-4"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "靈魂竊賊",
+      "titleEn": "Soulstealer",
+      "url": "/darktide/skills/psyker/soulstealer/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "心如止水",
+      "titleEn": "Quietude",
+      "url": "/darktide/skills/psyker/quietude/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "亞空間耗費",
+      "titleEn": "Warp Expenditure",
+      "url": "/darktide/skills/psyker/warp-expenditure/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "堅毅",
+      "titleEn": "Mettle",
+      "url": "/darktide/skills/psyker/mettle/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "險惡燃燒",
+      "titleEn": "Perilous Combustion",
+      "url": "/darktide/skills/psyker/perilous-combustion/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "戰鬥冥想",
+      "titleEn": "Battle Meditation",
+      "url": "/darktide/skills/psyker/battle-meditation/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "完美時機",
+      "titleEn": "Perfect Timing",
+      "url": "/darktide/skills/psyker/perfect-timing/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "野火",
+      "titleEn": "Wildfire",
+      "url": "/darktide/skills/psyker/wildfire/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "思維活躍",
+      "titleEn": "Mind in Motion",
+      "url": "/darktide/skills/psyker/mind-in-motion/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "惡意攻勢",
+      "titleEn": "Malefic Momentum",
+      "url": "/darktide/skills/psyker/malefic-momentum/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "亞空間強化",
+      "titleEn": "One with the Warp",
+      "url": "/darktide/skills/psyker/one-with-the-warp/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "看破",
+      "titleEn": "Anticipation",
+      "url": "/darktide/skills/psyker/anticipation/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "反射閃避",
+      "titleEn": "Empathic Evasion",
+      "url": "/darktide/skills/psyker/empathic-evasion/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "穩固",
+      "titleEn": "Solidity",
+      "url": "/darktide/skills/psyker/solidity/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "亞空間騎士",
+      "titleEn": "Warp Rider",
+      "url": "/darktide/skills/psyker/warp-rider/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "精確瞄準",
+      "titleEn": "True Aim",
+      "url": "/darktide/skills/psyker/true-aim/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "傀儡師",
+      "titleEn": "Puppet Master",
+      "url": "/darktide/skills/psyker/puppet-master/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "動能偏斜",
+      "titleEn": "Kinetic Deflection",
+      "url": "/darktide/skills/psyker/kinetic-deflection/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 18,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "韌性增幅",
+      "titleEn": "Toughness Boost",
+      "url": "/darktide/skills/psyker/toughness-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 19,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "韌性增幅",
+      "titleEn": "Toughness Boost",
+      "url": "/darktide/skills/psyker/toughness-boost-base-toughness-node-buff-medium-4/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 20,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "韌性減傷",
+      "titleEn": "Toughness Damage Reduction",
+      "url": "/darktide/skills/psyker/toughness-damage-reduction/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 21,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "迅雷之勢",
+      "titleEn": "Lightning Speed",
+      "url": "/darktide/skills/psyker/lightning-speed/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 22,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "亞空間分裂",
+      "titleEn": "Warp Splitting",
+      "url": "/darktide/skills/psyker/warp-splitting/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 23,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "汲魂者",
+      "titleEn": "Souldrinker",
+      "url": "/darktide/skills/psyker/souldrinker/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 24,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "骨折後遺症",
+      "titleEn": "By Crack of Bone",
+      "url": "/darktide/skills/psyker/by-crack-of-bone/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 25,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "脆弱心智",
+      "titleEn": "Vulnerable Minds",
+      "url": "/darktide/skills/psyker/vulnerable-minds/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 26,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "聚焦次元",
+      "titleEn": "Focused Warp",
+      "url": "/darktide/skills/psyker/focused-warp/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 27,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "危險平衡",
+      "titleEn": "Peril Equilibrium",
+      "url": "/darktide/skills/psyker/peril-equilibrium/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 28,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "武器在手，信心我有。",
+      "titleEn": "Surety of Arms",
+      "url": "/darktide/skills/psyker/surety-of-arms/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 29,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "結晶意志",
+      "titleEn": "Crystalline Will",
+      "url": "/darktide/skills/psyker/crystalline-will/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 30,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "靈能引導",
+      "titleEn": "Channeled Force",
+      "url": "/darktide/skills/psyker/channeled-force/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 31,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "亞空間震波",
+      "titleEn": "Empyric Shock",
+      "url": "/darktide/skills/psyker/empyric-shock/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 32,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "如夢似幻",
+      "titleEn": "Just a Dream",
+      "url": "/darktide/skills/psyker/just-a-dream/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 33,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "無形專注",
+      "titleEn": "Immaterial Focus",
+      "url": "/darktide/skills/psyker/immaterial-focus/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 34,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "亞空間意志",
+      "titleEn": "Empyric Resolve",
+      "url": "/darktide/skills/psyker/empyric-resolve/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 35,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "亞空間幽魂",
+      "titleEn": "Warp Ghost",
+      "url": "/darktide/skills/psyker/warp-ghost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 36,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "靈魂穿透",
+      "titleEn": "Penetration of the Soul",
+      "url": "/darktide/skills/psyker/penetration-of-the-soul/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 37,
+      "parent": "/darktide/skills/psyker/#category-4",
+      "title": "念力之握",
+      "titleEn": "Psykinetic Grip",
+      "url": "/darktide/skills/psyker/psykinetic-grip/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/psyker/#category-4",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

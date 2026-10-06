@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/npc-interaction/",
+    "title": "NPC 互動",
+    "url": "/darktide/npc-interaction/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/",
+    "title": "NPC 互動",
+    "url": "/darktide/npc-interaction/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/npc-interaction/",
+      "title": "01 NPC 互動 · zenica combat pause npc 022 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_022_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/npc-interaction/",
+      "title": "02 NPC 互動 · zenica combat pause npc 023 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_023_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/npc-interaction/",
+      "title": "03 NPC 互動 · zenica combat pause npc 024 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_024_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/npc-interaction/",
+      "title": "04 NPC 互動 · zenica combat pause npc 025 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_025_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/npc-interaction/",
+      "title": "05 NPC 互動 · zenica combat pause npc 026 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_026_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/npc-interaction/",
+      "title": "06 NPC 互動 · zenica combat pause npc 027 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_027_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/npc-interaction/",
+      "title": "07 NPC 互動 · zenica combat pause npc 028 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_028_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/npc-interaction/",
+      "title": "08 NPC 互動 · zenica combat pause npc 029 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_029_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/npc-interaction/",
+      "title": "09 NPC 互動 · zenica combat pause npc 030 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_030_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/npc-interaction/",
+      "title": "10 NPC 互動 · zenica combat pause npc 031 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_031_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/npc-interaction/",
+      "title": "11 NPC 互動 · zenica combat pause npc 032 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_032_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/npc-interaction/",
+      "title": "12 NPC 互動 · zenica combat pause npc 033 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_033_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/npc-interaction/",
+      "title": "13 NPC 互動 · zenica combat pause npc 034 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_034_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/npc-interaction/",
+      "title": "14 NPC 互動 · zenica combat pause npc 035 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_035_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/npc-interaction/",
+      "title": "15 NPC 互動 · zenica combat pause npc 036 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_036_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/npc-interaction/",
+      "title": "16 NPC 互動 · zenica combat pause npc 037 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_037_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/npc-interaction/",
+      "title": "17 NPC 互動 · zenica combat pause npc 038 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_038_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/npc-interaction/",
+      "title": "18 NPC 互動 · zenica combat pause npc 039 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_039_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/npc-interaction/",
+      "title": "19 NPC 互動 · zenica combat pause npc 040 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_040_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/npc-interaction/",
+      "title": "20 NPC 互動 · zenica combat pause npc 041 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_041_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/npc-interaction/",
+      "title": "21 NPC 互動 · zenica combat pause npc 042 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_042_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/npc-interaction/",
+      "title": "22 NPC 互動 · zenica combat pause npc 043 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_043_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/npc-interaction/",
+      "title": "23 NPC 互動 · zenica combat pause npc 044 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_044_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/npc-interaction/",
+      "title": "24 NPC 互動 · zenica combat pause npc 045 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_045_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/npc-interaction/",
+      "title": "25 NPC 互動 · zenica combat pause npc 046 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_046_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/npc-interaction/",
+      "title": "26 NPC 互動 · zenica combat pause npc 047 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_047_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/npc-interaction/",
+      "title": "27 NPC 互動 · zenica combat pause npc 048 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_048_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/npc-interaction/",
+      "title": "28 NPC 互動 · zenica combat pause npc 049 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_049_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/npc-interaction/",
+      "title": "29 NPC 互動 · zenica combat pause npc 050 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_050_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/npc-interaction/",
+      "title": "30 NPC 互動 · zenica combat pause npc 056 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_056_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/npc-interaction/",
+      "title": "31 NPC 互動 · zenica combat pause npc 057 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_057_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/npc-interaction/",
+      "title": "32 NPC 互動 · zenica combat pause npc 058 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_058_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/npc-interaction/",
+      "title": "33 NPC 互動 · zenica combat pause npc 059 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_059_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/npc-interaction/",
+      "title": "34 NPC 互動 · zenica combat pause npc 060 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_060_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/npc-interaction/",
+      "title": "35 NPC 互動 · zenica combat pause npc 061 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_061_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/npc-interaction/",
+      "title": "36 NPC 互動 · zenica combat pause npc 062 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_062_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/npc-interaction/",
+      "title": "37 NPC 互動 · zenica combat pause npc 063 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_063_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/npc-interaction/",
+      "title": "38 NPC 互動 · zenica combat pause npc 064 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_064_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/npc-interaction/",
+      "title": "39 NPC 互動 · zenica combat pause npc 065 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_065_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/npc-interaction/",
+      "title": "40 NPC 互動 · zenica combat pause npc 066 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_066_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/npc-interaction/",
+      "title": "41 NPC 互動 · zenica combat pause npc 067 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_067_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/npc-interaction/",
+      "title": "42 NPC 互動 · zenica combat pause npc 068 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_068_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/npc-interaction/",
+      "title": "43 NPC 互動 · zenica combat pause npc 069 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_069_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/npc-interaction/",
+      "title": "44 NPC 互動 · zenica combat pause npc 070 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_070_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/npc-interaction/",
+      "title": "45 NPC 互動 · expeditions loot converter a",
+      "url": "/darktide/zh-tw/npc-interaction/expeditions_loot_converter_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/npc-interaction/",
+      "title": "46 NPC 互動 · expeditions shop goodbye a",
+      "url": "/darktide/zh-tw/npc-interaction/expeditions_shop_goodbye_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/npc-interaction/",
+      "title": "47 NPC 互動 · expeditions shop greeting a",
+      "url": "/darktide/zh-tw/npc-interaction/expeditions_shop_greeting_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/npc-interaction/",
+      "title": "48 NPC 互動 · expeditions shop purchase a",
+      "url": "/darktide/zh-tw/npc-interaction/expeditions_shop_purchase_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/npc-interaction/",
+      "title": "49 NPC 互動 · zenica combat pause npc 001 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_001_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/npc-interaction/",
+      "title": "50 NPC 互動 · zenica combat pause npc 002 a",
+      "url": "/darktide/zh-tw/npc-interaction/zenica_combat_pause_npc_002_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/npc-interaction/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

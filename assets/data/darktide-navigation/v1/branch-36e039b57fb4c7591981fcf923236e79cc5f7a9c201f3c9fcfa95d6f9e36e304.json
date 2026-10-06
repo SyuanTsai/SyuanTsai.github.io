@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-vo/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/page-005/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/en/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "201 Player callouts and replies · expeditions heat max horde vector a",
+      "url": "/darktide/en/player-vo/expeditions_heat_max_horde_vector_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "202 Player callouts and replies · expeditions heat max monster spawned a",
+      "url": "/darktide/en/player-vo/expeditions_heat_max_monster_spawned_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "203 Player callouts and replies · expeditions heat max opportunity start a",
+      "url": "/darktide/en/player-vo/expeditions_heat_max_opportunity_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "204 Player callouts and replies · expeditions call extraction a",
+      "url": "/darktide/en/player-vo/expeditions_call_extraction_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "205 Player callouts and replies · expeditions heat max patrol a",
+      "url": "/darktide/en/player-vo/expeditions_heat_max_patrol_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "206 Player callouts and replies · expeditions heat max safe room exit a",
+      "url": "/darktide/en/player-vo/expeditions_heat_max_safe_room_exit_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "207 Player callouts and replies · expeditions heat undetected heat drop a",
+      "url": "/darktide/en/player-vo/expeditions_heat_undetected_heat_drop_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "208 Player callouts and replies · expeditions heat undetected heat rise a",
+      "url": "/darktide/en/player-vo/expeditions_heat_undetected_heat_rise_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "209 Player callouts and replies · expeditions mission forced extraction a",
+      "url": "/darktide/en/player-vo/expeditions_mission_forced_extraction_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "210 Player callouts and replies · expeditions mission new area start a",
+      "url": "/darktide/en/player-vo/expeditions_mission_new_area_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "211 Player callouts and replies · expeditions mission start a",
+      "url": "/darktide/en/player-vo/expeditions_mission_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "212 Player callouts and replies · expeditions chest locked a",
+      "url": "/darktide/en/player-vo/expeditions_chest_locked_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "213 Player callouts and replies · expeditions opportunities no more a",
+      "url": "/darktide/en/player-vo/expeditions_opportunities_no_more_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "214 Player callouts and replies · expeditions opportunity start first a",
+      "url": "/darktide/en/player-vo/expeditions_opportunity_start_first_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "215 Player callouts and replies · expeditions place explosives a",
+      "url": "/darktide/en/player-vo/expeditions_place_explosives_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "216 Player callouts and replies · expeditions power out a",
+      "url": "/darktide/en/player-vo/expeditions_power_out_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "217 Player callouts and replies · expeditions power restored a",
+      "url": "/darktide/en/player-vo/expeditions_power_restored_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "218 Player callouts and replies · expeditions sealed door a",
+      "url": "/darktide/en/player-vo/expeditions_sealed_door_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "219 Player callouts and replies · expeditions sentry gun activated a",
+      "url": "/darktide/en/player-vo/expeditions_sentry_gun_activated_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "220 Player callouts and replies · expeditions sentry gun deactivated a",
+      "url": "/darktide/en/player-vo/expeditions_sentry_gun_deactivated_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "221 Player callouts and replies · expeditions chest unlocked a",
+      "url": "/darktide/en/player-vo/expeditions_chest_unlocked_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "222 Player callouts and replies · expeditions shield deployed a",
+      "url": "/darktide/en/player-vo/expeditions_shield_deployed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "223 Player callouts and replies · expeditions shop exit reminder a",
+      "url": "/darktide/en/player-vo/expeditions_shop_exit_reminder_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "224 Player callouts and replies · expeditions shop found a",
+      "url": "/darktide/en/player-vo/expeditions_shop_found_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "225 Player callouts and replies · expeditions sighted first data reliquary a",
+      "url": "/darktide/en/player-vo/expeditions_sighted_first_data_reliquary_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "226 Player callouts and replies · expeditions sighted first salvage a",
+      "url": "/darktide/en/player-vo/expeditions_sighted_first_salvage_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "227 Player callouts and replies · expeditions sighted first tech remnants a",
+      "url": "/darktide/en/player-vo/expeditions_sighted_first_tech_remnants_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "228 Player callouts and replies · expeditions valkyrie support a",
+      "url": "/darktide/en/player-vo/expeditions_valkyrie_support_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "229 Player callouts and replies · expeditions valkyrie support hover a",
+      "url": "/darktide/en/player-vo/expeditions_valkyrie_support_hover_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "230 Player callouts and replies · expeditions distraction end a",
+      "url": "/darktide/en/player-vo/expeditions_distraction_end_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "231 Player callouts and replies · expeditions distraction start a",
+      "url": "/darktide/en/player-vo/expeditions_distraction_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "232 Player callouts and replies · expeditions alarm triggered a",
+      "url": "/darktide/en/player-vo/expeditions_alarm_triggered_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "233 Player callouts and replies · expedition elevator coming",
+      "url": "/darktide/en/player-vo/expedition_elevator_coming/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "234 Player callouts and replies · expeditions extraction reminder a",
+      "url": "/darktide/en/player-vo/expeditions_extraction_reminder_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "235 Player callouts and replies · expeditions heat alert heat drop a",
+      "url": "/darktide/en/player-vo/expeditions_heat_alert_heat_drop_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "236 Player callouts and replies · expeditions heat alert heat rise a",
+      "url": "/darktide/en/player-vo/expeditions_heat_alert_heat_rise_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "237 Player callouts and replies · expeditions heat alert horde vector a",
+      "url": "/darktide/en/player-vo/expeditions_heat_alert_horde_vector_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "238 Player callouts and replies · expeditions heat alert monster spawned a",
+      "url": "/darktide/en/player-vo/expeditions_heat_alert_monster_spawned_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "239 Player callouts and replies · expeditions heat alert opportunity start a",
+      "url": "/darktide/en/player-vo/expeditions_heat_alert_opportunity_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "240 Player callouts and replies · expeditions heat alert safe room entered a",
+      "url": "/darktide/en/player-vo/expeditions_heat_alert_safe_room_entered_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "241 Player callouts and replies · expeditions heat alert safe room event a",
+      "url": "/darktide/en/player-vo/expeditions_heat_alert_safe_room_event_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "242 Player callouts and replies · ogryn start revive veteran",
+      "url": "/darktide/en/player-vo/ogryn_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "243 Player callouts and replies · ogryn start revive zealot",
+      "url": "/darktide/en/player-vo/ogryn_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "244 Player callouts and replies · pinned by enemies",
+      "url": "/darktide/en/player-vo/pinned_by_enemies/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "245 Player callouts and replies · plasma vent a",
+      "url": "/darktide/en/player-vo/plasma_vent_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "246 Player callouts and replies · player death ogryn",
+      "url": "/darktide/en/player-vo/player_death_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "247 Player callouts and replies · player death psyker",
+      "url": "/darktide/en/player-vo/player_death_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "248 Player callouts and replies · player death veteran",
+      "url": "/darktide/en/player-vo/player_death_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "249 Player callouts and replies · player death zealot",
+      "url": "/darktide/en/player-vo/player_death_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-vo/page-005/",
+      "title": "250 Player callouts and replies · player tip armor hit generic",
+      "url": "/darktide/en/player-vo/player_tip_armor_hit_generic/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-vo/page-005/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

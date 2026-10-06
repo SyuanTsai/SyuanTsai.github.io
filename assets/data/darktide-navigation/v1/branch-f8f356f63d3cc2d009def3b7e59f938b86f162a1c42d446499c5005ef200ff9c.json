@@ -1,0 +1,154 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/cinematic/",
+    "title": "Fixed cinematic subtitles",
+    "url": "/darktide/en/cinematic/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 1,
+    "parent": "/darktide/en/",
+    "title": "Fixed cinematic subtitles",
+    "url": "/darktide/en/cinematic/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/cinematic/",
+      "title": "01 Cinematic: adamant_intro",
+      "url": "/darktide/en/cinematic/adamant_intro/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/cinematic/",
+      "title": "02 Cinematic: broker_intro",
+      "url": "/darktide/en/cinematic/broker_intro/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/cinematic/",
+      "title": "03 Cinematic: cryptic_intro_part1",
+      "url": "/darktide/en/cinematic/cryptic_intro_part1/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/cinematic/",
+      "title": "04 Cinematic: cryptic_intro_part2",
+      "url": "/darktide/en/cinematic/cryptic_intro_part2/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/cinematic/",
+      "title": "05 Cinematic: cs06",
+      "url": "/darktide/en/cinematic/cs06/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/cinematic/",
+      "title": "06 Cinematic: cin_nox_alpha",
+      "url": "/darktide/en/cinematic/cin_nox_alpha/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/cinematic/",
+      "title": "07 Cinematic: s1_intro",
+      "url": "/darktide/en/cinematic/s1_intro/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/cinematic/",
+      "title": "08 Cinematic: core_research_intro",
+      "url": "/darktide/en/cinematic/core_research_intro/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/cinematic/",
+      "title": "09 Cinematic: voxshot_rise",
+      "url": "/darktide/en/cinematic/voxshot_rise/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/cinematic/",
+      "title": "10 Cinematic: hli_mission_board",
+      "url": "/darktide/en/cinematic/hli_mission_board/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/cinematic/",
+      "title": "11 Cinematic: hli_mission_board_adamant",
+      "url": "/darktide/en/cinematic/hli_mission_board_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/cinematic/",
+      "title": "12 Cinematic: hli_mission_board_cryptic",
+      "url": "/darktide/en/cinematic/hli_mission_board_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/cinematic/",
+      "title": "13 Cinematic: hli_crafting_station_underground",
+      "url": "/darktide/en/cinematic/hli_crafting_station_underground/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/cinematic/",
+      "title": "14 Cinematic: hli_contracts",
+      "url": "/darktide/en/cinematic/hli_contracts/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/cinematic/",
+      "title": "15 Cinematic: hli_barbershop",
+      "url": "/darktide/en/cinematic/hli_barbershop/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/cinematic/",
+      "title": "16 Cinematic: hli_gun_shop",
+      "url": "/darktide/en/cinematic/hli_gun_shop/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/cinematic/",
+      "title": "17 Cinematic: hli_penances",
+      "url": "/darktide/en/cinematic/hli_penances/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/cinematic/",
+      "title": "18 Cinematic: hli_expeditions",
+      "url": "/darktide/en/cinematic/hli_expeditions/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/cinematic/",
+      "title": "19 Cinematic: darktide_world_intro_subtitles",
+      "url": "/darktide/en/cinematic/darktide_world_intro_subtitles/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/cinematic/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

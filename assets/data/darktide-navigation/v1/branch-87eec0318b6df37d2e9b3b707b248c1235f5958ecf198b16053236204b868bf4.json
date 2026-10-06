@@ -1,0 +1,442 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/zealot/",
+      "title": "閃擊",
+      "url": "/darktide/skills/zealot/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/zealot/",
+      "title": "光環",
+      "url": "/darktide/skills/zealot/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/zealot/",
+      "title": "能力",
+      "url": "/darktide/skills/zealot/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/zealot/",
+      "title": "鑰石",
+      "url": "/darktide/skills/zealot/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/zealot/",
+      "title": "技能",
+      "url": "/darktide/skills/zealot/#category-4"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/zealot/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/zealot/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 6,
+    "parent": "/darktide/skills/",
+    "title": "狂信徒",
+    "titleEn": "Zealot",
+    "url": "/darktide/skills/zealot/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-4",
+    "kind": "skill-category",
+    "order": 4,
+    "parent": "/darktide/skills/zealot/",
+    "title": "技能",
+    "url": "/darktide/skills/zealot/#category-4"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "天災",
+      "titleEn": "Scourge",
+      "url": "/darktide/skills/zealot/scourge/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "背刺者",
+      "titleEn": "Backstabber",
+      "url": "/darktide/skills/zealot/backstabber/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "蔑視",
+      "titleEn": "Disdain",
+      "url": "/darktide/skills/zealot/disdain/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "淨化不潔",
+      "titleEn": "Purge the Unclean",
+      "url": "/darktide/skills/zealot/purge-the-unclean/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "持續突擊",
+      "titleEn": "Sustained Assault",
+      "url": "/darktide/skills/zealot/sustained-assault/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "堅韌信仰",
+      "titleEn": "Enduring Faith",
+      "url": "/darktide/skills/zealot/enduring-faith/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "精力復甦",
+      "titleEn": "Second Wind",
+      "url": "/darktide/skills/zealot/second-wind/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "近戰增幅",
+      "titleEn": "Melee Damage Boost",
+      "url": "/darktide/skills/zealot/melee-damage-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "泰拉之音",
+      "titleEn": "The Voice of Terra",
+      "url": "/darktide/skills/zealot/the-voice-of-terra/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "恢復信仰",
+      "titleEn": "Restoring Faith",
+      "url": "/darktide/skills/zealot/restoring-faith/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "為了帝皇",
+      "titleEn": "Bleed for the Emperor",
+      "url": "/darktide/skills/zealot/bleed-for-the-emperor/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "惡毒贈禮",
+      "titleEn": "Vicious Offering",
+      "url": "/darktide/skills/zealot/vicious-offering/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "韌性減傷",
+      "titleEn": "Toughness Damage Reduction",
+      "url": "/darktide/skills/zealot/toughness-damage-reduction/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "決鬥者",
+      "titleEn": "Duellist",
+      "url": "/darktide/skills/zealot/duellist/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "輕蔑之盾",
+      "titleEn": "Shield of Contempt",
+      "url": "/darktide/skills/zealot/shield-of-contempt/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "褻瀆必懲",
+      "titleEn": "Punish Impiety",
+      "url": "/darktide/skills/zealot/punish-impiety/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "勃然大怒",
+      "titleEn": "Thy Wrath be Swift",
+      "url": "/darktide/skills/zealot/thy-wrath-be-swift/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "反制護盾",
+      "titleEn": "Retaliatory Defence",
+      "url": "/darktide/skills/zealot/retaliatory-defence/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 18,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "四平八穩",
+      "titleEn": "Good Balance",
+      "url": "/darktide/skills/zealot/good-balance/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 19,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "內憂外患",
+      "titleEn": "Enemies Within, Enemies Without",
+      "url": "/darktide/skills/zealot/enemies-within-enemies-without/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 20,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "信仰狂亂",
+      "titleEn": "Faithful Frenzy",
+      "url": "/darktide/skills/zealot/faithful-frenzy/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 21,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "信仰之勇",
+      "titleEn": "Faith's Fortitude",
+      "url": "/darktide/skills/zealot/faiths-fortitude/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 22,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "鮮血受膏",
+      "titleEn": "Anoint in Blood",
+      "url": "/darktide/skills/zealot/anoint-in-blood/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 23,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "不屈之志",
+      "titleEn": "Unfaltering",
+      "url": "/darktide/skills/zealot/unfaltering/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 24,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "靈活還擊",
+      "titleEn": "Riposte",
+      "url": "/darktide/skills/zealot/riposte/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 25,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "狂熱不懈",
+      "titleEn": "Relentless Fervor",
+      "url": "/darktide/skills/zealot/relentless-fervor/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 26,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "無形之刃",
+      "titleEn": "Unseen Blade",
+      "url": "/darktide/skills/zealot/unseen-blade/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 27,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "大師的反擊",
+      "titleEn": "The Master's Retribution",
+      "url": "/darktide/skills/zealot/the-masters-retribution/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 28,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "血色迷障",
+      "titleEn": "Blinded by Blood",
+      "url": "/darktide/skills/zealot/blinded-by-blood/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 29,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "背水一戰",
+      "titleEn": "Desperation",
+      "url": "/darktide/skills/zealot/desperation/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 30,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "刻不容緩",
+      "titleEn": "No Respite",
+      "url": "/darktide/skills/zealot/no-respite/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 31,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "神恩庇護",
+      "titleEn": "Providence",
+      "url": "/darktide/skills/zealot/providence/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 32,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "弒除瀆者",
+      "titleEn": "Abolish Blasphemers",
+      "url": "/darktide/skills/zealot/abolish-blasphemers/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 33,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "傲慢",
+      "titleEn": "Hubris",
+      "url": "/darktide/skills/zealot/hubris/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 34,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "近戰增幅",
+      "titleEn": "Melee Damage Boost",
+      "url": "/darktide/skills/zealot/melee-damage-boost-base-melee-damage-node-buff-medium-4/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 35,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "頭號目標",
+      "titleEn": "Prime Target",
+      "url": "/darktide/skills/zealot/prime-target/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 36,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "敵後行動",
+      "titleEn": "Behind the Lines",
+      "url": "/darktide/skills/zealot/behind-the-lines/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 37,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "殺戮時刻",
+      "titleEn": "Time to Kill",
+      "url": "/darktide/skills/zealot/time-to-kill/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 38,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "逆境而上",
+      "titleEn": "Against the Odds",
+      "url": "/darktide/skills/zealot/against-the-odds/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 39,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "自掏腰包",
+      "titleEn": "Out of Pocket",
+      "url": "/darktide/skills/zealot/out-of-pocket/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 40,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "排隊等候",
+      "titleEn": "Wait in Line",
+      "url": "/darktide/skills/zealot/wait-in-line/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 41,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "神聖工具",
+      "titleEn": "Holy Tools",
+      "url": "/darktide/skills/zealot/holy-tools/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 42,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "為您撐腰",
+      "titleEn": "Got Your Back",
+      "url": "/darktide/skills/zealot/got-your-back/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 43,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "淨化仇恨",
+      "titleEn": "Purifying Hatred",
+      "url": "/darktide/skills/zealot/purifying-hatred/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 44,
+      "parent": "/darktide/skills/zealot/#category-4",
+      "title": "死亡之舞",
+      "titleEn": "Dance of Death",
+      "url": "/darktide/skills/zealot/dance-of-death/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/zealot/#category-4",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

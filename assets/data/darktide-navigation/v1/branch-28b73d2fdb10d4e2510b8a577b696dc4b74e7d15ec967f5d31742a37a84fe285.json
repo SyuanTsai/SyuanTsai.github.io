@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-vo/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/page-009/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 9,
+    "parent": "/darktide/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "401 玩家呼喊與回應 · com wheel vo location attention",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_location_attention/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "402 玩家呼喊與回應 · smart tag vo enemy flamer",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_enemy_flamer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "403 玩家呼喊與回應 · smart tag vo enemy grenadier",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_enemy_grenadier/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "404 玩家呼喊與回應 · com wheel vo location ping",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_location_ping/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "405 玩家呼喊與回應 · smart tag vo enemy gunner",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_enemy_gunner/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "406 玩家呼喊與回應 · smart tag vo enemy houndmaster",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_enemy_houndmaster/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "407 玩家呼喊與回應 · smart tag vo enemy plasma",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_enemy_plasma/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "408 玩家呼喊與回應 · smart tag vo enemy shocktrooper",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_enemy_shocktrooper/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "409 玩家呼喊與回應 · com wheel vo my pleasure a",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_my_pleasure_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "410 玩家呼喊與回應 · smart tag vo pickup ammo",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "411 玩家呼喊與回應 · smart tag vo pickup battery",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_battery/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "412 玩家呼喊與回應 · smart tag vo pickup container",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_container/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "413 玩家呼喊與回應 · smart tag vo pickup control rod",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_control_rod/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "414 玩家呼喊與回應 · com wheel vo need ammo",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_need_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "415 玩家呼喊與回應 · smart tag vo pickup deployed ammo crate",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_deployed_ammo_crate/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "416 玩家呼喊與回應 · smart tag vo pickup deployed medical crate",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_deployed_medical_crate/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "417 玩家呼喊與回應 · smart tag vo pickup forge metal",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_forge_metal/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "418 玩家呼喊與回應 · smart tag vo pickup medical crate",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_medical_crate/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "419 玩家呼喊與回應 · smart tag vo pickup platinum",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_platinum/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "420 玩家呼喊與回應 · smart tag vo pickup side mission consumable",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_side_mission_consumable/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "421 玩家呼喊與回應 · smart tag vo pickup side mission grimoire",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_side_mission_grimoire/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "422 玩家呼喊與回應 · smart tag vo pickup side mission tome",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_pickup_side_mission_tome/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "423 玩家呼喊與回應 · smart tag vo small grenade",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_small_grenade/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "424 玩家呼喊與回應 · com wheel vo need health",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_need_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "425 玩家呼喊與回應 · smart tag vo station health",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_station_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "426 玩家呼喊與回應 · smart tag vo station health without battery",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_station_health_without_battery/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "427 玩家呼喊與回應 · com wheel vo need that",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_need_that/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "428 玩家呼喊與回應 · com wheel vo no",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_no/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "429 玩家呼喊與回應 · com wheel vo take this a",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_take_this_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "430 玩家呼喊與回應 · com wheel vo thank you",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_thank_you/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "431 玩家呼喊與回應 · com wheel vo follow you",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_follow_you/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "432 玩家呼喊與回應 · com wheel vo yes",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_yes/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "433 玩家呼喊與回應 · com wheel vo enemy over here",
+      "url": "/darktide/zh-tw/player-vo/com_wheel_vo_enemy_over_here/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "434 玩家呼喊與回應 · seen netgunner flee",
+      "url": "/darktide/zh-tw/player-vo/seen_netgunner_flee/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "435 玩家呼喊與回應 · smart tag stimm concentration a",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_stimm_concentration_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "436 玩家呼喊與回應 · smart tag stimm health a",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_stimm_health_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "437 玩家呼喊與回應 · smart tag stimm power a",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_stimm_power_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "438 玩家呼喊與回應 · smart tag stimm speed a",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_stimm_speed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "439 玩家呼喊與回應 · smart tag vo enemy berserker",
+      "url": "/darktide/zh-tw/player-vo/smart_tag_vo_enemy_berserker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "440 玩家呼喊與回應 · repeated psykinetic head pop a",
+      "url": "/darktide/zh-tw/player-vo/repeated_psykinetic_head_pop_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "441 玩家呼喊與回應 · seen self melee killstreak a",
+      "url": "/darktide/zh-tw/player-vo/seen_self_melee_killstreak_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "442 玩家呼喊與回應 · healing self and others desc a",
+      "url": "/darktide/zh-tw/player-vo/healing_self_and_others_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "443 玩家呼喊與回應 · health station tutorial desc a",
+      "url": "/darktide/zh-tw/player-vo/health_station_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "444 玩家呼喊與回應 · incoming suppression desc a",
+      "url": "/darktide/zh-tw/player-vo/incoming_suppression_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "445 玩家呼喊與回應 · lock in melee desc a",
+      "url": "/darktide/zh-tw/player-vo/lock_in_melee_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "446 玩家呼喊與回應 · psyker ability desc a",
+      "url": "/darktide/zh-tw/player-vo/psyker_ability_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "447 玩家呼喊與回應 · push follow up desc a",
+      "url": "/darktide/zh-tw/player-vo/push_follow_up_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "448 玩家呼喊與回應 · pushing desc a",
+      "url": "/darktide/zh-tw/player-vo/pushing_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "449 玩家呼喊與回應 · ranged grenade desc a",
+      "url": "/darktide/zh-tw/player-vo/ranged_grenade_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-vo/page-009/",
+      "title": "450 玩家呼喊與回應 · ranged grenade desc a bonebreaker blitz",
+      "url": "/darktide/zh-tw/player-vo/ranged_grenade_desc_a_bonebreaker_blitz/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-vo/page-009/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

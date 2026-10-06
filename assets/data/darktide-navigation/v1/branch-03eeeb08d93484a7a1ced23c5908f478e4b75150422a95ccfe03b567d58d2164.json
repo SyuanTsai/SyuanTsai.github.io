@@ -1,0 +1,211 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/veteran/",
+      "title": "閃擊",
+      "url": "/darktide/skills/veteran/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/veteran/",
+      "title": "光環",
+      "url": "/darktide/skills/veteran/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/veteran/",
+      "title": "能力",
+      "url": "/darktide/skills/veteran/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/veteran/",
+      "title": "鑰石",
+      "url": "/darktide/skills/veteran/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/veteran/",
+      "title": "技能",
+      "url": "/darktide/skills/veteran/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/veteran/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/veteran/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/veteran/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/veteran/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 5,
+    "parent": "/darktide/skills/",
+    "title": "老兵",
+    "titleEn": "Veteran",
+    "url": "/darktide/skills/veteran/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-2",
+    "kind": "skill-category",
+    "order": 2,
+    "parent": "/darktide/skills/veteran/",
+    "title": "能力",
+    "url": "/darktide/skills/veteran/#category-2"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "火力齊射",
+      "titleEn": "Volley Fire",
+      "url": "/darktide/skills/veteran/volley-fire/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "滲透",
+      "titleEn": "Infiltrate",
+      "url": "/darktide/skills/veteran/infiltrate/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "低調",
+      "titleEn": "Low Profile",
+      "url": "/darktide/skills/veteran/low-profile/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "處決者姿態",
+      "titleEn": "Executioner's Stance",
+      "url": "/darktide/skills/veteran/executioners-stance/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "目標引導增強",
+      "titleEn": "Enhanced Target Priority",
+      "url": "/darktide/skills/veteran/enhanced-target-priority/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "火力反擊",
+      "titleEn": "Counter-Fire",
+      "url": "/darktide/skills/veteran/counter-fire/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "獵手決意",
+      "titleEn": "Hunter's Resolve",
+      "url": "/darktide/skills/veteran/hunters-resolve/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "戰術意識",
+      "titleEn": "Tactical Awareness",
+      "url": "/darktide/skills/veteran/tactical-awareness/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "發號施令",
+      "titleEn": "Voice of Command",
+      "url": "/darktide/skills/veteran/voice-of-command/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "只有死亡，職責才會終結",
+      "titleEn": "Only In Death Does Duty End",
+      "url": "/darktide/skills/veteran/only-in-death-does-duty-end/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "鷹眼",
+      "titleEn": "Marksman",
+      "url": "/darktide/skills/veteran/marksman/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "責任與榮譽",
+      "titleEn": "Duty and Honour",
+      "url": "/darktide/skills/veteran/duty-and-honour/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "掩護射擊",
+      "titleEn": "Overwatch",
+      "url": "/darktide/skills/veteran/overwatch/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "肉搏戰",
+      "titleEn": "Close Quarters Killzone",
+      "url": "/darktide/skills/veteran/close-quarters-killzone/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/veteran/#category-2",
+      "title": "敵人越大...",
+      "titleEn": "The Bigger they Are ...",
+      "url": "/darktide/skills/veteran/the-bigger-they-are/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/veteran/#category-2",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "一般戰役任務",
+    "url": "/darktide/mission-vox/campaign/page-008/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "351 任務通訊 · mission cartel elevator use",
+      "url": "/darktide/zh-tw/mission-vox/mission_cartel_elevator_use/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "352 任務通訊 · mission cartel find bazaar",
+      "url": "/darktide/zh-tw/mission-vox/mission_cartel_find_bazaar/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "353 任務通訊 · mission cartel get passcodes",
+      "url": "/darktide/zh-tw/mission-vox/mission_cartel_get_passcodes/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "354 任務通訊 · mission complex transmission begun",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_transmission_begun/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "355 任務通訊 · mission complex transmitter",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_transmitter/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "356 任務通訊 · mission complex way in",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_way_in/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "357 任務通訊 · mission complex elevator coming",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_elevator_coming/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "358 任務通訊 · mission complex elevator conversation 1 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_elevator_conversation_1_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "359 任務通訊 · mission complex elevator conversation 2 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_elevator_conversation_2_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "360 任務通訊 · mission complex elevator conversation 3 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_elevator_conversation_3_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "361 任務通訊 · mission complex elevator here",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_elevator_here/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "362 任務通訊 · mission complex elevator",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_elevator/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "363 任務通訊 · mission complex elevator access",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_elevator_access/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "364 任務通訊 · mission complex old shrine street",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_old_shrine_street/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "365 任務通訊 · mission complex progress archivum",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_progress_archivum/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "366 任務通訊 · mission complex side entrance",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_side_entrance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "367 任務通訊 · mission complex skyfire cutout",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_skyfire_cutout/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "368 任務通訊 · mission complex to the roof",
+      "url": "/darktide/zh-tw/mission-vox/mission_complex_to_the_roof/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "369 任務通訊 · mission strain keep following pipes",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_keep_following_pipes/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "370 任務通訊 · mission strain mid elevator conversation 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_mid_elevator_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "371 任務通訊 · mission strain mid elevator conversation one a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_mid_elevator_conversation_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "372 任務通訊 · mission strain atmosphere shield",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_atmosphere_shield/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "373 任務通訊 · mission strain mid elevator conversation three a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_mid_elevator_conversation_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "374 任務通訊 · mission strain mid elevator conversation two a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_mid_elevator_conversation_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "375 任務通訊 · mission strain mid event conversation one a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_mid_event_conversation_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "376 任務通訊 · mission strain mid event conversation three a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_mid_event_conversation_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "377 任務通訊 · mission strain cross hangar",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_cross_hangar/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "378 任務通訊 · mission strain mid event conversation two a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_mid_event_conversation_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "379 任務通訊 · mission strain mid event start",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_mid_event_start/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "380 任務通訊 · mission strain reach flow control",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_reach_flow_control/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "381 任務通訊 · mission strain reach hangar",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_reach_hangar/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "382 任務通訊 · mission strain refinery a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_refinery_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "383 任務通訊 · mission strain second objective a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_second_objective_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "384 任務通訊 · mission strain upstairs a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_upstairs_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "385 任務通訊 · mission strain wait for elevator",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_wait_for_elevator/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "386 任務通訊 · mission strain elevator found",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_elevator_found/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "387 任務通訊 · mission strain elevator use",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_elevator_use/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "388 任務通訊 · mission strain end event airlock a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_end_event_airlock_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "389 任務通訊 · event demolition first corruptor destroyed strain a",
+      "url": "/darktide/zh-tw/mission-vox/event_demolition_first_corruptor_destroyed_strain_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "390 任務通訊 · mission strain end event mid a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_end_event_mid_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "391 任務通訊 · mission strain end event start",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_end_event_start/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "392 任務通訊 · mission strain flow control near a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_flow_control_near_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "393 任務通訊 · mission strain ground level a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_ground_level_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "394 任務通訊 · mission strain job done",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_job_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "395 任務通訊 · mission strain job done a",
+      "url": "/darktide/zh-tw/mission-vox/mission_strain_job_done_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "396 任務通訊 · mission enforcer stairs arrived",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_stairs_arrived/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "397 任務通訊 · mission enforcer courtroom waypoint",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_courtroom_waypoint/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "398 任務通訊 · mission enforcer through hab",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_through_hab/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "399 任務通訊 · mission enforcer wonky hab",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_wonky_hab/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/mission-vox/campaign/page-008/",
+      "title": "400 任務通訊 · mission enforcer elevator conversation journey 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_elevator_conversation_journey_02_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/campaign/page-008/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

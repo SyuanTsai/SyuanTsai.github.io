@@ -1,0 +1,179 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "閃擊",
+      "url": "/darktide/skills/skitarii/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "光環",
+      "url": "/darktide/skills/skitarii/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "能力",
+      "url": "/darktide/skills/skitarii/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "鑰石",
+      "url": "/darktide/skills/skitarii/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "技能",
+      "url": "/darktide/skills/skitarii/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/skitarii/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/skitarii/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 4,
+    "parent": "/darktide/skills/",
+    "title": "護教軍",
+    "titleEn": "Skitarii",
+    "url": "/darktide/skills/skitarii/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-0",
+    "kind": "skill-category",
+    "order": 0,
+    "parent": "/darktide/skills/skitarii/",
+    "title": "閃擊",
+    "url": "/darktide/skills/skitarii/#category-0"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "整合型艾曼納圖斯力場",
+      "titleEn": "Integrated Refraction Emitter",
+      "url": "/darktide/skills/skitarii/integrated-refraction-emitter/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "滌罪伺服頭骨",
+      "titleEn": "Purgator Servo-Skull",
+      "url": "/darktide/skills/skitarii/purgator-servo-skull/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "醫療伺服頭骨",
+      "titleEn": "Medicae Servo-Skull",
+      "url": "/darktide/skills/skitarii/medicae-servo-skull/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "電弧手榴彈",
+      "titleEn": "Arc Grenades",
+      "url": "/darktide/skills/skitarii/arc-grenades/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "匠師伺服頭骨",
+      "titleEn": "Artificer Servo-Skull",
+      "url": "/darktide/skills/skitarii/artificer-servo-skull/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "超載電弧手榴彈",
+      "titleEn": "Overcharged Arc Grenades",
+      "url": "/darktide/skills/skitarii/overcharged-arc-grenades/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "強化電弧手榴彈",
+      "titleEn": "Enhanced Arc Grenades",
+      "url": "/darktide/skills/skitarii/enhanced-arc-grenades/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "過載艾曼納圖斯力場",
+      "titleEn": "Overcharged Refraction Emitter",
+      "url": "/darktide/skills/skitarii/overcharged-refraction-emitter/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "動能排斥",
+      "titleEn": "Kinetic Repulsion",
+      "url": "/darktide/skills/skitarii/kinetic-repulsion/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "心智網指令",
+      "titleEn": "Noospheric Command",
+      "url": "/darktide/skills/skitarii/noospheric-command/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/skitarii/#category-0",
+      "title": "電流抗性",
+      "titleEn": "Voltaic Resistance",
+      "url": "/darktide/skills/skitarii/voltaic-resistance/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/skitarii/#category-0",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

@@ -1,0 +1,146 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "閃擊",
+      "url": "/darktide/skills/ogryn/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "光環",
+      "url": "/darktide/skills/ogryn/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "能力",
+      "url": "/darktide/skills/ogryn/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "鑰石",
+      "url": "/darktide/skills/ogryn/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "技能",
+      "url": "/darktide/skills/ogryn/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/ogryn/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/ogryn/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 1,
+    "parent": "/darktide/skills/",
+    "title": "歐格林",
+    "titleEn": "Ogryn",
+    "url": "/darktide/skills/ogryn/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-5",
+    "kind": "skill-category",
+    "order": 5,
+    "parent": "/darktide/skills/ogryn/",
+    "title": "基礎效果",
+    "url": "/darktide/skills/ogryn/#category-5"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/ogryn/#category-5",
+      "title": "厚實表皮",
+      "titleEn": "Thick Skin",
+      "url": "/darktide/skills/ogryn/ogryn-base-tank-passive/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/ogryn/#category-5",
+      "title": "蠻牛衝撞",
+      "titleEn": "Bull Rush",
+      "url": "/darktide/skills/ogryn/bull-rush/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/ogryn/#category-5",
+      "title": "卓越氣場",
+      "titleEn": "Towering Presence",
+      "url": "/darktide/skills/ogryn/towering-presence/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/ogryn/#category-5",
+      "title": "滾吧你！",
+      "titleEn": "Outta My Way!",
+      "url": "/darktide/skills/ogryn/ogryn-dodge-stagger/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/ogryn/#category-5",
+      "title": "巨量傷害盒",
+      "titleEn": "Big Box of Hurt",
+      "url": "/darktide/skills/ogryn/big-box-of-hurt/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/ogryn/#category-5",
+      "title": "救援時不可打斷",
+      "url": "/darktide/skills/ogryn/ogryn-helping-hand/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/ogryn/#category-5",
+      "title": "威嚇氣場",
+      "titleEn": "Intimidating Presence",
+      "url": "/darktide/skills/ogryn/intimidating-presence/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/ogryn/#category-5",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

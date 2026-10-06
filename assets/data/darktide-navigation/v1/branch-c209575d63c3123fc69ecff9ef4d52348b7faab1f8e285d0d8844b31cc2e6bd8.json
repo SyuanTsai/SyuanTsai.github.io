@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-034/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1651 玩家閒談 · broker male a veteran bonding conversation 20 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_veteran_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1652 玩家閒談 · broker male a veteran bonding conversation 21 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_veteran_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1653 玩家閒談 · broker male a veteran bonding conversation 22 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_veteran_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1654 玩家閒談 · broker male a veteran bonding conversation 25 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_veteran_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1655 玩家閒談 · broker bonding conversation 15 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1656 玩家閒談 · broker male a veteran bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_veteran_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1657 玩家閒談 · broker male a veteran bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_veteran_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1658 玩家閒談 · broker male a veteran bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_veteran_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1659 玩家閒談 · broker male a veteran bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_veteran_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1660 玩家閒談 · broker male a veteran bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_veteran_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1661 玩家閒談 · broker male a zealot bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1662 玩家閒談 · broker male a zealot bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1663 玩家閒談 · broker male a zealot bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1664 玩家閒談 · broker male a zealot bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1665 玩家閒談 · broker male a zealot bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1666 玩家閒談 · broker bonding conversation 16 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1667 玩家閒談 · broker male a zealot bonding conversation 06 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1668 玩家閒談 · broker male a zealot bonding conversation 07 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1669 玩家閒談 · broker male a zealot bonding conversation 08 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1670 玩家閒談 · broker male a zealot bonding conversation 09 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1671 玩家閒談 · broker male a zealot bonding conversation 10 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1672 玩家閒談 · broker male a zealot bonding conversation 11 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1673 玩家閒談 · broker male a zealot bonding conversation 12 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1674 玩家閒談 · broker male a zealot bonding conversation 14 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1675 玩家閒談 · broker male a zealot bonding conversation 15 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1676 玩家閒談 · broker male a zealot bonding conversation 16 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1677 玩家閒談 · broker bonding conversation 17 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1678 玩家閒談 · broker male a zealot bonding conversation 17 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1679 玩家閒談 · broker male a zealot bonding conversation 18 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1680 玩家閒談 · broker male a zealot bonding conversation 21 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1681 玩家閒談 · broker male a zealot bonding conversation 22 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1682 玩家閒談 · broker male a zealot bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1683 玩家閒談 · broker male a zealot bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1684 玩家閒談 · broker male a zealot bonding conversation 25 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1685 玩家閒談 · broker bonding conversation 18 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1686 玩家閒談 · broker male a zealot bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1687 玩家閒談 · broker male a zealot bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1688 玩家閒談 · broker male a zealot bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1689 玩家閒談 · broker male a zealot bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1690 玩家閒談 · broker male a zealot bonding conversation 31 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1691 玩家閒談 · broker male a zealot bonding conversation 32 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1692 玩家閒談 · broker male a zealot bonding conversation 33 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1693 玩家閒談 · broker male a zealot bonding conversation 34 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1694 玩家閒談 · broker male a zealot bonding conversation 35 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1695 玩家閒談 · broker male a zealot bonding conversation 36 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_a_zealot_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1696 玩家閒談 · broker bonding conversation 19 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1697 玩家閒談 · broker bonding conversation 20 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1698 玩家閒談 · broker bonding conversation 21 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1699 玩家閒談 · broker bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-034/",
+      "title": "1700 玩家閒談 · broker bonding conversation 22 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_22_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-034/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

@@ -1,0 +1,460 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/scum/",
+      "title": "閃擊",
+      "url": "/darktide/skills/scum/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/scum/",
+      "title": "光環",
+      "url": "/darktide/skills/scum/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/scum/",
+      "title": "能力",
+      "url": "/darktide/skills/scum/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/scum/",
+      "title": "鑰石",
+      "url": "/darktide/skills/scum/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/scum/",
+      "title": "技能",
+      "url": "/darktide/skills/scum/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/scum/",
+      "title": "興奮劑配方",
+      "url": "/darktide/skills/scum/#category-5"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-6",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/scum/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/scum/#category-6"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 7,
+      "parent": "/darktide/skills/scum/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/scum/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 3,
+    "parent": "/darktide/skills/",
+    "title": "巢都渣滓",
+    "titleEn": "Scum",
+    "url": "/darktide/skills/scum/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-4",
+    "kind": "skill-category",
+    "order": 4,
+    "parent": "/darktide/skills/scum/",
+    "title": "技能",
+    "url": "/darktide/skills/scum/#category-4"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "快速且致命",
+      "titleEn": "Quick and Deadly",
+      "url": "/darktide/skills/scum/quick-and-deadly/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "特提恩是迎賓",
+      "titleEn": "A Tertium Welcome",
+      "url": "/darktide/skills/scum/a-tertium-welcome/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "打你的臉",
+      "titleEn": "In Your Face",
+      "url": "/darktide/skills/scum/in-your-face/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "精準暴力",
+      "titleEn": "Precision Violence",
+      "url": "/darktide/skills/scum/precision-violence/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "特提恩之聲",
+      "titleEn": "Voice of Tertium",
+      "url": "/darktide/skills/scum/voice-of-tertium/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "翩翩蝶舞",
+      "titleEn": "Float Like a Butterfly",
+      "url": "/darktide/skills/scum/float-like-a-butterfly/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "快速裝填",
+      "titleEn": "Speedloader",
+      "url": "/darktide/skills/scum/speedloader/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "能量爆發",
+      "titleEn": "Burst of Energy",
+      "url": "/darktide/skills/scum/burst-of-energy/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "韌性增幅",
+      "titleEn": "Toughness Boost",
+      "url": "/darktide/skills/scum/toughness-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "恢復姿態",
+      "titleEn": "Regained Posture",
+      "url": "/darktide/skills/scum/regained-posture/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "奧客",
+      "titleEn": "Slippery Customer",
+      "url": "/darktide/skills/scum/slippery-customer/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "沒甚麼，只是擦傷",
+      "titleEn": "Tis but a Scratch",
+      "url": "/darktide/skills/scum/tis-but-a-scratch/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "狂轟猛射",
+      "titleEn": "Unload",
+      "url": "/darktide/skills/scum/unload/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "堅韌疾速",
+      "titleEn": "Swift Endurance",
+      "url": "/darktide/skills/scum/swift-endurance/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "加重背刺",
+      "titleEn": "Ramping Backstabs",
+      "url": "/darktide/skills/scum/ramping-backstabs/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "移動目標",
+      "titleEn": "Moving Target",
+      "url": "/darktide/skills/scum/moving-target/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "樣本採集",
+      "titleEn": "Sample Collector",
+      "url": "/darktide/skills/scum/sample-collector/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "神經質",
+      "titleEn": "Jittery",
+      "url": "/darktide/skills/scum/jittery/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 18,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "暴擊幾率增幅",
+      "titleEn": "Critical Chance Boost",
+      "url": "/darktide/skills/scum/critical-chance-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 19,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "近戰增幅",
+      "titleEn": "Melee Damage Boost",
+      "url": "/darktide/skills/scum/melee-damage-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 20,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "強效毒藥",
+      "titleEn": "Potent Tox",
+      "url": "/darktide/skills/scum/potent-tox/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 21,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "黏黏手",
+      "titleEn": "Sticky Hands",
+      "url": "/darktide/skills/scum/sticky-hands/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 22,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "請求暫停",
+      "titleEn": "Calling for a Time Out",
+      "url": "/darktide/skills/scum/calling-for-a-time-out/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 23,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "街頭硬漢",
+      "titleEn": "Street Tough",
+      "url": "/darktide/skills/scum/street-tough/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 24,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "蓄力殲滅",
+      "titleEn": "Channelled Devastation",
+      "url": "/darktide/skills/scum/channelled-devastation/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 25,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "猛烈劈擊",
+      "titleEn": "Battering Strikes",
+      "url": "/darktide/skills/scum/battering-strikes/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 26,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "超暴力",
+      "titleEn": "Hyper-Violence",
+      "url": "/darktide/skills/scum/hyper-violence/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 27,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "劇毒菌株",
+      "titleEn": "Virulent Strain",
+      "url": "/darktide/skills/scum/virulent-strain/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 28,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "毒藥狂熱",
+      "titleEn": "Toxin Mania",
+      "url": "/darktide/skills/scum/toxin-mania/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 29,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "連帶傷害",
+      "titleEn": "Splash Damage",
+      "url": "/darktide/skills/scum/splash-damage/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 30,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "額外彈藥袋",
+      "titleEn": "Extra Pouches",
+      "url": "/darktide/skills/scum/extra-pouches/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 31,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "塗讀武裝",
+      "titleEn": "Coated Weaponry",
+      "url": "/darktide/skills/scum/coated-weaponry/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 32,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "隨身毒素",
+      "titleEn": "Pocket Toxin",
+      "url": "/darktide/skills/scum/pocket-toxin/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 33,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "精準投毒",
+      "titleEn": "Targeted Toxin",
+      "url": "/darktide/skills/scum/targeted-toxin/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 34,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "毒性再生",
+      "titleEn": "Toxic Renewal",
+      "url": "/darktide/skills/scum/toxic-renewal/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 35,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "軍火商",
+      "titleEn": "Ammo Jack",
+      "url": "/darktide/skills/scum/ammo-jack/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 36,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "趁人之危",
+      "titleEn": "Cheap Shots",
+      "url": "/darktide/skills/scum/cheap-shots/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 37,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "心狠手辣",
+      "titleEn": "Hyper-Critical",
+      "url": "/darktide/skills/scum/hyper-critical/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 38,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "以小搏大",
+      "titleEn": "Punching Above One's Weight",
+      "url": "/darktide/skills/scum/punching-above-ones-weight/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 39,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "甜蜜點",
+      "titleEn": "The Sweet Spot",
+      "url": "/darktide/skills/scum/the-sweet-spot/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 40,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "延長藥效",
+      "titleEn": "Long Lasting",
+      "url": "/darktide/skills/scum/long-lasting/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 41,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "神佑興奮劑",
+      "titleEn": "Blessed Stimms",
+      "url": "/darktide/skills/scum/blessed-stimms/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 42,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "巢都格鬥家",
+      "titleEn": "Hive City Brawler",
+      "url": "/darktide/skills/scum/hive-city-brawler/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 43,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "順手牽羊",
+      "titleEn": "Pickpocket",
+      "url": "/darktide/skills/scum/pickpocket/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 44,
+      "parent": "/darktide/skills/scum/#category-4",
+      "title": "趁勝追擊",
+      "titleEn": "Battering Momentum",
+      "url": "/darktide/skills/scum/battering-momentum/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/scum/#category-4",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

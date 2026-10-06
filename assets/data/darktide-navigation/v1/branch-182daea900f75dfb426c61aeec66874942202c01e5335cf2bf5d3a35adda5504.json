@@ -1,0 +1,219 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "閃擊",
+      "url": "/darktide/skills/ogryn/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "光環",
+      "url": "/darktide/skills/ogryn/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "能力",
+      "url": "/darktide/skills/ogryn/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "鑰石",
+      "url": "/darktide/skills/ogryn/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "技能",
+      "url": "/darktide/skills/ogryn/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/ogryn/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/ogryn/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 1,
+    "parent": "/darktide/skills/",
+    "title": "歐格林",
+    "titleEn": "Ogryn",
+    "url": "/darktide/skills/ogryn/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-3",
+    "kind": "skill-category",
+    "order": 3,
+    "parent": "/darktide/skills/ogryn/",
+    "title": "鑰石",
+    "url": "/darktide/skills/ogryn/#category-3"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "爆限超載",
+      "titleEn": "Burst Limiter Override",
+      "url": "/darktide/skills/ogryn/burst-limiter-override/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "麻木",
+      "titleEn": "Feel No Pain",
+      "url": "/darktide/skills/ogryn/feel-no-pain/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "重拳出擊",
+      "titleEn": "Heavy Hitter",
+      "url": "/darktide/skills/ogryn/heavy-hitter/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "痛楚爆發",
+      "titleEn": "Pained Outburst",
+      "url": "/darktide/skills/ogryn/pained-outburst/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "最強壯！",
+      "titleEn": "Strongest!",
+      "url": "/darktide/skills/ogryn/strongest/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "最堅韌！",
+      "titleEn": "Toughest!",
+      "url": "/darktide/skills/ogryn/toughest/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "最大火力",
+      "titleEn": "Maximum Firepower",
+      "url": "/darktide/skills/ogryn/maximum-firepower/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "好槍法",
+      "titleEn": "Good Shootin'",
+      "url": "/darktide/skills/ogryn/good-shootin/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "子彈風暴",
+      "titleEn": "Bulletstorm",
+      "url": "/darktide/skills/ogryn/bulletstorm/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "激鬥戰火",
+      "titleEn": "Heat of Battle",
+      "url": "/darktide/skills/ogryn/heat-of-battle/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "退後！",
+      "titleEn": "Back Off!",
+      "url": "/darktide/skills/ogryn/back-off/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "毫髮無傷",
+      "titleEn": "Don't Feel a Thing",
+      "url": "/darktide/skills/ogryn/dont-feel-a-thing/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "強力劈砍",
+      "titleEn": "Great Cleaver",
+      "url": "/darktide/skills/ogryn/great-cleaver/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "越戰越勇",
+      "titleEn": "Unstoppable",
+      "url": "/darktide/skills/ogryn/unstoppable/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "震撼衝擊",
+      "titleEn": "Impactful",
+      "url": "/darktide/skills/ogryn/impactful/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/ogryn/#category-3",
+      "title": "熱身完畢",
+      "titleEn": "Just Getting Started!",
+      "url": "/darktide/skills/ogryn/just-getting-started/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/ogryn/#category-3",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

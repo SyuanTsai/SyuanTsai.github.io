@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-vo/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/en/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-vo/",
+      "title": "01 Player callouts and replies · adamant male a veteran bonding conversation 10 b",
+      "url": "/darktide/en/player-vo/adamant_male_a_veteran_bonding_conversation_10_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-vo/",
+      "title": "02 Player callouts and replies · adamant to adamant bonding conversation 01 c",
+      "url": "/darktide/en/player-vo/adamant_to_adamant_bonding_conversation_01_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-vo/",
+      "title": "03 Player callouts and replies · combat pause limited bolt on a veteran a 01 b",
+      "url": "/darktide/en/player-vo/combat_pause_limited_bolt_on_a_veteran_a_01_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-vo/",
+      "title": "04 Player callouts and replies · bonding conversation metropolitan modicum f",
+      "url": "/darktide/en/player-vo/bonding_conversation_metropolitan_modicum_f/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-vo/",
+      "title": "05 Player callouts and replies · found health booster adamant low on health",
+      "url": "/darktide/en/player-vo/found_health_booster_adamant_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-vo/",
+      "title": "06 Player callouts and replies · found health station adamant low on health",
+      "url": "/darktide/en/player-vo/found_health_station_adamant_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-vo/",
+      "title": "07 Player callouts and replies · friendly fire from adamant to adamant",
+      "url": "/darktide/en/player-vo/friendly_fire_from_adamant_to_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-vo/",
+      "title": "08 Player callouts and replies · friendly fire from adamant to ogryn",
+      "url": "/darktide/en/player-vo/friendly_fire_from_adamant_to_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-vo/",
+      "title": "09 Player callouts and replies · friendly fire from adamant to psyker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_adamant_to_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-vo/",
+      "title": "10 Player callouts and replies · friendly fire from adamant to veteran",
+      "url": "/darktide/en/player-vo/friendly_fire_from_adamant_to_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-vo/",
+      "title": "11 Player callouts and replies · friendly fire from adamant to zealot",
+      "url": "/darktide/en/player-vo/friendly_fire_from_adamant_to_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-vo/",
+      "title": "12 Player callouts and replies · adamant seen killstreak ogryn",
+      "url": "/darktide/en/player-vo/adamant_seen_killstreak_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-vo/",
+      "title": "13 Player callouts and replies · friendly fire from ogryn to adamant",
+      "url": "/darktide/en/player-vo/friendly_fire_from_ogryn_to_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-vo/",
+      "title": "14 Player callouts and replies · friendly fire from psyker to adamant",
+      "url": "/darktide/en/player-vo/friendly_fire_from_psyker_to_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-vo/",
+      "title": "15 Player callouts and replies · friendly fire from veteran to adamant",
+      "url": "/darktide/en/player-vo/friendly_fire_from_veteran_to_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-vo/",
+      "title": "16 Player callouts and replies · friendly fire from zealot to adamant",
+      "url": "/darktide/en/player-vo/friendly_fire_from_zealot_to_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-vo/",
+      "title": "17 Player callouts and replies · knocked down multiple times adamant",
+      "url": "/darktide/en/player-vo/knocked_down_multiple_times_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-vo/",
+      "title": "18 Player callouts and replies · ogryn seen killstreak adamant",
+      "url": "/darktide/en/player-vo/ogryn_seen_killstreak_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-vo/",
+      "title": "19 Player callouts and replies · ogryn start revive adamant",
+      "url": "/darktide/en/player-vo/ogryn_start_revive_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-vo/",
+      "title": "20 Player callouts and replies · player death adamant",
+      "url": "/darktide/en/player-vo/player_death_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-vo/",
+      "title": "21 Player callouts and replies · psyker start revive adamant",
+      "url": "/darktide/en/player-vo/psyker_start_revive_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-vo/",
+      "title": "22 Player callouts and replies · adamant seen killstreak psyker",
+      "url": "/darktide/en/player-vo/adamant_seen_killstreak_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-vo/",
+      "title": "23 Player callouts and replies · adamant seen killstreak veteran",
+      "url": "/darktide/en/player-vo/adamant_seen_killstreak_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-vo/",
+      "title": "24 Player callouts and replies · adamant seen killstreak zealot",
+      "url": "/darktide/en/player-vo/adamant_seen_killstreak_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-vo/",
+      "title": "25 Player callouts and replies · ability howl a",
+      "url": "/darktide/en/player-vo/ability_howl_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-vo/",
+      "title": "26 Player callouts and replies · adamant start revive adamant",
+      "url": "/darktide/en/player-vo/adamant_start_revive_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-vo/",
+      "title": "27 Player callouts and replies · adamant start revive ogryn",
+      "url": "/darktide/en/player-vo/adamant_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-vo/",
+      "title": "28 Player callouts and replies · veteran start revive adamant",
+      "url": "/darktide/en/player-vo/veteran_start_revive_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-vo/",
+      "title": "29 Player callouts and replies · zealot start revive adamant",
+      "url": "/darktide/en/player-vo/zealot_start_revive_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-vo/",
+      "title": "30 Player callouts and replies · adamant start revive psyker",
+      "url": "/darktide/en/player-vo/adamant_start_revive_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-vo/",
+      "title": "31 Player callouts and replies · ability charge a",
+      "url": "/darktide/en/player-vo/ability_charge_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-vo/",
+      "title": "32 Player callouts and replies · adamant start revive veteran",
+      "url": "/darktide/en/player-vo/adamant_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-vo/",
+      "title": "33 Player callouts and replies · adamant start revive zealot",
+      "url": "/darktide/en/player-vo/adamant_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-vo/",
+      "title": "34 Player callouts and replies · ability stance a",
+      "url": "/darktide/en/player-vo/ability_stance_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-vo/",
+      "title": "35 Player callouts and replies · blitz grenade a",
+      "url": "/darktide/en/player-vo/blitz_grenade_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-vo/",
+      "title": "36 Player callouts and replies · blitz kill attack a",
+      "url": "/darktide/en/player-vo/blitz_kill_attack_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-vo/",
+      "title": "37 Player callouts and replies · blitz mine a",
+      "url": "/darktide/en/player-vo/blitz_mine_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-vo/",
+      "title": "38 Player callouts and replies · blitz nuncio a",
+      "url": "/darktide/en/player-vo/blitz_nuncio_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-vo/",
+      "title": "39 Player callouts and replies · deployed ammo crate adamant low on ammo",
+      "url": "/darktide/en/player-vo/deployed_ammo_crate_adamant_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-vo/",
+      "title": "40 Player callouts and replies · adamant seen killstreak adamant",
+      "url": "/darktide/en/player-vo/adamant_seen_killstreak_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-vo/",
+      "title": "41 Player callouts and replies · found ammo adamant low on ammo",
+      "url": "/darktide/en/player-vo/found_ammo_adamant_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-vo/",
+      "title": "42 Player callouts and replies · asset goo",
+      "url": "/darktide/en/player-vo/asset_goo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-vo/",
+      "title": "43 Player callouts and replies · asset grease pit",
+      "url": "/darktide/en/player-vo/asset_grease_pit/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-vo/",
+      "title": "44 Player callouts and replies · asset pneumatic press",
+      "url": "/darktide/en/player-vo/asset_pneumatic_press/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-vo/",
+      "title": "45 Player callouts and replies · asset unnatural dark a",
+      "url": "/darktide/en/player-vo/asset_unnatural_dark_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-vo/",
+      "title": "46 Player callouts and replies · asset acid clouds",
+      "url": "/darktide/en/player-vo/asset_acid_clouds/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-vo/",
+      "title": "47 Player callouts and replies · asset water course",
+      "url": "/darktide/en/player-vo/asset_water_course/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-vo/",
+      "title": "48 Player callouts and replies · asset cartel insignia",
+      "url": "/darktide/en/player-vo/asset_cartel_insignia/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-vo/",
+      "title": "49 Player callouts and replies · asset foul smoke",
+      "url": "/darktide/en/player-vo/asset_foul_smoke/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-vo/",
+      "title": "50 Player callouts and replies · deployed ammo crate broker low on ammo",
+      "url": "/darktide/en/player-vo/deployed_ammo_crate_broker_low_on_ammo/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-vo/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

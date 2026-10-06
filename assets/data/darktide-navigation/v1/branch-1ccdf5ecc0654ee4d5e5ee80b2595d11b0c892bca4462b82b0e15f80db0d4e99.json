@@ -1,0 +1,187 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/veteran/",
+      "title": "閃擊",
+      "url": "/darktide/skills/veteran/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/veteran/",
+      "title": "光環",
+      "url": "/darktide/skills/veteran/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/veteran/",
+      "title": "能力",
+      "url": "/darktide/skills/veteran/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/veteran/",
+      "title": "鑰石",
+      "url": "/darktide/skills/veteran/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/veteran/",
+      "title": "技能",
+      "url": "/darktide/skills/veteran/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/veteran/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/veteran/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/veteran/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/veteran/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 5,
+    "parent": "/darktide/skills/",
+    "title": "老兵",
+    "titleEn": "Veteran",
+    "url": "/darktide/skills/veteran/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-3",
+    "kind": "skill-category",
+    "order": 3,
+    "parent": "/darktide/skills/veteran/",
+    "title": "鑰石",
+    "url": "/darktide/skills/veteran/#category-3"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "狙擊專注",
+      "titleEn": "Marksman's Focus",
+      "url": "/darktide/skills/veteran/marksmans-focus/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "滲透盔甲",
+      "titleEn": "Chink in their Armour",
+      "url": "/darktide/skills/veteran/chink-in-their-armour/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "視野狹窄",
+      "titleEn": "Tunnel Vision",
+      "url": "/darktide/skills/veteran/tunnel-vision/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "遠程刺客",
+      "titleEn": "Long Range Assassin",
+      "url": "/darktide/skills/veteran/long-range-assassin/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "武器專家",
+      "titleEn": "Weapons Specialist",
+      "url": "/darktide/skills/veteran/weapons-specialist/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "時刻警覺",
+      "titleEn": "On Your Toes",
+      "url": "/darktide/skills/veteran/on-your-toes/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "有備無患",
+      "titleEn": "Always Prepared",
+      "url": "/darktide/skills/veteran/always-prepared/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "活力煥發",
+      "titleEn": "Invigorated",
+      "url": "/darktide/skills/veteran/invigorated/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "鎖定目標",
+      "titleEn": "Focus Target!",
+      "url": "/darktide/skills/veteran/focus-target/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "目標擊倒！",
+      "titleEn": "Target Down!",
+      "url": "/darktide/skills/veteran/target-down/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "轉移火力！",
+      "titleEn": "Redirect Fire!",
+      "url": "/darktide/skills/veteran/redirect-fire/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/veteran/#category-3",
+      "title": "集中火力",
+      "titleEn": "Focused Fire",
+      "url": "/darktide/skills/veteran/focused-fire/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/veteran/#category-3",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

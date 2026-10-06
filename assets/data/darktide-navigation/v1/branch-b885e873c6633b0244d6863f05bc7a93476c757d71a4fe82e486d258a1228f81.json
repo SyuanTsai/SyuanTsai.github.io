@@ -1,0 +1,483 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/arbites/",
+      "title": "閃擊",
+      "url": "/darktide/skills/arbites/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/arbites/",
+      "title": "光環",
+      "url": "/darktide/skills/arbites/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/arbites/",
+      "title": "能力",
+      "url": "/darktide/skills/arbites/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/arbites/",
+      "title": "鑰石",
+      "url": "/darktide/skills/arbites/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/arbites/",
+      "title": "技能",
+      "url": "/darktide/skills/arbites/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/arbites/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/arbites/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/arbites/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/arbites/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 0,
+    "parent": "/darktide/skills/",
+    "title": "法務官",
+    "titleEn": "Arbites",
+    "url": "/darktide/skills/arbites/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-4",
+    "kind": "skill-category",
+    "order": 4,
+    "parent": "/darktide/skills/arbites/",
+    "title": "技能",
+    "url": "/darktide/skills/arbites/#category-4"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "電子獒犬與人",
+      "titleEn": "Man and Cyber-Mastiff",
+      "url": "/darktide/skills/arbites/man-and-cyber-mastiff/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "凋零烈焰",
+      "titleEn": "Withering Fire",
+      "url": "/darktide/skills/arbites/withering-fire/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "審判之錘",
+      "titleEn": "Hammer of Judgement",
+      "url": "/darktide/skills/arbites/hammer-of-judgement/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "繩之以法",
+      "titleEn": "Target Neutralised",
+      "url": "/darktide/skills/arbites/target-neutralised/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "近在眉睫",
+      "titleEn": "Up Close",
+      "url": "/darktide/skills/arbites/up-close/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "鐵血之志",
+      "titleEn": "Force of Will",
+      "url": "/darktide/skills/arbites/force-of-will/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "電能獠牙",
+      "titleEn": "Voltaic Mandibles Augment",
+      "url": "/darktide/skills/arbites/voltaic-mandibles-augment/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "走一走治百病",
+      "titleEn": "Walk It Off",
+      "url": "/darktide/skills/arbites/walk-it-off/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "堅忍不拔",
+      "titleEn": "True Grit",
+      "url": "/darktide/skills/arbites/true-grit/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "韌性減傷",
+      "titleEn": "Toughness Damage Reduction",
+      "url": "/darktide/skills/arbites/toughness-damage-reduction/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "法務官之鎧",
+      "titleEn": "Arbitrator Armour",
+      "url": "/darktide/skills/arbites/arbitrator-armour/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "彈藥腰帶",
+      "titleEn": "Ammo Belt",
+      "url": "/darktide/skills/arbites/ammo-belt/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "呼吸器",
+      "titleEn": "Rebreather",
+      "url": "/darktide/skills/arbites/rebreather/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "苛政壓制",
+      "titleEn": "Suppression Protocols",
+      "url": "/darktide/skills/arbites/suppression-protocols/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "遠程傷害增幅",
+      "titleEn": "Ranged Damage Boost",
+      "url": "/darktide/skills/arbites/ranged-damage-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "近戰增幅",
+      "titleEn": "Melee Damage Boost",
+      "url": "/darktide/skills/arbites/melee-damage-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "重顎獠牙",
+      "titleEn": "Razor-Jaw Augment",
+      "url": "/darktide/skills/arbites/razor-jaw-augment/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "勢如破竹",
+      "titleEn": "Imposing Force",
+      "url": "/darktide/skills/arbites/imposing-force/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 18,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "堅守陣線",
+      "titleEn": "Hold the Line",
+      "url": "/darktide/skills/arbites/hold-the-line/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 19,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "順劈加成",
+      "titleEn": "Cleave Boost",
+      "url": "/darktide/skills/arbites/cleave-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 20,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "衝擊加成",
+      "titleEn": "Impact Boost",
+      "url": "/darktide/skills/arbites/impact-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 21,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "塑鋼裝甲",
+      "titleEn": "Plasteel Plates",
+      "url": "/darktide/skills/arbites/plasteel-plates/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 22,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "鋒利獠牙",
+      "titleEn": "Serrated Maw",
+      "url": "/darktide/skills/arbites/serrated-maw/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 23,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "追跡法務官",
+      "titleEn": "Arbites Revelatum",
+      "url": "/darktide/skills/arbites/arbites-revelatum/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 24,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "罪孽判官",
+      "titleEn": "Soulguilt Scan",
+      "url": "/darktide/skills/arbites/soulguilt-scan/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 25,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "恰如其分",
+      "titleEn": "Judicious Efficiency",
+      "url": "/darktide/skills/arbites/judicious-efficiency/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 26,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "行軍之志",
+      "titleEn": "March",
+      "url": "/darktide/skills/arbites/march/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 27,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "無處可逃",
+      "titleEn": "No Escape",
+      "url": "/darktide/skills/arbites/no-escape/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 28,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "兵敗如山倒",
+      "titleEn": "Drive them Back",
+      "url": "/darktide/skills/arbites/drive-them-back/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 29,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "盾型裝甲",
+      "titleEn": "Shield Plates",
+      "url": "/darktide/skills/arbites/shield-plates/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 30,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "重如律法",
+      "titleEn": "Weight of the Lex",
+      "url": "/darktide/skills/arbites/weight-of-the-lex/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 31,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "毀滅打擊",
+      "titleEn": "Strike Down",
+      "url": "/darktide/skills/arbites/strike-down/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 32,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "狂熱信仰",
+      "titleEn": "Zealous Dedication",
+      "url": "/darktide/skills/arbites/zealous-dedication/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 33,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "制裁重擊",
+      "titleEn": "Prosecution Blow",
+      "url": "/darktide/skills/arbites/prosecution-blow/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 34,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "街頭妙招",
+      "titleEn": "Street Smarts",
+      "url": "/darktide/skills/arbites/street-smarts/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 35,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "巨獸獵人",
+      "titleEn": "Monstrosity Hunter",
+      "url": "/darktide/skills/arbites/monstrosity-hunter/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 36,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "帝皇之拳",
+      "titleEn": "The Emperor's Fist",
+      "url": "/darktide/skills/arbites/the-emperors-fist/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 37,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "篩選目標",
+      "titleEn": "Target Selection",
+      "url": "/darktide/skills/arbites/target-selection/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 38,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "擊殺順序",
+      "titleEn": "Target Priority",
+      "url": "/darktide/skills/arbites/target-priority/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 39,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "猛犬氣場",
+      "titleEn": "Canine Morale",
+      "url": "/darktide/skills/arbites/canine-morale/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 40,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "迅疾走位",
+      "titleEn": "Rapid Movement",
+      "url": "/darktide/skills/arbites/rapid-movement/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 41,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "最後通牒",
+      "titleEn": "Final Warning",
+      "url": "/darktide/skills/arbites/final-warning/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 42,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "秉賦為先",
+      "titleEn": "Priority Endowment",
+      "url": "/darktide/skills/arbites/priority-endowment/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 43,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "惡徒退散",
+      "titleEn": "Cower, Miscreants!",
+      "url": "/darktide/skills/arbites/cower-miscreants/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 44,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "正當手段",
+      "titleEn": "Justified Measures",
+      "url": "/darktide/skills/arbites/justified-measures/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 45,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "壓制武力",
+      "titleEn": "Suppression Force",
+      "url": "/darktide/skills/arbites/suppression-force/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 46,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "震盪攻擊",
+      "titleEn": "Concussive",
+      "url": "/darktide/skills/arbites/concussive/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 47,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "針對弱者",
+      "titleEn": "Target the Weak",
+      "url": "/darktide/skills/arbites/target-the-weak/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 48,
+      "parent": "/darktide/skills/arbites/#category-4",
+      "title": "還治其人之身",
+      "titleEn": "Retaliatory Force",
+      "url": "/darktide/skills/arbites/retaliatory-force/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/arbites/#category-4",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

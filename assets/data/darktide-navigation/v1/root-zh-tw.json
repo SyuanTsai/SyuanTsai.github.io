@@ -1,0 +1,173 @@
+{
+  "categories": [
+    {
+      "kind": "category",
+      "order": 1,
+      "parent": "/darktide/",
+      "title": "任務結束簡報",
+      "url": "/darktide/mission-debrief/"
+    },
+    {
+      "kind": "category",
+      "order": 2,
+      "parent": "/darktide/",
+      "title": "固定影片字幕",
+      "url": "/darktide/cinematic/"
+    },
+    {
+      "kind": "category",
+      "order": 3,
+      "parent": "/darktide/",
+      "title": "過場語音與手動字幕",
+      "url": "/darktide/cinematic-dialogue/"
+    },
+    {
+      "kind": "category",
+      "order": 4,
+      "parent": "/darktide/",
+      "title": "任務簡報",
+      "url": "/darktide/mission-brief/"
+    },
+    {
+      "kind": "category",
+      "order": 5,
+      "parent": "/darktide/",
+      "title": "任務通訊",
+      "url": "/darktide/mission-vox/"
+    },
+    {
+      "kind": "category",
+      "order": 6,
+      "parent": "/darktide/",
+      "title": "艦內閒談",
+      "url": "/darktide/hub-conversation/"
+    },
+    {
+      "kind": "category",
+      "order": 7,
+      "parent": "/darktide/",
+      "title": "NPC 互動",
+      "url": "/darktide/npc-interaction/"
+    },
+    {
+      "kind": "category",
+      "order": 8,
+      "parent": "/darktide/",
+      "title": "玩家閒談",
+      "url": "/darktide/player-conversation/"
+    },
+    {
+      "kind": "category",
+      "order": 9,
+      "parent": "/darktide/",
+      "title": "玩家呼喊與回應",
+      "url": "/darktide/player-vo/"
+    },
+    {
+      "kind": "category",
+      "order": 10,
+      "parent": "/darktide/",
+      "title": "敵方聲音",
+      "url": "/darktide/enemy-vo/"
+    },
+    {
+      "kind": "category",
+      "order": 11,
+      "parent": "/darktide/",
+      "title": "未連結文字候選",
+      "url": "/darktide/unlinked-vo/"
+    },
+    {
+      "kind": "category",
+      "order": 12,
+      "parent": "/darktide/",
+      "title": "角色性格介紹",
+      "url": "/darktide/character-personalities/"
+    },
+    {
+      "kind": "category",
+      "order": 13,
+      "parent": "/darktide/",
+      "title": "回應觸發條件引用",
+      "url": "/darktide/response-trigger-references/"
+    },
+    {
+      "kind": "category",
+      "order": 14,
+      "parent": "/darktide/",
+      "title": "用途待確認字幕",
+      "url": "/darktide/unlinked-subtitles/"
+    }
+  ],
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "home": {
+    "title": "Darktide · 技能與字幕對話",
+    "url": "/darktide/"
+  },
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "skills": {
+    "classes": [
+      {
+        "kind": "skill-class",
+        "order": 0,
+        "parent": "/darktide/skills/",
+        "title": "法務官",
+        "titleEn": "Arbites",
+        "url": "/darktide/skills/arbites/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 1,
+        "parent": "/darktide/skills/",
+        "title": "歐格林",
+        "titleEn": "Ogryn",
+        "url": "/darktide/skills/ogryn/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 2,
+        "parent": "/darktide/skills/",
+        "title": "靈能者",
+        "titleEn": "Psyker",
+        "url": "/darktide/skills/psyker/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 3,
+        "parent": "/darktide/skills/",
+        "title": "巢都渣滓",
+        "titleEn": "Scum",
+        "url": "/darktide/skills/scum/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 4,
+        "parent": "/darktide/skills/",
+        "title": "護教軍",
+        "titleEn": "Skitarii",
+        "url": "/darktide/skills/skitarii/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 5,
+        "parent": "/darktide/skills/",
+        "title": "老兵",
+        "titleEn": "Veteran",
+        "url": "/darktide/skills/veteran/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 6,
+        "parent": "/darktide/skills/",
+        "title": "狂信徒",
+        "titleEn": "Zealot",
+        "url": "/darktide/skills/zealot/"
+      }
+    ],
+    "parent": "/darktide/",
+    "title": "技能與天賦",
+    "titleEn": "Skills and talents (Traditional Chinese)",
+    "url": "/darktide/skills/"
+  }
+}

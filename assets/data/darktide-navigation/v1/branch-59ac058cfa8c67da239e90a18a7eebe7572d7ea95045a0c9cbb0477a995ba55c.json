@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/mission-vox/",
+    "title": "Campaign missions",
+    "url": "/darktide/en/mission-vox/campaign/page-004/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 4,
+    "parent": "/darktide/en/",
+    "title": "Mission vox",
+    "url": "/darktide/en/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "151 Mission vox · mission core short conversation 11 a",
+      "url": "/darktide/en/mission-vox/mission_core_short_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "152 Mission vox · mission core abandoned a",
+      "url": "/darktide/en/mission-vox/mission_core_abandoned_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "153 Mission vox · mission core short conversation 12 a",
+      "url": "/darktide/en/mission-vox/mission_core_short_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "154 Mission vox · mission core elevator conversation 03 a",
+      "url": "/darktide/en/mission-vox/mission_core_elevator_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "155 Mission vox · mission core swagger sighted 01 a",
+      "url": "/darktide/en/mission-vox/mission_core_swagger_sighted_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "156 Mission vox · mission core swagger sighted 02 a",
+      "url": "/darktide/en/mission-vox/mission_core_swagger_sighted_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "157 Mission vox · mission core swagger sighted 03 a",
+      "url": "/darktide/en/mission-vox/mission_core_swagger_sighted_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "158 Mission vox · mission core valk arrives 02 a",
+      "url": "/darktide/en/mission-vox/mission_core_valk_arrives_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "159 Mission vox · mission core void vista a",
+      "url": "/darktide/en/mission-vox/mission_core_void_vista_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "160 Mission vox · mission core airlock conversation 01 a",
+      "url": "/darktide/en/mission-vox/mission_core_airlock_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "161 Mission vox · mission core event 01 briefing 01 a",
+      "url": "/darktide/en/mission-vox/mission_core_event_01_briefing_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "162 Mission vox · mission core event 01 briefing 02 a",
+      "url": "/darktide/en/mission-vox/mission_core_event_01_briefing_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "163 Mission vox · mission core event 01 briefing 03 a",
+      "url": "/darktide/en/mission-vox/mission_core_event_01_briefing_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "164 Mission vox · mission forge hurry up a",
+      "url": "/darktide/en/mission-vox/mission_forge_hurry_up_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "165 Mission vox · mission forge job done",
+      "url": "/darktide/en/mission-vox/mission_forge_job_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "166 Mission vox · mission forge labour oversight",
+      "url": "/darktide/en/mission-vox/mission_forge_labour_oversight/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "167 Mission vox · mission forge assembly line",
+      "url": "/darktide/en/mission-vox/mission_forge_assembly_line/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "168 Mission vox · mission forge lifeless",
+      "url": "/darktide/en/mission-vox/mission_forge_lifeless/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "169 Mission vox · mission forge main entrance",
+      "url": "/darktide/en/mission-vox/mission_forge_main_entrance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "170 Mission vox · mission forge propaganda",
+      "url": "/darktide/en/mission-vox/mission_forge_propaganda/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "171 Mission vox · mission forge purge infestation",
+      "url": "/darktide/en/mission-vox/mission_forge_purge_infestation/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "172 Mission vox · mission forge safe zone a",
+      "url": "/darktide/en/mission-vox/mission_forge_safe_zone_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "173 Mission vox · mission forge second interstitial 01 a",
+      "url": "/darktide/en/mission-vox/mission_forge_second_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "174 Mission vox · mission forge second interstitial 02 a",
+      "url": "/darktide/en/mission-vox/mission_forge_second_interstitial_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "175 Mission vox · mission forge second interstitial 03 a",
+      "url": "/darktide/en/mission-vox/mission_forge_second_interstitial_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "176 Mission vox · mission forge smelter",
+      "url": "/darktide/en/mission-vox/mission_forge_smelter/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "177 Mission vox · mission forge smelter working",
+      "url": "/darktide/en/mission-vox/mission_forge_smelter_working/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "178 Mission vox · mission forge smelter working b",
+      "url": "/darktide/en/mission-vox/mission_forge_smelter_working_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "179 Mission vox · mission forge stand ground",
+      "url": "/darktide/en/mission-vox/mission_forge_stand_ground/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "180 Mission vox · mission forge superstructure",
+      "url": "/darktide/en/mission-vox/mission_forge_superstructure/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "181 Mission vox · mission forge third interstitial 01 a",
+      "url": "/darktide/en/mission-vox/mission_forge_third_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "182 Mission vox · mission forge third interstitial 02 a",
+      "url": "/darktide/en/mission-vox/mission_forge_third_interstitial_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "183 Mission vox · mission forge call elevator",
+      "url": "/darktide/en/mission-vox/mission_forge_call_elevator/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "184 Mission vox · mission forge third interstitial 03 a",
+      "url": "/darktide/en/mission-vox/mission_forge_third_interstitial_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "185 Mission vox · mission forge tutorial corruptor",
+      "url": "/darktide/en/mission-vox/mission_forge_tutorial_corruptor/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "186 Mission vox · mission forge tutorial corruptor done",
+      "url": "/darktide/en/mission-vox/mission_forge_tutorial_corruptor_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "187 Mission vox · mission forge use elevator",
+      "url": "/darktide/en/mission-vox/mission_forge_use_elevator/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "188 Mission vox · mission forge valves a",
+      "url": "/darktide/en/mission-vox/mission_forge_valves_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "189 Mission vox · mission forge call elevator b",
+      "url": "/darktide/en/mission-vox/mission_forge_call_elevator_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "190 Mission vox · mission forge elevator conversation one a",
+      "url": "/darktide/en/mission-vox/mission_forge_elevator_conversation_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "191 Mission vox · event demolition first corruptor destroyed a enginseer",
+      "url": "/darktide/en/mission-vox/event_demolition_first_corruptor_destroyed_a_enginseer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "192 Mission vox · mission forge elevator conversation three a",
+      "url": "/darktide/en/mission-vox/mission_forge_elevator_conversation_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "193 Mission vox · mission forge elevator conversation two a",
+      "url": "/darktide/en/mission-vox/mission_forge_elevator_conversation_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "194 Mission vox · mission forge find smelter",
+      "url": "/darktide/en/mission-vox/mission_forge_find_smelter/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "195 Mission vox · mission forge first interstitial 01 a",
+      "url": "/darktide/en/mission-vox/mission_forge_first_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "196 Mission vox · mission forge first interstitial 02 a",
+      "url": "/darktide/en/mission-vox/mission_forge_first_interstitial_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "197 Mission vox · mission forge alive",
+      "url": "/darktide/en/mission-vox/mission_forge_alive/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "198 Mission vox · mission forge first interstitial 03 a",
+      "url": "/darktide/en/mission-vox/mission_forge_first_interstitial_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "199 Mission vox · mission propaganda corruptor event realigning 01 a",
+      "url": "/darktide/en/mission-vox/mission_propaganda_corruptor_event_realigning_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/mission-vox/campaign/page-004/",
+      "title": "200 Mission vox · mission propaganda corruptor event realigning 02 a",
+      "url": "/darktide/en/mission-vox/mission_propaganda_corruptor_event_realigning_02_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/mission-vox/campaign/page-004/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

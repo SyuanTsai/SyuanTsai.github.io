@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-052/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2551 玩家閒談 · cryptic c broker bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2552 玩家閒談 · cryptic c broker bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2553 玩家閒談 · cryptic c broker bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2554 玩家閒談 · combat pause limited cryptic c 13 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_cryptic_c_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2555 玩家閒談 · cryptic c broker bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2556 玩家閒談 · cryptic c broker bonding conversation 31 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2557 玩家閒談 · cryptic c broker bonding conversation 32 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2558 玩家閒談 · cryptic c broker bonding conversation 33 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2559 玩家閒談 · cryptic c broker bonding conversation 34 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2560 玩家閒談 · cryptic c broker bonding conversation 35 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2561 玩家閒談 · combat pause limited cryptic c 14 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_cryptic_c_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2562 玩家閒談 · cryptic c broker bonding conversation 36 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_broker_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2563 玩家閒談 · cryptic c ogryn bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2564 玩家閒談 · cryptic c ogryn bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2565 玩家閒談 · cryptic c ogryn bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2566 玩家閒談 · cryptic c ogryn bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2567 玩家閒談 · cryptic c ogryn bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2568 玩家閒談 · cryptic c ogryn bonding conversation 06 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2569 玩家閒談 · combat pause limited cryptic c 15 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_cryptic_c_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2570 玩家閒談 · cryptic c ogryn bonding conversation 07 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2571 玩家閒談 · cryptic c ogryn bonding conversation 08 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2572 玩家閒談 · cryptic c ogryn bonding conversation 09 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2573 玩家閒談 · cryptic c ogryn bonding conversation 10 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2574 玩家閒談 · cryptic c ogryn bonding conversation 11 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2575 玩家閒談 · cryptic c ogryn bonding conversation 12 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2576 玩家閒談 · combat pause limited cryptic c 16 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_cryptic_c_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2577 玩家閒談 · cryptic c ogryn bonding conversation 13 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2578 玩家閒談 · cryptic c ogryn bonding conversation 14 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2579 玩家閒談 · cryptic c ogryn bonding conversation 15 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2580 玩家閒談 · cryptic c ogryn bonding conversation 16 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2581 玩家閒談 · cryptic c ogryn bonding conversation 17 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2582 玩家閒談 · cryptic c ogryn bonding conversation 18 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2583 玩家閒談 · cryptic c ogryn bonding conversation 19 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2584 玩家閒談 · combat pause limited cryptic c 17 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_cryptic_c_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2585 玩家閒談 · cryptic c ogryn bonding conversation 20 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2586 玩家閒談 · cryptic c ogryn bonding conversation 21 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2587 玩家閒談 · cryptic c ogryn bonding conversation 22 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2588 玩家閒談 · cryptic c ogryn bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2589 玩家閒談 · cryptic c ogryn bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_ogryn_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2590 玩家閒談 · cryptic c psyker bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_psyker_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2591 玩家閒談 · combat pause limited cryptic c 18 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_cryptic_c_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2592 玩家閒談 · cryptic c psyker bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_psyker_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2593 玩家閒談 · cryptic c psyker bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_psyker_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2594 玩家閒談 · cryptic c psyker bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_psyker_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2595 玩家閒談 · cryptic c psyker bonding conversation 06 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_psyker_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2596 玩家閒談 · cryptic c psyker bonding conversation 07 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_psyker_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2597 玩家閒談 · cryptic c psyker bonding conversation 08 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_psyker_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2598 玩家閒談 · cryptic c psyker bonding conversation 09 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_psyker_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2599 玩家閒談 · combat pause limited cryptic c 19 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_cryptic_c_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-052/",
+      "title": "2600 玩家閒談 · cryptic c psyker bonding conversation 10 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_c_psyker_bonding_conversation_10_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-052/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

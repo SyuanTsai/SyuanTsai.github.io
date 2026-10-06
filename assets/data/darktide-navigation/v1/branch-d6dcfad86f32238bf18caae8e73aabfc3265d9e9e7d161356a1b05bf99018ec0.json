@@ -1,0 +1,105 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-089/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4401 Player conversations · bonding conversation metropolitan glorious body a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_glorious_body_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4402 Player conversations · adamant female c zealot bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_zealot_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4403 Player conversations · bonding conversation metropolitan move within a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_move_within_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4404 Player conversations · bonding conversation metropolitan pray a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_pray_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4405 Player conversations · bonding conversation metropolitan purged a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_purged_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4406 Player conversations · bonding conversation metropolitan purpose zea a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_purpose_zea_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4407 Player conversations · bonding conversation metropolitan snappy a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_snappy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4408 Player conversations · bonding conversation metropolitan unremitting a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_unremitting_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4409 Player conversations · bonding conversation metropolitan victory a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_victory_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4410 Player conversations · adamant female c zealot bonding conversation 29 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_zealot_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4411 Player conversations · bonding conversation metropolitan voices in my head a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_voices_in_my_head_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-089/",
+      "title": "4412 Player conversations · bonding conversation metropolitan weakling a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_weakling_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-089/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

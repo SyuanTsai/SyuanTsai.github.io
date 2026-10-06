@@ -1,0 +1,419 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/veteran/",
+      "title": "閃擊",
+      "url": "/darktide/skills/veteran/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/veteran/",
+      "title": "光環",
+      "url": "/darktide/skills/veteran/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/veteran/",
+      "title": "能力",
+      "url": "/darktide/skills/veteran/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/veteran/",
+      "title": "鑰石",
+      "url": "/darktide/skills/veteran/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/veteran/",
+      "title": "技能",
+      "url": "/darktide/skills/veteran/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/veteran/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/veteran/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/veteran/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/veteran/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 5,
+    "parent": "/darktide/skills/",
+    "title": "老兵",
+    "titleEn": "Veteran",
+    "url": "/darktide/skills/veteran/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-4",
+    "kind": "skill-category",
+    "order": 4,
+    "parent": "/darktide/skills/veteran/",
+    "title": "技能",
+    "url": "/darktide/skills/veteran/#category-4"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "爆破小隊",
+      "titleEn": "Demolition Team",
+      "url": "/darktide/skills/veteran/demolition-team/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "戰術裝填",
+      "titleEn": "Tactical Reload",
+      "url": "/darktide/skills/veteran/tactical-reload/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "齊射能手",
+      "titleEn": "Volley Adept",
+      "url": "/darktide/skills/veteran/volley-adept/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "堅定不移",
+      "titleEn": "Precision Strikes",
+      "url": "/darktide/skills/veteran/precision-strikes/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "亡命之徒",
+      "titleEn": "Desperado",
+      "url": "/darktide/skills/veteran/desperado/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "嗜血",
+      "titleEn": "Out for Blood",
+      "url": "/darktide/skills/veteran/out-for-blood/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "遊擊者",
+      "titleEn": "Skirmisher",
+      "url": "/darktide/skills/veteran/skirmisher/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "趁火打劫",
+      "titleEn": "Exploit Weakness",
+      "url": "/darktide/skills/veteran/exploit-weakness/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "不拋棄不放棄",
+      "titleEn": "Leave No One Behind",
+      "url": "/darktide/skills/veteran/leave-no-one-behind/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "裂擊",
+      "titleEn": "Rending Strikes",
+      "url": "/darktide/skills/veteran/rending-strikes/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "互惠互利",
+      "titleEn": "Reciprocity",
+      "url": "/darktide/skills/veteran/reciprocity/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "靈活接敵",
+      "titleEn": "Agile Engagement",
+      "url": "/darktide/skills/veteran/agile-engagement/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "鋸齒刀刃",
+      "titleEn": "Serrated Blade",
+      "url": "/darktide/skills/veteran/serrated-blade/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "戰壕兵訓練",
+      "titleEn": "Trench Fighter Drill",
+      "url": "/darktide/skills/veteran/trench-fighter-drill/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "猛攻",
+      "titleEn": "Onslaught",
+      "url": "/darktide/skills/veteran/onslaught/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "韌性提升",
+      "titleEn": "Toughness Boost",
+      "url": "/darktide/skills/veteran/toughness-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "喘息片刻",
+      "titleEn": "Catch a Breath",
+      "url": "/darktide/skills/veteran/catch-a-breath/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "首輪齊射",
+      "titleEn": "Opening Salvo",
+      "url": "/darktide/skills/veteran/opening-salvo/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 18,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "殺戮地帶",
+      "titleEn": "Kill Zone",
+      "url": "/darktide/skills/veteran/kill-zone/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 19,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "突擊隊",
+      "titleEn": "Shock Trooper",
+      "url": "/darktide/skills/veteran/shock-trooper/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 20,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "凋零烈焰",
+      "titleEn": "Withering Fire",
+      "url": "/darktide/skills/veteran/withering-fire/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 21,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "振奮擊倒",
+      "titleEn": "Exhilarating Takedown",
+      "url": "/darktide/skills/veteran/exhilarating-takedown/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 22,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "全副武裝",
+      "titleEn": "Fully Loaded",
+      "url": "/darktide/skills/veteran/fully-loaded/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 23,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "天生領袖",
+      "titleEn": "Born Leader",
+      "url": "/darktide/skills/veteran/born-leader/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 24,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "臨場發揮",
+      "titleEn": "Field Improvisation",
+      "url": "/darktide/skills/veteran/field-improvisation/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 25,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "火力掩護",
+      "titleEn": "Covering Fire",
+      "url": "/darktide/skills/veteran/covering-fire/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 26,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "求勝心",
+      "titleEn": "Competitive Urge",
+      "url": "/darktide/skills/veteran/competitive-urge/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 27,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "擊殺紀錄",
+      "titleEn": "Confirmed Kill",
+      "url": "/darktide/skills/veteran/confirmed-kill/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 28,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "密集隊形訓練",
+      "titleEn": "Close Order Drill",
+      "url": "/darktide/skills/veteran/close-order-drill/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 29,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "遠射",
+      "titleEn": "Longshot",
+      "url": "/darktide/skills/veteran/longshot/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 30,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "行雲流水",
+      "titleEn": "One Motion",
+      "url": "/darktide/skills/veteran/one-motion/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 31,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "死亡射手",
+      "titleEn": "Deadshot",
+      "url": "/darktide/skills/veteran/deadshot/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 32,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "幹掉它！",
+      "titleEn": "Bring it Down!",
+      "url": "/darktide/skills/veteran/bring-it-down/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 33,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "優越情節",
+      "titleEn": "Superiority Complex",
+      "url": "/darktide/skills/veteran/superiority-complex/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 34,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "靈活應對",
+      "titleEn": "Duck and Dive",
+      "url": "/darktide/skills/veteran/duck-and-dive/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 35,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "鋼鐵意志",
+      "titleEn": "Iron Will",
+      "url": "/darktide/skills/veteran/iron-will/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 36,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "荷槍實彈",
+      "titleEn": "Lock and Load",
+      "url": "/darktide/skills/veteran/lock-and-load/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 37,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "讓他們全趴下！",
+      "titleEn": "Keep Their Heads Down!",
+      "url": "/darktide/skills/veteran/keep-their-heads-down/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 38,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "秘密特工",
+      "titleEn": "Covert Operative",
+      "url": "/darktide/skills/veteran/covert-operative/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 39,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "近戰傷害提升",
+      "titleEn": "Melee Damage Boost",
+      "url": "/darktide/skills/veteran/melee-damage-boost/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 40,
+      "parent": "/darktide/skills/veteran/#category-4",
+      "title": "韌性減傷",
+      "titleEn": "Toughness Damage Reduction",
+      "url": "/darktide/skills/veteran/toughness-damage-reduction/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/veteran/#category-4",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

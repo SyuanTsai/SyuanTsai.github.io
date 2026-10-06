@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-026/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1251 玩家閒談 · broker female a adamant bonding conversation 18 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1252 玩家閒談 · broker female a adamant bonding conversation 19 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1253 玩家閒談 · broker female b ogryn bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1254 玩家閒談 · broker female b ogryn bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1255 玩家閒談 · broker female b ogryn bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1256 玩家閒談 · broker female b ogryn bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1257 玩家閒談 · broker female b ogryn bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1258 玩家閒談 · broker female b ogryn bonding conversation 06 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1259 玩家閒談 · broker bonding conversation 66 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_66_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1260 玩家閒談 · broker female b ogryn bonding conversation 07 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1261 玩家閒談 · broker female b ogryn bonding conversation 08 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1262 玩家閒談 · broker female b ogryn bonding conversation 09 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1263 玩家閒談 · broker female b ogryn bonding conversation 10 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1264 玩家閒談 · broker female b ogryn bonding conversation 11 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1265 玩家閒談 · broker female b ogryn bonding conversation 12 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1266 玩家閒談 · broker female b ogryn bonding conversation 14 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1267 玩家閒談 · broker female b ogryn bonding conversation 15 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1268 玩家閒談 · broker female b ogryn bonding conversation 16 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1269 玩家閒談 · broker female b ogryn bonding conversation 17 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1270 玩家閒談 · broker female b ogryn bonding conversation 18 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1271 玩家閒談 · broker female b ogryn bonding conversation 19 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1272 玩家閒談 · broker female b ogryn bonding conversation 20 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1273 玩家閒談 · broker female b ogryn bonding conversation 21 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1274 玩家閒談 · broker female b ogryn bonding conversation 22 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1275 玩家閒談 · broker female b ogryn bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1276 玩家閒談 · broker female b ogryn bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_ogryn_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1277 玩家閒談 · broker female b psyker bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1278 玩家閒談 · broker female b psyker bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1279 玩家閒談 · broker female b psyker bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1280 玩家閒談 · broker female b psyker bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1281 玩家閒談 · broker female b psyker bonding conversation 06 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1282 玩家閒談 · broker female b psyker bonding conversation 07 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1283 玩家閒談 · broker female b psyker bonding conversation 08 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1284 玩家閒談 · broker bonding conversation 72 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_72_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1285 玩家閒談 · broker female b psyker bonding conversation 10 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1286 玩家閒談 · broker female b psyker bonding conversation 11 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1287 玩家閒談 · broker female b psyker bonding conversation 12 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1288 玩家閒談 · broker female b psyker bonding conversation 13 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1289 玩家閒談 · broker female b psyker bonding conversation 14 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1290 玩家閒談 · broker female b psyker bonding conversation 15 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1291 玩家閒談 · broker female b psyker bonding conversation 16 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1292 玩家閒談 · broker female b psyker bonding conversation 17 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1293 玩家閒談 · broker female b psyker bonding conversation 18 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1294 玩家閒談 · broker female b adamant bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_adamant_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1295 玩家閒談 · broker female b psyker bonding conversation 21 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1296 玩家閒談 · broker female b psyker bonding conversation 22 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1297 玩家閒談 · broker female b psyker bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1298 玩家閒談 · broker female b psyker bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1299 玩家閒談 · broker female b psyker bonding conversation 25 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-026/",
+      "title": "1300 玩家閒談 · broker female b psyker bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_b_psyker_bonding_conversation_26_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-026/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

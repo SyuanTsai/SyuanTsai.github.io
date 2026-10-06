@@ -1,0 +1,106 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/zealot/",
+      "title": "閃擊",
+      "url": "/darktide/skills/zealot/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/zealot/",
+      "title": "光環",
+      "url": "/darktide/skills/zealot/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/zealot/",
+      "title": "能力",
+      "url": "/darktide/skills/zealot/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/zealot/",
+      "title": "鑰石",
+      "url": "/darktide/skills/zealot/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/zealot/",
+      "title": "技能",
+      "url": "/darktide/skills/zealot/#category-4"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/zealot/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/zealot/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 6,
+    "parent": "/darktide/skills/",
+    "title": "狂信徒",
+    "titleEn": "Zealot",
+    "url": "/darktide/skills/zealot/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-0",
+    "kind": "skill-category",
+    "order": 0,
+    "parent": "/darktide/skills/zealot/",
+    "title": "閃擊",
+    "url": "/darktide/skills/zealot/#category-0"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/zealot/#category-0",
+      "title": "獻祭手雷",
+      "titleEn": "Immolation Grenade",
+      "url": "/darktide/skills/zealot/immolation-grenade/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/zealot/#category-0",
+      "title": "信仰之刃",
+      "titleEn": "Blades of Faith",
+      "url": "/darktide/skills/zealot/blades-of-faith/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/zealot/#category-0",
+      "title": "眩暈風暴手雷",
+      "titleEn": "Stunstorm Grenade",
+      "url": "/darktide/skills/zealot/stunstorm-grenade/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/zealot/#category-0",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-022/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1051 Player conversations · combat pause limited broker a 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_a_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1052 Player conversations · combat pause limited broker a 06 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_a_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1053 Player conversations · combat pause limited broker a 07 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_a_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1054 Player conversations · combat pause limited broker b 08 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_b_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1055 Player conversations · combat pause limited broker b 09 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_b_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1056 Player conversations · combat pause limited broker b 10 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_b_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1057 Player conversations · combat pause quirk broker b trait 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_b_trait_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1058 Player conversations · combat pause limited broker b 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_b_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1059 Player conversations · combat pause quirk broker b trait 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_b_trait_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1060 Player conversations · combat pause quirk broker b trait 05 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_b_trait_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1061 Player conversations · combat pause limited broker b 03 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_b_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1062 Player conversations · combat pause limited broker b 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_b_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1063 Player conversations · combat pause limited broker b 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_b_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1064 Player conversations · combat pause limited broker b 07 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_b_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1065 Player conversations · combat pause limited broker c 09 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_c_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1066 Player conversations · combat pause limited broker c 10 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_c_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1067 Player conversations · combat pause limited broker c 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_c_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1068 Player conversations · combat pause quirk broker c trait 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_c_trait_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1069 Player conversations · combat pause quirk broker c trait 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_c_trait_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1070 Player conversations · combat pause quirk broker c trait 05 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_c_trait_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1071 Player conversations · combat pause quirk broker c trait 06 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_c_trait_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1072 Player conversations · combat pause quirk broker c trait 07 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_c_trait_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1073 Player conversations · combat pause quirk broker c trait 08 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_c_trait_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1074 Player conversations · combat pause quirk broker c trait 10 a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_broker_c_trait_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1075 Player conversations · combat pause limited broker c 03 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_c_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1076 Player conversations · combat pause limited broker c 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_c_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1077 Player conversations · combat pause limited broker c 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_c_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1078 Player conversations · combat pause limited broker c 05 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_c_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1079 Player conversations · combat pause limited broker c 06 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_c_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1080 Player conversations · combat pause limited broker c 07 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_broker_c_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1081 Player conversations · broker female a adamant bonding conversation 21 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1082 Player conversations · broker female a adamant bonding conversation 22 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1083 Player conversations · broker female a adamant bonding conversation 23 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1084 Player conversations · broker female a adamant bonding conversation 24 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1085 Player conversations · broker female a adamant bonding conversation 25 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1086 Player conversations · broker female a adamant bonding conversation 26 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1087 Player conversations · broker female a adamant bonding conversation 27 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1088 Player conversations · broker female a adamant bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1089 Player conversations · broker bonding conversation 30 a",
+      "url": "/darktide/en/player-conversation/broker_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1090 Player conversations · broker female a adamant bonding conversation 29 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1091 Player conversations · broker female a adamant bonding conversation 30 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1092 Player conversations · broker female a adamant bonding conversation 32 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1093 Player conversations · broker female a adamant bonding conversation 33 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1094 Player conversations · broker female a adamant bonding conversation 34 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1095 Player conversations · broker female a adamant bonding conversation 35 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1096 Player conversations · broker female a adamant bonding conversation 36 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_adamant_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1097 Player conversations · broker female a ogryn bonding conversation 01 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_ogryn_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1098 Player conversations · broker female a ogryn bonding conversation 02 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_ogryn_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1099 Player conversations · broker bonding conversation 31 a",
+      "url": "/darktide/en/player-conversation/broker_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-022/",
+      "title": "1100 Player conversations · broker female a ogryn bonding conversation 03 a",
+      "url": "/darktide/en/player-conversation/broker_female_a_ogryn_bonding_conversation_03_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-022/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

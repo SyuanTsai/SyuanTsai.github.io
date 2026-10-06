@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-vo/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/page-004/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 9,
+    "parent": "/darktide/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "151 玩家呼喊與回應 · deployed ammo crate cryptic low on ammo",
+      "url": "/darktide/zh-tw/player-vo/deployed_ammo_crate_cryptic_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "152 玩家呼喊與回應 · ranged idle player out of ammo",
+      "url": "/darktide/zh-tw/player-vo/ranged_idle_player_out_of_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "153 玩家呼喊與回應 · traitor gunner alerted idle",
+      "url": "/darktide/zh-tw/player-vo/traitor_gunner_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "154 玩家呼喊與回應 · traitor gunner ranged idle",
+      "url": "/darktide/zh-tw/player-vo/traitor_gunner_ranged_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "155 玩家呼喊與回應 · traitor gunner start shooting",
+      "url": "/darktide/zh-tw/player-vo/traitor_gunner_start_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "156 玩家呼喊與回應 · traitor gunner take cover",
+      "url": "/darktide/zh-tw/player-vo/traitor_gunner_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "157 玩家呼喊與回應 · traitor gunner take position",
+      "url": "/darktide/zh-tw/player-vo/traitor_gunner_take_position/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "158 玩家呼喊與回應 · chaos newly infected assault",
+      "url": "/darktide/zh-tw/player-vo/chaos_newly_infected_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "159 玩家呼喊與回應 · luggable mission pick up lm rails",
+      "url": "/darktide/zh-tw/player-vo/luggable_mission_pick_up_lm_rails/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "160 玩家呼喊與回應 · luggable mission pick up dm propaganda",
+      "url": "/darktide/zh-tw/player-vo/luggable_mission_pick_up_dm_propaganda/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "161 玩家呼喊與回應 · event demolition last corruptor",
+      "url": "/darktide/zh-tw/player-vo/event_demolition_last_corruptor/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "162 玩家呼喊與回應 · event demolition more corruptors",
+      "url": "/darktide/zh-tw/player-vo/event_demolition_more_corruptors/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "163 玩家呼喊與回應 · info event demolition corruptors almost done",
+      "url": "/darktide/zh-tw/player-vo/info_event_demolition_corruptors_almost_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "164 玩家呼喊與回應 · mission stockpile bazaar",
+      "url": "/darktide/zh-tw/player-vo/mission_stockpile_bazaar/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "165 玩家呼喊與回應 · event fortification gate powered",
+      "url": "/darktide/zh-tw/player-vo/event_fortification_gate_powered/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "166 玩家呼喊與回應 · event fortification kill stragglers",
+      "url": "/darktide/zh-tw/player-vo/event_fortification_kill_stragglers/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "167 玩家呼喊與回應 · event fortification power up gate",
+      "url": "/darktide/zh-tw/player-vo/event_fortification_power_up_gate/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "168 玩家呼喊與回應 · event fortification skyfire disabled",
+      "url": "/darktide/zh-tw/player-vo/event_fortification_skyfire_disabled/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "169 玩家呼喊與回應 · event fortification disable the skyfire",
+      "url": "/darktide/zh-tw/player-vo/event_fortification_disable_the_skyfire/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "170 玩家呼喊與回應 · event fortification beacon deployed",
+      "url": "/darktide/zh-tw/player-vo/event_fortification_beacon_deployed/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "171 玩家呼喊與回應 · cmd hacking place device",
+      "url": "/darktide/zh-tw/player-vo/cmd_hacking_place_device/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "172 玩家呼喊與回應 · hacking auspex mutter a",
+      "url": "/darktide/zh-tw/player-vo/hacking_auspex_mutter_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "173 玩家呼喊與回應 · info hacking decoding in progress",
+      "url": "/darktide/zh-tw/player-vo/info_hacking_decoding_in_progress/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "174 玩家呼喊與回應 · info hacking mission almost done",
+      "url": "/darktide/zh-tw/player-vo/info_hacking_mission_almost_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "175 玩家呼喊與回應 · info hacking mission complete",
+      "url": "/darktide/zh-tw/player-vo/info_hacking_mission_complete/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "176 玩家呼喊與回應 · response to hacking fix decode",
+      "url": "/darktide/zh-tw/player-vo/response_to_hacking_fix_decode/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "177 玩家呼喊與回應 · cmd hacking find another",
+      "url": "/darktide/zh-tw/player-vo/cmd_hacking_find_another/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "178 玩家呼喊與回應 · vox introduction hacking event",
+      "url": "/darktide/zh-tw/player-vo/vox_introduction_hacking_event/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "179 玩家呼喊與回應 · cmd hacking decode resuming",
+      "url": "/darktide/zh-tw/player-vo/cmd_hacking_decode_resuming/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "180 玩家呼喊與回應 · cmd hacking fix decode",
+      "url": "/darktide/zh-tw/player-vo/cmd_hacking_fix_decode/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "181 玩家呼喊與回應 · event kill target heavy damage a",
+      "url": "/darktide/zh-tw/player-vo/event_kill_target_heavy_damage_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "182 玩家呼喊與回應 · event kill target damaged",
+      "url": "/darktide/zh-tw/player-vo/event_kill_target_damaged/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "183 玩家呼喊與回應 · event kill target destroyed a",
+      "url": "/darktide/zh-tw/player-vo/event_kill_target_destroyed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "184 玩家呼喊與回應 · event scan find targets first",
+      "url": "/darktide/zh-tw/player-vo/event_scan_find_targets_first/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "185 玩家呼喊與回應 · event scan find targets more",
+      "url": "/darktide/zh-tw/player-vo/event_scan_find_targets_more/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "186 玩家呼喊與回應 · event scan first target scanned",
+      "url": "/darktide/zh-tw/player-vo/event_scan_first_target_scanned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "187 玩家呼喊與回應 · event scan more data",
+      "url": "/darktide/zh-tw/player-vo/event_scan_more_data/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "188 玩家呼喊與回應 · event scan skull waiting",
+      "url": "/darktide/zh-tw/player-vo/event_scan_skull_waiting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "189 玩家呼喊與回應 · info servo skull deployed",
+      "url": "/darktide/zh-tw/player-vo/info_servo_skull_deployed/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "190 玩家呼喊與回應 · cmd wandering skull",
+      "url": "/darktide/zh-tw/player-vo/cmd_wandering_skull/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "191 玩家呼喊與回應 · event scan all targets scanned",
+      "url": "/darktide/zh-tw/player-vo/event_scan_all_targets_scanned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "192 玩家呼喊與回應 · event survive almost done",
+      "url": "/darktide/zh-tw/player-vo/event_survive_almost_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "193 玩家呼喊與回應 · expeditions heat detected heat drop a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_detected_heat_drop_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "194 玩家呼喊與回應 · expeditions heat detected heat rise a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_detected_heat_rise_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "195 玩家呼喊與回應 · expeditions heat detected horde vector a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_detected_horde_vector_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "196 玩家呼喊與回應 · expeditions heat detected loner targeted a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_detected_loner_targeted_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "197 玩家呼喊與回應 · expeditions heat detected monster spawned a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_detected_monster_spawned_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "198 玩家呼喊與回應 · expeditions artillery support a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_artillery_support_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "199 玩家呼喊與回應 · expeditions heat detected safe room exit a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_detected_safe_room_exit_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-vo/page-004/",
+      "title": "200 玩家呼喊與回應 · expeditions heat max heat rise a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_max_heat_rise_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-vo/page-004/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

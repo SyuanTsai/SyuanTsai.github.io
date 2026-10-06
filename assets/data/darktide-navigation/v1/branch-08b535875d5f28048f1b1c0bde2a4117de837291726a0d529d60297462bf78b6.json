@@ -1,0 +1,154 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/psyker/",
+      "title": "閃擊",
+      "url": "/darktide/skills/psyker/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/psyker/",
+      "title": "光環",
+      "url": "/darktide/skills/psyker/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/psyker/",
+      "title": "能力",
+      "url": "/darktide/skills/psyker/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/psyker/",
+      "title": "鑰石",
+      "url": "/darktide/skills/psyker/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/psyker/",
+      "title": "技能",
+      "url": "/darktide/skills/psyker/#category-4"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/psyker/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/psyker/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 2,
+    "parent": "/darktide/skills/",
+    "title": "靈能者",
+    "titleEn": "Psyker",
+    "url": "/darktide/skills/psyker/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-0",
+    "kind": "skill-category",
+    "order": 0,
+    "parent": "/darktide/skills/psyker/",
+    "title": "閃擊",
+    "url": "/darktide/skills/psyker/#category-0"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/psyker/#category-0",
+      "title": "動能撕裂者",
+      "titleEn": "Kinetic Flayer",
+      "url": "/darktide/skills/psyker/kinetic-flayer/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/psyker/#category-0",
+      "title": "顱腦崩裂",
+      "titleEn": "Brain Rupture",
+      "url": "/darktide/skills/psyker/brain-rupture/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/psyker/#category-0",
+      "title": "靈能攻擊",
+      "titleEn": "Assail",
+      "url": "/darktide/skills/psyker/assail/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/psyker/#category-0",
+      "title": "乙太碎片",
+      "titleEn": "Ethereal Shards",
+      "url": "/darktide/skills/psyker/ethereal-shards/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/psyker/#category-0",
+      "title": "懲戒",
+      "titleEn": "Smite",
+      "url": "/darktide/skills/psyker/smite/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/psyker/#category-0",
+      "title": "動能共鳴",
+      "titleEn": "Kinetic Resonance",
+      "url": "/darktide/skills/psyker/kinetic-resonance/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/psyker/#category-0",
+      "title": "迅捷碎片",
+      "titleEn": "Quick Shards",
+      "url": "/darktide/skills/psyker/quick-shards/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/psyker/#category-0",
+      "title": "衰弱詛咒",
+      "titleEn": "Enfeeble",
+      "url": "/darktide/skills/psyker/enfeeble/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/psyker/#category-0",
+      "title": "蓄力打擊",
+      "titleEn": "Charged Strike",
+      "url": "/darktide/skills/psyker/charged-strike/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/psyker/#category-0",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

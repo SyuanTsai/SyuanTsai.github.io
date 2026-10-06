@@ -1,0 +1,154 @@
+{
+  "catalog": {
+    "parent": "/darktide/cinematic/",
+    "title": "固定影片字幕",
+    "url": "/darktide/cinematic/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 2,
+    "parent": "/darktide/",
+    "title": "固定影片字幕",
+    "url": "/darktide/cinematic/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/cinematic/",
+      "title": "01 過場字幕：adamant_intro",
+      "url": "/darktide/zh-tw/cinematic/adamant_intro/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/cinematic/",
+      "title": "02 過場字幕：broker_intro",
+      "url": "/darktide/zh-tw/cinematic/broker_intro/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/cinematic/",
+      "title": "03 過場字幕：cryptic_intro_part1",
+      "url": "/darktide/zh-tw/cinematic/cryptic_intro_part1/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/cinematic/",
+      "title": "04 過場字幕：cryptic_intro_part2",
+      "url": "/darktide/zh-tw/cinematic/cryptic_intro_part2/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/cinematic/",
+      "title": "05 過場字幕：cs06",
+      "url": "/darktide/zh-tw/cinematic/cs06/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/cinematic/",
+      "title": "06 過場字幕：cin_nox_alpha",
+      "url": "/darktide/zh-tw/cinematic/cin_nox_alpha/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/cinematic/",
+      "title": "07 過場字幕：s1_intro",
+      "url": "/darktide/zh-tw/cinematic/s1_intro/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/cinematic/",
+      "title": "08 過場字幕：core_research_intro",
+      "url": "/darktide/zh-tw/cinematic/core_research_intro/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/cinematic/",
+      "title": "09 過場字幕：voxshot_rise",
+      "url": "/darktide/zh-tw/cinematic/voxshot_rise/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/cinematic/",
+      "title": "10 過場字幕：hli_mission_board",
+      "url": "/darktide/zh-tw/cinematic/hli_mission_board/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/cinematic/",
+      "title": "11 過場字幕：hli_mission_board_adamant",
+      "url": "/darktide/zh-tw/cinematic/hli_mission_board_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/cinematic/",
+      "title": "12 過場字幕：hli_mission_board_cryptic",
+      "url": "/darktide/zh-tw/cinematic/hli_mission_board_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/cinematic/",
+      "title": "13 過場字幕：hli_crafting_station_underground",
+      "url": "/darktide/zh-tw/cinematic/hli_crafting_station_underground/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/cinematic/",
+      "title": "14 過場字幕：hli_contracts",
+      "url": "/darktide/zh-tw/cinematic/hli_contracts/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/cinematic/",
+      "title": "15 過場字幕：hli_barbershop",
+      "url": "/darktide/zh-tw/cinematic/hli_barbershop/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/cinematic/",
+      "title": "16 過場字幕：hli_gun_shop",
+      "url": "/darktide/zh-tw/cinematic/hli_gun_shop/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/cinematic/",
+      "title": "17 過場字幕：hli_penances",
+      "url": "/darktide/zh-tw/cinematic/hli_penances/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/cinematic/",
+      "title": "18 過場字幕：hli_expeditions",
+      "url": "/darktide/zh-tw/cinematic/hli_expeditions/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/cinematic/",
+      "title": "19 過場字幕：darktide_world_intro_subtitles",
+      "url": "/darktide/zh-tw/cinematic/darktide_world_intro_subtitles/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/cinematic/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

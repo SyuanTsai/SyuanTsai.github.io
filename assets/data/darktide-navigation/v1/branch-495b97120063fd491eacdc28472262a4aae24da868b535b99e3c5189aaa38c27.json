@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/enemy-vo/",
+    "title": "敵方聲音",
+    "url": "/darktide/enemy-vo/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 10,
+    "parent": "/darktide/",
+    "title": "敵方聲音",
+    "url": "/darktide/enemy-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/enemy-vo/",
+      "title": "01 敵方聲音 · cultist captain long death",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_captain_long_death/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/enemy-vo/",
+      "title": "02 敵方聲音 · cultist captain reinforcements",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_captain_reinforcements/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/enemy-vo/",
+      "title": "03 敵方聲音 · chaos armored infected melee idle",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_armored_infected_melee_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/enemy-vo/",
+      "title": "04 敵方聲音 · cultist captain taunt combat",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_captain_taunt_combat/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/enemy-vo/",
+      "title": "05 敵方聲音 · cultist flamer spawned",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_flamer_spawned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/enemy-vo/",
+      "title": "06 敵方聲音 · cultist flamer start shooting",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_flamer_start_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/enemy-vo/",
+      "title": "07 敵方聲音 · cultist grenadier skulking",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_grenadier_skulking/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/enemy-vo/",
+      "title": "08 敵方聲音 · cultist grenadier spawned",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_grenadier_spawned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/enemy-vo/",
+      "title": "09 敵方聲音 · cultist grenadier throwing grenade",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_grenadier_throwing_grenade/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/enemy-vo/",
+      "title": "10 敵方聲音 · cultist gunner friendly fire",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_gunner_friendly_fire/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/enemy-vo/",
+      "title": "11 敵方聲音 · cultist gunner reloading",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_gunner_reloading/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/enemy-vo/",
+      "title": "12 敵方聲音 · cultist gunner start shooting",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_gunner_start_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/enemy-vo/",
+      "title": "13 敵方聲音 · cultist melee fighter alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_melee_fighter_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/enemy-vo/",
+      "title": "14 敵方聲音 · chaos daemonhost aggro",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_daemonhost_aggro/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/enemy-vo/",
+      "title": "15 敵方聲音 · cultist melee fighter long death",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_melee_fighter_long_death/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/enemy-vo/",
+      "title": "16 敵方聲音 · cultist melee fighter melee idle",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_melee_fighter_melee_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/enemy-vo/",
+      "title": "17 敵方聲音 · cultist rusher switch to melee",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_rusher_switch_to_melee/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/enemy-vo/",
+      "title": "18 敵方聲音 · cultist rusher take cover",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_rusher_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/enemy-vo/",
+      "title": "19 敵方聲音 · cultist shocktrooper alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_shocktrooper_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/enemy-vo/",
+      "title": "20 敵方聲音 · cultist shocktrooper shooting",
+      "url": "/darktide/zh-tw/enemy-vo/cultist_shocktrooper_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/enemy-vo/",
+      "title": "21 敵方聲音 · enemy cultist berzerker assault",
+      "url": "/darktide/zh-tw/enemy-vo/enemy_cultist_berzerker_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/enemy-vo/",
+      "title": "22 敵方聲音 · enemy cultist rusher alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/enemy_cultist_rusher_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/enemy-vo/",
+      "title": "23 敵方聲音 · enemy cultist rusher assault",
+      "url": "/darktide/zh-tw/enemy-vo/enemy_cultist_rusher_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/enemy-vo/",
+      "title": "24 敵方聲音 · hound master alerted",
+      "url": "/darktide/zh-tw/enemy-vo/hound_master_alerted/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/enemy-vo/",
+      "title": "25 敵方聲音 · chaos daemonhost death long",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_daemonhost_death_long/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/enemy-vo/",
+      "title": "26 敵方聲音 · hound master call hounds",
+      "url": "/darktide/zh-tw/enemy-vo/hound_master_call_hounds/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/enemy-vo/",
+      "title": "27 敵方聲音 · hound master combat taunt",
+      "url": "/darktide/zh-tw/enemy-vo/hound_master_combat_taunt/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/enemy-vo/",
+      "title": "28 敵方聲音 · hound master hound attack",
+      "url": "/darktide/zh-tw/enemy-vo/hound_master_hound_attack/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/enemy-vo/",
+      "title": "29 敵方聲音 · hound master hound dead",
+      "url": "/darktide/zh-tw/enemy-vo/hound_master_hound_dead/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/enemy-vo/",
+      "title": "30 敵方聲音 · hound master hound pounce success",
+      "url": "/darktide/zh-tw/enemy-vo/hound_master_hound_pounce_success/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/enemy-vo/",
+      "title": "31 敵方聲音 · plasma gunner alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/plasma_gunner_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/enemy-vo/",
+      "title": "32 敵方聲音 · plasma gunner shooting",
+      "url": "/darktide/zh-tw/enemy-vo/plasma_gunner_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/enemy-vo/",
+      "title": "33 敵方聲音 · plasma gunner stopped shooting",
+      "url": "/darktide/zh-tw/enemy-vo/plasma_gunner_stopped_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/enemy-vo/",
+      "title": "34 敵方聲音 · chaos daemonhost mantra high",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_daemonhost_mantra_high/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/enemy-vo/",
+      "title": "35 敵方聲音 · plasma gunner take cover",
+      "url": "/darktide/zh-tw/enemy-vo/plasma_gunner_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/enemy-vo/",
+      "title": "36 敵方聲音 · renegade captain long death",
+      "url": "/darktide/zh-tw/enemy-vo/renegade_captain_long_death/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/enemy-vo/",
+      "title": "37 敵方聲音 · renegade captain reinforcements",
+      "url": "/darktide/zh-tw/enemy-vo/renegade_captain_reinforcements/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/enemy-vo/",
+      "title": "38 敵方聲音 · renegade captain taunt combat",
+      "url": "/darktide/zh-tw/enemy-vo/renegade_captain_taunt_combat/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/enemy-vo/",
+      "title": "39 敵方聲音 · renegade grenadier skulking",
+      "url": "/darktide/zh-tw/enemy-vo/renegade_grenadier_skulking/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/enemy-vo/",
+      "title": "40 敵方聲音 · traitor berzerker assault",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_berzerker_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/enemy-vo/",
+      "title": "41 敵方聲音 · traitor enforcer executor alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_enforcer_executor_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/enemy-vo/",
+      "title": "42 敵方聲音 · traitor enforcer executor executor assault",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_enforcer_executor_executor_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/enemy-vo/",
+      "title": "43 敵方聲音 · chaos daemonhost mantra low",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_daemonhost_mantra_low/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/enemy-vo/",
+      "title": "44 敵方聲音 · traitor enforcer executor executor melee idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_enforcer_executor_executor_melee_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/enemy-vo/",
+      "title": "45 敵方聲音 · traitor enforcer executor special attack",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_enforcer_executor_special_attack/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/enemy-vo/",
+      "title": "46 敵方聲音 · traitor grenadier spawned",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_grenadier_spawned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/enemy-vo/",
+      "title": "47 敵方聲音 · traitor grenadier throwing grenade",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_grenadier_throwing_grenade/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/enemy-vo/",
+      "title": "48 敵方聲音 · traitor guard flamer spawned",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_flamer_spawned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/enemy-vo/",
+      "title": "49 敵方聲音 · traitor guard flamer start shooting",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_flamer_start_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/enemy-vo/",
+      "title": "50 敵方聲音 · traitor guard rifleman alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_rifleman_alerted_idle/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/enemy-vo/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

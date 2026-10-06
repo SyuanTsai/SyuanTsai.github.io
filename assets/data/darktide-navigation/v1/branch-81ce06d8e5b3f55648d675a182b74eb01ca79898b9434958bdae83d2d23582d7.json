@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-045/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2201 玩家閒談 · cryptic a psyker bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2202 玩家閒談 · cryptic a psyker bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2203 玩家閒談 · combat pause limited cryptic a 20 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_cryptic_a_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2204 玩家閒談 · cryptic a psyker bonding conversation 25 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2205 玩家閒談 · cryptic a psyker bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2206 玩家閒談 · cryptic a psyker bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2207 玩家閒談 · cryptic a psyker bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2208 玩家閒談 · cryptic a psyker bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2209 玩家閒談 · cryptic a adamant bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_adamant_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2210 玩家閒談 · cryptic a psyker bonding conversation 31 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2211 玩家閒談 · cryptic a psyker bonding conversation 32 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2212 玩家閒談 · cryptic a psyker bonding conversation 33 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2213 玩家閒談 · cryptic a psyker bonding conversation 34 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2214 玩家閒談 · combat pause limited cryptic a 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_cryptic_a_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2215 玩家閒談 · cryptic a psyker bonding conversation 35 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2216 玩家閒談 · cryptic a psyker bonding conversation 36 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_psyker_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2217 玩家閒談 · cryptic a veteran bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2218 玩家閒談 · cryptic a veteran bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2219 玩家閒談 · cryptic a veteran bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2220 玩家閒談 · cryptic a veteran bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2221 玩家閒談 · cryptic a adamant bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_adamant_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2222 玩家閒談 · cryptic a veteran bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2223 玩家閒談 · cryptic a veteran bonding conversation 06 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2224 玩家閒談 · cryptic a veteran bonding conversation 07 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2225 玩家閒談 · cryptic a veteran bonding conversation 08 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2226 玩家閒談 · cryptic a veteran bonding conversation 09 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2227 玩家閒談 · cryptic a veteran bonding conversation 10 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2228 玩家閒談 · cryptic a veteran bonding conversation 12 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2229 玩家閒談 · cryptic a veteran bonding conversation 15 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2230 玩家閒談 · cryptic a adamant bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_adamant_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2231 玩家閒談 · cryptic a veteran bonding conversation 17 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2232 玩家閒談 · cryptic a veteran bonding conversation 18 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2233 玩家閒談 · cryptic a veteran bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2234 玩家閒談 · cryptic a veteran bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2235 玩家閒談 · cryptic a veteran bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2236 玩家閒談 · cryptic a veteran bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2237 玩家閒談 · cryptic a veteran bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2238 玩家閒談 · cryptic a veteran bonding conversation 31 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2239 玩家閒談 · cryptic a adamant bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_adamant_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2240 玩家閒談 · cryptic a veteran bonding conversation 32 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2241 玩家閒談 · cryptic a veteran bonding conversation 33 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2242 玩家閒談 · cryptic a veteran bonding conversation 34 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2243 玩家閒談 · cryptic a veteran bonding conversation 35 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2244 玩家閒談 · cryptic a veteran bonding conversation 36 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_veteran_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2245 玩家閒談 · cryptic a zealot bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_zealot_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2246 玩家閒談 · cryptic a zealot bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_zealot_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2247 玩家閒談 · cryptic a zealot bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_zealot_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2248 玩家閒談 · cryptic a zealot bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_zealot_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2249 玩家閒談 · cryptic a zealot bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_zealot_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-045/",
+      "title": "2250 玩家閒談 · cryptic a adamant bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/cryptic_a_adamant_bonding_conversation_05_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-045/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

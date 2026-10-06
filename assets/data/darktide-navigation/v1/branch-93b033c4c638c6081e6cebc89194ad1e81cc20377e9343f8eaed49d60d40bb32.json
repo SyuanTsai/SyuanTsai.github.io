@@ -1,0 +1,182 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/mission-debrief/",
+    "title": "Mission debriefs",
+    "url": "/darktide/en/mission-debrief/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 0,
+    "parent": "/darktide/en/",
+    "title": "Mission debriefs",
+    "url": "/darktide/en/mission-debrief/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "01 Railroaded",
+      "url": "/darktide/en/mission-debrief/debriefing_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "02 Purge and Purify",
+      "url": "/darktide/en/mission-debrief/debriefing_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "03 False Truths",
+      "url": "/darktide/en/mission-debrief/debriefing_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "04 Enforcer's Siege",
+      "url": "/darktide/en/mission-debrief/debriefing_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "05 Quarantine Breach",
+      "url": "/darktide/en/mission-debrief/debriefing_05/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "06 Vox Ghosts",
+      "url": "/darktide/en/mission-debrief/debriefing_06/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "07 Pressure Cooker",
+      "url": "/darktide/en/mission-debrief/debriefing_07/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "08 Heavy Metal",
+      "url": "/darktide/en/mission-debrief/debriefing_08/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "09 Ice Trap",
+      "url": "/darktide/en/mission-debrief/debriefing_09/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "10 Carnival Nights",
+      "url": "/darktide/en/mission-debrief/debriefing_10/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "11 Midnight Raid",
+      "url": "/darktide/en/mission-debrief/debriefing_11/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "12 Out for Blood",
+      "url": "/darktide/en/mission-debrief/debriefing_12/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "13 No Quarter",
+      "url": "/darktide/en/mission-debrief/debriefing_13/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "14 Spy Hunt",
+      "url": "/darktide/en/mission-debrief/debriefing_14/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "15 Hidden Signals",
+      "url": "/darktide/en/mission-debrief/debriefing_15/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "16 Stolen Goods",
+      "url": "/darktide/en/mission-debrief/debriefing_16/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "17 Dark Communion",
+      "url": "/darktide/en/mission-debrief/debriefing_17/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "18 End of the Line",
+      "url": "/darktide/en/mission-debrief/debriefing_nml_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "19 The Guard Prevails",
+      "url": "/darktide/en/mission-debrief/debriefing_nml_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "20 Hammer of the Emperor",
+      "url": "/darktide/en/mission-debrief/debriefing_nml_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "21 Noble Prerogative",
+      "url": "/darktide/en/mission-debrief/debriefing_spillway_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "22 Lords and Lies",
+      "url": "/darktide/en/mission-debrief/debriefing_spillway_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/mission-debrief/",
+      "title": "23 Honour Among Thieves",
+      "url": "/darktide/en/mission-debrief/debriefing_spillway_03/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/mission-debrief/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

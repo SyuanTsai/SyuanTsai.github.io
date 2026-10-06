@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "一般戰役任務",
+    "url": "/darktide/mission-vox/campaign/page-010/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "451 任務通訊 · mission heresy cathedral event agnostic directive a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_agnostic_directive_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "452 任務通訊 · mission heresy cathedral event agnostic success a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_agnostic_success_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "453 任務通訊 · mission heresy cathedral event complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "454 任務通訊 · mission heresy cathedral event first dead ritualist a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_first_dead_ritualist_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "455 任務通訊 · mission heresy cathedral event interstitial a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_interstitial_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "456 任務通訊 · mission heresy cathedral event shield a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_shield_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "457 任務通訊 · mission heresy cathedral event shield down 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_shield_down_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "458 任務通訊 · mission heresy cathedral event shield down 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_shield_down_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "459 任務通訊 · mission heresy cathedral event smash a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_smash_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "460 任務通訊 · mission heresy cathedral event start a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "461 任務通訊 · mission heresy cathedral event start ingame a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_start_ingame_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "462 任務通訊 · mission heresy corridor 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_corridor_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "463 任務通訊 · mission heresy corridor 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_corridor_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "464 任務通訊 · mission heresy corridor 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_corridor_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "465 任務通訊 · mission heresy cult chant 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "466 任務通訊 · mission heresy cult chant 01 b",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_01_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "467 任務通訊 · mission heresy cult chant 01 c",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_01_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "468 任務通訊 · mission heresy cult chant 01 d",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_01_d/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "469 任務通訊 · mission heresy cult chant 01 e",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_01_e/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "470 任務通訊 · mission heresy cult chant 01 f",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_01_f/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "471 任務通訊 · mission heresy cult chant 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "472 任務通訊 · mission heresy cult chant 02 b",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_02_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "473 任務通訊 · mission heresy cult chant 02 c",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_02_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "474 任務通訊 · mission heresy cult chant 02 d",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_02_d/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "475 任務通訊 · mission heresy cult chant 02 e",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_02_e/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "476 任務通訊 · mission heresy cult chant 02 f",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cult_chant_02_f/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "477 任務通訊 · mission heresy elevator 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_elevator_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "478 任務通訊 · mission heresy elevator 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_elevator_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "479 任務通訊 · mission heresy elevator 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_elevator_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "480 任務通訊 · mission heresy backstreets 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_backstreets_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "481 任務通訊 · mission heresy inner brewhouse 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_inner_brewhouse_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "482 任務通訊 · mission heresy inner brewhouse 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_inner_brewhouse_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "483 任務通訊 · mission heresy inner brewhouse 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_inner_brewhouse_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "484 任務通訊 · mission heresy backstreets 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_backstreets_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "485 任務通訊 · mission heresy outro cinematic a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_outro_cinematic_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "486 任務通訊 · mission heresy plaza 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_plaza_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "487 任務通訊 · mission heresy plaza 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_plaza_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "488 任務通訊 · mission heresy plaza 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_plaza_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "489 任務通訊 · mission heresy red plaza 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_red_plaza_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "490 任務通訊 · mission heresy red plaza 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_red_plaza_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "491 任務通訊 · mission heresy red plaza 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_red_plaza_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "492 任務通訊 · mission heresy ritual airlock 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_ritual_airlock_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "493 任務通訊 · mission heresy ritual airlock 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_ritual_airlock_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "494 任務通訊 · mission heresy ritual airlock 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_ritual_airlock_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "495 任務通訊 · mission heresy ritual ambush a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_ritual_ambush_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "496 任務通訊 · mission heresy ritual ambush end 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_ritual_ambush_end_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "497 任務通訊 · mission heresy ritual ambush end 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_ritual_ambush_end_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "498 任務通訊 · mission heresy brewhouse 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_brewhouse_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "499 任務通訊 · mission heresy ritual ambush end 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_ritual_ambush_end_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/mission-vox/campaign/page-010/",
+      "title": "500 任務通訊 · mission heresy ritual ambush mid 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_ritual_ambush_mid_01_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/campaign/page-010/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

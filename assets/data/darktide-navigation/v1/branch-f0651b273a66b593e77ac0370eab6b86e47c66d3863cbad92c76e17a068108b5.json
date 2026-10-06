@@ -1,0 +1,63 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/page-013/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/page-013/",
+      "title": "01 一般戰役任務",
+      "url": "/darktide/mission-vox/campaign/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/page-013/",
+      "title": "02 死神試煉（遊戲內）",
+      "url": "/darktide/mission-vox/mortis-trials/gameplay/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/page-013/",
+      "title": "03 死神試煉（莫羅角色）",
+      "url": "/darktide/mission-vox/mortis-trials/characters/morrow/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/page-013/",
+      "title": "04 死神試煉（左拉角色）",
+      "url": "/darktide/mission-vox/mortis-trials/characters/zola/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/page-013/",
+      "title": "05 死神試煉（布拉姆斯角色）",
+      "url": "/darktide/mission-vox/mortis-trials/characters/brahms/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/page-013/",
+      "title": "06 死神試煉（佐林角色）",
+      "url": "/darktide/mission-vox/mortis-trials/characters/zorin/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/page-013/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

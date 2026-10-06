@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-081/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4001 玩家閒談 · bonding conversation metropolitan lost cause a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_lost_cause_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4002 玩家閒談 · bonding conversation metropolitan oversimplify a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_oversimplify_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4003 玩家閒談 · bonding conversation metropolitan poking around a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_poking_around_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4004 玩家閒談 · adamant female a veteran bonding conversation 20 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_a_veteran_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4005 玩家閒談 · bonding conversation metropolitan wolf a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_wolf_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4006 玩家閒談 · bonding conversation pleasing screams a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_pleasing_screams_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4007 玩家閒談 · bonding conversation round three canny a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_round_three_canny_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4008 玩家閒談 · bonding conversation round three in charge a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_round_three_in_charge_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4009 玩家閒談 · bonding conversation waterloo arrogant a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_arrogant_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4010 玩家閒談 · bonding conversation waterloo brahms 07 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_brahms_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4011 玩家閒談 · bonding conversation waterloo brahms 10 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_brahms_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4012 玩家閒談 · bonding conversation waterloo brahms 12 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_brahms_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4013 玩家閒談 · bonding conversation waterloo brahms 13 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_brahms_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4014 玩家閒談 · adamant female b veteran bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_b_veteran_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4015 玩家閒談 · bonding conversation waterloo brutal a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_brutal_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4016 玩家閒談 · bonding conversation waterloo bugs a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_bugs_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4017 玩家閒談 · bonding conversation waterloo dibs a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_dibs_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4018 玩家閒談 · bonding conversation waterloo fire lane a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_fire_lane_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4019 玩家閒談 · bonding conversation waterloo grow back a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_grow_back_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4020 玩家閒談 · bonding conversation waterloo heart a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_heart_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4021 玩家閒談 · bonding conversation waterloo normal a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_normal_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4022 玩家閒談 · bonding conversation waterloo rannick 12 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_rannick_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4023 玩家閒談 · bonding conversation waterloo rannick 13 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_rannick_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4024 玩家閒談 · adamant female b veteran bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_b_veteran_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4025 玩家閒談 · bonding conversation waterloo rigour a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_rigour_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4026 玩家閒談 · bonding conversation waterloo twins 13 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_twins_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4027 玩家閒談 · bonding conversation waterloo wolfer 10 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_wolfer_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4028 玩家閒談 · bonding conversation waterloo wolfer 13 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_wolfer_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4029 玩家閒談 · bonding conversation waterloo worse a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_waterloo_worse_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4030 玩家閒談 · oval world conversation balta nobles twentyfive a",
+      "url": "/darktide/zh-tw/player-conversation/oval_world_conversation_balta_nobles_twentyfive_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4031 玩家閒談 · pimlico bonding conversation abomination a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_abomination_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4032 玩家閒談 · pimlico bonding conversation cadia a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_cadia_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4033 玩家閒談 · adamant female b veteran bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_b_veteran_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4034 玩家閒談 · pimlico bonding conversation daviot moebian steel 02 a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_daviot_moebian_steel_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4035 玩家閒談 · pimlico bonding conversation death a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_death_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4036 玩家閒談 · pimlico bonding conversation forge a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_forge_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4037 玩家閒談 · pimlico bonding conversation judging a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_judging_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4038 玩家閒談 · pimlico bonding conversation numpty a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_numpty_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4039 玩家閒談 · pimlico bonding conversation orders two a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_orders_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4040 玩家閒談 · pimlico bonding conversation silence a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_silence_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4041 玩家閒談 · pimlico bonding conversation sloppy a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_sloppy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4042 玩家閒談 · pimlico bonding conversation somewhere a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_somewhere_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4043 玩家閒談 · adamant female b veteran bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_b_veteran_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4044 玩家閒談 · pimlico bonding conversation spirit a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_spirit_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4045 玩家閒談 · adamant female b veteran bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_b_veteran_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4046 玩家閒談 · adamant female c veteran bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_c_veteran_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4047 玩家閒談 · adamant female a veteran bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_a_veteran_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4048 玩家閒談 · adamant female c veteran bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_c_veteran_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4049 玩家閒談 · adamant female c veteran bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_c_veteran_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-081/",
+      "title": "4050 玩家閒談 · adamant male c veteran bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_veteran_bonding_conversation_28_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-081/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

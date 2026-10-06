@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-vo/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/page-010/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/en/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "451 Player callouts and replies · ranged grenade desc a broker blitz",
+      "url": "/darktide/en/player-vo/ranged_grenade_desc_a_broker_blitz/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "452 Player callouts and replies · combat ability tutorial generic desc a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_generic_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "453 Player callouts and replies · ranged grenade desc a maniac blitz",
+      "url": "/darktide/en/player-vo/ranged_grenade_desc_a_maniac_blitz/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "454 Player callouts and replies · ranged suppression desc a",
+      "url": "/darktide/en/player-vo/ranged_suppression_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "455 Player callouts and replies · reviving tutorial desc a",
+      "url": "/darktide/en/player-vo/reviving_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "456 Player callouts and replies · sprint slide desc a",
+      "url": "/darktide/en/player-vo/sprint_slide_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "457 Player callouts and replies · tagging desc a",
+      "url": "/darktide/en/player-vo/tagging_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "458 Player callouts and replies · tg advanced training end",
+      "url": "/darktide/en/player-vo/tg_advanced_training_end/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "459 Player callouts and replies · tg armour",
+      "url": "/darktide/en/player-vo/tg_armour/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "460 Player callouts and replies · tg attack chains",
+      "url": "/darktide/en/player-vo/tg_attack_chains/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "461 Player callouts and replies · tg corruption",
+      "url": "/darktide/en/player-vo/tg_corruption/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "462 Player callouts and replies · tg dodge",
+      "url": "/darktide/en/player-vo/tg_dodge/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "463 Player callouts and replies · combat ability tutorial ogryn 1 desc a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_ogryn_1_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "464 Player callouts and replies · tg grenades",
+      "url": "/darktide/en/player-vo/tg_grenades/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "465 Player callouts and replies · tg health and ammo",
+      "url": "/darktide/en/player-vo/tg_health_and_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "466 Player callouts and replies · tg health station",
+      "url": "/darktide/en/player-vo/tg_health_station/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "467 Player callouts and replies · tg melee lock",
+      "url": "/darktide/en/player-vo/tg_melee_lock/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "468 Player callouts and replies · tg psyker ability",
+      "url": "/darktide/en/player-vo/tg_psyker_ability/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "469 Player callouts and replies · tg push",
+      "url": "/darktide/en/player-vo/tg_push/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "470 Player callouts and replies · tg push follow",
+      "url": "/darktide/en/player-vo/tg_push_follow/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "471 Player callouts and replies · tg reviving",
+      "url": "/darktide/en/player-vo/tg_reviving/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "472 Player callouts and replies · tg special attack",
+      "url": "/darktide/en/player-vo/tg_special_attack/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "473 Player callouts and replies · tg sprint slide",
+      "url": "/darktide/en/player-vo/tg_sprint_slide/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "474 Player callouts and replies · combat ability tutorial ogryn desc a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_ogryn_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "475 Player callouts and replies · tg suppression",
+      "url": "/darktide/en/player-vo/tg_suppression/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "476 Player callouts and replies · tg tagging",
+      "url": "/darktide/en/player-vo/tg_tagging/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "477 Player callouts and replies · tg toughness",
+      "url": "/darktide/en/player-vo/tg_toughness/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "478 Player callouts and replies · tg training end",
+      "url": "/darktide/en/player-vo/tg_training_end/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "479 Player callouts and replies · tg welcome",
+      "url": "/darktide/en/player-vo/tg_welcome/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "480 Player callouts and replies · toughness damage tutorial desc a",
+      "url": "/darktide/en/player-vo/toughness_damage_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "481 Player callouts and replies · toughness tutorial 2 desc a",
+      "url": "/darktide/en/player-vo/toughness_tutorial_2_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "482 Player callouts and replies · toughness tutorial 2 desc b",
+      "url": "/darktide/en/player-vo/toughness_tutorial_2_desc_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "483 Player callouts and replies · toughness tutorial desc a",
+      "url": "/darktide/en/player-vo/toughness_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "484 Player callouts and replies · training grounds advanced training desc a",
+      "url": "/darktide/en/player-vo/training_grounds_advanced_training_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "485 Player callouts and replies · combat ability tutorial psyker 3 desc a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_psyker_3_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "486 Player callouts and replies · training grounds training end desc a",
+      "url": "/darktide/en/player-vo/training_grounds_training_end_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "487 Player callouts and replies · weapon special desc a",
+      "url": "/darktide/en/player-vo/weapon_special_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "488 Player callouts and replies · weapon special desc a broker",
+      "url": "/darktide/en/player-vo/weapon_special_desc_a_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "489 Player callouts and replies · combat ability tutorial psyker desc a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_psyker_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "490 Player callouts and replies · combat ability tutorial veteran 3 desc a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_veteran_3_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "491 Player callouts and replies · combat ability tutorial zealot 3 desc alt1 a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_zealot_3_desc_alt1_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "492 Player callouts and replies · armor desc a",
+      "url": "/darktide/en/player-vo/armor_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "493 Player callouts and replies · combat ability tutorial zealot 3 desc alt2 a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_zealot_3_desc_alt2_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "494 Player callouts and replies · combat ability tutorial zealot 3 desc alt3 a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_zealot_3_desc_alt3_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "495 Player callouts and replies · combat ability tutorial zealot 3 desc alt4 a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_zealot_3_desc_alt4_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "496 Player callouts and replies · combat ability tutorial zealot 3 desc alt5 a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_zealot_3_desc_alt5_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "497 Player callouts and replies · combat ability tutorial zealot 3 desc alt6 a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_zealot_3_desc_alt6_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "498 Player callouts and replies · combat ability tutorial zealot 3 desc alt7 a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_zealot_3_desc_alt7_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "499 Player callouts and replies · combat ability tutorial zealot desc a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_zealot_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-vo/page-010/",
+      "title": "500 Player callouts and replies · corruption tutorial desc a",
+      "url": "/darktide/en/player-vo/corruption_tutorial_desc_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-vo/page-010/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

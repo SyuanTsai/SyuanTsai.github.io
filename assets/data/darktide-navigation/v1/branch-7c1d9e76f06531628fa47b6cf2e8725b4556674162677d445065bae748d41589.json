@@ -1,0 +1,226 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/zealot/",
+      "title": "閃擊",
+      "url": "/darktide/skills/zealot/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/zealot/",
+      "title": "光環",
+      "url": "/darktide/skills/zealot/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/zealot/",
+      "title": "能力",
+      "url": "/darktide/skills/zealot/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/zealot/",
+      "title": "鑰石",
+      "url": "/darktide/skills/zealot/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/zealot/",
+      "title": "技能",
+      "url": "/darktide/skills/zealot/#category-4"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/zealot/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/zealot/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 6,
+    "parent": "/darktide/skills/",
+    "title": "狂信徒",
+    "titleEn": "Zealot",
+    "url": "/darktide/skills/zealot/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-3",
+    "kind": "skill-category",
+    "order": 3,
+    "parent": "/darktide/skills/zealot/",
+    "title": "鑰石",
+    "url": "/darktide/skills/zealot/#category-3"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "死戰到底",
+      "titleEn": "Until Death",
+      "url": "/darktide/skills/zealot/until-death/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "殉道",
+      "titleEn": "Martyrdom",
+      "url": "/darktide/skills/zealot/martyrdom/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "不滅意志",
+      "titleEn": "I Shall Not Fall",
+      "url": "/darktide/skills/zealot/i-shall-not-fall/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "狂燥之心",
+      "titleEn": "Maniac",
+      "url": "/darktide/skills/zealot/maniac/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "命定審判",
+      "titleEn": "Inexorable Judgement",
+      "url": "/darktide/skills/zealot/inexorable-judgement/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "懲戒者姿態",
+      "titleEn": "Retributor's Stance",
+      "url": "/darktide/skills/zealot/retributors-stance/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "飄忽身形",
+      "titleEn": "Inebriate's Poise",
+      "url": "/darktide/skills/zealot/inebriates-poise/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "吊命聖徒",
+      "titleEn": "Holy Revenant",
+      "url": "/darktide/skills/zealot/holy-revenant/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "熾熱虔誠",
+      "titleEn": "Blazing Piety",
+      "url": "/darktide/skills/zealot/blazing-piety/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "死忠",
+      "titleEn": "Stalwart",
+      "url": "/darktide/skills/zealot/stalwart/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "正義勇士",
+      "titleEn": "Righteous Warrior",
+      "url": "/darktide/skills/zealot/righteous-warrior/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "迅疾狂熱",
+      "titleEn": "Infectious Zeal",
+      "url": "/darktide/skills/zealot/infectious-zeal/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "治癒詩頌",
+      "titleEn": "Restorative Verses",
+      "url": "/darktide/skills/zealot/restorative-verses/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "永恆",
+      "titleEn": "Eternal",
+      "url": "/darktide/skills/zealot/eternal/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "危境之際",
+      "titleEn": "On the Brink",
+      "url": "/darktide/skills/zealot/on-the-brink/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "狂熱朝聖者",
+      "titleEn": "Zealous Pilgrim",
+      "url": "/darktide/skills/zealot/zealous-pilgrim/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "烈焰與怒火",
+      "titleEn": "Fire and Fury",
+      "url": "/darktide/skills/zealot/fire-and-fury/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/zealot/#category-3",
+      "title": "復活",
+      "titleEn": "Risen",
+      "url": "/darktide/skills/zealot/risen/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/zealot/#category-3",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

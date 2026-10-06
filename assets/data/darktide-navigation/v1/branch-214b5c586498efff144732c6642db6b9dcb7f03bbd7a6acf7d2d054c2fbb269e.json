@@ -1,0 +1,56 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-vo/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/page-011/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/en/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-vo/page-011/",
+      "title": "501 Player callouts and replies · dodging tutorial desc a",
+      "url": "/darktide/en/player-vo/dodging_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-vo/page-011/",
+      "title": "502 Player callouts and replies · combat ability tutorial desc a",
+      "url": "/darktide/en/player-vo/combat_ability_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-vo/page-011/",
+      "title": "503 Player callouts and replies · chain weapon kill spree self a",
+      "url": "/darktide/en/player-vo/chain_weapon_kill_spree_self_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-vo/page-011/",
+      "title": "504 Player callouts and replies · flamer kill spree self a",
+      "url": "/darktide/en/player-vo/flamer_kill_spree_self_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-vo/page-011/",
+      "title": "505 Player callouts and replies · thunder hammer kill spree self a",
+      "url": "/darktide/en/player-vo/thunder_hammer_kill_spree_self_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-vo/page-011/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-vo/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/page-002/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 9,
+    "parent": "/darktide/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "51 玩家呼喊與回應 · adamant seen killstreak broker",
+      "url": "/darktide/zh-tw/player-vo/adamant_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "52 玩家呼喊與回應 · found ammo broker low on ammo",
+      "url": "/darktide/zh-tw/player-vo/found_ammo_broker_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "53 玩家呼喊與回應 · found health booster broker low on health",
+      "url": "/darktide/zh-tw/player-vo/found_health_booster_broker_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "54 玩家呼喊與回應 · found health station broker low on health",
+      "url": "/darktide/zh-tw/player-vo/found_health_station_broker_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "55 玩家呼喊與回應 · friendly fire from adamant to broker",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_adamant_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "56 玩家呼喊與回應 · friendly fire from broker to adamant",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_broker_to_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "57 玩家呼喊與回應 · friendly fire from broker to broker",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_broker_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "58 玩家呼喊與回應 · friendly fire from broker to ogryn",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_broker_to_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "59 玩家呼喊與回應 · friendly fire from broker to psyker",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_broker_to_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "60 玩家呼喊與回應 · adamant start revive broker",
+      "url": "/darktide/zh-tw/player-vo/adamant_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "61 玩家呼喊與回應 · friendly fire from broker to veteran",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_broker_to_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "62 玩家呼喊與回應 · friendly fire from broker to zealot",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_broker_to_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "63 玩家呼喊與回應 · friendly fire from ogryn to broker",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_ogryn_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "64 玩家呼喊與回應 · friendly fire from psyker to broker",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_psyker_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "65 玩家呼喊與回應 · friendly fire from veteran to broker",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_veteran_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "66 玩家呼喊與回應 · friendly fire from zealot to broker",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_zealot_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "67 玩家呼喊與回應 · knocked down multiple times broker",
+      "url": "/darktide/zh-tw/player-vo/knocked_down_multiple_times_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "68 玩家呼喊與回應 · ogryn seen killstreak broker",
+      "url": "/darktide/zh-tw/player-vo/ogryn_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "69 玩家呼喊與回應 · blitz 01 a",
+      "url": "/darktide/zh-tw/player-vo/blitz_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "70 玩家呼喊與回應 · ogryn start revive broker",
+      "url": "/darktide/zh-tw/player-vo/ogryn_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "71 玩家呼喊與回應 · player death broker",
+      "url": "/darktide/zh-tw/player-vo/player_death_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "72 玩家呼喊與回應 · psyker seen killstreak broker",
+      "url": "/darktide/zh-tw/player-vo/psyker_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "73 玩家呼喊與回應 · psyker start revive broker",
+      "url": "/darktide/zh-tw/player-vo/psyker_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "74 玩家呼喊與回應 · blitz 02 a",
+      "url": "/darktide/zh-tw/player-vo/blitz_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "75 玩家呼喊與回應 · blitz 03 a",
+      "url": "/darktide/zh-tw/player-vo/blitz_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "76 玩家呼喊與回應 · broker seen killstreak adamant",
+      "url": "/darktide/zh-tw/player-vo/broker_seen_killstreak_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "77 玩家呼喊與回應 · ability 02 a",
+      "url": "/darktide/zh-tw/player-vo/ability_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "78 玩家呼喊與回應 · broker seen killstreak broker",
+      "url": "/darktide/zh-tw/player-vo/broker_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "79 玩家呼喊與回應 · broker seen killstreak ogryn",
+      "url": "/darktide/zh-tw/player-vo/broker_seen_killstreak_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "80 玩家呼喊與回應 · ability 01 a",
+      "url": "/darktide/zh-tw/player-vo/ability_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "81 玩家呼喊與回應 · broker seen killstreak psyker",
+      "url": "/darktide/zh-tw/player-vo/broker_seen_killstreak_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "82 玩家呼喊與回應 · veteran seen killstreak broker",
+      "url": "/darktide/zh-tw/player-vo/veteran_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "83 玩家呼喊與回應 · veteran start revive broker",
+      "url": "/darktide/zh-tw/player-vo/veteran_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "84 玩家呼喊與回應 · zealot seen killstreak broker",
+      "url": "/darktide/zh-tw/player-vo/zealot_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "85 玩家呼喊與回應 · zealot start revive broker",
+      "url": "/darktide/zh-tw/player-vo/zealot_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "86 玩家呼喊與回應 · broker seen killstreak veteran",
+      "url": "/darktide/zh-tw/player-vo/broker_seen_killstreak_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "87 玩家呼喊與回應 · broker seen killstreak zealot",
+      "url": "/darktide/zh-tw/player-vo/broker_seen_killstreak_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "88 玩家呼喊與回應 · ability 03 a",
+      "url": "/darktide/zh-tw/player-vo/ability_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "89 玩家呼喊與回應 · broker start revive adamant",
+      "url": "/darktide/zh-tw/player-vo/broker_start_revive_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "90 玩家呼喊與回應 · broker start revive broker",
+      "url": "/darktide/zh-tw/player-vo/broker_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "91 玩家呼喊與回應 · broker start revive ogryn",
+      "url": "/darktide/zh-tw/player-vo/broker_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "92 玩家呼喊與回應 · broker start revive psyker",
+      "url": "/darktide/zh-tw/player-vo/broker_start_revive_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "93 玩家呼喊與回應 · broker start revive veteran",
+      "url": "/darktide/zh-tw/player-vo/broker_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "94 玩家呼喊與回應 · broker start revive zealot",
+      "url": "/darktide/zh-tw/player-vo/broker_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "95 玩家呼喊與回應 · cult downed player a",
+      "url": "/darktide/zh-tw/player-vo/cult_downed_player_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "96 玩家呼喊與回應 · cult gas cloud a",
+      "url": "/darktide/zh-tw/player-vo/cult_gas_cloud_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "97 玩家呼喊與回應 · cult horde announcement a",
+      "url": "/darktide/zh-tw/player-vo/cult_horde_announcement_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "98 玩家呼喊與回應 · cult hurt player a",
+      "url": "/darktide/zh-tw/player-vo/cult_hurt_player_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "99 玩家呼喊與回應 · cult monster announcement a",
+      "url": "/darktide/zh-tw/player-vo/cult_monster_announcement_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-vo/page-002/",
+      "title": "100 玩家呼喊與回應 · cult pre ambush a",
+      "url": "/darktide/zh-tw/player-vo/cult_pre_ambush_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-vo/page-002/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

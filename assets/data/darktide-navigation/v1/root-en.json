@@ -1,0 +1,173 @@
+{
+  "categories": [
+    {
+      "kind": "category",
+      "order": 0,
+      "parent": "/darktide/en/",
+      "title": "Mission debriefs",
+      "url": "/darktide/en/mission-debrief/"
+    },
+    {
+      "kind": "category",
+      "order": 1,
+      "parent": "/darktide/en/",
+      "title": "Fixed cinematic subtitles",
+      "url": "/darktide/en/cinematic/"
+    },
+    {
+      "kind": "category",
+      "order": 2,
+      "parent": "/darktide/en/",
+      "title": "Cinematic dialogue and manual subtitles",
+      "url": "/darktide/en/cinematic-dialogue/"
+    },
+    {
+      "kind": "category",
+      "order": 3,
+      "parent": "/darktide/en/",
+      "title": "Mission briefings",
+      "url": "/darktide/en/mission-brief/"
+    },
+    {
+      "kind": "category",
+      "order": 4,
+      "parent": "/darktide/en/",
+      "title": "Mission vox",
+      "url": "/darktide/en/mission-vox/"
+    },
+    {
+      "kind": "category",
+      "order": 5,
+      "parent": "/darktide/en/",
+      "title": "Hub conversations",
+      "url": "/darktide/en/hub-conversation/"
+    },
+    {
+      "kind": "category",
+      "order": 6,
+      "parent": "/darktide/en/",
+      "title": "NPC interactions",
+      "url": "/darktide/en/npc-interaction/"
+    },
+    {
+      "kind": "category",
+      "order": 7,
+      "parent": "/darktide/en/",
+      "title": "Player conversations",
+      "url": "/darktide/en/player-conversation/"
+    },
+    {
+      "kind": "category",
+      "order": 8,
+      "parent": "/darktide/en/",
+      "title": "Player callouts and replies",
+      "url": "/darktide/en/player-vo/"
+    },
+    {
+      "kind": "category",
+      "order": 9,
+      "parent": "/darktide/en/",
+      "title": "Enemy voices",
+      "url": "/darktide/en/enemy-vo/"
+    },
+    {
+      "kind": "category",
+      "order": 10,
+      "parent": "/darktide/en/",
+      "title": "Unlinked text candidates",
+      "url": "/darktide/en/unlinked-vo/"
+    },
+    {
+      "kind": "category",
+      "order": 11,
+      "parent": "/darktide/en/",
+      "title": "Character personality introductions",
+      "url": "/darktide/en/character-personalities/"
+    },
+    {
+      "kind": "category",
+      "order": 12,
+      "parent": "/darktide/en/",
+      "title": "Response trigger references",
+      "url": "/darktide/en/response-trigger-references/"
+    },
+    {
+      "kind": "category",
+      "order": 13,
+      "parent": "/darktide/en/",
+      "title": "Subtitles awaiting classification",
+      "url": "/darktide/en/unlinked-subtitles/"
+    }
+  ],
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "home": {
+    "title": "Darktide dialogue archive",
+    "url": "/darktide/en/"
+  },
+  "locale": "en",
+  "schemaVersion": 1,
+  "skills": {
+    "classes": [
+      {
+        "kind": "skill-class",
+        "order": 0,
+        "parent": "/darktide/skills/",
+        "title": "法務官",
+        "titleEn": "Arbites",
+        "url": "/darktide/skills/arbites/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 1,
+        "parent": "/darktide/skills/",
+        "title": "歐格林",
+        "titleEn": "Ogryn",
+        "url": "/darktide/skills/ogryn/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 2,
+        "parent": "/darktide/skills/",
+        "title": "靈能者",
+        "titleEn": "Psyker",
+        "url": "/darktide/skills/psyker/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 3,
+        "parent": "/darktide/skills/",
+        "title": "巢都渣滓",
+        "titleEn": "Scum",
+        "url": "/darktide/skills/scum/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 4,
+        "parent": "/darktide/skills/",
+        "title": "護教軍",
+        "titleEn": "Skitarii",
+        "url": "/darktide/skills/skitarii/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 5,
+        "parent": "/darktide/skills/",
+        "title": "老兵",
+        "titleEn": "Veteran",
+        "url": "/darktide/skills/veteran/"
+      },
+      {
+        "kind": "skill-class",
+        "order": 6,
+        "parent": "/darktide/skills/",
+        "title": "狂信徒",
+        "titleEn": "Zealot",
+        "url": "/darktide/skills/zealot/"
+      }
+    ],
+    "parent": "/darktide/en/",
+    "title": "技能與天賦",
+    "titleEn": "Skills and talents (Traditional Chinese)",
+    "url": "/darktide/skills/"
+  }
+}

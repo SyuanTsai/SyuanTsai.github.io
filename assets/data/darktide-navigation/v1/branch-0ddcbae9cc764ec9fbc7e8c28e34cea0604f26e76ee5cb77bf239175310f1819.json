@@ -1,0 +1,56 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-vo/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/page-011/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 9,
+    "parent": "/darktide/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-vo/page-011/",
+      "title": "501 玩家呼喊與回應 · dodging tutorial desc a",
+      "url": "/darktide/zh-tw/player-vo/dodging_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-vo/page-011/",
+      "title": "502 玩家呼喊與回應 · combat ability tutorial desc a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-vo/page-011/",
+      "title": "503 玩家呼喊與回應 · chain weapon kill spree self a",
+      "url": "/darktide/zh-tw/player-vo/chain_weapon_kill_spree_self_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-vo/page-011/",
+      "title": "504 玩家呼喊與回應 · flamer kill spree self a",
+      "url": "/darktide/zh-tw/player-vo/flamer_kill_spree_self_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-vo/page-011/",
+      "title": "505 玩家呼喊與回應 · thunder hammer kill spree self a",
+      "url": "/darktide/zh-tw/player-vo/thunder_hammer_kill_spree_self_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-vo/page-011/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

@@ -1,0 +1,301 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/mission-vox/",
+    "title": "Mortis Trials (Brahms)",
+    "url": "/darktide/en/mission-vox/mortis-trials/characters/brahms/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 4,
+    "parent": "/darktide/en/",
+    "title": "Mission vox",
+    "url": "/darktide/en/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "748 Mission vox · story echo brahms 00 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_00_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "759 Mission vox · story echo brahms 01 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "771 Mission vox · story echo brahms 02 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "782 Mission vox · story echo brahms 03 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "791 Mission vox · story echo brahms 04 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "804 Mission vox · story echo brahms 04a a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_04a_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "816 Mission vox · story echo brahms 05 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "829 Mission vox · story echo brahms 06 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "843 Mission vox · story echo brahms 07 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "845 Mission vox · story echo brahms 08 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "847 Mission vox · story echo brahms 09 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "848 Mission vox · story echo brahms 10 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "850 Mission vox · story echo brahms 11 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "851 Mission vox · story echo brahms 11a a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_11a_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "852 Mission vox · story echo brahms 11b a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_11b_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "854 Mission vox · story echo brahms 11c a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_11c_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "855 Mission vox · story echo brahms 12 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "857 Mission vox · story echo brahms 13 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "858 Mission vox · story echo brahms 14 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "860 Mission vox · story echo brahms 15 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "862 Mission vox · story echo brahms 16 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "865 Mission vox · story echo brahms 17 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "867 Mission vox · story echo brahms 18 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "868 Mission vox · story echo brahms 19 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "870 Mission vox · story echo brahms 20 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "871 Mission vox · story echo brahms 21 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "873 Mission vox · story echo brahms 22 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "874 Mission vox · story echo brahms 23 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "876 Mission vox · story echo brahms 23a a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_23a_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "878 Mission vox · story echo brahms 24 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "879 Mission vox · story echo brahms 25 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "881 Mission vox · story echo brahms 26 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "883 Mission vox · story echo brahms 27 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "885 Mission vox · story echo brahms 27a a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_27a_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "886 Mission vox · story echo brahms 27b a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_27b_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "889 Mission vox · story echo brahms 28 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "890 Mission vox · story echo brahms 29 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "891 Mission vox · story echo brahms 30 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "893 Mission vox · story echo brahms 30a a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_30a_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+      "title": "894 Mission vox · story echo brahms 36 a",
+      "url": "/darktide/en/mission-vox/story_echo_brahms_36_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/mission-vox/mortis-trials/characters/brahms/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

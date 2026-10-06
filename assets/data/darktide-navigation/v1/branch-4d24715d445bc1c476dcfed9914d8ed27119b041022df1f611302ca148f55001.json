@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-vo/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/page-007/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 9,
+    "parent": "/darktide/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "301 玩家呼喊與回應 · disabled by enemy",
+      "url": "/darktide/zh-tw/player-vo/disabled_by_enemy/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "302 玩家呼喊與回應 · enemy kill berserker",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_berserker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "303 玩家呼喊與回應 · alerted enemy daemonhost",
+      "url": "/darktide/zh-tw/player-vo/alerted_enemy_daemonhost/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "304 玩家呼喊與回應 · enemy kill berserker quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_berserker_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "305 玩家呼喊與回應 · ability biomancer low",
+      "url": "/darktide/zh-tw/player-vo/ability_biomancer_low/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "306 玩家呼喊與回應 · enemy kill chaos hound quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_chaos_hound_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "307 玩家呼喊與回應 · enemy kill cultist grenadier",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_cultist_grenadier/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "308 玩家呼喊與回應 · enemy kill cultist mutant quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_cultist_mutant_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "309 玩家呼喊與回應 · enemy kill daemonhost",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_daemonhost/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "310 玩家呼喊與回應 · enemy kill grenadier",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_grenadier/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "311 玩家呼喊與回應 · enemy kill grenadier quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_grenadier_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "312 玩家呼喊與回應 · enemy kill houndmaster",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_houndmaster/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "313 玩家呼喊與回應 · enemy kill monster",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_monster/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "314 玩家呼喊與回應 · blitz brainburst chain a",
+      "url": "/darktide/zh-tw/player-vo/blitz_brainburst_chain_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "315 玩家呼喊與回應 · enemy kill mutant charger",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_mutant_charger/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "316 玩家呼喊與回應 · enemy kill netgunner",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_netgunner/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "317 玩家呼喊與回應 · enemy kill netgunner quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_netgunner_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "318 玩家呼喊與回應 · enemy kill poxwalker bomber",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_poxwalker_bomber/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "319 玩家呼喊與回應 · blitz flame grenade a",
+      "url": "/darktide/zh-tw/player-vo/blitz_flame_grenade_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "320 玩家呼喊與回應 · ability biomancer high",
+      "url": "/darktide/zh-tw/player-vo/ability_biomancer_high/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "321 玩家呼喊與回應 · blitz grenade box a",
+      "url": "/darktide/zh-tw/player-vo/blitz_grenade_box_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "322 玩家呼喊與回應 · enemy kill poxwalker bomber quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_poxwalker_bomber_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "323 玩家呼喊與回應 · enemy kill renegade berserker quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_renegade_berserker_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "324 玩家呼喊與回應 · blitz krak grenade a",
+      "url": "/darktide/zh-tw/player-vo/blitz_krak_grenade_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "325 玩家呼喊與回應 · enemy kill scab flamer",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_scab_flamer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "326 玩家呼喊與回應 · enemy kill scab flamer quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_scab_flamer_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "327 玩家呼喊與回應 · enemy kill sniper",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_sniper/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "328 玩家呼喊與回應 · enemy kill sniper quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_sniper_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "329 玩家呼喊與回應 · enemy kill tox flamer",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_tox_flamer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "330 玩家呼喊與回應 · enemy kill tox flamer quick agnostic",
+      "url": "/darktide/zh-tw/player-vo/enemy_kill_tox_flamer_quick_agnostic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "331 玩家呼喊與回應 · enemy near death monster",
+      "url": "/darktide/zh-tw/player-vo/enemy_near_death_monster/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "332 玩家呼喊與回應 · blitz rock a",
+      "url": "/darktide/zh-tw/player-vo/blitz_rock_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "333 玩家呼喊與回應 · found ammo ogryn low on ammo",
+      "url": "/darktide/zh-tw/player-vo/found_ammo_ogryn_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "334 玩家呼喊與回應 · found ammo psyker low on ammo",
+      "url": "/darktide/zh-tw/player-vo/found_ammo_psyker_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "335 玩家呼喊與回應 · found ammo veteran low on ammo",
+      "url": "/darktide/zh-tw/player-vo/found_ammo_veteran_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "336 玩家呼喊與回應 · found ammo zealot low on ammo",
+      "url": "/darktide/zh-tw/player-vo/found_ammo_zealot_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "337 玩家呼喊與回應 · found health booster",
+      "url": "/darktide/zh-tw/player-vo/found_health_booster/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "338 玩家呼喊與回應 · blitz shards chain a",
+      "url": "/darktide/zh-tw/player-vo/blitz_shards_chain_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "339 玩家呼喊與回應 · found health booster low on health",
+      "url": "/darktide/zh-tw/player-vo/found_health_booster_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "340 玩家呼喊與回應 · found health booster ogryn low on health",
+      "url": "/darktide/zh-tw/player-vo/found_health_booster_ogryn_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "341 玩家呼喊與回應 · found health booster psyker low on health",
+      "url": "/darktide/zh-tw/player-vo/found_health_booster_psyker_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "342 玩家呼喊與回應 · found health booster veteran low on health",
+      "url": "/darktide/zh-tw/player-vo/found_health_booster_veteran_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "343 玩家呼喊與回應 · found health booster zealot low on health",
+      "url": "/darktide/zh-tw/player-vo/found_health_booster_zealot_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "344 玩家呼喊與回應 · ability bonebreaker",
+      "url": "/darktide/zh-tw/player-vo/ability_bonebreaker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "345 玩家呼喊與回應 · found health station ogryn low on health",
+      "url": "/darktide/zh-tw/player-vo/found_health_station_ogryn_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "346 玩家呼喊與回應 · blitz smite chain a",
+      "url": "/darktide/zh-tw/player-vo/blitz_smite_chain_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "347 玩家呼喊與回應 · friendly fire from ogryn to ogryn",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_ogryn_to_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "348 玩家呼喊與回應 · friendly fire from ogryn to psyker",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_ogryn_to_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "349 玩家呼喊與回應 · friendly fire from ogryn to veteran",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_ogryn_to_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-vo/page-007/",
+      "title": "350 玩家呼喊與回應 · friendly fire from ogryn to zealot",
+      "url": "/darktide/zh-tw/player-vo/friendly_fire_from_ogryn_to_zealot/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-vo/page-007/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

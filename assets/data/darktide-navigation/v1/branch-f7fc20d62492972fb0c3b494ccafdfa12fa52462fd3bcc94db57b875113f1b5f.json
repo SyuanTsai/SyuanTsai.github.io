@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-066/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3251 Player conversations · oval bonding conversation quiet a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_quiet_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3252 Player conversations · oval bonding conversation shut a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_shut_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3253 Player conversations · oval bonding conversation slum a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_slum_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3254 Player conversations · oval bonding conversation softy a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_softy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3255 Player conversations · oval bonding conversation toady a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_toady_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3256 Player conversations · oval world conversation balta nobles nineteen a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_balta_nobles_nineteen_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3257 Player conversations · bonding conversation hammersmith more wolfer a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_more_wolfer_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3258 Player conversations · oval world conversation balta nobles twentyfour mangolin a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_balta_nobles_twentyfour_mangolin_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3259 Player conversations · oval world conversation daviot steel twenty a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_daviot_steel_twenty_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3260 Player conversations · oval world conversation daviot steel twentyeight a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_daviot_steel_twentyeight_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3261 Player conversations · oval world conversation gareloch eighteen a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_gareloch_eighteen_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3262 Player conversations · oval world conversation gareloch nine a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_gareloch_nine_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3263 Player conversations · pimlico bonding conversation insecure a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_insecure_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3264 Player conversations · pimlico bonding conversation no end a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_no_end_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3265 Player conversations · pimlico bonding conversation orders a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_orders_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3266 Player conversations · bonding conversation hammersmith psychology a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_psychology_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3267 Player conversations · pimlico bonding conversation war two a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_war_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3268 Player conversations · bonding conversation hammersmith snap a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_snap_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3269 Player conversations · bonding conversation hammersmith style a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_style_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3270 Player conversations · bonding conversation hammersmith viscera a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_viscera_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3271 Player conversations · bonding conversation fighters a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_fighters_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3272 Player conversations · bonding conversation metropolitan akkers a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_akkers_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3273 Player conversations · bonding conversation metropolitan calm ogr a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_calm_ogr_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3274 Player conversations · bonding conversation metropolitan conflict a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_conflict_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3275 Player conversations · bonding conversation metropolitan cruncher a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_cruncher_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3276 Player conversations · bonding conversation metropolitan ennui a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_ennui_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3277 Player conversations · bonding conversation akkers a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_akkers_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3278 Player conversations · bonding conversation flimsy gun a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_flimsy_gun_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3279 Player conversations · bonding conversation metropolitan rogal dorn a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_rogal_dorn_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3280 Player conversations · bonding conversation metropolitan yawn a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_yawn_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3281 Player conversations · bonding conversation morrow 01 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_morrow_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3282 Player conversations · bonding conversation ogryn gang 01 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_ogryn_gang_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3283 Player conversations · bonding conversation ogryn gang 02 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_ogryn_gang_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3284 Player conversations · bonding conversation ogryn gang 03 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_ogryn_gang_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3285 Player conversations · bonding conversation ogryn gang 04 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_ogryn_gang_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3286 Player conversations · bonding conversation hammersmith doornailed a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_doornailed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3287 Player conversations · bonding conversation ogryn gang 05 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_ogryn_gang_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3288 Player conversations · bonding conversation rhyme 02 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_rhyme_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3289 Player conversations · bonding conversation round three doornailed a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_round_three_doornailed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3290 Player conversations · bonding conversation round three tough smart a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_round_three_tough_smart_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3291 Player conversations · bonding conversation toadies two a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_toadies_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3292 Player conversations · bonding conversation villainy a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_villainy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3293 Player conversations · combat pause limited bolt on a ogryn d 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_ogryn_d_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3294 Player conversations · combat pause limited bolt on a ogryn d 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_ogryn_d_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3295 Player conversations · combat pause limited bolt on a ogryn d 03 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_ogryn_d_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3296 Player conversations · combat pause limited bolt on a ogryn d 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_ogryn_d_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3297 Player conversations · combat pause limited ogryn d 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_d_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3298 Player conversations · bonding conversation hammersmith even more wolfer a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_even_more_wolfer_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3299 Player conversations · combat pause limited bolt on a psyker a 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_psyker_a_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-066/",
+      "title": "3300 Player conversations · combat pause limited psyker a 08 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_psyker_a_08_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-066/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

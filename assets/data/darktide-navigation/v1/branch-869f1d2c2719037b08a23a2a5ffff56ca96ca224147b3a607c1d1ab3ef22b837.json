@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-042/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2051 玩家閒談 · nurgle circumstance conversation five a",
+      "url": "/darktide/zh-tw/player-conversation/nurgle_circumstance_conversation_five_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2052 玩家閒談 · nurgle circumstance conversation two a",
+      "url": "/darktide/zh-tw/player-conversation/nurgle_circumstance_conversation_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2053 玩家閒談 · nurgle circumstance start a",
+      "url": "/darktide/zh-tw/player-conversation/nurgle_circumstance_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2054 玩家閒談 · combat pause metropolitan toxic 08 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2055 玩家閒談 · combat pause metropolitan toxic 09 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2056 玩家閒談 · combat pause metropolitan toxic 10 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2057 玩家閒談 · combat pause metropolitan toxic 11 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2058 玩家閒談 · combat pause metropolitan toxic 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2059 玩家閒談 · combat pause metropolitan toxic 12 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2060 玩家閒談 · combat pause metropolitan toxic 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2061 玩家閒談 · combat pause metropolitan toxic 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2062 玩家閒談 · combat pause metropolitan toxic 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2063 玩家閒談 · combat pause metropolitan toxic 05 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2064 玩家閒談 · combat pause metropolitan toxic 06 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2065 玩家閒談 · combat pause metropolitan toxic 07 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2066 玩家閒談 · combat pause circumstance veteran b gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_veteran_b_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2067 玩家閒談 · combat pause circumstance veteran c gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_veteran_c_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2068 玩家閒談 · combat pause circumstance zealot a gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_zealot_a_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2069 玩家閒談 · combat pause circumstance ogryn b gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_ogryn_b_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2070 玩家閒談 · combat pause circumstance zealot c gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_zealot_c_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2071 玩家閒談 · combat pause circumstance ogryn c gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_ogryn_c_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2072 玩家閒談 · combat pause circumstance psyker a gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_psyker_a_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2073 玩家閒談 · combat pause circumstance ogryn a gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_ogryn_a_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2074 玩家閒談 · combat pause circumstance psyker b gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_psyker_b_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2075 玩家閒談 · combat pause circumstance psyker c gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_psyker_c_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2076 玩家閒談 · combat pause circumstance veteran a gas a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_veteran_a_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2077 玩家閒談 · lore grendyl one a",
+      "url": "/darktide/zh-tw/player-conversation/lore_grendyl_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2078 玩家閒談 · lore grendyl three a",
+      "url": "/darktide/zh-tw/player-conversation/lore_grendyl_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2079 玩家閒談 · conversation pilot four 01",
+      "url": "/darktide/zh-tw/player-conversation/conversation_pilot_four_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2080 玩家閒談 · lore imperium four a",
+      "url": "/darktide/zh-tw/player-conversation/lore_imperium_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2081 玩家閒談 · conversation pilot one 01",
+      "url": "/darktide/zh-tw/player-conversation/conversation_pilot_one_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2082 玩家閒談 · lore inquisition four a",
+      "url": "/darktide/zh-tw/player-conversation/lore_inquisition_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2083 玩家閒談 · lore inquisition one a",
+      "url": "/darktide/zh-tw/player-conversation/lore_inquisition_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2084 玩家閒談 · lore inquisition three a",
+      "url": "/darktide/zh-tw/player-conversation/lore_inquisition_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2085 玩家閒談 · lore lost history four a",
+      "url": "/darktide/zh-tw/player-conversation/lore_lost_history_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2086 玩家閒談 · lore lost history three a",
+      "url": "/darktide/zh-tw/player-conversation/lore_lost_history_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2087 玩家閒談 · conversation pilot three 01",
+      "url": "/darktide/zh-tw/player-conversation/conversation_pilot_three_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2088 玩家閒談 · lore melk four a",
+      "url": "/darktide/zh-tw/player-conversation/lore_melk_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2089 玩家閒談 · lore mourningstar one a",
+      "url": "/darktide/zh-tw/player-conversation/lore_mourningstar_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2090 玩家閒談 · lore space marines one a",
+      "url": "/darktide/zh-tw/player-conversation/lore_space_marines_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2091 玩家閒談 · lore space marines two a",
+      "url": "/darktide/zh-tw/player-conversation/lore_space_marines_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2092 玩家閒談 · lore the emperor one a",
+      "url": "/darktide/zh-tw/player-conversation/lore_the_emperor_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2093 玩家閒談 · lore the warp four a",
+      "url": "/darktide/zh-tw/player-conversation/lore_the_warp_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2094 玩家閒談 · lore the warp one a",
+      "url": "/darktide/zh-tw/player-conversation/lore_the_warp_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2095 玩家閒談 · conversation 40k lore two 01",
+      "url": "/darktide/zh-tw/player-conversation/conversation_40k_lore_two_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2096 玩家閒談 · lore training psyker four a",
+      "url": "/darktide/zh-tw/player-conversation/lore_training_psyker_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2097 玩家閒談 · lore valkyrie one a",
+      "url": "/darktide/zh-tw/player-conversation/lore_valkyrie_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2098 玩家閒談 · lore xenos four a",
+      "url": "/darktide/zh-tw/player-conversation/lore_xenos_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2099 玩家閒談 · lore xenos one a",
+      "url": "/darktide/zh-tw/player-conversation/lore_xenos_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-042/",
+      "title": "2100 玩家閒談 · lore xenos two a",
+      "url": "/darktide/zh-tw/player-conversation/lore_xenos_two_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-042/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

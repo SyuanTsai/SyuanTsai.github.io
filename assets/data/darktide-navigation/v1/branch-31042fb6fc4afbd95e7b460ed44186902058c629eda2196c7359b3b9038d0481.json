@@ -1,0 +1,202 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/psyker/",
+      "title": "閃擊",
+      "url": "/darktide/skills/psyker/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/psyker/",
+      "title": "光環",
+      "url": "/darktide/skills/psyker/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/psyker/",
+      "title": "能力",
+      "url": "/darktide/skills/psyker/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/psyker/",
+      "title": "鑰石",
+      "url": "/darktide/skills/psyker/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/psyker/",
+      "title": "技能",
+      "url": "/darktide/skills/psyker/#category-4"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/psyker/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/psyker/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 2,
+    "parent": "/darktide/skills/",
+    "title": "靈能者",
+    "titleEn": "Psyker",
+    "url": "/darktide/skills/psyker/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-2",
+    "kind": "skill-category",
+    "order": 2,
+    "parent": "/darktide/skills/psyker/",
+    "title": "能力",
+    "url": "/darktide/skills/psyker/#category-2"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "靈能尖嘯",
+      "titleEn": "Venting Shriek",
+      "url": "/darktide/skills/psyker/venting-shriek/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "占卜者的注視",
+      "titleEn": "Scrier's Gaze",
+      "url": "/darktide/skills/psyker/scriers-gaze/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "平靜迸發",
+      "titleEn": "Becalming Eruption",
+      "url": "/darktide/skills/psyker/becalming-eruption/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "亞空間爆發",
+      "titleEn": "Warp Rupture",
+      "url": "/darktide/skills/psyker/warp-rupture/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "蔓延火焰",
+      "titleEn": "Creeping Flames",
+      "url": "/darktide/skills/psyker/creeping-flames/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "預知未來",
+      "titleEn": "Precognition",
+      "url": "/darktide/skills/psyker/precognition/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "亞空間加速",
+      "titleEn": "Warp Speed",
+      "url": "/darktide/skills/psyker/warp-speed/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "靈能學者光環",
+      "titleEn": "Psykinetic's Aura",
+      "url": "/darktide/skills/psyker/psykinetics-aura/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "現實錨點",
+      "titleEn": "Reality Anchor",
+      "url": "/darktide/skills/psyker/reality-anchor/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "念力護盾",
+      "titleEn": "Telekine Shield",
+      "url": "/darktide/skills/psyker/telekine-shield/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "強化護盾",
+      "titleEn": "Bolstered Shield",
+      "url": "/darktide/skills/psyker/bolstered-shield/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "庇護所",
+      "titleEn": "Sanctuary",
+      "url": "/darktide/skills/psyker/sanctuary/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "念力穹頂",
+      "titleEn": "Telekine Dome",
+      "url": "/darktide/skills/psyker/telekine-dome/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "衰弱界線",
+      "titleEn": "Enervating Threshold",
+      "url": "/darktide/skills/psyker/enervating-threshold/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/psyker/#category-2",
+      "title": "亞空間突破",
+      "titleEn": "Warp Unbound",
+      "url": "/darktide/skills/psyker/warp-unbound/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/psyker/#category-2",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

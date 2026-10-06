@@ -1,0 +1,252 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/enemy-vo/",
+    "title": "Enemy voices",
+    "url": "/darktide/en/enemy-vo/page-002/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 9,
+    "parent": "/darktide/en/",
+    "title": "Enemy voices",
+    "url": "/darktide/en/enemy-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "51 Enemy voices · traitor guard rifleman ranged idle",
+      "url": "/darktide/en/enemy-vo/traitor_guard_rifleman_ranged_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "52 Enemy voices · chaos daemonhost mantra medium",
+      "url": "/darktide/en/enemy-vo/chaos_daemonhost_mantra_medium/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "53 Enemy voices · traitor guard rifleman take cover",
+      "url": "/darktide/en/enemy-vo/traitor_guard_rifleman_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "54 Enemy voices · traitor guard rifleman take position",
+      "url": "/darktide/en/enemy-vo/traitor_guard_rifleman_take_position/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "55 Enemy voices · traitor guard smg rusher alerted idle",
+      "url": "/darktide/en/enemy-vo/traitor_guard_smg_rusher_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "56 Enemy voices · traitor guard smg rusher ranged idle",
+      "url": "/darktide/en/enemy-vo/traitor_guard_smg_rusher_ranged_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "57 Enemy voices · traitor guard smg rusher take cover",
+      "url": "/darktide/en/enemy-vo/traitor_guard_smg_rusher_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "58 Enemy voices · chaos daemonhost warp grab",
+      "url": "/darktide/en/enemy-vo/chaos_daemonhost_warp_grab/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "59 Enemy voices · traitor guard smg rusher take position",
+      "url": "/darktide/en/enemy-vo/traitor_guard_smg_rusher_take_position/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "60 Enemy voices · traitor netgunner assault",
+      "url": "/darktide/en/enemy-vo/traitor_netgunner_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "61 Enemy voices · traitor netgunner catching net",
+      "url": "/darktide/en/enemy-vo/traitor_netgunner_catching_net/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "62 Enemy voices · traitor netgunner spawned",
+      "url": "/darktide/en/enemy-vo/traitor_netgunner_spawned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "63 Enemy voices · chaos newly infected alerted idle",
+      "url": "/darktide/en/enemy-vo/chaos_newly_infected_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "64 Enemy voices · traitor netgunner throwing net",
+      "url": "/darktide/en/enemy-vo/traitor_netgunner_throwing_net/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "65 Enemy voices · traitor scout shocktrooper alerted idle",
+      "url": "/darktide/en/enemy-vo/traitor_scout_shocktrooper_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "66 Enemy voices · traitor scout shocktrooper melee idle",
+      "url": "/darktide/en/enemy-vo/traitor_scout_shocktrooper_melee_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "67 Enemy voices · traitor scout shocktrooper no damage",
+      "url": "/darktide/en/enemy-vo/traitor_scout_shocktrooper_no_damage/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "68 Enemy voices · traitor scout shocktrooper take cover",
+      "url": "/darktide/en/enemy-vo/traitor_scout_shocktrooper_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "69 Enemy voices · traitor scout shocktrooper take position",
+      "url": "/darktide/en/enemy-vo/traitor_scout_shocktrooper_take_position/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "70 Enemy voices · traitor shocktrooper start shooting",
+      "url": "/darktide/en/enemy-vo/traitor_shocktrooper_start_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "71 Enemy voices · chaos armored infected alerted idle",
+      "url": "/darktide/en/enemy-vo/chaos_armored_infected_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "72 Enemy voices · traitor trenchfighter alerted idle",
+      "url": "/darktide/en/enemy-vo/traitor_trenchfighter_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "73 Enemy voices · traitor trenchfighter melee idle",
+      "url": "/darktide/en/enemy-vo/traitor_trenchfighter_melee_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "74 Enemy voices · twin spawn laugh a",
+      "url": "/darktide/en/enemy-vo/twin_spawn_laugh_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "75 Enemy voices · chaos newly infected melee idle",
+      "url": "/darktide/en/enemy-vo/chaos_newly_infected_melee_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "76 Enemy voices · chaos armored infected assault",
+      "url": "/darktide/en/enemy-vo/chaos_armored_infected_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "77 Enemy voices · chaos ogryn bulwark alerted idle",
+      "url": "/darktide/en/enemy-vo/chaos_ogryn_bulwark_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "78 Enemy voices · chaos ogryn bulwark assault",
+      "url": "/darktide/en/enemy-vo/chaos_ogryn_bulwark_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "79 Enemy voices · chaos ogryn executor alerted idle",
+      "url": "/darktide/en/enemy-vo/chaos_ogryn_executor_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "80 Enemy voices · chaos ogryn executor assault",
+      "url": "/darktide/en/enemy-vo/chaos_ogryn_executor_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "81 Enemy voices · chaos ogryn executor no damage",
+      "url": "/darktide/en/enemy-vo/chaos_ogryn_executor_no_damage/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "82 Enemy voices · chaos ogryn heavy gunner alerted idle",
+      "url": "/darktide/en/enemy-vo/chaos_ogryn_heavy_gunner_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/enemy-vo/page-002/",
+      "title": "83 Enemy voices · chaos ogryn heavy gunner shooting",
+      "url": "/darktide/en/enemy-vo/chaos_ogryn_heavy_gunner_shooting/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/enemy-vo/page-002/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

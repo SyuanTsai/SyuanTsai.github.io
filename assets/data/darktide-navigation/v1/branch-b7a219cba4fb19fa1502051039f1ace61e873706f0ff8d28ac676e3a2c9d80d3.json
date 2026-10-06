@@ -1,0 +1,315 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/mission-vox/",
+    "title": "Mortis Trials (Gameplay)",
+    "url": "/darktide/en/mission-vox/mortis-trials/gameplay/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 4,
+    "parent": "/darktide/en/",
+    "title": "Mission vox",
+    "url": "/darktide/en/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "6 Mission vox · event demolition first corruptor destroyed a",
+      "url": "/darktide/en/mission-vox/event_demolition_first_corruptor_destroyed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "731 Mission vox · horde wave start 01 a",
+      "url": "/darktide/en/mission-vox/horde_wave_start_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "734 Mission vox · horde wave start 02 a",
+      "url": "/darktide/en/mission-vox/horde_wave_start_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "737 Mission vox · horde wave start 03 a",
+      "url": "/darktide/en/mission-vox/horde_wave_start_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "741 Mission vox · horde wave upgrade prompt a",
+      "url": "/darktide/en/mission-vox/horde_wave_upgrade_prompt_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "744 Mission vox · info servo skull deployed horde",
+      "url": "/darktide/en/mission-vox/info_servo_skull_deployed_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "750 Mission vox · cmd luggable prompt a all targets scanned",
+      "url": "/darktide/en/mission-vox/cmd_luggable_prompt_a_all_targets_scanned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "776 Mission vox · cmd wandering skull horde",
+      "url": "/darktide/en/mission-vox/cmd_wandering_skull_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "803 Mission vox · event corruptor objective start",
+      "url": "/darktide/en/mission-vox/event_corruptor_objective_start/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "832 Mission vox · wave start armored infected a",
+      "url": "/darktide/en/mission-vox/wave_start_armored_infected_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "833 Mission vox · wave start chaos ogryn a",
+      "url": "/darktide/en/mission-vox/wave_start_chaos_ogryn_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "834 Mission vox · wave start daemonhost a",
+      "url": "/darktide/en/mission-vox/wave_start_daemonhost_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "835 Mission vox · wave start flamers a",
+      "url": "/darktide/en/mission-vox/wave_start_flamers_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "836 Mission vox · wave start hounds a",
+      "url": "/darktide/en/mission-vox/wave_start_hounds_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "837 Mission vox · wave start monsters a",
+      "url": "/darktide/en/mission-vox/wave_start_monsters_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "838 Mission vox · wave start mutants a",
+      "url": "/darktide/en/mission-vox/wave_start_mutants_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "839 Mission vox · wave start netgunner a",
+      "url": "/darktide/en/mission-vox/wave_start_netgunner_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "840 Mission vox · wave start poxbursters a",
+      "url": "/darktide/en/mission-vox/wave_start_poxbursters_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "841 Mission vox · wave start snipers a",
+      "url": "/darktide/en/mission-vox/wave_start_snipers_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "842 Mission vox · wave start twins a",
+      "url": "/darktide/en/mission-vox/wave_start_twins_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "844 Mission vox · event demolition last corruptor horde",
+      "url": "/darktide/en/mission-vox/event_demolition_last_corruptor_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "846 Mission vox · event scan all targets scanned horde",
+      "url": "/darktide/en/mission-vox/event_scan_all_targets_scanned_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "849 Mission vox · event scan more data horde",
+      "url": "/darktide/en/mission-vox/event_scan_more_data_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "853 Mission vox · event scan skull waiting horde",
+      "url": "/darktide/en/mission-vox/event_scan_skull_waiting_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "856 Mission vox · horde break ice a",
+      "url": "/darktide/en/mission-vox/horde_break_ice_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "859 Mission vox · horde claim prize a",
+      "url": "/darktide/en/mission-vox/horde_claim_prize_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "861 Mission vox · cmd deploy skull horde",
+      "url": "/darktide/en/mission-vox/cmd_deploy_skull_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "863 Mission vox · cmd hacking place device horde",
+      "url": "/darktide/en/mission-vox/cmd_hacking_place_device_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "864 Mission vox · horde defend area a",
+      "url": "/darktide/en/mission-vox/horde_defend_area_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "866 Mission vox · horde mission complete a",
+      "url": "/darktide/en/mission-vox/horde_mission_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "869 Mission vox · horde mode failed a",
+      "url": "/darktide/en/mission-vox/horde_mode_failed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "872 Mission vox · horde new wave start post upgrade a",
+      "url": "/darktide/en/mission-vox/horde_new_wave_start_post_upgrade_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "875 Mission vox · horde objective a",
+      "url": "/darktide/en/mission-vox/horde_objective_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "877 Mission vox · horde objective reminder a",
+      "url": "/darktide/en/mission-vox/horde_objective_reminder_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "880 Mission vox · horde open gate a",
+      "url": "/darktide/en/mission-vox/horde_open_gate_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "882 Mission vox · horde restore power a",
+      "url": "/darktide/en/mission-vox/horde_restore_power_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "884 Mission vox · horde resupply a",
+      "url": "/darktide/en/mission-vox/horde_resupply_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "887 Mission vox · horde safe zone a",
+      "url": "/darktide/en/mission-vox/horde_safe_zone_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "888 Mission vox · cmd luggable prompt a",
+      "url": "/darktide/en/mission-vox/cmd_luggable_prompt_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "892 Mission vox · horde safe zone b",
+      "url": "/darktide/en/mission-vox/horde_safe_zone_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "895 Mission vox · horde wave interstitial strain a",
+      "url": "/darktide/en/mission-vox/horde_wave_interstitial_strain_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/mission-vox/mortis-trials/gameplay/",
+      "title": "898 Mission vox · horde wave interstitial voices a",
+      "url": "/darktide/en/mission-vox/horde_wave_interstitial_voices_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/mission-vox/mortis-trials/gameplay/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

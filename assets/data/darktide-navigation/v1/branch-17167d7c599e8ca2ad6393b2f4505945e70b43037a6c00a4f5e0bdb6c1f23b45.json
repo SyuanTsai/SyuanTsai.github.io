@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-067/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3301 玩家閒談 · combat pause limited psyker a 12 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_a_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3302 玩家閒談 · combat pause limited bolt on a psyker a 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_psyker_a_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3303 玩家閒談 · combat pause limited bolt on a psyker a 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_psyker_a_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3304 玩家閒談 · psyker gang metropolitan quibble a",
+      "url": "/darktide/zh-tw/player-conversation/psyker_gang_metropolitan_quibble_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3305 玩家閒談 · combat pause limited bolt on a psyker a 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_psyker_a_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3306 玩家閒談 · psyker gang metropolitan weaponry a",
+      "url": "/darktide/zh-tw/player-conversation/psyker_gang_metropolitan_weaponry_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3307 玩家閒談 · psyker gang metropolitan worse a",
+      "url": "/darktide/zh-tw/player-conversation/psyker_gang_metropolitan_worse_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3308 玩家閒談 · combat pause limited psyker b 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_b_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3309 玩家閒談 · combat pause limited psyker b 08 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_b_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3310 玩家閒談 · combat pause limited psyker b 09 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_b_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3311 玩家閒談 · combat pause limited psyker b 12 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_b_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3312 玩家閒談 · combat pause limited psyker b 14 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_b_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3313 玩家閒談 · combat pause limited bolt on a psyker b 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_psyker_b_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3314 玩家閒談 · psyker gang metropolitan beloved a",
+      "url": "/darktide/zh-tw/player-conversation/psyker_gang_metropolitan_beloved_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3315 玩家閒談 · combat pause limited bolt on a psyker b 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_psyker_b_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3316 玩家閒談 · psyker gang metropolitan macro a",
+      "url": "/darktide/zh-tw/player-conversation/psyker_gang_metropolitan_macro_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3317 玩家閒談 · combat pause limited bolt on a psyker b 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_psyker_b_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3318 玩家閒談 · psyker gang metropolitan small brain a",
+      "url": "/darktide/zh-tw/player-conversation/psyker_gang_metropolitan_small_brain_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3319 玩家閒談 · combat pause limited psyker c 08 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_c_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3320 玩家閒談 · combat pause limited psyker c 09 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_c_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3321 玩家閒談 · combat pause limited psyker c 14 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_c_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3322 玩家閒談 · combat pause limited psyker c 15 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_c_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3323 玩家閒談 · combat pause limited psyker c 17 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_c_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3324 玩家閒談 · combat pause limited bolt on a psyker c 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_psyker_c_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3325 玩家閒談 · psyker gang metropolitan purpose a",
+      "url": "/darktide/zh-tw/player-conversation/psyker_gang_metropolitan_purpose_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3326 玩家閒談 · psyker gang metropolitan trusted a",
+      "url": "/darktide/zh-tw/player-conversation/psyker_gang_metropolitan_trusted_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3327 玩家閒談 · psyker gang metropolitan value a",
+      "url": "/darktide/zh-tw/player-conversation/psyker_gang_metropolitan_value_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3328 玩家閒談 · combat pause limited bolt on a psyker c 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_psyker_c_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3329 玩家閒談 · combat pause limited psyker c 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_c_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3330 玩家閒談 · combat pause limited psyker c 05 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_psyker_c_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3331 玩家閒談 · adamant male b psyker bonding conversation 36 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_psyker_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3332 玩家閒談 · bonding conversation round three lively a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_round_three_lively_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3333 玩家閒談 · bonding conversation round three scowl a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_round_three_scowl_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3334 玩家閒談 · bonding conversation round three watcher a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_round_three_watcher_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3335 玩家閒談 · oval bonding conversation forget a",
+      "url": "/darktide/zh-tw/player-conversation/oval_bonding_conversation_forget_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3336 玩家閒談 · adamant male b psyker bonding conversation 37 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_psyker_bonding_conversation_37_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3337 玩家閒談 · oval bonding conversation havering a",
+      "url": "/darktide/zh-tw/player-conversation/oval_bonding_conversation_havering_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3338 玩家閒談 · oval bonding conversation mortality a",
+      "url": "/darktide/zh-tw/player-conversation/oval_bonding_conversation_mortality_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3339 玩家閒談 · oval world conversation balta nobles three a",
+      "url": "/darktide/zh-tw/player-conversation/oval_world_conversation_balta_nobles_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3340 玩家閒談 · oval world conversation cumbernauld brahms eleven a",
+      "url": "/darktide/zh-tw/player-conversation/oval_world_conversation_cumbernauld_brahms_eleven_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3341 玩家閒談 · oval world conversation daviot steel twentyone a",
+      "url": "/darktide/zh-tw/player-conversation/oval_world_conversation_daviot_steel_twentyone_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3342 玩家閒談 · oval world conversation fingal swagger eight a",
+      "url": "/darktide/zh-tw/player-conversation/oval_world_conversation_fingal_swagger_eight_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3343 玩家閒談 · oval world conversation fingal swagger two a",
+      "url": "/darktide/zh-tw/player-conversation/oval_world_conversation_fingal_swagger_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3344 玩家閒談 · oval world conversation universal hestia twentynine a",
+      "url": "/darktide/zh-tw/player-conversation/oval_world_conversation_universal_hestia_twentynine_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3345 玩家閒談 · pimlico bonding conversation daviot clandestium 02 a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_daviot_clandestium_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3346 玩家閒談 · adamant male b psyker bonding conversation 40 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_psyker_bonding_conversation_40_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3347 玩家閒談 · pimlico bonding conversation expendable a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_expendable_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3348 玩家閒談 · pimlico bonding conversation motivate a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_motivate_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3349 玩家閒談 · pimlico bonding conversation smile a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_smile_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-067/",
+      "title": "3350 玩家閒談 · bonding conversation hammersmith bigger a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_hammersmith_bigger_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-067/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}
