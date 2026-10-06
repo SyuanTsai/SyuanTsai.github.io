@@ -71,7 +71,7 @@ node scripts/game-info/render_skill_pages.mjs `
 
 技能 Markdown 是技能正文的唯一來源；網站只保存再生後的靜態 HTML，不把技能正文搬入 JSON。完整網站再生時，技能輸出位於分類頁與用途證據之後、共用最終處理之前；完整順序與容量限制見[字幕交付維護說明](darktide-dialogue-delivery.md)。
 
-`render_skill_pages.mjs` 寫完本次指定職業的 HTML 與 TSV 後，呼叫網站端 `scripts/apply_darktide_reader.py --site <完整 Pages 根目錄>`。renderer 的 `--classes` 只限定技能 HTML／TSV 的產生範圍；後處理仍處理完整 Darktide 頁樹，包括雙語首頁、技能根目錄、七職業頁及所有既有頁面。`apply_darktide_reader.py` 先依 HTML metadata 套用導覽，再執行 `scripts/darktide_html_format.py` 的全站 Darktide 標籤空白精簡；formatter 沒有 `--classes` 參數。保留這個呼叫與順序，重複產生才會維持一致，且不會讓外框逐次累積。
+`render_skill_pages.mjs` 寫完本次指定職業的 HTML 與 TSV 後，維護者須在 Pages 工作樹另行執行網站端 `scripts/apply_darktide_reader.py --site <完整 Pages 根目錄>`。網站 helper 可獨立處理整個 Pages 網站；renderer 的 `--classes` 只限定技能 HTML／TSV 的產生範圍，後處理仍涵蓋整個 Darktide 頁樹，包括雙語首頁、技能根目錄、七職業頁及所有既有頁面。`apply_darktide_reader.py` 先依 HTML metadata 套用導覽，再執行 `scripts/darktide_html_format.py` 的全站 Darktide 標籤空白精簡；formatter 沒有 `--classes` 參數。保留這個分開執行的呼叫順序，重複產生才會維持一致，且不會讓外框逐次累積。
 
 ## 證據限制與回復
 

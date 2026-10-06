@@ -56,9 +56,9 @@ python scripts/generate_darktide_unlinked_pages.py --dialogue-source "C:/Git/Per
 
 用途證據固定讀取 Mods archive commit `7b58f6fae2861e11cf08e44f74206bdbc8195f9e` 的 audit TSV 與 evidence JSON。來源包含 14,255 列、14,251 個唯一 hash 與 4 筆重複列；分類保留 38 個性格 hash、26 條條件引用列所對應的 22 個 hash，以及 14,191 個用途未確認 hash。對 14,191 個用途未確認 hash，固定來源中沒有找到可證實的靜態引用；這只表示用途尚未確認，不能推論遊戲未使用。條件引用也不代表已知實際播放或說話者。
 
-完整再生順序固定為：用途分類頁 → 用途證據 → 技能頁 → 共用後處理。`scripts/generate_darktide_unlinked_pages.py` 負責三種字幕用途分類與用途證據，不重建全部原始事件類型頁。技能頁以 Mods 的 Markdown 為唯一正文來源；`render_skill_pages.mjs` 寫完本次指定職業的 HTML 與 TSV 後，呼叫網站端 `scripts/apply_darktide_reader.py --site <完整 Pages 根目錄>`。renderer 的 `--classes` 只限定技能 HTML／TSV 的產生範圍；後處理仍使用完整網站根目錄，涵蓋雙語首頁、技能根目錄、七職業頁與所有既有 Darktide 頁。網站 helper 先依標題、canonical 與分類連結等 HTML metadata 套用導覽，再對整個 Darktide 頁樹執行 `scripts/darktide_html_format.py` 的標籤空白精簡；formatter 不接收 `--classes`。正文文字、引號內屬性值與 script、style、pre、textarea 等受保護內容保持原樣。相同來源重跑應保持冪等，不累積外框或格式差異。
+完整再生順序固定為：用途分類頁 → 用途證據 → 技能頁 → 共用後處理。`scripts/generate_darktide_unlinked_pages.py` 負責三種字幕用途分類與用途證據，不重建全部原始事件類型頁。技能頁以 Mods 的 Markdown 為唯一正文來源；`render_skill_pages.mjs` 寫完本次指定職業的 HTML 與 TSV 後，維護者須在 Pages 工作樹明確另行執行網站端 `scripts/apply_darktide_reader.py --site <完整 Pages 根目錄>`。此網站 helper 可獨立處理整個 Pages 網站：先依標題、canonical 與分類連結等 HTML metadata 套用導覽，再對整個 Darktide 頁樹執行 `scripts/darktide_html_format.py` 的標籤空白精簡。renderer 的 `--classes` 只限定技能 HTML／TSV 的產生範圍；後處理仍涵蓋雙語首頁、技能根目錄、七職業頁與所有既有 Darktide 頁，formatter 不接收 `--classes`。正文文字、引號內屬性值與 script、style、pre、textarea 等受保護內容保持原樣。相同來源重跑應保持冪等，不累積外框或格式差異。
 
-交付狀態以實際 PR 與產物為準：#55 已合併；網站 #57 與 Mods #195 仍為 Draft 並有相依關係；#60 是獨立清理，只移除未啟用的 `scripts/generate_darktide_dialogue_data.py` 與 `assets/js/darktide-dialogue.js`。清理工作不代表正文 JSON 方案重新啟用。沿用既有 Pages 發布流程，Draft、CI 成功或工作分支都不代表已正式發布。
+交付狀態以實際 PR 與產物為準：#55 已合併；網站 #57 仍為 Draft，網站端可在 Pages 工作樹獨立執行 `scripts/apply_darktide_reader.py --site <完整 Pages 根目錄>` 套用導覽與格式；Mods #195 不屬於本次 Pages 交付，也不是 Pages gate。#60 是獨立清理，只移除未啟用的 `scripts/generate_darktide_dialogue_data.py` 與 `assets/js/darktide-dialogue.js`。清理工作不代表正文 JSON 方案重新啟用。沿用既有 Pages 發布流程，Draft、CI 成功或工作分支都不代表已正式發布。
 
 容量只記錄已證明的階段：d7 全量格式整理已證明減少 111,506,612 bytes；664,538,160 bytes 只涵蓋靜態部分，未含 36 個 Jekyll 產生檔，因此不能當作完整部署總量。完整 artifact 尚未取得時，不宣稱全站總量或最終淨減量已驗收。新來源證據資料的 bytes 獨立列帳；導覽與格式整理的節省存在重疊，不可直接相加。
 
