@@ -640,6 +640,8 @@ def directory_prefix(binding, asset_info, newline):
                 "Class home" if english else "職業目錄"
             )
             links.append((class_url, class_label))
+    elif binding.kind == "dialogue-home" and english:
+        links.append((SKILLS_URL, labels["skills"]))
     elif binding.category_url:
         links.append((binding.category_url, labels["category"]))
 
