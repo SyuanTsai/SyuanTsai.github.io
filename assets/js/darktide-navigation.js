@@ -77,6 +77,9 @@
   function nearby(items, currentUrl) {
     if (!items || items.length === 0) return [];
     const current = new URL(currentUrl, window.location.origin);
+    if (current.pathname.startsWith("/darktide/skills/") && current.pathname.endsWith("/mechanics/")) {
+      current.pathname = current.pathname.slice(0, -"mechanics/".length);
+    }
     const index = items.findIndex(function (item) {
       const url = new URL(item.url, window.location.origin);
       return url.pathname === current.pathname && url.hash === current.hash;

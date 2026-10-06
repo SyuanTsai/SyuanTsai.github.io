@@ -449,6 +449,8 @@ def build_model(site):
         parts = route_path(page.url).strip("/").split("/")
         class_url = "/" + "/".join(parts[:3]) + "/" if len(parts) >= 3 else ""
         branch_key = skill_parent_branch.get(route_path(page.url), "")
+        if not branch_key and page.url.endswith("/mechanics/"):
+            branch_key = skill_parent_branch.get(page.url.removesuffix("mechanics/"), "")
         bindings[page.path] = Binding(
             page,
             "skill-page",
@@ -746,6 +748,8 @@ def apply_page(binding, asset_info):
     newline = "\r\n" if b"\r\n" in original else "\n"
     text = replace_reader_prefix(text, binding, asset_info, newline)
     text = add_loader_script(text, asset_info["jsUrl"], newline)
+    if not re.search(r'<link\b[^>]*\bhref=["\']/assets/css/darktide-reader\.css(?:[?][^"\']*)?["\']', text, re.IGNORECASE):
+        text = text.replace("</head>", '<link rel="stylesheet" href="/assets/css/darktide-reader.css">' + newline + "  </head>", 1)
     rendered = text.encode("utf-8")
     if rendered != original:
         binding.page.path.write_bytes(rendered)

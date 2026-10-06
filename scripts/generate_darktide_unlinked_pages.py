@@ -3,8 +3,10 @@
 import argparse
 import csv
 import html
+import hashlib
 import json
 import re
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import quote
@@ -13,6 +15,11 @@ from urllib.parse import quote
 PAGE_SIZE = 25
 SITE_URL = "https://notes.tw-syuan.com"
 SOURCE_COMMIT = "7e662fcda16219d775b84af50322be2e9cd9d62e"
+ARCHIVE_COMMIT = "7b58f6fae2861e11cf08e44f74206bdbc8195f9e"
+AUDIT_BASE = (
+    "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/"
+    + ARCHIVE_COMMIT + "/Game%20Info/%E5%B0%8D%E8%A9%B1%E6%96%87%E6%9C%AC/source-catalog/subtitle-usages/"
+)
 CODE_URL = f"https://github.com/Aussiemon/Darktide-Source-Code/blob/{SOURCE_COMMIT}/"
 SOURCE_URL = (
     "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/"
@@ -172,6 +179,56 @@ def load_usages(directory, entries):
     return personalities, triggers
 
 
+def load_usage_evidence(directory, entries, personalities, triggers):
+    """Read the fixed audit without reducing historical duplicate rows."""
+    evidence = json.loads(read_literal(directory / "subtitle-usage-evidence.json"))
+    raw = (directory / "subtitle-usages-audit.tsv").read_bytes()
+    if hashlib.sha256(raw.replace(b"\r\n", b"\n")).hexdigest() != evidence["classification"]["tableSha256"]:
+        raise ValueError("The usage audit does not match its fixed evidence checksum")
+    with (directory / "subtitle-usages-audit.tsv").open(encoding="utf-8-sig", newline="") as stream:
+        rows = list(csv.DictReader(stream, delimiter="\t"))
+    known = {event_id.removeprefix("unlinked_subtitle_") for _, event_id, _ in entries}
+    counts = Counter(row["usage_classification"] for row in rows)
+    expected = {"personality_introduction": 38, "response_condition_reference": 26, "usage_unconfirmed": 14191}
+    if len(rows) != 14255 or {row["hash"] for row in rows} != known or len(known) != 14251 or counts != expected:
+        raise ValueError("The usage audit roster or classification counts changed")
+    groups = {name: {row["hash"] for row in rows if row["usage_classification"] == name} for name in expected}
+    if groups["personality_introduction"] != set(personalities) or groups["response_condition_reference"] != set(triggers):
+        raise ValueError("The audit classifications disagree with the known usage tables")
+    if evidence["authority"]["gameSourceCommit"] != SOURCE_COMMIT:
+        raise ValueError("The usage evidence must use the fixed game source")
+    for row in rows:
+        if row["source_commit"] != SOURCE_COMMIT or row["fixed_build"] != "25606770" or row["evidence_ref"] not in evidence["sharedEvidence"]:
+            raise ValueError("Invalid usage audit authority or evidence reference")
+    # Store shared authority and gap descriptions once, with all row relations.
+    # No subtitle body is copied into this metadata asset.
+    columns = ["number", "hash", "en_entry_index", "zh_tw_entry_index", "usage_classification", "evidence_ref"]
+    return {
+        "schemaVersion": 1,
+        "archiveCommit": ARCHIVE_COMMIT,
+        "gameSourceCommit": SOURCE_COMMIT,
+        "steamBuild": "25606770",
+        "inventory": evidence["inventory"],
+        "classification": evidence["classification"],
+        "sharedEvidence": evidence["sharedEvidence"],
+        "legacyCountNote": evidence["legacyCountNote"],
+        "columns": columns,
+        "rows": [[row[name] for name in columns] for row in rows],
+    }
+
+
+def usage_audit_links(locale):
+    chinese = locale == "zh-tw"
+    label = "用途稽核與已知缺口" if chinese else "Usage audit and known gaps"
+    table = "固定來源稽核表" if chinese else "Fixed source audit table"
+    evidence = "固定來源證據" if chinese else "Fixed source evidence"
+    return (
+        f'        <a href="/assets/data/darktide-usage-evidence.json">{label}</a>\n'
+        f'        <a href="{AUDIT_BASE}subtitle-usages-audit.tsv" target="_blank" rel="noopener">{table}</a>\n'
+        f'        <a href="{AUDIT_BASE}subtitle-usage-evidence.json" target="_blank" rel="noopener">{evidence}</a>'
+    )
+
+
 def pagination(locale, number, total, position):
     labels = (
         ("第一頁", "← 上一頁", "下一頁 →", "最後一頁", "分頁")
@@ -312,6 +369,7 @@ def render_page(locale, number, total, entries):
           target="_blank"
           rel="noopener"
         >{source_label}</a>
+{usage_audit_links(locale)}
       </footer>
     </div>
   </body>
@@ -397,6 +455,7 @@ def usage_document(locale, category, event_id, title, summary, body, evidence=""
           rel="noopener"
         >{source_label}</a>
 {evidence}
+{usage_audit_links(locale)}
       </footer>
     </div>
   </body>
@@ -622,6 +681,7 @@ def main():
         parser.error("The authoritative subtitle usage metadata directory is missing")
     entries = load_entries(source, resources)
     personalities, triggers = load_usages(classifications, entries)
+    usage_evidence = load_usage_evidence(classifications, entries, personalities, triggers)
     classified = set(personalities) | set(triggers)
     remaining = [row for row in entries if row[1].removeprefix("unlinked_subtitle_") not in classified]
     intro_entries = [row for row in entries if row[1].removeprefix("unlinked_subtitle_") in personalities]
@@ -682,6 +742,9 @@ def main():
         if not any(path.parent.iterdir()):
             path.parent.rmdir()
     regenerate_sitemap(site)
+    evidence_path = site / "assets/data/darktide-usage-evidence.json"
+    evidence_path.parent.mkdir(parents=True, exist_ok=True)
+    evidence_path.write_bytes((json.dumps(usage_evidence, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
     from apply_darktide_reader import apply_reader
     apply_reader(site)
     print(f"Published {len(personalities)} personality introductions, {len(triggers)} trigger references, "
