@@ -40,6 +40,7 @@ class TagSlices(HTMLParser):
         self.source = source
         self.offsets = [0] + [index + 1 for index, char in enumerate(source) if char == "\n"]
         self.protected = []
+        self.catalogs = []
         self.edits = []
 
     def handle_starttag(self, tag, attrs):
@@ -48,8 +49,17 @@ class TagSlices(HTMLParser):
             return
         if self.protected or tag not in TAGS:
             return
+        if tag == "ul":
+            classes = next((value or "" for name, value in attrs if name == "class"), "")
+            self.catalogs.append("event-catalog" in classes.split() or bool(self.catalogs and self.catalogs[-1]))
+        in_catalog = bool(self.catalogs and self.catalogs[-1])
         raw = self.get_starttag_text()
-        replacement = compact_tag(raw)
+        if in_catalog and tag == "li" and attrs == [("class", "event-card")]:
+            replacement = "<li>"
+        elif in_catalog and tag == "p" and attrs == [("class", "event-subtitle")]:
+            replacement = "<p>"
+        else:
+            replacement = compact_tag(raw)
         if replacement != raw:
             line, column = self.getpos()
             start = self.offsets[line - 1] + column
@@ -65,6 +75,8 @@ class TagSlices(HTMLParser):
     def handle_endtag(self, tag):
         if self.protected and tag == self.protected[-1]:
             self.protected.pop()
+        elif tag == "ul" and self.catalogs and not self.protected:
+            self.catalogs.pop()
 
 
 def format_html(source):
