@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "一般戰役任務",
+    "url": "/darktide/mission-vox/campaign/page-004/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "151 任務通訊 · mission core short conversation 11 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "152 任務通訊 · mission core abandoned a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_abandoned_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "153 任務通訊 · mission core short conversation 12 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "154 任務通訊 · mission core elevator conversation 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_elevator_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "155 任務通訊 · mission core swagger sighted 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_swagger_sighted_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "156 任務通訊 · mission core swagger sighted 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_swagger_sighted_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "157 任務通訊 · mission core swagger sighted 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_swagger_sighted_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "158 任務通訊 · mission core valk arrives 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_valk_arrives_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "159 任務通訊 · mission core void vista a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_void_vista_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "160 任務通訊 · mission core airlock conversation 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_airlock_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "161 任務通訊 · mission core event 01 briefing 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_01_briefing_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "162 任務通訊 · mission core event 01 briefing 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_01_briefing_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "163 任務通訊 · mission core event 01 briefing 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_01_briefing_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "164 任務通訊 · mission forge hurry up a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_hurry_up_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "165 任務通訊 · mission forge job done",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_job_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "166 任務通訊 · mission forge labour oversight",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_labour_oversight/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "167 任務通訊 · mission forge assembly line",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_assembly_line/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "168 任務通訊 · mission forge lifeless",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_lifeless/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "169 任務通訊 · mission forge main entrance",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_main_entrance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "170 任務通訊 · mission forge propaganda",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_propaganda/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "171 任務通訊 · mission forge purge infestation",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_purge_infestation/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "172 任務通訊 · mission forge safe zone a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_safe_zone_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "173 任務通訊 · mission forge second interstitial 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_second_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "174 任務通訊 · mission forge second interstitial 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_second_interstitial_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "175 任務通訊 · mission forge second interstitial 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_second_interstitial_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "176 任務通訊 · mission forge smelter",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_smelter/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "177 任務通訊 · mission forge smelter working",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_smelter_working/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "178 任務通訊 · mission forge smelter working b",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_smelter_working_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "179 任務通訊 · mission forge stand ground",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_stand_ground/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "180 任務通訊 · mission forge superstructure",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_superstructure/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "181 任務通訊 · mission forge third interstitial 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_third_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "182 任務通訊 · mission forge third interstitial 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_third_interstitial_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "183 任務通訊 · mission forge call elevator",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_call_elevator/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "184 任務通訊 · mission forge third interstitial 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_third_interstitial_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "185 任務通訊 · mission forge tutorial corruptor",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_tutorial_corruptor/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "186 任務通訊 · mission forge tutorial corruptor done",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_tutorial_corruptor_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "187 任務通訊 · mission forge use elevator",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_use_elevator/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "188 任務通訊 · mission forge valves a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_valves_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "189 任務通訊 · mission forge call elevator b",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_call_elevator_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "190 任務通訊 · mission forge elevator conversation one a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_elevator_conversation_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "191 任務通訊 · event demolition first corruptor destroyed a enginseer",
+      "url": "/darktide/zh-tw/mission-vox/event_demolition_first_corruptor_destroyed_a_enginseer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "192 任務通訊 · mission forge elevator conversation three a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_elevator_conversation_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "193 任務通訊 · mission forge elevator conversation two a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_elevator_conversation_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "194 任務通訊 · mission forge find smelter",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_find_smelter/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "195 任務通訊 · mission forge first interstitial 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_first_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "196 任務通訊 · mission forge first interstitial 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_first_interstitial_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "197 任務通訊 · mission forge alive",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_alive/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "198 任務通訊 · mission forge first interstitial 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_forge_first_interstitial_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "199 任務通訊 · mission propaganda corruptor event realigning 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_propaganda_corruptor_event_realigning_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/mission-vox/campaign/page-004/",
+      "title": "200 任務通訊 · mission propaganda corruptor event realigning 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_propaganda_corruptor_event_realigning_02_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/campaign/page-004/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

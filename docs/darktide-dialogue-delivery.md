@@ -20,7 +20,7 @@
 
 ## 未對應字幕的產生方式
 
-`scripts/generate_darktide_unlinked_pages.py` 只讀 Mods 的權威對話來源，依 `source-catalog/unlinked-subtitles/*.md` 的編號配對 `zh-tw/events/` 與 `en/events/` 中的原始 HTML。缺漏說明及角色標示保留；區塊內的 ID 與錨點加上字幕 hash 前綴，避免同頁重複 ID。字幕依同批原始語系資源 `Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/jsonl/{locale}/subtitles.jsonl` 的 hash 取用原文，保留所有空白與換行，不使用 `strip` 或文字正規化。網站輸出由此產生，不另維護字幕副本，也不新增集中 JSON。
+`scripts/generate_darktide_unlinked_pages.py` 只讀 Mods 的權威對話來源，依 `source-catalog/unlinked-subtitles/*.md` 的編號配對 `zh-tw/events/` 與 `en/events/` 中的原始 HTML。缺漏說明及角色標示保留；區塊內的 ID 與錨點加上字幕 hash 前綴，避免同頁重複 ID。字幕依同批原始語系資源 `Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/jsonl/{locale}/subtitles.jsonl` 的 hash 取用原文，保留所有空白與換行，不使用 `strip` 或文字正規化。網站輸出由此產生，不另維護字幕正文副本。來源證據另輸出至 `assets/data/darktide-usage-evidence.json`，內容只有用途與來源 metadata，不包含字幕正文。
 
 在完成一般來源同步後執行：
 
@@ -34,9 +34,9 @@ python scripts/generate_darktide_unlinked_pages.py --dialogue-source "C:/Git/Per
 
 原始正文歸檔 commit 為 `dc40cbfa80193fdfbdc759a4a9cd3378905b83ff`，角色來源沿用 `23c8cc124d2616d2956ae1734c67ce0c878c8fa4`；字幕仍從 Build 25606770 原始語系資源取回。完整原未對應索引共有 14,251 筆。依固定 Source `7e662fcda16219d775b84af50322be2e9cd9d62e` 的行為確認 38 筆角色建立性格介紹與 22 筆回應觸發條件引用後，其餘 14,191 筆分成每語系 568 頁，最後一頁 16 筆。原本缺中文的 30 筆在繁中頁顯示同一 hash 的官方英文原文，標註「尚無官方繁中翻譯，暫以英文原文顯示。」並以 `lang="en"` 標示氣泡語系；英文文字保留原始空白，不補造中文翻譯，Mods 原始缺漏紀錄維持不變。分頁、網址、hash 錨點與原始排序保持不變。分頁使用原生連結，不需要 JavaScript；每頁保持多行 HTML，沿用共用深色 CSS。
 
-用途 metadata 唯一維護於 Mods Repository 的 `Game Info/對話文本/source-catalog/subtitle-usages/`，只有 TSV 參照資料，不含字幕正文。產生器預設從同一來源讀取；使用原始正文唯讀快照時，可用 `--classification-source` 指向同一權威來源的用途 TSV 目錄。網站不保存人工同步的用途清單或全字幕 JSON。
+用途分類依固定 Mods archive snapshot 的 audit TSV 與 evidence JSON 產生。產生器從該來源讀取；網站的 `assets/data/darktide-usage-evidence.json` 僅供頁面呈現來源與用途 metadata，不含字幕正文。不要另行維護人工同步的分類清單或正文副本。
 
-本次用途來源固定於 Mods commit [`619e0e36bdca5da302d658e6c60f1bf67150a34f`](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/commit/619e0e36bdca5da302d658e6c60f1bf67150a34f)。重建需使用此提交的兩份用途 TSV 或其後續已確認版本；缺少用途 metadata 時產生器停止，避免把已分類條目重新混入待確認頁。
+初次接入用途資料時使用 Mods commit [`619e0e36bdca5da302d658e6c60f1bf67150a34f`](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/commit/619e0e36bdca5da302d658e6c60f1bf67150a34f)，此處保留該次交付的歷史 pin。後續再生使用哪個固定來源，依「2026-10-06 靜態交付維護」段落所列的 archive snapshot 與 audit TSV／evidence JSON 為準；來源證據缺漏時應停止，不可把已分類條目混回待確認頁。
 
 - `/darktide/character-personalities/` 與英文配對分類有 38 個獨立性格介紹頁，ID 由官方 character voice 建立。顯示官方職業／性格名稱與職業圖示；圖示不是固定人物肖像，畫面介紹未宣稱等同試聽音訊。
 - `/darktide/response-trigger-references/` 與英文配對分類有 22 個獨立引用頁，保留 26 處官方回應規則的來源及既有候選閱讀入口。只證明規則會檢查這句話；原始播放事件與發話者未確認，不把回應者標作原說話者，也不拼接候選成線性劇情。
@@ -44,11 +44,23 @@ python scripts/generate_darktide_unlinked_pages.py --dialogue-source "C:/Git/Per
 
 ## 共用階層閱讀外框
 
-一般對話來源同步後，執行 `python scripts/apply_darktide_reader.py`；用途字幕產生器最後也呼叫相同外框。技能仍由 Mods 的技能匯出器讀固定 Markdown，不使用對話產生器。這兩個流程只共用 CSS 與導覽契約。
+對話與技能來源完成再生後，依「2026-10-06 靜態交付維護」段落的固定順序執行共用後處理。技能仍由 Mods 的技能匯出器讀固定 Markdown，不使用對話產生器；兩種正文流程共用導覽 metadata 契約與 HTML 格式 helper。
 
 桌面目錄寬 250px，依事件類型、分類分頁與目前內容導覽，只列目前分支及最多五個鄰近入口；完整清單仍是獨立目錄。手機「瀏覽目錄」預設收合，右側保留原本 LINE 氣泡、角色列、語言按鈕、來源及原生前後頁。首頁以同一目錄進入內容，原完整分類清單收在可展開區。
 
 外框讀取既有 canonical、title 與目錄連結作導航，不解析後重寫字幕。標記內只保存外框；重新套用先移除自身標記，原閱讀正文不變。網站整合依賴 [容量 PR #54](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/54) 的 `f4db2525353dbb176f8855cc65842e49aa610a08` 與 [來源 PR #194](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/194) 的 `619e0e36bdca5da302d658e6c60f1bf67150a34f`，保留其25筆分頁、分類與網址，沒有合併 GitHub PR 或正式發布。
+
+## 2026-10-06 靜態交付維護
+
+本次交付維持對話與技能正文為預先產生的靜態 HTML。`assets/data/darktide-usage-evidence.json` 僅保存用途分類、來源位置與證據 metadata，不含字幕正文；不要恢復 #58 的正文 JSON 產生器／閱讀器。#59 的 static-card-compaction helper 因移除 CSS 仍依賴的 class 而不採用，且未接入再生流程；SSR 是另一個已封存方案。
+
+用途證據固定讀取 Mods archive commit `7b58f6fae2861e11cf08e44f74206bdbc8195f9e` 的 audit TSV 與 evidence JSON。來源包含 14,255 列、14,251 個唯一 hash 與 4 筆重複列；分類保留 38 個性格 hash、26 條條件引用列所對應的 22 個 hash，以及 14,191 個用途未確認 hash。對 14,191 個用途未確認 hash，固定來源中沒有找到可證實的靜態引用；這只表示用途尚未確認，不能推論遊戲未使用。條件引用也不代表已知實際播放或說話者。
+
+完整再生順序固定為：用途分類頁 → 用途證據 → 技能頁 → 共用後處理。`scripts/generate_darktide_unlinked_pages.py` 負責三種字幕用途分類與用途證據，不重建全部原始事件類型頁。技能頁以 Mods 的 Markdown 為唯一正文來源；`render_skill_pages.mjs` 寫完本次指定職業的 HTML 與 TSV 後，維護者須在 Pages 工作樹明確另行執行網站端 `scripts/apply_darktide_reader.py --site <完整 Pages 根目錄>`。此網站 helper 可獨立處理整個 Pages 網站：先依標題、canonical 與分類連結等 HTML metadata 套用導覽，再對整個 Darktide 頁樹執行 `scripts/darktide_html_format.py` 的標籤空白精簡。renderer 的 `--classes` 只限定技能 HTML／TSV 的產生範圍；後處理仍涵蓋雙語首頁、技能根目錄、七職業頁與所有既有 Darktide 頁，formatter 不接收 `--classes`。正文文字、引號內屬性值與 script、style、pre、textarea 等受保護內容保持原樣。相同來源重跑應保持冪等，不累積外框或格式差異。
+
+交付狀態以實際 PR 與產物為準：#55 已合併；網站 #57 仍為 Draft，網站端可在 Pages 工作樹獨立執行 `scripts/apply_darktide_reader.py --site <完整 Pages 根目錄>` 套用導覽與格式；Mods #195 不屬於本次 Pages 交付，也不是 Pages gate。#60 是獨立清理，只移除未啟用的 `scripts/generate_darktide_dialogue_data.py` 與 `assets/js/darktide-dialogue.js`。清理工作不代表正文 JSON 方案重新啟用。沿用既有 Pages 發布流程，Draft、CI 成功或工作分支都不代表已正式發布。
+
+容量只記錄已證明的階段：d7 全量格式整理已證明減少 111,506,612 bytes；664,538,160 bytes 只涵蓋靜態部分，未含 36 個 Jekyll 產生檔，因此不能當作完整部署總量。完整 artifact 尚未取得時，不宣稱全站總量或最終淨減量已驗收。新來源證據資料的 bytes 獨立列帳；導覽與格式整理的節省存在重疊，不可直接相加。
 
 ## 核對與交付
 

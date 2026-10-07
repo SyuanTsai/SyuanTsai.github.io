@@ -1,0 +1,243 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/arbites/",
+      "title": "閃擊",
+      "url": "/darktide/skills/arbites/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/arbites/",
+      "title": "光環",
+      "url": "/darktide/skills/arbites/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/arbites/",
+      "title": "能力",
+      "url": "/darktide/skills/arbites/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/arbites/",
+      "title": "鑰石",
+      "url": "/darktide/skills/arbites/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/arbites/",
+      "title": "技能",
+      "url": "/darktide/skills/arbites/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/arbites/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/arbites/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/arbites/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/arbites/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 0,
+    "parent": "/darktide/skills/",
+    "title": "法務官",
+    "titleEn": "Arbites",
+    "url": "/darktide/skills/arbites/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-3",
+    "kind": "skill-category",
+    "order": 3,
+    "parent": "/darktide/skills/arbites/",
+    "title": "鑰石",
+    "url": "/darktide/skills/arbites/#category-3"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "處刑命令",
+      "titleEn": "Execution Order",
+      "url": "/darktide/skills/arbites/execution-order/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "終點站令狀",
+      "titleEn": "Terminus Warrant",
+      "url": "/darktide/skills/arbites/terminus-warrant/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "堅定不移",
+      "titleEn": "Forceful",
+      "url": "/darktide/skills/arbites/forceful/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "孤狼",
+      "titleEn": "Lone Wolf",
+      "url": "/darktide/skills/arbites/lone-wolf/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "律法之志",
+      "titleEn": "Will of the Lex",
+      "url": "/darktide/skills/arbites/will-of-the-lex/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "堅定意志",
+      "titleEn": "Adamant Will",
+      "url": "/darktide/skills/arbites/adamant-will/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "鎖定目標",
+      "titleEn": "Targets Acquired",
+      "url": "/darktide/skills/arbites/targets-acquired/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "法務官警覺",
+      "titleEn": "Arbites Vigilant",
+      "url": "/darktide/skills/arbites/arbites-vigilant/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "審判之力",
+      "titleEn": "Judicial Force",
+      "url": "/darktide/skills/arbites/judicial-force/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "能屈能伸",
+      "titleEn": "Obstinate",
+      "url": "/darktide/skills/arbites/obstinate/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "終端律令",
+      "titleEn": "Terminal Decree",
+      "url": "/darktide/skills/arbites/terminal-decree/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "效率殺手",
+      "titleEn": "Efficient Killer",
+      "url": "/darktide/skills/arbites/efficient-killer/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "生化武器關",
+      "titleEn": "Malocator",
+      "url": "/darktide/skills/arbites/malocator/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "罪不可赦",
+      "titleEn": "No Lenience",
+      "url": "/darktide/skills/arbites/no-lenience/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "殺戮協議",
+      "titleEn": "Keeping Protocol",
+      "url": "/darktide/skills/arbites/keeping-protocol/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "不落人後",
+      "titleEn": "Not Far Behind",
+      "url": "/darktide/skills/arbites/not-far-behind/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "往前進攻！",
+      "titleEn": "Go Get 'Em!",
+      "url": "/darktide/skills/arbites/go-get-em/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "猛犬出擊",
+      "titleEn": "Unleashed Brutality",
+      "url": "/darktide/skills/arbites/unleashed-brutality/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 18,
+      "parent": "/darktide/skills/arbites/#category-3",
+      "title": "審判之旨",
+      "titleEn": "Writ of Judgement",
+      "url": "/darktide/skills/arbites/writ-of-judgement/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/arbites/#category-3",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

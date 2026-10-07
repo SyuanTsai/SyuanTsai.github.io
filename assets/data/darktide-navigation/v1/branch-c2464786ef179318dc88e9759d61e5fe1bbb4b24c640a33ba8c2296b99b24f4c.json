@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-016/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "751 玩家閒談 · adamant male b veteran bonding conversation 47 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_47_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "752 玩家閒談 · adamant male b veteran bonding conversation 48 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_48_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "753 玩家閒談 · adamant male b veteran bonding conversation 49 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_49_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "754 玩家閒談 · adamant male b veteran bonding conversation 50 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_50_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "755 玩家閒談 · adamant male b veteran bonding conversation 51 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_51_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "756 玩家閒談 · adamant male b veteran bonding conversation 52 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_52_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "757 玩家閒談 · adamant male b veteran bonding conversation 53 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_53_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "758 玩家閒談 · adamant male b veteran bonding conversation 54 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_54_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "759 玩家閒談 · adamant male b veteran bonding conversation 55 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_55_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "760 玩家閒談 · adamant male b veteran bonding conversation 56 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_56_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "761 玩家閒談 · adamant male b veteran bonding conversation 57 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_57_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "762 玩家閒談 · adamant male b ogryn bonding conversation 22 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_ogryn_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "763 玩家閒談 · adamant male b veteran bonding conversation 58 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_58_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "764 玩家閒談 · adamant male b veteran bonding conversation 59 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_59_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "765 玩家閒談 · adamant male b veteran bonding conversation 60 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_veteran_bonding_conversation_60_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "766 玩家閒談 · adamant male b zealot bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "767 玩家閒談 · adamant male b zealot bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "768 玩家閒談 · adamant male b zealot bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "769 玩家閒談 · adamant male b zealot bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "770 玩家閒談 · adamant male b zealot bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "771 玩家閒談 · adamant male b zealot bonding conversation 06 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "772 玩家閒談 · adamant male b zealot bonding conversation 07 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "773 玩家閒談 · adamant male b ogryn bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_ogryn_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "774 玩家閒談 · adamant male b zealot bonding conversation 08 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "775 玩家閒談 · adamant male b zealot bonding conversation 09 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "776 玩家閒談 · adamant male b zealot bonding conversation 10 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "777 玩家閒談 · adamant male b zealot bonding conversation 11 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "778 玩家閒談 · adamant male b zealot bonding conversation 13 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "779 玩家閒談 · adamant male b zealot bonding conversation 14 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "780 玩家閒談 · adamant male b zealot bonding conversation 15 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "781 玩家閒談 · adamant male b zealot bonding conversation 16 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "782 玩家閒談 · adamant male b zealot bonding conversation 18 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "783 玩家閒談 · adamant male b ogryn bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_ogryn_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "784 玩家閒談 · adamant male b zealot bonding conversation 19 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "785 玩家閒談 · adamant male b zealot bonding conversation 21 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "786 玩家閒談 · adamant male b zealot bonding conversation 22 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "787 玩家閒談 · adamant male b zealot bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "788 玩家閒談 · adamant male b zealot bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "789 玩家閒談 · adamant male b zealot bonding conversation 25 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "790 玩家閒談 · adamant male b zealot bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "791 玩家閒談 · adamant male b zealot bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "792 玩家閒談 · adamant male b zealot bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "793 玩家閒談 · adamant male b zealot bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "794 玩家閒談 · adamant male b ogryn bonding conversation 25 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_ogryn_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "795 玩家閒談 · adamant male b zealot bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "796 玩家閒談 · adamant male b zealot bonding conversation 31 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "797 玩家閒談 · adamant male b zealot bonding conversation 32 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "798 玩家閒談 · adamant male b zealot bonding conversation 33 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "799 玩家閒談 · adamant male b zealot bonding conversation 34 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-016/",
+      "title": "800 玩家閒談 · adamant male b zealot bonding conversation 35 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_b_zealot_bonding_conversation_35_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-016/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

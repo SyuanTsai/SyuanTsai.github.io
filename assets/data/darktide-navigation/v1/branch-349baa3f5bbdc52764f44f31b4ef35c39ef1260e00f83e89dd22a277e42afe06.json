@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-065/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3201 玩家閒談 · bonding conversation metropolitan fix a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_fix_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3202 玩家閒談 · bonding conversation metropolitan hot brain a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_hot_brain_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3203 玩家閒談 · bonding conversation metropolitan hungry a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_hungry_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3204 玩家閒談 · bonding conversation metropolitan hungry again a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_hungry_again_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3205 玩家閒談 · bonding conversation metropolitan locked a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_locked_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3206 玩家閒談 · bonding conversation metropolitan lummox a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_lummox_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3207 玩家閒談 · bonding conversation metropolitan morrow a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_morrow_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3208 玩家閒談 · adamant female a ogryn bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_a_ogryn_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3209 玩家閒談 · bonding conversation metropolitan nosh a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_nosh_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3210 玩家閒談 · bonding conversation metropolitan paranoid a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_paranoid_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3211 玩家閒談 · bonding conversation metropolitan promotion a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_promotion_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3212 玩家閒談 · bonding conversation metropolitan protector a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_protector_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3213 玩家閒談 · bonding conversation metropolitan reading a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_reading_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3214 玩家閒談 · bonding conversation metropolitan sah a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_sah_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3215 玩家閒談 · bonding conversation metropolitan salvation ogr a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_salvation_ogr_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3216 玩家閒談 · bonding conversation metropolitan special orders a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_special_orders_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3217 玩家閒談 · bonding conversation metropolitan squishy a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_squishy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3218 玩家閒談 · adamant female b ogryn bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_b_ogryn_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3219 玩家閒談 · bonding conversation metropolitan there yet a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_there_yet_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3220 玩家閒談 · combat pause limited ogryn d 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3221 玩家閒談 · combat pause limited ogryn d 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3222 玩家閒談 · combat pause limited ogryn d 05 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3223 玩家閒談 · combat pause limited ogryn d 06 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3224 玩家閒談 · combat pause limited ogryn d 07 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3225 玩家閒談 · combat pause limited ogryn d 08 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3226 玩家閒談 · combat pause limited ogryn d 09 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3227 玩家閒談 · combat pause limited ogryn d 10 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3228 玩家閒談 · combat pause limited ogryn d 11 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3229 玩家閒談 · combat pause limited ogryn d 13 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3230 玩家閒談 · combat pause limited ogryn d 14 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3231 玩家閒談 · combat pause limited ogryn d 15 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3232 玩家閒談 · combat pause limited ogryn d 16 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3233 玩家閒談 · bonding conversation hammersmith fight a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_hammersmith_fight_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3234 玩家閒談 · combat pause limited ogryn d 17 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3235 玩家閒談 · combat pause limited ogryn d 18 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3236 玩家閒談 · combat pause limited ogryn d 19 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3237 玩家閒談 · combat pause limited ogryn d 20 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_ogryn_d_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3238 玩家閒談 · combat pause metropolitan ember 13 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3239 玩家閒談 · combat pause metropolitan toxic 13 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_toxic_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3240 玩家閒談 · combat pause quirk ogryn d authority a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_ogryn_d_authority_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3241 玩家閒談 · combat pause quirk ogryn d crowds a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_ogryn_d_crowds_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3242 玩家閒談 · combat pause quirk ogryn d rannick a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_ogryn_d_rannick_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3243 玩家閒談 · mission core short conversation 13 a",
+      "url": "/darktide/zh-tw/player-conversation/mission_core_short_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3244 玩家閒談 · ogryn gang metropolitan best of best a",
+      "url": "/darktide/zh-tw/player-conversation/ogryn_gang_metropolitan_best_of_best_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3245 玩家閒談 · bonding conversation hammersmith idiots a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_hammersmith_idiots_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3246 玩家閒談 · ogryn gang metropolitan lump head a",
+      "url": "/darktide/zh-tw/player-conversation/ogryn_gang_metropolitan_lump_head_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3247 玩家閒談 · ogryn gang metropolitan winning a",
+      "url": "/darktide/zh-tw/player-conversation/ogryn_gang_metropolitan_winning_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3248 玩家閒談 · oval bonding conversation backchat a",
+      "url": "/darktide/zh-tw/player-conversation/oval_bonding_conversation_backchat_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3249 玩家閒談 · oval bonding conversation loopy a",
+      "url": "/darktide/zh-tw/player-conversation/oval_bonding_conversation_loopy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-065/",
+      "title": "3250 玩家閒談 · oval bonding conversation noise a",
+      "url": "/darktide/zh-tw/player-conversation/oval_bonding_conversation_noise_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-065/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

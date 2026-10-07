@@ -1,0 +1,187 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "閃擊",
+      "url": "/darktide/skills/ogryn/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "光環",
+      "url": "/darktide/skills/ogryn/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "能力",
+      "url": "/darktide/skills/ogryn/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "鑰石",
+      "url": "/darktide/skills/ogryn/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "技能",
+      "url": "/darktide/skills/ogryn/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/ogryn/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/ogryn/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 1,
+    "parent": "/darktide/skills/",
+    "title": "歐格林",
+    "titleEn": "Ogryn",
+    "url": "/darktide/skills/ogryn/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-2",
+    "kind": "skill-category",
+    "order": 2,
+    "parent": "/darktide/skills/ogryn/",
+    "title": "能力",
+    "url": "/darktide/skills/ogryn/#category-2"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "忠誠守護者",
+      "titleEn": "Loyal Protector",
+      "url": "/darktide/skills/ogryn/loyal-protector/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "不屈不撓",
+      "titleEn": "Indomitable",
+      "url": "/darktide/skills/ogryn/indomitable/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "貼身火力",
+      "titleEn": "Point-Blank Barrage",
+      "url": "/darktide/skills/ogryn/point-blank-barrage/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "跺殺之靴",
+      "titleEn": "Stomping Boots",
+      "url": "/darktide/skills/ogryn/stomping-boots/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "粉碎",
+      "titleEn": "Pulverise",
+      "url": "/darktide/skills/ogryn/pulverise/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "再來",
+      "titleEn": "Go Again!",
+      "url": "/darktide/skills/ogryn/go-again/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "槍林彈雨",
+      "titleEn": "Hail of Fire",
+      "url": "/darktide/skills/ogryn/hail-of-fire/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "集火射擊",
+      "titleEn": "Light 'em Up",
+      "url": "/darktide/skills/ogryn/light-em-up/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "重要干擾",
+      "titleEn": "Valuable Distraction",
+      "url": "/darktide/skills/ogryn/valuable-distraction/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "壯膽子彈",
+      "titleEn": "Bullet Bravado",
+      "url": "/darktide/skills/ogryn/bullet-bravado/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "一點都不痛！",
+      "titleEn": "No Pain!",
+      "url": "/darktide/skills/ogryn/no-pain/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/ogryn/#category-2",
+      "title": "踐踏",
+      "titleEn": "Trample",
+      "url": "/darktide/skills/ogryn/trample/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/ogryn/#category-2",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

@@ -1,0 +1,187 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/arbites/",
+      "title": "閃擊",
+      "url": "/darktide/skills/arbites/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/arbites/",
+      "title": "光環",
+      "url": "/darktide/skills/arbites/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/arbites/",
+      "title": "能力",
+      "url": "/darktide/skills/arbites/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/arbites/",
+      "title": "鑰石",
+      "url": "/darktide/skills/arbites/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/arbites/",
+      "title": "技能",
+      "url": "/darktide/skills/arbites/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/arbites/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/arbites/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/arbites/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/arbites/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 0,
+    "parent": "/darktide/skills/",
+    "title": "法務官",
+    "titleEn": "Arbites",
+    "url": "/darktide/skills/arbites/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-2",
+    "kind": "skill-category",
+    "order": 2,
+    "parent": "/darktide/skills/arbites/",
+    "title": "能力",
+    "url": "/darktide/skills/arbites/#category-2"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "突破重圍",
+      "titleEn": "Break the Line",
+      "url": "/darktide/skills/arbites/break-the-line/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "天鷹使節",
+      "titleEn": "Nuncio-Aquila",
+      "url": "/darktide/skills/arbites/nuncio-aquila/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "懲戒者姿態",
+      "titleEn": "Castigator's Stance",
+      "url": "/darktide/skills/arbites/castigators-stance/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "蒙福軍武",
+      "titleEn": "Blessed Armament",
+      "url": "/darktide/skills/arbites/blessed-armament/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "處決令",
+      "titleEn": "Writ of Execution",
+      "url": "/darktide/skills/arbites/writ-of-execution/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "嗜血殺戮",
+      "titleEn": "Bloodlust",
+      "url": "/darktide/skills/arbites/bloodlust/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "振奮朗誦",
+      "titleEn": "Inspiring Recitation",
+      "url": "/darktide/skills/arbites/inspiring-recitation/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "畏怯正義",
+      "titleEn": "Fear of Justice",
+      "url": "/darktide/skills/arbites/fear-of-justice/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "懲惡揚善",
+      "titleEn": "Commendation from Condemnation",
+      "url": "/darktide/skills/arbites/commendation-from-condemnation/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "針鋒相對",
+      "titleEn": "Targeted Brutality",
+      "url": "/darktide/skills/arbites/targeted-brutality/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "交鋒",
+      "titleEn": "Engage",
+      "url": "/darktide/skills/arbites/engage/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/arbites/#category-2",
+      "title": "殺戮命令",
+      "titleEn": "Kill Order",
+      "url": "/darktide/skills/arbites/kill-order/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/arbites/#category-2",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

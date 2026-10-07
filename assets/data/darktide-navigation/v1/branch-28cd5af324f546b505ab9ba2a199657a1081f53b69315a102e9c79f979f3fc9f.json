@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-064/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3151 Player conversations · bonding conversation waterloo thinking a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_thinking_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3152 Player conversations · combat pause limited bolt on a ogryn c 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_ogryn_c_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3153 Player conversations · combat pause limited bolt on a ogryn c 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_ogryn_c_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3154 Player conversations · combat pause limited bolt on a ogryn c 03 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_ogryn_c_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3155 Player conversations · adamant female b ogryn bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_ogryn_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3156 Player conversations · combat pause limited bolt on a ogryn c 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_ogryn_c_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3157 Player conversations · combat pause limited ogryn c 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3158 Player conversations · combat pause limited ogryn c 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3159 Player conversations · combat pause limited ogryn c 03 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3160 Player conversations · combat pause limited ogryn c 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3161 Player conversations · combat pause limited ogryn c 05 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3162 Player conversations · combat pause limited ogryn c 08 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3163 Player conversations · combat pause limited ogryn c 10 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3164 Player conversations · combat pause limited ogryn c 12 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3165 Player conversations · combat pause limited ogryn c 13 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3166 Player conversations · combat pause limited ogryn c 14 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3167 Player conversations · adamant female b ogryn bonding conversation 29 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_ogryn_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3168 Player conversations · combat pause limited ogryn c 15 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3169 Player conversations · combat pause limited ogryn c 19 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_c_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3170 Player conversations · combat pause quirk hates goo a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_hates_goo_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3171 Player conversations · oval bonding conversation moment a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_moment_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3172 Player conversations · oval bonding conversation scared a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_scared_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3173 Player conversations · oval bonding conversation snivellers a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_snivellers_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3174 Player conversations · adamant female b ogryn bonding conversation 30 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_ogryn_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3175 Player conversations · oval bonding conversation stomping a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_stomping_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3176 Player conversations · oval bonding conversation vox a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_vox_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3177 Player conversations · oval world conversation cumbernauld brahms sixteen a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_cumbernauld_brahms_sixteen_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3178 Player conversations · oval world conversation daviot steel thirtynine a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_daviot_steel_thirtynine_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3179 Player conversations · pimlico bonding conversation bodyguard a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_bodyguard_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3180 Player conversations · pimlico bonding conversation discriminate a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_discriminate_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3181 Player conversations · pimlico bonding conversation foot a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_foot_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3182 Player conversations · pimlico bonding conversation heart a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_heart_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3183 Player conversations · pimlico bonding conversation penances a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_penances_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3184 Player conversations · pimlico bonding conversation snivellers a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_snivellers_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3185 Player conversations · adamant female c ogryn bonding conversation 26 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_ogryn_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3186 Player conversations · pimlico bonding conversation thinking a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_thinking_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3187 Player conversations · adamant female c ogryn bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_ogryn_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3188 Player conversations · adamant female a ogryn bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_ogryn_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3189 Player conversations · adamant female c ogryn bonding conversation 29 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_ogryn_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3190 Player conversations · adamant female c ogryn bonding conversation 30 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_ogryn_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3191 Player conversations · adamant male a ogryn bonding conversation 26 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3192 Player conversations · adamant male a ogryn bonding conversation 27 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3193 Player conversations · adamant male b ogryn bonding conversation 26 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3194 Player conversations · adamant male b ogryn bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3195 Player conversations · adamant male b ogryn bonding conversation 29 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3196 Player conversations · adamant male b ogryn bonding conversation 30 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3197 Player conversations · adamant female a ogryn bonding conversation 29 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_ogryn_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3198 Player conversations · bonding conversation metropolitan ambush a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_ambush_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3199 Player conversations · adamant female a ogryn bonding conversation 26 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_ogryn_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-064/",
+      "title": "3200 Player conversations · bonding conversation metropolitan doubts a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_doubts_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-064/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

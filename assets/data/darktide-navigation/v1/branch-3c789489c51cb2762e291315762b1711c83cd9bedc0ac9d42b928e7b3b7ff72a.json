@@ -1,0 +1,84 @@
+{
+  "catalog": {
+    "parent": "/darktide/cinematic-dialogue/",
+    "title": "過場語音與手動字幕",
+    "url": "/darktide/cinematic-dialogue/page-003/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 3,
+    "parent": "/darktide/",
+    "title": "過場語音與手動字幕",
+    "url": "/darktide/cinematic-dialogue/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/cinematic-dialogue/page-003/",
+      "title": "101 過場語音 · cs pot06 02",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot06_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/cinematic-dialogue/page-003/",
+      "title": "102 過場語音 · cs pot06 03",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot06_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/cinematic-dialogue/page-003/",
+      "title": "103 過場語音 · cs pot06 04",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot06_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/cinematic-dialogue/page-003/",
+      "title": "104 過場語音 · cs pot06 05",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot06_05/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/cinematic-dialogue/page-003/",
+      "title": "105 過場語音 · cs pot07 01",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot07_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/cinematic-dialogue/page-003/",
+      "title": "106 過場語音 · cs pot01 04",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot01_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/cinematic-dialogue/page-003/",
+      "title": "107 過場語音 · cs pot07 02",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot07_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/cinematic-dialogue/page-003/",
+      "title": "108 過場語音 · cs pot07 03",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot07_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/cinematic-dialogue/page-003/",
+      "title": "109 手動劇情字幕 · mission twins arrival 04",
+      "url": "/darktide/zh-tw/cinematic-dialogue/manual_mission_twins_arrival_04/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/cinematic-dialogue/page-003/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

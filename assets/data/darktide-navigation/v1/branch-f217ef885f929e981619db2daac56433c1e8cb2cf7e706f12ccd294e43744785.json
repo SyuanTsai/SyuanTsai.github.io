@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-vo/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/page-002/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/en/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "51 Player callouts and replies · adamant seen killstreak broker",
+      "url": "/darktide/en/player-vo/adamant_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "52 Player callouts and replies · found ammo broker low on ammo",
+      "url": "/darktide/en/player-vo/found_ammo_broker_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "53 Player callouts and replies · found health booster broker low on health",
+      "url": "/darktide/en/player-vo/found_health_booster_broker_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "54 Player callouts and replies · found health station broker low on health",
+      "url": "/darktide/en/player-vo/found_health_station_broker_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "55 Player callouts and replies · friendly fire from adamant to broker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_adamant_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "56 Player callouts and replies · friendly fire from broker to adamant",
+      "url": "/darktide/en/player-vo/friendly_fire_from_broker_to_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "57 Player callouts and replies · friendly fire from broker to broker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_broker_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "58 Player callouts and replies · friendly fire from broker to ogryn",
+      "url": "/darktide/en/player-vo/friendly_fire_from_broker_to_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "59 Player callouts and replies · friendly fire from broker to psyker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_broker_to_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "60 Player callouts and replies · adamant start revive broker",
+      "url": "/darktide/en/player-vo/adamant_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "61 Player callouts and replies · friendly fire from broker to veteran",
+      "url": "/darktide/en/player-vo/friendly_fire_from_broker_to_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "62 Player callouts and replies · friendly fire from broker to zealot",
+      "url": "/darktide/en/player-vo/friendly_fire_from_broker_to_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "63 Player callouts and replies · friendly fire from ogryn to broker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_ogryn_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "64 Player callouts and replies · friendly fire from psyker to broker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_psyker_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "65 Player callouts and replies · friendly fire from veteran to broker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_veteran_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "66 Player callouts and replies · friendly fire from zealot to broker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_zealot_to_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "67 Player callouts and replies · knocked down multiple times broker",
+      "url": "/darktide/en/player-vo/knocked_down_multiple_times_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "68 Player callouts and replies · ogryn seen killstreak broker",
+      "url": "/darktide/en/player-vo/ogryn_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "69 Player callouts and replies · blitz 01 a",
+      "url": "/darktide/en/player-vo/blitz_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "70 Player callouts and replies · ogryn start revive broker",
+      "url": "/darktide/en/player-vo/ogryn_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "71 Player callouts and replies · player death broker",
+      "url": "/darktide/en/player-vo/player_death_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "72 Player callouts and replies · psyker seen killstreak broker",
+      "url": "/darktide/en/player-vo/psyker_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "73 Player callouts and replies · psyker start revive broker",
+      "url": "/darktide/en/player-vo/psyker_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "74 Player callouts and replies · blitz 02 a",
+      "url": "/darktide/en/player-vo/blitz_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "75 Player callouts and replies · blitz 03 a",
+      "url": "/darktide/en/player-vo/blitz_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "76 Player callouts and replies · broker seen killstreak adamant",
+      "url": "/darktide/en/player-vo/broker_seen_killstreak_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "77 Player callouts and replies · ability 02 a",
+      "url": "/darktide/en/player-vo/ability_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "78 Player callouts and replies · broker seen killstreak broker",
+      "url": "/darktide/en/player-vo/broker_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "79 Player callouts and replies · broker seen killstreak ogryn",
+      "url": "/darktide/en/player-vo/broker_seen_killstreak_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "80 Player callouts and replies · ability 01 a",
+      "url": "/darktide/en/player-vo/ability_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "81 Player callouts and replies · broker seen killstreak psyker",
+      "url": "/darktide/en/player-vo/broker_seen_killstreak_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "82 Player callouts and replies · veteran seen killstreak broker",
+      "url": "/darktide/en/player-vo/veteran_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "83 Player callouts and replies · veteran start revive broker",
+      "url": "/darktide/en/player-vo/veteran_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "84 Player callouts and replies · zealot seen killstreak broker",
+      "url": "/darktide/en/player-vo/zealot_seen_killstreak_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "85 Player callouts and replies · zealot start revive broker",
+      "url": "/darktide/en/player-vo/zealot_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "86 Player callouts and replies · broker seen killstreak veteran",
+      "url": "/darktide/en/player-vo/broker_seen_killstreak_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "87 Player callouts and replies · broker seen killstreak zealot",
+      "url": "/darktide/en/player-vo/broker_seen_killstreak_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "88 Player callouts and replies · ability 03 a",
+      "url": "/darktide/en/player-vo/ability_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "89 Player callouts and replies · broker start revive adamant",
+      "url": "/darktide/en/player-vo/broker_start_revive_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "90 Player callouts and replies · broker start revive broker",
+      "url": "/darktide/en/player-vo/broker_start_revive_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "91 Player callouts and replies · broker start revive ogryn",
+      "url": "/darktide/en/player-vo/broker_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "92 Player callouts and replies · broker start revive psyker",
+      "url": "/darktide/en/player-vo/broker_start_revive_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "93 Player callouts and replies · broker start revive veteran",
+      "url": "/darktide/en/player-vo/broker_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "94 Player callouts and replies · broker start revive zealot",
+      "url": "/darktide/en/player-vo/broker_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "95 Player callouts and replies · cult downed player a",
+      "url": "/darktide/en/player-vo/cult_downed_player_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "96 Player callouts and replies · cult gas cloud a",
+      "url": "/darktide/en/player-vo/cult_gas_cloud_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "97 Player callouts and replies · cult horde announcement a",
+      "url": "/darktide/en/player-vo/cult_horde_announcement_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "98 Player callouts and replies · cult hurt player a",
+      "url": "/darktide/en/player-vo/cult_hurt_player_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "99 Player callouts and replies · cult monster announcement a",
+      "url": "/darktide/en/player-vo/cult_monster_announcement_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-vo/page-002/",
+      "title": "100 Player callouts and replies · cult pre ambush a",
+      "url": "/darktide/en/player-vo/cult_pre_ambush_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-vo/page-002/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

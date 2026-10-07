@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-074/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3651 Player conversations · bonding conversation metropolitan example a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_example_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3652 Player conversations · bonding conversation metropolitan got lost a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_got_lost_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3653 Player conversations · bonding conversation metropolitan implant a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_implant_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3654 Player conversations · bonding conversation metropolitan kindness a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_kindness_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3655 Player conversations · adamant female c psyker bonding conversation 24 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_psyker_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3656 Player conversations · bonding conversation metropolitan lucky rock a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_lucky_rock_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3657 Player conversations · combat pause limited veteran a 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_a_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3658 Player conversations · combat pause limited veteran a 05 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_a_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3659 Player conversations · combat pause limited veteran a 10 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_a_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3660 Player conversations · combat pause limited bolt on a veteran a 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_a_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3661 Player conversations · combat pause limited veteran a 13 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_a_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3662 Player conversations · combat pause limited bolt on a veteran a 03 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_a_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3663 Player conversations · veteran gang metropolitan aeldari a",
+      "url": "/darktide/en/player-conversation/veteran_gang_metropolitan_aeldari_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3664 Player conversations · combat pause limited bolt on a veteran a 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_a_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3665 Player conversations · veteran gang metropolitan long way a",
+      "url": "/darktide/en/player-conversation/veteran_gang_metropolitan_long_way_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3666 Player conversations · veteran gang metropolitan serious a",
+      "url": "/darktide/en/player-conversation/veteran_gang_metropolitan_serious_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3667 Player conversations · combat pause limited bolt on a veteran a 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_a_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3668 Player conversations · combat pause limited veteran a 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_a_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3669 Player conversations · combat pause limited veteran a 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_a_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3670 Player conversations · combat pause limited veteran b 05 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_b_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3671 Player conversations · combat pause limited bolt on a veteran b 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_b_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3672 Player conversations · combat pause limited bolt on a veteran b 03 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_b_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3673 Player conversations · combat pause quirk sniper a",
+      "url": "/darktide/en/player-conversation/combat_pause_quirk_sniper_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3674 Player conversations · combat pause limited bolt on a veteran b 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_b_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3675 Player conversations · veteran gang metropolitan breather a",
+      "url": "/darktide/en/player-conversation/veteran_gang_metropolitan_breather_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3676 Player conversations · combat pause limited bolt on a veteran b 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_b_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3677 Player conversations · veteran gang metropolitan shooting a",
+      "url": "/darktide/en/player-conversation/veteran_gang_metropolitan_shooting_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3678 Player conversations · veteran gang metropolitan tontine a",
+      "url": "/darktide/en/player-conversation/veteran_gang_metropolitan_tontine_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3679 Player conversations · combat pause limited veteran c 05 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_c_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3680 Player conversations · combat pause limited veteran c 07 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_c_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3681 Player conversations · combat pause limited veteran c 08 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_c_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3682 Player conversations · combat pause limited bolt on a veteran c 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_c_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3683 Player conversations · combat pause limited veteran c 11 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_c_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3684 Player conversations · combat pause limited veteran c 12 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_c_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3685 Player conversations · combat pause limited veteran c 17 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_c_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3686 Player conversations · combat pause limited bolt on a veteran c 03 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_c_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3687 Player conversations · combat pause limited veteran c 19 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_c_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3688 Player conversations · veteran gang metropolitan counterattack a",
+      "url": "/darktide/en/player-conversation/veteran_gang_metropolitan_counterattack_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3689 Player conversations · veteran gang metropolitan endless a",
+      "url": "/darktide/en/player-conversation/veteran_gang_metropolitan_endless_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3690 Player conversations · veteran gang metropolitan fortress a",
+      "url": "/darktide/en/player-conversation/veteran_gang_metropolitan_fortress_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3691 Player conversations · combat pause limited bolt on a veteran c 04 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_c_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3692 Player conversations · combat pause limited bolt on a veteran c 01 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_bolt_on_a_veteran_c_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3693 Player conversations · combat pause limited veteran c 02 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_veteran_c_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3694 Player conversations · bonding conversation metropolitan mood vet a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_mood_vet_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3695 Player conversations · bonding conversation metropolitan politics a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_politics_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3696 Player conversations · bonding conversation metropolitan premonition a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_premonition_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3697 Player conversations · bonding conversation metropolitan shot at a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_shot_at_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3698 Player conversations · bonding conversation metropolitan vigilance a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_vigilance_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3699 Player conversations · adamant female b veteran bonding conversation 36 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_veteran_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-074/",
+      "title": "3700 Player conversations · bonding conversation metropolitan worse a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_worse_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-074/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "一般戰役任務",
+    "url": "/darktide/mission-vox/campaign/page-009/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "401 任務通訊 · mission enforcer end event conversation one a",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_end_event_conversation_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "402 任務通訊 · mission enforcer end event conversation three a",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_end_event_conversation_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "403 任務通訊 · mission enforcer activate stair",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_activate_stair/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "404 任務通訊 · mission enforcer end event conversation two a",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_end_event_conversation_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "405 任務通訊 · mission enforcer courtroom",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_courtroom/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "406 任務通訊 · mission enforcer enforcer station",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_enforcer_station/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "407 任務通訊 · mission enforcer event survive",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_event_survive/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "408 任務通訊 · mission enforcer hab support",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_hab_support/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "409 任務通訊 · mission enforcer maintenance area",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_maintenance_area/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "410 任務通訊 · mission twins cutscene a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_cutscene_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "411 任務通訊 · mission twins cutscene b",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_cutscene_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "412 任務通訊 · mission twins cutscene c",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_cutscene_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "413 任務通訊 · mission twins death twin female a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_death_twin_female_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "414 任務通訊 · mission twin elevator a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twin_elevator_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "415 任務通訊 · mission twins death twin male a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_death_twin_male_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "416 任務通訊 · mission twins end a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_end_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "417 任務通訊 · mission twins exchange 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_exchange_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "418 任務通訊 · mission twins exchange 02 b",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_exchange_02_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "419 任務通訊 · mission twins exchange 02 c",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_exchange_02_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "420 任務通訊 · mission twins exchange 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_exchange_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "421 任務通訊 · mission twins go around",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_go_around/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "422 任務通訊 · mission twins mission half health 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_mission_half_health_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "423 任務通訊 · mission twins mission half health 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_mission_half_health_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "424 任務通訊 · mission twins mission half health 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_mission_half_health_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "425 任務通訊 · mission twins mission half health 04 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_mission_half_health_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "426 任務通訊 · mission twins mission start a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_mission_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "427 任務通訊 · reinforcements poxwalkers a",
+      "url": "/darktide/zh-tw/mission-vox/reinforcements_poxwalkers_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "428 任務通訊 · response for enemy kill monster twins",
+      "url": "/darktide/zh-tw/mission-vox/response_for_enemy_kill_monster_twins/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "429 任務通訊 · taunt combat twin",
+      "url": "/darktide/zh-tw/mission-vox/taunt_combat_twin/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "430 任務通訊 · taunt twin",
+      "url": "/darktide/zh-tw/mission-vox/taunt_twin/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "431 任務通訊 · mission twins aftermath 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_aftermath_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "432 任務通訊 · enemy kill monster twins",
+      "url": "/darktide/zh-tw/mission-vox/enemy_kill_monster_twins/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "433 任務通訊 · gas cloud a",
+      "url": "/darktide/zh-tw/mission-vox/gas_cloud_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "434 任務通訊 · mission twins arrival 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_arrival_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "435 任務通訊 · mission twins arrival 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_arrival_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "436 任務通訊 · long death twin",
+      "url": "/darktide/zh-tw/mission-vox/long_death_twin/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "437 任務通訊 · mission twins arrival 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_arrival_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "438 任務通訊 · mission twins arrival 05 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_twins_arrival_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "439 任務通訊 · mission enforcer twins maintenance area",
+      "url": "/darktide/zh-tw/mission-vox/mission_enforcer_twins_maintenance_area/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "440 任務通訊 · mission heresy brewhouse cellar 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_brewhouse_cellar_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "441 任務通訊 · mission heresy brewhouse cellar 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_brewhouse_cellar_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "442 任務通訊 · mission heresy brewhouse cellar 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_brewhouse_cellar_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "443 任務通訊 · mission heresy cathedral airlock a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_airlock_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "444 任務通訊 · mission heresy cathedral approach a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_approach_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "445 任務通訊 · mission heresy cathedral atrium a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_atrium_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "446 任務通訊 · mission heresy cathedral bridge 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_bridge_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "447 任務通訊 · mission heresy cathedral bridge 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_bridge_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "448 任務通訊 · mission heresy cathedral bridge 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_bridge_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "449 任務通訊 · mission heresy cathedral event agnostic destroy a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_cathedral_event_agnostic_destroy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/mission-vox/campaign/page-009/",
+      "title": "450 任務通訊 · mission heresy backstreets 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_heresy_backstreets_02_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/campaign/page-009/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

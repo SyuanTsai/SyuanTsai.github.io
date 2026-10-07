@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-059/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2901 Player conversations · cryptic d zealot bonding conversation 34 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_zealot_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2902 Player conversations · cryptic d zealot bonding conversation 35 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_zealot_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2903 Player conversations · cryptic bonding conversation 36 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2904 Player conversations · cryptic d zealot bonding conversation 36 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_zealot_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2905 Player conversations · cryptic bonding conversation bonus 01 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_bonus_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2906 Player conversations · cryptic bonding conversation bonus 02 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_bonus_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2907 Player conversations · cryptic bonding conversation bonus 03 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_bonus_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2908 Player conversations · cryptic bonding conversation bonus 04 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_bonus_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2909 Player conversations · cryptic bonding conversation bonus 05 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_bonus_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2910 Player conversations · combat pause limited cryptic d 05 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_cryptic_d_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2911 Player conversations · cryptic bonding conversation bonus 06 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_bonus_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2912 Player conversations · cryptic d adamant bonding conversation 02 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2913 Player conversations · cryptic d adamant bonding conversation 03 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2914 Player conversations · cryptic d adamant bonding conversation 04 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2915 Player conversations · cryptic d adamant bonding conversation 05 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2916 Player conversations · cryptic d adamant bonding conversation 06 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2917 Player conversations · cryptic d adamant bonding conversation 13 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2918 Player conversations · cryptic d adamant bonding conversation 14 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2919 Player conversations · combat pause limited cryptic d 06 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_cryptic_d_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2920 Player conversations · cryptic d adamant bonding conversation 15 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2921 Player conversations · cryptic d adamant bonding conversation 16 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2922 Player conversations · cryptic d adamant bonding conversation 17 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2923 Player conversations · cryptic d adamant bonding conversation 18 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2924 Player conversations · cryptic d adamant bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2925 Player conversations · cryptic d adamant bonding conversation 20 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2926 Player conversations · combat pause limited cryptic d 07 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_cryptic_d_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2927 Player conversations · cryptic d adamant bonding conversation 21 a",
+      "url": "/darktide/en/player-conversation/cryptic_d_adamant_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2928 Player conversations · mission wastes short conversation 01 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2929 Player conversations · mission wastes short conversation 02 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2930 Player conversations · mission wastes short conversation 03 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2931 Player conversations · mission wastes short conversation 04 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2932 Player conversations · mission wastes short conversation 05 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2933 Player conversations · mission wastes short conversation 06 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2934 Player conversations · mission wastes short conversation 07 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2935 Player conversations · mission wastes short conversation 08 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2936 Player conversations · mission wastes short conversation 09 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2937 Player conversations · mission wastes short conversation 10 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2938 Player conversations · mission wastes short conversation 11 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2939 Player conversations · mission wastes short conversation 12 a",
+      "url": "/darktide/en/player-conversation/mission_wastes_short_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2940 Player conversations · conversation beast of nurgle weakpoint a",
+      "url": "/darktide/en/player-conversation/conversation_beast_of_nurgle_weakpoint_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2941 Player conversations · conversation combat chaos spawn a",
+      "url": "/darktide/en/player-conversation/conversation_combat_chaos_spawn_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2942 Player conversations · conversation plague ogryn weakpoint 01",
+      "url": "/darktide/en/player-conversation/conversation_plague_ogryn_weakpoint_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2943 Player conversations · bonding conversation metropolitan make em laugh a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_make_em_laugh_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2944 Player conversations · bonding conversation metropolitan mystery a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_mystery_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2945 Player conversations · bonding conversation metropolitan noise a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_noise_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2946 Player conversations · bonding conversation metropolitan pet ogr a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_pet_ogr_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2947 Player conversations · bonding conversation metropolitan quiet a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_quiet_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2948 Player conversations · bonding conversation metropolitan stinky a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_stinky_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2949 Player conversations · bonding conversation metropolitan talking a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_talking_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-059/",
+      "title": "2950 Player conversations · bonding conversation metropolitan the best a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_the_best_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-059/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

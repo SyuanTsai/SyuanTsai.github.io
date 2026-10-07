@@ -1,0 +1,340 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/scum/",
+      "title": "閃擊",
+      "url": "/darktide/skills/scum/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/scum/",
+      "title": "光環",
+      "url": "/darktide/skills/scum/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/scum/",
+      "title": "能力",
+      "url": "/darktide/skills/scum/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/scum/",
+      "title": "鑰石",
+      "url": "/darktide/skills/scum/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/scum/",
+      "title": "技能",
+      "url": "/darktide/skills/scum/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/scum/",
+      "title": "興奮劑配方",
+      "url": "/darktide/skills/scum/#category-5"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-6",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/scum/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/scum/#category-6"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 7,
+      "parent": "/darktide/skills/scum/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/scum/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 3,
+    "parent": "/darktide/skills/",
+    "title": "巢都渣滓",
+    "titleEn": "Scum",
+    "url": "/darktide/skills/scum/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-5",
+    "kind": "skill-category",
+    "order": 5,
+    "parent": "/darktide/skills/scum/",
+    "title": "興奮劑配方",
+    "url": "/darktide/skills/scum/#category-5"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "裝備財閥特殊裝備",
+      "titleEn": "Equip Cartel Special",
+      "url": "/darktide/skills/scum/equip-cartel-special/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "激勵I",
+      "titleEn": "Spur I",
+      "url": "/darktide/skills/scum/spur-i/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "狂熱",
+      "titleEn": "Fervor",
+      "url": "/darktide/skills/scum/fervor/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "激勵II",
+      "titleEn": "Spur II",
+      "url": "/darktide/skills/scum/spur-ii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "激勵III",
+      "titleEn": "Spur III",
+      "url": "/darktide/skills/scum/spur-iii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "激勵IV",
+      "titleEn": "Spur IV",
+      "url": "/darktide/skills/scum/spur-iv/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "激勵V",
+      "titleEn": "Spur V",
+      "url": "/darktide/skills/scum/spur-v/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "反射",
+      "titleEn": "Reflex",
+      "url": "/darktide/skills/scum/reflex/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "野火I",
+      "titleEn": "Wildfire I",
+      "url": "/darktide/skills/scum/wildfire-i/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "野火IV",
+      "titleEn": "Wildfire IV",
+      "url": "/darktide/skills/scum/wildfire-iv/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "野火II",
+      "titleEn": "Wildfire II",
+      "url": "/darktide/skills/scum/wildfire-ii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "野火III",
+      "titleEn": "Wildfire III",
+      "url": "/darktide/skills/scum/wildfire-iii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "狂怒I",
+      "titleEn": "Fury I",
+      "url": "/darktide/skills/scum/fury-i/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "狂怒II",
+      "titleEn": "Fury II",
+      "url": "/darktide/skills/scum/fury-ii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "野火V",
+      "titleEn": "Wildfire V",
+      "url": "/darktide/skills/scum/wildfire-v/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "獵鷹蕈劑I",
+      "titleEn": "Vultoprene I",
+      "url": "/darktide/skills/scum/vultoprene-i/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "獵鷹蕈劑II",
+      "titleEn": "Vultoprene II",
+      "url": "/darktide/skills/scum/vultoprene-ii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "抗焦慮藥I",
+      "titleEn": "Kalma I",
+      "url": "/darktide/skills/scum/kalma-i/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 18,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "抗焦慮藥II",
+      "titleEn": "Kalma II",
+      "url": "/darktide/skills/scum/kalma-ii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 19,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "抗焦慮藥III",
+      "titleEn": "Kalma III",
+      "url": "/darktide/skills/scum/kalma-iii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 20,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "抗焦慮藥IV",
+      "titleEn": "Kalma IV",
+      "url": "/darktide/skills/scum/kalma-iv/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 21,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "抗焦慮藥V",
+      "titleEn": "Kalma V",
+      "url": "/darktide/skills/scum/kalma-v/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 22,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "狂熱",
+      "titleEn": "Hypex",
+      "url": "/darktide/skills/scum/hypex/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 23,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "集中藥",
+      "titleEn": "Klay",
+      "url": "/darktide/skills/scum/klay/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 24,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "彈幕I",
+      "titleEn": "Barrage I",
+      "url": "/darktide/skills/scum/barrage-i/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 25,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "彈幕II",
+      "titleEn": "Barrage II",
+      "url": "/darktide/skills/scum/barrage-ii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 26,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "彈幕III",
+      "titleEn": "Barrage III",
+      "url": "/darktide/skills/scum/barrage-iii/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 27,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "彈幕IV",
+      "titleEn": "Barrage IV",
+      "url": "/darktide/skills/scum/barrage-iv/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 28,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "坦克",
+      "titleEn": "Tank",
+      "url": "/darktide/skills/scum/tank/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 29,
+      "parent": "/darktide/skills/scum/#category-5",
+      "title": "恢復",
+      "titleEn": "Regain",
+      "url": "/darktide/skills/scum/regain/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/scum/#category-5",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

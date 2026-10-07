@@ -1,0 +1,252 @@
+{
+  "catalog": {
+    "parent": "/darktide/enemy-vo/",
+    "title": "敵方聲音",
+    "url": "/darktide/enemy-vo/page-002/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 10,
+    "parent": "/darktide/",
+    "title": "敵方聲音",
+    "url": "/darktide/enemy-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "51 敵方聲音 · traitor guard rifleman ranged idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_rifleman_ranged_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "52 敵方聲音 · chaos daemonhost mantra medium",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_daemonhost_mantra_medium/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "53 敵方聲音 · traitor guard rifleman take cover",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_rifleman_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "54 敵方聲音 · traitor guard rifleman take position",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_rifleman_take_position/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "55 敵方聲音 · traitor guard smg rusher alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_smg_rusher_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "56 敵方聲音 · traitor guard smg rusher ranged idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_smg_rusher_ranged_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "57 敵方聲音 · traitor guard smg rusher take cover",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_smg_rusher_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "58 敵方聲音 · chaos daemonhost warp grab",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_daemonhost_warp_grab/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "59 敵方聲音 · traitor guard smg rusher take position",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_guard_smg_rusher_take_position/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "60 敵方聲音 · traitor netgunner assault",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_netgunner_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "61 敵方聲音 · traitor netgunner catching net",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_netgunner_catching_net/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "62 敵方聲音 · traitor netgunner spawned",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_netgunner_spawned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "63 敵方聲音 · chaos newly infected alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_newly_infected_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "64 敵方聲音 · traitor netgunner throwing net",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_netgunner_throwing_net/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "65 敵方聲音 · traitor scout shocktrooper alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_scout_shocktrooper_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "66 敵方聲音 · traitor scout shocktrooper melee idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_scout_shocktrooper_melee_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "67 敵方聲音 · traitor scout shocktrooper no damage",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_scout_shocktrooper_no_damage/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "68 敵方聲音 · traitor scout shocktrooper take cover",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_scout_shocktrooper_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "69 敵方聲音 · traitor scout shocktrooper take position",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_scout_shocktrooper_take_position/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "70 敵方聲音 · traitor shocktrooper start shooting",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_shocktrooper_start_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "71 敵方聲音 · chaos armored infected alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_armored_infected_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "72 敵方聲音 · traitor trenchfighter alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_trenchfighter_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "73 敵方聲音 · traitor trenchfighter melee idle",
+      "url": "/darktide/zh-tw/enemy-vo/traitor_trenchfighter_melee_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "74 敵方聲音 · twin spawn laugh a",
+      "url": "/darktide/zh-tw/enemy-vo/twin_spawn_laugh_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "75 敵方聲音 · chaos newly infected melee idle",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_newly_infected_melee_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "76 敵方聲音 · chaos armored infected assault",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_armored_infected_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "77 敵方聲音 · chaos ogryn bulwark alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_ogryn_bulwark_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "78 敵方聲音 · chaos ogryn bulwark assault",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_ogryn_bulwark_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "79 敵方聲音 · chaos ogryn executor alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_ogryn_executor_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "80 敵方聲音 · chaos ogryn executor assault",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_ogryn_executor_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "81 敵方聲音 · chaos ogryn executor no damage",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_ogryn_executor_no_damage/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "82 敵方聲音 · chaos ogryn heavy gunner alerted idle",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_ogryn_heavy_gunner_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/enemy-vo/page-002/",
+      "title": "83 敵方聲音 · chaos ogryn heavy gunner shooting",
+      "url": "/darktide/zh-tw/enemy-vo/chaos_ogryn_heavy_gunner_shooting/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/enemy-vo/page-002/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

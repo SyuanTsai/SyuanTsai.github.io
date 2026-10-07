@@ -1,0 +1,228 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/scum/",
+      "title": "閃擊",
+      "url": "/darktide/skills/scum/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/scum/",
+      "title": "光環",
+      "url": "/darktide/skills/scum/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/scum/",
+      "title": "能力",
+      "url": "/darktide/skills/scum/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/scum/",
+      "title": "鑰石",
+      "url": "/darktide/skills/scum/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/scum/",
+      "title": "技能",
+      "url": "/darktide/skills/scum/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/scum/",
+      "title": "興奮劑配方",
+      "url": "/darktide/skills/scum/#category-5"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-6",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/scum/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/scum/#category-6"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 7,
+      "parent": "/darktide/skills/scum/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/scum/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 3,
+    "parent": "/darktide/skills/",
+    "title": "巢都渣滓",
+    "titleEn": "Scum",
+    "url": "/darktide/skills/scum/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-3",
+    "kind": "skill-category",
+    "order": 3,
+    "parent": "/darktide/skills/scum/",
+    "title": "鑰石",
+    "url": "/darktide/skills/scum/#category-3"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "靈巧",
+      "titleEn": "Nimble",
+      "url": "/darktide/skills/scum/nimble/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "腎上腺素狂暴",
+      "titleEn": "Adrenaline Frenzy",
+      "url": "/darktide/skills/scum/adrenaline-frenzy/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "兀鷲印記",
+      "titleEn": "Vulture's Mark",
+      "url": "/darktide/skills/scum/vultures-mark/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "化學性依賴",
+      "titleEn": "Chemical Dependency",
+      "url": "/darktide/skills/scum/chemical-dependency/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "化學強化",
+      "titleEn": "Chem Enhanced",
+      "url": "/darktide/skills/scum/chem-enhanced/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "化學增強",
+      "titleEn": "Chem Fortified",
+      "url": "/darktide/skills/scum/chem-fortified/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "化學藥劑全開",
+      "titleEn": "Maxed Out Chems",
+      "url": "/darktide/skills/scum/maxed-out-chems/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "兀鷲推擊",
+      "titleEn": "Vulture's Push",
+      "url": "/darktide/skills/scum/vultures-push/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "堅毅獵手",
+      "titleEn": "Patient Hunter",
+      "url": "/darktide/skills/scum/patient-hunter/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "兀鷲閃避",
+      "titleEn": "Vulture's Dodge",
+      "url": "/darktide/skills/scum/vultures-dodge/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "腎上腺素刺客",
+      "titleEn": "Adrenaline Assassin",
+      "url": "/darktide/skills/scum/adrenaline-assassin/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "振奮怒火",
+      "titleEn": "Stoked Rage",
+      "url": "/darktide/skills/scum/stoked-rage/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "腎上腺素突破",
+      "titleEn": "Adrenaline Unbound",
+      "url": "/darktide/skills/scum/adrenaline-unbound/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "失控攻擊",
+      "titleEn": "Uncontrolled Aggression",
+      "url": "/darktide/skills/scum/uncontrolled-aggression/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "腎上腺素懲戒者",
+      "titleEn": "Adrenaline Smiter",
+      "url": "/darktide/skills/scum/adrenaline-smiter/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/scum/#category-3",
+      "title": "過街老鼠",
+      "titleEn": "Alley Rat",
+      "url": "/darktide/skills/scum/alley-rat/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/scum/#category-3",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

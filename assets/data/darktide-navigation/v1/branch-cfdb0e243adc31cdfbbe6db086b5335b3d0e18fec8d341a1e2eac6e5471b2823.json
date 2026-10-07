@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-022/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1051 玩家閒談 · combat pause limited broker a 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_a_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1052 玩家閒談 · combat pause limited broker a 06 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_a_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1053 玩家閒談 · combat pause limited broker a 07 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_a_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1054 玩家閒談 · combat pause limited broker b 08 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_b_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1055 玩家閒談 · combat pause limited broker b 09 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_b_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1056 玩家閒談 · combat pause limited broker b 10 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_b_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1057 玩家閒談 · combat pause quirk broker b trait 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_b_trait_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1058 玩家閒談 · combat pause limited broker b 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_b_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1059 玩家閒談 · combat pause quirk broker b trait 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_b_trait_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1060 玩家閒談 · combat pause quirk broker b trait 05 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_b_trait_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1061 玩家閒談 · combat pause limited broker b 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_b_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1062 玩家閒談 · combat pause limited broker b 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_b_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1063 玩家閒談 · combat pause limited broker b 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_b_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1064 玩家閒談 · combat pause limited broker b 07 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_b_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1065 玩家閒談 · combat pause limited broker c 09 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_c_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1066 玩家閒談 · combat pause limited broker c 10 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_c_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1067 玩家閒談 · combat pause limited broker c 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_c_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1068 玩家閒談 · combat pause quirk broker c trait 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_c_trait_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1069 玩家閒談 · combat pause quirk broker c trait 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_c_trait_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1070 玩家閒談 · combat pause quirk broker c trait 05 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_c_trait_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1071 玩家閒談 · combat pause quirk broker c trait 06 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_c_trait_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1072 玩家閒談 · combat pause quirk broker c trait 07 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_c_trait_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1073 玩家閒談 · combat pause quirk broker c trait 08 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_c_trait_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1074 玩家閒談 · combat pause quirk broker c trait 10 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_c_trait_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1075 玩家閒談 · combat pause limited broker c 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_c_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1076 玩家閒談 · combat pause limited broker c 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_c_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1077 玩家閒談 · combat pause limited broker c 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_c_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1078 玩家閒談 · combat pause limited broker c 05 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_c_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1079 玩家閒談 · combat pause limited broker c 06 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_c_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1080 玩家閒談 · combat pause limited broker c 07 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_c_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1081 玩家閒談 · broker female a adamant bonding conversation 21 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1082 玩家閒談 · broker female a adamant bonding conversation 22 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1083 玩家閒談 · broker female a adamant bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1084 玩家閒談 · broker female a adamant bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1085 玩家閒談 · broker female a adamant bonding conversation 25 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1086 玩家閒談 · broker female a adamant bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1087 玩家閒談 · broker female a adamant bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1088 玩家閒談 · broker female a adamant bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1089 玩家閒談 · broker bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1090 玩家閒談 · broker female a adamant bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1091 玩家閒談 · broker female a adamant bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1092 玩家閒談 · broker female a adamant bonding conversation 32 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1093 玩家閒談 · broker female a adamant bonding conversation 33 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1094 玩家閒談 · broker female a adamant bonding conversation 34 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1095 玩家閒談 · broker female a adamant bonding conversation 35 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1096 玩家閒談 · broker female a adamant bonding conversation 36 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_adamant_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1097 玩家閒談 · broker female a ogryn bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_ogryn_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1098 玩家閒談 · broker female a ogryn bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_ogryn_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1099 玩家閒談 · broker bonding conversation 31 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-022/",
+      "title": "1100 玩家閒談 · broker female a ogryn bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_female_a_ogryn_bonding_conversation_03_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-022/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

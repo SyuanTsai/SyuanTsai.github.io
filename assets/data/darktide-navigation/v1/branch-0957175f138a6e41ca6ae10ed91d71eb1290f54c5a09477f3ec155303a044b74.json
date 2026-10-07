@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-vo/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/page-008/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/en/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "351 Player callouts and replies · friendly fire from psyker to ogryn",
+      "url": "/darktide/en/player-vo/friendly_fire_from_psyker_to_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "352 Player callouts and replies · friendly fire from psyker to psyker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_psyker_to_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "353 Player callouts and replies · friendly fire from psyker to veteran",
+      "url": "/darktide/en/player-vo/friendly_fire_from_psyker_to_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "354 Player callouts and replies · friendly fire from psyker to zealot",
+      "url": "/darktide/en/player-vo/friendly_fire_from_psyker_to_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "355 Player callouts and replies · blitz smoke grenade a",
+      "url": "/darktide/en/player-vo/blitz_smoke_grenade_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "356 Player callouts and replies · friendly fire from veteran to ogryn",
+      "url": "/darktide/en/player-vo/friendly_fire_from_veteran_to_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "357 Player callouts and replies · friendly fire from veteran to psyker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_veteran_to_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "358 Player callouts and replies · friendly fire from veteran to veteran",
+      "url": "/darktide/en/player-vo/friendly_fire_from_veteran_to_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "359 Player callouts and replies · friendly fire from veteran to zealot",
+      "url": "/darktide/en/player-vo/friendly_fire_from_veteran_to_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "360 Player callouts and replies · friendly fire from zealot to ogryn",
+      "url": "/darktide/en/player-vo/friendly_fire_from_zealot_to_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "361 Player callouts and replies · friendly fire from zealot to psyker",
+      "url": "/darktide/en/player-vo/friendly_fire_from_zealot_to_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "362 Player callouts and replies · calling for help",
+      "url": "/darktide/en/player-vo/calling_for_help/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "363 Player callouts and replies · friendly fire from zealot to veteran",
+      "url": "/darktide/en/player-vo/friendly_fire_from_zealot_to_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "364 Player callouts and replies · friendly fire from zealot to zealot",
+      "url": "/darktide/en/player-vo/friendly_fire_from_zealot_to_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "365 Player callouts and replies · head shot",
+      "url": "/darktide/en/player-vo/head_shot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "366 Player callouts and replies · heal start",
+      "url": "/darktide/en/player-vo/heal_start/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "367 Player callouts and replies · heard enemy chaos hound",
+      "url": "/darktide/en/player-vo/heard_enemy_chaos_hound/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "368 Player callouts and replies · heard enemy chaos spawn",
+      "url": "/darktide/en/player-vo/heard_enemy_chaos_spawn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "369 Player callouts and replies · heard enemy daemonhost",
+      "url": "/darktide/en/player-vo/heard_enemy_daemonhost/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "370 Player callouts and replies · heard enemy plague ogryn",
+      "url": "/darktide/en/player-vo/heard_enemy_plague_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "371 Player callouts and replies · heard horde ambush",
+      "url": "/darktide/en/player-vo/heard_horde_ambush/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "372 Player callouts and replies · combat monster release a",
+      "url": "/darktide/en/player-vo/combat_monster_release_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "373 Player callouts and replies · heard horde vector",
+      "url": "/darktide/en/player-vo/heard_horde_vector/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "374 Player callouts and replies · higher elite threat",
+      "url": "/darktide/en/player-vo/higher_elite_threat/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "375 Player callouts and replies · info door open",
+      "url": "/darktide/en/player-vo/info_door_open/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "376 Player callouts and replies · info event det pack a",
+      "url": "/darktide/en/player-vo/info_event_det_pack_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "377 Player callouts and replies · knocked down 1",
+      "url": "/darktide/en/player-vo/knocked_down_1/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "378 Player callouts and replies · knocked down 2",
+      "url": "/darktide/en/player-vo/knocked_down_2/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "379 Player callouts and replies · knocked down 3",
+      "url": "/darktide/en/player-vo/knocked_down_3/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "380 Player callouts and replies · knocked down multiple times ogryn",
+      "url": "/darktide/en/player-vo/knocked_down_multiple_times_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "381 Player callouts and replies · knocked down multiple times psyker",
+      "url": "/darktide/en/player-vo/knocked_down_multiple_times_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "382 Player callouts and replies · knocked down multiple times veteran",
+      "url": "/darktide/en/player-vo/knocked_down_multiple_times_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "383 Player callouts and replies · knocked down multiple times zealot",
+      "url": "/darktide/en/player-vo/knocked_down_multiple_times_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "384 Player callouts and replies · ledge hanging",
+      "url": "/darktide/en/player-vo/ledge_hanging/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "385 Player callouts and replies · look at ammo",
+      "url": "/darktide/en/player-vo/look_at_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "386 Player callouts and replies · look at grenade",
+      "url": "/darktide/en/player-vo/look_at_grenade/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "387 Player callouts and replies · monster combo attack",
+      "url": "/darktide/en/player-vo/monster_combo_attack/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "388 Player callouts and replies · monster fight start reaction",
+      "url": "/darktide/en/player-vo/monster_fight_start_reaction/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "389 Player callouts and replies · need rescue",
+      "url": "/darktide/en/player-vo/need_rescue/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "390 Player callouts and replies · ogryn seen killstreak ogryn",
+      "url": "/darktide/en/player-vo/ogryn_seen_killstreak_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "391 Player callouts and replies · ability maniac",
+      "url": "/darktide/en/player-vo/ability_maniac/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "392 Player callouts and replies · ogryn start revive ogryn",
+      "url": "/darktide/en/player-vo/ogryn_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "393 Player callouts and replies · ogryn start revive psyker",
+      "url": "/darktide/en/player-vo/ogryn_start_revive_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "394 Player callouts and replies · guidance starting area",
+      "url": "/darktide/en/player-vo/guidance_starting_area/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "395 Player callouts and replies · guidance switch",
+      "url": "/darktide/en/player-vo/guidance_switch/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "396 Player callouts and replies · guidance correct path up",
+      "url": "/darktide/en/player-vo/guidance_correct_path_up/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "397 Player callouts and replies · guidance ladder down",
+      "url": "/darktide/en/player-vo/guidance_ladder_down/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "398 Player callouts and replies · guidance ladder sighted",
+      "url": "/darktide/en/player-vo/guidance_ladder_sighted/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "399 Player callouts and replies · guidance ladder up",
+      "url": "/darktide/en/player-vo/guidance_ladder_up/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-vo/page-008/",
+      "title": "400 Player callouts and replies · self enemy ogryn kill a",
+      "url": "/darktide/en/player-vo/self_enemy_ogryn_kill_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-vo/page-008/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

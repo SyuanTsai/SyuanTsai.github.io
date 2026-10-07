@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-082/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4051 玩家閒談 · adamant male c veteran bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_veteran_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4052 玩家閒談 · adamant male c veteran bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_veteran_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4053 玩家閒談 · bonding conversation appetite a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_appetite_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4054 玩家閒談 · adamant female a veteran bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_a_veteran_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4055 玩家閒談 · bonding conversation heavy injury 21 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_heavy_injury_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4056 玩家閒談 · adamant female a veteran bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_a_veteran_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4057 玩家閒談 · bonding conversation heavy injury 22 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_heavy_injury_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4058 玩家閒談 · bonding conversation heavy injury 23 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_heavy_injury_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4059 玩家閒談 · bonding conversation heavy injury 24 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_heavy_injury_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4060 玩家閒談 · bonding conversation heavy injury 41 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_heavy_injury_41_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4061 玩家閒談 · bonding conversation heavy injury 42 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_heavy_injury_42_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4062 玩家閒談 · bonding conversation heavy injury 43 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_heavy_injury_43_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4063 玩家閒談 · bonding conversation heavy injury 44 a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_heavy_injury_44_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4064 玩家閒談 · bonding conversation killing a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_killing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4065 玩家閒談 · adamant female a veteran bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_a_veteran_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4066 玩家閒談 · bonding conversation mercy kill a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_mercy_kill_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4067 玩家閒談 · bonding conversation metropolitan alert vet a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_alert_vet_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4068 玩家閒談 · bonding conversation metropolitan eye a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_eye_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4069 玩家閒談 · bonding conversation metropolitan flank a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_flank_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4070 玩家閒談 · bonding conversation metropolitan like a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_like_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4071 玩家閒談 · bonding conversation metropolitan lose a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_lose_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4072 玩家閒談 · bonding conversation metropolitan never over a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_never_over_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4073 玩家閒談 · bonding conversation metropolitan nobles a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_nobles_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4074 玩家閒談 · adamant female a veteran bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_female_a_veteran_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4075 玩家閒談 · bonding conversation metropolitan soldier a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_metropolitan_soldier_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4076 玩家閒談 · bonding conversation never trust a",
+      "url": "/darktide/zh-tw/player-conversation/bonding_conversation_never_trust_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4077 玩家閒談 · combat pause limited zealot a 06 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_zealot_a_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4078 玩家閒談 · combat pause limited bolt on a zealot a 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_zealot_a_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4079 玩家閒談 · combat pause limited zealot a 17 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_zealot_a_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4080 玩家閒談 · combat pause limited zealot a 20 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_zealot_a_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4081 玩家閒談 · combat pause limited bolt on a zealot a 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_zealot_a_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4082 玩家閒談 · zealot gang metropolitan onwards a",
+      "url": "/darktide/zh-tw/player-conversation/zealot_gang_metropolitan_onwards_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4083 玩家閒談 · zealot gang metropolitan true labour a",
+      "url": "/darktide/zh-tw/player-conversation/zealot_gang_metropolitan_true_labour_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4084 玩家閒談 · combat pause limited bolt on a zealot a 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_zealot_a_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4085 玩家閒談 · zealot gang metropolitan waver a",
+      "url": "/darktide/zh-tw/player-conversation/zealot_gang_metropolitan_waver_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4086 玩家閒談 · combat pause limited bolt on a zealot a 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_zealot_a_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4087 玩家閒談 · combat pause limited zealot a 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_zealot_a_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4088 玩家閒談 · combat pause limited bolt on a zealot b 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_zealot_b_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4089 玩家閒談 · combat pause limited zealot b 11 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_zealot_b_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4090 玩家閒談 · combat pause limited zealot b 12 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_zealot_b_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4091 玩家閒談 · combat pause limited bolt on a zealot b 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_zealot_b_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4092 玩家閒談 · combat pause limited zealot b 18 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_zealot_b_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4093 玩家閒談 · combat pause limited zealot b 19 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_zealot_b_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4094 玩家閒談 · combat pause limited bolt on a zealot b 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_zealot_b_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4095 玩家閒談 · zealot gang metropolitan harbour doubts a",
+      "url": "/darktide/zh-tw/player-conversation/zealot_gang_metropolitan_harbour_doubts_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4096 玩家閒談 · zealot gang metropolitan overmatch a",
+      "url": "/darktide/zh-tw/player-conversation/zealot_gang_metropolitan_overmatch_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4097 玩家閒談 · combat pause limited bolt on a zealot b 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_zealot_b_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4098 玩家閒談 · zealot gang metropolitan unalloyed a",
+      "url": "/darktide/zh-tw/player-conversation/zealot_gang_metropolitan_unalloyed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4099 玩家閒談 · combat pause limited zealot b 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_zealot_b_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-082/",
+      "title": "4100 玩家閒談 · combat pause limited bolt on a zealot c 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_bolt_on_a_zealot_c_02_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-082/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

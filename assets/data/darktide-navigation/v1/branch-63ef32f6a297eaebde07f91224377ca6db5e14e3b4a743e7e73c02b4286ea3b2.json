@@ -1,0 +1,210 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/psyker/",
+      "title": "閃擊",
+      "url": "/darktide/skills/psyker/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/psyker/",
+      "title": "光環",
+      "url": "/darktide/skills/psyker/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/psyker/",
+      "title": "能力",
+      "url": "/darktide/skills/psyker/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/psyker/",
+      "title": "鑰石",
+      "url": "/darktide/skills/psyker/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/psyker/",
+      "title": "技能",
+      "url": "/darktide/skills/psyker/#category-4"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/psyker/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/psyker/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 2,
+    "parent": "/darktide/skills/",
+    "title": "靈能者",
+    "titleEn": "Psyker",
+    "url": "/darktide/skills/psyker/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-3",
+    "kind": "skill-category",
+    "order": 3,
+    "parent": "/darktide/skills/psyker/",
+    "title": "鑰石",
+    "url": "/darktide/skills/psyker/#category-3"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "亞空間虹吸",
+      "titleEn": "Warp Siphon",
+      "url": "/darktide/skills/psyker/warp-siphon/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "擾動命運",
+      "titleEn": "Disrupt Destiny",
+      "url": "/darktide/skills/psyker/disrupt-destiny/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "靈能強化",
+      "titleEn": "Empowered Psionics",
+      "url": "/darktide/skills/psyker/empowered-psionics/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "平心靜氣",
+      "titleEn": "Inner Tranquility",
+      "url": "/darktide/skills/psyker/inner-tranquility/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "吸精奪萃",
+      "titleEn": "Essence Harvest",
+      "url": "/darktide/skills/psyker/essence-harvest/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "生物磁石",
+      "titleEn": "Bio-Lodestone",
+      "url": "/darktide/skills/psyker/bio-lodestone/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "吸血閃電",
+      "titleEn": "Psychic Leeching",
+      "url": "/darktide/skills/psyker/psychic-leeching/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "吞靈強擊",
+      "titleEn": "Overpowering Souls",
+      "url": "/darktide/skills/psyker/overpowering-souls/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "完美主義",
+      "titleEn": "Perfectionism",
+      "url": "/darktide/skills/psyker/perfectionism/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "盜竊天命",
+      "titleEn": "Purloin Providence",
+      "url": "/darktide/skills/psyker/purloin-providence/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "持久影響",
+      "titleEn": "Lingering Influence",
+      "url": "/darktide/skills/psyker/lingering-influence/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "充能完畢",
+      "titleEn": "Charged Up",
+      "url": "/darktide/skills/psyker/charged-up/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "涅槃",
+      "titleEn": "In Fire Reborn",
+      "url": "/darktide/skills/psyker/in-fire-reborn/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "靈能吸血鬼",
+      "titleEn": "Psychic Vampire",
+      "url": "/darktide/skills/psyker/psychic-vampire/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "亞空間電池",
+      "titleEn": "Warp Battery",
+      "url": "/darktide/skills/psyker/warp-battery/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/psyker/#category-3",
+      "title": "殘忍命運",
+      "titleEn": "Cruel Fortune",
+      "url": "/darktide/skills/psyker/cruel-fortune/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/psyker/#category-3",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

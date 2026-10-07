@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/hub-conversation/",
+    "title": "艦內閒談",
+    "url": "/darktide/hub-conversation/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 6,
+    "parent": "/darktide/",
+    "title": "艦內閒談",
+    "url": "/darktide/hub-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/hub-conversation/",
+      "title": "01 艦內閒談 42",
+      "url": "/darktide/zh-tw/hub-conversation/hub_idle_2nd_phase_conversation_fortytwo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/hub-conversation/",
+      "title": "02 艦內閒談 · hub idle 2nd phase conversation twentytwo a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_idle_2nd_phase_conversation_twentytwo_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/hub-conversation/",
+      "title": "03 艦內閒談 · hub idle 2nd phase conversation two a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_idle_2nd_phase_conversation_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/hub-conversation/",
+      "title": "04 艦內閒談 · hub idle crafting dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_idle_crafting_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/hub-conversation/",
+      "title": "05 艦內閒談 · hub idle crafting likes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_idle_crafting_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/hub-conversation/",
+      "title": "06 艦內閒談 · hub idle greeting dislike a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_idle_greeting_dislike_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/hub-conversation/",
+      "title": "07 艦內閒談 · hub idle greeting like a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_idle_greeting_like_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/hub-conversation/",
+      "title": "08 艦內閒談 · hub idle greeting neutral a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_idle_greeting_neutral_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/hub-conversation/",
+      "title": "09 艦內閒談 · hub initial greeting live event 21st 01 a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_initial_greeting_live_event_21st_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/hub-conversation/",
+      "title": "10 艦內閒談 · hub initial greeting live event 21st 01 b",
+      "url": "/darktide/zh-tw/hub-conversation/hub_initial_greeting_live_event_21st_01_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/hub-conversation/",
+      "title": "11 艦內閒談 · hub interact boon vendor dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_boon_vendor_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/hub-conversation/",
+      "title": "12 艦內閒談 · hub interact boon vendor likes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_boon_vendor_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/hub-conversation/",
+      "title": "13 艦內閒談 · barber distance",
+      "url": "/darktide/zh-tw/hub-conversation/barber_distance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/hub-conversation/",
+      "title": "14 艦內閒談 · hub interact boon vendor rumour politics a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_boon_vendor_rumour_politics_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/hub-conversation/",
+      "title": "15 艦內閒談 · hub interact contract vendor dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_contract_vendor_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/hub-conversation/",
+      "title": "16 艦內閒談 · hub interact contract vendor likes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_contract_vendor_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/hub-conversation/",
+      "title": "17 艦內閒談 · hub interact explicator likes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_explicator_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/hub-conversation/",
+      "title": "18 艦內閒談 · hub interact penance greeting a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_penance_greeting_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/hub-conversation/",
+      "title": "19 艦內閒談 · hub interact purser dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_purser_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/hub-conversation/",
+      "title": "20 艦內閒談 · hub interact purser likes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_purser_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/hub-conversation/",
+      "title": "21 艦內閒談 · hub interact shipmistress dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_shipmistress_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/hub-conversation/",
+      "title": "22 艦內閒談 · hub interact shipmistress likes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_shipmistress_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/hub-conversation/",
+      "title": "23 艦內閒談 · hub interact training ground psyker dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_training_ground_psyker_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/hub-conversation/",
+      "title": "24 艦內閒談 · hub interact training ground psyker likes character",
+      "url": "/darktide/zh-tw/hub-conversation/hub_interact_training_ground_psyker_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/hub-conversation/",
+      "title": "25 艦內閒談 · hub map table conversation commissar",
+      "url": "/darktide/zh-tw/hub-conversation/hub_map_table_conversation_commissar/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/hub-conversation/",
+      "title": "26 艦內閒談 · hub map table conversation officer",
+      "url": "/darktide/zh-tw/hub-conversation/hub_map_table_conversation_officer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/hub-conversation/",
+      "title": "27 艦內閒談 · hub map table conversation steelhead a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_map_table_conversation_steelhead_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/hub-conversation/",
+      "title": "28 艦內閒談 · hub map table conversation steelhead b",
+      "url": "/darktide/zh-tw/hub-conversation/hub_map_table_conversation_steelhead_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/hub-conversation/",
+      "title": "29 艦內閒談 · hub mindwipe backstory a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mindwipe_backstory_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/hub-conversation/",
+      "title": "30 艦內閒談 · hub mindwipe body type a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mindwipe_body_type_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/hub-conversation/",
+      "title": "31 艦內閒談 · hub mindwipe conclusion a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mindwipe_conclusion_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/hub-conversation/",
+      "title": "32 艦內閒談 · hub mindwipe frequent customer a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mindwipe_frequent_customer_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/hub-conversation/",
+      "title": "33 艦內閒談 · hub mindwipe personality a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mindwipe_personality_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/hub-conversation/",
+      "title": "34 艦內閒談 · hub mindwipe select option a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mindwipe_select_option_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/hub-conversation/",
+      "title": "35 艦內閒談 · hub mission board announcement carnival a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_carnival_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/hub-conversation/",
+      "title": "36 艦內閒談 · hub mission board announcement carnival circumstance a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_carnival_circumstance_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/hub-conversation/",
+      "title": "37 艦內閒談 · hub mission board announcement core a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_core_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/hub-conversation/",
+      "title": "38 艦內閒談 · hub mission board announcement core circumstance a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_core_circumstance_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/hub-conversation/",
+      "title": "39 艦內閒談 · hub mission board announcement dust",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_dust/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/hub-conversation/",
+      "title": "40 艦內閒談 · hub mission board announcement dust circumstance",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_dust_circumstance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/hub-conversation/",
+      "title": "41 艦內閒談 · hub mission board announcement tank foundry",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_tank_foundry/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/hub-conversation/",
+      "title": "42 艦內閒談 · hub mission board announcement tank foundry circumstance",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_tank_foundry_circumstance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/hub-conversation/",
+      "title": "43 艦內閒談 · hub mission board announcement throneside a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_throneside_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/hub-conversation/",
+      "title": "44 艦內閒談 · hub mission board announcement throneside circumstance a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_throneside_circumstance_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/hub-conversation/",
+      "title": "45 艦內閒談 · hub mission board announcement transit",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_transit/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/hub-conversation/",
+      "title": "46 艦內閒談 · hub mission board announcement transit circumstance",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_transit_circumstance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/hub-conversation/",
+      "title": "47 艦內閒談 · hub mission board announcement watertown",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_watertown/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/hub-conversation/",
+      "title": "48 艦內閒談 · hub mission board announcement watertown circumstance",
+      "url": "/darktide/zh-tw/hub-conversation/hub_mission_board_announcement_watertown_circumstance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/hub-conversation/",
+      "title": "49 艦內閒談 · hub news announcement",
+      "url": "/darktide/zh-tw/hub-conversation/hub_news_announcement/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/hub-conversation/",
+      "title": "50 艦內閒談 · hub onboarding 03 a",
+      "url": "/darktide/zh-tw/hub-conversation/hub_onboarding_03_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/hub-conversation/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

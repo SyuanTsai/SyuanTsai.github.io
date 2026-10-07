@@ -67,6 +67,12 @@ node scripts/game-info/render_skill_pages.mjs `
 
 既有46項 unittest、文章驗證與9個 discovery pages檢查通過。本機 Ruby 3.4.10 與 Gemfile 3.3.4 不同，未改動環境；完整 Jekyll／SEO／discovery／preview／delivery／quality 驗收由原 PR CI 核實，結果記於 Draft PR。工作分支與 Draft PR 不代表合併或正式部署。
 
+## 2026-10-06 靜態再生維護
+
+技能 Markdown 是技能正文的唯一來源；網站只保存再生後的靜態 HTML，不把技能正文搬入 JSON。完整網站再生時，技能輸出位於分類頁與用途證據之後、共用最終處理之前；完整順序與容量限制見[字幕交付維護說明](darktide-dialogue-delivery.md)。
+
+`render_skill_pages.mjs` 寫完本次指定職業的 HTML 與 TSV 後，維護者須在 Pages 工作樹另行執行網站端 `scripts/apply_darktide_reader.py --site <完整 Pages 根目錄>`。網站 helper 可獨立處理整個 Pages 網站；renderer 的 `--classes` 只限定技能 HTML／TSV 的產生範圍，後處理仍涵蓋整個 Darktide 頁樹，包括雙語首頁、技能根目錄、七職業頁及所有既有頁面。`apply_darktide_reader.py` 先依 HTML metadata 套用導覽，再執行 `scripts/darktide_html_format.py` 的全站 Darktide 標籤空白精簡；formatter 沒有 `--classes` 參數。保留這個分開執行的呼叫順序，重複產生才會維持一致，且不會讓外框逐次累積。
+
 ## 證據限制與回復
 
 沿用原文件中的翻譯勘誤、程式推導及待確認事項；本次核對的 55 項名稱已按同版英文／zh-tw 名稱鍵與 hash 取得；其餘名稱沿用既有詞表。Low Profile 的 zh-tw 項目仍標記未翻譯，保留英文；未做遊戲內實測。計時例為原文件的近似推導，圖示只供辨識。原文件的機制與特殊例外以各頁完整正文為準。

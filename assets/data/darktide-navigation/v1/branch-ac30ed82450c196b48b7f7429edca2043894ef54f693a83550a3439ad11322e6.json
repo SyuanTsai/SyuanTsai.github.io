@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/cinematic-dialogue/",
+    "title": "過場語音與手動字幕",
+    "url": "/darktide/cinematic-dialogue/page-002/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 3,
+    "parent": "/darktide/",
+    "title": "過場語音與手動字幕",
+    "url": "/darktide/cinematic-dialogue/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "51 過場語音 · cs prologue two 06",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_06/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "52 過場語音 · cs prologue two 07",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_07/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "53 過場語音 · cs pot02 05",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot02_05/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "54 過場語音 · cs prologue two 08",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_08/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "55 過場語音 · cs prologue two 09",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_09/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "56 過場語音 · cs prologue two 10",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_10/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "57 過場語音 · cs prologue two 11",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_11/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "58 過場語音 · cs prologue two 12",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_12/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "59 過場語音 · cs prologue two 13",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_13/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "60 過場語音 · cs prologue two 14",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_14/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "61 過場語音 · cs prologue two 15",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_15/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "62 過場語音 · cs prologue two 16",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_16/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "63 過場語音 · cs pot03 01",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot03_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "64 過場語音 · cs prologue two 17",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_17/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "65 過場語音 · cs prologue two 18",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_18/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "66 過場語音 · cs prologue two 19",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_19/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "67 過場語音 · cs prologue two 20",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_20/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "68 過場語音 · cs prologue two 22",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_22/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "69 過場語音 · cs prologue two 23",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_23/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "70 過場語音 · cs prologue two 24",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_24/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "71 過場語音 · cs prologue two 25",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_prologue_two_25/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "72 過場語音 · narrative event bay 01",
+      "url": "/darktide/zh-tw/cinematic-dialogue/narrative_event_bay_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "73 過場語音 · narrative event bay 02",
+      "url": "/darktide/zh-tw/cinematic-dialogue/narrative_event_bay_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "74 過場語音 · cs pot03 02",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot03_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "75 過場語音 · player first intro cinematic a",
+      "url": "/darktide/zh-tw/cinematic-dialogue/player_first_intro_cinematic_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "76 過場語音 · player first intro cinematic b",
+      "url": "/darktide/zh-tw/cinematic-dialogue/player_first_intro_cinematic_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "77 過場語音 · player first intro cinematic c",
+      "url": "/darktide/zh-tw/cinematic-dialogue/player_first_intro_cinematic_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "78 過場語音 · player first intro cinematic d",
+      "url": "/darktide/zh-tw/cinematic-dialogue/player_first_intro_cinematic_d/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "79 過場語音 · prologue gameplay hub a",
+      "url": "/darktide/zh-tw/cinematic-dialogue/prologue_gameplay_hub_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "80 過場語音 · prologue gameplay hub mission board",
+      "url": "/darktide/zh-tw/cinematic-dialogue/prologue_gameplay_hub_mission_board/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "81 過場語音 · prologue gameplay hub training deck",
+      "url": "/darktide/zh-tw/cinematic-dialogue/prologue_gameplay_hub_training_deck/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "82 過場語音 · cs pot03 03",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot03_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "83 過場語音 · cs pot01 02",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot01_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "84 過場語音 · cs pot03 04",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot03_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "85 過場語音 · cs pot03 05",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot03_05/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "86 過場語音 · cs pot04 01",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot04_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "87 過場語音 · cs pot04 02",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot04_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "88 過場語音 · cs pot04 03",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot04_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "89 過場語音 · cs pot01 01",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot01_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "90 過場語音 · cs pot04 04",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot04_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "91 過場語音 · cs pot04 05",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot04_05/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "92 過場語音 · cs pot05 01",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot05_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "93 過場語音 · cs pot05 02",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot05_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "94 過場語音 · cs pot05 03",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot05_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "95 過場語音 · cs pot01 03",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot01_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "96 過場語音 · cs pot05 04",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot05_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "97 過場語音 · cs pot05 05",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot05_05/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "98 過場語音 · cs pot05 06",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot05_06/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "99 過場語音 · cs pot05 07",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot05_07/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/cinematic-dialogue/page-002/",
+      "title": "100 過場語音 · cs pot06 01",
+      "url": "/darktide/zh-tw/cinematic-dialogue/cs_pot06_01/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/cinematic-dialogue/page-002/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

@@ -1,0 +1,196 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/scum/",
+      "title": "閃擊",
+      "url": "/darktide/skills/scum/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/scum/",
+      "title": "光環",
+      "url": "/darktide/skills/scum/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/scum/",
+      "title": "能力",
+      "url": "/darktide/skills/scum/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/scum/",
+      "title": "鑰石",
+      "url": "/darktide/skills/scum/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/scum/",
+      "title": "技能",
+      "url": "/darktide/skills/scum/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/scum/",
+      "title": "興奮劑配方",
+      "url": "/darktide/skills/scum/#category-5"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-6",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/scum/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/scum/#category-6"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 7,
+      "parent": "/darktide/skills/scum/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/scum/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 3,
+    "parent": "/darktide/skills/",
+    "title": "巢都渣滓",
+    "titleEn": "Scum",
+    "url": "/darktide/skills/scum/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-2",
+    "kind": "skill-category",
+    "order": 2,
+    "parent": "/darktide/skills/scum/",
+    "title": "能力",
+    "url": "/darktide/skills/scum/#category-2"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "強化亡命之徒",
+      "titleEn": "Enhanced Desperado",
+      "url": "/darktide/skills/scum/enhanced-desperado/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "化學性依賴",
+      "titleEn": "Stimm Supply",
+      "url": "/darktide/skills/scum/stimm-supply/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "橫衝直撞！",
+      "titleEn": "Rampage!",
+      "url": "/darktide/skills/scum/rampage/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "熔爐怒吼",
+      "titleEn": "Pulverising Strikes",
+      "url": "/darktide/skills/scum/pulverising-strikes/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "凝聚殺意",
+      "titleEn": "Channelled Aggression",
+      "url": "/darktide/skills/scum/channelled-aggression/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "沸騰之血",
+      "titleEn": "Forge's Bellow",
+      "url": "/darktide/skills/scum/forges-bellow/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "碎骨打擊",
+      "titleEn": "Boiling Blood",
+      "url": "/darktide/skills/scum/boiling-blood/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "專注凝神",
+      "titleEn": "Focused Resolve",
+      "url": "/darktide/skills/scum/focused-resolve/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "精準獵殺",
+      "titleEn": "Pick Your Targets",
+      "url": "/darktide/skills/scum/pick-your-targets/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "熟練部署",
+      "titleEn": "Practiced Deployment",
+      "url": "/darktide/skills/scum/practiced-deployment/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "速效型興奮劑",
+      "titleEn": "Fast Acting Stimms",
+      "url": "/darktide/skills/scum/fast-acting-stimms/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/scum/#category-2",
+      "title": "毒性陷阱",
+      "titleEn": "Booby Trap",
+      "url": "/darktide/skills/scum/booby-trap/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/scum/#category-2",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

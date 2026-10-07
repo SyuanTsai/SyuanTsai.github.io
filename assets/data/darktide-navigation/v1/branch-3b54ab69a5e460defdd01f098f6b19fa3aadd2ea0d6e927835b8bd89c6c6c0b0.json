@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-080/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3951 Player conversations · bonding conversation waterloo perfect a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_perfect_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3952 Player conversations · bonding conversation waterloo rannick 06 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_rannick_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3953 Player conversations · bonding conversation waterloo rannick 09 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_rannick_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3954 Player conversations · bonding conversation waterloo rannick 10 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_rannick_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3955 Player conversations · bonding conversation waterloo twins 06 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_twins_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3956 Player conversations · bonding conversation waterloo twins 10 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_twins_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3957 Player conversations · adamant female b veteran bonding conversation 17 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_veteran_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3958 Player conversations · bonding conversation waterloo weight a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_weight_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3959 Player conversations · bonding conversation waterloo wolfer 09 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_wolfer_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3960 Player conversations · bonding conversation waterloo wolfer 11 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_waterloo_wolfer_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3961 Player conversations · oval bonding conversation bite a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_bite_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3962 Player conversations · oval bonding conversation bottle a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_bottle_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3963 Player conversations · oval bonding conversation charm a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_charm_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3964 Player conversations · oval bonding conversation idleness a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_idleness_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3965 Player conversations · oval bonding conversation killer a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_killer_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3966 Player conversations · oval bonding conversation promenade a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_promenade_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3967 Player conversations · oval bonding conversation sefoni a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_sefoni_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3968 Player conversations · adamant female b veteran bonding conversation 18 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_veteran_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3969 Player conversations · oval bonding conversation shiver a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_shiver_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3970 Player conversations · oval bonding conversation trust a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_trust_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3971 Player conversations · oval world conversation balta nobles twenty a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_balta_nobles_twenty_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3972 Player conversations · oval world conversation cumbernauld brahms four a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_cumbernauld_brahms_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3973 Player conversations · oval world conversation elvanfoot hestia six a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_elvanfoot_hestia_six_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3974 Player conversations · oval world conversation fingal swagger nine a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_fingal_swagger_nine_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3975 Player conversations · oval world conversation fingal swagger seven a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_fingal_swagger_seven_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3976 Player conversations · oval world conversation fingal swagger ten a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_fingal_swagger_ten_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3977 Player conversations · adamant female b veteran bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_veteran_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3978 Player conversations · oval world conversation gareloch four a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_gareloch_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3979 Player conversations · oval world conversation gareloch three a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_gareloch_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3980 Player conversations · oval world conversation universal hestia eighteen a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_universal_hestia_eighteen_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3981 Player conversations · oval world conversation universal hestia fourteen a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_universal_hestia_fourteen_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3982 Player conversations · oval world conversation universal hestia sixteen a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_universal_hestia_sixteen_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3983 Player conversations · adamant female a veteran bonding conversation 17 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_veteran_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3984 Player conversations · adamant female b veteran bonding conversation 20 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_veteran_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3985 Player conversations · adamant female c veteran bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_veteran_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3986 Player conversations · adamant male c veteran bonding conversation 16 a",
+      "url": "/darktide/en/player-conversation/adamant_male_c_veteran_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3987 Player conversations · bonding conversation boot in a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_boot_in_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3988 Player conversations · bonding conversation compliment a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_compliment_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3989 Player conversations · bonding conversation fancy words a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_fancy_words_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3990 Player conversations · bonding conversation heavy injury 13 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_heavy_injury_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3991 Player conversations · bonding conversation heavy injury 14 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_heavy_injury_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3992 Player conversations · bonding conversation heavy injury 15 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_heavy_injury_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3993 Player conversations · bonding conversation heavy injury 16 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_heavy_injury_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3994 Player conversations · bonding conversation heavy injury 33 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_heavy_injury_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3995 Player conversations · bonding conversation heavy injury 34 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_heavy_injury_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3996 Player conversations · adamant female a veteran bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_veteran_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3997 Player conversations · bonding conversation heavy injury 35 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_heavy_injury_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3998 Player conversations · bonding conversation heavy injury 36 a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_heavy_injury_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "3999 Player conversations · bonding conversation metropolitan anywhere else a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_anywhere_else_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-080/",
+      "title": "4000 Player conversations · bonding conversation metropolitan cheer vet a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_cheer_vet_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-080/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

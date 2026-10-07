@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-053/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2601 Player conversations · cryptic c psyker bonding conversation 12 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2602 Player conversations · cryptic c psyker bonding conversation 13 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2603 Player conversations · cryptic c psyker bonding conversation 14 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2604 Player conversations · cryptic c psyker bonding conversation 15 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2605 Player conversations · combat pause limited cryptic c 20 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_cryptic_c_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2606 Player conversations · cryptic c psyker bonding conversation 16 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2607 Player conversations · cryptic c psyker bonding conversation 18 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2608 Player conversations · cryptic c psyker bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2609 Player conversations · cryptic c psyker bonding conversation 21 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2610 Player conversations · cryptic c psyker bonding conversation 22 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2611 Player conversations · cryptic bonding conversation 04 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2612 Player conversations · cryptic c psyker bonding conversation 23 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2613 Player conversations · cryptic c psyker bonding conversation 24 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2614 Player conversations · cryptic c psyker bonding conversation 25 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2615 Player conversations · cryptic c psyker bonding conversation 26 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2616 Player conversations · cryptic c psyker bonding conversation 27 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2617 Player conversations · combat pause limited cryptic c 03 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_cryptic_c_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2618 Player conversations · cryptic c psyker bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2619 Player conversations · cryptic c psyker bonding conversation 31 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2620 Player conversations · cryptic c psyker bonding conversation 32 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2621 Player conversations · cryptic c psyker bonding conversation 33 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2622 Player conversations · cryptic bonding conversation 05 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2623 Player conversations · cryptic c psyker bonding conversation 34 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2624 Player conversations · cryptic c psyker bonding conversation 35 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2625 Player conversations · cryptic c psyker bonding conversation 36 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_psyker_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2626 Player conversations · cryptic c veteran bonding conversation 01 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2627 Player conversations · cryptic c veteran bonding conversation 02 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2628 Player conversations · cryptic c veteran bonding conversation 03 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2629 Player conversations · cryptic c veteran bonding conversation 04 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2630 Player conversations · cryptic c veteran bonding conversation 05 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2631 Player conversations · cryptic c veteran bonding conversation 06 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2632 Player conversations · cryptic c veteran bonding conversation 07 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2633 Player conversations · cryptic bonding conversation 06 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2634 Player conversations · cryptic c veteran bonding conversation 08 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2635 Player conversations · cryptic c veteran bonding conversation 09 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2636 Player conversations · cryptic c veteran bonding conversation 10 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2637 Player conversations · cryptic c veteran bonding conversation 11 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2638 Player conversations · cryptic c veteran bonding conversation 12 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2639 Player conversations · cryptic c veteran bonding conversation 13 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2640 Player conversations · cryptic c veteran bonding conversation 14 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2641 Player conversations · cryptic c veteran bonding conversation 15 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2642 Player conversations · cryptic c veteran bonding conversation 16 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2643 Player conversations · cryptic bonding conversation 16 a",
+      "url": "/darktide/en/player-conversation/cryptic_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2644 Player conversations · cryptic c veteran bonding conversation 17 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2645 Player conversations · cryptic c veteran bonding conversation 18 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2646 Player conversations · cryptic c veteran bonding conversation 25 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2647 Player conversations · cryptic c veteran bonding conversation 26 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2648 Player conversations · cryptic c veteran bonding conversation 27 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2649 Player conversations · cryptic c veteran bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-053/",
+      "title": "2650 Player conversations · cryptic c veteran bonding conversation 29 a",
+      "url": "/darktide/en/player-conversation/cryptic_c_veteran_bonding_conversation_29_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-053/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

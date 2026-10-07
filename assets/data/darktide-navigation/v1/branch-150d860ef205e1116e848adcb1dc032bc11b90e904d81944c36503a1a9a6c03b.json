@@ -1,0 +1,315 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "死神試煉（遊戲內）",
+    "url": "/darktide/mission-vox/mortis-trials/gameplay/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "6 任務通訊 · event demolition first corruptor destroyed a",
+      "url": "/darktide/zh-tw/mission-vox/event_demolition_first_corruptor_destroyed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "731 任務通訊 · horde wave start 01 a",
+      "url": "/darktide/zh-tw/mission-vox/horde_wave_start_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "734 任務通訊 · horde wave start 02 a",
+      "url": "/darktide/zh-tw/mission-vox/horde_wave_start_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "737 任務通訊 · horde wave start 03 a",
+      "url": "/darktide/zh-tw/mission-vox/horde_wave_start_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "741 任務通訊 · horde wave upgrade prompt a",
+      "url": "/darktide/zh-tw/mission-vox/horde_wave_upgrade_prompt_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "744 任務通訊 · info servo skull deployed horde",
+      "url": "/darktide/zh-tw/mission-vox/info_servo_skull_deployed_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "750 任務通訊 · cmd luggable prompt a all targets scanned",
+      "url": "/darktide/zh-tw/mission-vox/cmd_luggable_prompt_a_all_targets_scanned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "776 任務通訊 · cmd wandering skull horde",
+      "url": "/darktide/zh-tw/mission-vox/cmd_wandering_skull_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "803 任務通訊 · event corruptor objective start",
+      "url": "/darktide/zh-tw/mission-vox/event_corruptor_objective_start/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "832 任務通訊 · wave start armored infected a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_armored_infected_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "833 任務通訊 · wave start chaos ogryn a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_chaos_ogryn_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "834 任務通訊 · wave start daemonhost a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_daemonhost_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "835 任務通訊 · wave start flamers a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_flamers_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "836 任務通訊 · wave start hounds a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_hounds_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "837 任務通訊 · wave start monsters a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_monsters_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "838 任務通訊 · wave start mutants a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_mutants_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "839 任務通訊 · wave start netgunner a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_netgunner_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "840 任務通訊 · wave start poxbursters a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_poxbursters_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "841 任務通訊 · wave start snipers a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_snipers_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "842 任務通訊 · wave start twins a",
+      "url": "/darktide/zh-tw/mission-vox/wave_start_twins_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "844 任務通訊 · event demolition last corruptor horde",
+      "url": "/darktide/zh-tw/mission-vox/event_demolition_last_corruptor_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "846 任務通訊 · event scan all targets scanned horde",
+      "url": "/darktide/zh-tw/mission-vox/event_scan_all_targets_scanned_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "849 任務通訊 · event scan more data horde",
+      "url": "/darktide/zh-tw/mission-vox/event_scan_more_data_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "853 任務通訊 · event scan skull waiting horde",
+      "url": "/darktide/zh-tw/mission-vox/event_scan_skull_waiting_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "856 任務通訊 · horde break ice a",
+      "url": "/darktide/zh-tw/mission-vox/horde_break_ice_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "859 任務通訊 · horde claim prize a",
+      "url": "/darktide/zh-tw/mission-vox/horde_claim_prize_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "861 任務通訊 · cmd deploy skull horde",
+      "url": "/darktide/zh-tw/mission-vox/cmd_deploy_skull_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "863 任務通訊 · cmd hacking place device horde",
+      "url": "/darktide/zh-tw/mission-vox/cmd_hacking_place_device_horde/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "864 任務通訊 · horde defend area a",
+      "url": "/darktide/zh-tw/mission-vox/horde_defend_area_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "866 任務通訊 · horde mission complete a",
+      "url": "/darktide/zh-tw/mission-vox/horde_mission_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "869 任務通訊 · horde mode failed a",
+      "url": "/darktide/zh-tw/mission-vox/horde_mode_failed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "872 任務通訊 · horde new wave start post upgrade a",
+      "url": "/darktide/zh-tw/mission-vox/horde_new_wave_start_post_upgrade_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "875 任務通訊 · horde objective a",
+      "url": "/darktide/zh-tw/mission-vox/horde_objective_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "877 任務通訊 · horde objective reminder a",
+      "url": "/darktide/zh-tw/mission-vox/horde_objective_reminder_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "880 任務通訊 · horde open gate a",
+      "url": "/darktide/zh-tw/mission-vox/horde_open_gate_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "882 任務通訊 · horde restore power a",
+      "url": "/darktide/zh-tw/mission-vox/horde_restore_power_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "884 任務通訊 · horde resupply a",
+      "url": "/darktide/zh-tw/mission-vox/horde_resupply_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "887 任務通訊 · horde safe zone a",
+      "url": "/darktide/zh-tw/mission-vox/horde_safe_zone_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "888 任務通訊 · cmd luggable prompt a",
+      "url": "/darktide/zh-tw/mission-vox/cmd_luggable_prompt_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "892 任務通訊 · horde safe zone b",
+      "url": "/darktide/zh-tw/mission-vox/horde_safe_zone_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "895 任務通訊 · horde wave interstitial strain a",
+      "url": "/darktide/zh-tw/mission-vox/horde_wave_interstitial_strain_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/mortis-trials/gameplay/",
+      "title": "898 任務通訊 · horde wave interstitial voices a",
+      "url": "/darktide/zh-tw/mission-vox/horde_wave_interstitial_voices_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/mortis-trials/gameplay/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

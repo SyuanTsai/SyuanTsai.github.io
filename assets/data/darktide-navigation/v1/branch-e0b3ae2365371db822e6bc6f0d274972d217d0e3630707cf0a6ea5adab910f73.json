@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "一般戰役任務",
+    "url": "/darktide/mission-vox/campaign/page-003/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "101 任務通訊 · mission raid den elevator a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_den_elevator_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "102 任務通訊 · mission raid city view a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_city_view_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "103 任務通訊 · mission raid den entrance a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_den_entrance_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "104 任務通訊 · mission raid den first event start a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_den_first_event_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "105 任務通訊 · mission raid den gas a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_den_gas_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "106 任務通訊 · mission raid den hurry a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_den_hurry_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "107 任務通訊 · mission raid den inside a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_den_inside_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "108 任務通訊 · mission raid den locked door a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_den_locked_door_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "109 任務通訊 · mission core event 01 complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_01_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "110 任務通訊 · mission core event 01 faulty widget a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_01_faulty_widget_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "111 任務通訊 · mission core event 01 faulty widget blown a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_01_faulty_widget_blown_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "112 任務通訊 · mission core event 01 faulty widget fixed a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_01_faulty_widget_fixed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "113 任務通訊 · mission core event 02 almost done a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_02_almost_done_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "114 任務通訊 · mission core event 02 briefing a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_02_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "115 任務通訊 · mission core event 02 complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_02_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "116 任務通訊 · mission core event 02 good start a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_02_good_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "117 任務通訊 · mission core event 02 smash a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_02_smash_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "118 任務通訊 · mission core event 02 widget not working a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_02_widget_not_working_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "119 任務通訊 · mission core dead machine 01 b",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_dead_machine_01_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "120 任務通訊 · mission core event 03 agnostic a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_03_agnostic_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "121 任務通訊 · mission core event 03 batteries a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_03_batteries_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "122 任務通訊 · mission core event 03 briefing b",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_03_briefing_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "123 任務通訊 · mission core event 03 cables a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_03_cables_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "124 任務通訊 · mission core event 03 calibrate a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_03_calibrate_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "125 任務通訊 · mission core event 03 end a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_03_end_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "126 任務通訊 · mission core event 03 objective complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_event_03_objective_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "127 任務通訊 · mission core objective 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_objective_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "128 任務通訊 · mission core dead machine 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_dead_machine_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "129 任務通訊 · mission core objective 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_objective_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "130 任務通訊 · mission core platform conversation 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_platform_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "131 任務通訊 · mission core platform conversation 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_platform_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "132 任務通訊 · mission core elevator conversation 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_elevator_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "133 任務通訊 · mission core platform conversation 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_platform_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "134 任務通訊 · mission core platform hurry a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_platform_hurry_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "135 任務通訊 · mission core platform idle a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_platform_idle_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "136 任務通訊 · mission core safe zone hurry along a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_safe_zone_hurry_along_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "137 任務通訊 · mission core safe zone optional 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_safe_zone_optional_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "138 任務通訊 · mission core safe zone optional 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_safe_zone_optional_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "139 任務通訊 · mission core safe zone optional 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_safe_zone_optional_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "140 任務通訊 · mission core short conversation 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "141 任務通訊 · mission core short conversation 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "142 任務通訊 · mission core short conversation 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "143 任務通訊 · mission core elevator conversation 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_elevator_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "144 任務通訊 · mission core short conversation 04 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "145 任務通訊 · mission core short conversation 05 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "146 任務通訊 · mission core short conversation 06 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "147 任務通訊 · mission core short conversation 07 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "148 任務通訊 · mission core short conversation 08 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "149 任務通訊 · mission core short conversation 09 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/mission-vox/campaign/page-003/",
+      "title": "150 任務通訊 · mission core short conversation 10 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_core_short_conversation_10_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/campaign/page-003/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

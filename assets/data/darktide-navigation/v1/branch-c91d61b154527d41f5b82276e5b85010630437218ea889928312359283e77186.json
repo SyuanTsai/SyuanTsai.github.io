@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/hub-conversation/",
+    "title": "艦內閒談",
+    "url": "/darktide/hub-conversation/page-003/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 6,
+    "parent": "/darktide/",
+    "title": "艦內閒談",
+    "url": "/darktide/hub-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "101 艦內閒談 · oval hub soldier exchange male e",
+      "url": "/darktide/zh-tw/hub-conversation/oval_hub_soldier_exchange_male_e/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "102 艦內閒談 · oval hub soldier exchange male f",
+      "url": "/darktide/zh-tw/hub-conversation/oval_hub_soldier_exchange_male_f/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "103 艦內閒談 · oval hub soldier exchange male g",
+      "url": "/darktide/zh-tw/hub-conversation/oval_hub_soldier_exchange_male_g/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "104 艦內閒談 · pilot distance",
+      "url": "/darktide/zh-tw/hub-conversation/pilot_distance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "105 艦內閒談 · prologue hub go mission board a",
+      "url": "/darktide/zh-tw/hub-conversation/prologue_hub_go_mission_board_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "106 艦內閒談 · prologue hub go mission board b",
+      "url": "/darktide/zh-tw/hub-conversation/prologue_hub_go_mission_board_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "107 艦內閒談 · contract vendor goodbye dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/contract_vendor_goodbye_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "108 艦內閒談 · prologue hub go mission board c",
+      "url": "/darktide/zh-tw/hub-conversation/prologue_hub_go_mission_board_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "109 艦內閒談 · purser goodbye dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/purser_goodbye_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "110 艦內閒談 · purser goodbye likes character",
+      "url": "/darktide/zh-tw/hub-conversation/purser_goodbye_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "111 艦內閒談 · purser purchase",
+      "url": "/darktide/zh-tw/hub-conversation/purser_purchase/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "112 艦內閒談 · reject npc goodbye a",
+      "url": "/darktide/zh-tw/hub-conversation/reject_npc_goodbye_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "113 艦內閒談 · reject npc hub interact a",
+      "url": "/darktide/zh-tw/hub-conversation/reject_npc_hub_interact_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "114 艦內閒談 · reject npc purchase a",
+      "url": "/darktide/zh-tw/hub-conversation/reject_npc_purchase_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "115 艦內閒談 · contract vendor goodbye likes character",
+      "url": "/darktide/zh-tw/hub-conversation/contract_vendor_goodbye_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "116 艦內閒談 · contract vendor purchase a",
+      "url": "/darktide/zh-tw/hub-conversation/contract_vendor_purchase_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "117 艦內閒談 · contract vendor replacing task",
+      "url": "/darktide/zh-tw/hub-conversation/contract_vendor_replacing_task/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "118 艦內閒談 · shipmistress hub announcement pa",
+      "url": "/darktide/zh-tw/hub-conversation/shipmistress_hub_announcement_pa/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "119 艦內閒談 · shipmistress hub announcement vox",
+      "url": "/darktide/zh-tw/hub-conversation/shipmistress_hub_announcement_vox/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "120 艦內閒談 · southwark hub conversation 01 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "121 艦內閒談 · southwark hub conversation 02 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "122 艦內閒談 · southwark hub conversation 03 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "123 艦內閒談 · contract vendor servitor purchase b",
+      "url": "/darktide/zh-tw/hub-conversation/contract_vendor_servitor_purchase_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "124 艦內閒談 · southwark hub conversation 04 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "125 艦內閒談 · southwark hub conversation 05 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "126 艦內閒談 · southwark hub conversation 06 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "127 艦內閒談 · southwark hub conversation 07 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "128 艦內閒談 · southwark hub conversation 08 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "129 艦內閒談 · contract vendor setting contract",
+      "url": "/darktide/zh-tw/hub-conversation/contract_vendor_setting_contract/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "130 艦內閒談 · southwark hub conversation 09 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "131 艦內閒談 · southwark hub conversation 10 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "132 艦內閒談 · southwark hub conversation 11 a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "133 艦內閒談 · southwark hub first greeting launch a",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_first_greeting_launch_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "134 艦內閒談 · southwark hub first greeting launch b",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_first_greeting_launch_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "135 艦內閒談 · crafting complete",
+      "url": "/darktide/zh-tw/hub-conversation/crafting_complete/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "136 艦內閒談 · southwark hub first greeting launch c",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_first_greeting_launch_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "137 艦內閒談 · southwark hub first greeting launch d",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_first_greeting_launch_d/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "138 艦內閒談 · southwark hub first greeting launch e",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_first_greeting_launch_e/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "139 艦內閒談 · southwark hub first greeting launch f",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_first_greeting_launch_f/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "140 艦內閒談 · southwark hub first greeting launch g",
+      "url": "/darktide/zh-tw/hub-conversation/southwark_hub_first_greeting_launch_g/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "141 艦內閒談 · tech priest distance dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/tech_priest_distance_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "142 艦內閒談 · tech priest distance likes character",
+      "url": "/darktide/zh-tw/hub-conversation/tech_priest_distance_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "143 艦內閒談 · tech priest goodbye dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/tech_priest_goodbye_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "144 艦內閒談 · tech priest goodbye likes character",
+      "url": "/darktide/zh-tw/hub-conversation/tech_priest_goodbye_likes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "145 艦內閒談 · uxbridge hub heresy greeting a",
+      "url": "/darktide/zh-tw/hub-conversation/uxbridge_hub_heresy_greeting_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "146 艦內閒談 · uxbridge hub heresy greeting b",
+      "url": "/darktide/zh-tw/hub-conversation/uxbridge_hub_heresy_greeting_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "147 艦內閒談 · uxbridge hub heresy greeting c",
+      "url": "/darktide/zh-tw/hub-conversation/uxbridge_hub_heresy_greeting_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "148 艦內閒談 · crafting complete dislikes character",
+      "url": "/darktide/zh-tw/hub-conversation/crafting_complete_dislikes_character/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "149 艦內閒談 · barber hello",
+      "url": "/darktide/zh-tw/hub-conversation/barber_hello/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/hub-conversation/page-003/",
+      "title": "150 艦內閒談 · crafting complete likes character",
+      "url": "/darktide/zh-tw/hub-conversation/crafting_complete_likes_character/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/hub-conversation/page-003/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

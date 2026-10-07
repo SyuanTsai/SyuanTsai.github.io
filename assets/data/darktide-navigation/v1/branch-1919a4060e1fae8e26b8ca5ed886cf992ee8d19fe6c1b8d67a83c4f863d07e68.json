@@ -1,0 +1,77 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/mission-vox/",
+    "title": "Mortis Trials (Zorin)",
+    "url": "/darktide/en/mission-vox/mortis-trials/characters/zorin/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 4,
+    "parent": "/darktide/en/",
+    "title": "Mission vox",
+    "url": "/darktide/en/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/zorin/",
+      "title": "730 Mission vox · story echo marshal 04 a",
+      "url": "/darktide/en/mission-vox/story_echo_marshal_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/zorin/",
+      "title": "732 Mission vox · story echo marshal 05 a",
+      "url": "/darktide/en/mission-vox/story_echo_marshal_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/zorin/",
+      "title": "733 Mission vox · story echo marshal 06 a",
+      "url": "/darktide/en/mission-vox/story_echo_marshal_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/zorin/",
+      "title": "735 Mission vox · story echo marshal 07 a",
+      "url": "/darktide/en/mission-vox/story_echo_marshal_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/zorin/",
+      "title": "736 Mission vox · story echo marshal 08 a",
+      "url": "/darktide/en/mission-vox/story_echo_marshal_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/zorin/",
+      "title": "896 Mortis Trials: Zorin Echo 01",
+      "url": "/darktide/en/mission-vox/story_echo_marshal_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/zorin/",
+      "title": "897 Mission vox · story echo marshal 02 a",
+      "url": "/darktide/en/mission-vox/story_echo_marshal_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/mission-vox/mortis-trials/characters/zorin/",
+      "title": "899 Mission vox · story echo marshal 03 a",
+      "url": "/darktide/en/mission-vox/story_echo_marshal_03_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/mission-vox/mortis-trials/characters/zorin/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

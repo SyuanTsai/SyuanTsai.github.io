@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-021/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1001 玩家閒談 · adamant male c zealot bonding conversation 59 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_zealot_bonding_conversation_59_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1002 玩家閒談 · adamant to adamant bonding conversation 107 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_107_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1003 玩家閒談 · adamant to adamant bonding conversation 108 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_108_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1004 玩家閒談 · adamant to adamant bonding conversation 110 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_110_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1005 玩家閒談 · adamant to adamant bonding conversation 81 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_81_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1006 玩家閒談 · adamant male c ogryn bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1007 玩家閒談 · adamant to adamant bonding conversation 82 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_82_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1008 玩家閒談 · adamant to adamant bonding conversation 84 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_84_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1009 玩家閒談 · adamant to adamant bonding conversation 85 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_85_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1010 玩家閒談 · adamant to adamant bonding conversation 87 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_87_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1011 玩家閒談 · adamant to adamant bonding conversation 88 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_88_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1012 玩家閒談 · adamant to adamant bonding conversation 89 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_89_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1013 玩家閒談 · adamant to adamant bonding conversation 90 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_90_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1014 玩家閒談 · adamant to adamant bonding conversation 92 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_92_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1015 玩家閒談 · adamant male c ogryn bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1016 玩家閒談 · adamant to adamant bonding conversation 93 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_93_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1017 玩家閒談 · adamant to adamant bonding conversation 94 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_94_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1018 玩家閒談 · adamant to adamant bonding conversation 95 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_to_adamant_bonding_conversation_95_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1019 玩家閒談 · broker male b adamant bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_b_adamant_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1020 玩家閒談 · adamant male c ogryn bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1021 玩家閒談 · adamant male c ogryn bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1022 玩家閒談 · adamant male c ogryn bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1023 玩家閒談 · adamant male c ogryn bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1024 玩家閒談 · adamant male c ogryn bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1025 玩家閒談 · adamant male c ogryn bonding conversation 31 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1026 玩家閒談 · adamant male c ogryn bonding conversation 32 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1027 玩家閒談 · adamant male c ogryn bonding conversation 33 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1028 玩家閒談 · adamant male c ogryn bonding conversation 34 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1029 玩家閒談 · adamant male c ogryn bonding conversation 35 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1030 玩家閒談 · adamant male c ogryn bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1031 玩家閒談 · adamant male c ogryn bonding conversation 36 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1032 玩家閒談 · adamant male c ogryn bonding conversation 37 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_37_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1033 玩家閒談 · adamant male c ogryn bonding conversation 38 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_38_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1034 玩家閒談 · adamant male c ogryn bonding conversation 39 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_39_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1035 玩家閒談 · adamant male c ogryn bonding conversation 40 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_40_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1036 玩家閒談 · adamant male c psyker bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_psyker_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1037 玩家閒談 · adamant male c psyker bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_psyker_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1038 玩家閒談 · adamant male c psyker bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_psyker_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1039 玩家閒談 · adamant male c psyker bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_psyker_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1040 玩家閒談 · adamant male c psyker bonding conversation 07 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_psyker_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1041 玩家閒談 · adamant male c ogryn bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_ogryn_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1042 玩家閒談 · adamant male c psyker bonding conversation 08 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_psyker_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1043 玩家閒談 · adamant male c psyker bonding conversation 10 a",
+      "url": "/darktide/zh-tw/player-conversation/adamant_male_c_psyker_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1044 玩家閒談 · combat pause limited broker a 08 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_a_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1045 玩家閒談 · combat pause limited broker a 09 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_a_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1046 玩家閒談 · combat pause limited broker a 10 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_a_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1047 玩家閒談 · combat pause quirk broker a trait 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_a_trait_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1048 玩家閒談 · combat pause limited broker a 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_a_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1049 玩家閒談 · combat pause quirk broker a trait 08 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_quirk_broker_a_trait_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-021/",
+      "title": "1050 玩家閒談 · combat pause limited broker a 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_limited_broker_a_03_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-021/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

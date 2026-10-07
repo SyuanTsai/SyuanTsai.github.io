@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-vo/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/page-010/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 9,
+    "parent": "/darktide/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "451 玩家呼喊與回應 · ranged grenade desc a broker blitz",
+      "url": "/darktide/zh-tw/player-vo/ranged_grenade_desc_a_broker_blitz/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "452 玩家呼喊與回應 · combat ability tutorial generic desc a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_generic_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "453 玩家呼喊與回應 · ranged grenade desc a maniac blitz",
+      "url": "/darktide/zh-tw/player-vo/ranged_grenade_desc_a_maniac_blitz/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "454 玩家呼喊與回應 · ranged suppression desc a",
+      "url": "/darktide/zh-tw/player-vo/ranged_suppression_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "455 玩家呼喊與回應 · reviving tutorial desc a",
+      "url": "/darktide/zh-tw/player-vo/reviving_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "456 玩家呼喊與回應 · sprint slide desc a",
+      "url": "/darktide/zh-tw/player-vo/sprint_slide_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "457 玩家呼喊與回應 · tagging desc a",
+      "url": "/darktide/zh-tw/player-vo/tagging_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "458 玩家呼喊與回應 · tg advanced training end",
+      "url": "/darktide/zh-tw/player-vo/tg_advanced_training_end/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "459 玩家呼喊與回應 · tg armour",
+      "url": "/darktide/zh-tw/player-vo/tg_armour/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "460 玩家呼喊與回應 · tg attack chains",
+      "url": "/darktide/zh-tw/player-vo/tg_attack_chains/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "461 玩家呼喊與回應 · tg corruption",
+      "url": "/darktide/zh-tw/player-vo/tg_corruption/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "462 玩家呼喊與回應 · tg dodge",
+      "url": "/darktide/zh-tw/player-vo/tg_dodge/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "463 玩家呼喊與回應 · combat ability tutorial ogryn 1 desc a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_ogryn_1_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "464 玩家呼喊與回應 · tg grenades",
+      "url": "/darktide/zh-tw/player-vo/tg_grenades/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "465 玩家呼喊與回應 · tg health and ammo",
+      "url": "/darktide/zh-tw/player-vo/tg_health_and_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "466 玩家呼喊與回應 · tg health station",
+      "url": "/darktide/zh-tw/player-vo/tg_health_station/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "467 玩家呼喊與回應 · tg melee lock",
+      "url": "/darktide/zh-tw/player-vo/tg_melee_lock/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "468 玩家呼喊與回應 · tg psyker ability",
+      "url": "/darktide/zh-tw/player-vo/tg_psyker_ability/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "469 玩家呼喊與回應 · tg push",
+      "url": "/darktide/zh-tw/player-vo/tg_push/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "470 玩家呼喊與回應 · tg push follow",
+      "url": "/darktide/zh-tw/player-vo/tg_push_follow/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "471 玩家呼喊與回應 · tg reviving",
+      "url": "/darktide/zh-tw/player-vo/tg_reviving/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "472 玩家呼喊與回應 · tg special attack",
+      "url": "/darktide/zh-tw/player-vo/tg_special_attack/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "473 玩家呼喊與回應 · tg sprint slide",
+      "url": "/darktide/zh-tw/player-vo/tg_sprint_slide/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "474 玩家呼喊與回應 · combat ability tutorial ogryn desc a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_ogryn_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "475 玩家呼喊與回應 · tg suppression",
+      "url": "/darktide/zh-tw/player-vo/tg_suppression/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "476 玩家呼喊與回應 · tg tagging",
+      "url": "/darktide/zh-tw/player-vo/tg_tagging/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "477 玩家呼喊與回應 · tg toughness",
+      "url": "/darktide/zh-tw/player-vo/tg_toughness/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "478 玩家呼喊與回應 · tg training end",
+      "url": "/darktide/zh-tw/player-vo/tg_training_end/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "479 玩家呼喊與回應 · tg welcome",
+      "url": "/darktide/zh-tw/player-vo/tg_welcome/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "480 玩家呼喊與回應 · toughness damage tutorial desc a",
+      "url": "/darktide/zh-tw/player-vo/toughness_damage_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "481 玩家呼喊與回應 · toughness tutorial 2 desc a",
+      "url": "/darktide/zh-tw/player-vo/toughness_tutorial_2_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "482 玩家呼喊與回應 · toughness tutorial 2 desc b",
+      "url": "/darktide/zh-tw/player-vo/toughness_tutorial_2_desc_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "483 玩家呼喊與回應 · toughness tutorial desc a",
+      "url": "/darktide/zh-tw/player-vo/toughness_tutorial_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "484 玩家呼喊與回應 · training grounds advanced training desc a",
+      "url": "/darktide/zh-tw/player-vo/training_grounds_advanced_training_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "485 玩家呼喊與回應 · combat ability tutorial psyker 3 desc a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_psyker_3_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "486 玩家呼喊與回應 · training grounds training end desc a",
+      "url": "/darktide/zh-tw/player-vo/training_grounds_training_end_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "487 玩家呼喊與回應 · weapon special desc a",
+      "url": "/darktide/zh-tw/player-vo/weapon_special_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "488 玩家呼喊與回應 · weapon special desc a broker",
+      "url": "/darktide/zh-tw/player-vo/weapon_special_desc_a_broker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "489 玩家呼喊與回應 · combat ability tutorial psyker desc a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_psyker_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "490 玩家呼喊與回應 · combat ability tutorial veteran 3 desc a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_veteran_3_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "491 玩家呼喊與回應 · combat ability tutorial zealot 3 desc alt1 a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_zealot_3_desc_alt1_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "492 玩家呼喊與回應 · armor desc a",
+      "url": "/darktide/zh-tw/player-vo/armor_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "493 玩家呼喊與回應 · combat ability tutorial zealot 3 desc alt2 a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_zealot_3_desc_alt2_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "494 玩家呼喊與回應 · combat ability tutorial zealot 3 desc alt3 a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_zealot_3_desc_alt3_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "495 玩家呼喊與回應 · combat ability tutorial zealot 3 desc alt4 a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_zealot_3_desc_alt4_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "496 玩家呼喊與回應 · combat ability tutorial zealot 3 desc alt5 a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_zealot_3_desc_alt5_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "497 玩家呼喊與回應 · combat ability tutorial zealot 3 desc alt6 a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_zealot_3_desc_alt6_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "498 玩家呼喊與回應 · combat ability tutorial zealot 3 desc alt7 a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_zealot_3_desc_alt7_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "499 玩家呼喊與回應 · combat ability tutorial zealot desc a",
+      "url": "/darktide/zh-tw/player-vo/combat_ability_tutorial_zealot_desc_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-vo/page-010/",
+      "title": "500 玩家呼喊與回應 · corruption tutorial desc a",
+      "url": "/darktide/zh-tw/player-vo/corruption_tutorial_desc_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-vo/page-010/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

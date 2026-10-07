@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-vo/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/page-006/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/en/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "251 Player callouts and replies · psyker start revive ogryn",
+      "url": "/darktide/en/player-vo/psyker_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "252 Player callouts and replies · psyker start revive psyker",
+      "url": "/darktide/en/player-vo/psyker_start_revive_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "253 Player callouts and replies · psyker start revive veteran",
+      "url": "/darktide/en/player-vo/psyker_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "254 Player callouts and replies · psyker start revive zealot",
+      "url": "/darktide/en/player-vo/psyker_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "255 Player callouts and replies · reload failed out of ammo",
+      "url": "/darktide/en/player-vo/reload_failed_out_of_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "256 Player callouts and replies · reloading",
+      "url": "/darktide/en/player-vo/reloading/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "257 Player callouts and replies · reloading empty",
+      "url": "/darktide/en/player-vo/reloading_empty/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "258 Player callouts and replies · response for cover me",
+      "url": "/darktide/en/player-vo/response_for_cover_me/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "259 Player callouts and replies · response for enemy kill monster",
+      "url": "/darktide/en/player-vo/response_for_enemy_kill_monster/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "260 Player callouts and replies · combat pause quirk health hog a",
+      "url": "/darktide/en/player-vo/combat_pause_quirk_health_hog_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "261 Player callouts and replies · response for info incoming enemies",
+      "url": "/darktide/en/player-vo/response_for_info_incoming_enemies/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "262 Player callouts and replies · ability ranger",
+      "url": "/darktide/en/player-vo/ability_ranger/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "263 Player callouts and replies · conversation combat beast of nurgle swallow a",
+      "url": "/darktide/en/player-vo/conversation_combat_beast_of_nurgle_swallow_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "264 Player callouts and replies · ability venting",
+      "url": "/darktide/en/player-vo/ability_venting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "265 Player callouts and replies · response rechargable for look at healthstation",
+      "url": "/darktide/en/player-vo/response_rechargable_for_look_at_healthstation/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "266 Player callouts and replies · seen barrel exploded a",
+      "url": "/darktide/en/player-vo/seen_barrel_exploded_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "267 Player callouts and replies · seen enemy beast of nurgle",
+      "url": "/darktide/en/player-vo/seen_enemy_beast_of_nurgle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "268 Player callouts and replies · seen enemy berserker",
+      "url": "/darktide/en/player-vo/seen_enemy_berserker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "269 Player callouts and replies · seen enemy bulwark",
+      "url": "/darktide/en/player-vo/seen_enemy_bulwark/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "270 Player callouts and replies · seen enemy daemonhost",
+      "url": "/darktide/en/player-vo/seen_enemy_daemonhost/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "271 Player callouts and replies · conversation combat chaos spawn chew a",
+      "url": "/darktide/en/player-vo/conversation_combat_chaos_spawn_chew_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "272 Player callouts and replies · seen enemy executor",
+      "url": "/darktide/en/player-vo/seen_enemy_executor/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "273 Player callouts and replies · seen enemy grenadier",
+      "url": "/darktide/en/player-vo/seen_enemy_grenadier/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "274 Player callouts and replies · seen enemy group far range shooting behind cover",
+      "url": "/darktide/en/player-vo/seen_enemy_group_far_range_shooting_behind_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "275 Player callouts and replies · seen enemy heavy gunner",
+      "url": "/darktide/en/player-vo/seen_enemy_heavy_gunner/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "276 Player callouts and replies · seen enemy houndmaster",
+      "url": "/darktide/en/player-vo/seen_enemy_houndmaster/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "277 Player callouts and replies · seen enemy mutant charger",
+      "url": "/darktide/en/player-vo/seen_enemy_mutant_charger/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "278 Player callouts and replies · seen enemy poxwalker bomber",
+      "url": "/darktide/en/player-vo/seen_enemy_poxwalker_bomber/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "279 Player callouts and replies · seen enemy scab flamer",
+      "url": "/darktide/en/player-vo/seen_enemy_scab_flamer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "280 Player callouts and replies · seen enemy shocktrooper",
+      "url": "/darktide/en/player-vo/seen_enemy_shocktrooper/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "281 Player callouts and replies · seen enemy sniper",
+      "url": "/darktide/en/player-vo/seen_enemy_sniper/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "282 Player callouts and replies · seen enemy tox flamer",
+      "url": "/darktide/en/player-vo/seen_enemy_tox_flamer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "283 Player callouts and replies · seen netgunner",
+      "url": "/darktide/en/player-vo/seen_netgunner/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "284 Player callouts and replies · surrounded",
+      "url": "/darktide/en/player-vo/surrounded/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "285 Player callouts and replies · throwing grenade",
+      "url": "/darktide/en/player-vo/throwing_grenade/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "286 Player callouts and replies · veteran start revive ogryn",
+      "url": "/darktide/en/player-vo/veteran_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "287 Player callouts and replies · veteran start revive veteran",
+      "url": "/darktide/en/player-vo/veteran_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "288 Player callouts and replies · veteran start revive zealot",
+      "url": "/darktide/en/player-vo/veteran_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "289 Player callouts and replies · warning exploding barrel",
+      "url": "/darktide/en/player-vo/warning_exploding_barrel/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "290 Player callouts and replies · zealot start revive ogryn",
+      "url": "/darktide/en/player-vo/zealot_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "291 Player callouts and replies · zealot start revive veteran",
+      "url": "/darktide/en/player-vo/zealot_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "292 Player callouts and replies · zealot start revive zealot",
+      "url": "/darktide/en/player-vo/zealot_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "293 Player callouts and replies · cover me",
+      "url": "/darktide/en/player-vo/cover_me/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "294 Player callouts and replies · critical health",
+      "url": "/darktide/en/player-vo/critical_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "295 Player callouts and replies · deployed ammo crate",
+      "url": "/darktide/en/player-vo/deployed_ammo_crate/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "296 Player callouts and replies · alerted 2 enemy daemonhost",
+      "url": "/darktide/en/player-vo/alerted_2_enemy_daemonhost/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "297 Player callouts and replies · deployed ammo crate ogryn low on ammo",
+      "url": "/darktide/en/player-vo/deployed_ammo_crate_ogryn_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "298 Player callouts and replies · deployed ammo crate psyker low on ammo",
+      "url": "/darktide/en/player-vo/deployed_ammo_crate_psyker_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "299 Player callouts and replies · deployed ammo crate veteran low on ammo",
+      "url": "/darktide/en/player-vo/deployed_ammo_crate_veteran_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-vo/page-006/",
+      "title": "300 Player callouts and replies · deployed ammo crate zealot low on ammo",
+      "url": "/darktide/en/player-vo/deployed_ammo_crate_zealot_low_on_ammo/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-vo/page-006/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

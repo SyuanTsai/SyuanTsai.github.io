@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-072/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3551 Player conversations · bonding conversation metropolitan delusion a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_delusion_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3552 Player conversations · bonding conversation metropolitan entrails a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_entrails_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3553 Player conversations · bonding conversation metropolitan hobby a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_hobby_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3554 Player conversations · bonding conversation metropolitan loom shadow a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_loom_shadow_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3555 Player conversations · adamant female a psyker bonding conversation 10 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_psyker_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3556 Player conversations · bonding conversation metropolitan pray with zola a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_pray_with_zola_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3557 Player conversations · bonding conversation metropolitan philosophy a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_philosophy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3558 Player conversations · bonding conversation metropolitan sefoni a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_sefoni_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3559 Player conversations · bonding conversation metropolitan small brain a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_small_brain_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3560 Player conversations · bonding conversation metropolitan tall a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_tall_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3561 Player conversations · adamant female b psyker bonding conversation 16 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_psyker_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3562 Player conversations · bonding conversation metropolitan tancred a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_tancred_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3563 Player conversations · bonding conversation metropolitan tired a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_tired_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3564 Player conversations · bonding conversation metropolitan very hurt a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_very_hurt_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3565 Player conversations · bonding conversation round three voices a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_round_three_voices_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3566 Player conversations · adamant female b psyker bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_psyker_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3567 Player conversations · adamant female b psyker bonding conversation 20 a",
+      "url": "/darktide/en/player-conversation/adamant_female_b_psyker_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3568 Player conversations · adamant female c psyker bonding conversation 14 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_psyker_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3569 Player conversations · adamant female c psyker bonding conversation 15 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_psyker_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3570 Player conversations · adamant male a psyker bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3571 Player conversations · adamant female a psyker bonding conversation 17 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_psyker_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3572 Player conversations · adamant male b psyker bonding conversation 17 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3573 Player conversations · adamant male b psyker bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3574 Player conversations · adamant male b psyker bonding conversation 20 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3575 Player conversations · bonding conversation hammersmith aggressive a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_aggressive_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3576 Player conversations · bonding conversation hammersmith blasphemy a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_blasphemy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3577 Player conversations · bonding conversation hammersmith dreams a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_dreams_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3578 Player conversations · bonding conversation hammersmith fun a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_fun_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3579 Player conversations · bonding conversation hammersmith judgement a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_judgement_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3580 Player conversations · adamant female a psyker bonding conversation 18 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_psyker_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3581 Player conversations · bonding conversation hammersmith killed a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_killed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3582 Player conversations · adamant female a psyker bonding conversation 16 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_psyker_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3583 Player conversations · bonding conversation hammersmith new people a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_new_people_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3584 Player conversations · bonding conversation hammersmith safer a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_safer_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3585 Player conversations · bonding conversation hammersmith tall a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_tall_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3586 Player conversations · bonding conversation hammersmith the night a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_hammersmith_the_night_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3587 Player conversations · bonding conversation home a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_home_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3588 Player conversations · bonding conversation metropolitan camellid a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_camellid_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3589 Player conversations · adamant female a psyker bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_psyker_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3590 Player conversations · bonding conversation metropolitan centre attention a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_centre_attention_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3591 Player conversations · bonding conversation metropolitan compelling a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_compelling_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3592 Player conversations · bonding conversation metropolitan disappear a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_disappear_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3593 Player conversations · bonding conversation metropolitan fly a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_fly_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3594 Player conversations · bonding conversation metropolitan influence a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_influence_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3595 Player conversations · adamant female a psyker bonding conversation 20 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_psyker_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3596 Player conversations · bonding conversation metropolitan locked door a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_locked_door_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3597 Player conversations · bonding conversation metropolitan mallard a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_mallard_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3598 Player conversations · bonding conversation metropolitan mindless a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_mindless_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3599 Player conversations · bonding conversation metropolitan peace a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_peace_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-072/",
+      "title": "3600 Player conversations · bonding conversation metropolitan smile a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_smile_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-072/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

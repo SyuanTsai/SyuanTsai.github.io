@@ -1,0 +1,336 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "死神試煉（莫羅角色）",
+    "url": "/darktide/mission-vox/mortis-trials/characters/morrow/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "738 任務通訊 · story echo morrow 01 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "739 任務通訊 · story echo morrow 02 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "740 任務通訊 · story echo morrow 03 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "742 任務通訊 · story echo morrow 04 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "743 任務通訊 · story echo morrow 05 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "745 任務通訊 · story echo morrow 06 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "746 任務通訊 · story echo morrow 07 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "747 任務通訊 · story echo morrow 07 c",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_07_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "749 任務通訊 · story echo morrow 08 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "751 任務通訊 · story echo morrow 09 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "752 任務通訊 · story echo morrow 10 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "753 任務通訊 · story echo morrow 11 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "754 任務通訊 · story echo morrow 12 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "755 任務通訊 · story echo morrow 13 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "756 任務通訊 · story echo morrow 13a a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_13a_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "757 任務通訊 · story echo morrow 15 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "758 任務通訊 · story echo morrow 16 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "760 任務通訊 · story echo morrow 17 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "761 任務通訊 · story echo morrow 18 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "762 任務通訊 · story echo morrow 19 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "763 任務通訊 · story echo morrow 20 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "764 任務通訊 · story echo morrow 21 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "765 任務通訊 · story echo morrow 22 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "766 任務通訊 · story echo morrow 23 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "767 任務通訊 · story echo morrow 24 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "768 任務通訊 · story echo morrow 25 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "769 任務通訊 · story echo morrow 26 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "770 任務通訊 · story echo morrow 27 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "772 任務通訊 · story echo morrow 28 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "773 任務通訊 · story echo morrow 29 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "774 任務通訊 · story echo morrow 30 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "775 任務通訊 · story echo morrow 31 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "777 任務通訊 · story echo morrow 32 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "778 任務通訊 · story echo morrow 33 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "779 任務通訊 · story echo morrow 34 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "780 任務通訊 · story echo morrow 35 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "781 任務通訊 · story echo morrow 36 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "783 任務通訊 · story echo morrow 39 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_39_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "784 任務通訊 · story echo morrow 40 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_40_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "785 任務通訊 · story echo morrow 41 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_41_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "786 任務通訊 · story echo morrow 42 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_42_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "787 任務通訊 · story echo morrow 43 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_43_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "788 任務通訊 · story echo morrow 44 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_44_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "789 任務通訊 · story echo morrow 45 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_45_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/morrow/",
+      "title": "790 任務通訊 · story echo morrow 46 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_morrow_46_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/mortis-trials/characters/morrow/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

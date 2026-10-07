@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-040/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1951 Player conversations · broker male c veteran bonding conversation 27 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_veteran_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1952 Player conversations · broker male c veteran bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_veteran_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1953 Player conversations · broker male c veteran bonding conversation 29 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_veteran_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1954 Player conversations · broker male c veteran bonding conversation 30 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_veteran_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1955 Player conversations · broker male c zealot bonding conversation 01 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1956 Player conversations · broker male c adamant bonding conversation 13 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1957 Player conversations · broker male c zealot bonding conversation 02 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1958 Player conversations · broker male c zealot bonding conversation 03 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1959 Player conversations · broker male c zealot bonding conversation 04 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1960 Player conversations · broker male c zealot bonding conversation 05 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1961 Player conversations · broker male c zealot bonding conversation 06 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1962 Player conversations · broker male c zealot bonding conversation 07 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1963 Player conversations · broker male c zealot bonding conversation 08 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1964 Player conversations · broker male c zealot bonding conversation 09 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1965 Player conversations · broker male c zealot bonding conversation 10 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1966 Player conversations · broker male c zealot bonding conversation 11 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1967 Player conversations · broker male c adamant bonding conversation 14 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1968 Player conversations · broker male c zealot bonding conversation 12 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1969 Player conversations · broker male c zealot bonding conversation 13 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1970 Player conversations · broker male c zealot bonding conversation 14 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1971 Player conversations · broker male c zealot bonding conversation 15 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1972 Player conversations · broker male c zealot bonding conversation 17 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1973 Player conversations · broker male c zealot bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1974 Player conversations · broker male c zealot bonding conversation 20 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1975 Player conversations · broker male c zealot bonding conversation 21 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1976 Player conversations · broker male c zealot bonding conversation 22 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1977 Player conversations · broker male c zealot bonding conversation 23 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1978 Player conversations · broker male c adamant bonding conversation 15 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1979 Player conversations · broker male c zealot bonding conversation 24 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1980 Player conversations · broker male c zealot bonding conversation 25 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1981 Player conversations · broker male c zealot bonding conversation 26 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1982 Player conversations · broker male c zealot bonding conversation 27 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1983 Player conversations · broker male c zealot bonding conversation 28 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1984 Player conversations · broker male c zealot bonding conversation 29 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1985 Player conversations · broker male c zealot bonding conversation 30 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1986 Player conversations · broker male c zealot bonding conversation 31 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1987 Player conversations · broker male c zealot bonding conversation 32 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1988 Player conversations · broker male c zealot bonding conversation 33 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1989 Player conversations · broker male c adamant bonding conversation 16 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1990 Player conversations · broker male c zealot bonding conversation 34 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1991 Player conversations · broker male c zealot bonding conversation 35 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1992 Player conversations · broker male c zealot bonding conversation 36 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_zealot_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1993 Player conversations · broker male c adamant bonding conversation 17 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1994 Player conversations · broker male c adamant bonding conversation 18 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1995 Player conversations · broker male c adamant bonding conversation 19 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1996 Player conversations · broker male c adamant bonding conversation 20 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1997 Player conversations · broker male c adamant bonding conversation 21 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1998 Player conversations · broker male c adamant bonding conversation 03 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "1999 Player conversations · broker male c adamant bonding conversation 22 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-040/",
+      "title": "2000 Player conversations · broker male c adamant bonding conversation 01 a",
+      "url": "/darktide/en/player-conversation/broker_male_c_adamant_bonding_conversation_01_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-040/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

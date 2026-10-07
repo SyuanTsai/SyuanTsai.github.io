@@ -1,0 +1,131 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "閃擊",
+      "url": "/darktide/skills/ogryn/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "光環",
+      "url": "/darktide/skills/ogryn/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "能力",
+      "url": "/darktide/skills/ogryn/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "鑰石",
+      "url": "/darktide/skills/ogryn/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "技能",
+      "url": "/darktide/skills/ogryn/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/ogryn/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/ogryn/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/ogryn/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 1,
+    "parent": "/darktide/skills/",
+    "title": "歐格林",
+    "titleEn": "Ogryn",
+    "url": "/darktide/skills/ogryn/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-0",
+    "kind": "skill-category",
+    "order": 0,
+    "parent": "/darktide/skills/ogryn/",
+    "title": "閃擊",
+    "url": "/darktide/skills/ogryn/#category-0"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/ogryn/#category-0",
+      "title": "投彈完畢！",
+      "titleEn": "Bombs Away!",
+      "url": "/darktide/skills/ogryn/bombs-away/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/ogryn/#category-0",
+      "title": "破片炸彈",
+      "titleEn": "Frag Bomb",
+      "url": "/darktide/skills/ogryn/frag-bomb/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/ogryn/#category-0",
+      "title": "投石問路",
+      "titleEn": "Big Friendly Rock",
+      "url": "/darktide/skills/ogryn/big-friendly-rock/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/ogryn/#category-0",
+      "title": "那下不算！",
+      "titleEn": "That One Didn't Count",
+      "url": "/darktide/skills/ogryn/that-one-didnt-count/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/ogryn/#category-0",
+      "title": "超巨量傷害箱",
+      "titleEn": "Bigger Box of Hurt",
+      "url": "/darktide/skills/ogryn/bigger-box-of-hurt/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/ogryn/#category-0",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

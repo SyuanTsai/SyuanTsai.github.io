@@ -1,0 +1,259 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-brief/",
+    "title": "任務簡報",
+    "url": "/darktide/mission-brief/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 4,
+    "parent": "/darktide/",
+    "title": "任務簡報",
+    "url": "/darktide/mission-brief/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-brief/",
+      "title": "01 任務簡報 · mission core briefing b",
+      "url": "/darktide/zh-tw/mission-brief/mission_core_briefing_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-brief/",
+      "title": "02 任務簡報 · mission core briefing c",
+      "url": "/darktide/zh-tw/mission-brief/mission_core_briefing_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-brief/",
+      "title": "03 任務簡報 · mission habs redux briefing b",
+      "url": "/darktide/zh-tw/mission-brief/mission_habs_redux_briefing_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-brief/",
+      "title": "04 任務簡報 · mission habs redux briefing c",
+      "url": "/darktide/zh-tw/mission-brief/mission_habs_redux_briefing_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-brief/",
+      "title": "05 任務簡報 · mission spillway briefing b",
+      "url": "/darktide/zh-tw/mission-brief/mission_spillway_briefing_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-brief/",
+      "title": "06 任務簡報 · mission spillway briefing c",
+      "url": "/darktide/zh-tw/mission-brief/mission_spillway_briefing_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-brief/",
+      "title": "07 任務簡報 · mission spillway briefing d",
+      "url": "/darktide/zh-tw/mission-brief/mission_spillway_briefing_d/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-brief/",
+      "title": "08 任務簡報 · mission core briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_core_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-brief/",
+      "title": "09 任務簡報 · mission enforcer briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_enforcer_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-brief/",
+      "title": "10 任務簡報 · mission forge briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_forge_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-brief/",
+      "title": "11 任務簡報 · mission habs redux briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_habs_redux_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-brief/",
+      "title": "12 任務簡報 · mission heresy briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_heresy_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-brief/",
+      "title": "13 任務簡報 · mission propaganda briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_propaganda_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-brief/",
+      "title": "14 任務簡報 · hub horde briefing a",
+      "url": "/darktide/zh-tw/mission-brief/hub_horde_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-brief/",
+      "title": "15 任務簡報 · mission raid briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_raid_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-brief/",
+      "title": "16 任務簡報 · mission rails briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_rails_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-brief/",
+      "title": "17 任務簡報 · mission resurgence brief a",
+      "url": "/darktide/zh-tw/mission-brief/mission_resurgence_brief_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-brief/",
+      "title": "18 任務簡報 · mission resurgence brief pre a",
+      "url": "/darktide/zh-tw/mission-brief/mission_resurgence_brief_pre_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-brief/",
+      "title": "19 任務簡報 · mission rise briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_rise_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-brief/",
+      "title": "20 任務簡報 · mission scavenge briefing one",
+      "url": "/darktide/zh-tw/mission-brief/mission_scavenge_briefing_one/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-brief/",
+      "title": "21 任務簡報 · mission spillway briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_spillway_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-brief/",
+      "title": "22 任務簡報 · mission station briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_station_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-brief/",
+      "title": "23 任務簡報 · mission archives brief a",
+      "url": "/darktide/zh-tw/mission-brief/mission_archives_brief_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-brief/",
+      "title": "24 任務簡報 · mission stockpile briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_stockpile_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-brief/",
+      "title": "25 任務簡報 · mission strain briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_strain_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-brief/",
+      "title": "26 任務簡報 · mission train briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_train_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-brief/",
+      "title": "27 任務簡報 · mission trenches briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_trenches_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-brief/",
+      "title": "28 任務簡報 · mission twins briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_twins_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-brief/",
+      "title": "29 任務簡報 · mission armoury briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_armoury_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-brief/",
+      "title": "30 任務簡報 · expeditions briefing alpha phase a",
+      "url": "/darktide/zh-tw/mission-brief/expeditions_briefing_alpha_phase_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-brief/",
+      "title": "31 任務簡報 · mission cargo briefing a",
+      "url": "/darktide/zh-tw/mission-brief/mission_cargo_briefing_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-brief/",
+      "title": "32 任務簡報 · mission cartel brief one",
+      "url": "/darktide/zh-tw/mission-brief/mission_cartel_brief_one/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-brief/",
+      "title": "33 任務簡報 · mission complex brief a",
+      "url": "/darktide/zh-tw/mission-brief/mission_complex_brief_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-brief/",
+      "title": "34 任務簡報 · mission cooling briefing one",
+      "url": "/darktide/zh-tw/mission-brief/mission_cooling_briefing_one/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-brief/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

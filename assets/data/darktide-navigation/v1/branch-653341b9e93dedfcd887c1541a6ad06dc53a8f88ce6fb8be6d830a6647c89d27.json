@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-014/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "651 Player conversations · adamant to adamant bonding conversation 09 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "652 Player conversations · adamant to adamant bonding conversation 10 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "653 Player conversations · adamant to adamant bonding conversation 21 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_21_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "654 Player conversations · adamant to adamant bonding conversation 22 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_22_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "655 Player conversations · adamant to adamant bonding conversation 23 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "656 Player conversations · adamant to adamant bonding conversation 24 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "657 Player conversations · adamant to adamant bonding conversation 25 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "658 Player conversations · adamant to adamant bonding conversation 31 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "659 Player conversations · adamant to adamant bonding conversation 32 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "660 Player conversations · adamant to adamant bonding conversation 33 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "661 Player conversations · adamant to adamant bonding conversation 34 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "662 Player conversations · adamant to adamant bonding conversation 35 a",
+      "url": "/darktide/en/player-conversation/adamant_to_adamant_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "663 Player conversations · adamant male a ogryn bonding conversation 01 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "664 Player conversations · adamant male a ogryn bonding conversation 32 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "665 Player conversations · adamant male a ogryn bonding conversation 33 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "666 Player conversations · adamant male a ogryn bonding conversation 34 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "667 Player conversations · adamant male a ogryn bonding conversation 36 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "668 Player conversations · adamant male a ogryn bonding conversation 37 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_37_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "669 Player conversations · adamant male a ogryn bonding conversation 39 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_39_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "670 Player conversations · adamant male a psyker bonding conversation 01 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "671 Player conversations · adamant male a ogryn bonding conversation 04 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "672 Player conversations · adamant male a psyker bonding conversation 02 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "673 Player conversations · adamant male a psyker bonding conversation 03 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "674 Player conversations · adamant male a psyker bonding conversation 06 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "675 Player conversations · adamant male a psyker bonding conversation 08 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "676 Player conversations · adamant male a psyker bonding conversation 11 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "677 Player conversations · adamant male a psyker bonding conversation 12 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "678 Player conversations · adamant male a psyker bonding conversation 13 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_13_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "679 Player conversations · adamant male a psyker bonding conversation 14 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_14_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "680 Player conversations · adamant male a psyker bonding conversation 15 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_15_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "681 Player conversations · adamant male a ogryn bonding conversation 05 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "682 Player conversations · adamant male a psyker bonding conversation 16 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_16_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "683 Player conversations · adamant male a psyker bonding conversation 17 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_17_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "684 Player conversations · adamant male a psyker bonding conversation 18 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_psyker_bonding_conversation_18_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "685 Player conversations · adamant male b psyker bonding conversation 31 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "686 Player conversations · adamant male b psyker bonding conversation 32 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "687 Player conversations · adamant male b psyker bonding conversation 33 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_33_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "688 Player conversations · adamant male b psyker bonding conversation 34 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "689 Player conversations · adamant male b psyker bonding conversation 35 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "690 Player conversations · adamant male b ogryn bonding conversation 11 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "691 Player conversations · adamant male b psyker bonding conversation 41 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_41_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "692 Player conversations · adamant male b psyker bonding conversation 42 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_42_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "693 Player conversations · adamant male b psyker bonding conversation 43 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_43_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "694 Player conversations · adamant male b psyker bonding conversation 44 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_44_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "695 Player conversations · adamant male b psyker bonding conversation 45 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_45_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "696 Player conversations · adamant male b psyker bonding conversation 51 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_51_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "697 Player conversations · adamant male b psyker bonding conversation 52 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_52_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "698 Player conversations · adamant male b psyker bonding conversation 53 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_53_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "699 Player conversations · adamant male b psyker bonding conversation 54 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_54_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-014/",
+      "title": "700 Player conversations · adamant male b psyker bonding conversation 55 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_psyker_bonding_conversation_55_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-014/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/psyker/",
+      "title": "閃擊",
+      "url": "/darktide/skills/psyker/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/psyker/",
+      "title": "光環",
+      "url": "/darktide/skills/psyker/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/psyker/",
+      "title": "能力",
+      "url": "/darktide/skills/psyker/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/psyker/",
+      "title": "鑰石",
+      "url": "/darktide/skills/psyker/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/psyker/",
+      "title": "技能",
+      "url": "/darktide/skills/psyker/#category-4"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/psyker/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/psyker/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 2,
+    "parent": "/darktide/skills/",
+    "title": "靈能者",
+    "titleEn": "Psyker",
+    "url": "/darktide/skills/psyker/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": false,
+    "id": "references",
+    "kind": "skill-category",
+    "order": 5,
+    "parent": "/darktide/skills/psyker/",
+    "title": "基礎效果與技術補充",
+    "url": "/darktide/skills/psyker/#references"
+  },
+  "items": [],
+  "key": "skill-category:/darktide/skills/psyker/#references",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

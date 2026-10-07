@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "一般戰役任務",
+    "url": "/darktide/mission-vox/campaign/page-014/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "651 任務通訊 · mission trenches second path stand back a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_second_path_stand_back_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "652 任務通訊 · mission trenches seventh interstitial a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_seventh_interstitial_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "653 任務通訊 · mission trenches cinematic intro a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_cinematic_intro_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "654 任務通訊 · mission trenches sixth interstitial a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_sixth_interstitial_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "655 任務通訊 · mission trenches skyfire a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_skyfire_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "656 任務通訊 · mission trenches boss arrives a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_boss_arrives_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "657 任務通訊 · mission trenches skyfire destroyed a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_skyfire_destroyed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "658 任務通訊 · mission trenches steelhead callout a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_callout_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "659 任務通訊 · mission trenches steelhead idle conv 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "660 任務通訊 · mission trenches steelhead idle conv 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "661 任務通訊 · mission trenches steelhead idle conv 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "662 任務通訊 · mission trenches steelhead idle conv 04 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "663 任務通訊 · mission trenches steelhead idle conv 05 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "664 任務通訊 · mission trenches steelhead idle conv 06 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "665 任務通訊 · mission trenches steelhead idle conv 07 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "666 任務通訊 · mission trenches steelhead idle conv 08 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "667 任務通訊 · mission trenches steelhead idle conv 09 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "668 任務通訊 · mission trenches steelhead idle conv 10 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_steelhead_idle_conv_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "669 任務通訊 · mission trenches third interstitial 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_third_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "670 任務通訊 · mission trenches third interstitial 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_third_interstitial_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "671 任務通訊 · mission trenches clear bastion a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_clear_bastion_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "672 任務通訊 · mission trenches extract a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_extract_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "673 任務通訊 · mission trenches fifth interstitial 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_fifth_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "674 任務通訊 · mission trenches fifth interstitial 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_fifth_interstitial_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "675 任務通訊 · mission trenches bridge blocked 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_trenches_bridge_blocked_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "676 任務通訊 · mission train first objective c",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_first_objective_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "677 任務通訊 · mission train first objective complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_first_objective_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "678 任務通訊 · mission train boss dead a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_boss_dead_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "679 任務通訊 · mission train first objective mid a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_first_objective_mid_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "680 任務通訊 · mission train first objective sighted a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_first_objective_sighted_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "681 任務通訊 · mission train fourth objective complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_fourth_objective_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "682 任務通訊 · mission train fourth objective sighted a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_fourth_objective_sighted_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "683 任務通訊 · mission train ogryn joy a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_ogryn_joy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "684 任務通訊 · mission train outro fail a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_outro_fail_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "685 任務通訊 · mission train outro success a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_outro_success_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "686 任務通訊 · mission train path blocked a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_path_blocked_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "687 任務通訊 · mission train cinematic intro a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_cinematic_intro_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "688 任務通訊 · mission train path blocked bypassed a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_path_blocked_bypassed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "689 任務通訊 · mission train second interstitial 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_second_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "690 任務通訊 · mission train second objective complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_second_objective_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "691 任務通訊 · mission train second objective mid a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_second_objective_mid_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "692 任務通訊 · mission train second objective sighted a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_second_objective_sighted_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "693 任務通訊 · mission train third objective complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_third_objective_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "694 任務通訊 · mission train fifth objective brake a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_fifth_objective_brake_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "695 任務通訊 · mission train third objective mid a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_third_objective_mid_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "696 任務通訊 · mission train third objective sighted a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_third_objective_sighted_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "697 任務通訊 · mission train third objective start a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_third_objective_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "698 任務通訊 · mission train fifth objective complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_fifth_objective_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "699 任務通訊 · mission train first interstitial 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_first_interstitial_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/mission-vox/campaign/page-014/",
+      "title": "700 任務通訊 · mission train boss arrival foreshadow a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_boss_arrival_foreshadow_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/campaign/page-014/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

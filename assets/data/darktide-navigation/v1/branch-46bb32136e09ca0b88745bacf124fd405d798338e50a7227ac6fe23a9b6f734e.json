@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-vo/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/page-005/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 9,
+    "parent": "/darktide/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "201 玩家呼喊與回應 · expeditions heat max horde vector a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_max_horde_vector_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "202 玩家呼喊與回應 · expeditions heat max monster spawned a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_max_monster_spawned_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "203 玩家呼喊與回應 · expeditions heat max opportunity start a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_max_opportunity_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "204 玩家呼喊與回應 · expeditions call extraction a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_call_extraction_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "205 玩家呼喊與回應 · expeditions heat max patrol a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_max_patrol_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "206 玩家呼喊與回應 · expeditions heat max safe room exit a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_max_safe_room_exit_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "207 玩家呼喊與回應 · expeditions heat undetected heat drop a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_undetected_heat_drop_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "208 玩家呼喊與回應 · expeditions heat undetected heat rise a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_undetected_heat_rise_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "209 玩家呼喊與回應 · expeditions mission forced extraction a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_mission_forced_extraction_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "210 玩家呼喊與回應 · expeditions mission new area start a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_mission_new_area_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "211 玩家呼喊與回應 · expeditions mission start a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_mission_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "212 玩家呼喊與回應 · expeditions chest locked a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_chest_locked_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "213 玩家呼喊與回應 · expeditions opportunities no more a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_opportunities_no_more_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "214 玩家呼喊與回應 · expeditions opportunity start first a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_opportunity_start_first_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "215 玩家呼喊與回應 · expeditions place explosives a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_place_explosives_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "216 玩家呼喊與回應 · expeditions power out a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_power_out_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "217 玩家呼喊與回應 · expeditions power restored a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_power_restored_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "218 玩家呼喊與回應 · expeditions sealed door a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_sealed_door_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "219 玩家呼喊與回應 · expeditions sentry gun activated a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_sentry_gun_activated_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "220 玩家呼喊與回應 · expeditions sentry gun deactivated a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_sentry_gun_deactivated_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "221 玩家呼喊與回應 · expeditions chest unlocked a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_chest_unlocked_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "222 玩家呼喊與回應 · expeditions shield deployed a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_shield_deployed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "223 玩家呼喊與回應 · expeditions shop exit reminder a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_shop_exit_reminder_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "224 玩家呼喊與回應 · expeditions shop found a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_shop_found_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "225 玩家呼喊與回應 · expeditions sighted first data reliquary a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_sighted_first_data_reliquary_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "226 玩家呼喊與回應 · expeditions sighted first salvage a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_sighted_first_salvage_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "227 玩家呼喊與回應 · expeditions sighted first tech remnants a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_sighted_first_tech_remnants_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "228 玩家呼喊與回應 · expeditions valkyrie support a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_valkyrie_support_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "229 玩家呼喊與回應 · expeditions valkyrie support hover a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_valkyrie_support_hover_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "230 玩家呼喊與回應 · expeditions distraction end a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_distraction_end_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "231 玩家呼喊與回應 · expeditions distraction start a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_distraction_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "232 玩家呼喊與回應 · expeditions alarm triggered a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_alarm_triggered_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "233 玩家呼喊與回應 · expedition elevator coming",
+      "url": "/darktide/zh-tw/player-vo/expedition_elevator_coming/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "234 玩家呼喊與回應 · expeditions extraction reminder a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_extraction_reminder_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "235 玩家呼喊與回應 · expeditions heat alert heat drop a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_alert_heat_drop_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "236 玩家呼喊與回應 · expeditions heat alert heat rise a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_alert_heat_rise_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "237 玩家呼喊與回應 · expeditions heat alert horde vector a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_alert_horde_vector_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "238 玩家呼喊與回應 · expeditions heat alert monster spawned a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_alert_monster_spawned_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "239 玩家呼喊與回應 · expeditions heat alert opportunity start a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_alert_opportunity_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "240 玩家呼喊與回應 · expeditions heat alert safe room entered a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_alert_safe_room_entered_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "241 玩家呼喊與回應 · expeditions heat alert safe room event a",
+      "url": "/darktide/zh-tw/player-vo/expeditions_heat_alert_safe_room_event_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "242 玩家呼喊與回應 · ogryn start revive veteran",
+      "url": "/darktide/zh-tw/player-vo/ogryn_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "243 玩家呼喊與回應 · ogryn start revive zealot",
+      "url": "/darktide/zh-tw/player-vo/ogryn_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "244 玩家呼喊與回應 · pinned by enemies",
+      "url": "/darktide/zh-tw/player-vo/pinned_by_enemies/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "245 玩家呼喊與回應 · plasma vent a",
+      "url": "/darktide/zh-tw/player-vo/plasma_vent_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "246 玩家呼喊與回應 · player death ogryn",
+      "url": "/darktide/zh-tw/player-vo/player_death_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "247 玩家呼喊與回應 · player death psyker",
+      "url": "/darktide/zh-tw/player-vo/player_death_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "248 玩家呼喊與回應 · player death veteran",
+      "url": "/darktide/zh-tw/player-vo/player_death_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "249 玩家呼喊與回應 · player death zealot",
+      "url": "/darktide/zh-tw/player-vo/player_death_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-vo/page-005/",
+      "title": "250 玩家呼喊與回應 · player tip armor hit generic",
+      "url": "/darktide/zh-tw/player-vo/player_tip_armor_hit_generic/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-vo/page-005/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

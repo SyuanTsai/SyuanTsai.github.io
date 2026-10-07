@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-conversation/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/page-041/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/",
+    "title": "玩家閒談",
+    "url": "/darktide/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2001 玩家閒談 · broker male c adamant bonding conversation 23 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_23_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2002 玩家閒談 · broker male c adamant bonding conversation 24 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_24_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2003 玩家閒談 · broker male c adamant bonding conversation 25 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_25_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2004 玩家閒談 · broker male c adamant bonding conversation 26 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_26_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2005 玩家閒談 · broker male c adamant bonding conversation 27 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_27_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2006 玩家閒談 · broker male c adamant bonding conversation 28 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_28_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2007 玩家閒談 · broker male c adamant bonding conversation 29 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_29_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2008 玩家閒談 · broker male c adamant bonding conversation 30 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_30_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2009 玩家閒談 · broker male c adamant bonding conversation 31 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_31_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2010 玩家閒談 · broker male c adamant bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2011 玩家閒談 · broker male c adamant bonding conversation 32 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_32_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2012 玩家閒談 · broker male c adamant bonding conversation 34 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_34_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2013 玩家閒談 · broker male c adamant bonding conversation 35 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_35_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2014 玩家閒談 · broker male c adamant bonding conversation 36 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_36_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2015 玩家閒談 · broker male c ogryn bonding conversation 01 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_ogryn_bonding_conversation_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2016 玩家閒談 · broker male c ogryn bonding conversation 02 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_ogryn_bonding_conversation_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2017 玩家閒談 · broker male c ogryn bonding conversation 03 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_ogryn_bonding_conversation_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2018 玩家閒談 · broker male c ogryn bonding conversation 04 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_ogryn_bonding_conversation_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2019 玩家閒談 · broker male c ogryn bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_ogryn_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2020 玩家閒談 · broker male c ogryn bonding conversation 06 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_ogryn_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2021 玩家閒談 · broker male c adamant bonding conversation 05 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_adamant_bonding_conversation_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2022 玩家閒談 · broker male c ogryn bonding conversation 07 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_ogryn_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2023 玩家閒談 · broker male c ogryn bonding conversation 08 a",
+      "url": "/darktide/zh-tw/player-conversation/broker_male_c_ogryn_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2024 玩家閒談 · pimlico bonding conversation burn a",
+      "url": "/darktide/zh-tw/player-conversation/pimlico_bonding_conversation_burn_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2025 玩家閒談 · combat pause circumstance unnatural dark lurks a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_unnatural_dark_lurks_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2026 玩家閒談 · combat pause circumstance unnatural dark lights a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_unnatural_dark_lights_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2027 玩家閒談 · combat pause metropolitan ember 08 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2028 玩家閒談 · combat pause metropolitan ember 09 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2029 玩家閒談 · combat pause metropolitan ember 10 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2030 玩家閒談 · combat pause metropolitan ember 11 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_11_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2031 玩家閒談 · combat pause metropolitan ember 02 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2032 玩家閒談 · combat pause metropolitan ember 12 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_12_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2033 玩家閒談 · combat pause metropolitan ember 03 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2034 玩家閒談 · combat pause metropolitan ember 04 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2035 玩家閒談 · combat pause metropolitan ember 01 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2036 玩家閒談 · combat pause metropolitan ember 05 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2037 玩家閒談 · combat pause metropolitan ember 06 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2038 玩家閒談 · combat pause metropolitan ember 07 a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_metropolitan_ember_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2039 玩家閒談 · combat pause circumstance veteran c hunt a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_veteran_c_hunt_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2040 玩家閒談 · combat pause circumstance zealot a hound a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_zealot_a_hound_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2041 玩家閒談 · combat pause circumstance zealot b hunt a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_zealot_b_hunt_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2042 玩家閒談 · combat pause circumstance ogryn b hunted a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_ogryn_b_hunted_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2043 玩家閒談 · combat pause circumstance zealot c hound a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_zealot_c_hound_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2044 玩家閒談 · combat pause circumstance ogryn c meat a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_ogryn_c_meat_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2045 玩家閒談 · combat pause circumstance ogryn a hound a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_ogryn_a_hound_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2046 玩家閒談 · combat pause circumstance psyker c hound a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_psyker_c_hound_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2047 玩家閒談 · combat pause circumstance veteran a hound a",
+      "url": "/darktide/zh-tw/player-conversation/combat_pause_circumstance_veteran_a_hound_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2048 玩家閒談 · nurgle circumstance conversation four a",
+      "url": "/darktide/zh-tw/player-conversation/nurgle_circumstance_conversation_four_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2049 玩家閒談 · nurgle circumstance conversation one a",
+      "url": "/darktide/zh-tw/player-conversation/nurgle_circumstance_conversation_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-conversation/page-041/",
+      "title": "2050 玩家閒談 · nurgle circumstance conversation three a",
+      "url": "/darktide/zh-tw/player-conversation/nurgle_circumstance_conversation_three_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-conversation/page-041/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

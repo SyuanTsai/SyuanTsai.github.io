@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "一般戰役任務",
+    "url": "/darktide/mission-vox/campaign/page-015/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "701 任務通訊 · mission train first interstitial 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_first_interstitial_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "702 任務通訊 · mission train first interstitial 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_first_interstitial_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "703 任務通訊 · mission train first objective a",
+      "url": "/darktide/zh-tw/mission-vox/mission_train_first_objective_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "704 任務通訊 · prologue monologue 09",
+      "url": "/darktide/zh-tw/mission-vox/prologue_monologue_09/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "705 任務通訊 · prologue monologue 10",
+      "url": "/darktide/zh-tw/mission-vox/prologue_monologue_10/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "706 任務通訊 · ranged gameplay 01",
+      "url": "/darktide/zh-tw/mission-vox/ranged_gameplay_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "707 任務通訊 · ranged gameplay 05",
+      "url": "/darktide/zh-tw/mission-vox/ranged_gameplay_05/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "708 任務通訊 · ranged gameplay 07",
+      "url": "/darktide/zh-tw/mission-vox/ranged_gameplay_07/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "709 任務通訊 · melee gameplay 04",
+      "url": "/darktide/zh-tw/mission-vox/melee_gameplay_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "710 任務通訊 · prologue combat 01",
+      "url": "/darktide/zh-tw/mission-vox/prologue_combat_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "711 任務通訊 · prologue combat 02",
+      "url": "/darktide/zh-tw/mission-vox/prologue_combat_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "712 任務通訊 · prologue combat 03",
+      "url": "/darktide/zh-tw/mission-vox/prologue_combat_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "713 任務通訊 · prologue combat 04",
+      "url": "/darktide/zh-tw/mission-vox/prologue_combat_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "714 任務通訊 · prologue combat 05",
+      "url": "/darktide/zh-tw/mission-vox/prologue_combat_05/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "715 任務通訊 · prologue end event 01",
+      "url": "/darktide/zh-tw/mission-vox/prologue_end_event_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "716 任務通訊 · prologue end event 02",
+      "url": "/darktide/zh-tw/mission-vox/prologue_end_event_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "717 任務通訊 · prologue end event 03",
+      "url": "/darktide/zh-tw/mission-vox/prologue_end_event_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "718 任務通訊 · melee gameplay 01",
+      "url": "/darktide/zh-tw/mission-vox/melee_gameplay_01/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "719 任務通訊 · prologue end event 04",
+      "url": "/darktide/zh-tw/mission-vox/prologue_end_event_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "720 任務通訊 · prologue end event conversation a",
+      "url": "/darktide/zh-tw/mission-vox/prologue_end_event_conversation_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "721 任務通訊 · prologue end event conversation b",
+      "url": "/darktide/zh-tw/mission-vox/prologue_end_event_conversation_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "722 任務通訊 · prologue firefight conversation a",
+      "url": "/darktide/zh-tw/mission-vox/prologue_firefight_conversation_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "723 任務通訊 · prologue monologue 02",
+      "url": "/darktide/zh-tw/mission-vox/prologue_monologue_02/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "724 任務通訊 · prologue monologue 03",
+      "url": "/darktide/zh-tw/mission-vox/prologue_monologue_03/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "725 任務通訊 · prologue monologue 04",
+      "url": "/darktide/zh-tw/mission-vox/prologue_monologue_04/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "726 任務通訊 · prologue monologue 05",
+      "url": "/darktide/zh-tw/mission-vox/prologue_monologue_05/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "727 任務通訊 · prologue monologue 06",
+      "url": "/darktide/zh-tw/mission-vox/prologue_monologue_06/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "728 任務通訊 · prologue monologue 07",
+      "url": "/darktide/zh-tw/mission-vox/prologue_monologue_07/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "729 任務通訊 · prologue monologue 08",
+      "url": "/darktide/zh-tw/mission-vox/prologue_monologue_08/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "900 任務通訊 · mission spillway 1st right choice a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_1st_right_choice_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "901 任務通訊 · mission spillway 1st wrong choice a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_1st_wrong_choice_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "902 任務通訊 · mission spillway 2nd right choice a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_2nd_right_choice_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "903 任務通訊 · mission spillway 2nd wrong choice a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_2nd_wrong_choice_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "904 任務通訊 · mission spillway boss dead a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_boss_dead_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "905 任務通訊 · mission spillway boss dead c",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_boss_dead_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "906 任務通訊 · mission spillway boss fight 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_boss_fight_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "907 任務通訊 · mission spillway boss fight 04 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_boss_fight_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "908 任務通訊 · mission spillway boss fight 05 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_boss_fight_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "909 任務通訊 · mission spillway boss fight 06 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_boss_fight_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "910 任務通訊 · mission spillway elevator a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_elevator_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "911 任務通訊 · mission spillway elevator exit a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_elevator_exit_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "912 任務通訊 · mission spillway elevator exit two a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_elevator_exit_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "913 任務通訊 · mission spillway end a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_end_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "914 任務通訊 · mission spillway move up 1st a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_move_up_1st_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "915 任務通訊 · mission spillway move up 2nd a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_move_up_2nd_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "916 任務通訊 · mission spillway section 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_section_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "917 任務通訊 · mission spillway section 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_section_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "918 任務通訊 · mission spillway section 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_section_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "919 任務通訊 · mission spillway section 04 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_section_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/mission-vox/campaign/page-015/",
+      "title": "920 任務通訊 · mission spillway section 05 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_spillway_section_05_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/campaign/page-015/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

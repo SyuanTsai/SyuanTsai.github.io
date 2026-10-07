@@ -1,0 +1,77 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "死神試煉（佐林角色）",
+    "url": "/darktide/mission-vox/mortis-trials/characters/zorin/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/zorin/",
+      "title": "730 任務通訊 · story echo marshal 04 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_marshal_04_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/zorin/",
+      "title": "732 任務通訊 · story echo marshal 05 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_marshal_05_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/zorin/",
+      "title": "733 任務通訊 · story echo marshal 06 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_marshal_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/zorin/",
+      "title": "735 任務通訊 · story echo marshal 07 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_marshal_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/zorin/",
+      "title": "736 任務通訊 · story echo marshal 08 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_marshal_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/zorin/",
+      "title": "896 死神試煉：佐林的回聲 01",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_marshal_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/zorin/",
+      "title": "897 任務通訊 · story echo marshal 02 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_marshal_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/mortis-trials/characters/zorin/",
+      "title": "899 任務通訊 · story echo marshal 03 a",
+      "url": "/darktide/zh-tw/mission-vox/story_echo_marshal_03_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/mortis-trials/characters/zorin/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

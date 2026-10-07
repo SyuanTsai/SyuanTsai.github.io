@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-vo/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/page-004/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/en/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "151 Player callouts and replies · deployed ammo crate cryptic low on ammo",
+      "url": "/darktide/en/player-vo/deployed_ammo_crate_cryptic_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "152 Player callouts and replies · ranged idle player out of ammo",
+      "url": "/darktide/en/player-vo/ranged_idle_player_out_of_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "153 Player callouts and replies · traitor gunner alerted idle",
+      "url": "/darktide/en/player-vo/traitor_gunner_alerted_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "154 Player callouts and replies · traitor gunner ranged idle",
+      "url": "/darktide/en/player-vo/traitor_gunner_ranged_idle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "155 Player callouts and replies · traitor gunner start shooting",
+      "url": "/darktide/en/player-vo/traitor_gunner_start_shooting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "156 Player callouts and replies · traitor gunner take cover",
+      "url": "/darktide/en/player-vo/traitor_gunner_take_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "157 Player callouts and replies · traitor gunner take position",
+      "url": "/darktide/en/player-vo/traitor_gunner_take_position/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "158 Player callouts and replies · chaos newly infected assault",
+      "url": "/darktide/en/player-vo/chaos_newly_infected_assault/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "159 Player callouts and replies · luggable mission pick up lm rails",
+      "url": "/darktide/en/player-vo/luggable_mission_pick_up_lm_rails/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "160 Player callouts and replies · luggable mission pick up dm propaganda",
+      "url": "/darktide/en/player-vo/luggable_mission_pick_up_dm_propaganda/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "161 Player callouts and replies · event demolition last corruptor",
+      "url": "/darktide/en/player-vo/event_demolition_last_corruptor/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "162 Player callouts and replies · event demolition more corruptors",
+      "url": "/darktide/en/player-vo/event_demolition_more_corruptors/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "163 Player callouts and replies · info event demolition corruptors almost done",
+      "url": "/darktide/en/player-vo/info_event_demolition_corruptors_almost_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "164 Player callouts and replies · mission stockpile bazaar",
+      "url": "/darktide/en/player-vo/mission_stockpile_bazaar/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "165 Player callouts and replies · event fortification gate powered",
+      "url": "/darktide/en/player-vo/event_fortification_gate_powered/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "166 Player callouts and replies · event fortification kill stragglers",
+      "url": "/darktide/en/player-vo/event_fortification_kill_stragglers/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "167 Player callouts and replies · event fortification power up gate",
+      "url": "/darktide/en/player-vo/event_fortification_power_up_gate/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "168 Player callouts and replies · event fortification skyfire disabled",
+      "url": "/darktide/en/player-vo/event_fortification_skyfire_disabled/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "169 Player callouts and replies · event fortification disable the skyfire",
+      "url": "/darktide/en/player-vo/event_fortification_disable_the_skyfire/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "170 Player callouts and replies · event fortification beacon deployed",
+      "url": "/darktide/en/player-vo/event_fortification_beacon_deployed/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "171 Player callouts and replies · cmd hacking place device",
+      "url": "/darktide/en/player-vo/cmd_hacking_place_device/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "172 Player callouts and replies · hacking auspex mutter a",
+      "url": "/darktide/en/player-vo/hacking_auspex_mutter_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "173 Player callouts and replies · info hacking decoding in progress",
+      "url": "/darktide/en/player-vo/info_hacking_decoding_in_progress/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "174 Player callouts and replies · info hacking mission almost done",
+      "url": "/darktide/en/player-vo/info_hacking_mission_almost_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "175 Player callouts and replies · info hacking mission complete",
+      "url": "/darktide/en/player-vo/info_hacking_mission_complete/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "176 Player callouts and replies · response to hacking fix decode",
+      "url": "/darktide/en/player-vo/response_to_hacking_fix_decode/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "177 Player callouts and replies · cmd hacking find another",
+      "url": "/darktide/en/player-vo/cmd_hacking_find_another/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "178 Player callouts and replies · vox introduction hacking event",
+      "url": "/darktide/en/player-vo/vox_introduction_hacking_event/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "179 Player callouts and replies · cmd hacking decode resuming",
+      "url": "/darktide/en/player-vo/cmd_hacking_decode_resuming/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "180 Player callouts and replies · cmd hacking fix decode",
+      "url": "/darktide/en/player-vo/cmd_hacking_fix_decode/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "181 Player callouts and replies · event kill target heavy damage a",
+      "url": "/darktide/en/player-vo/event_kill_target_heavy_damage_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "182 Player callouts and replies · event kill target damaged",
+      "url": "/darktide/en/player-vo/event_kill_target_damaged/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "183 Player callouts and replies · event kill target destroyed a",
+      "url": "/darktide/en/player-vo/event_kill_target_destroyed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "184 Player callouts and replies · event scan find targets first",
+      "url": "/darktide/en/player-vo/event_scan_find_targets_first/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "185 Player callouts and replies · event scan find targets more",
+      "url": "/darktide/en/player-vo/event_scan_find_targets_more/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "186 Player callouts and replies · event scan first target scanned",
+      "url": "/darktide/en/player-vo/event_scan_first_target_scanned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "187 Player callouts and replies · event scan more data",
+      "url": "/darktide/en/player-vo/event_scan_more_data/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "188 Player callouts and replies · event scan skull waiting",
+      "url": "/darktide/en/player-vo/event_scan_skull_waiting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "189 Player callouts and replies · info servo skull deployed",
+      "url": "/darktide/en/player-vo/info_servo_skull_deployed/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "190 Player callouts and replies · cmd wandering skull",
+      "url": "/darktide/en/player-vo/cmd_wandering_skull/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "191 Player callouts and replies · event scan all targets scanned",
+      "url": "/darktide/en/player-vo/event_scan_all_targets_scanned/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "192 Player callouts and replies · event survive almost done",
+      "url": "/darktide/en/player-vo/event_survive_almost_done/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "193 Player callouts and replies · expeditions heat detected heat drop a",
+      "url": "/darktide/en/player-vo/expeditions_heat_detected_heat_drop_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "194 Player callouts and replies · expeditions heat detected heat rise a",
+      "url": "/darktide/en/player-vo/expeditions_heat_detected_heat_rise_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "195 Player callouts and replies · expeditions heat detected horde vector a",
+      "url": "/darktide/en/player-vo/expeditions_heat_detected_horde_vector_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "196 Player callouts and replies · expeditions heat detected loner targeted a",
+      "url": "/darktide/en/player-vo/expeditions_heat_detected_loner_targeted_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "197 Player callouts and replies · expeditions heat detected monster spawned a",
+      "url": "/darktide/en/player-vo/expeditions_heat_detected_monster_spawned_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "198 Player callouts and replies · expeditions artillery support a",
+      "url": "/darktide/en/player-vo/expeditions_artillery_support_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "199 Player callouts and replies · expeditions heat detected safe room exit a",
+      "url": "/darktide/en/player-vo/expeditions_heat_detected_safe_room_exit_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-vo/page-004/",
+      "title": "200 Player callouts and replies · expeditions heat max heat rise a",
+      "url": "/darktide/en/player-vo/expeditions_heat_max_heat_rise_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-vo/page-004/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/player-vo/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/page-006/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 9,
+    "parent": "/darktide/",
+    "title": "玩家呼喊與回應",
+    "url": "/darktide/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "251 玩家呼喊與回應 · psyker start revive ogryn",
+      "url": "/darktide/zh-tw/player-vo/psyker_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "252 玩家呼喊與回應 · psyker start revive psyker",
+      "url": "/darktide/zh-tw/player-vo/psyker_start_revive_psyker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "253 玩家呼喊與回應 · psyker start revive veteran",
+      "url": "/darktide/zh-tw/player-vo/psyker_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "254 玩家呼喊與回應 · psyker start revive zealot",
+      "url": "/darktide/zh-tw/player-vo/psyker_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "255 玩家呼喊與回應 · reload failed out of ammo",
+      "url": "/darktide/zh-tw/player-vo/reload_failed_out_of_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "256 玩家呼喊與回應 · reloading",
+      "url": "/darktide/zh-tw/player-vo/reloading/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "257 玩家呼喊與回應 · reloading empty",
+      "url": "/darktide/zh-tw/player-vo/reloading_empty/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "258 玩家呼喊與回應 · response for cover me",
+      "url": "/darktide/zh-tw/player-vo/response_for_cover_me/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "259 玩家呼喊與回應 · response for enemy kill monster",
+      "url": "/darktide/zh-tw/player-vo/response_for_enemy_kill_monster/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "260 玩家呼喊與回應 · combat pause quirk health hog a",
+      "url": "/darktide/zh-tw/player-vo/combat_pause_quirk_health_hog_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "261 玩家呼喊與回應 · response for info incoming enemies",
+      "url": "/darktide/zh-tw/player-vo/response_for_info_incoming_enemies/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "262 玩家呼喊與回應 · ability ranger",
+      "url": "/darktide/zh-tw/player-vo/ability_ranger/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "263 玩家呼喊與回應 · conversation combat beast of nurgle swallow a",
+      "url": "/darktide/zh-tw/player-vo/conversation_combat_beast_of_nurgle_swallow_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "264 玩家呼喊與回應 · ability venting",
+      "url": "/darktide/zh-tw/player-vo/ability_venting/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "265 玩家呼喊與回應 · response rechargable for look at healthstation",
+      "url": "/darktide/zh-tw/player-vo/response_rechargable_for_look_at_healthstation/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "266 玩家呼喊與回應 · seen barrel exploded a",
+      "url": "/darktide/zh-tw/player-vo/seen_barrel_exploded_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "267 玩家呼喊與回應 · seen enemy beast of nurgle",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_beast_of_nurgle/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "268 玩家呼喊與回應 · seen enemy berserker",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_berserker/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "269 玩家呼喊與回應 · seen enemy bulwark",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_bulwark/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "270 玩家呼喊與回應 · seen enemy daemonhost",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_daemonhost/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "271 玩家呼喊與回應 · conversation combat chaos spawn chew a",
+      "url": "/darktide/zh-tw/player-vo/conversation_combat_chaos_spawn_chew_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "272 玩家呼喊與回應 · seen enemy executor",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_executor/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "273 玩家呼喊與回應 · seen enemy grenadier",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_grenadier/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "274 玩家呼喊與回應 · seen enemy group far range shooting behind cover",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_group_far_range_shooting_behind_cover/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "275 玩家呼喊與回應 · seen enemy heavy gunner",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_heavy_gunner/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "276 玩家呼喊與回應 · seen enemy houndmaster",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_houndmaster/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "277 玩家呼喊與回應 · seen enemy mutant charger",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_mutant_charger/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "278 玩家呼喊與回應 · seen enemy poxwalker bomber",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_poxwalker_bomber/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "279 玩家呼喊與回應 · seen enemy scab flamer",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_scab_flamer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "280 玩家呼喊與回應 · seen enemy shocktrooper",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_shocktrooper/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "281 玩家呼喊與回應 · seen enemy sniper",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_sniper/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "282 玩家呼喊與回應 · seen enemy tox flamer",
+      "url": "/darktide/zh-tw/player-vo/seen_enemy_tox_flamer/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "283 玩家呼喊與回應 · seen netgunner",
+      "url": "/darktide/zh-tw/player-vo/seen_netgunner/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "284 玩家呼喊與回應 · surrounded",
+      "url": "/darktide/zh-tw/player-vo/surrounded/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "285 玩家呼喊與回應 · throwing grenade",
+      "url": "/darktide/zh-tw/player-vo/throwing_grenade/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "286 玩家呼喊與回應 · veteran start revive ogryn",
+      "url": "/darktide/zh-tw/player-vo/veteran_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "287 玩家呼喊與回應 · veteran start revive veteran",
+      "url": "/darktide/zh-tw/player-vo/veteran_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "288 玩家呼喊與回應 · veteran start revive zealot",
+      "url": "/darktide/zh-tw/player-vo/veteran_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "289 玩家呼喊與回應 · warning exploding barrel",
+      "url": "/darktide/zh-tw/player-vo/warning_exploding_barrel/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "290 玩家呼喊與回應 · zealot start revive ogryn",
+      "url": "/darktide/zh-tw/player-vo/zealot_start_revive_ogryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "291 玩家呼喊與回應 · zealot start revive veteran",
+      "url": "/darktide/zh-tw/player-vo/zealot_start_revive_veteran/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "292 玩家呼喊與回應 · zealot start revive zealot",
+      "url": "/darktide/zh-tw/player-vo/zealot_start_revive_zealot/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "293 玩家呼喊與回應 · cover me",
+      "url": "/darktide/zh-tw/player-vo/cover_me/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "294 玩家呼喊與回應 · critical health",
+      "url": "/darktide/zh-tw/player-vo/critical_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "295 玩家呼喊與回應 · deployed ammo crate",
+      "url": "/darktide/zh-tw/player-vo/deployed_ammo_crate/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "296 玩家呼喊與回應 · alerted 2 enemy daemonhost",
+      "url": "/darktide/zh-tw/player-vo/alerted_2_enemy_daemonhost/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "297 玩家呼喊與回應 · deployed ammo crate ogryn low on ammo",
+      "url": "/darktide/zh-tw/player-vo/deployed_ammo_crate_ogryn_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "298 玩家呼喊與回應 · deployed ammo crate psyker low on ammo",
+      "url": "/darktide/zh-tw/player-vo/deployed_ammo_crate_psyker_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "299 玩家呼喊與回應 · deployed ammo crate veteran low on ammo",
+      "url": "/darktide/zh-tw/player-vo/deployed_ammo_crate_veteran_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/player-vo/page-006/",
+      "title": "300 玩家呼喊與回應 · deployed ammo crate zealot low on ammo",
+      "url": "/darktide/zh-tw/player-vo/deployed_ammo_crate_zealot_low_on_ammo/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/player-vo/page-006/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

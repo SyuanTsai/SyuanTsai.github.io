@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-conversation/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/page-061/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 7,
+    "parent": "/darktide/en/",
+    "title": "Player conversations",
+    "url": "/darktide/en/player-conversation/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3001 Player conversations · combat pause limited ogryn a 19 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_a_19_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3002 Player conversations · combat pause limited ogryn a 20 a",
+      "url": "/darktide/en/player-conversation/combat_pause_limited_ogryn_a_20_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3003 Player conversations · adamant female c ogryn bonding conversation 08 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_ogryn_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3004 Player conversations · oval bonding conversation advice a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_advice_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3005 Player conversations · oval bonding conversation alike a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_alike_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3006 Player conversations · oval bonding conversation beautiful a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_beautiful_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3007 Player conversations · oval bonding conversation deeds a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_deeds_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3008 Player conversations · oval bonding conversation frenetic a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_frenetic_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3009 Player conversations · oval bonding conversation important a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_important_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3010 Player conversations · oval bonding conversation morrow a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_morrow_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3011 Player conversations · oval bonding conversation strong a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_strong_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3012 Player conversations · adamant female c ogryn bonding conversation 09 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_ogryn_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3013 Player conversations · oval bonding conversation unenlightened a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_unenlightened_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3014 Player conversations · oval bonding conversation winning a",
+      "url": "/darktide/en/player-conversation/oval_bonding_conversation_winning_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3015 Player conversations · oval world conversation balta nobles seventeen a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_balta_nobles_seventeen_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3016 Player conversations · oval world conversation balta nobles twentyseven a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_balta_nobles_twentyseven_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3017 Player conversations · oval world conversation cumbernauld brahms ten a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_cumbernauld_brahms_ten_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3018 Player conversations · oval world conversation daviot steel one a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_daviot_steel_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3019 Player conversations · oval world conversation daviot steel thirtyfive a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_daviot_steel_thirtyfive_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3020 Player conversations · oval world conversation daviot steel twentythree a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_daviot_steel_twentythree_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3021 Player conversations · oval world conversation fingal swagger twenty a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_fingal_swagger_twenty_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3022 Player conversations · oval world conversation gareloch sixteen a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_gareloch_sixteen_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3023 Player conversations · adamant female c ogryn bonding conversation 10 a",
+      "url": "/darktide/en/player-conversation/adamant_female_c_ogryn_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3024 Player conversations · oval world conversation gareloch twelve a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_gareloch_twelve_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3025 Player conversations · oval world conversation universal hestia twentyfive a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_universal_hestia_twentyfive_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3026 Player conversations · oval world conversation universal hestia twentyfour a",
+      "url": "/darktide/en/player-conversation/oval_world_conversation_universal_hestia_twentyfour_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3027 Player conversations · pimlico bonding conversation fingal swagger 01 a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_fingal_swagger_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3028 Player conversations · pimlico bonding conversation war a",
+      "url": "/darktide/en/player-conversation/pimlico_bonding_conversation_war_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3029 Player conversations · adamant male a ogryn bonding conversation 08 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3030 Player conversations · adamant male a ogryn bonding conversation 10 a",
+      "url": "/darktide/en/player-conversation/adamant_male_a_ogryn_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3031 Player conversations · adamant male b ogryn bonding conversation 06 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3032 Player conversations · adamant male b ogryn bonding conversation 07 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_07_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3033 Player conversations · adamant male b ogryn bonding conversation 08 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3034 Player conversations · adamant male b ogryn bonding conversation 09 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3035 Player conversations · adamant male b ogryn bonding conversation 10 a",
+      "url": "/darktide/en/player-conversation/adamant_male_b_ogryn_bonding_conversation_10_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3036 Player conversations · adamant female a ogryn bonding conversation 08 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_ogryn_bonding_conversation_08_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3037 Player conversations · adamant female a ogryn bonding conversation 06 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_ogryn_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3038 Player conversations · adamant male c ogryn bonding conversation 06 a",
+      "url": "/darktide/en/player-conversation/adamant_male_c_ogryn_bonding_conversation_06_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3039 Player conversations · bonding conversation behind me a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_behind_me_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3040 Player conversations · bonding conversation metropolitan alliterate a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_alliterate_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3041 Player conversations · bonding conversation metropolitan armour a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_armour_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3042 Player conversations · bonding conversation metropolitan beside us a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_beside_us_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3043 Player conversations · bonding conversation metropolitan comm bead a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_comm_bead_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3044 Player conversations · bonding conversation metropolitan constant a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_constant_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3045 Player conversations · adamant female a ogryn bonding conversation 09 a",
+      "url": "/darktide/en/player-conversation/adamant_female_a_ogryn_bonding_conversation_09_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3046 Player conversations · bonding conversation metropolitan crazy a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_crazy_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3047 Player conversations · bonding conversation metropolitan elsewhere a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_elsewhere_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3048 Player conversations · bonding conversation metropolitan everywhere a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_everywhere_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3049 Player conversations · bonding conversation metropolitan hangover a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_hangover_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-conversation/page-061/",
+      "title": "3050 Player conversations · bonding conversation metropolitan honourary ogr a",
+      "url": "/darktide/en/player-conversation/bonding_conversation_metropolitan_honourary_ogr_a/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-conversation/page-061/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

@@ -1,0 +1,139 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/veteran/",
+      "title": "閃擊",
+      "url": "/darktide/skills/veteran/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/veteran/",
+      "title": "光環",
+      "url": "/darktide/skills/veteran/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/veteran/",
+      "title": "能力",
+      "url": "/darktide/skills/veteran/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/veteran/",
+      "title": "鑰石",
+      "url": "/darktide/skills/veteran/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/veteran/",
+      "title": "技能",
+      "url": "/darktide/skills/veteran/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/veteran/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/veteran/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/veteran/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/veteran/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 5,
+    "parent": "/darktide/skills/",
+    "title": "老兵",
+    "titleEn": "Veteran",
+    "url": "/darktide/skills/veteran/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-0",
+    "kind": "skill-category",
+    "order": 0,
+    "parent": "/darktide/skills/veteran/",
+    "title": "閃擊",
+    "url": "/darktide/skills/veteran/#category-0"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/veteran/#category-0",
+      "title": "煙霧手雷",
+      "titleEn": "Smoke Grenade",
+      "url": "/darktide/skills/veteran/smoke-grenade/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/veteran/#category-0",
+      "title": "擲彈兵",
+      "titleEn": "Grenadier",
+      "url": "/darktide/skills/veteran/grenadier/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/veteran/#category-0",
+      "title": "手雷專家",
+      "titleEn": "Grenade Tinkerer",
+      "url": "/darktide/skills/veteran/grenade-tinkerer/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/veteran/#category-0",
+      "title": "穿甲手雷",
+      "titleEn": "Krak Grenade",
+      "url": "/darktide/skills/veteran/krak-grenade/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/veteran/#category-0",
+      "title": "炸藥儲備",
+      "titleEn": "Demolition Stockpile",
+      "url": "/darktide/skills/veteran/demolition-stockpile/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/veteran/#category-0",
+      "title": "粉碎者破片手雷",
+      "titleEn": "Shredder Frag Grenade",
+      "url": "/darktide/skills/veteran/shredder-frag-grenade/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/veteran/#category-0",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

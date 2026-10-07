@@ -1,0 +1,491 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "閃擊",
+      "url": "/darktide/skills/skitarii/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "光環",
+      "url": "/darktide/skills/skitarii/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "能力",
+      "url": "/darktide/skills/skitarii/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "鑰石",
+      "url": "/darktide/skills/skitarii/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "技能",
+      "url": "/darktide/skills/skitarii/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/skitarii/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/skitarii/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 4,
+    "parent": "/darktide/skills/",
+    "title": "護教軍",
+    "titleEn": "Skitarii",
+    "url": "/darktide/skills/skitarii/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-4",
+    "kind": "skill-category",
+    "order": 4,
+    "parent": "/darktide/skills/skitarii/",
+    "title": "技能",
+    "url": "/darktide/skills/skitarii/#category-4"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "能量載分配鏈路",
+      "titleEn": "Power Redistribution Uplink",
+      "url": "/darktide/skills/skitarii/power-redistribution-uplink/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "適應性戰鬥記憶體",
+      "titleEn": "Adaptive Combat Engram",
+      "url": "/darktide/skills/skitarii/adaptive-combat-engram/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "閃避伺服恢復",
+      "titleEn": "Evasive Servo Recovery",
+      "url": "/darktide/skills/skitarii/evasive-servo-recovery/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "歐姆尼賽亞充能聖歌",
+      "titleEn": "Omnissian Recharge Litany",
+      "url": "/darktide/skills/skitarii/omnissian-recharge-litany/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "原初動力導流",
+      "titleEn": "Channelled Motive Force",
+      "url": "/darktide/skills/skitarii/channelled-motive-force/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "熵能轉移",
+      "titleEn": "Entropic Transfer",
+      "url": "/darktide/skills/skitarii/entropic-transfer/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "過載轉移晶格",
+      "titleEn": "Overcharge Transfer Lattice",
+      "url": "/darktide/skills/skitarii/overcharge-transfer-lattice/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "精準思算機同步",
+      "titleEn": "Sureshot Cogitator Sync",
+      "url": "/darktide/skills/skitarii/sureshot-cogitator-sync/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "電擊破壞協定",
+      "titleEn": "Shockline Breach Protocol",
+      "url": "/darktide/skills/skitarii/shockline-breach-protocol/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "輻射槽",
+      "titleEn": "Rad-Sink",
+      "url": "/darktide/skills/skitarii/rad-sink/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "漸進裝甲矩陣",
+      "titleEn": "Progressive Plating Matrix",
+      "url": "/darktide/skills/skitarii/progressive-plating-matrix/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "報應導管",
+      "titleEn": "Retribution Conduit",
+      "url": "/darktide/skills/skitarii/retribution-conduit/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "電流標記陣列",
+      "titleEn": "Galvanic Marking Array",
+      "url": "/darktide/skills/skitarii/galvanic-marking-array/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "自我修復教義",
+      "titleEn": "Auto-Repair Doctrines",
+      "url": "/darktide/skills/skitarii/auto-repair-doctrines/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "絕境中繼",
+      "titleEn": "Last Stand Relay",
+      "url": "/darktide/skills/skitarii/last-stand-relay/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "弱點分析教義",
+      "titleEn": "Weakness Analysis Doctrine",
+      "url": "/darktide/skills/skitarii/weakness-analysis-doctrine/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "離格動作例程",
+      "titleEn": "Ablative Motion Routines",
+      "url": "/darktide/skills/skitarii/ablative-motion-routines/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "能量溢流",
+      "titleEn": "Power Overflow",
+      "url": "/darktide/skills/skitarii/power-overflow/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 18,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "目標殲滅回饋",
+      "titleEn": "Target-Neutralization Feedback",
+      "url": "/darktide/skills/skitarii/target-neutralization-feedback/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 19,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "二元彈道協議",
+      "titleEn": "Binary Ballistics Protocol",
+      "url": "/darktide/skills/skitarii/binary-ballistics-protocol/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 20,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "力量分配致動器",
+      "titleEn": "Force Distribution Actuators",
+      "url": "/darktide/skills/skitarii/force-distribution-actuators/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 21,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "卓越追蹤聖歌",
+      "titleEn": "Superior Tracking Litanies",
+      "url": "/darktide/skills/skitarii/superior-tracking-litanies/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 22,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "液壓衝擊",
+      "titleEn": "Hydraulic Impact",
+      "url": "/darktide/skills/skitarii/hydraulic-impact/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 23,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "混合戰鬥契約",
+      "titleEn": "Hybrid Combat Covenant",
+      "url": "/darktide/skills/skitarii/hybrid-combat-covenant/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 24,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "動能分配器",
+      "titleEn": "Kinetic Energy Distributors",
+      "url": "/darktide/skills/skitarii/kinetic-energy-distributors/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 25,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "無限抑制器",
+      "titleEn": "Uncapped Arrestor",
+      "url": "/darktide/skills/skitarii/uncapped-arrestor/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 26,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "電擊打擊導管",
+      "titleEn": "Electro-Strike Conduit",
+      "url": "/darktide/skills/skitarii/electro-strike-conduit/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 27,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "槍械技師",
+      "titleEn": "Gunsmith",
+      "url": "/darktide/skills/skitarii/gunsmith/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 28,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "暗殺協議",
+      "titleEn": "Assassination Protocols",
+      "url": "/darktide/skills/skitarii/assassination-protocols/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 29,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "系統電擊",
+      "titleEn": "System Shock",
+      "url": "/darktide/skills/skitarii/system-shock/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 30,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "彈藥預知",
+      "titleEn": "Ammo-Cell Augury",
+      "url": "/darktide/skills/skitarii/ammo-cell-augury/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 31,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "電能修復",
+      "titleEn": "Voltaic Restoration",
+      "url": "/darktide/skills/skitarii/voltaic-restoration/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 32,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "救贖教範",
+      "titleEn": "Salvation Doctrine",
+      "url": "/darktide/skills/skitarii/salvation-doctrine/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 33,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "彈藥補給艙",
+      "titleEn": "Ammunition-Restoration Pod",
+      "url": "/darktide/skills/skitarii/ammunition-restoration-pod/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 34,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "持續攻擊教義",
+      "titleEn": "Sustained Assault Doctrine",
+      "url": "/darktide/skills/skitarii/sustained-assault-doctrine/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 35,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "鍍鋅精密塗層",
+      "titleEn": "Galvanized Coating",
+      "url": "/darktide/skills/skitarii/galvanized-coating/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 36,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "莫比亞導體",
+      "titleEn": "Moebian Conductor",
+      "url": "/darktide/skills/skitarii/moebian-conductor/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 37,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "伺服核心充能引擎",
+      "titleEn": "Servo-Core Recharge Engine",
+      "url": "/darktide/skills/skitarii/servo-core-recharge-engine/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 38,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "適應性戰鬥校準",
+      "titleEn": "Adaptive Combat Calibration",
+      "url": "/darktide/skills/skitarii/adaptive-combat-calibration/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 39,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "剩餘電流緩衝",
+      "titleEn": "Residual Current Buffer",
+      "url": "/darktide/skills/skitarii/residual-current-buffer/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 40,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "卓越防禦記憶模組",
+      "titleEn": "Superior Defence Engrams",
+      "url": "/darktide/skills/skitarii/superior-defence-engrams/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 41,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "標記優先聖詩",
+      "titleEn": "Target Prioritization Psalms",
+      "url": "/darktide/skills/skitarii/target-prioritization-psalms/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 42,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "守護協議",
+      "titleEn": "Protectorate Protocol",
+      "url": "/darktide/skills/skitarii/protectorate-protocol/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 43,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "數據感應協定",
+      "titleEn": "Data Sensor Protocol",
+      "url": "/darktide/skills/skitarii/data-sensor-protocol/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 44,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "序列充能",
+      "titleEn": "Sequenced Charge",
+      "url": "/darktide/skills/skitarii/sequenced-charge/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 45,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "屠殺協議",
+      "titleEn": "Slaughter Protocol",
+      "url": "/darktide/skills/skitarii/slaughter-protocol/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 46,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "精準戰鬥探測儀",
+      "titleEn": "Precision Combat Augurs",
+      "url": "/darktide/skills/skitarii/precision-combat-augurs/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 47,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "電流爆發",
+      "titleEn": "Voltaic Burst",
+      "url": "/darktide/skills/skitarii/voltaic-burst/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 48,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "抗腐護符",
+      "titleEn": "Ablative Wards",
+      "url": "/darktide/skills/skitarii/ablative-wards/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 49,
+      "parent": "/darktide/skills/skitarii/#category-4",
+      "title": "威脅偵測指令",
+      "titleEn": "Threat Detection Imperative",
+      "url": "/darktide/skills/skitarii/threat-detection-imperative/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/skitarii/#category-4",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

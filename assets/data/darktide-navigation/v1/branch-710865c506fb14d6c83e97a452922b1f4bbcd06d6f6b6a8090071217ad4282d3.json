@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/en/player-vo/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/page-003/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 8,
+    "parent": "/darktide/en/",
+    "title": "Player callouts and replies",
+    "url": "/darktide/en/player-vo/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "101 Player callouts and replies · cult retreat a",
+      "url": "/darktide/en/player-vo/cult_retreat_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "102 Player callouts and replies · cult switch focus a",
+      "url": "/darktide/en/player-vo/cult_switch_focus_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "103 Player callouts and replies · cult taunt twin a",
+      "url": "/darktide/en/player-vo/cult_taunt_twin_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "104 Player callouts and replies · heard enemy chaos hound mutator",
+      "url": "/darktide/en/player-vo/heard_enemy_chaos_hound_mutator/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "105 Player callouts and replies · smart tag vo enemy chaos hound mutator",
+      "url": "/darktide/en/player-vo/smart_tag_vo_enemy_chaos_hound_mutator/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "106 Player callouts and replies · nurgle circumstance prop alive",
+      "url": "/darktide/en/player-vo/nurgle_circumstance_prop_alive/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "107 Player callouts and replies · nurgle circumstance prop shrine",
+      "url": "/darktide/en/player-vo/nurgle_circumstance_prop_shrine/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "108 Player callouts and replies · ability gun lugger",
+      "url": "/darktide/en/player-vo/ability_gun_lugger/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "109 Player callouts and replies · ability gunslinger",
+      "url": "/darktide/en/player-vo/ability_gunslinger/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "110 Player callouts and replies · ability pious stabber",
+      "url": "/darktide/en/player-vo/ability_pious_stabber/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "111 Player callouts and replies · ability protectorate start",
+      "url": "/darktide/en/player-vo/ability_protectorate_start/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "112 Player callouts and replies · ability protectorate stop",
+      "url": "/darktide/en/player-vo/ability_protectorate_stop/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "113 Player callouts and replies · ability repent a",
+      "url": "/darktide/en/player-vo/ability_repent_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "114 Player callouts and replies · ability banisher impact",
+      "url": "/darktide/en/player-vo/ability_banisher_impact/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "115 Player callouts and replies · ability squad leader",
+      "url": "/darktide/en/player-vo/ability_squad_leader/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "116 Player callouts and replies · ability banisher",
+      "url": "/darktide/en/player-vo/ability_banisher/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "117 Player callouts and replies · ability buff stance a",
+      "url": "/darktide/en/player-vo/ability_buff_stance_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "118 Player callouts and replies · ability bullgryn",
+      "url": "/darktide/en/player-vo/ability_bullgryn/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "119 Player callouts and replies · found ammo acryptic low on ammo",
+      "url": "/darktide/en/player-vo/found_ammo_acryptic_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "120 Player callouts and replies · found ammo cryptic low on ammo",
+      "url": "/darktide/en/player-vo/found_ammo_cryptic_low_on_ammo/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "121 Player callouts and replies · binharic long aggressive",
+      "url": "/darktide/en/player-vo/binharic_long_aggressive/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "122 Player callouts and replies · found health booster acryptic low on health",
+      "url": "/darktide/en/player-vo/found_health_booster_acryptic_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "123 Player callouts and replies · found health booster cryptic low on health",
+      "url": "/darktide/en/player-vo/found_health_booster_cryptic_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "124 Player callouts and replies · found health station acryptic low on health",
+      "url": "/darktide/en/player-vo/found_health_station_acryptic_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "125 Player callouts and replies · found health station cryptic low on health",
+      "url": "/darktide/en/player-vo/found_health_station_cryptic_low_on_health/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "126 Player callouts and replies · binharic long hurt",
+      "url": "/darktide/en/player-vo/binharic_long_hurt/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "127 Player callouts and replies · friendly fire from acryptic to cryptic",
+      "url": "/darktide/en/player-vo/friendly_fire_from_acryptic_to_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "128 Player callouts and replies · friendly fire from cryptic to adamant",
+      "url": "/darktide/en/player-vo/friendly_fire_from_cryptic_to_adamant/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "129 Player callouts and replies · friendly fire from cryptic to cryptic",
+      "url": "/darktide/en/player-vo/friendly_fire_from_cryptic_to_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "130 Player callouts and replies · binharic medium aggressive",
+      "url": "/darktide/en/player-vo/binharic_medium_aggressive/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "131 Player callouts and replies · binharic medium hurt",
+      "url": "/darktide/en/player-vo/binharic_medium_hurt/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "132 Player callouts and replies · knocked down multiple times acryptic",
+      "url": "/darktide/en/player-vo/knocked_down_multiple_times_acryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "133 Player callouts and replies · knocked down multiple times cryptic",
+      "url": "/darktide/en/player-vo/knocked_down_multiple_times_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "134 Player callouts and replies · player death acryptic",
+      "url": "/darktide/en/player-vo/player_death_acryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "135 Player callouts and replies · binharic short aggressive",
+      "url": "/darktide/en/player-vo/binharic_short_aggressive/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "136 Player callouts and replies · player death cryptic",
+      "url": "/darktide/en/player-vo/player_death_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "137 Player callouts and replies · binharic short hurt",
+      "url": "/darktide/en/player-vo/binharic_short_hurt/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "138 Player callouts and replies · cryptic ability 01 a",
+      "url": "/darktide/en/player-vo/cryptic_ability_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "139 Player callouts and replies · cryptic ability 02 a",
+      "url": "/darktide/en/player-vo/cryptic_ability_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "140 Player callouts and replies · cryptic ability 03 a",
+      "url": "/darktide/en/player-vo/cryptic_ability_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "141 Player callouts and replies · adamant seen killstreak cryptic",
+      "url": "/darktide/en/player-vo/adamant_seen_killstreak_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "142 Player callouts and replies · cryptic blitz 01 a",
+      "url": "/darktide/en/player-vo/cryptic_blitz_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "143 Player callouts and replies · cryptic blitz 02 a",
+      "url": "/darktide/en/player-vo/cryptic_blitz_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "144 Player callouts and replies · cryptic blitz 03 a",
+      "url": "/darktide/en/player-vo/cryptic_blitz_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "145 Player callouts and replies · adamant start revive cryptic",
+      "url": "/darktide/en/player-vo/adamant_start_revive_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "146 Player callouts and replies · cryptic seen killstreak acryptic",
+      "url": "/darktide/en/player-vo/cryptic_seen_killstreak_acryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "147 Player callouts and replies · cryptic seen killstreak cryptic",
+      "url": "/darktide/en/player-vo/cryptic_seen_killstreak_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "148 Player callouts and replies · cryptic start revive acryptic",
+      "url": "/darktide/en/player-vo/cryptic_start_revive_acryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "149 Player callouts and replies · cryptic start revive cryptic",
+      "url": "/darktide/en/player-vo/cryptic_start_revive_cryptic/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/en/player-vo/page-003/",
+      "title": "150 Player callouts and replies · deployed ammo crate acryptic low on ammo",
+      "url": "/darktide/en/player-vo/deployed_ammo_crate_acryptic_low_on_ammo/"
+    }
+  ],
+  "key": "dialogue-catalog:en:/darktide/en/player-vo/page-003/",
+  "locale": "en",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

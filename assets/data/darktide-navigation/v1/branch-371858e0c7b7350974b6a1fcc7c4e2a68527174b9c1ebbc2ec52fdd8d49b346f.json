@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "一般戰役任務",
+    "url": "/darktide/mission-vox/campaign/page-012/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "551 任務通訊 · mission cooling long way down",
+      "url": "/darktide/zh-tw/mission-vox/mission_cooling_long_way_down/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "552 任務通訊 · mission cooling luggable event survive",
+      "url": "/darktide/zh-tw/mission-vox/mission_cooling_luggable_event_survive/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "553 任務通訊 · mission cooling overseer office",
+      "url": "/darktide/zh-tw/mission-vox/mission_cooling_overseer_office/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "554 任務通訊 · mission cooling worker habitation",
+      "url": "/darktide/zh-tw/mission-vox/mission_cooling_worker_habitation/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "555 任務通訊 · info mission cooling coolant control",
+      "url": "/darktide/zh-tw/mission-vox/info_mission_cooling_coolant_control/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "556 任務通訊 · info mission cooling demolish",
+      "url": "/darktide/zh-tw/mission-vox/info_mission_cooling_demolish/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "557 任務通訊 · info mission cooling follow conveyor",
+      "url": "/darktide/zh-tw/mission-vox/info_mission_cooling_follow_conveyor/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "558 任務通訊 · info mission cooling maintenance",
+      "url": "/darktide/zh-tw/mission-vox/info_mission_cooling_maintenance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "559 任務通訊 · info mission cooling vents",
+      "url": "/darktide/zh-tw/mission-vox/info_mission_cooling_vents/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "560 任務通訊 · mission cooling cmd stabilise",
+      "url": "/darktide/zh-tw/mission-vox/mission_cooling_cmd_stabilise/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "561 任務通訊 · cmd mission cooling hacking event end",
+      "url": "/darktide/zh-tw/mission-vox/cmd_mission_cooling_hacking_event_end/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "562 任務通訊 · mission cooling elevator conversation one line one",
+      "url": "/darktide/zh-tw/mission-vox/mission_cooling_elevator_conversation_one_line_one/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "563 任務通訊 · cmd mission cooling hacking event start",
+      "url": "/darktide/zh-tw/mission-vox/cmd_mission_cooling_hacking_event_start/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "564 任務通訊 · mission cooling elevator conversation two line one",
+      "url": "/darktide/zh-tw/mission-vox/mission_cooling_elevator_conversation_two_line_one/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "565 任務通訊 · mission rails refectory",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_refectory/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "566 任務通訊 · mission rails station approach",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_station_approach/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "567 任務通訊 · mission rails disable skyfire backup",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_disable_skyfire_backup/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "568 任務通訊 · mission rails district gate",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_district_gate/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "569 任務通訊 · mission rails end event conversation three a",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_end_event_conversation_three_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "570 任務通訊 · mission rails end event conversation two a",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_end_event_conversation_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "571 任務通訊 · mission rails descend shaft",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_descend_shaft/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "572 任務通訊 · mission rails disable skyfire a",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_disable_skyfire_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "573 任務通訊 · mission rails event grab supplies",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_event_grab_supplies/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "574 任務通訊 · mission rails hab block dreyko",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_hab_block_dreyko/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "575 任務通訊 · mission rails hack access door",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_hack_access_door/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "576 任務通訊 · mission rails logistratum",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_logistratum/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "577 任務通訊 · mission rails lower track",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_lower_track/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "578 任務通訊 · mission rails maintenance bay",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_maintenance_bay/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "579 任務通訊 · mission rails proceed to logistratum",
+      "url": "/darktide/zh-tw/mission-vox/mission_rails_proceed_to_logistratum/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "580 任務通訊 · mission scavenge entering ship port a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_entering_ship_port_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "581 任務通訊 · mission scavenge extract chase a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_extract_chase_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "582 任務通訊 · cmd mission scavenge luggable event end",
+      "url": "/darktide/zh-tw/mission-vox/cmd_mission_scavenge_luggable_event_end/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "583 任務通訊 · mission scavenge hacking event complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_hacking_event_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "584 任務通訊 · mission scavenge hacking event start a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_hacking_event_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "585 任務通訊 · mission scavenge hangar guidance one a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_hangar_guidance_one_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "586 任務通訊 · mission scavenge hangar guidance two a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_hangar_guidance_two_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "587 任務通訊 · mission scavenge interior",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_interior/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "588 任務通訊 · cmd mission scavenge luggable event start",
+      "url": "/darktide/zh-tw/mission-vox/cmd_mission_scavenge_luggable_event_start/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "589 任務通訊 · mission scavenge luggable event complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_luggable_event_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "590 任務通訊 · mission scavenge luggable event start a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_luggable_event_start_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "591 任務通訊 · mission scavenge luggable event trigger switch a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_luggable_event_trigger_switch_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "592 任務通訊 · mission scavenge pneumatic conveyor a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_pneumatic_conveyor_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "593 任務通訊 · mission scavenge pneumatic press",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_pneumatic_press/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "594 任務通訊 · mission scavenge servitors",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_servitors/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "595 任務通訊 · cmd mission scavenge vault access",
+      "url": "/darktide/zh-tw/mission-vox/cmd_mission_scavenge_vault_access/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "596 任務通訊 · mission scavenge shield ruin vista a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_shield_ruin_vista_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "597 任務通訊 · mission scavenge ship elevator end",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_ship_elevator_end/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "598 任務通訊 · mission scavenge ship elevator moving a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_ship_elevator_moving_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "599 任務通訊 · mission scavenge ship elevator switch a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_ship_elevator_switch_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/mission-vox/campaign/page-012/",
+      "title": "600 任務通訊 · mission scavenge ship elevator vista a",
+      "url": "/darktide/zh-tw/mission-vox/mission_scavenge_ship_elevator_vista_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/campaign/page-012/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}

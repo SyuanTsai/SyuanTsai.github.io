@@ -1,0 +1,235 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "閃擊",
+      "url": "/darktide/skills/skitarii/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "光環",
+      "url": "/darktide/skills/skitarii/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "能力",
+      "url": "/darktide/skills/skitarii/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "鑰石",
+      "url": "/darktide/skills/skitarii/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "技能",
+      "url": "/darktide/skills/skitarii/#category-4"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-5",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "基礎效果",
+      "url": "/darktide/skills/skitarii/#category-5"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 6,
+      "parent": "/darktide/skills/skitarii/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/skitarii/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 4,
+    "parent": "/darktide/skills/",
+    "title": "護教軍",
+    "titleEn": "Skitarii",
+    "url": "/darktide/skills/skitarii/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-2",
+    "kind": "skill-category",
+    "order": 2,
+    "parent": "/darktide/skills/skitarii/",
+    "title": "能力",
+    "url": "/darktide/skills/skitarii/#category-2"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "弦爪重擊",
+      "titleEn": "Chordclaw Strike",
+      "url": "/darktide/skills/skitarii/chordclaw-strike/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "修復協定",
+      "titleEn": "Restoration Protocol",
+      "url": "/darktide/skills/skitarii/restoration-protocol/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "彈藥盤點之旨",
+      "titleEn": "Writ of Ammunition Enumeration",
+      "url": "/darktide/skills/skitarii/writ-of-ammunition-enumeration/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "電流弧",
+      "titleEn": "Voltaic Arcs",
+      "url": "/darktide/skills/skitarii/voltaic-arcs/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "電能驅動",
+      "titleEn": "Voltaic Motivator",
+      "url": "/darktide/skills/skitarii/voltaic-motivator/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "電流超載",
+      "titleEn": "Voltaic Overcharge",
+      "url": "/darktide/skills/skitarii/voltaic-overcharge/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "軸向斬擊",
+      "titleEn": "Axial Slash",
+      "url": "/darktide/skills/skitarii/axial-slash/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "試探連擊",
+      "titleEn": "Probing Strikes",
+      "url": "/darktide/skills/skitarii/probing-strikes/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "通量導管蓄積",
+      "titleEn": "Flux Conduit Build-Up",
+      "url": "/darktide/skills/skitarii/flux-conduit-build-up/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "反應爐線圈充能",
+      "titleEn": "Reactor Coil Recharge",
+      "url": "/darktide/skills/skitarii/reactor-coil-recharge/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "強化能量循環",
+      "titleEn": "Augmented Power-Cycle",
+      "url": "/darktide/skills/skitarii/augmented-power-cycle/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "電容回收迴路",
+      "titleEn": "Capacitor Reclamation Loop",
+      "url": "/darktide/skills/skitarii/capacitor-reclamation-loop/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "電能發射器",
+      "titleEn": "Voltaic Emitter",
+      "url": "/darktide/skills/skitarii/voltaic-emitter/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 13,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "進階戰鬥教範",
+      "titleEn": "Advanced Combat Doctrines",
+      "url": "/darktide/skills/skitarii/advanced-combat-doctrines/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 14,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "鋼鐵富足",
+      "titleEn": "Satiated Steel",
+      "url": "/darktide/skills/skitarii/satiated-steel/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 15,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "千刀萬剮",
+      "titleEn": "Slice and Dice",
+      "url": "/darktide/skills/skitarii/slice-and-dice/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 16,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "洞察之眼",
+      "titleEn": "Piercing Sight",
+      "url": "/darktide/skills/skitarii/piercing-sight/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 17,
+      "parent": "/darktide/skills/skitarii/#category-2",
+      "title": "精算順序",
+      "titleEn": "Calculated Priority",
+      "url": "/darktide/skills/skitarii/calculated-priority/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/skitarii/#category-2",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

@@ -1,0 +1,186 @@
+{
+  "categories": [
+    {
+      "hasChildren": true,
+      "id": "category-0",
+      "kind": "skill-category",
+      "order": 0,
+      "parent": "/darktide/skills/zealot/",
+      "title": "閃擊",
+      "url": "/darktide/skills/zealot/#category-0"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-1",
+      "kind": "skill-category",
+      "order": 1,
+      "parent": "/darktide/skills/zealot/",
+      "title": "光環",
+      "url": "/darktide/skills/zealot/#category-1"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-2",
+      "kind": "skill-category",
+      "order": 2,
+      "parent": "/darktide/skills/zealot/",
+      "title": "能力",
+      "url": "/darktide/skills/zealot/#category-2"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-3",
+      "kind": "skill-category",
+      "order": 3,
+      "parent": "/darktide/skills/zealot/",
+      "title": "鑰石",
+      "url": "/darktide/skills/zealot/#category-3"
+    },
+    {
+      "hasChildren": true,
+      "id": "category-4",
+      "kind": "skill-category",
+      "order": 4,
+      "parent": "/darktide/skills/zealot/",
+      "title": "技能",
+      "url": "/darktide/skills/zealot/#category-4"
+    },
+    {
+      "hasChildren": false,
+      "id": "references",
+      "kind": "skill-category",
+      "order": 5,
+      "parent": "/darktide/skills/zealot/",
+      "title": "基礎效果與技術補充",
+      "url": "/darktide/skills/zealot/#references"
+    }
+  ],
+  "class": {
+    "kind": "skill-class",
+    "order": 6,
+    "parent": "/darktide/skills/",
+    "title": "狂信徒",
+    "titleEn": "Zealot",
+    "url": "/darktide/skills/zealot/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "currentCategory": {
+    "hasChildren": true,
+    "id": "category-2",
+    "kind": "skill-category",
+    "order": 2,
+    "parent": "/darktide/skills/zealot/",
+    "title": "能力",
+    "url": "/darktide/skills/zealot/#category-2"
+  },
+  "items": [
+    {
+      "kind": "skill-page",
+      "order": 0,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "不屈靈魂合唱",
+      "titleEn": "Chorus of Spiritual Fortitude",
+      "url": "/darktide/skills/zealot/chorus-of-spiritual-fortitude/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 1,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "有信者之怒",
+      "titleEn": "Fury of the Faithful",
+      "url": "/darktide/skills/zealot/fury-of-the-faithful/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 2,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "神聖事業",
+      "titleEn": "Holy Cause",
+      "url": "/darktide/skills/zealot/holy-cause/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 3,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "教宗之喚",
+      "titleEn": "Ecclesiarch's Call",
+      "url": "/darktide/skills/zealot/ecclesiarchs-call/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 4,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "倍增狂熱",
+      "titleEn": "Redoubled Zeal",
+      "url": "/darktide/skills/zealot/redoubled-zeal/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 5,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "隱秘領域",
+      "titleEn": "Shroudfield",
+      "url": "/darktide/skills/zealot/shroudfield/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 6,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "大師級隱秘領域",
+      "titleEn": "Master-Crafted Shroudfield",
+      "url": "/darktide/skills/zealot/master-crafted-shroudfield/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 7,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "振奮啟示",
+      "titleEn": "Invigorating Revelation",
+      "url": "/darktide/skills/zealot/invigorating-revelation/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 8,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "殉道者之願",
+      "titleEn": "Martyr's Purpose",
+      "url": "/darktide/skills/zealot/martyrs-purpose/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 9,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "虔誠刺客",
+      "titleEn": "Pious Cut-Throat",
+      "url": "/darktide/skills/zealot/pious-cut-throat/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 10,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "死亡禱文",
+      "titleEn": "Invocation of Death",
+      "url": "/darktide/skills/zealot/invocation-of-death/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 11,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "無盡狂怒",
+      "titleEn": "Unrelenting Fury",
+      "url": "/darktide/skills/zealot/unrelenting-fury/"
+    },
+    {
+      "kind": "skill-page",
+      "order": 12,
+      "parent": "/darktide/skills/zealot/#category-2",
+      "title": "完美主義者",
+      "titleEn": "Perfectionist",
+      "url": "/darktide/skills/zealot/perfectionist/"
+    }
+  ],
+  "key": "skill-category:/darktide/skills/zealot/#category-2",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "skill-category"
+}

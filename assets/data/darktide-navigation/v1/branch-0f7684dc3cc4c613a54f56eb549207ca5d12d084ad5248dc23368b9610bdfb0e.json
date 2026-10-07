@@ -1,0 +1,371 @@
+{
+  "catalog": {
+    "parent": "/darktide/mission-vox/",
+    "title": "一般戰役任務",
+    "url": "/darktide/mission-vox/campaign/page-002/"
+  },
+  "category": {
+    "kind": "category",
+    "order": 5,
+    "parent": "/darktide/",
+    "title": "任務通訊",
+    "url": "/darktide/mission-vox/"
+  },
+  "contentVersion": "e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa",
+  "items": [
+    {
+      "kind": "dialogue-page",
+      "order": 0,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "51 任務通訊 · level hab block vista",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_vista/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 1,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "52 任務通訊 · mission scan complete",
+      "url": "/darktide/zh-tw/mission-vox/mission_scan_complete/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 2,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "53 任務通訊 · level hab block b",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 3,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "54 任務通訊 · level hab block b response c",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_b_response_c/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 4,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "55 任務通訊 · level hab block entrance",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_entrance/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 5,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "56 任務通訊 · level hab block final event scan two",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_final_event_scan_two/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 6,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "57 任務通訊 · hab block void response b",
+      "url": "/darktide/zh-tw/mission-vox/hab_block_void_response_b/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 7,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "58 任務通訊 · level hab block first objective",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_first_objective/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 8,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "59 任務通訊 · level hab block market",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_market/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 9,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "60 任務通訊 · level hab block quarantine",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_quarantine/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 10,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "61 任務通訊 · level hab block roof",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_roof/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 11,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "62 任務通訊 · level hab block scan complete",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_scan_complete/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 12,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "63 任務通訊 · level hab block start banter a",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_start_banter_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 13,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "64 任務通訊 · level hab block atrium",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_atrium/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 14,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "65 任務通訊 · mission habs redux neglect a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_neglect_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 15,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "66 任務通訊 · mission habs redux poison a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_poison_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 16,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "67 任務通訊 · mission habs redux poison complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_poison_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 17,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "68 任務通訊 · level hab block collapse",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_collapse/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 18,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "69 任務通訊 · mission habs redux poison jam clear a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_poison_jam_clear_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 19,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "70 任務通訊 · mission habs redux poison jammed a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_poison_jammed_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 20,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "71 任務通訊 · mission habs redux poison survive a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_poison_survive_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 21,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "72 任務通訊 · mission habs redux post airlock a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_post_airlock_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 22,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "73 任務通訊 · mission habs redux quarantine a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_quarantine_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 23,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "74 任務通訊 · level hab block corpse",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_corpse/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 24,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "75 任務通訊 · mission habs redux roof airlock a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_roof_airlock_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 25,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "76 任務通訊 · level hab block security",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_security/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 26,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "77 任務通訊 · mission habs redux block entrance a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_block_entrance_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 27,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "78 任務通訊 · level hab block apartments",
+      "url": "/darktide/zh-tw/mission-vox/level_hab_block_apartments/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 28,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "79 任務通訊 · mission habs redux escape conversation a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_escape_conversation_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 29,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "80 任務通訊 · mission habs redux first scan a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_first_scan_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 30,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "81 任務通訊 · mission habs redux first scan complete a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_first_scan_complete_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 31,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "82 任務通訊 · mission habs redux market a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_market_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 32,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "83 任務通訊 · mission habs redux market approach a",
+      "url": "/darktide/zh-tw/mission-vox/mission_habs_redux_market_approach_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 33,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "84 任務通訊 · mission raid closer a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_closer_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 34,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "85 任務通訊 · mission raid finish the job a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_finish_the_job_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 35,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "86 任務通訊 · mission raid production force field a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_force_field_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 36,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "87 任務通訊 · mission raid production genesis chamber a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_genesis_chamber_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 37,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "88 任務通訊 · mission raid production habs a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_habs_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 38,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "89 任務通訊 · mission raid production habs hurry 01 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_habs_hurry_01_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 39,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "90 任務通訊 · mission raid production habs hurry 02 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_habs_hurry_02_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 40,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "91 任務通訊 · mission raid production habs hurry 03 a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_habs_hurry_03_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 41,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "92 任務通訊 · mission raid production lab destroy end a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_lab_destroy_end_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 42,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "93 任務通訊 · mission raid production lab destroy mid a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_lab_destroy_mid_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 43,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "94 任務通訊 · mission raid production lab scan a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_lab_scan_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 44,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "95 任務通訊 · mission raid production lab scan end a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_lab_scan_end_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 45,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "96 任務通訊 · mission raid production lab scan end new a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_lab_scan_end_new_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 46,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "97 任務通訊 · mission raid production lab scan mid a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_production_lab_scan_mid_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 47,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "98 任務通訊 · mission raid streets a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_streets_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 48,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "99 任務通訊 · mission raid den ambush detonate a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_den_ambush_detonate_a/"
+    },
+    {
+      "kind": "dialogue-page",
+      "order": 49,
+      "parent": "/darktide/mission-vox/campaign/page-002/",
+      "title": "100 任務通訊 · mission raid den ambush ended a",
+      "url": "/darktide/zh-tw/mission-vox/mission_raid_den_ambush_ended_a/"
+    }
+  ],
+  "key": "dialogue-catalog:zh-tw:/darktide/mission-vox/campaign/page-002/",
+  "locale": "zh-tw",
+  "schemaVersion": 1,
+  "scope": "dialogue-catalog"
+}
