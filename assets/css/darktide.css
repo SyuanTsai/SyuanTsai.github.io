@@ -164,16 +164,18 @@
   gap: 14px;
 }
 
-.event-card {
+.event-card,
+.event-catalog > li {
   min-width: 0;
-  padding: 18px;
+  padding: 0;
   background: var(--metal);
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent-muted);
   border-radius: 4px;
 }
 
-.event-card h3 {
+.event-card h3,
+.event-catalog > li h3 {
   margin: 0;
   color: var(--text);
   font-size: 17px;
@@ -182,6 +184,7 @@
 .event-title-link {
   display: block;
   min-height: 44px;
+  padding: 18px;
   text-decoration: none;
 }
 
@@ -201,6 +204,7 @@
 }
 
 .event-subtitle,
+.event-catalog > li .event-title-link > p:not([class]),
 .event-meta {
   margin: 3px 0 0;
   color: var(--muted);
