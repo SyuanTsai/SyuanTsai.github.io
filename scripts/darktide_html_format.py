@@ -8,6 +8,35 @@ PROTECTED = {"script", "style", "pre", "textarea", "title", "noscript", "xmp", "
 TAGS = set("a abbr address area article aside audio b base bdi bdo blockquote body br button canvas caption cite code col colgroup data datalist dd del details dfn dialog div dl dt em embed fieldset figcaption figure footer form h1 h2 h3 h4 h5 h6 head header hgroup hr html i img input ins kbd label legend li link main map mark menu meta meter nav noscript object ol optgroup option output p param picture progress q rp rt ruby s samp section select slot small source span strong sub summary sup table tbody td template tfoot th thead time title tr track u ul var video wbr".split())
 
 
+HEADER_OPEN = '<header class="preview-header">'
+BRANDED_HEADER_OPEN = '<header class="preview-header shared-brand">'
+BRAND_LINE = '        <p class="preview-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>'
+
+
+def compact_brand(source):
+    """Move only the fixed decorative header label into shared CSS."""
+    header_start = source.find(HEADER_OPEN)
+    if header_start < 0:
+        return source
+    header_end = source.find("</header>", header_start + len(HEADER_OPEN))
+    if header_end < 0:
+        return source
+    brand_start = source.find(BRAND_LINE, header_start + len(HEADER_OPEN), header_end)
+    if brand_start < 0:
+        return source
+    brand_end = brand_start + len(BRAND_LINE)
+    if source[brand_end:brand_end + 2] == "\r\n":
+        brand_end += 2
+    elif source[brand_end:brand_end + 1] == "\n":
+        brand_end += 1
+    return (
+        source[:header_start]
+        + BRANDED_HEADER_OPEN
+        + source[header_start + len(HEADER_OPEN):brand_start]
+        + source[brand_end:]
+    )
+
+
 def compact_tag(raw):
     """Replace only runs of HTML syntax whitespace outside attribute quotes."""
     parts, quote, index = [], None, 0
@@ -80,7 +109,8 @@ class TagSlices(HTMLParser):
 
 
 def format_html(source):
-    """Preserve text, values, comments, declarations and protected regions."""
+    """Compact generated markup while keeping page text and links."""
+    source = compact_brand(source)
     parser = TagSlices(source)
     try:
         parser.feed(source)
