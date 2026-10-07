@@ -50,6 +50,20 @@
   margin-bottom: 24px;
 }
 
+.preview-header.shared-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-header.shared-brand .preview-toolbar {
+  order: -1;
+}
+
+.preview-header.shared-brand::before {
+  content: "WARHAMMER 40,000 · DARKTIDE";
+  display: block;
+}
+
 .preview-toolbar {
   display: flex;
   align-items: center;
@@ -64,7 +78,8 @@
   font-size: 14px;
 }
 
-.preview-eyebrow {
+.preview-eyebrow,
+.preview-header.shared-brand::before {
   margin: 12px 0 5px;
   color: var(--accent-muted);
   font-size: 12px;
