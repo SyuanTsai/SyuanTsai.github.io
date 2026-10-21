@@ -7,7 +7,7 @@
 - [逐項舊新路由與固定輸入](routes.json)：646 個 `(archetype, skill_id)`，646 玩家頁及646機制頁，共1,292個唯一來源及目標。固定 IO 基準 `76472d21e8d542c2710840ce74215b1ce6a35006`；固定新站內容 commit `9e9e2ec26b71e296a8a4165fcf81fe2ad45fec63`。
 - [線上 JSON 逐項驗證](live-target-verification.json)：1,292個目標均核對 live catalog 的內容 ID／類型、JSON HTTP 200、MIME、raw size及 artifact manifest SHA-256。不是只以 SPA HTML 回殼判斷內容存在。
 - IO目前沒有武器／祝福獨立頁；新站70類武器及167項祝福不計舊站移除量。
-- 保留35個技術補充頁、七職業目錄與根目錄；未證明逐頁等價新落點，故保留。補充正文只調整已遷連結及遷移提示。
+- 保留35個技術補充頁、七職業目錄與根目錄；未證明逐頁等價新落點，故保留。補充正文只調整已遷連結及遷移提示。[保留正文逐頁回核](retained-content-verification.json)確認43頁原有可見文字一致。
 - 中英文對話、字幕、性格、引用及用途 metadata、文章及共用CSS／素材保留。沒有刪除共享資產、私人來源或其他Repository內容。
 
 ## 網址、導航與收錄
@@ -31,9 +31,26 @@ python scripts/migrate_darktide_skills.py --check
 
 ## 完整publication清單與容量
 
-PR CI用同一 `actions/jekyll-build-pages@v1.0.13`，分別建置固定清理前commit與本次來源；`compare_publication.py`保存每個發布檔的path／raw bytes／SHA-256。`before-publication.csv.gz`、`after-publication.csv.gz`是完整CSV的壓縮保存，計量欄仍為原始檔案bytes；`changed-files.csv`列出所有正文替換及導航／sitemap差額，`retained-shared-assets.csv.gz`列出保留共享資產。Jekyll的既有CSS／文章JS cache epoch、feed updated及一般sitemap lastmod會因建置時間而異。只有已知欄位正規化後完全相同的檔案才分類為build-time-only；完整raw bytes與hash仍如實列帳，正文或其他版本差異仍會阻擋比較。
+本次遷移分支的PR CI用同一 `actions/jekyll-build-pages@v1.0.13`，分別建置固定清理前commit與本次來源；`compare_publication.py`保存每個發布檔的path／raw bytes／SHA-256。`before-publication.csv.gz`、`after-publication.csv.gz`是完整CSV的壓縮保存，計量欄仍為原始檔案bytes；`changed-files.csv`列出所有正文替換及導航／sitemap差額，`retained-shared-assets.csv.gz`列出保留共享資產。Jekyll的既有CSS／文章JS cache epoch、feed updated及一般sitemap lastmod會因建置時間而異。只有已知欄位正規化後完全相同的檔案才分類為build-time-only；完整raw bytes與hash仍如實列帳，正文或其他版本差異仍會阻擋比較。
 
-正式量測結果與CI連結會在建置完成後補入。本次沒有移除網址檔案，而是移除其舊正文並保留輕量跳轉。新站raw產物、離站備份壓縮包、Cloudflare保留版本及Git歷史分列於[獨立儲存帳](separate-storage-accounts.json)；Cloudflare未公開實體保留版本儲存bytes，明列未量測，不宣稱回收。歷史全站520.23MB、ZIP與HTTP壓縮不作本期可移除量。
+固定基準比較僅對本次遷移分支執行，不會阻擋後續一般文章PR；遷移精確bytes檢查則持續保護舊網址契約。[同次CI量測](https://github.com/SyuanTsai/SyuanTsai.github.io/actions/runs/39551234379)已完成；完整清單與雜湊見[量測回條](publication-evidence.json)。本次沒有移除網址檔案，而是移除其舊正文並保留輕量跳轉。新站raw產物、離站備份壓縮包、Cloudflare保留版本及Git歷史分列於[獨立儲存帳](separate-storage-accounts.json)；Cloudflare未公開實體保留版本儲存bytes，明列未量測，不宣稱回收。歷史全站520.23MB、ZIP與HTTP壓縮不作本期可移除量。
+
+## 本次實測結果
+
+| 帳目 | 清理前 raw bytes | 清理後 raw bytes |
+| --- | ---: | ---: |
+| 完整IO產物（各26,340檔） | 520,229,422 | 508,248,273 |
+| 1,292個已遷正文／跳轉 | 13,200,439 | 1,239,556 |
+
+完整IO淨減 **11,981,149 B（11.43 MiB，約2.303%）**；沒有刪掉網址檔案。43個保留目錄／補充頁因提示及精確連結增加102,732 B；首頁／導覽／sitemap淨減122,998 B，27個只有建置時間差異的Jekyll檔案合計byte差為0。394個共享資產保留，共6,446,107 B（其中共用導航JS有本次修改）。
+
+- [完整清理前manifest](before-publication.csv.gz)／[完整清理後manifest](after-publication.csv.gz)：每檔path、raw bytes及SHA-256。
+- [所有替換與差額](changed-files.csv)：1,366個變動檔分列正文替換、保留頁、導航／sitemap及build-time-only。不是只列候選刪除檔。
+- [保留共享資產](retained-shared-assets.csv.gz)／[完整摘要](summary.json)；沒有未知或未預期的實質變動。
+- [再生演練](regeneration-verification.json)：舊renderer重寫正文後，後處理恢復全部1,292個跳轉，第二次重跑1,400檔byte相同。
+- [瀏覽器紀錄](browser-verification.json)：玩家／機制精確新落點、舊站提示、補充頁及中英文切換已實際核對。新站既有來源／圖片／免JS正文限制維持原驗收範圍。
+
+![舊站遷移提示的桌面預覽](images/archive-home-desktop.png)
 
 ## 發布、回復及接續
 

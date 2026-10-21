@@ -1,0 +1,60 @@
+{
+  "basis": "Same Pages build action, raw uncompressed publication bytes; all regular files included",
+  "before": {
+    "files": 26340,
+    "bytes": 520229422
+  },
+  "after": {
+    "files": 26340,
+    "bytes": 508248273
+  },
+  "redirects": {
+    "files": 1292,
+    "before_bytes": 13200439,
+    "after_bytes": 1239556
+  },
+  "changed_files": 1366,
+  "retained_shared_assets": {
+    "files": 394,
+    "bytes": 6446107
+  },
+  "unexpected_changes": [],
+  "excluded_accounts": [
+    "new standalone site",
+    "retained Cloudflare versions",
+    "GitHub backups",
+    "Git history",
+    "ZIP bytes",
+    "HTTP compression"
+  ],
+  "build_time_only_changes": [
+    "2022/05/11/sql-server-merge.html",
+    "2025/12/14/code-review-alignment-for-long-term-maintenance.html",
+    "404.html",
+    "AGENTS.html",
+    "LICENSE-SCOPE.html",
+    "LICENSES/index.html",
+    "PROVENANCE.html",
+    "THIRD_PARTY_NOTICES.html",
+    "about/index.html",
+    "archives/2022/05/index.html",
+    "archives/2025/12/index.html",
+    "archives/index.html",
+    "articles/index.html",
+    "categories/code/index.html",
+    "categories/database/index.html",
+    "categories/index.html",
+    "feed.xml",
+    "index.html",
+    "preview/article-template/index.html",
+    "preview/gitconfig-identity-isolation/index.html",
+    "search/index.html",
+    "tags/code-review/index.html",
+    "tags/index.html",
+    "tags/maintainability/index.html",
+    "tags/merge/index.html",
+    "tags/sql-server/index.html",
+    "tags/t-sql/index.html"
+  ],
+  "reduction_bytes": 11981149
+}

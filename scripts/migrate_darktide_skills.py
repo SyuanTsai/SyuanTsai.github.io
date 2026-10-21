@@ -14,6 +14,8 @@ CLASSES = {"arbites", "ogryn", "psyker", "scum", "skitarii", "veteran", "zealot"
 
 
 def validate_routes(routes):
+    if not routes:
+        raise ValueError("Migration route contract must not be empty")
     seen = set()
     targets = set()
     for row in routes:
@@ -41,7 +43,7 @@ def load_routes(site):
     path = Path(site) / MAP_PATH
     if not path.exists():
         path = Path(__file__).resolve().parents[1] / MAP_PATH
-    return validate_routes(json.loads(path.read_text(encoding="utf-8"))["routes"]) if path.exists() else []
+    return validate_routes(json.loads(path.read_text(encoding="utf-8"))["routes"])
 
 
 def redirect_html(row):

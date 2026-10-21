@@ -1,0 +1,37 @@
+{
+  "baseline_commit": "76472d21e8d542c2710840ce74215b1ce6a35006",
+  "source_commit": "7fa284bf71419bd5984ef23920d136ca7c55f45c",
+  "ci_run_url": "https://github.com/SyuanTsai/SyuanTsai.github.io/actions/runs/39551234379",
+  "inventory_artifact_id": 12323209268,
+  "builder": "actions/jekyll-build-pages@v1.0.13; identical image used for both builds in the same job",
+  "publication_files_each": 26340,
+  "raw_reduction_bytes": 11981149,
+  "raw_reduction_percent": 2.3031,
+  "evidence_files": [
+    {
+      "path": "before-publication.csv.gz",
+      "stored_bytes": 1259241,
+      "sha256": "a628a84dfd651d716405b592abb593de0173b0acfa45b8982e3d7b53c4f9ce1e"
+    },
+    {
+      "path": "after-publication.csv.gz",
+      "stored_bytes": 1257368,
+      "sha256": "6ffc989fae5c5b73f8cd14fb98b510b71e57f764e909fa6121e49e9be684d378"
+    },
+    {
+      "path": "changed-files.csv",
+      "stored_bytes": 287428,
+      "sha256": "656f57899474fee5a5b00346b3ad719a777416e532c31391a08ec4e2c634c60c"
+    },
+    {
+      "path": "retained-shared-assets.csv.gz",
+      "stored_bytes": 32353,
+      "sha256": "88641adc4445da1c4a53e55c941feed876c6174c073d30d86511e2cd02b8bf6b"
+    },
+    {
+      "path": "summary.json",
+      "stored_bytes": 1542,
+      "sha256": "0eaf9a452bdbd34e01240812916c4554080881054258acac2532ab35018faa04"
+    }
+  ]
+}

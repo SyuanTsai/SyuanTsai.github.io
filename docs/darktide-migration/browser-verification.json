@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-21",
+  "preview": "Loopback-only source preview; production remains unchanged until owner-approved merge and Pages deployment.",
+  "cases": [
+    {
+      "old": "/darktide/skills/veteran/demolition-stockpile/",
+      "landed": "https://darktide.tw-syuan.com/skills/veteran/veteran_replenish_grenades/",
+      "visible_heading": "炸藥儲備",
+      "result": "passed"
+    },
+    {
+      "old": "/darktide/skills/veteran/demolition-stockpile/mechanics/",
+      "landed": "https://darktide.tw-syuan.com/skills/veteran/veteran_replenish_grenades/mechanics/",
+      "visible_heading": "炸藥儲備",
+      "result": "passed"
+    },
+    {
+      "path": "/darktide/",
+      "checks": [
+        "migration notice",
+        "three first-party content links",
+        "retained technical supplement link",
+        "native navigation expanded with new destination"
+      ],
+      "result": "passed"
+    },
+    {
+      "path": "/darktide/skills/veteran/source-index/",
+      "checks": [
+        "retained visible content",
+        "new-site skill cross-links",
+        "old technical navigation"
+      ],
+      "result": "passed"
+    },
+    {
+      "path": "/darktide/en/character-personalities/character_personality_veteran_male_a/",
+      "checks": [
+        "retained English content",
+        "language switch to paired Traditional Chinese page",
+        "navigation groups"
+      ],
+      "result": "passed"
+    }
+  ],
+  "screenshots": [
+    "images/archive-home-desktop.png",
+    "images/supplement-desktop.png",
+    "images/archive-home-mobile.png",
+    "images/supplement-mobile.png"
+  ],
+  "no_javascript": "Redirect HTML manual link, meta refresh, noindex and canonical verified by unit contract; no claim that the new SPA provides no-JS content.",
+  "mobile": "390px and 1440px Chrome captures completed in successful CI 39551234379; images inspected separately before delivery.",
+  "ci_url": "https://github.com/SyuanTsai/SyuanTsai.github.io/actions/runs/39551234379"
+}

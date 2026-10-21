@@ -20,6 +20,12 @@ class MigrationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate_routes([self.route(), self.route()])
 
+    # Scenario: a generated contract accidentally loses its entire route list.
+    # Purpose: fail closed instead of silently permitting retired prose to return.
+    def test_UnitT15_empty_migration_contract_is_rejected(self):
+        with self.assertRaises(ValueError):
+            validate_routes([])
+
     # Scenario: a verified skill has an explicit destination.
     # Purpose: offer a no-JavaScript route and prevent indexing duplicate prose.
     def test_UnitT20_redirect_has_exact_canonical_and_manual_fallback(self):
