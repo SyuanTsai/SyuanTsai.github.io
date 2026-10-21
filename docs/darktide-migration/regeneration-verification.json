@@ -1,0 +1,8 @@
+{
+  "scenario": "Isolated prepared tree; historical renderer overwrites migrated route, reader maintenance enforces all redirects and retained supplements; second rerun byte-identical. No dialogue source regenerated.",
+  "redirects_verified": 1292,
+  "retained_skill_pages": 43,
+  "sitemap_excludes_migrated": true,
+  "second_rerun_identical": true,
+  "files_compared": 1400
+}

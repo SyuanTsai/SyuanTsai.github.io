@@ -31,7 +31,7 @@ python scripts/migrate_darktide_skills.py --check
 
 ## 完整publication清單與容量
 
-PR CI用同一 `actions/jekyll-build-pages@v1.0.13`，分別建置固定清理前commit與本次來源；`compare_publication.py`保存每個發布檔的path／raw bytes／SHA-256。`before-publication.csv.gz`、`after-publication.csv.gz`是完整CSV的壓縮保存，計量欄仍為原始檔案bytes；`changed-files.csv`列出所有正文替換及導航／sitemap差額，`retained-shared-assets.csv.gz`列出保留共享資產。Jekyll的feed／一般sitemap時間欄位會因建置時間而異，亦如實列帳。
+PR CI用同一 `actions/jekyll-build-pages@v1.0.13`，分別建置固定清理前commit與本次來源；`compare_publication.py`保存每個發布檔的path／raw bytes／SHA-256。`before-publication.csv.gz`、`after-publication.csv.gz`是完整CSV的壓縮保存，計量欄仍為原始檔案bytes；`changed-files.csv`列出所有正文替換及導航／sitemap差額，`retained-shared-assets.csv.gz`列出保留共享資產。Jekyll的既有CSS／文章JS cache epoch、feed updated及一般sitemap lastmod會因建置時間而異。只有已知欄位正規化後完全相同的檔案才分類為build-time-only；完整raw bytes與hash仍如實列帳，正文或其他版本差異仍會阻擋比較。
 
 正式量測結果與CI連結會在建置完成後補入。本次沒有移除網址檔案，而是移除其舊正文並保留輕量跳轉。新站raw產物、離站備份壓縮包、Cloudflare保留版本及Git歷史分列於[獨立儲存帳](separate-storage-accounts.json)；Cloudflare未公開實體保留版本儲存bytes，明列未量測，不宣稱回收。歷史全站520.23MB、ZIP與HTTP壓縮不作本期可移除量。
 
