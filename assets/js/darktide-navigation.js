@@ -12,8 +12,11 @@
     return locale === "en" ? (node.titleEn || node.title || "") : (node.title || node.titleEn || "");
   }
 
-  function safeLocalHref(value) {
+  function safeNavigationHref(value) {
     const url = new URL(value, window.location.origin);
+    if (url.origin === "https://darktide.tw-syuan.com" && /^\/(skills|weapons|blessings)\//.test(url.pathname)) {
+      return url.href;
+    }
     if (url.origin !== window.location.origin || !url.pathname.startsWith("/darktide/")) {
       throw new Error("Navigation URL is outside the local Darktide route.");
     }
@@ -58,7 +61,7 @@
 
   function makeLink(node, locale, currentUrl, englishSmall) {
     const anchor = document.createElement("a");
-    anchor.href = safeLocalHref(node.url);
+    anchor.href = safeNavigationHref(node.url);
     anchor.append(document.createTextNode(labelFor(node, locale)));
     if (englishSmall && locale !== "en" && node.titleEn) {
       const small = document.createElement("small");
@@ -130,9 +133,13 @@
   function renderSkills(root, branch, page, locale) {
     const skills = root.skills;
     const active = page.kind.startsWith("skill-");
-    const group = makeDetails(labelFor(skills, locale), active);
+    const group = makeDetails(text(locale, "技能已遷移／舊站技術補充", "Skills moved / legacy technical notes"), active);
     group.dataset.navigationSkillsGroup = "true";
     const level = makeLevel();
+    const migrated = document.createElement("a");
+    migrated.href = "https://darktide.tw-syuan.com/skills/";
+    migrated.textContent = text(locale, "前往繁中技能、武器與祝福獨立站", "Open the Traditional Chinese database");
+    level.append(migrated);
     appendLink(level, skills, locale, page.url, false);
     const activeClassUrl = branch && branch.class ? branch.class.url : "";
     (skills.classes || []).forEach(function (classNode) {

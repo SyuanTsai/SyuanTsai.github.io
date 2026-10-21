@@ -5,3 +5,6 @@ darktide/character-personalities/**/*.html -text
 darktide/en/character-personalities/**/*.html -text
 darktide/response-trigger-references/**/*.html -text
 darktide/en/response-trigger-references/**/*.html -text
+
+# Deterministic migration redirect bytes on Windows and Pages.
+darktide/skills/**/*.html text eol=lf

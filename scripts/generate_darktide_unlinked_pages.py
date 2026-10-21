@@ -626,10 +626,13 @@ def update_home(site, locale, counts):
 
 
 def regenerate_sitemap(site):
+    from migrate_darktide_skills import load_routes
+    migrated = {row["old"] for row in load_routes(site)}
     darktide = site / "darktide"
     urls = [
         SITE_URL + "/" + path.parent.relative_to(site).as_posix() + "/"
         for path in sorted(darktide.rglob("index.html"))
+        if "/" + path.parent.relative_to(site).as_posix() + "/" not in migrated
     ]
     chunks = [urls[start : start + 30000] for start in range(0, len(urls), 30000)]
     expected = set()

@@ -22,11 +22,42 @@ jobs:
       - name: Verify generated discovery page sources
         run: python3 scripts/generate_discovery_pages.py --check
 
+      - name: Verify migrated skill sources
+        run: python3 scripts/migrate_darktide_skills.py --check
+
       - name: Setup Pages
         uses: actions/configure-pages@v6.0.0
 
       - name: Build with GitHub Pages
         uses: actions/jekyll-build-pages@v1.0.13
+
+      - name: Extract fixed pre-migration publication source
+        if: endsWith(github.head_ref, '-darktide-legacy-cleanup')
+        run: |
+          git fetch --no-tags origin 76472d21e8d542c2710840ce74215b1ce6a35006
+          mkdir _migration-baseline
+          git archive 76472d21e8d542c2710840ce74215b1ce6a35006 | tar -x -C _migration-baseline
+
+      - name: Build pre-migration source with the same Pages runtime
+        if: endsWith(github.head_ref, '-darktide-legacy-cleanup')
+        uses: actions/jekyll-build-pages@v1.0.13
+        with:
+          source: ./_migration-baseline
+          destination: ./_migration-baseline-site
+          build_revision: 76472d21e8d542c2710840ce74215b1ce6a35006
+
+      - name: Compare complete raw publication inventories
+        if: endsWith(github.head_ref, '-darktide-legacy-cleanup')
+        run: python3 scripts/compare_publication.py _migration-baseline-site _site _migration-evidence
+
+      - name: Upload complete migration inventories
+        if: always() && endsWith(github.head_ref, '-darktide-legacy-cleanup')
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: darktide-migration-${{ github.event.pull_request.head.sha }}
+          path: _migration-evidence/
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Upload rendered production site
         uses: actions/upload-artifact@v7.0.1
@@ -248,6 +279,26 @@ jobs:
           python3 scripts/verify_rendered_word_breaks.py \
             visual-review/code-review-dom.html \
             visual-review/sql-merge-dom.html
+
+      - name: Capture migrated archive previews
+        run: |
+          python3 -m http.server 4000 --directory _site >/tmp/darktide-migration-preview.log 2>&1 &
+          migration_server_pid=$!
+          trap 'kill "$migration_server_pid"' EXIT
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4000/darktide/ >/dev/null; then break; fi
+            sleep 0.25
+          done
+          for size in 1440,1800 390,2200; do
+            google-chrome --headless=new --no-sandbox --disable-gpu \
+              --virtual-time-budget=5000 --window-size="$size" \
+              --screenshot="visual-review/darktide-home-$size.png" \
+              http://127.0.0.1:4000/darktide/
+            google-chrome --headless=new --no-sandbox --disable-gpu \
+              --virtual-time-budget=5000 --window-size="$size" \
+              --screenshot="visual-review/darktide-supplement-$size.png" \
+              http://127.0.0.1:4000/darktide/skills/veteran/source-index/
+          done
 
       - name: Verify browser search result
         run: |

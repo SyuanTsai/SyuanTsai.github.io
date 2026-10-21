@@ -15,8 +15,14 @@ except ModuleNotFoundError as error:
 
 def apply_reader(site):
     """Keep the existing callable entry point for the production generator."""
+    try:
+        from migrate_darktide_skills import apply_migration
+    except ModuleNotFoundError:
+        from scripts.migrate_darktide_skills import apply_migration
+    apply_migration(site)
     result = generate_and_apply(Path(site).resolve())
     apply_format(site)
+    apply_migration(site)
     return result
 
 

@@ -1,4 +1,8 @@
 # Darktide 字幕正式交付
+## 2026-10-21 已遷技能的再生規則（優先於下方歷史流程）
+
+技能／天賦正文改由獨立繁中站維護。IO 保留舊網址的 HTML 跳轉及未確認等價新落點的技術補充。不要單獨發布 Mods renderer 再生的舊技能正文；若需歷史再生，完成既有後處理後必須執行 `python scripts/migrate_darktide_skills.py`，再以 `--check` 核對。`apply_darktide_reader.py` 已接上此處理；跳轉頁不進入共用 reader 或 sitemap。一般 Jekyll 建置只複製已提交靜態檔，不需要私人來源。完整對照、驗收與回復見 [遷移交接](darktide-migration/README.md)。
+
 
 ## 目標與已核實問題
 

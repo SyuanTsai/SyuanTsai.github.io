@@ -283,7 +283,15 @@ def build_model(site):
     skill_pages = []
     pages_by_url = {}
     bindings = {}
+    try:
+        from migrate_darktide_skills import load_routes
+    except ModuleNotFoundError:
+        from scripts.migrate_darktide_skills import load_routes
+    migrated = {row["old"] for row in load_routes(site)}
     for path in sorted((site / "darktide").rglob("index.html")):
+        route = "/" + path.parent.relative_to(site).as_posix() + "/"
+        if route in migrated:
+            continue
         page = read_page(path, site)
         prior = pages_by_url.get(page.url)
         if prior and prior.title != page.title:

@@ -1,0 +1,221 @@
+{
+  "scope": "35 technical supplements plus seven class directories and root; visible text/whitespace normalized; only added migration notice excluded. Link targets are independently recorded in route map.",
+  "pages": [
+    {
+      "path": "darktide/skills/arbites/base-effects/index.html",
+      "original_text_sha256": "cfbece1c027d56b113c4c999f3df84926c7cdc24e37a0acf5db6ae82692ba711",
+      "retained_text_sha256": "cfbece1c027d56b113c4c999f3df84926c7cdc24e37a0acf5db6ae82692ba711"
+    },
+    {
+      "path": "darktide/skills/arbites/damage-percentage-review/index.html",
+      "original_text_sha256": "475b9d846a58b74ed92bf90357202ba0f3bd6a2847bb69a29b6334db4c7e946c",
+      "retained_text_sha256": "475b9d846a58b74ed92bf90357202ba0f3bd6a2847bb69a29b6334db4c7e946c"
+    },
+    {
+      "path": "darktide/skills/arbites/index.html",
+      "original_text_sha256": "16e620175504d2203237e8fdbe719190c9a6e18c023c01fe0b0547bcb624e0ec",
+      "retained_text_sha256": "16e620175504d2203237e8fdbe719190c9a6e18c023c01fe0b0547bcb624e0ec"
+    },
+    {
+      "path": "darktide/skills/arbites/localization-comparison/index.html",
+      "original_text_sha256": "2c0a22435d94e72c6eff372fad879f5fdea4a883aa3bd33dad4d70ff91e00ed1",
+      "retained_text_sha256": "2c0a22435d94e72c6eff372fad879f5fdea4a883aa3bd33dad4d70ff91e00ed1"
+    },
+    {
+      "path": "darktide/skills/arbites/source-index/index.html",
+      "original_text_sha256": "4f23194edf5e3aff2bce39eb6c0be7a3c1d7d56c799e6fd89564738c9c32ac58",
+      "retained_text_sha256": "4f23194edf5e3aff2bce39eb6c0be7a3c1d7d56c799e6fd89564738c9c32ac58"
+    },
+    {
+      "path": "darktide/skills/arbites/unused-definitions/index.html",
+      "original_text_sha256": "d54b21d0b6b525c0410e0016b77cb0cd134006fa259c18abb0c0ceb46f5b0e93",
+      "retained_text_sha256": "d54b21d0b6b525c0410e0016b77cb0cd134006fa259c18abb0c0ceb46f5b0e93"
+    },
+    {
+      "path": "darktide/skills/index.html",
+      "original_text_sha256": "79682c4677acdada10d22fae6641a45e3100d99171413b38e43d53e7053175d2",
+      "retained_text_sha256": "79682c4677acdada10d22fae6641a45e3100d99171413b38e43d53e7053175d2"
+    },
+    {
+      "path": "darktide/skills/ogryn/base-effects/index.html",
+      "original_text_sha256": "830792c5c3cd2c18916de765d723cfb04503129190952fa650697e7a878a000c",
+      "retained_text_sha256": "830792c5c3cd2c18916de765d723cfb04503129190952fa650697e7a878a000c"
+    },
+    {
+      "path": "darktide/skills/ogryn/damage-percentage-review/index.html",
+      "original_text_sha256": "ff8384160b04df7a0e6822af5283bccc5fa9548ce2af1fff85ed8348782560c8",
+      "retained_text_sha256": "ff8384160b04df7a0e6822af5283bccc5fa9548ce2af1fff85ed8348782560c8"
+    },
+    {
+      "path": "darktide/skills/ogryn/index.html",
+      "original_text_sha256": "b88751a19012af1e9ce47ca3e214fd942b3340be4509f3fccfc4c499e7bc8b3b",
+      "retained_text_sha256": "b88751a19012af1e9ce47ca3e214fd942b3340be4509f3fccfc4c499e7bc8b3b"
+    },
+    {
+      "path": "darktide/skills/ogryn/localization-comparison/index.html",
+      "original_text_sha256": "55961d7c188d008edd9c7b0d2333726de55a5800a4ed87f738cec2f054118233",
+      "retained_text_sha256": "55961d7c188d008edd9c7b0d2333726de55a5800a4ed87f738cec2f054118233"
+    },
+    {
+      "path": "darktide/skills/ogryn/source-index/index.html",
+      "original_text_sha256": "73ff002c4ac23cb096cd88199f5ebc9a6c60248e0a40faf96aa499cc6c4d9fd8",
+      "retained_text_sha256": "73ff002c4ac23cb096cd88199f5ebc9a6c60248e0a40faf96aa499cc6c4d9fd8"
+    },
+    {
+      "path": "darktide/skills/ogryn/unused-definitions/index.html",
+      "original_text_sha256": "9ca7cb370703d779a8e86f76f3da2dc933b7e935d2aa1e2602903c3c5dcf75b0",
+      "retained_text_sha256": "9ca7cb370703d779a8e86f76f3da2dc933b7e935d2aa1e2602903c3c5dcf75b0"
+    },
+    {
+      "path": "darktide/skills/psyker/base-effects/index.html",
+      "original_text_sha256": "a99fd3950583836f0846c44e6b08a4d56fb45c975a1fae993bbc42b911f21bb0",
+      "retained_text_sha256": "a99fd3950583836f0846c44e6b08a4d56fb45c975a1fae993bbc42b911f21bb0"
+    },
+    {
+      "path": "darktide/skills/psyker/damage-percentage-review/index.html",
+      "original_text_sha256": "f7180ede6694fae19a2fa3d83d316d84241887b89887c8c506783658147c9234",
+      "retained_text_sha256": "f7180ede6694fae19a2fa3d83d316d84241887b89887c8c506783658147c9234"
+    },
+    {
+      "path": "darktide/skills/psyker/index.html",
+      "original_text_sha256": "9520399ad772f3f4d1a3996699d335312eb056b3c3b682d79f9ed50b71ecdb31",
+      "retained_text_sha256": "9520399ad772f3f4d1a3996699d335312eb056b3c3b682d79f9ed50b71ecdb31"
+    },
+    {
+      "path": "darktide/skills/psyker/localization-comparison/index.html",
+      "original_text_sha256": "148cf983380caada098a9557595ee9a072c63037a4dfa2cb84b06b9e73403bb0",
+      "retained_text_sha256": "148cf983380caada098a9557595ee9a072c63037a4dfa2cb84b06b9e73403bb0"
+    },
+    {
+      "path": "darktide/skills/psyker/source-index/index.html",
+      "original_text_sha256": "c4d1c113d0fb724821d3900125c93545e16087a5b2e1677c36a05b400fcfb245",
+      "retained_text_sha256": "c4d1c113d0fb724821d3900125c93545e16087a5b2e1677c36a05b400fcfb245"
+    },
+    {
+      "path": "darktide/skills/psyker/unused-definitions/index.html",
+      "original_text_sha256": "4f7c5f0aa6475f091117765e0f27f30374b776962e8ad05f02591758084936a3",
+      "retained_text_sha256": "4f7c5f0aa6475f091117765e0f27f30374b776962e8ad05f02591758084936a3"
+    },
+    {
+      "path": "darktide/skills/scum/base-effects/index.html",
+      "original_text_sha256": "c30889851aa52fd94a166ab263651f48987fdd635bc3d2a6b5c2a93dc03e7356",
+      "retained_text_sha256": "c30889851aa52fd94a166ab263651f48987fdd635bc3d2a6b5c2a93dc03e7356"
+    },
+    {
+      "path": "darktide/skills/scum/damage-percentage-review/index.html",
+      "original_text_sha256": "fadd5874ebda341f73f6dfe81e09ae74114bf06e9d3f66a8121d59408bb05641",
+      "retained_text_sha256": "fadd5874ebda341f73f6dfe81e09ae74114bf06e9d3f66a8121d59408bb05641"
+    },
+    {
+      "path": "darktide/skills/scum/index.html",
+      "original_text_sha256": "36e7a581340c1744855ae3b01463d2a3e1594a9cda3bf8b756b0b4ff48372975",
+      "retained_text_sha256": "36e7a581340c1744855ae3b01463d2a3e1594a9cda3bf8b756b0b4ff48372975"
+    },
+    {
+      "path": "darktide/skills/scum/localization-comparison/index.html",
+      "original_text_sha256": "5b1f2156573a87cc9a5fe83c20dd67c3caf39d8f7111c4d93ccc5baa5cbdf471",
+      "retained_text_sha256": "5b1f2156573a87cc9a5fe83c20dd67c3caf39d8f7111c4d93ccc5baa5cbdf471"
+    },
+    {
+      "path": "darktide/skills/scum/source-index/index.html",
+      "original_text_sha256": "e646c30a46ac94ba7a93dc8df054ab514d6ce48a7cad3b09531419506bc1959e",
+      "retained_text_sha256": "e646c30a46ac94ba7a93dc8df054ab514d6ce48a7cad3b09531419506bc1959e"
+    },
+    {
+      "path": "darktide/skills/scum/unused-definitions/index.html",
+      "original_text_sha256": "84482430a381cfa6dc9d3fa8077e024d1da0b23f2d2b767f0639d3379c64bb4d",
+      "retained_text_sha256": "84482430a381cfa6dc9d3fa8077e024d1da0b23f2d2b767f0639d3379c64bb4d"
+    },
+    {
+      "path": "darktide/skills/skitarii/base-effects/index.html",
+      "original_text_sha256": "7821c3b62c5bcffc35a1c29d4105c340dc37ff33b9238579a7ac66056e650d77",
+      "retained_text_sha256": "7821c3b62c5bcffc35a1c29d4105c340dc37ff33b9238579a7ac66056e650d77"
+    },
+    {
+      "path": "darktide/skills/skitarii/damage-percentage-review/index.html",
+      "original_text_sha256": "ff8af4dbbb48009ef7f7118a97ff6f5adb5290f0c36a8aa2496ab4f14da79e99",
+      "retained_text_sha256": "ff8af4dbbb48009ef7f7118a97ff6f5adb5290f0c36a8aa2496ab4f14da79e99"
+    },
+    {
+      "path": "darktide/skills/skitarii/index.html",
+      "original_text_sha256": "3628c2879d3efec1f7d9d337b799bca018aaa83884eca1569adedd7c46b40696",
+      "retained_text_sha256": "3628c2879d3efec1f7d9d337b799bca018aaa83884eca1569adedd7c46b40696"
+    },
+    {
+      "path": "darktide/skills/skitarii/localization-comparison/index.html",
+      "original_text_sha256": "b617d94d747113501f526d95b93eeb7e1c252acdd554a4aadb4b871115e0c920",
+      "retained_text_sha256": "b617d94d747113501f526d95b93eeb7e1c252acdd554a4aadb4b871115e0c920"
+    },
+    {
+      "path": "darktide/skills/skitarii/source-index/index.html",
+      "original_text_sha256": "7d8381a319e6ea14dd4241d2de0225cc00b7d91f8b621fd782e7ffc80ca403ab",
+      "retained_text_sha256": "7d8381a319e6ea14dd4241d2de0225cc00b7d91f8b621fd782e7ffc80ca403ab"
+    },
+    {
+      "path": "darktide/skills/skitarii/unused-definitions/index.html",
+      "original_text_sha256": "4ee4ba274f38c9aa57e40cd8874a5a65966042082abe77c7e24e9ab681f7aa5f",
+      "retained_text_sha256": "4ee4ba274f38c9aa57e40cd8874a5a65966042082abe77c7e24e9ab681f7aa5f"
+    },
+    {
+      "path": "darktide/skills/veteran/base-effects/index.html",
+      "original_text_sha256": "96f3f2c27543e0f8bbe1522ecc0d6a5bd0734756a31cc9a1b1fab2b77c7bd7b7",
+      "retained_text_sha256": "96f3f2c27543e0f8bbe1522ecc0d6a5bd0734756a31cc9a1b1fab2b77c7bd7b7"
+    },
+    {
+      "path": "darktide/skills/veteran/damage-percentage-review/index.html",
+      "original_text_sha256": "fb1dd8be7abd54284e0aaacdfd4e400e1e61d01b32aa181f25416f3ab414721c",
+      "retained_text_sha256": "fb1dd8be7abd54284e0aaacdfd4e400e1e61d01b32aa181f25416f3ab414721c"
+    },
+    {
+      "path": "darktide/skills/veteran/index.html",
+      "original_text_sha256": "b18854b337a9d7b48d5692158ec3fb957062e28bccef5d29af35e3e9e81edea3",
+      "retained_text_sha256": "b18854b337a9d7b48d5692158ec3fb957062e28bccef5d29af35e3e9e81edea3"
+    },
+    {
+      "path": "darktide/skills/veteran/localization-comparison/index.html",
+      "original_text_sha256": "8c3f317a72602d0718418c1dff2a73e0486cae9faf6e1e8c2bc830784926c356",
+      "retained_text_sha256": "8c3f317a72602d0718418c1dff2a73e0486cae9faf6e1e8c2bc830784926c356"
+    },
+    {
+      "path": "darktide/skills/veteran/source-index/index.html",
+      "original_text_sha256": "0666d0949c5671219db00d616ea8c9c4a75a5bdac97e31df01fe6e366a5b7c34",
+      "retained_text_sha256": "0666d0949c5671219db00d616ea8c9c4a75a5bdac97e31df01fe6e366a5b7c34"
+    },
+    {
+      "path": "darktide/skills/veteran/unused-definitions/index.html",
+      "original_text_sha256": "e1c51b6b42fcc9fb99f9016b6e174a2f78ae240233b177597e1f29f8d166a635",
+      "retained_text_sha256": "e1c51b6b42fcc9fb99f9016b6e174a2f78ae240233b177597e1f29f8d166a635"
+    },
+    {
+      "path": "darktide/skills/zealot/base-effects/index.html",
+      "original_text_sha256": "6e6a817f1b929450d2f8e74df7720de345fd52d2ad3af7a1e1fe680bb388ef0b",
+      "retained_text_sha256": "6e6a817f1b929450d2f8e74df7720de345fd52d2ad3af7a1e1fe680bb388ef0b"
+    },
+    {
+      "path": "darktide/skills/zealot/damage-percentage-review/index.html",
+      "original_text_sha256": "9d1a1c25fbb84bd7b63c34715c5f7d82bf400802e2c63f58066786a7d00f785a",
+      "retained_text_sha256": "9d1a1c25fbb84bd7b63c34715c5f7d82bf400802e2c63f58066786a7d00f785a"
+    },
+    {
+      "path": "darktide/skills/zealot/index.html",
+      "original_text_sha256": "fa31e549fc463bff147cfac7f9ce0d4b35239be3a53828205694fe250b11bd76",
+      "retained_text_sha256": "fa31e549fc463bff147cfac7f9ce0d4b35239be3a53828205694fe250b11bd76"
+    },
+    {
+      "path": "darktide/skills/zealot/localization-comparison/index.html",
+      "original_text_sha256": "cef93983de4b793993ae1f65bde5b38fab46a8cffb4d7f6678d504332affca15",
+      "retained_text_sha256": "cef93983de4b793993ae1f65bde5b38fab46a8cffb4d7f6678d504332affca15"
+    },
+    {
+      "path": "darktide/skills/zealot/source-index/index.html",
+      "original_text_sha256": "bcb285c7fb730534c22257580871225f578dd08c77f883e521d484706784ac67",
+      "retained_text_sha256": "bcb285c7fb730534c22257580871225f578dd08c77f883e521d484706784ac67"
+    },
+    {
+      "path": "darktide/skills/zealot/unused-definitions/index.html",
+      "original_text_sha256": "19d6fc9c82649c6a34a6a637fc571dd07c5d576ae163a1fcf26b9aab1c010e36",
+      "retained_text_sha256": "19d6fc9c82649c6a34a6a637fc571dd07c5d576ae163a1fcf26b9aab1c010e36"
+    }
+  ],
+  "matched": 43
+}
