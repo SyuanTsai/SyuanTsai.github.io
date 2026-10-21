@@ -1,117 +1,13 @@
 <!doctype html>
-<html lang="zh-Hant">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="robots" content="index,follow">
-    <meta name="description" content="衛兵 · Darktide Release 1.13.1 技能效果與固定來源。">
-    <title>衛兵 · Darktide</title>
-    <link rel="canonical" href="https://notes.tw-syuan.com/darktide/skills/veteran/increased-ranged-damage/">
-    <link rel="stylesheet" href="/assets/css/darktide-skills.css">
-    <link rel="stylesheet" href="/assets/css/darktide-reader.css">
-  </head>
-  <body class="darktide-skills">
-    <a class="skill-skip-link" href="#skill-content">跳至技能內容</a>
-    <div class="skill-shell">
-<!-- reader:start -->
-      <div class="dt-layout">
-        <details class="dt-directory" data-navigation-root="/assets/data/darktide-navigation/v1/root-zh-tw.json?v=e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa" data-navigation-branch="/assets/data/darktide-navigation/v1/branch-c3fbffd338f735c78653d1e620748fd80a1790b720f4ed96f2efc57dc36e0611.json?v=e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa" data-navigation-branch-key="skill-category:/darktide/skills/veteran/#category-5" data-navigation-version="e35e3d9c459a5d8ea2ff5693fa85a246b5d1db0741db0c8cb26524feb6e324fa" data-navigation-locale="zh-tw" data-navigation-page="/darktide/skills/veteran/increased-ranged-damage/" data-navigation-current-title="衛兵" data-navigation-kind="skill-page" data-navigation-category="/darktide/skills/">
-          <summary>瀏覽目錄</summary>
-          <nav aria-label="Darktide 階層目錄">
-            <a class="dt-brand" href="/darktide/">DARKTIDE</a>
-            <div class="dt-level" data-navigation-content>
-              <a href="/darktide/">資料區首頁</a>
-              <a href="/darktide/skills/">七職業目錄</a>
-              <a href="/darktide/skills/veteran/">職業目錄</a>
-              <a href="/darktide/skills/veteran/increased-ranged-damage/" aria-current="page">衛兵</a>
-            </div>
-            <p class="dt-directory-status" role="status" aria-live="polite">
-              <span data-navigation-status-text>完整目錄尚未載入；頁面基本導覽仍可使用。</span>
-              <a data-navigation-retry href="/darktide/skills/veteran/increased-ranged-damage/">重新載入重試</a>
-            </p>
-            <noscript><p>JavaScript 已停用；請使用頁面基本導覽與分類連結。</p></noscript>
-          </nav>
-        </details>
-        <div class="dt-reading">
-        <!-- reader:body -->
-      <header class="skill-header">
-        <nav class="skill-toolbar" aria-label="網站導覽">
-          <a href="/darktide/">← Darktide</a>
-          <a href="/darktide/skills/">技能與天賦</a>
-        </nav>
-        <nav class="skill-breadcrumb" aria-label="目前位置">
-          <ol>
-            <!-- reader:crumb --><li><a href="/darktide/">Darktide</a></li><!-- /reader:crumb -->
-            <li><a href="/darktide/skills/">技能與天賦</a></li>
-            <li><a href="/darktide/skills/veteran/">老兵</a></li>
-            <!-- reader:crumb --><li><a href="/darktide/skills/veteran/#category-5">基礎效果</a></li><!-- /reader:crumb -->
-            <li aria-current="page">衛兵</li>
-          </ol>
-        </nav>
-        <p class="skill-eyebrow">WARHAMMER 40,000 · DARKTIDE</p>
-        <div class="skill-heading">
-          <div>
-            <h1>衛兵</h1>
-            <span class="skill-english-name" lang="en">Guardsman</span>
-            <div class="skill-badges" aria-label="分類與版本">
-              <span>基礎效果</span>
-              <span>Release 1.13.1</span>
-            </div>
-          </div>
-        </div>
-      </header>
-      <main class="skill-reader" id="skill-content" tabindex="-1">
-        <details class="skill-page-toc" open>
-          <summary>本頁內容</summary>
-        <nav class="skill-sidebar" aria-label="本頁內容">
-          <h2>本頁內容</h2>
-          <ol>
-            <li><a href="#effects"><span>01</span>技能效果與算例</a></li>
-            <li><a href="#sources"><span>02</span>詳細資料與版本</a></li>
-            <li><a href="/darktide/skills/veteran/increased-ranged-damage/mechanics/"><span>03</span>機制與原始碼依據</a></li>
-          </ol>
-        </nav>
-        </details>
-        <article class="skill-content" aria-label="衛兵">
-          <a id="基礎遠程傷害加成increased-ranged-damage"></a>
-          <a id="衛兵guardsman"></a>
-          <section class="skill-section" id="effects" aria-labelledby="effects-title">
-            <h2 id="effects-title">技能效果與算例</h2>
-            <ul>
-              <li>
-                遠程傷害增加 25%，與同一階段的傷害加成相加。
-              </li>
-              <li>
-                基礎傷害 100 點、沒有其他加成時，結果為 <code>100 × (1 + 25%) = 125 點</code>。若再獲得 15% 同階段遠程加成，則為 <code>100 × (1 + 25% + 15%) = 140 點</code>。
-              </li>
-            </ul>
-            <p>
-              <a href="/darktide/skills/veteran/increased-ranged-damage/mechanics/">原始碼依據與算例條件</a>
-            </p>
-          </section>
-          <section class="skill-section" id="sources" aria-labelledby="sources-title">
-            <h2 id="sources-title">詳細資料與版本</h2>
-            <p>
-              <a href="/darktide/skills/veteran/increased-ranged-damage/mechanics/">機制與原始碼依據 →</a>
-            </p>
-            <p>
-              <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/d1c961ab802ca25e5091d79e28304d826e1ffca5/Game%20Info/releases/1.13.X/skills/talents/Veteran/BASE_EFFECTS.md#衛兵guardsman">原始 Git 玩家說明 ↗</a> · <a href="https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/d1c961ab802ca25e5091d79e28304d826e1ffca5/Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_base_ranged_damage.md">原始 Git 機制文件 ↗</a>
-            </p>
-            <p class="skill-note">
-              依固定 Release 1.13.1 原始碼分析；未進行遊戲內實測。名稱按同版遊戲文本核對。
-            </p>
-          </section>
-        </article>
-      </main>
-      <footer class="skill-footer">
-        <p>WARHAMMER 40,000 · DARKTIDE ｜ Release 1.13.1</p>
-        <a href="/darktide/skills/veteran/">← 返回老兵技能</a>
-      </footer>
-<!-- reader:end -->
-        </div>
-      </div>
-<!-- /reader:end -->
-    </div>
-  <script defer data-darktide-navigation src="/assets/js/darktide-navigation.js?v=dcf4407aa138ff8a5f384eb816b942085a073f82354586cd7522fb06bb1b2b7e"></script>
-  </body>
-</html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="darktide-migration" content="skill-v1">
+<meta name="robots" content="noindex,follow">
+<title>技能資料已遷移 · 黑潮</title>
+<link rel="canonical" href="https://darktide.tw-syuan.com/skills/veteran/veteran_base_ranged_damage/">
+<meta http-equiv="refresh" content="0;url=https://darktide.tw-syuan.com/skills/veteran/veteran_base_ranged_damage/">
+<script>location.replace("https://darktide.tw-syuan.com/skills/veteran/veteran_base_ranged_damage/");</script>
+</head><body><main><h1>技能資料已遷移</h1>
+<p><a href="https://darktide.tw-syuan.com/skills/veteran/veteran_base_ranged_damage/">前往黑潮繁體資料庫的對應內容</a></p>
+<p><a href="/darktide/skills/">舊站技術補充</a> · <a href="/darktide/">對話與字幕</a></p>
+</main></body></html>

@@ -1,0 +1,142 @@
+{
+  "observed_at": "2026-10-21",
+  "standalone_current": {
+    "build_id": "75a9a5bbb34153ef8d891a56401d3c457819b32482b54adf288419b7e51efff8",
+    "data_revision": "0ae547d78d49c5d5c46b991df3736f9d868eebd98e902b1a62426dc075d3884b",
+    "files_in_manifest": 2286,
+    "raw_bytes_in_manifest": 10080508,
+    "artifact_manifest_bytes": 625234,
+    "note": "Manifest itself is separate. This is the new-site publication, not IO reduction."
+  },
+  "offsite_backups": [
+    {
+      "tag": "site-9e9e2ec26b71e296a8a4165fcf81fe2ad45fec63-39546479325-1",
+      "assets": [
+        {
+          "name": "artifact-manifest.json",
+          "stored_bytes": 625234
+        },
+        {
+          "name": "backup.json",
+          "stored_bytes": 1542
+        },
+        {
+          "name": "deployment.json",
+          "stored_bytes": 581
+        },
+        {
+          "name": "SHA256SUMS",
+          "stored_bytes": 414
+        },
+        {
+          "name": "source.tar.gz",
+          "stored_bytes": 107402909
+        },
+        {
+          "name": "static-site.tar.gz",
+          "stored_bytes": 1441579
+        }
+      ],
+      "stored_bytes_total": 109472259
+    },
+    {
+      "tag": "site-61f1dcda6cb80fb1ee2bf595b3b9a082825a912f-39541306251-1",
+      "assets": [
+        {
+          "name": "artifact-manifest.json",
+          "stored_bytes": 625234
+        },
+        {
+          "name": "backup.json",
+          "stored_bytes": 1542
+        },
+        {
+          "name": "deployment.json",
+          "stored_bytes": 581
+        },
+        {
+          "name": "SHA256SUMS",
+          "stored_bytes": 414
+        },
+        {
+          "name": "source.tar.gz",
+          "stored_bytes": 107384141
+        },
+        {
+          "name": "static-site.tar.gz",
+          "stored_bytes": 1288950
+        }
+      ],
+      "stored_bytes_total": 109300862
+    },
+    {
+      "tag": "site-8a4b3db2b1e835f0757f387ca89a19b9092b35ee-38228876589-1",
+      "assets": [
+        {
+          "name": "artifact-manifest.json",
+          "stored_bytes": 625234
+        },
+        {
+          "name": "backup.json",
+          "stored_bytes": 1540
+        },
+        {
+          "name": "deployment.json",
+          "stored_bytes": 581
+        },
+        {
+          "name": "SHA256SUMS",
+          "stored_bytes": 414
+        },
+        {
+          "name": "source.tar.gz",
+          "stored_bytes": 1121091
+        },
+        {
+          "name": "static-site.tar.gz",
+          "stored_bytes": 1288700
+        }
+      ],
+      "stored_bytes_total": 3037560
+    },
+    {
+      "tag": "site-8948651eb9e88b8514a172a4666fd8c47671499c-38206216896-1",
+      "assets": [
+        {
+          "name": "artifact-manifest.json",
+          "stored_bytes": 625234
+        },
+        {
+          "name": "backup.json",
+          "stored_bytes": 1540
+        },
+        {
+          "name": "deployment.json",
+          "stored_bytes": 482
+        },
+        {
+          "name": "SHA256SUMS",
+          "stored_bytes": 414
+        },
+        {
+          "name": "source.tar.gz",
+          "stored_bytes": 1032455
+        },
+        {
+          "name": "static-site.tar.gz",
+          "stored_bytes": 1292342
+        }
+      ],
+      "stored_bytes_total": 2952467
+    }
+  ],
+  "cloudflare_retained_versions": {
+    "status": "preserved",
+    "measured_storage_bytes": null,
+    "note": "Provider physical/deduplicated storage is not exposed by public artifact manifests; no capacity reclaimed or version deleted."
+  },
+  "git_history": {
+    "status": "unchanged; no history rewritten",
+    "reclaimed_bytes": 0
+  }
+}

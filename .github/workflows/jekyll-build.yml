@@ -22,11 +22,38 @@ jobs:
       - name: Verify generated discovery page sources
         run: python3 scripts/generate_discovery_pages.py --check
 
+      - name: Verify migrated skill sources
+        run: python3 scripts/migrate_darktide_skills.py --check
+
       - name: Setup Pages
         uses: actions/configure-pages@v6.0.0
 
       - name: Build with GitHub Pages
         uses: actions/jekyll-build-pages@v1.0.13
+
+      - name: Extract fixed pre-migration publication source
+        run: |
+          git fetch --no-tags origin 76472d21e8d542c2710840ce74215b1ce6a35006
+          mkdir _migration-baseline
+          git archive 76472d21e8d542c2710840ce74215b1ce6a35006 | tar -x -C _migration-baseline
+
+      - name: Build pre-migration source with the same Pages runtime
+        uses: actions/jekyll-build-pages@v1.0.13
+        with:
+          source: ./_migration-baseline
+          destination: ./_migration-baseline-site
+          build_revision: 76472d21e8d542c2710840ce74215b1ce6a35006
+
+      - name: Compare complete raw publication inventories
+        run: python3 scripts/compare_publication.py _migration-baseline-site _site _migration-evidence
+
+      - name: Upload complete migration inventories
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: darktide-migration-${{ github.event.pull_request.head.sha }}
+          path: _migration-evidence/
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Upload rendered production site
         uses: actions/upload-artifact@v7.0.1
